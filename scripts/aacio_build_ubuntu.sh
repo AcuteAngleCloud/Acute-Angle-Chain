@@ -110,7 +110,7 @@
 			printf "\tExiting now.\n\n"
 			exit;
 		fi
-		tar xf boost_1.66.0.tar.bz2
+		tar xf boost_1_66_0.tar.bz2
 		cd boost_1_66_0/
 		./bootstrap.sh "--prefix=$BOOST_ROOT"
 		./b2 -j${CPU_CORE} install
