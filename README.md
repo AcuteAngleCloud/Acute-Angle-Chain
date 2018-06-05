@@ -130,7 +130,7 @@ nodaac will need a properly configured config.ini file in order to do meaningful
 Now it should be possible to run nodaac and see it begin producing blocks.
 
 programs/nodaac/nodaac
-nodeos stores runtime data (e.g., shared memory and log content) in a custom data folder. The location of this folder is determined by your system.
+nodaac stores runtime data (e.g., shared memory and log content) in a custom data folder. The location of this folder is determined by your system.
 
 ```
 Mac OS: ~/Library/Application Support/aacio/nodaac/data
