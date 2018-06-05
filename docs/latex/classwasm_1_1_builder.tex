@@ -1,0 +1,146 @@
+\hypertarget{classwasm_1_1_builder}{}\section{wasm\+:\+:Builder Class Reference}
+\label{classwasm_1_1_builder}\index{wasm\+::\+Builder@{wasm\+::\+Builder}}
+
+
+Inheritance diagram for wasm\+:\+:Builder\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a9b791416b7c2a6472e746a8289650879}\label{classwasm_1_1_builder_a9b791416b7c2a6472e746a8289650879}} 
+{\bfseries Builder} (\mbox{\hyperlink{struct_mixed_arena}{Mixed\+Arena}} \&allocator)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a86a957ab3d2f56298599ee79fa75363a}\label{classwasm_1_1_builder_a86a957ab3d2f56298599ee79fa75363a}} 
+{\bfseries Builder} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&wasm)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a632fd86e6d67807981283d0d89e05982}\label{classwasm_1_1_builder_a632fd86e6d67807981283d0d89e05982}} 
+\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$ {\bfseries make\+Function} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_name_type}{Name\+Type}} $>$ \&\&params, Wasm\+Type result\+Type, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_name_type}{Name\+Type}} $>$ \&\&vars, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$body=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_aef85108b77b90fa4a77c920dc040a3e2}\label{classwasm_1_1_builder_aef85108b77b90fa4a77c920dc040a3e2}} 
+\mbox{\hyperlink{classwasm_1_1_nop}{Nop}} $\ast$ {\bfseries make\+Nop} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_af56604d8a611c78d84c917620085d2b7}\label{classwasm_1_1_builder_af56604d8a611c78d84c917620085d2b7}} 
+\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$ {\bfseries make\+Block} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$first=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_afc1503ba2bb1421cf292f88b28ab1458}\label{classwasm_1_1_builder_afc1503ba2bb1421cf292f88b28ab1458}} 
+\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$ {\bfseries make\+Block} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$first=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_aa5d5278a10e1d692bbc7159b5dc322f6}\label{classwasm_1_1_builder_aa5d5278a10e1d692bbc7159b5dc322f6}} 
+\mbox{\hyperlink{classwasm_1_1_if}{If}} $\ast$ {\bfseries make\+If} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$condition, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$if\+True, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$if\+False=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a7e53bc543d001328b309f5c8deaeeb9c}\label{classwasm_1_1_builder_a7e53bc543d001328b309f5c8deaeeb9c}} 
+\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$ {\bfseries make\+Loop} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$body)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a030afa569678efcf79515d58add8363c}\label{classwasm_1_1_builder_a030afa569678efcf79515d58add8363c}} 
+\mbox{\hyperlink{classwasm_1_1_break}{Break}} $\ast$ {\bfseries make\+Break} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value=nullptr, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$condition=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_aa076586ae3ae9efb76dd6d7186b2fb68}\label{classwasm_1_1_builder_aa076586ae3ae9efb76dd6d7186b2fb68}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classwasm_1_1_switch}{Switch}} $\ast$ {\bfseries make\+Switch} (\mbox{\hyperlink{struct_t}{T}} \&\mbox{\hyperlink{classstd_1_1list}{list}}, \mbox{\hyperlink{structwasm_1_1_name}{Name}} default\+\_\+, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$condition, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_ad56c30834bbcecf6a728754d7d3eb7ab}\label{classwasm_1_1_builder_ad56c30834bbcecf6a728754d7d3eb7ab}} 
+\mbox{\hyperlink{classwasm_1_1_call}{Call}} $\ast$ {\bfseries make\+Call} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} target, const \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$>$ \&args, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a68686902a80aee7103a7fd7674a9bb0a}\label{classwasm_1_1_builder_a68686902a80aee7103a7fd7674a9bb0a}} 
+\mbox{\hyperlink{classwasm_1_1_call_import}{Call\+Import}} $\ast$ {\bfseries make\+Call\+Import} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} target, const \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$>$ \&args, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_aff5d5561abb2f331a46fdd824edc12db}\label{classwasm_1_1_builder_aff5d5561abb2f331a46fdd824edc12db}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classwasm_1_1_call}{Call}} $\ast$ {\bfseries make\+Call} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} target, const \mbox{\hyperlink{struct_t}{T}} \&args, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a836844b67af2354698f4e987b50eb8a8}\label{classwasm_1_1_builder_a836844b67af2354698f4e987b50eb8a8}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classwasm_1_1_call_import}{Call\+Import}} $\ast$ {\bfseries make\+Call\+Import} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} target, const \mbox{\hyperlink{struct_t}{T}} \&args, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_ae7b64d3c730299b23b288a80e85cea7a}\label{classwasm_1_1_builder_ae7b64d3c730299b23b288a80e85cea7a}} 
+\mbox{\hyperlink{classwasm_1_1_call_indirect}{Call\+Indirect}} $\ast$ {\bfseries make\+Call\+Indirect} (\mbox{\hyperlink{classwasm_1_1_function_type}{Function\+Type}} $\ast$type, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$target, const \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$>$ \&args)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_ad730123efa906994d5347506d928f375}\label{classwasm_1_1_builder_ad730123efa906994d5347506d928f375}} 
+\mbox{\hyperlink{classwasm_1_1_call_indirect}{Call\+Indirect}} $\ast$ {\bfseries make\+Call\+Indirect} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} full\+Type, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$target, const \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$>$ \&args, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a5d407f66a0865b4ac853525dde4f0671}\label{classwasm_1_1_builder_a5d407f66a0865b4ac853525dde4f0671}} 
+\mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$ {\bfseries make\+Get\+Local} (Index index, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a1ce2f8a0b628b3acf3082426edf9c026}\label{classwasm_1_1_builder_a1ce2f8a0b628b3acf3082426edf9c026}} 
+\mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$ {\bfseries make\+Set\+Local} (Index index, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a9854b942664bef8d92b3f27098cd0a03}\label{classwasm_1_1_builder_a9854b942664bef8d92b3f27098cd0a03}} 
+\mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$ {\bfseries make\+Tee\+Local} (Index index, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a876aa112e358ce036eb7f4b46ad24d16}\label{classwasm_1_1_builder_a876aa112e358ce036eb7f4b46ad24d16}} 
+\mbox{\hyperlink{classwasm_1_1_get_global}{Get\+Global}} $\ast$ {\bfseries make\+Get\+Global} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a2f129b651e3b4d903efaf84ba7241e5e}\label{classwasm_1_1_builder_a2f129b651e3b4d903efaf84ba7241e5e}} 
+\mbox{\hyperlink{classwasm_1_1_set_global}{Set\+Global}} $\ast$ {\bfseries make\+Set\+Global} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a51f644293e2cc1ac4f8fbb8180e18bb4}\label{classwasm_1_1_builder_a51f644293e2cc1ac4f8fbb8180e18bb4}} 
+\mbox{\hyperlink{classwasm_1_1_load}{Load}} $\ast$ {\bfseries make\+Load} (unsigned bytes, bool signed\+\_\+, uint32\+\_\+t offset, unsigned align, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ptr, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a4fce65851f2f26c0918154619b36f710}\label{classwasm_1_1_builder_a4fce65851f2f26c0918154619b36f710}} 
+\mbox{\hyperlink{classwasm_1_1_store}{Store}} $\ast$ {\bfseries make\+Store} (unsigned bytes, uint32\+\_\+t offset, unsigned align, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ptr, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a622973d92fa43fc978cd154b53f31558}\label{classwasm_1_1_builder_a622973d92fa43fc978cd154b53f31558}} 
+\mbox{\hyperlink{classwasm_1_1_const}{Const}} $\ast$ {\bfseries make\+Const} (\mbox{\hyperlink{classwasm_1_1_literal}{Literal}} value)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a750ec80e711cc4cf3f63f9b2875e8b5f}\label{classwasm_1_1_builder_a750ec80e711cc4cf3f63f9b2875e8b5f}} 
+\mbox{\hyperlink{classwasm_1_1_unary}{Unary}} $\ast$ {\bfseries make\+Unary} (Unary\+Op op, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a1a2517d804590be409fb19d369f01470}\label{classwasm_1_1_builder_a1a2517d804590be409fb19d369f01470}} 
+\mbox{\hyperlink{classwasm_1_1_binary}{Binary}} $\ast$ {\bfseries make\+Binary} (Binary\+Op op, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$left, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$right)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a7165aab76a4907b4fed23ba4ddecc1a2}\label{classwasm_1_1_builder_a7165aab76a4907b4fed23ba4ddecc1a2}} 
+\mbox{\hyperlink{classwasm_1_1_select}{Select}} $\ast$ {\bfseries make\+Select} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$condition, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$if\+True, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$if\+False)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_ac5987ec1b7b3a36e68928822e864d346}\label{classwasm_1_1_builder_ac5987ec1b7b3a36e68928822e864d346}} 
+\mbox{\hyperlink{classwasm_1_1_return}{Return}} $\ast$ {\bfseries make\+Return} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a47ab33b30e62e59ae203fb6dfd708f4f}\label{classwasm_1_1_builder_a47ab33b30e62e59ae203fb6dfd708f4f}} 
+\mbox{\hyperlink{classwasm_1_1_host}{Host}} $\ast$ {\bfseries make\+Host} (Host\+Op op, \mbox{\hyperlink{structwasm_1_1_name}{Name}} name\+Operand, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$>$ \&\&operands)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a8ca8b435bc5842ed5abea3fd90507a2e}\label{classwasm_1_1_builder_a8ca8b435bc5842ed5abea3fd90507a2e}} 
+\mbox{\hyperlink{classwasm_1_1_unreachable}{Unreachable}} $\ast$ {\bfseries make\+Unreachable} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a4003f10306f249f41b757ec0011714e7}\label{classwasm_1_1_builder_a4003f10306f249f41b757ec0011714e7}} 
+\mbox{\hyperlink{classwasm_1_1_drop}{Drop}} $\ast$ {\bfseries make\+Drop} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_adf9424bf768624338f10c22015d651a9}\label{classwasm_1_1_builder_adf9424bf768624338f10c22015d651a9}} 
+\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$ {\bfseries blockify} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$any, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$append=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a9d5c6794f9c1064e91f276befc657018}\label{classwasm_1_1_builder_a9d5c6794f9c1064e91f276befc657018}} 
+\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$ {\bfseries blockify\+With\+Name} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$any, \mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$append=nullptr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_ab6f3d8d34520d32c5949f4b4e00a76d5}\label{classwasm_1_1_builder_ab6f3d8d34520d32c5949f4b4e00a76d5}} 
+\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$ {\bfseries blockify\+Merge} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$any, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$append)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a7dcb78d305d1c44d99e9d64d6130d454}\label{classwasm_1_1_builder_a7dcb78d305d1c44d99e9d64d6130d454}} 
+\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$ {\bfseries make\+Sequence} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$left, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$right)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a4c9c1211adb521d2f7767e6b2a553ecc}\label{classwasm_1_1_builder_a4c9c1211adb521d2f7767e6b2a553ecc}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries steal\+Slice} (\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$input, Index from, Index to)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_aaf3ed5ef3a89aaa98fa522bb6b1fe7c2}\label{classwasm_1_1_builder_aaf3ed5ef3a89aaa98fa522bb6b1fe7c2}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries drop\+If\+Concretely\+Typed} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a705c30b355d4417af32862111de16c99}\label{classwasm_1_1_builder_a705c30b355d4417af32862111de16c99}} 
+void {\bfseries flip} (\mbox{\hyperlink{classwasm_1_1_if}{If}} $\ast$iff)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a8b36a602b2322e3b7371e2340e525ad7}\label{classwasm_1_1_builder_a8b36a602b2322e3b7371e2340e525ad7}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries replace\+With\+Identical\+Type} (\mbox{\hyperlink{struct_t}{T}} $\ast$curr)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_ad5481239e74586974026e52e4a9164f3}\label{classwasm_1_1_builder_ad5481239e74586974026e52e4a9164f3}} 
+static Index {\bfseries add\+Param} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}}, \mbox{\hyperlink{structwasm_1_1_name}{Name}} name, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a1cfcf349d3c75bd37aa9bf6164b9933b}\label{classwasm_1_1_builder_a1cfcf349d3c75bd37aa9bf6164b9933b}} 
+static Index {\bfseries add\+Var} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}}, \mbox{\hyperlink{structwasm_1_1_name}{Name}} name, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_a72336f166a8bf6f20691e65c7af0e1b0}\label{classwasm_1_1_builder_a72336f166a8bf6f20691e65c7af0e1b0}} 
+static Index {\bfseries add\+Var} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}}, Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_builder_aa4850b233d6d0e3ae24d42fc84a511a3}\label{classwasm_1_1_builder_aa4850b233d6d0e3ae24d42fc84a511a3}} 
+static void {\bfseries clear\+Locals} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm-\/builder.\+h\end{DoxyCompactItemize}

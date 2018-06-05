@@ -1,0 +1,134 @@
+.TH "plugins/faucet_testnet_plugin/faucet_testnet_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/faucet_testnet_plugin/faucet_testnet_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/faucet_testnet_plugin/faucet_testnet_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/chain_plugin/chain_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/utilities/key_conversion\&.hpp>\fP
+.br
+\fC#include <fc/variant\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+\fC#include <fc/exception/exception\&.hpp>\fP
+.br
+\fC#include <fc/reflect/variant\&.hpp>\fP
+.br
+\fC#include <boost/asio\&.hpp>\fP
+.br
+\fC#include <boost/date_time/posix_time/posix_time\&.hpp>\fP
+.br
+\fC#include <boost/algorithm/clamp\&.hpp>\fP
+.br
+\fC#include <utility>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::detail::faucet_testnet_empty\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::detail::faucet_testnet_keys\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::detail::faucet_testnet_create_account_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::detail::faucet_testnet_create_account_alternates_response\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::detail::faucet_testnet_create_account_rate_limited_response\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::faucet_testnet_plugin_impl\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::faucet_testnet_plugin_impl::create_faucet_account_alternate_results\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::faucet_testnet_plugin_impl::extension\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCALL\fP(api_name,  api_handle,  call_name,  invoke_cb)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::public_key_type\fP = chain::public_key_type"
+.br
+.ti -1c
+.RI "using \fBaacio::key_pair\fP = std::pair< std::string, std::string >"
+.br
+.ti -1c
+.RI "using \fBaacio::results_pair\fP = std::pair< uint32_t, \fBfc::variant\fP >"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::detail::faucet_testnet_empty\fP,)"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::detail::faucet_testnet_keys\fP,(owner)(active))"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::detail::faucet_testnet_create_account_params\fP,(\fBaccount\fP)(keys))"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::detail::faucet_testnet_create_account_alternates_response\fP,(alternates)(message))"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::detail::faucet_testnet_create_account_rate_limited_response\fP,(message))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CALL(api_name, api_handle, call_name, invoke_cb)"
+\fBValue:\fP
+.PP
+.nf
+{std::string("/v1/" #api_name "/" #call_name), \
+   [this](string, string body, url_response_callback response_cb) mutable { \
+          try { \
+             if (body\&.empty()) body = "{}"; \
+             const auto result = api_handle->invoke_cb(body); \
+             response_cb(result\&.first, fc::json::to_string(result\&.second)); \
+          } catch (fc::eof_exception& e) { \
+             error_results results{400, "Bad Request", e}; \
+             response_cb(400, fc::json::to_string(results)); \
+             elog("Unable to parse arguments: ${args}", ("args", body)); \
+          } catch (fc::exception& e) { \
+             error_results results{500, "Internal Service Error", e}; \
+             response_cb(500, fc::json::to_string(results)); \
+             elog("Exception encountered while processing ${call}: ${e}", ("call", #api_name "\&." #call_name)("e", e)); \
+          } \
+       }}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

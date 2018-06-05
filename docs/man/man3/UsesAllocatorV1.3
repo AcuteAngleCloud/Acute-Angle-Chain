@@ -1,0 +1,48 @@
+.TH "UsesAllocatorV1< Alloc, Arity >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UsesAllocatorV1< Alloc, Arity >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBUsesAllocatorTestBase< UsesAllocatorV1< Alloc, Arity >, Alloc >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Alloc \fBallocator_type\fP"
+.br
+.ti -1c
+.RI "using \fBBase\fP = \fBUsesAllocatorTestBase\fP< \fBUsesAllocatorV1\fP, Alloc >"
+.br
+.ti -1c
+.RI "using \fBCtorAlloc\fP = typename Base::CtorAlloc"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUsesAllocatorV1\fP (\fBUsesAllocatorV1\fP const &)"
+.br
+.ti -1c
+.RI "\fBUsesAllocatorV1\fP (\fBUsesAllocatorV1\fP &&)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args, EnableIfB< sizeof\&.\&.\&.(Args)==Arity >  = false> \fBUsesAllocatorV1\fP (Args &&\&.\&.\&.)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> \fBUsesAllocatorV1\fP (std::allocator_arg_t tag, CtorAlloc const &a, Args &&\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<class First , class \&.\&.\&. Args, EnableIfB< sizeof\&.\&.\&.(Args)==Arity > Dummy = false> constexpr \fBUsesAllocatorV1\fP (First &&, Args &&\&.\&.\&.)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,29 @@
+digraph "websocketpp::frame::get_basic_size"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node24 [label="websocketpp::frame\l::get_basic_size",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="websocketpp::frame\l::get_masking_key_offset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a001d6c5e538d5eb1ef5ddc21aeb61ee3",tooltip="Calculate the offset location of the masking key within the extended header. "];
+  Node25 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node26 [label="websocketpp::frame\l::get_header_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#abd4f23c906cc48fb3b34603fd4284b01",tooltip="Calculates the full length of the header based on the first bytes. "];
+  Node26 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node27 [label="websocketpp::frame\l::prepare_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#ae63c3e01399a6787ed09b710853344a4",tooltip="Generate a properly sized contiguous string that encodes a full frame header. "];
+  Node27 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node28 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::prepare_data_frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a72f4833d66eb51e37a956f434895b3ab",tooltip="Prepare a user data message for writing. "];
+  Node27 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node29 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::prepare_control",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a5aa8f27959beeeef73997a80c2560663",tooltip="Generic prepare control frame with opcode and payload. "];
+  Node26 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node30 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::consume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a5c5e3234a0067c7f14fe0ceb4e647659",tooltip="Process new websocket connection bytes. "];
+  Node25 -> Node31 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node31 [label="websocketpp::frame\l::get_masking_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#aed7edd146ce3aa5b87adc9fcc5fcb10f",tooltip="Extract the masking key from a frame header. "];
+  Node31 -> Node30 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 -> Node32 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node32 [label="websocketpp::frame\l::get_payload_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a2ca0b9ba6077f201997da543d45b067f",tooltip="Extract the full payload size field from a WebSocket header. "];
+  Node32 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node33 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::validate_incoming_extended_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#aee8565136bb0820e9a8914dfc5fdb753",tooltip="Validate an incoming extended header. "];
+  Node24 -> Node34 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node34 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::validate_incoming_basic_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a0c549a5e2766288fb625c03e507cc9ad",tooltip="Validate an incoming basic header. "];
+  Node24 -> Node33 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

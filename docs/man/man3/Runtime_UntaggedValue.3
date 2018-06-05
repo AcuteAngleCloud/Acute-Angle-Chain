@@ -1,0 +1,64 @@
+.TH "Runtime::UntaggedValue" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Runtime::UntaggedValue
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBRuntime::Result\fP, and \fBRuntime::Value\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUntaggedValue\fP (I32 inI32)"
+.br
+.ti -1c
+.RI "\fBUntaggedValue\fP (I64 inI64)"
+.br
+.ti -1c
+.RI "\fBUntaggedValue\fP (U32 inU32)"
+.br
+.ti -1c
+.RI "\fBUntaggedValue\fP (U64 inU64)"
+.br
+.ti -1c
+.RI "\fBUntaggedValue\fP (F32 inF32)"
+.br
+.ti -1c
+.RI "\fBUntaggedValue\fP (F64 inF64)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   I32 \fBi32\fP"
+.br
+.ti -1c
+.RI "   U32 \fBu32\fP"
+.br
+.ti -1c
+.RI "   I64 \fBi64\fP"
+.br
+.ti -1c
+.RI "   U64 \fBu64\fP"
+.br
+.ti -1c
+.RI "   F32 \fBf32\fP"
+.br
+.ti -1c
+.RI "   F64 \fBf64\fP"
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

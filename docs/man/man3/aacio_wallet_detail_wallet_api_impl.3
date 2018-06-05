@@ -1,0 +1,68 @@
+.TH "aacio::wallet::detail::wallet_api_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::wallet::detail::wallet_api_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBwallet_api_impl\fP (\fBwallet_api\fP &s, const \fBwallet_data\fP &initial_data)"
+.br
+.ti -1c
+.RI "void \fBencrypt_keys\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcopy_wallet_file\fP (string destination_filename)"
+.br
+.ti -1c
+.RI "bool \fBis_locked\fP () const"
+.br
+.ti -1c
+.RI "string \fBget_wallet_filename\fP () const"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBprivate_key_type\fP > \fBtry_get_private_key\fP (const \fBpublic_key_type\fP &id) const"
+.br
+.ti -1c
+.RI "\fBprivate_key_type\fP \fBget_private_key\fP (const \fBpublic_key_type\fP &id) const"
+.br
+.ti -1c
+.RI "bool \fBimport_key\fP (string wif_key)"
+.br
+.ti -1c
+.RI "bool \fBload_wallet_file\fP (string wallet_filename='')"
+.br
+.ti -1c
+.RI "void \fBsave_wallet_file\fP (string wallet_filename='')"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBwallet_api\fP & \fBself\fP"
+.br
+.ti -1c
+.RI "string \fB_wallet_filename\fP"
+.br
+.ti -1c
+.RI "\fBwallet_data\fP \fB_wallet\fP"
+.br
+.ti -1c
+.RI "\fBmap\fP< \fBpublic_key_type\fP, \fBprivate_key_type\fP > \fB_keys\fP"
+.br
+.ti -1c
+.RI "\fBfc::sha512\fP \fB_checksum\fP"
+.br
+.ti -1c
+.RI "const string \fB_wallet_filename_extension\fP = '\&.wallet'"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,920 @@
+\hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{}\section{websocketpp\+:\+:transport\+:\+:asio\+:\+:endpoint$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}\index{websocketpp\+::transport\+::asio\+::endpoint$<$ config $>$@{websocketpp\+::transport\+::asio\+::endpoint$<$ config $>$}}
+
+
+Asio based endpoint transport component.  
+
+
+
+
+{\ttfamily \#include $<$endpoint.\+hpp$>$}
+
+
+
+Inheritance diagram for websocketpp\+:\+:transport\+:\+:asio\+:\+:endpoint$<$ config $>$\+:
+% FIG 0
+
+
+Collaboration diagram for websocketpp\+:\+:transport\+:\+:asio\+:\+:endpoint$<$ config $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a86283417bb35f13b9a1d9795f5fcf077}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a86283417bb35f13b9a1d9795f5fcf077}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a86283417bb35f13b9a1d9795f5fcf077}{type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of this endpoint transport component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aa1979c2199a48526d5bc44651ffc72f3}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aa1979c2199a48526d5bc44651ffc72f3}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1concurrency_1_1none}{config\+::concurrency\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aa1979c2199a48526d5bc44651ffc72f3}{concurrency\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of the concurrency policy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a13784d09af030a55e85faaf8f111fdc3}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a13784d09af030a55e85faaf8f111fdc3}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint}{config\+::socket\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a13784d09af030a55e85faaf8f111fdc3}{socket\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of the socket policy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a2aa93730c801602b55b585121a2898c0}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a2aa93730c801602b55b585121a2898c0}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::elog\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a2aa93730c801602b55b585121a2898c0}{elog\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of the error logging policy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acba708e66a47d4aae9a053d364585b81}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acba708e66a47d4aae9a053d364585b81}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::alog\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acba708e66a47d4aae9a053d364585b81}{alog\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of the access logging policy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a0b6f8cbdf8f2141915881a6d13779545}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a0b6f8cbdf8f2141915881a6d13779545}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1endpoint_a690393b3da13e389cf025f88a3d38f3f}{socket\+\_\+type\+::socket\+\_\+con\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a0b6f8cbdf8f2141915881a6d13779545}{socket\+\_\+con\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of the socket connection component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a74fb719ac5393b320d98b77f346a4b34}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a74fb719ac5393b320d98b77f346a4b34}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection_a2aa605c27a476eba644e062dc5bc4f6d}{socket\+\_\+con\+\_\+type\+::ptr}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a74fb719ac5393b320d98b77f346a4b34}{socket\+\_\+con\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of a shared pointer to the socket connection component. \end{DoxyCompactList}\item 
+typedef asio\+::connection$<$ \mbox{\hyperlink{classconfig}{config}} $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a75f3102766fd3ba8230e99a2b0e00457}{transport\+\_\+con\+\_\+type}}
+\item 
+typedef transport\+\_\+con\+\_\+type\+::ptr \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}} 
+typedef lib\+::asio\+::io\+\_\+service $\ast$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}{io\+\_\+service\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of a pointer to the A\+S\+IO io\+\_\+service being used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aaff1078ca1ea0fa4f47bbabcae255c16}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aaff1078ca1ea0fa4f47bbabcae255c16}} 
+typedef lib\+::shared\+\_\+ptr$<$ lib\+::asio\+::ip\+::tcp\+::acceptor $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aaff1078ca1ea0fa4f47bbabcae255c16}{acceptor\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of a shared pointer to the acceptor being used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aff1899396fa9d1439e00ca53c56676a5}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aff1899396fa9d1439e00ca53c56676a5}} 
+typedef lib\+::shared\+\_\+ptr$<$ lib\+::asio\+::ip\+::tcp\+::resolver $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aff1899396fa9d1439e00ca53c56676a5}{resolver\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of a shared pointer to the resolver being used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}} 
+typedef lib\+::shared\+\_\+ptr$<$ lib\+::asio\+::steady\+\_\+timer $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of timer handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac730e8330bb982f9144127e9d66d0a23}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac730e8330bb982f9144127e9d66d0a23}} 
+typedef lib\+::shared\+\_\+ptr$<$ lib\+::asio\+::io\+\_\+service\+::work $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac730e8330bb982f9144127e9d66d0a23}{work\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of a shared pointer to an io\+\_\+service work object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a31d10fbfbc4bc7693c5f1679bc35516f}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a31d10fbfbc4bc7693c5f1679bc35516f}} 
+bool \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a31d10fbfbc4bc7693c5f1679bc35516f}{is\+\_\+secure}} () const
+\begin{DoxyCompactList}\small\item\em Return whether or not the endpoint produces secure connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a67da637106d3cfb40078b477e2579a13}{init\+\_\+asio}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}{io\+\_\+service\+\_\+ptr}} ptr, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em initialize asio transport with external io\+\_\+service (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a320fc4ea3a151afaf8b973ce32effd25}{init\+\_\+asio}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}{io\+\_\+service\+\_\+ptr}} ptr)
+\begin{DoxyCompactList}\small\item\em initialize asio transport with external io\+\_\+service \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a7b4249fd3e2663323ac29ef7935278de}{init\+\_\+asio}} (lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Initialize asio transport with internal io\+\_\+service (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a22938eec899a9ab2b9ada2b76172f798}{init\+\_\+asio}} ()
+\begin{DoxyCompactList}\small\item\em Initialize asio transport with internal io\+\_\+service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad334b214cf4800bb34aa09d7055e6464}{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler}} (tcp\+\_\+init\+\_\+handler h)
+\begin{DoxyCompactList}\small\item\em Sets the tcp pre init handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a497f353a5ec277355cd8b0caf893d1ce}{set\+\_\+tcp\+\_\+init\+\_\+handler}} (tcp\+\_\+init\+\_\+handler h)
+\begin{DoxyCompactList}\small\item\em Sets the tcp pre init handler (deprecated) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a605c9f8c671d783739c1e98c6c7fda9d}{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler}} (tcp\+\_\+init\+\_\+handler h)
+\begin{DoxyCompactList}\small\item\em Sets the tcp post init handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a60bb0d01c277b7cfcb6f69215a36b216}{set\+\_\+listen\+\_\+backlog}} (int backlog)
+\begin{DoxyCompactList}\small\item\em Sets the maximum length of the queue of pending connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a491d13d6e1ad0edc5843e41b06fa4e0c}{set\+\_\+reuse\+\_\+addr}} (bool value)
+\begin{DoxyCompactList}\small\item\em Sets whether to use the S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR flag when opening listening sockets. \end{DoxyCompactList}\item 
+lib\+::asio\+::io\+\_\+service \& \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a97efb3c1915ae8cc38ef92ff9514ebd4}{get\+\_\+io\+\_\+service}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve a reference to the endpoint\textquotesingle{}s io\+\_\+service. \end{DoxyCompactList}\item 
+lib\+::asio\+::ip\+::tcp\+::endpoint \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a4147ba098fc2f1669d2f880b47917342}{get\+\_\+local\+\_\+endpoint}} (lib\+::asio\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Get local T\+CP endpoint. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac36c2b22a7c2550663792472a728f615}{listen}} (lib\+::asio\+::ip\+::tcp\+::endpoint const \&ep, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening manually (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ab3d7708b939531c5c803e3b148a9b009}{listen}} (lib\+::asio\+::ip\+::tcp\+::endpoint const \&ep)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening manually. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Internet\+Protocol $>$ }\\void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae6813b9ecda67a13a78967f72e77b061}{listen}} (Internet\+Protocol const \&internet\+\_\+protocol, uint16\+\_\+t port, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening with protocol and port (exception free) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Internet\+Protocol $>$ }\\void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad08b16daae1fac46679245ec7d0c8952}{listen}} (Internet\+Protocol const \&internet\+\_\+protocol, uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening with protocol and port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae7da6e2c944c3e1a087495b9d998dc8b}{listen}} (uint16\+\_\+t port, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening on a port (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a80c1e2bb6edbfbfc46d387015e528117}{listen}} (uint16\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening on a port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a85606665cc9c948194076c2377cb61c0}{listen}} (std\+::string const \&host, std\+::string const \&service, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening on a host and service (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad69ca2f648f48c7616ad1df614d88d67}{listen}} (std\+::string const \&host, std\+::string const \&service)
+\begin{DoxyCompactList}\small\item\em Set up endpoint for listening on a host and service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a0da87d3a3e8ee8279fe59eb0385d81e3}{stop\+\_\+listening}} (lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Stop listening (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_af4ae00e12a34475a1950d69f5b9da507}{stop\+\_\+listening}} ()
+\begin{DoxyCompactList}\small\item\em Stop listening. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_af33506cbd90a184cdf1a0424ec2d0619}{is\+\_\+listening}} () const
+\begin{DoxyCompactList}\small\item\em Check if the endpoint is listening. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5c457ea6734a1d8aafe6c6f364996dfe}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5c457ea6734a1d8aafe6c6f364996dfe}} 
+std\+::size\+\_\+t \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5c457ea6734a1d8aafe6c6f364996dfe}{run}} ()
+\begin{DoxyCompactList}\small\item\em wraps the run method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a06b42e739e095b5ec489b59a655b2242}{run\+\_\+one}} ()
+\begin{DoxyCompactList}\small\item\em wraps the run\+\_\+one method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5aaf6de5a0a7f868c60f5d611a8e399c}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5aaf6de5a0a7f868c60f5d611a8e399c}} 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5aaf6de5a0a7f868c60f5d611a8e399c}{stop}} ()
+\begin{DoxyCompactList}\small\item\em wraps the stop method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aa73831b3e81e61cd95bfbfab799a41b7}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aa73831b3e81e61cd95bfbfab799a41b7}} 
+std\+::size\+\_\+t \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aa73831b3e81e61cd95bfbfab799a41b7}{poll}} ()
+\begin{DoxyCompactList}\small\item\em wraps the poll method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae413ac572300c418cfd822845960cc6c}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae413ac572300c418cfd822845960cc6c}} 
+std\+::size\+\_\+t \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae413ac572300c418cfd822845960cc6c}{poll\+\_\+one}} ()
+\begin{DoxyCompactList}\small\item\em wraps the poll\+\_\+one method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac79a1a69f86df035471ccdc9f4aea351}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac79a1a69f86df035471ccdc9f4aea351}} 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac79a1a69f86df035471ccdc9f4aea351}{reset}} ()
+\begin{DoxyCompactList}\small\item\em wraps the reset method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a633264e7fd0ab7623cac336f2eb85aa0}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a633264e7fd0ab7623cac336f2eb85aa0}} 
+bool \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a633264e7fd0ab7623cac336f2eb85aa0}{stopped}} () const
+\begin{DoxyCompactList}\small\item\em wraps the stopped method of the internal io\+\_\+service object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5a707078d482c141edf0a8cdd0bc6345}{start\+\_\+perpetual}} ()
+\begin{DoxyCompactList}\small\item\em Marks the endpoint as perpetual, stopping it from exiting when empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aaaf8c9ef3f41be6968674bd704dc23b0}{stop\+\_\+perpetual}} ()
+\begin{DoxyCompactList}\small\item\em Clears the endpoint\textquotesingle{}s perpetual flag, allowing it to exit when empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a63525bd209bb3dabf373b9b72d37e78e}{set\+\_\+timer}} (long duration, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler}} callback)
+\begin{DoxyCompactList}\small\item\em Call back a function after a period of time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5345d9bbde4333d7b4b4858a4816e596}{handle\+\_\+timer}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler}} callback, lib\+::asio\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Timer handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae24b2ea11e8ce90b6101c1ab56d7fe48}{async\+\_\+accept}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_a9326ea831379368ee47841b2e46cb009}{accept\+\_\+handler}} callback, lib\+::error\+\_\+code \&ec)
+\begin{DoxyCompactList}\small\item\em Accept the next connection attempt and assign it to con (exception free) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a7e559e38bf344d60706f106db8b15d50}{async\+\_\+accept}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_a9326ea831379368ee47841b2e46cb009}{accept\+\_\+handler}} callback)
+\begin{DoxyCompactList}\small\item\em Accept the next connection attempt and assign it to con. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a26ad1ad26277ed99a691559e69d47932}{init\+\_\+logging}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acba708e66a47d4aae9a053d364585b81}{alog\+\_\+type}} $\ast$a, \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a2aa93730c801602b55b585121a2898c0}{elog\+\_\+type}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Initialize logging. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a8154dd7191c0d8df984a202bc2e54cf7}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a8154dd7191c0d8df984a202bc2e54cf7}} 
+void {\bfseries handle\+\_\+accept} (\mbox{\hyperlink{namespacewebsocketpp_1_1transport_a9326ea831379368ee47841b2e46cb009}{accept\+\_\+handler}} callback, lib\+::asio\+::error\+\_\+code const \&asio\+\_\+ec)
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1ca12e4d72c691e6cc1ce1f5316e3243}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1ca12e4d72c691e6cc1ce1f5316e3243}} 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1ca12e4d72c691e6cc1ce1f5316e3243}{async\+\_\+connect}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon, \mbox{\hyperlink{namespacewebsocketpp_aae370ea5ac83a8ece7712cb39fc23f5b}{uri\+\_\+ptr}} u, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}} cb)
+\begin{DoxyCompactList}\small\item\em Initiate a new connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac240587f91cf837babbbb7c48b3cff40}{handle\+\_\+resolve\+\_\+timeout}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}} callback, lib\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em D\+NS resolution timeout handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a97ded7b145e9d358747b7e0c0099594e}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a97ded7b145e9d358747b7e0c0099594e}} 
+void {\bfseries handle\+\_\+resolve} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon, \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}} dns\+\_\+timer, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}} callback, lib\+::asio\+::error\+\_\+code const \&ec, lib\+::asio\+::ip\+::tcp\+::resolver\+::iterator iterator)
+\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_adf26b0ddc55fd6d223fd74be9e25d961}{handle\+\_\+connect\+\_\+timeout}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon, \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}} callback, lib\+::error\+\_\+code const \&ec)
+\begin{DoxyCompactList}\small\item\em Asio connect timeout handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1d2dd1fcad6099397b53e5f6ede001a0}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1d2dd1fcad6099397b53e5f6ede001a0}} 
+void {\bfseries handle\+\_\+connect} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon, \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}} con\+\_\+timer, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}} callback, lib\+::asio\+::error\+\_\+code const \&ec)
+\item 
+lib\+::error\+\_\+code \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a756059ab3ecd99d7c2a845b40729c7c8}{init}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}} tcon)
+\begin{DoxyCompactList}\small\item\em Initialize a connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename config$>$\newline
+class websocketpp\+::transport\+::asio\+::endpoint$<$ config $>$}
+
+Asio based endpoint transport component. 
+
+\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{transport\+::asio\+::endpoint}} implements an endpoint transport component using Asio. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!transport\+\_\+con\+\_\+ptr@{transport\+\_\+con\+\_\+ptr}}
+\index{transport\+\_\+con\+\_\+ptr@{transport\+\_\+con\+\_\+ptr}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{transport\+\_\+con\+\_\+ptr}{transport\_con\_ptr}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+typedef transport\+\_\+con\+\_\+type\+::ptr \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}}}
+
+\mbox{\hyperlink{struct_type}{Type}} of a shared pointer to the connection transport component associated with this endpoint transport component \mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a75f3102766fd3ba8230e99a2b0e00457}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a75f3102766fd3ba8230e99a2b0e00457}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!transport\+\_\+con\+\_\+type@{transport\+\_\+con\+\_\+type}}
+\index{transport\+\_\+con\+\_\+type@{transport\+\_\+con\+\_\+type}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{transport\+\_\+con\+\_\+type}{transport\_con\_type}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+typedef asio\+::connection$<$\mbox{\hyperlink{classconfig}{config}}$>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a75f3102766fd3ba8230e99a2b0e00457}{transport\+\_\+con\+\_\+type}}}
+
+\mbox{\hyperlink{struct_type}{Type}} of the connection transport component associated with this endpoint transport component 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae24b2ea11e8ce90b6101c1ab56d7fe48}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae24b2ea11e8ce90b6101c1ab56d7fe48}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!async\+\_\+accept@{async\+\_\+accept}}
+\index{async\+\_\+accept@{async\+\_\+accept}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{async\+\_\+accept()}{async\_accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::async\+\_\+accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}}}]{tcon,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_a9326ea831379368ee47841b2e46cb009}{accept\+\_\+handler}}}]{callback,  }\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accept the next connection attempt and assign it to con (exception free) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcon} & The connection to accept into. \\
+\hline
+{\em callback} & The function to call when the operation is complete. \\
+\hline
+{\em ec} & \mbox{\hyperlink{struct_a}{A}} status code indicating an error, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a7e559e38bf344d60706f106db8b15d50}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a7e559e38bf344d60706f106db8b15d50}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!async\+\_\+accept@{async\+\_\+accept}}
+\index{async\+\_\+accept@{async\+\_\+accept}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{async\+\_\+accept()}{async\_accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::async\+\_\+accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}}}]{tcon,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_a9326ea831379368ee47841b2e46cb009}{accept\+\_\+handler}}}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Accept the next connection attempt and assign it to con. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcon} & The connection to accept into. \\
+\hline
+{\em callback} & The function to call when the operation is complete. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a97efb3c1915ae8cc38ef92ff9514ebd4}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a97efb3c1915ae8cc38ef92ff9514ebd4}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!get\+\_\+io\+\_\+service@{get\+\_\+io\+\_\+service}}
+\index{get\+\_\+io\+\_\+service@{get\+\_\+io\+\_\+service}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{get\+\_\+io\+\_\+service()}{get\_io\_service()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+lib\+::asio\+::io\+\_\+service\& \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::get\+\_\+io\+\_\+service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve a reference to the endpoint\textquotesingle{}s io\+\_\+service. 
+
+The io\+\_\+service may be an internal or external one. This may be used to call methods of the io\+\_\+service that are not explicitly wrapped by the endpoint.
+
+This method is only valid after the endpoint has been initialized with {\ttfamily init\+\_\+asio}. No error will be returned if it isn\textquotesingle{}t.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} reference to the endpoint\textquotesingle{}s io\+\_\+service 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a4147ba098fc2f1669d2f880b47917342}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a4147ba098fc2f1669d2f880b47917342}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!get\+\_\+local\+\_\+endpoint@{get\+\_\+local\+\_\+endpoint}}
+\index{get\+\_\+local\+\_\+endpoint@{get\+\_\+local\+\_\+endpoint}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{get\+\_\+local\+\_\+endpoint()}{get\_local\_endpoint()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+lib\+::asio\+::ip\+::tcp\+::endpoint \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::get\+\_\+local\+\_\+endpoint (\begin{DoxyParamCaption}\item[{lib\+::asio\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get local T\+CP endpoint. 
+
+Extracts the local endpoint from the acceptor. This represents the address that Web\+Socket++ is listening on.
+
+Sets a bad\+\_\+descriptor error if the acceptor is not currently listening or otherwise unavailable.
+
+\begin{DoxySince}{Since}
+0.\+7.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The local endpoint 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_adf26b0ddc55fd6d223fd74be9e25d961}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_adf26b0ddc55fd6d223fd74be9e25d961}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!handle\+\_\+connect\+\_\+timeout@{handle\+\_\+connect\+\_\+timeout}}
+\index{handle\+\_\+connect\+\_\+timeout@{handle\+\_\+connect\+\_\+timeout}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{handle\+\_\+connect\+\_\+timeout()}{handle\_connect\_timeout()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::handle\+\_\+connect\+\_\+timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}}}]{tcon,  }\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}}]{,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}}}]{callback,  }\item[{lib\+::error\+\_\+code const \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Asio connect timeout handler. 
+
+The timer pointer is included to ensure the timer isn\textquotesingle{}t destroyed until after it has expired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcon} & \mbox{\hyperlink{struct_pointer}{Pointer}} to the transport connection that is being connected \\
+\hline
+{\em con\+\_\+timer} & \mbox{\hyperlink{struct_pointer}{Pointer}} to the timer in question \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & \mbox{\hyperlink{struct_a}{A}} status code indicating an error, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac240587f91cf837babbbb7c48b3cff40}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac240587f91cf837babbbb7c48b3cff40}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!handle\+\_\+resolve\+\_\+timeout@{handle\+\_\+resolve\+\_\+timeout}}
+\index{handle\+\_\+resolve\+\_\+timeout@{handle\+\_\+resolve\+\_\+timeout}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{handle\+\_\+resolve\+\_\+timeout()}{handle\_resolve\_timeout()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::handle\+\_\+resolve\+\_\+timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}}]{,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}}}]{callback,  }\item[{lib\+::error\+\_\+code const \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+D\+NS resolution timeout handler. 
+
+The timer pointer is included to ensure the timer isn\textquotesingle{}t destroyed until after it has expired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dns\+\_\+timer} & \mbox{\hyperlink{struct_pointer}{Pointer}} to the timer in question \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & \mbox{\hyperlink{struct_a}{A}} status code indicating an error, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5345d9bbde4333d7b4b4858a4816e596}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5345d9bbde4333d7b4b4858a4816e596}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!handle\+\_\+timer@{handle\+\_\+timer}}
+\index{handle\+\_\+timer@{handle\+\_\+timer}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{handle\+\_\+timer()}{handle\_timer()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::handle\+\_\+timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}}}]{,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler}}}]{callback,  }\item[{lib\+::asio\+::error\+\_\+code const \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Timer handler. 
+
+The timer pointer is included to ensure the timer isn\textquotesingle{}t destroyed until after it has expired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \mbox{\hyperlink{struct_pointer}{Pointer}} to the timer in question \\
+\hline
+{\em callback} & The function to call back \\
+\hline
+{\em ec} & \mbox{\hyperlink{struct_a}{A}} status code indicating an error, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a756059ab3ecd99d7c2a845b40729c7c8}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a756059ab3ecd99d7c2a845b40729c7c8}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!init@{init}}
+\index{init@{init}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+lib\+::error\+\_\+code \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac5fc306f32d15f92dd1b22366eaba62d}{transport\+\_\+con\+\_\+ptr}}}]{tcon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initialize a connection. 
+
+init is called by an endpoint once for each newly created connection. It\textquotesingle{}s purpose is to give the transport policy the chance to perform any transport specific initialization that couldn\textquotesingle{}t be done via the default constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcon} & \mbox{\hyperlink{struct_a}{A}} pointer to the transport portion of the connection.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} status code indicating the success or failure of the operation 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a67da637106d3cfb40078b477e2579a13}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a67da637106d3cfb40078b477e2579a13}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!init\+\_\+asio@{init\+\_\+asio}}
+\index{init\+\_\+asio@{init\+\_\+asio}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{init\+\_\+asio()}{init\_asio()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init\+\_\+asio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}{io\+\_\+service\+\_\+ptr}}}]{ptr,  }\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+initialize asio transport with external io\+\_\+service (exception free) 
+
+Initialize the A\+S\+IO transport policy for this endpoint using the provided io\+\_\+service object. asio\+\_\+init must be called exactly once on any endpoint that uses \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio}{transport\+::asio}} before it can be used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \mbox{\hyperlink{struct_a}{A}} pointer to the io\+\_\+service to use for asio events \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a320fc4ea3a151afaf8b973ce32effd25}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a320fc4ea3a151afaf8b973ce32effd25}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!init\+\_\+asio@{init\+\_\+asio}}
+\index{init\+\_\+asio@{init\+\_\+asio}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{init\+\_\+asio()}{init\_asio()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init\+\_\+asio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acc7e89c6427514628f551cf3f795b7e0}{io\+\_\+service\+\_\+ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+initialize asio transport with external io\+\_\+service 
+
+Initialize the A\+S\+IO transport policy for this endpoint using the provided io\+\_\+service object. asio\+\_\+init must be called exactly once on any endpoint that uses \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio}{transport\+::asio}} before it can be used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \mbox{\hyperlink{struct_a}{A}} pointer to the io\+\_\+service to use for asio events \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a7b4249fd3e2663323ac29ef7935278de}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a7b4249fd3e2663323ac29ef7935278de}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!init\+\_\+asio@{init\+\_\+asio}}
+\index{init\+\_\+asio@{init\+\_\+asio}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{init\+\_\+asio()}{init\_asio()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init\+\_\+asio (\begin{DoxyParamCaption}\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize asio transport with internal io\+\_\+service (exception free) 
+
+This method of initialization will allocate and use an internally managed io\+\_\+service.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a320fc4ea3a151afaf8b973ce32effd25}{init\+\_\+asio(io\+\_\+service\+\_\+ptr ptr)}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a22938eec899a9ab2b9ada2b76172f798}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a22938eec899a9ab2b9ada2b76172f798}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!init\+\_\+asio@{init\+\_\+asio}}
+\index{init\+\_\+asio@{init\+\_\+asio}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{init\+\_\+asio()}{init\_asio()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init\+\_\+asio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize asio transport with internal io\+\_\+service. 
+
+This method of initialization will allocate and use an internally managed io\+\_\+service.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a320fc4ea3a151afaf8b973ce32effd25}{init\+\_\+asio(io\+\_\+service\+\_\+ptr ptr)}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+% FIG 13
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a26ad1ad26277ed99a691559e69d47932}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a26ad1ad26277ed99a691559e69d47932}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!init\+\_\+logging@{init\+\_\+logging}}
+\index{init\+\_\+logging@{init\+\_\+logging}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{init\+\_\+logging()}{init\_logging()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init\+\_\+logging (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_acba708e66a47d4aae9a053d364585b81}{alog\+\_\+type}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a2aa93730c801602b55b585121a2898c0}{elog\+\_\+type}} $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initialize logging. 
+
+The loggers are located in the main endpoint class. As such, the transport doesn\textquotesingle{}t have direct access to them. This method is called by the endpoint constructor to allow shared logging from the transport component. These are raw pointers to member variables of the endpoint. In particular, they cannot be used in the transport constructor as they haven\textquotesingle{}t been constructed yet, and cannot be used in the transport destructor as they will have been destroyed by then. \mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_af33506cbd90a184cdf1a0424ec2d0619}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_af33506cbd90a184cdf1a0424ec2d0619}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!is\+\_\+listening@{is\+\_\+listening}}
+\index{is\+\_\+listening@{is\+\_\+listening}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{is\+\_\+listening()}{is\_listening()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+bool \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::is\+\_\+listening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the endpoint is listening. 
+
+\begin{DoxyReturn}{Returns}
+Whether or not the endpoint is listening. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac36c2b22a7c2550663792472a728f615}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ac36c2b22a7c2550663792472a728f615}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{lib\+::asio\+::ip\+::tcp\+::endpoint$<$ \mbox{\hyperlink{classconfig}{config}} $>$ const \&}]{ep,  }\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening manually (exception free) 
+
+Bind the internal acceptor using the specified settings. The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ep} & An endpoint to read settings from \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 14
+Here is the caller graph for this function\+:
+% FIG 15
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ab3d7708b939531c5c803e3b148a9b009}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ab3d7708b939531c5c803e3b148a9b009}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{lib\+::asio\+::ip\+::tcp\+::endpoint$<$ \mbox{\hyperlink{classconfig}{config}} $>$ const \&}]{ep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening manually. 
+
+Bind the internal acceptor using the settings specified by the endpoint e
+
+
+\begin{DoxyParams}{Parameters}
+{\em ep} & An endpoint to read settings from \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 16
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae6813b9ecda67a13a78967f72e77b061}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae6813b9ecda67a13a78967f72e77b061}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+template$<$typename Internet\+Protocol $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{Internet\+Protocol const \&}]{internet\+\_\+protocol,  }\item[{uint16\+\_\+t}]{port,  }\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening with protocol and port (exception free) 
+
+Bind the internal acceptor using the given internet protocol and port. The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+Common options include\+:
+\begin{DoxyItemize}
+\item I\+Pv6 with mapped I\+Pv4 for dual stack hosts lib\+::asio\+::ip\+::tcp\+::v6()
+\item I\+Pv4 only\+: lib\+::asio\+::ip\+::tcp\+::v4()
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em internet\+\_\+protocol} & The internet protocol to use. \\
+\hline
+{\em port} & The port to listen on. \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad08b16daae1fac46679245ec7d0c8952}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad08b16daae1fac46679245ec7d0c8952}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+template$<$typename Internet\+Protocol $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{Internet\+Protocol const \&}]{internet\+\_\+protocol,  }\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening with protocol and port. 
+
+Bind the internal acceptor using the given internet protocol and port. The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+Common options include\+:
+\begin{DoxyItemize}
+\item I\+Pv6 with mapped I\+Pv4 for dual stack hosts lib\+::asio\+::ip\+::tcp\+::v6()
+\item I\+Pv4 only\+: lib\+::asio\+::ip\+::tcp\+::v4()
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em internet\+\_\+protocol} & The internet protocol to use. \\
+\hline
+{\em port} & The port to listen on. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae7da6e2c944c3e1a087495b9d998dc8b}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ae7da6e2c944c3e1a087495b9d998dc8b}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port,  }\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening on a port (exception free) 
+
+Bind the internal acceptor using the given port. The I\+Pv6 protocol with mapped I\+Pv4 for dual stack hosts will be used. If you need I\+Pv4 only use the overload that allows specifying the protocol explicitly.
+
+The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to listen on. \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a80c1e2bb6edbfbfc46d387015e528117}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a80c1e2bb6edbfbfc46d387015e528117}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening on a port. 
+
+Bind the internal acceptor using the given port. The I\+Pv6 protocol with mapped I\+Pv4 for dual stack hosts will be used. If you need I\+Pv4 only use the overload that allows specifying the protocol explicitly.
+
+The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to listen on. \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a85606665cc9c948194076c2377cb61c0}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a85606665cc9c948194076c2377cb61c0}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{host,  }\item[{std\+::string const \&}]{service,  }\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening on a host and service (exception free) 
+
+Bind the internal acceptor using the given host and service. More details about what host and service can be are available in the Asio documentation for ip\+::basic\+\_\+resolver\+\_\+query\+::basic\+\_\+resolver\+\_\+query\textquotesingle{}s constructors.
+
+The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & \mbox{\hyperlink{struct_a}{A}} string identifying a location. May be a descriptive name or a numeric address string. \\
+\hline
+{\em service} & \mbox{\hyperlink{struct_a}{A}} string identifying the requested service. This may be a descriptive name or a numeric string corresponding to a port number. \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad69ca2f648f48c7616ad1df614d88d67}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad69ca2f648f48c7616ad1df614d88d67}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!listen@{listen}}
+\index{listen@{listen}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::listen (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{host,  }\item[{std\+::string const \&}]{service }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set up endpoint for listening on a host and service. 
+
+Bind the internal acceptor using the given host and service. More details about what host and service can be are available in the Asio documentation for ip\+::basic\+\_\+resolver\+\_\+query\+::basic\+\_\+resolver\+\_\+query\textquotesingle{}s constructors.
+
+The endpoint must have been initialized by calling init\+\_\+asio before listening.
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & \mbox{\hyperlink{struct_a}{A}} string identifying a location. May be a descriptive name or a numeric address string. \\
+\hline
+{\em service} & \mbox{\hyperlink{struct_a}{A}} string identifying the requested service. This may be a descriptive name or a numeric string corresponding to a port number. \\
+\hline
+{\em ec} & Set to indicate what error occurred, if any. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a06b42e739e095b5ec489b59a655b2242}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a06b42e739e095b5ec489b59a655b2242}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!run\+\_\+one@{run\+\_\+one}}
+\index{run\+\_\+one@{run\+\_\+one}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{run\+\_\+one()}{run\_one()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::run\+\_\+one (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+wraps the run\+\_\+one method of the internal io\+\_\+service object 
+
+\begin{DoxySince}{Since}
+0.\+3.\+0-\/alpha4 
+\end{DoxySince}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a60bb0d01c277b7cfcb6f69215a36b216}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a60bb0d01c277b7cfcb6f69215a36b216}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!set\+\_\+listen\+\_\+backlog@{set\+\_\+listen\+\_\+backlog}}
+\index{set\+\_\+listen\+\_\+backlog@{set\+\_\+listen\+\_\+backlog}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+listen\+\_\+backlog()}{set\_listen\_backlog()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+listen\+\_\+backlog (\begin{DoxyParamCaption}\item[{int}]{backlog }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum length of the queue of pending connections. 
+
+Sets the maximum length of the queue of pending connections. Increasing this will allow Web\+Socket++ to queue additional incoming connections. Setting it higher may prevent failed connections at high connection rates but may cause additional latency.
+
+For this value to take effect you may need to adjust operating system settings.
+
+New values affect future calls to listen only.
+
+\mbox{\hyperlink{struct_a}{A}} value of zero will use the operating system default. This is the default value.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em backlog} & The maximum length of the queue of pending connections \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a491d13d6e1ad0edc5843e41b06fa4e0c}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a491d13d6e1ad0edc5843e41b06fa4e0c}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!set\+\_\+reuse\+\_\+addr@{set\+\_\+reuse\+\_\+addr}}
+\index{set\+\_\+reuse\+\_\+addr@{set\+\_\+reuse\+\_\+addr}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+reuse\+\_\+addr()}{set\_reuse\_addr()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+reuse\+\_\+addr (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether to use the S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR flag when opening listening sockets. 
+
+Specifies whether or not to use the S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR T\+CP socket option. What this flag does depends on your operating system. Please consult operating system documentation for more details.
+
+New values affect future calls to listen only.
+
+The default is false.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Whether or not to use the S\+O\+\_\+\+R\+E\+U\+S\+E\+A\+D\+DR option \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a497f353a5ec277355cd8b0caf893d1ce}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a497f353a5ec277355cd8b0caf893d1ce}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!set\+\_\+tcp\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tcp\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+tcp\+\_\+init\+\_\+handler()}{set\_tcp\_init\_handler()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+tcp\+\_\+init\+\_\+handler (\begin{DoxyParamCaption}\item[{tcp\+\_\+init\+\_\+handler}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the tcp pre init handler (deprecated) 
+
+The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, T\+LS handshakes, etc) have been performed.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000003}{Deprecated}}]Use set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler instead\end{DoxyRefDesc}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The handler to call on tcp pre init. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 17
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a605c9f8c671d783739c1e98c6c7fda9d}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a605c9f8c671d783739c1e98c6c7fda9d}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler()}{set\_tcp\_post\_init\_handler()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+tcp\+\_\+post\+\_\+init\+\_\+handler (\begin{DoxyParamCaption}\item[{tcp\+\_\+init\+\_\+handler}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the tcp post init handler. 
+
+The tcp post init handler is called after the tcp connection has been established and all additional wrappers (proxy connects, T\+LS handshakes, etc have been performed. This is fired before any bytes are read or any Web\+Socket specific handshake logic has been performed.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The handler to call on tcp post init. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad334b214cf4800bb34aa09d7055e6464}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_ad334b214cf4800bb34aa09d7055e6464}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler}}
+\index{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler@{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler()}{set\_tcp\_pre\_init\_handler()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+tcp\+\_\+pre\+\_\+init\+\_\+handler (\begin{DoxyParamCaption}\item[{tcp\+\_\+init\+\_\+handler}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the tcp pre init handler. 
+
+The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, T\+LS handshakes, etc) have been performed.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em h} & The handler to call on tcp pre init. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 18
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a63525bd209bb3dabf373b9b72d37e78e}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a63525bd209bb3dabf373b9b72d37e78e}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!set\+\_\+timer@{set\+\_\+timer}}
+\index{set\+\_\+timer@{set\+\_\+timer}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+timer()}{set\_timer()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a1802f5762009dbed117ff793fa87468f}{timer\+\_\+ptr}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+timer (\begin{DoxyParamCaption}\item[{long}]{duration,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_a946cc56ff41139f3002149c15fd87bc9}{timer\+\_\+handler}}}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Call back a function after a period of time. 
+
+Sets a timer that calls back a function after the specified period of milliseconds. Returns a handle that can be used to cancel the timer. \mbox{\hyperlink{struct_a}{A}} cancelled timer will return the error code \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1error_a8d371a2562d813e5a2e106e2694d4fb0a887436887a8732e48f7c67bd85bb6f64}{error\+::operation\+\_\+aborted}} \mbox{\hyperlink{struct_a}{A}} timer that expired will return no error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & Length of time to wait in milliseconds \\
+\hline
+{\em callback} & The function to call back when the timer has expired \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} handle that can be used to cancel the timer if it is no longer needed. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 19
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5a707078d482c141edf0a8cdd0bc6345}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a5a707078d482c141edf0a8cdd0bc6345}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!start\+\_\+perpetual@{start\+\_\+perpetual}}
+\index{start\+\_\+perpetual@{start\+\_\+perpetual}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{start\+\_\+perpetual()}{start\_perpetual()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::start\+\_\+perpetual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Marks the endpoint as perpetual, stopping it from exiting when empty. 
+
+Marks the endpoint as perpetual. Perpetual endpoints will not automatically exit when they run out of connections to process. To stop a perpetual endpoint call {\ttfamily end\+\_\+perpetual}.
+
+An endpoint may be marked perpetual at any time by any thread. It must be called either before the endpoint has run out of work or before it was started
+
+\begin{DoxySince}{Since}
+0.\+3.\+0 
+\end{DoxySince}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a0da87d3a3e8ee8279fe59eb0385d81e3}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_a0da87d3a3e8ee8279fe59eb0385d81e3}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!stop\+\_\+listening@{stop\+\_\+listening}}
+\index{stop\+\_\+listening@{stop\+\_\+listening}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{stop\+\_\+listening()}{stop\_listening()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::stop\+\_\+listening (\begin{DoxyParamCaption}\item[{lib\+::error\+\_\+code \&}]{ec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stop listening (exception free) 
+
+Stop listening and accepting new connections. This will not end any existing connections.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0-\/alpha4 
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em ec} & \mbox{\hyperlink{struct_a}{A}} status code indicating an error, if any. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 20
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_af4ae00e12a34475a1950d69f5b9da507}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_af4ae00e12a34475a1950d69f5b9da507}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!stop\+\_\+listening@{stop\+\_\+listening}}
+\index{stop\+\_\+listening@{stop\+\_\+listening}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{stop\+\_\+listening()}{stop\_listening()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::stop\+\_\+listening (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stop listening. 
+
+Stop listening and accepting new connections. This will not end any existing connections.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0-\/alpha4 
+\end{DoxySince}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aaaf8c9ef3f41be6968674bd704dc23b0}\label{classwebsocketpp_1_1transport_1_1asio_1_1endpoint_aaaf8c9ef3f41be6968674bd704dc23b0}} 
+\index{websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}!stop\+\_\+perpetual@{stop\+\_\+perpetual}}
+\index{stop\+\_\+perpetual@{stop\+\_\+perpetual}!websocketpp\+::transport\+::asio\+::endpoint@{websocketpp\+::transport\+::asio\+::endpoint}}
+\subsubsection{\texorpdfstring{stop\+\_\+perpetual()}{stop\_perpetual()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1endpoint}{websocketpp\+::transport\+::asio\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::stop\+\_\+perpetual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the endpoint\textquotesingle{}s perpetual flag, allowing it to exit when empty. 
+
+Clears the endpoint\textquotesingle{}s perpetual flag. This will cause the endpoint\textquotesingle{}s run method to exit normally when it runs out of connections. If there are currently active connections it will not end until they are complete.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0 
+\end{DoxySince}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/websocketpp/transport/asio/base.\+hpp\item 
+libraries/fc/vendor/websocketpp/websocketpp/transport/asio/endpoint.\+hpp\end{DoxyCompactItemize}

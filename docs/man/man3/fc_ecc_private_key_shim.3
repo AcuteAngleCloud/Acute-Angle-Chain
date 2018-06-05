@@ -1,0 +1,46 @@
+.TH "fc::ecc::private_key_shim" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::ecc::private_key_shim
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBfc::crypto::shim< private_key_secret >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBsignature_type\fP = \fBsignature_shim\fP"
+.br
+.ti -1c
+.RI "using \fBpublic_key_type\fP = \fBpublic_key_shim\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsignature_type\fP \fBsign\fP (const \fBsha256\fP &digest, bool require_canonical=true) const"
+.br
+.ti -1c
+.RI "\fBpublic_key_type\fP \fBget_public_key\fP () const"
+.br
+.ti -1c
+.RI "\fBsha512\fP \fBgenerate_shared_secret\fP (const \fBpublic_key_type\fP &pub_key) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBprivate_key_shim\fP \fBgenerate\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

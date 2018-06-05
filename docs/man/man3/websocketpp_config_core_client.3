@@ -1,0 +1,206 @@
+.TH "websocketpp::config::core_client" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::config::core_client \- Client config with iostream transport\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <core_client\&.hpp>\fP
+.PP
+Inherited by \fBwebsocketpp::config::asio_client\fP, and \fBwebsocketpp::config::asio_tls_client\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpermessage_deflate_config\fP"
+.br
+.RI "Extension specific settings: "
+.ti -1c
+.RI "struct \fBtransport_config\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBcore_client\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef \fBwebsocketpp::concurrency::basic\fP \fBconcurrency_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBhttp::parser::request\fP \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBhttp::parser::response\fP \fBresponse_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBmessage_buffer::message\fP< \fBmessage_buffer::alloc::con_msg_manager\fP > \fBmessage_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBmessage_buffer::alloc::con_msg_manager\fP< \fBmessage_type\fP > \fBcon_msg_manager_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBmessage_buffer::alloc::endpoint_msg_manager\fP< \fBcon_msg_manager_type\fP > \fBendpoint_msg_manager_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBwebsocketpp::log::basic\fP< \fBconcurrency_type\fP, \fBwebsocketpp::log::elevel\fP > \fBelog_type\fP"
+.br
+.RI "Logging policies\&. "
+.ti -1c
+.RI "typedef \fBwebsocketpp::log::basic\fP< \fBconcurrency_type\fP, \fBwebsocketpp::log::alevel\fP > \fBalog_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBwebsocketpp::random::random_device::int_generator\fP< uint32_t, \fBconcurrency_type\fP > \fBrng_type\fP"
+.br
+.RI "RNG policies\&. "
+.ti -1c
+.RI "typedef \fBwebsocketpp::transport::iostream::endpoint\fP< \fBtransport_config\fP > \fBtransport_type\fP"
+.br
+.RI "Transport Endpoint Component\&. "
+.ti -1c
+.RI "typedef \fBwebsocketpp::endpoint_base\fP \fBendpoint_base\fP"
+.br
+.RI "User overridable Endpoint base class\&. "
+.ti -1c
+.RI "typedef \fBwebsocketpp::connection_base\fP \fBconnection_base\fP"
+.br
+.RI "User overridable Connection base class\&. "
+.ti -1c
+.RI "typedef \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBpermessage_deflate_config\fP > \fBpermessage_deflate_type\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static bool const \fBenable_multithreading\fP = true"
+.br
+.ti -1c
+.RI "static const long \fBtimeout_open_handshake\fP = 5000"
+.br
+.RI "Default timer values (in ms) "
+.ti -1c
+.RI "static const long \fBtimeout_close_handshake\fP = 5000"
+.br
+.RI "Length of time before a closing handshake is aborted\&. "
+.ti -1c
+.RI "static const long \fBtimeout_pong\fP = 5000"
+.br
+.RI "Length of time to wait for a pong after a ping\&. "
+.ti -1c
+.RI "static const int \fBclient_version\fP = 13"
+.br
+.RI "WebSocket Protocol version to use as a client\&. "
+.ti -1c
+.RI "static const websocketpp::log::level \fBelog_level\fP"
+.br
+.RI "Default static error logging channels\&. "
+.ti -1c
+.RI "static const websocketpp::log::level \fBalog_level\fP"
+.br
+.RI "Default static access logging channels\&. "
+.ti -1c
+.RI "static const size_t \fBconnection_read_buffer_size\fP = 16384"
+.br
+.ti -1c
+.RI "static const bool \fBdrop_on_protocol_error\fP = false"
+.br
+.RI "Drop connections immediately on protocol error\&. "
+.ti -1c
+.RI "static const bool \fBsilent_close\fP = false"
+.br
+.RI "Suppresses the return of detailed connection close information\&. "
+.ti -1c
+.RI "static const size_t \fBmax_message_size\fP = 32000000"
+.br
+.RI "Default maximum message size\&. "
+.ti -1c
+.RI "static const size_t \fBmax_http_body_size\fP = 32000000"
+.br
+.RI "Default maximum http body size\&. "
+.ti -1c
+.RI "static const bool \fBenable_extensions\fP = true"
+.br
+.RI "Global flag for enabling/disabling extensions\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Client config with iostream transport\&. 
+.SH "Member Data Documentation"
+.PP 
+.SS "const websocketpp::log::level websocketpp::config::core_client::alog_level\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+        websocketpp::log::alevel::all ^ websocketpp::log::alevel::devel
+.fi
+.PP
+Default static access logging channels\&. Which access logging channels to enable at compile time\&. Channels not enabled here will be unable to be selected by programs using the library\&. This option gives an optimizing compiler the ability to remove entirely code to test whether or not to print out log messages on a certain channel
+.PP
+Default is all except for development/debug level access messages 
+.SS "const int websocketpp::config::core_client::client_version = 13\fC [static]\fP"
+
+.PP
+WebSocket Protocol version to use as a client\&. What version of the WebSocket Protocol to use for outgoing client connections\&. Setting this to a value other than 13 (RFC6455) is not recommended\&. 
+.SS "const bool websocketpp::config::core_client::drop_on_protocol_error = false\fC [static]\fP"
+
+.PP
+Drop connections immediately on protocol error\&. Drop connections on protocol error rather than sending a close frame\&. Off by default\&. This may result in legit messages near the error being dropped as well\&. It may free up resources otherwise spent dealing with misbehaving clients\&. 
+.SS "const websocketpp::log::level websocketpp::config::core_client::elog_level\fC [static]\fP"
+\fBInitial value:\fP
+.PP
+.nf
+=
+        websocketpp::log::elevel::all ^ websocketpp::log::elevel::devel
+.fi
+.PP
+Default static error logging channels\&. Which error logging channels to enable at compile time\&. Channels not enabled here will be unable to be selected by programs using the library\&. This option gives an optimizing compiler the ability to remove entirely code to test whether or not to print out log messages on a certain channel
+.PP
+Default is all except for development/debug level errors 
+.SS "bool const websocketpp::config::core_client::enable_multithreading = true\fC [static]\fP"
+Controls compile time enabling/disabling of thread syncronization code Disabling can provide a minor performance improvement to single threaded applications 
+.SS "const size_t websocketpp::config::core_client::max_http_body_size = 32000000\fC [static]\fP"
+
+.PP
+Default maximum http body size\&. Default value for the http parser's maximum body size\&. Maximum body size determines the point at which the library will abort reading an HTTP connection with the 413/request entity too large error\&.
+.PP
+The default is 32MB
+.PP
+\fBSince:\fP
+.RS 4
+0\&.5\&.0 
+.RE
+.PP
+
+.SS "const size_t websocketpp::config::core_client::max_message_size = 32000000\fC [static]\fP"
+
+.PP
+Default maximum message size\&. Default value for the processor's maximum message size\&. Maximum message size determines the point at which the library will fail a connection with the message_too_big protocol error\&.
+.PP
+The default is 32MB
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0 
+.RE
+.PP
+
+.SS "const bool websocketpp::config::core_client::silent_close = false\fC [static]\fP"
+
+.PP
+Suppresses the return of detailed connection close information\&. Silence close suppresses the return of detailed connection close information during the closing handshake\&. This information is useful for debugging and presenting useful errors to end users but may be undesirable for security reasons in some production environments\&. Close reasons could be used by an attacker to confirm that the endpoint is out of resources or be used to identify the WebSocket implementation in use\&.
+.PP
+Note: this will suppress \fIall\fP close codes, including those explicitly sent by local applications\&. 
+.SS "const long websocketpp::config::core_client::timeout_open_handshake = 5000\fC [static]\fP"
+
+.PP
+Default timer values (in ms) Length of time before an opening handshake is aborted 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

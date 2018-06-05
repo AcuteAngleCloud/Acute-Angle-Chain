@@ -1,0 +1,115 @@
+The App\+Base library provides a basic framework for building applications from a set of plugins. App\+Base manages the plugin life-\/cycle and ensures that all plugins are configured, initialized, started, and shutdown in the proper order.
+
+\subsection*{\mbox{\hyperlink{struct_key}{Key}} Features}
+
+
+\begin{DoxyItemize}
+\item Dynamically Specify Plugins to Load
+\item Automatically Load Dependent Plugins in Order
+\item Plugins can specify commandline arguments and configuration file options
+\item Program gracefully exits from S\+I\+G\+I\+NT and S\+I\+G\+T\+E\+RM
+\item Minimal Dependencies (Boost 1.\+60, c++14)
+\end{DoxyItemize}
+
+\subsection*{Defining a Plugin}
+
+\mbox{\hyperlink{struct_a}{A}} simple example of a 2-\/plugin application can be found in the /examples directory. Each plugin has a simple life cycle\+:
+
+
+\begin{DoxyEnumerate}
+\item Initialize -\/ parse configuration file options
+\item Startup -\/ start executing, using configuration file options
+\item Shutdown -\/ stop everything and free all resources
+\end{DoxyEnumerate}
+
+All plugins complete the Initialize step before any plugin enters the Startup step. Any dependent plugin specified by {\ttfamily A\+P\+P\+B\+A\+S\+E\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+ES} will be Initialized or Started prior to the plugin being Initialized or Started.
+
+Shutdown is called in the reverse order of Startup.
+
+
+\begin{DoxyCode}
+class net\_plugin : public appbase::plugin<net\_plugin>
+\{
+   public:
+     net\_plugin()\{\};
+     ~net\_plugin()\{\};
+
+     APPBASE\_PLUGIN\_REQUIRES( (chain\_plugin) );
+
+     virtual void set\_program\_options( options\_description& cli, options\_description& cfg ) override
+     \{
+        cfg.add\_options()
+              ("listen-endpoint", bpo::value<string>()->default\_value( "127.0.0.1:9876" ), "The local IP
+       address and port to listen for incoming connections.")
+              ("remote-endpoint", bpo::value< vector<string> >()->composing(), "The IP address and port of
+       a remote peer to sync with.")
+              ("public-endpoint", bpo::value<string>()->default\_value( "0.0.0.0:9876" ), "The public IP
+       address and port that should be advertized to peers.")
+              ;
+     \}
+
+     void plugin\_initialize( const variables\_map& options ) \{ std::cout << "initialize net plugin\(\backslash\)n"; \}
+     void plugin\_startup()  \{ std::cout << "starting net plugin \(\backslash\)n"; \}
+     void plugin\_shutdown() \{ std::cout << "shutdown net plugin \(\backslash\)n"; \}
+
+\};
+
+int main( int argc, char** argv ) \{
+   try \{
+      appbase::app().register\_plugin<net\_plugin>(); // implict registration of chain\_plugin dependency
+      if( !appbase::app().initialize( argc, argv ) )
+         return -1;
+      appbase::app().startup();
+      appbase::app().exec();
+   \} catch ( const boost::exception& e ) \{
+      std::cerr << boost::diagnostic\_information(e) << "\(\backslash\)n";
+   \} catch ( const std::exception& e ) \{
+      std::cerr << e.what() << "\(\backslash\)n";
+   \} catch ( ... ) \{
+      std::cerr << "unknown exception\(\backslash\)n";
+   \}
+   std::cout << "exited cleanly\(\backslash\)n";
+   return 0;
+\}
+\end{DoxyCode}
+
+
+This example can be used like follows\+:
+
+
+\begin{DoxyCode}
+./examples/appbase\_example --plugin net\_plugin
+initialize chain plugin
+initialize net plugin
+starting chain plugin
+starting net plugin
+^C
+shutdown net plugin
+shutdown chain plugin
+exited cleanly
+\end{DoxyCode}
+
+
+\subsubsection*{Boost A\+S\+IO}
+
+App\+Base maintains a singleton {\ttfamily application} instance which can be accessed via {\ttfamily appbase\+::app()}. This application owns a {\ttfamily boost\+::asio\+::io\+\_\+service} which starts running when {\ttfamily appbase\+::exec()} is called. If a plugin needs to perform IO or other asynchronous operations then it should dispatch it via {\ttfamily app().get\+\_\+io\+\_\+service().post( lambda )}. ~\newline
+ Because the app calls {\ttfamily io\+\_\+service\+::run()} from within {\ttfamily application\+::exec()} all asynchronous operations posted to the io\+\_\+service should be run in the same thread. ~\newline
+ \subsection*{Graceful Exit}
+
+To trigger a graceful exit call {\ttfamily appbase\+::app().quit()} or send S\+I\+G\+T\+E\+RM or S\+I\+G\+I\+NT to the process.
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyEnumerate}
+\item c++14 or newer (clang or g++)
+\item Boost 1.\+60 or newer compiled with C++14 support
+\end{DoxyEnumerate}
+
+To compile boost with c++14 use\+:
+
+
+\begin{DoxyCode}
+./b2 ...  cxxflags="-std=c++0x -stdlib=libc++" linkflags="-stdlib=libc++" ...
+\end{DoxyCode}
+ 

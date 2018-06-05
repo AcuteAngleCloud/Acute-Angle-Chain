@@ -1,0 +1,11 @@
+digraph "websocketpp::log::stub::set_channels"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node11 [label="websocketpp::log::stub\l::set_channels",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="websocketpp::endpoint\l\< connection\< websocketpp\l::config::asio \>, websocketpp\l::config::asio \>::set_access\l_channels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1endpoint.html#a5d7da609ebd2f797e5e67b6d050ebc59",tooltip="Set Access logging channel. "];
+  Node11 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="websocketpp::endpoint\l\< connection\< websocketpp\l::config::asio \>, websocketpp\l::config::asio \>::set_error\l_channels",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1endpoint.html#a8292bcdca9344b57af1b0964ff7fc778",tooltip="Set Error logging channel. "];
+}

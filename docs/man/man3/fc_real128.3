@@ -1,0 +1,68 @@
+.TH "fc::real128" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::real128
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <real128\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBreal128\fP (uint64_t integer=0)"
+.br
+.ti -1c
+.RI "\fBreal128\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "\fBoperator std::string\fP () const"
+.br
+.ti -1c
+.RI "\fBreal128\fP & \fBoperator+=\fP (const \fBreal128\fP &o)"
+.br
+.ti -1c
+.RI "\fBreal128\fP & \fBoperator\-=\fP (const \fBreal128\fP &o)"
+.br
+.ti -1c
+.RI "\fBreal128\fP & \fBoperator/=\fP (const \fBreal128\fP &o)"
+.br
+.ti -1c
+.RI "\fBreal128\fP & \fBoperator*=\fP (const \fBreal128\fP &o)"
+.br
+.ti -1c
+.RI "uint64_t \fBto_uint64\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBreal128\fP \fBfrom_fixed\fP (const \fBuint128\fP &fixed)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBreal128\fP \fBoperator*\fP (\fBreal128\fP a, const \fBreal128\fP &b)"
+.br
+.ti -1c
+.RI "\fBreal128\fP \fBoperator/\fP (\fBreal128\fP a, const \fBreal128\fP &b)"
+.br
+.ti -1c
+.RI "\fBreal128\fP \fBoperator+\fP (\fBreal128\fP a, const \fBreal128\fP &b)"
+.br
+.ti -1c
+.RI "\fBreal128\fP \fBoperator\-\fP (\fBreal128\fP a, const \fBreal128\fP &b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides fixed point math operations based on decimal fractions with 18 places\&. Delegates to \fBfc::bigint\fP for multiplication and division\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

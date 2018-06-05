@@ -1,0 +1,53 @@
+.TH "aacio::chain::resource_limits::impl::exponential_moving_average_accumulator< Precision >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::resource_limits::impl::exponential_moving_average_accumulator< Precision >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <resource_limits_private\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint64_t \fBaverage\fP () const"
+.br
+.ti -1c
+.RI "void \fBadd\fP (uint64_t units, uint32_t ordinal, uint32_t window_size)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBlast_ordinal\fP"
+.br
+.RI "The ordinal of the last period which has contributed to the average\&. "
+.ti -1c
+.RI "uint64_t \fBvalue_ex\fP"
+.br
+.RI "The current average pre-multiplied by Precision\&. "
+.ti -1c
+.RI "uint64_t \fBconsumed\fP"
+.br
+.RI "The the last periods average + the current periods contribution so far\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<uint64_t Precision = config::rate_limiting_precision>
+.br
+struct aacio::chain::resource_limits::impl::exponential_moving_average_accumulator< Precision >"
+This class accumulates and exponential moving average based on inputs This accumulator assumes there are no drops in input data
+.PP
+The value stored is Precision times the sum of the inputs\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<uint64_t Precision = config::rate_limiting_precision> uint64_t \fBaacio::chain::resource_limits::impl::exponential_moving_average_accumulator\fP< Precision >::average () const\fC [inline]\fP"
+return the average value 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

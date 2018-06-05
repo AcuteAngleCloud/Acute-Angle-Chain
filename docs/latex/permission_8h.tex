@@ -1,0 +1,43 @@
+\hypertarget{permission_8h}{}\section{contracts/aaciolib/permission.h File Reference}
+\label{permission_8h}\index{contracts/aaciolib/permission.\+h@{contracts/aaciolib/permission.\+h}}
+{\ttfamily \#include $<$aaciolib/types.\+h$>$}\newline
+Include dependency graph for permission.\+h\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{permission_8h_a2d13e6ac573831f0c4a430153702e58e}{check\+\_\+authorization}} (account\+\_\+name \mbox{\hyperlink{structaccount}{account}}, permission\+\_\+name permission, char $\ast$pubkeys, uint32\+\_\+t pubkeys\+\_\+len)
+\begin{DoxyCompactList}\small\item\em Checks if a set of public keys can authorize an account permission. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{permission_8h_a2d13e6ac573831f0c4a430153702e58e}\label{permission_8h_a2d13e6ac573831f0c4a430153702e58e}} 
+\index{permission.\+h@{permission.\+h}!check\+\_\+authorization@{check\+\_\+authorization}}
+\index{check\+\_\+authorization@{check\+\_\+authorization}!permission.\+h@{permission.\+h}}
+\subsubsection{\texorpdfstring{check\+\_\+authorization()}{check\_authorization()}}
+{\footnotesize\ttfamily int32\+\_\+t check\+\_\+authorization (\begin{DoxyParamCaption}\item[{account\+\_\+name}]{account,  }\item[{permission\+\_\+name}]{permission,  }\item[{char $\ast$}]{pubkeys,  }\item[{uint32\+\_\+t}]{pubkeys\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+Checks if a set of public keys can authorize an account permission. 
+
+Checks if a set of public keys can authorize an account permission 
+\begin{DoxyParams}{Parameters}
+{\em account} & -\/ the account owner of the permission \\
+\hline
+{\em permission} & -\/ the permission name to check for authorization \\
+\hline
+{\em pubkeys} & -\/ a pointer to an array of public keys (\mbox{\hyperlink{structpublic__key}{public\+\_\+key}}) \\
+\hline
+{\em pubkeys\+\_\+len} & -\/ the lenght of the array of public keys \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the account permission can be authorized, 0 otherwise 
+\end{DoxyReturn}

@@ -1,0 +1,60 @@
+.TH "contracts/musl/upstream/include/unistd.h" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/musl/upstream/include/unistd.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBsbrk\fP (uint32_t num_bytes)"
+.br
+.RI "Allocate page memory\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void* sbrk (uint32_t num_bytes)"
+
+.PP
+Allocate page memory\&. Allocate page(s) of memory to accommodate the requested number of bytes\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum_bytes\fP Number of bytes to add\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+void pointer to the previous end of allocated bytes
+.RE
+.PP
+Example: 
+.PP
+.nf
+// allocate a whole new page, the returned offset is the pointer to the
+// newly allocated page
+char* new_page = static_cast<char*>(sbrk(65536));
+memset(new_page, 0, 65536);
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

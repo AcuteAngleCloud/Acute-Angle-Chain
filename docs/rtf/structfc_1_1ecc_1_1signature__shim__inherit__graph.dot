@@ -1,0 +1,8 @@
+digraph "fc::ecc::signature_shim"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="fc::ecc::signature_shim",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="fc::crypto::shim\< compact\l_signature \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfc_1_1crypto_1_1shim.html"];
+}

@@ -1,0 +1,124 @@
+.TH "libraries/fc/include/fc/log/log_message.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/fc/include/fc/log/log_message.hpp \- Defines types and helper macros necessary for generating log messages\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fc/time\&.hpp>\fP
+.br
+\fC#include <fc/variant_object\&.hpp>\fP
+.br
+\fC#include <fc/shared_ptr\&.hpp>\fP
+.br
+\fC#include <memory>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBfc::log_level\fP"
+.br
+.ti -1c
+.RI "class \fBfc::log_context\fP"
+.br
+.RI "provides information about where and when a log message was generated\&. "
+.ti -1c
+.RI "class \fBfc::log_message\fP"
+.br
+.RI "aggregates a message along with the context and associated meta-information\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBfc\fP"
+.br
+.RI "aacio::chain "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__func__\fP   __FUNCTION__"
+.br
+.ti -1c
+.RI "#define \fBFC_LOG_CONTEXT\fP(LOG_LEVEL)   \fBfc::log_context\fP( fc::log_level::LOG_LEVEL, __FILE__, __LINE__, __func__ )"
+.br
+.RI "Automatically captures the File, Line, and Method names and passes them to the constructor of \fBfc::log_context\fP along with LOG_LEVEL\&. "
+.ti -1c
+.RI "#define \fBFC_LOG_MESSAGE\fP(LOG_LEVEL,  FORMAT, \&.\&.\&.)   \fBfc::log_message\fP( \fBFC_LOG_CONTEXT\fP(LOG_LEVEL), FORMAT, \fBfc::mutable_variant_object\fP()__VA_ARGS__ )"
+.br
+.RI "\fBA\fP helper method for generating log messages\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::vector\fP< log_message > \fBfc::log_messages\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBfc::to_variant\fP (log_level e, variant &v)"
+.br
+.ti -1c
+.RI "void \fBfc::from_variant\fP (const variant &e, log_level &ll)"
+.br
+.ti -1c
+.RI "void \fBfc::to_variant\fP (const log_context &l, variant &v)"
+.br
+.ti -1c
+.RI "void \fBfc::from_variant\fP (const variant &l, log_context &c)"
+.br
+.ti -1c
+.RI "void \fBfc::to_variant\fP (const log_message &l, variant &v)"
+.br
+.ti -1c
+.RI "void \fBfc::from_variant\fP (const variant &l, log_message &c)"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT_TYPENAME\fP (\fBfc::log_message\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Defines types and helper macros necessary for generating log messages\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FC_LOG_CONTEXT(LOG_LEVEL)   \fBfc::log_context\fP( fc::log_level::LOG_LEVEL, __FILE__, __LINE__, __func__ )"
+
+.PP
+Automatically captures the File, Line, and Method names and passes them to the constructor of \fBfc::log_context\fP along with LOG_LEVEL\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fILOG_LEVEL\fP - a valid log_level::Enum name\&. 
+.RE
+.PP
+
+.SS "#define FC_LOG_MESSAGE(LOG_LEVEL, FORMAT,  \&.\&.\&.)   \fBfc::log_message\fP( \fBFC_LOG_CONTEXT\fP(LOG_LEVEL), FORMAT, \fBfc::mutable_variant_object\fP()__VA_ARGS__ )"
+
+.PP
+\fBA\fP helper method for generating log messages\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fILOG_LEVEL\fP a valid log_level::Enum name to be passed to the log_context 
+.br
+\fIFORMAT\fP \fBA\fP const char* string containing zero or more references to keys as '${key}' 
+.br
+\fI\&.\&.\&.\fP \fBA\fP set of key/value pairs denoted as ('key',val)('key2',val2)\&.\&.\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,21 @@
+digraph "wasm::BreakValueDropper"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5 [label="wasm::BreakValueDropper",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="wasm::ControlFlowWalker\l\< BreakValueDropper \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_control_flow_walker.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="wasm::PostWalker\< BreakValue\lDropper, Visitor\< BreakValueDropper \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_post_walker.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="wasm::Walker\< BreakValue\lDropper, Visitor\< BreakValue\lDropper \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_walker.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="wasm::Visitor\< BreakValue\lDropper \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_visitor.html"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" controlFlowStack" ,fontname="Helvetica"];
+  Node10 [label="std::vector\< wasm::\lExpression *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node11 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" origin" ,fontname="Helvetica"];
+  Node11 [label="wasm::Name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_name.html"];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="cashew::IString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcashew_1_1_i_string.html"];
+}

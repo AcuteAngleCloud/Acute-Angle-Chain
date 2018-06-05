@@ -1,0 +1,59 @@
+.TH "aacio::producer_plugin_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::producer_plugin_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBproducer_plugin_impl\fP (boost::asio::io_service &io)"
+.br
+.ti -1c
+.RI "void \fBschedule_production_loop\fP ()"
+.br
+.ti -1c
+.RI "block_production_condition::block_production_condition_enum \fBblock_production_loop\fP ()"
+.br
+.ti -1c
+.RI "block_production_condition::block_production_condition_enum \fBmaybe_produce_block\fP (\fBfc::mutable_variant_object\fP &capture)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "boost::program_options::variables_map \fB_options\fP"
+.br
+.ti -1c
+.RI "bool \fB_production_enabled\fP = false"
+.br
+.ti -1c
+.RI "uint32_t \fB_required_producer_participation\fP = uint32_t(config::required_producer_participation)"
+.br
+.ti -1c
+.RI "uint32_t \fB_production_skip_flags\fP = aacio::chain::skip_nothing"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBchain::public_key_type\fP, \fBchain::private_key_type\fP > \fB_private_keys\fP"
+.br
+.ti -1c
+.RI "\fBstd::set\fP< \fBchain::account_name\fP > \fB_producers\fP"
+.br
+.ti -1c
+.RI "boost::asio::deadline_timer \fB_timer\fP"
+.br
+.ti -1c
+.RI "block_production_condition::block_production_condition_enum \fB_prev_result\fP = block_production_condition::produced"
+.br
+.ti -1c
+.RI "uint32_t \fB_prev_result_count\fP = 0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

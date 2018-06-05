@@ -1,0 +1,59 @@
+\hypertarget{structaacio_1_1handshake__message}{}\section{aacio\+:\+:handshake\+\_\+message Struct Reference}
+\label{structaacio_1_1handshake__message}\index{aacio\+::handshake\+\_\+message@{aacio\+::handshake\+\_\+message}}
+
+
+Collaboration diagram for aacio\+:\+:handshake\+\_\+message\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a2fa5199e5e23a924e09b131f25e1f80e}\label{structaacio_1_1handshake__message_a2fa5199e5e23a924e09b131f25e1f80e}} 
+int16\+\_\+t \mbox{\hyperlink{structaacio_1_1handshake__message_a2fa5199e5e23a924e09b131f25e1f80e}{network\+\_\+version}} = 0
+\begin{DoxyCompactList}\small\item\em derived from git commit hash, not sequential \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_ad86f35588c44ced2715c9d5a401e9066}\label{structaacio_1_1handshake__message_ad86f35588c44ced2715c9d5a401e9066}} 
+\mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} \mbox{\hyperlink{structaacio_1_1handshake__message_ad86f35588c44ced2715c9d5a401e9066}{chain\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em used to identify chain \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_ab68e60b93488b08cb281cba0499c9a92}\label{structaacio_1_1handshake__message_ab68e60b93488b08cb281cba0499c9a92}} 
+\mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \mbox{\hyperlink{structaacio_1_1handshake__message_ab68e60b93488b08cb281cba0499c9a92}{node\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em used to identify peers and prevent self-\/connect \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_afdf5639e2ce584e8e701cb1c18f0d051}\label{structaacio_1_1handshake__message_afdf5639e2ce584e8e701cb1c18f0d051}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{chain\+::public\+\_\+key\+\_\+type}} \mbox{\hyperlink{structaacio_1_1handshake__message_afdf5639e2ce584e8e701cb1c18f0d051}{key}}
+\begin{DoxyCompactList}\small\item\em authentication key; may be a producer or peer key, or empty \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a0e2dfb66fd9cb50cafa3f2bd8fa820c7}\label{structaacio_1_1handshake__message_a0e2dfb66fd9cb50cafa3f2bd8fa820c7}} 
+tstamp {\bfseries time}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a7643f7c254b591d4fefa88efff7d57b2}\label{structaacio_1_1handshake__message_a7643f7c254b591d4fefa88efff7d57b2}} 
+\mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \mbox{\hyperlink{structaacio_1_1handshake__message_a7643f7c254b591d4fefa88efff7d57b2}{token}}
+\begin{DoxyCompactList}\small\item\em digest of time to prove we own the private key of the key above \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a45417785872ee23d0ccf90438971d73f}\label{structaacio_1_1handshake__message_a45417785872ee23d0ccf90438971d73f}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1signature}{chain\+::signature\+\_\+type}} \mbox{\hyperlink{structaacio_1_1handshake__message_a45417785872ee23d0ccf90438971d73f}{sig}}
+\begin{DoxyCompactList}\small\item\em signature for the digest \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_ac9deb04dbdaa629e0b564230a87082e5}\label{structaacio_1_1handshake__message_ac9deb04dbdaa629e0b564230a87082e5}} 
+string {\bfseries p2p\+\_\+address}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_aab63678a90855f24c18275c97ed9c407}\label{structaacio_1_1handshake__message_aab63678a90855f24c18275c97ed9c407}} 
+uint32\+\_\+t {\bfseries last\+\_\+irreversible\+\_\+block\+\_\+num} = 0
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a4aa9789464b54013d1ead4b7a453773c}\label{structaacio_1_1handshake__message_a4aa9789464b54013d1ead4b7a453773c}} 
+\mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} {\bfseries last\+\_\+irreversible\+\_\+block\+\_\+id}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a281d9394fe89937467cfc939d84dd8c8}\label{structaacio_1_1handshake__message_a281d9394fe89937467cfc939d84dd8c8}} 
+uint32\+\_\+t {\bfseries head\+\_\+num} = 0
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_af02fd841eb38f264958fe8bb1dd44f69}\label{structaacio_1_1handshake__message_af02fd841eb38f264958fe8bb1dd44f69}} 
+\mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} {\bfseries head\+\_\+id}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a159e677900d8225400e7c3c394137e7b}\label{structaacio_1_1handshake__message_a159e677900d8225400e7c3c394137e7b}} 
+string {\bfseries os}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_a603addccda1c28d1cfb82b541ed3f604}\label{structaacio_1_1handshake__message_a603addccda1c28d1cfb82b541ed3f604}} 
+string {\bfseries agent}
+\item 
+\mbox{\Hypertarget{structaacio_1_1handshake__message_ad3cb7c90021ee2a074e1a1cd5f9334cc}\label{structaacio_1_1handshake__message_ad3cb7c90021ee2a074e1a1cd5f9334cc}} 
+int16\+\_\+t {\bfseries generation}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/net\+\_\+plugin/include/aacio/net\+\_\+plugin/\mbox{\hyperlink{plugins_2net__plugin_2include_2aacio_2net__plugin_2protocol_8hpp}{protocol.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+digraph "plugins/account_history_plugin/include/aacio/account_history_plugin/transaction_history_object.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node122 [label="plugins/account_history\l_plugin/include/aacio\l/account_history_plugin\l/transaction_history_object.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node122 -> Node123 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node123 [label="plugins/account_history\l_plugin/account_history\l_plugin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$account__history__plugin_8cpp.html"];
+}

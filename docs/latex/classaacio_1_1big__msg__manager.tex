@@ -1,0 +1,56 @@
+\hypertarget{classaacio_1_1big__msg__manager}{}\section{aacio\+:\+:big\+\_\+msg\+\_\+manager Class Reference}
+\label{classaacio_1_1big__msg__manager}\index{aacio\+::big\+\_\+msg\+\_\+manager@{aacio\+::big\+\_\+msg\+\_\+manager}}
+
+
+Collaboration diagram for aacio\+:\+:big\+\_\+msg\+\_\+manager\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a30244b65bf7a21b4183949f04c503b9b}\label{classaacio_1_1big__msg__manager_a30244b65bf7a21b4183949f04c503b9b}} 
+void {\bfseries bcast\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block__summary}{signed\+\_\+block\+\_\+summary}} \&msg, connection\+\_\+ptr skip=connection\+\_\+ptr())
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_ae2dbfa862a946f9ab320248991362382}\label{classaacio_1_1big__msg__manager_ae2dbfa862a946f9ab320248991362382}} 
+void {\bfseries bcast\+\_\+transaction} (const \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} \&id, \mbox{\hyperlink{classfc_1_1time__point__sec}{time\+\_\+point\+\_\+sec}} \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}, const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&msg)
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a3b6d8e2b4d3bda982dfe402c28c11d84}\label{classaacio_1_1big__msg__manager_a3b6d8e2b4d3bda982dfe402c28c11d84}} 
+void {\bfseries bcast\+\_\+rejected\+\_\+transaction} (const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&msg)
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a76c6828ef8fd7394e35fb45086e6b2e3}\label{classaacio_1_1big__msg__manager_a76c6828ef8fd7394e35fb45086e6b2e3}} 
+void {\bfseries recv\+\_\+block} (connection\+\_\+ptr conn, const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block__summary}{signed\+\_\+block\+\_\+summary}} \&msg)
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a920ded35f5230adfc7f5a5fd0c338ade}\label{classaacio_1_1big__msg__manager_a920ded35f5230adfc7f5a5fd0c338ade}} 
+void {\bfseries recv\+\_\+transaction} (connection\+\_\+ptr c)
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_acb09da9c81fc6bd2d19665b98e4d2d08}\label{classaacio_1_1big__msg__manager_acb09da9c81fc6bd2d19665b98e4d2d08}} 
+void {\bfseries recv\+\_\+notice} (connection\+\_\+ptr conn, const \mbox{\hyperlink{structaacio_1_1notice__message}{notice\+\_\+message}} \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a7a5af9cac032c175f7ada250b12c976e}\label{classaacio_1_1big__msg__manager_a7a5af9cac032c175f7ada250b12c976e}} 
+uint32\+\_\+t {\bfseries just\+\_\+send\+\_\+it\+\_\+max}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_aad276225952aee5f1b3649c6895d02d9}\label{classaacio_1_1big__msg__manager_aad276225952aee5f1b3649c6895d02d9}} 
+connection\+\_\+ptr {\bfseries pending\+\_\+txn\+\_\+source}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a7c056a6afc344f91ee10385812f3ec98}\label{classaacio_1_1big__msg__manager_a7c056a6afc344f91ee10385812f3ec98}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} $>$ {\bfseries req\+\_\+blks}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a87a0ee49fbf47e3ddbef92306cea21ab}\label{classaacio_1_1big__msg__manager_a87a0ee49fbf47e3ddbef92306cea21ab}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} $>$ {\bfseries req\+\_\+txn}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_af38e182ccf190d793beb3d3c593ea380}\label{classaacio_1_1big__msg__manager_af38e182ccf190d793beb3d3c593ea380}} 
+static const fc\+::string {\bfseries logger\+\_\+name}
+\item 
+\mbox{\Hypertarget{classaacio_1_1big__msg__manager_a789c4cf5e10415101ef737b745281b0a}\label{classaacio_1_1big__msg__manager_a789c4cf5e10415101ef737b745281b0a}} 
+static \mbox{\hyperlink{classfc_1_1logger}{fc\+::logger}} {\bfseries logger}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/net\+\_\+plugin/\mbox{\hyperlink{net__plugin_8cpp}{net\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

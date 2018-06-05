@@ -1,0 +1,60 @@
+\hypertarget{struct_c_f_g_1_1_shape}{}\section{C\+FG\+:\+:Shape Struct Reference}
+\label{struct_c_f_g_1_1_shape}\index{C\+F\+G\+::\+Shape@{C\+F\+G\+::\+Shape}}
+
+
+Inheritance diagram for C\+FG\+:\+:Shape\+:
+% FIG 0
+
+
+Collaboration diagram for C\+FG\+:\+:Shape\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_a688f2c7f4cafc452b1846b261938e615}\label{struct_c_f_g_1_1_shape_a688f2c7f4cafc452b1846b261938e615}} 
+enum {\bfseries Shape\+Type} \{ {\bfseries Simple}, 
+{\bfseries Multiple}, 
+{\bfseries Loop}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_a7362315af286ef868eed117cae965912}\label{struct_c_f_g_1_1_shape_a7362315af286ef868eed117cae965912}} 
+{\bfseries Shape} (Shape\+Type Type\+Init)
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_a215060879117a696f47a1fde272b8278}\label{struct_c_f_g_1_1_shape_a215060879117a696f47a1fde272b8278}} 
+virtual \mbox{\hyperlink{classwasm_1_1_expression}{wasm\+::\+Expression}} $\ast$ {\bfseries Render} (\mbox{\hyperlink{class_c_f_g_1_1_relooper_builder}{Relooper\+Builder}} \&Builder, bool In\+Loop)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_aa146217106aebc1e52793d8a79e23a60}\label{struct_c_f_g_1_1_shape_aa146217106aebc1e52793d8a79e23a60}} 
+static \mbox{\hyperlink{struct_c_f_g_1_1_simple_shape}{Simple\+Shape}} $\ast$ {\bfseries Is\+Simple} (\mbox{\hyperlink{struct_c_f_g_1_1_shape}{Shape}} $\ast$It)
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_a66d7598e941870edd7b04088e7bb4f70}\label{struct_c_f_g_1_1_shape_a66d7598e941870edd7b04088e7bb4f70}} 
+static \mbox{\hyperlink{struct_c_f_g_1_1_multiple_shape}{Multiple\+Shape}} $\ast$ {\bfseries Is\+Multiple} (\mbox{\hyperlink{struct_c_f_g_1_1_shape}{Shape}} $\ast$It)
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_aeeda47b71561bd61b03970b5de1dc4f4}\label{struct_c_f_g_1_1_shape_aeeda47b71561bd61b03970b5de1dc4f4}} 
+static \mbox{\hyperlink{struct_c_f_g_1_1_loop_shape}{Loop\+Shape}} $\ast$ {\bfseries Is\+Loop} (\mbox{\hyperlink{struct_c_f_g_1_1_shape}{Shape}} $\ast$It)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_ac08f8ae8850e28a79eee4d88f3fa36bb}\label{struct_c_f_g_1_1_shape_ac08f8ae8850e28a79eee4d88f3fa36bb}} 
+int {\bfseries Id}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_a4cc66660dc728ceadd17052954028277}\label{struct_c_f_g_1_1_shape_a4cc66660dc728ceadd17052954028277}} 
+\mbox{\hyperlink{struct_c_f_g_1_1_shape}{Shape}} $\ast$ {\bfseries Next}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_a49ae0419a873ed7052d0941cb0534535}\label{struct_c_f_g_1_1_shape_a49ae0419a873ed7052d0941cb0534535}} 
+\mbox{\hyperlink{struct_c_f_g_1_1_shape}{Shape}} $\ast$ {\bfseries Natural}
+\item 
+\mbox{\Hypertarget{struct_c_f_g_1_1_shape_af43d7385f0d7841b681e570f73c767c4}\label{struct_c_f_g_1_1_shape_af43d7385f0d7841b681e570f73c767c4}} 
+Shape\+Type {\bfseries Type}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/cfg/Relooper.\+h\end{DoxyCompactItemize}

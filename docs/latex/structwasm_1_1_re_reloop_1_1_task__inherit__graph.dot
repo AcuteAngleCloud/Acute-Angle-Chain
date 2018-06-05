@@ -1,0 +1,23 @@
+digraph "wasm::ReReloop::Task"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="wasm::ReReloop::Task",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="wasm::ReReloop::BlockTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_block_task.html"];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="wasm::ReReloop::BreakTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_break_task.html"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="wasm::ReReloop::IfTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_if_task.html"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="wasm::ReReloop::LoopTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_loop_task.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="wasm::ReReloop::ReturnTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_return_task.html"];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="wasm::ReReloop::SwitchTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_switch_task.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="wasm::ReReloop::TriageTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_triage_task.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="wasm::ReReloop::UnreachableTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_re_reloop_1_1_unreachable_task.html"];
+}

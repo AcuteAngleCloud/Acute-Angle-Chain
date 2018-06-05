@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1918 [label="memory_resource",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1918 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="TestResourceImp\< Provider\lT, int \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_test_resource_imp.html"];
+  Node1918 -> Node1920 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1920 [label="TestResourceImp\< BufferProvider\l\<\>, 0 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_test_resource_imp.html"];
+}

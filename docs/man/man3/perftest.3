@@ -1,0 +1,47 @@
+.TH "perftest" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+perftest
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBperftest\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef std::chrono::duration< int, std::micro > \fBdur_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart\fP (std::string uri)"
+.br
+.ti -1c
+.RI "void \fBon_socket_init\fP (\fBwebsocketpp::connection_hdl\fP)"
+.br
+.ti -1c
+.RI "context_ptr \fBon_tls_init\fP (\fBwebsocketpp::connection_hdl\fP)"
+.br
+.ti -1c
+.RI "void \fBon_fail\fP (\fBwebsocketpp::connection_hdl\fP hdl)"
+.br
+.ti -1c
+.RI "void \fBon_open\fP (\fBwebsocketpp::connection_hdl\fP hdl)"
+.br
+.ti -1c
+.RI "void \fBon_message\fP (\fBwebsocketpp::connection_hdl\fP hdl, message_ptr)"
+.br
+.ti -1c
+.RI "void \fBon_close\fP (\fBwebsocketpp::connection_hdl\fP)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

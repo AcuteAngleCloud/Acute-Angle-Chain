@@ -1,0 +1,122 @@
+.TH "wasm::ReReloop" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ReReloop
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::Pass\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBBlockTask\fP"
+.br
+.ti -1c
+.RI "struct \fBBreakTask\fP"
+.br
+.ti -1c
+.RI "struct \fBIfTask\fP"
+.br
+.ti -1c
+.RI "struct \fBLoopTask\fP"
+.br
+.ti -1c
+.RI "struct \fBReturnTask\fP"
+.br
+.ti -1c
+.RI "struct \fBSwitchTask\fP"
+.br
+.ti -1c
+.RI "struct \fBTask\fP"
+.br
+.ti -1c
+.RI "struct \fBTriageTask\fP"
+.br
+.ti -1c
+.RI "struct \fBUnreachableTask\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::shared_ptr< \fBTask\fP > \fBTaskPtr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "\fBCFG::Block\fP * \fBmakeCFGBlock\fP ()"
+.br
+.ti -1c
+.RI "\fBCFG::Block\fP * \fBsetCurrCFGBlock\fP (\fBCFG::Block\fP *curr)"
+.br
+.ti -1c
+.RI "\fBCFG::Block\fP * \fBstartCFGBlock\fP ()"
+.br
+.ti -1c
+.RI "\fBCFG::Block\fP * \fBgetCurrCFGBlock\fP ()"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBgetCurrBlock\fP ()"
+.br
+.ti -1c
+.RI "void \fBfinishBlock\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddBreakTarget\fP (\fBName\fP name, \fBCFG::Block\fP *target)"
+.br
+.ti -1c
+.RI "\fBCFG::Block\fP * \fBgetBreakTarget\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "void \fBaddBranch\fP (\fBCFG::Block\fP *from, \fBCFG::Block\fP *to, \fBExpression\fP *condition=nullptr)"
+.br
+.ti -1c
+.RI "void \fBaddSwitchBranch\fP (\fBCFG::Block\fP *from, \fBCFG::Block\fP *to, const \fBstd::set\fP< Index > &values)"
+.br
+.ti -1c
+.RI "void \fBtriage\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBstopControlFlow\fP ()"
+.br
+.ti -1c
+.RI "void \fBrunFunction\fP (\fBPassRunner\fP *runner, \fBModule\fP *module, \fBFunction\fP *function) override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCFG::Relooper\fP \fBrelooper\fP"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBBuilder\fP > \fBbuilder\fP"
+.br
+.ti -1c
+.RI "\fBCFG::Block\fP * \fBcurrCFGBlock\fP = nullptr"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBCFG::Block\fP * > \fBbreakTargets\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< TaskPtr > \fBstack\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

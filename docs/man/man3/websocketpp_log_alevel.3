@@ -1,0 +1,123 @@
+.TH "websocketpp::log::alevel" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::log::alevel \- Package of log levels for logging access events\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <levels\&.hpp>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static char const  * \fBchannel_name\fP (level \fBchannel\fP)"
+.br
+.RI "Get the textual name of a channel given a channel id\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static level const \fBnone\fP = 0x0"
+.br
+.RI "Special aggregate value representing 'no levels'\&. "
+.ti -1c
+.RI "static level const \fBconnect\fP = 0x1"
+.br
+.RI "Information about new connections\&. "
+.ti -1c
+.RI "static level const \fBdisconnect\fP = 0x2"
+.br
+.RI "\fBOne\fP line for each closed connection\&. Includes closing codes and reasons\&. "
+.ti -1c
+.RI "static level const \fBcontrol\fP = 0x4"
+.br
+.RI "\fBOne\fP line per control frame\&. "
+.ti -1c
+.RI "static level const \fBframe_header\fP = 0x8"
+.br
+.RI "\fBOne\fP line per frame, includes the full frame header\&. "
+.ti -1c
+.RI "static level const \fBframe_payload\fP = 0x10"
+.br
+.RI "\fBOne\fP line per frame, includes the full message payload (warning: chatty) "
+.ti -1c
+.RI "static level const \fBmessage_header\fP = 0x20"
+.br
+.RI "Reserved\&. "
+.ti -1c
+.RI "static level const \fBmessage_payload\fP = 0x40"
+.br
+.RI "Reserved\&. "
+.ti -1c
+.RI "static level const \fBendpoint\fP = 0x80"
+.br
+.RI "Reserved\&. "
+.ti -1c
+.RI "static level const \fBdebug_handshake\fP = 0x100"
+.br
+.RI "Extra information about opening handshakes\&. "
+.ti -1c
+.RI "static level const \fBdebug_close\fP = 0x200"
+.br
+.RI "Extra information about closing handshakes\&. "
+.ti -1c
+.RI "static level const \fBdevel\fP = 0x400"
+.br
+.RI "Development messages (warning: very chatty) "
+.ti -1c
+.RI "static level const \fBapp\fP = 0x800"
+.br
+.RI "Special channel for application specific logs\&. Not used by the library\&. "
+.ti -1c
+.RI "static level const \fBhttp\fP = 0x1000"
+.br
+.RI "Access related to HTTP requests\&. "
+.ti -1c
+.RI "static level const \fBfail\fP = 0x2000"
+.br
+.RI "\fBOne\fP line for each failed WebSocket connection with details\&. "
+.ti -1c
+.RI "static level const \fBaccess_core\fP = 0x00003003"
+.br
+.ti -1c
+.RI "static level const \fBall\fP = 0xffffffff"
+.br
+.RI "Special aggregate value representing 'all levels'\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Package of log levels for logging access events\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static char const* websocketpp::log::alevel::channel_name (level channel)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Get the textual name of a channel given a channel id\&. Get the textual name of a channel given a channel id\&. The id must be that of a single channel\&. Passing an aggregate channel package results in undefined behavior\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channelid to look up\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The name of the specified channel\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "level const websocketpp::log::alevel::access_core = 0x00003003\fC [static]\fP"
+\fBAggregate\fP package representing the commonly used core access channels Connect, Disconnect, Fail, and HTTP 
+.SS "level const websocketpp::log::alevel::connect = 0x1\fC [static]\fP"
+
+.PP
+Information about new connections\&. \fBOne\fP line for each new connection that includes a host of information including: the remote address, websocket version, requested resource, http code, remote user agent 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

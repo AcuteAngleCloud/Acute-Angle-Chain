@@ -1,0 +1,98 @@
+.TH "actioncppapi" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+actioncppapi \- Type-safe C++ wrapers for Action \fBC\fP API\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::permission_level\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::action\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::action_meta< Account, Name >\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBaacio::current_action_data\fP ()"
+.br
+.RI "Interpret the action body as type \fBT\fP\&. "
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBaacio::unpack_action_data\fP ()"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. accounts> void \fBaacio::require_recipient\fP (\fBaccount_name\fP \fBname\fP, accounts\&.\&.\&. remaining_accounts)"
+.br
+.RI "Verify specified accounts exist in the set of notified accounts\&. "
+.ti -1c
+.RI "void \fBaacio::require_auth\fP (const \fBpermission_level\fP &level)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. Args> void \fBaacio::dispatch_inline\fP (\fBpermission_level\fP perm, \fBaccount_name\fP code, action_name act, void(T::*)(Args\&.\&.\&.), std::tuple< Args\&.\&.\&. > args)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Type-safe C++ wrapers for Action \fBC\fP API\&. 
+
+
+.PP
+\fBNote:\fP
+.RS 4
+There are some methods from the \fBAction C API\fP that can be used directly from C++ 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T > \fBT\fP aacio::current_action_data ()"
+
+.PP
+Interpret the action body as type \fBT\fP\&. This method attempts to reinterpret the action body as type \fBT\fP\&. This will only work if the action has no dynamic fields and the struct packing on type \fBT\fP is properly defined\&.
+.PP
+Example: 
+.PP
+.nf
+struct dummy_action {
+  char a; //1
+  unsigned long long b; //8
+  int  c; //4
+};
+dummy_action msg = current_action_data<dummy_action>();
+
+.fi
+.PP
+ 
+.SS "template<typename\&.\&.\&. accounts> void aacio::require_recipient (\fBaccount_name\fP name, accounts\&.\&.\&. remaining_accounts)"
+
+.PP
+Verify specified accounts exist in the set of notified accounts\&. All of the listed accounts will be added to the set of accounts to be notified
+.PP
+This helper method enables you to add multiple accounts to accounts to be notified list with a single call rather than having to call the similar \fBC\fP API multiple times\&.
+.PP
+\fBNote:\fP
+.RS 4
+action\&.code is also considered as part of the set of notified accounts
+.RE
+.PP
+Example: 
+.PP
+.nf
+require_recipient(N(Account1), N(Account2), N(Account3)); // throws exception if any of them not in set\&.
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

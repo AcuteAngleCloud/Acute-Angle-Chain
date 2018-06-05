@@ -1,0 +1,118 @@
+\hypertarget{structwebsocketpp_1_1log_1_1alevel}{}\section{websocketpp\+:\+:log\+:\+:alevel Struct Reference}
+\label{structwebsocketpp_1_1log_1_1alevel}\index{websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}}
+
+
+Package of log levels for logging access events.  
+
+
+
+
+{\ttfamily \#include $<$levels.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static char const  $\ast$ \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a7145c18f40f74cff4946994c14634ce9}{channel\+\_\+name}} (level \mbox{\hyperlink{classchannel}{channel}})
+\begin{DoxyCompactList}\small\item\em Get the textual name of a channel given a channel id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a4cf0520816094999975fe73081cf30f2}\label{structwebsocketpp_1_1log_1_1alevel_a4cf0520816094999975fe73081cf30f2}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a4cf0520816094999975fe73081cf30f2}{none}} = 0x0
+\begin{DoxyCompactList}\small\item\em Special aggregate value representing \char`\"{}no levels\char`\"{}. \end{DoxyCompactList}\item 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_aac3e16b6df297567ba2533233d477d57}{connect}} = 0x1
+\begin{DoxyCompactList}\small\item\em Information about new connections. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_af19681d3edb28e0407688eeda8f0005c}\label{structwebsocketpp_1_1log_1_1alevel_af19681d3edb28e0407688eeda8f0005c}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_af19681d3edb28e0407688eeda8f0005c}{disconnect}} = 0x2
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_one}{One}} line for each closed connection. Includes closing codes and reasons. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_ae67e6466bf3d9daf45cc865e8d48f445}\label{structwebsocketpp_1_1log_1_1alevel_ae67e6466bf3d9daf45cc865e8d48f445}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_ae67e6466bf3d9daf45cc865e8d48f445}{control}} = 0x4
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_one}{One}} line per control frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_ac25fc7cb5fc229abb6fc893f16ffb678}\label{structwebsocketpp_1_1log_1_1alevel_ac25fc7cb5fc229abb6fc893f16ffb678}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_ac25fc7cb5fc229abb6fc893f16ffb678}{frame\+\_\+header}} = 0x8
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_one}{One}} line per frame, includes the full frame header. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_aa38cfdf7a82f33cac319438462707e90}\label{structwebsocketpp_1_1log_1_1alevel_aa38cfdf7a82f33cac319438462707e90}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_aa38cfdf7a82f33cac319438462707e90}{frame\+\_\+payload}} = 0x10
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_one}{One}} line per frame, includes the full message payload (warning\+: chatty) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_ae05d0972bc4d68cca49faf8c82d40304}\label{structwebsocketpp_1_1log_1_1alevel_ae05d0972bc4d68cca49faf8c82d40304}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_ae05d0972bc4d68cca49faf8c82d40304}{message\+\_\+header}} = 0x20
+\begin{DoxyCompactList}\small\item\em Reserved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_ace7d9b9c9ed82029ec93c4f45081b7ac}\label{structwebsocketpp_1_1log_1_1alevel_ace7d9b9c9ed82029ec93c4f45081b7ac}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_ace7d9b9c9ed82029ec93c4f45081b7ac}{message\+\_\+payload}} = 0x40
+\begin{DoxyCompactList}\small\item\em Reserved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_ad35433a6b8793f2bd1f5595386a09c73}\label{structwebsocketpp_1_1log_1_1alevel_ad35433a6b8793f2bd1f5595386a09c73}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_ad35433a6b8793f2bd1f5595386a09c73}{endpoint}} = 0x80
+\begin{DoxyCompactList}\small\item\em Reserved. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a5756fbbc77e431534a43072f944283fc}\label{structwebsocketpp_1_1log_1_1alevel_a5756fbbc77e431534a43072f944283fc}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a5756fbbc77e431534a43072f944283fc}{debug\+\_\+handshake}} = 0x100
+\begin{DoxyCompactList}\small\item\em Extra information about opening handshakes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a8af43767d3814885f55495bf9f5f4df4}\label{structwebsocketpp_1_1log_1_1alevel_a8af43767d3814885f55495bf9f5f4df4}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a8af43767d3814885f55495bf9f5f4df4}{debug\+\_\+close}} = 0x200
+\begin{DoxyCompactList}\small\item\em Extra information about closing handshakes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a65ec21c75999c993c25c72569018f576}\label{structwebsocketpp_1_1log_1_1alevel_a65ec21c75999c993c25c72569018f576}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a65ec21c75999c993c25c72569018f576}{devel}} = 0x400
+\begin{DoxyCompactList}\small\item\em Development messages (warning\+: very chatty) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_aaf67c94a68502c49308489ff01d8d0a8}\label{structwebsocketpp_1_1log_1_1alevel_aaf67c94a68502c49308489ff01d8d0a8}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_aaf67c94a68502c49308489ff01d8d0a8}{app}} = 0x800
+\begin{DoxyCompactList}\small\item\em Special channel for application specific logs. Not used by the library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_af6e731e5771ab1a2267f79e5b9b8183a}\label{structwebsocketpp_1_1log_1_1alevel_af6e731e5771ab1a2267f79e5b9b8183a}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_af6e731e5771ab1a2267f79e5b9b8183a}{http}} = 0x1000
+\begin{DoxyCompactList}\small\item\em Access related to H\+T\+TP requests. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a2e485329910f92f8f6356cf27bafd4a2}\label{structwebsocketpp_1_1log_1_1alevel_a2e485329910f92f8f6356cf27bafd4a2}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a2e485329910f92f8f6356cf27bafd4a2}{fail}} = 0x2000
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_one}{One}} line for each failed Web\+Socket connection with details. \end{DoxyCompactList}\item 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_af5fdb4de43a77cacb4c3a5b01b816750}{access\+\_\+core}} = 0x00003003
+\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a853aa0b8976e53f3181af3bc398d493e}\label{structwebsocketpp_1_1log_1_1alevel_a853aa0b8976e53f3181af3bc398d493e}} 
+static level const \mbox{\hyperlink{structwebsocketpp_1_1log_1_1alevel_a853aa0b8976e53f3181af3bc398d493e}{all}} = 0xffffffff
+\begin{DoxyCompactList}\small\item\em Special aggregate value representing \char`\"{}all levels\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Package of log levels for logging access events. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_a7145c18f40f74cff4946994c14634ce9}\label{structwebsocketpp_1_1log_1_1alevel_a7145c18f40f74cff4946994c14634ce9}} 
+\index{websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}!channel\+\_\+name@{channel\+\_\+name}}
+\index{channel\+\_\+name@{channel\+\_\+name}!websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}}
+\subsubsection{\texorpdfstring{channel\+\_\+name()}{channel\_name()}}
+{\footnotesize\ttfamily static char const$\ast$ websocketpp\+::log\+::alevel\+::channel\+\_\+name (\begin{DoxyParamCaption}\item[{level}]{channel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the textual name of a channel given a channel id. 
+
+Get the textual name of a channel given a channel id. The id must be that of a single channel. Passing an aggregate channel package results in undefined behavior.
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The channelid to look up.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the specified channel. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_af5fdb4de43a77cacb4c3a5b01b816750}\label{structwebsocketpp_1_1log_1_1alevel_af5fdb4de43a77cacb4c3a5b01b816750}} 
+\index{websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}!access\+\_\+core@{access\+\_\+core}}
+\index{access\+\_\+core@{access\+\_\+core}!websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}}
+\subsubsection{\texorpdfstring{access\+\_\+core}{access\_core}}
+{\footnotesize\ttfamily level const websocketpp\+::log\+::alevel\+::access\+\_\+core = 0x00003003\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\hyperlink{struct_aggregate}{Aggregate}} package representing the commonly used core access channels Connect, Disconnect, Fail, and H\+T\+TP \mbox{\Hypertarget{structwebsocketpp_1_1log_1_1alevel_aac3e16b6df297567ba2533233d477d57}\label{structwebsocketpp_1_1log_1_1alevel_aac3e16b6df297567ba2533233d477d57}} 
+\index{websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}!connect@{connect}}
+\index{connect@{connect}!websocketpp\+::log\+::alevel@{websocketpp\+::log\+::alevel}}
+\subsubsection{\texorpdfstring{connect}{connect}}
+{\footnotesize\ttfamily level const websocketpp\+::log\+::alevel\+::connect = 0x1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Information about new connections. 
+
+\mbox{\hyperlink{struct_one}{One}} line for each new connection that includes a host of information including\+: the remote address, websocket version, requested resource, http code, remote user agent 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/websocketpp/logger/levels.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\hypertarget{classaacio_1_1producer__plugin}{}\section{aacio\+:\+:producer\+\_\+plugin Class Reference}
+\label{classaacio_1_1producer__plugin}\index{aacio\+::producer\+\_\+plugin@{aacio\+::producer\+\_\+plugin}}
+
+
+Inheritance diagram for aacio\+:\+:producer\+\_\+plugin\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:producer\+\_\+plugin\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_a3074c4cf916b193d6c67d341e0ce5d17}\label{classaacio_1_1producer__plugin_a3074c4cf916b193d6c67d341e0ce5d17}} 
+virtual void {\bfseries set\+\_\+program\+\_\+options} (boost\+::program\+\_\+options\+::options\+\_\+description \&command\+\_\+line\+\_\+options, boost\+::program\+\_\+options\+::options\+\_\+description \&config\+\_\+file\+\_\+options) override
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_a0daa688b1f496c2436544ba6582f3d10}\label{classaacio_1_1producer__plugin_a0daa688b1f496c2436544ba6582f3d10}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{chain\+::public\+\_\+key\+\_\+type}} {\bfseries first\+\_\+producer\+\_\+public\+\_\+key} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_a13aef2dbdb6a2530271c57e4ed1dcc58}\label{classaacio_1_1producer__plugin_a13aef2dbdb6a2530271c57e4ed1dcc58}} 
+bool {\bfseries is\+\_\+producer\+\_\+key} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{chain\+::public\+\_\+key\+\_\+type}} \&key) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_a4624da5d453fd4fbba550d1eada38d3d}\label{classaacio_1_1producer__plugin_a4624da5d453fd4fbba550d1eada38d3d}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1signature}{chain\+::signature\+\_\+type}} {\bfseries sign\+\_\+compact} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{chain\+::public\+\_\+key\+\_\+type}} \&key, const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&digest) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_a54ab2ab00152d661bd167e3d0085fa75}\label{classaacio_1_1producer__plugin_a54ab2ab00152d661bd167e3d0085fa75}} 
+virtual void {\bfseries plugin\+\_\+initialize} (const boost\+::program\+\_\+options\+::variables\+\_\+map \&options)
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_aaeb8734f1f6f91d5b454c1930864150c}\label{classaacio_1_1producer__plugin_aaeb8734f1f6f91d5b454c1930864150c}} 
+virtual void {\bfseries plugin\+\_\+startup} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin_acf14ab8d5a5c77372e7610aaed89feb1}\label{classaacio_1_1producer__plugin_acf14ab8d5a5c77372e7610aaed89feb1}} 
+virtual void {\bfseries plugin\+\_\+shutdown} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/producer\+\_\+plugin/include/aacio/producer\+\_\+plugin/\mbox{\hyperlink{producer__plugin_8hpp}{producer\+\_\+plugin.\+hpp}}\item 
+plugins/producer\+\_\+plugin/\mbox{\hyperlink{producer__plugin_8cpp}{producer\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

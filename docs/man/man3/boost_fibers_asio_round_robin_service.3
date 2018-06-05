@@ -1,0 +1,44 @@
+.TH "boost::fibers::asio::round_robin::service" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+boost::fibers::asio::round_robin::service
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits service\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBservice\fP (boost::asio::io_service &io_svc)"
+.br
+.ti -1c
+.RI "\fBservice\fP (\fBservice\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBservice\fP & \fBoperator=\fP (\fBservice\fP const &)=delete"
+.br
+.ti -1c
+.RI "void \fBshutdown_service\fP () override final"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unique_ptr< boost::asio::io_service::work > \fBwork_\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static boost::asio::io_service::id \fBid\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

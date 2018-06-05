@@ -1,0 +1,13 @@
+digraph "aacio::currency::create"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="aacio::currency::create",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" maximum_supply" ];
+  Node2 [label="aacio::asset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1asset.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" symbol" ];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" issuer" ];
+  Node4 [label="aacio::name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1name.html",tooltip="wraps a uint64_t to ensure it is only passed to methods that expect a Name "];
+  Node4 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value" ];
+}

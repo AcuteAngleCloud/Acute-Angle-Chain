@@ -1,0 +1,59 @@
+.TH "alloc_first" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+alloc_first
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBA1\fP< int > \fBallocator_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBalloc_first\fP (int d)"
+.br
+.ti -1c
+.RI "\fBalloc_first\fP (std::allocator_arg_t, const \fBA1\fP< int > &a)"
+.br
+.ti -1c
+.RI "\fBalloc_first\fP (std::allocator_arg_t, const \fBA1\fP< int > &a, int d)"
+.br
+.ti -1c
+.RI "\fBalloc_first\fP (std::allocator_arg_t, const \fBA1\fP< int > &a, const \fBalloc_first\fP &d)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBdata_\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBallocator_constructed\fP = false"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBalloc_first\fP &x, const \fBalloc_first\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBalloc_first\fP &x, const \fBalloc_first\fP &y)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,46 @@
+.TH "aacio::chain::chain_controller::controller_config" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::chain_controller::controller_config
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBpath\fP \fBblock_log_dir\fP = config::default_block_log_dir"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBshared_memory_dir\fP = config::default_shared_memory_dir"
+.br
+.ti -1c
+.RI "uint64_t \fBshared_memory_size\fP = config::default_shared_memory_size"
+.br
+.ti -1c
+.RI "bool \fBread_only\fP = false"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< signal< void(const \fBblock_trace\fP &)>::slot_type > \fBapplied_block_callbacks\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< signal< void(const \fBsigned_block\fP &)>::slot_type > \fBapplied_irreversible_block_callbacks\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< signal< void(const \fBtransaction_metadata\fP &, const \fBpacked_transaction\fP &)>::slot_type > \fBon_pending_transaction_callbacks\fP"
+.br
+.ti -1c
+.RI "\fBcontracts::genesis_state_type\fP \fBgenesis\fP"
+.br
+.ti -1c
+.RI "\fBruntime_limits\fP \fBlimits\fP"
+.br
+.ti -1c
+.RI "wasm_interface::vm_type \fBwasm_runtime\fP = config::default_wasm_runtime"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,17 @@
+digraph "plugins/wallet_api_plugin/include/aacio" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bdabe7338566c11e87f79bd67e4cdcf9 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="include" fontname="Helvetica", fontsize="10", URL="dir_bdabe7338566c11e87f79bd67e4cdcf9.html"]
+  subgraph clusterdir_000f35b419c51d8fbf064a03b442b99d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_000f35b419c51d8fbf064a03b442b99d.html"];
+    dir_000f35b419c51d8fbf064a03b442b99d [shape=plaintext label="aacio"];
+    dir_e64592b633d1a7367c49770e9c973367 [shape=box label="wallet_api_plugin" color="black" fillcolor="white" style="filled" URL="dir_e64592b633d1a7367c49770e9c973367.html"];
+  }
+  }
+  dir_0b3dfba0f864d9a26bf81616cf3bac85 [shape=box label="wallet_plugin" fillcolor="white" style="filled" color="red" URL="dir_0b3dfba0f864d9a26bf81616cf3bac85.html"];
+  dir_f833ff7a85c55360bd990f87a6f90636 [shape=box label="http_plugin" fillcolor="white" style="filled" color="red" URL="dir_f833ff7a85c55360bd990f87a6f90636.html"];
+  dir_e64592b633d1a7367c49770e9c973367->dir_0b3dfba0f864d9a26bf81616cf3bac85 [headlabel="1", labeldistance=1.5 headhref="dir_001883_001884.html"];
+  dir_e64592b633d1a7367c49770e9c973367->dir_f833ff7a85c55360bd990f87a6f90636 [headlabel="1", labeldistance=1.5 headhref="dir_001883_001856.html"];
+}

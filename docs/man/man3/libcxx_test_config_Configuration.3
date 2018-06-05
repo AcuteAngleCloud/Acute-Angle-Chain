@@ -1,0 +1,288 @@
+.TH "libcxx.test.config.Configuration" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libcxx.test.config.Configuration
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, lit_config, \fBconfig\fP)"
+.br
+.ti -1c
+.RI "def \fBget_lit_conf\fP (self, name, default=None)"
+.br
+.ti -1c
+.RI "def \fBget_lit_bool\fP (self, name, default=None, env_var=None)"
+.br
+.ti -1c
+.RI "def \fBget_modules_enabled\fP (self)"
+.br
+.ti -1c
+.RI "def \fBmake_static_lib_name\fP (self, name)"
+.br
+.ti -1c
+.RI "def \fBconfigure\fP (self)"
+.br
+.ti -1c
+.RI "def \fBprint_config_info\fP (self)"
+.br
+.ti -1c
+.RI "def \fBget_test_format\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_executor\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_target_info\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_cxx\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_src_root\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_obj_root\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_cxx_library_root\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_use_system_cxx_lib\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_availability\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_cxx_stdlib_under_test\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_use_clang_verify\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_use_thread_safety\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_execute_external\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_ccache\fP (self)"
+.br
+.ti -1c
+.RI "def \fBadd_deployment_feature\fP (self, feature)"
+.br
+.ti -1c
+.RI "def \fBconfigure_features\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_compile_flags\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_default_compile_flags\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_compile_flags_header_includes\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_config_site_header\fP (self)"
+.br
+.ti -1c
+.RI "def \fBparse_config_site_and_add_features\fP (self, header)"
+.br
+.ti -1c
+.RI "def \fBconfigure_compile_flags_exceptions\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_compile_flags_rtti\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_compile_flags_abi_version\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_filesystem_compile_flags\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_link_flags\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_link_flags_cxx_library_path\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_link_flags_abi_library_path\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_link_flags_cxx_library\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_link_flags_abi_library\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_extra_library_flags\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_color_diagnostics\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_debug_mode\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_warnings\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_sanitizer\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_coverage\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_coroutines\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_modules\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_substitutions\fP (self)"
+.br
+.ti -1c
+.RI "def \fBcan_use_deployment\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_triple\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_deployment\fP (self)"
+.br
+.ti -1c
+.RI "def \fBconfigure_env\fP (self)"
+.br
+.ti -1c
+.RI "def \fBadd_path\fP (self, dest_env, new_path)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlit_config\fP"
+.br
+.ti -1c
+.RI "\fBconfig\fP"
+.br
+.ti -1c
+.RI "\fBis_windows\fP"
+.br
+.ti -1c
+.RI "\fBcxx\fP"
+.br
+.ti -1c
+.RI "\fBcxx_is_clang_cl\fP"
+.br
+.ti -1c
+.RI "\fBcxx_stdlib_under_test\fP"
+.br
+.ti -1c
+.RI "\fBproject_obj_root\fP"
+.br
+.ti -1c
+.RI "\fBlibcxx_src_root\fP"
+.br
+.ti -1c
+.RI "\fBlibcxx_obj_root\fP"
+.br
+.ti -1c
+.RI "\fBcxx_library_root\fP"
+.br
+.ti -1c
+.RI "\fBcxx_runtime_root\fP"
+.br
+.ti -1c
+.RI "\fBabi_library_root\fP"
+.br
+.ti -1c
+.RI "\fBlink_shared\fP"
+.br
+.ti -1c
+.RI "\fBdebug_build\fP"
+.br
+.ti -1c
+.RI "\fBexec_env\fP"
+.br
+.ti -1c
+.RI "\fBuse_target\fP"
+.br
+.ti -1c
+.RI "\fBuse_system_cxx_lib\fP"
+.br
+.ti -1c
+.RI "\fBuse_clang_verify\fP"
+.br
+.ti -1c
+.RI "\fBlong_tests\fP"
+.br
+.ti -1c
+.RI "\fBexecute_external\fP"
+.br
+.ti -1c
+.RI "\fBexecutor\fP"
+.br
+.ti -1c
+.RI "\fBtarget_info\fP"
+.br
+.ti -1c
+.RI "\fBwith_availability\fP"
+.br
+.ti -1c
+.RI "\fBgenerate_coverage\fP"
+.br
+.ti -1c
+.RI "\fBuse_deployment\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "def libcxx\&.test\&.config\&.Configuration\&.configure_use_clang_verify ( self)"
+
+.PP
+.nf
+If set, run clang with -verify on failing tests.
+.fi
+.PP
+ 
+.SS "def libcxx\&.test\&.config\&.Configuration\&.configure_use_thread_safety ( self)"
+
+.PP
+.nf
+If set, run clang with -verify on failing tests.
+.fi
+.PP
+ 
+.SS "def libcxx\&.test\&.config\&.Configuration\&.make_static_lib_name ( self,  name)"
+
+.PP
+.nf
+Return the full filename for the specified library name
+.fi
+.PP
+ 
+.SS "def libcxx\&.test\&.config\&.Configuration\&.parse_config_site_and_add_features ( self,  header)"
+
+.PP
+.nf
+parse_config_site_and_add_features - Deduce and add the test
+    features that that are implied by the #define's in the __config_site
+    header. Return a dictionary containing the macros found in the
+    '__config_site' header.
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

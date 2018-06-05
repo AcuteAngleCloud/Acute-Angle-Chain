@@ -1,0 +1,17 @@
+digraph "fc::detail::rate_limiting_group_impl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="fc::detail::rate_limiting\l_group_impl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="tcp_socket_io_hooks",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _granularity" ];
+  Node4 [label="fc::microseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1microseconds.html"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _actual_download_rate\n_actual_upload_rate" ];
+  Node5 [label="fc::detail::average\l_rate_meter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1detail_1_1average__rate__meter.html"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _process_pending_reads\l_loop_complete\n_process_pending_writes\l_loop_complete" ];
+  Node6 [label="future\< void \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _write_operations_in\l_progress\n_write_operations\l_for_next_iteration\n_read_operations_for\l_next_iteration\n_read_operations_in\l_progress" ];
+  Node7 [label="std::list\< rate_limited\l_operation * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1list.html"];
+}

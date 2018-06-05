@@ -1,0 +1,11 @@
+digraph "contracts/test_api" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ae9b15dd87e066e1908bbd90e8f38627 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="contracts" fontname="Helvetica", fontsize="10", URL="dir_ae9b15dd87e066e1908bbd90e8f38627.html"]
+  dir_4512a307eab2a9ca08d8433965f51830 [shape=box, label="test_api", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4512a307eab2a9ca08d8433965f51830.html"];
+  }
+  dir_eebd46385ac17dfe81e47e86b6b64bf0 [shape=box label="aaciolib" URL="dir_eebd46385ac17dfe81e47e86b6b64bf0.html"];
+  dir_4512a307eab2a9ca08d8433965f51830->dir_eebd46385ac17dfe81e47e86b6b64bf0 [headlabel="36", labeldistance=1.5 headhref="dir_001640_000015.html"];
+}

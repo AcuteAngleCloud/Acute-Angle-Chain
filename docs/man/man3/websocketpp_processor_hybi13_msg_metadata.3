@@ -1,0 +1,44 @@
+.TH "websocketpp::processor::hybi13< config >::msg_metadata" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::processor::hybi13< config >::msg_metadata
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hybi13\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmsg_metadata\fP (message_ptr m, size_t p)"
+.br
+.ti -1c
+.RI "\fBmsg_metadata\fP (message_ptr m, \fBframe::masking_key_type\fP p)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "message_ptr \fBmsg_ptr\fP"
+.br
+.ti -1c
+.RI "size_t \fBprepared_key\fP"
+.br
+.ti -1c
+.RI "\fButf8_validator::validator\fP \fBvalidator\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+struct websocketpp::processor::hybi13< config >::msg_metadata"
+This data structure holds data related to processing a message, such as the buffer it is being written to, its masking key, its UTF8 validation state, and sometimes its compression state\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

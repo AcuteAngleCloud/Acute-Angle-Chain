@@ -1,0 +1,119 @@
+.TH "contracts/aaciolib/compiler_builtins.h" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/compiler_builtins.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aaciolib/system\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB__multi3\fP (__int128 &res, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.RI "Multiply two 128 unsigned bit integers (which are represented as two 64 bit unsigned integers\&. "
+.ti -1c
+.RI "void \fB__divti3\fP (__int128 &res, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__udivti3\fP (unsigned __int128 &res, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__modti3\fP (__int128 &res, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__umodti3\fP (unsigned __int128 &res, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__lshlti3\fP (__int128 &res, uint64_t lo, uint64_t hi, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__lshrti3\fP (__int128 &res, uint64_t lo, uint64_t hi, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__ashlti3\fP (__int128 &res, uint64_t lo, uint64_t hi, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__ashrti3\fP (__int128 &res, uint64_t lo, uint64_t hi, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__addtf3\fP (long double &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__subtf3\fP (long double &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__multf3\fP (long double &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__divtf3\fP (long double &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__eqtf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__netf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__getf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__gttf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__letf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__lttf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__cmptf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__unordtf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__extendsftf2\fP (long double &ret, float f)"
+.br
+.ti -1c
+.RI "void \fB__extenddftf2\fP (long double &ret, double f)"
+.br
+.ti -1c
+.RI "int64_t \fB__fixtfdi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "int32_t \fB__fixtfsi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "uint64_t \fB__fixunstfdi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "uint32_t \fB__fixunstfsi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "double \fB__trunctfdf2\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "float \fB__trunctfsf2\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "void \fB__break_point\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

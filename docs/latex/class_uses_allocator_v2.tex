@@ -1,0 +1,43 @@
+\hypertarget{class_uses_allocator_v2}{}\section{Uses\+Allocator\+V2$<$ Alloc, Arity $>$ Class Template Reference}
+\label{class_uses_allocator_v2}\index{Uses\+Allocator\+V2$<$ Alloc, Arity $>$@{Uses\+Allocator\+V2$<$ Alloc, Arity $>$}}
+
+
+Inheritance diagram for Uses\+Allocator\+V2$<$ Alloc, Arity $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Uses\+Allocator\+V2$<$ Alloc, Arity $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_a26009d27bd6a65c2c54626591752e93a}\label{class_uses_allocator_v2_a26009d27bd6a65c2c54626591752e93a}} 
+typedef Alloc {\bfseries allocator\+\_\+type}
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_aaf348a1d98038fb1e0d74ba946520012}\label{class_uses_allocator_v2_aaf348a1d98038fb1e0d74ba946520012}} 
+using {\bfseries Base} = \mbox{\hyperlink{struct_uses_allocator_test_base}{Uses\+Allocator\+Test\+Base}}$<$ \mbox{\hyperlink{class_uses_allocator_v2}{Uses\+Allocator\+V2}}, Alloc $>$
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_a6733b85b5d1294399dcf210f884205ba}\label{class_uses_allocator_v2_a6733b85b5d1294399dcf210f884205ba}} 
+using {\bfseries Ctor\+Alloc} = typename Base\+::\+Ctor\+Alloc
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_aa30200fcdf1acd77031c0b9885d51785}\label{class_uses_allocator_v2_aa30200fcdf1acd77031c0b9885d51785}} 
+{\bfseries Uses\+Allocator\+V2} (\mbox{\hyperlink{class_uses_allocator_v2}{Uses\+Allocator\+V2}} const \&)
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_af8d468427686715ffc04ba8a2efa9f49}\label{class_uses_allocator_v2_af8d468427686715ffc04ba8a2efa9f49}} 
+{\bfseries Uses\+Allocator\+V2} (\mbox{\hyperlink{class_uses_allocator_v2}{Uses\+Allocator\+V2}} \&\&)
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_a1dea940ab8fbea626103f78c92bee2f4}\label{class_uses_allocator_v2_a1dea940ab8fbea626103f78c92bee2f4}} 
+{\footnotesize template$<$class ... Args, Enable\+If\+B$<$ sizeof...(\+Args)==\+Arity $>$  = false$>$ }\\{\bfseries Uses\+Allocator\+V2} (Args \&\&...)
+\item 
+\mbox{\Hypertarget{class_uses_allocator_v2_abc435351fb97c5f05291e85f871e57b6}\label{class_uses_allocator_v2_abc435351fb97c5f05291e85f871e57b6}} 
+{\footnotesize template$<$class ... Args, Enable\+If\+B$<$ sizeof...(\+Args)==\+Arity+1 $>$  = false$>$ }\\{\bfseries Uses\+Allocator\+V2} (Args \&\&... args)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/support/uses\+\_\+alloc\+\_\+types.\+hpp\end{DoxyCompactItemize}

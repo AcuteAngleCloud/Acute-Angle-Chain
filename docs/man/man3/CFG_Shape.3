@@ -1,0 +1,60 @@
+.TH "CFG::Shape" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CFG::Shape
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBCFG::LoopShape\fP, \fBCFG::MultipleShape\fP, and \fBCFG::SimpleShape\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBShapeType\fP { \fBSimple\fP, \fBMultiple\fP, \fBLoop\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBShape\fP (ShapeType TypeInit)"
+.br
+.ti -1c
+.RI "virtual \fBwasm::Expression\fP * \fBRender\fP (\fBRelooperBuilder\fP &Builder, bool InLoop)=0"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSimpleShape\fP * \fBIsSimple\fP (\fBShape\fP *It)"
+.br
+.ti -1c
+.RI "static \fBMultipleShape\fP * \fBIsMultiple\fP (\fBShape\fP *It)"
+.br
+.ti -1c
+.RI "static \fBLoopShape\fP * \fBIsLoop\fP (\fBShape\fP *It)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBId\fP"
+.br
+.ti -1c
+.RI "\fBShape\fP * \fBNext\fP"
+.br
+.ti -1c
+.RI "\fBShape\fP * \fBNatural\fP"
+.br
+.ti -1c
+.RI "ShapeType \fBType\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,37 @@
+.TH "MoveAssignOnly" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoveAssignOnly
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits DEFINE_BASEMoveAssignOnly\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBBase\fP = DEFINE_BASE(\fBMoveAssignOnly\fP)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoveAssignOnly\fP (\fBMoveAssignOnly\fP &&)=delete"
+.br
+.ti -1c
+.RI "\fBMoveAssignOnly\fP & \fBoperator=\fP (\fBMoveAssignOnly\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBMoveAssignOnly\fP & \fBoperator=\fP (\fBMoveAssignOnly\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBMoveAssignOnly\fP & \fBoperator=\fP (\fBMoveAssignOnly\fP &&) DEFINE_ASSIGN"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

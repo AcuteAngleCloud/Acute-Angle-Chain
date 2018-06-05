@@ -1,0 +1,53 @@
+.TH "wasm::Wasm2AsmBuilder" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Wasm2AsmBuilder
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWasm2AsmBuilder\fP (bool debug)"
+.br
+.ti -1c
+.RI "\fBRef\fP \fBprocessWasm\fP (\fBModule\fP *wasm)"
+.br
+.ti -1c
+.RI "\fBRef\fP \fBprocessFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.ti -1c
+.RI "void \fBscanFunctionBody\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "\fBRef\fP \fBprocessFunctionBody\fP (\fBFunction\fP *\fBfunc\fP, \fBIString\fP result)"
+.br
+.ti -1c
+.RI "\fBIString\fP \fBgetTemp\fP (WasmType type)"
+.br
+.ti -1c
+.RI "void \fBfreeTemp\fP (WasmType type, \fBIString\fP temp)"
+.br
+.ti -1c
+.RI "void \fBsetStatement\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "bool \fBisStatement\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "size_t \fBgetTableSize\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBIString\fP \fBfromName\fP (\fBName\fP name)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

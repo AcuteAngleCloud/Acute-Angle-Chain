@@ -1,0 +1,52 @@
+.TH "libraries/chain/include/aacio/chain/scope_sequence_object.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/scope_sequence_object.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/types\&.hpp>\fP
+.br
+\fC#include <aacio/chain/authority\&.hpp>\fP
+.br
+\fC#include <aacio/chain/block_timestamp\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/types\&.hpp>\fP
+.br
+\fC#include 'multi_index_includes\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::chain::scope_sequence_object\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::scope_sequence_id_type\fP = scope_sequence_object::id_type"
+.br
+.ti -1c
+.RI "using \fBaacio::chain::scope_sequence_multi_index\fP = chainbase::shared_multi_index_container< scope_sequence_object, indexed_by< ordered_unique< tag< by_id >, member< scope_sequence_object, scope_sequence_object::id_type, &scope_sequence_object::id > >, ordered_unique< tag< by_scope_receiver >, composite_key< scope_sequence_object, member< scope_sequence_object, scope_name, &scope_sequence_object::scope >, member< scope_sequence_object, account_name, &scope_sequence_object::receiver > > > > >"
+.br
+.ti -1c
+.RI "typedef \fBchainbase::generic_index\fP< scope_sequence_multi_index > \fBaacio::chain::scope_sequence_index\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

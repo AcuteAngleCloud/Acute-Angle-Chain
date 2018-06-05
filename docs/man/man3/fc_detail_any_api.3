@@ -1,0 +1,64 @@
+.TH "fc::detail::any_api" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::detail::any_api
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <api_connection\&.hpp>\fP
+.PP
+Inherits \fBfc::api_base\fP, and \fBfc::api_base\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBany_api\fP (api_id_type api_id, const std::shared_ptr< \fBfc::api_connection\fP > &con)"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBget_handle\fP () const override"
+.br
+.ti -1c
+.RI "virtual api_id_type \fBregister_api\fP (\fBapi_connection\fP &conn) const override"
+.br
+.ti -1c
+.RI "\fBany_api\fP (api_id_type api_id, const std::shared_ptr< \fBfc::binary_api_connection\fP > &con)"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBget_handle\fP () const override"
+.br
+.ti -1c
+.RI "virtual api_id_type \fBregister_api\fP (\fBbinary_api_connection\fP &conn) const override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "api_id_type \fB_api_id\fP"
+.br
+.ti -1c
+.RI "std::weak_ptr< \fBfc::api_connection\fP > \fB_api_connection\fP"
+.br
+.ti -1c
+.RI "std::weak_ptr< \fBfc::binary_api_connection\fP > \fB_binary_api_connection\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+If api<T> is returned from a remote method, the API is eagerly bound to api<T> of the correct type in api_visitor::from_variant()\&. This binding [1] needs a reference to the \fBapi_connection\fP, which is made available to from_variant() as a parameter\&.
+.PP
+However, in the case of a remote method which returns \fBapi_base\fP which can subsequently be cast by the caller with as<T>, we need to keep track of the connection because the binding is done later (when the client code actually calls as<T>)\&.
+.PP
+[1] The binding actually happens in get_remote_api()\&.
+.PP
+If api<T> is returned from a remote method, the API is eagerly bound to api<T> of the correct type in api_visitor::from_variant()\&. This binding [1] needs a reference to the \fBbinary_api_connection\fP, which is made available to from_variant() as a parameter\&.
+.PP
+However, in the case of a remote method which returns \fBapi_base\fP which can subsequently be cast by the caller with as<T>, we need to keep track of the connection because the binding is done later (when the client code actually calls as<T>)\&.
+.PP
+[1] The binding actually happens in get_remote_api()\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

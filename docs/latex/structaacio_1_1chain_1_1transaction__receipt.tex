@@ -1,0 +1,79 @@
+\hypertarget{structaacio_1_1chain_1_1transaction__receipt}{}\section{aacio\+:\+:chain\+:\+:transaction\+\_\+receipt Struct Reference}
+\label{structaacio_1_1chain_1_1transaction__receipt}\index{aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}}
+
+
+{\ttfamily \#include $<$transaction.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:transaction\+\_\+receipt\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:transaction\+\_\+receipt\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11}{status\+\_\+enum}} \{ \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11a394ffb3ca47c58cc4a25b1493034e992}{executed}} = 0, 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11abc455d4cb98bc62d92e872fdf0d60225}{soft\+\_\+fail}} = 1, 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11adec30d16a82b049c293b4828269f38f1}{hard\+\_\+fail}} = 2, 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11a7042dcb4d18e4e4de61dffd83501e865}{delayed}} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_a22908355ddebe9a88bb8a1ed1d61fb9f}\label{structaacio_1_1chain_1_1transaction__receipt_a22908355ddebe9a88bb8a1ed1d61fb9f}} 
+{\bfseries transaction\+\_\+receipt} (\mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} tid)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_a12288834209a87ba6eeb4d41c09c4a41}\label{structaacio_1_1chain_1_1transaction__receipt_a12288834209a87ba6eeb4d41c09c4a41}} 
+\mbox{\hyperlink{classfc_1_1enum__type}{fc\+::enum\+\_\+type}}$<$ uint8\+\_\+t, \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11}{status\+\_\+enum}} $>$ {\bfseries status}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_adf6c867be7332e91bfbf7b3d355893cb}\label{structaacio_1_1chain_1_1transaction__receipt_adf6c867be7332e91bfbf7b3d355893cb}} 
+\mbox{\hyperlink{structfc_1_1unsigned__int}{fc\+::unsigned\+\_\+int}} {\bfseries kcpu\+\_\+usage}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_a7f0075bc570922c6133f6b8a64e97d15}\label{structaacio_1_1chain_1_1transaction__receipt_a7f0075bc570922c6133f6b8a64e97d15}} 
+\mbox{\hyperlink{structfc_1_1unsigned__int}{fc\+::unsigned\+\_\+int}} {\bfseries net\+\_\+usage\+\_\+words}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_a197ed7d2e2efd644beaa175999f81be9}\label{structaacio_1_1chain_1_1transaction__receipt_a197ed7d2e2efd644beaa175999f81be9}} 
+\mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} {\bfseries id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When a transaction is referenced by a block it could imply one of several outcomes which describe the state-\/transition undertaken by the block producer. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11}\label{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11}} 
+\index{aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}!status\+\_\+enum@{status\+\_\+enum}}
+\index{status\+\_\+enum@{status\+\_\+enum}!aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}}
+\subsubsection{\texorpdfstring{status\+\_\+enum}{status\_enum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11}{aacio\+::chain\+::transaction\+\_\+receipt\+::status\+\_\+enum}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{executed@{executed}!aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}}\index{aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}!executed@{executed}}}\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11a394ffb3ca47c58cc4a25b1493034e992}\label{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11a394ffb3ca47c58cc4a25b1493034e992}} 
+executed&succeed, no error handler executed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{soft\+\_\+fail@{soft\+\_\+fail}!aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}}\index{aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}!soft\+\_\+fail@{soft\+\_\+fail}}}\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11abc455d4cb98bc62d92e872fdf0d60225}\label{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11abc455d4cb98bc62d92e872fdf0d60225}} 
+soft\+\_\+fail&objectively failed (not executed), error handler executed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{hard\+\_\+fail@{hard\+\_\+fail}!aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}}\index{aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}!hard\+\_\+fail@{hard\+\_\+fail}}}\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11adec30d16a82b049c293b4828269f38f1}\label{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11adec30d16a82b049c293b4828269f38f1}} 
+hard\+\_\+fail&objectively failed and error handler objectively failed thus no state change \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{delayed@{delayed}!aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}}\index{aacio\+::chain\+::transaction\+\_\+receipt@{aacio\+::chain\+::transaction\+\_\+receipt}!delayed@{delayed}}}\mbox{\Hypertarget{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11a7042dcb4d18e4e4de61dffd83501e865}\label{structaacio_1_1chain_1_1transaction__receipt_aa2bcda79342889b1b3de6f5819e27e11a7042dcb4d18e4e4de61dffd83501e865}} 
+delayed&transaction delayed \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{libraries_2chain_2include_2aacio_2chain_2transaction_8hpp}{transaction.\+hpp}}\end{DoxyCompactItemize}

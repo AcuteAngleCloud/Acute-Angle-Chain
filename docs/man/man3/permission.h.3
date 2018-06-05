@@ -1,0 +1,56 @@
+.TH "contracts/aaciolib/permission.h" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/permission.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aaciolib/types\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBcheck_authorization\fP (account_name \fBaccount\fP, permission_name permission, char *pubkeys, uint32_t pubkeys_len)"
+.br
+.RI "Checks if a set of public keys can authorize an account permission\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int32_t check_authorization (account_name account, permission_name permission, char * pubkeys, uint32_t pubkeys_len)"
+
+.PP
+Checks if a set of public keys can authorize an account permission\&. Checks if a set of public keys can authorize an account permission 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaccount\fP - the account owner of the permission 
+.br
+\fIpermission\fP - the permission name to check for authorization 
+.br
+\fIpubkeys\fP - a pointer to an array of public keys (\fBpublic_key\fP) 
+.br
+\fIpubkeys_len\fP - the lenght of the array of public keys 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+1 if the account permission can be authorized, 0 otherwise 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

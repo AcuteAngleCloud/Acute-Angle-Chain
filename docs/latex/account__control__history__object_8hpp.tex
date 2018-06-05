@@ -1,0 +1,28 @@
+\hypertarget{account__control__history__object_8hpp}{}\section{plugins/account\+\_\+history\+\_\+plugin/include/aacio/account\+\_\+history\+\_\+plugin/account\+\_\+control\+\_\+history\+\_\+object.hpp File Reference}
+\label{account__control__history__object_8hpp}\index{plugins/account\+\_\+history\+\_\+plugin/include/aacio/account\+\_\+history\+\_\+plugin/account\+\_\+control\+\_\+history\+\_\+object.\+hpp@{plugins/account\+\_\+history\+\_\+plugin/include/aacio/account\+\_\+history\+\_\+plugin/account\+\_\+control\+\_\+history\+\_\+object.\+hpp}}
+{\ttfamily \#include $<$chainbase/chainbase.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/types.\+hpp$>$}\newline
+Include dependency graph for account\+\_\+control\+\_\+history\+\_\+object.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1account__control__history__object}{aacio\+::account\+\_\+control\+\_\+history\+\_\+object}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{account__control__history__object_8hpp_a3d296d827abbe856173b7c779efd4bfd}\label{account__control__history__object_8hpp_a3d296d827abbe856173b7c779efd4bfd}} 
+using {\bfseries aacio\+::account\+\_\+control\+\_\+history\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ account\+\_\+control\+\_\+history\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(account\+\_\+control\+\_\+history\+\_\+object, account\+\_\+control\+\_\+history\+\_\+object\+::id\+\_\+type, id)$>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+controlling $>$, composite\+\_\+key$<$ account\+\_\+control\+\_\+history\+\_\+object, member$<$ account\+\_\+control\+\_\+history\+\_\+object, account\+\_\+name, \&account\+\_\+control\+\_\+history\+\_\+object\+::controlling\+\_\+account $>$, member$<$ account\+\_\+control\+\_\+history\+\_\+object, account\+\_\+control\+\_\+history\+\_\+object\+::id\+\_\+type, \&account\+\_\+control\+\_\+history\+\_\+object\+::id $>$ $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+controlled\+\_\+authority $>$, composite\+\_\+key$<$ account\+\_\+control\+\_\+history\+\_\+object, member$<$ account\+\_\+control\+\_\+history\+\_\+object, account\+\_\+name, \&account\+\_\+control\+\_\+history\+\_\+object\+::controlled\+\_\+account $>$, member$<$ account\+\_\+control\+\_\+history\+\_\+object, permission\+\_\+name, \&account\+\_\+control\+\_\+history\+\_\+object\+::controlled\+\_\+permission $>$, member$<$ account\+\_\+control\+\_\+history\+\_\+object, account\+\_\+name, \&account\+\_\+control\+\_\+history\+\_\+object\+::controlling\+\_\+account $>$ $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{account__control__history__object_8hpp_aeadc9baaa1a05ff241426cb467760ab4}\label{account__control__history__object_8hpp_aeadc9baaa1a05ff241426cb467760ab4}} 
+typedef \mbox{\hyperlink{classchainbase_1_1generic__index}{chainbase\+::generic\+\_\+index}}$<$ account\+\_\+control\+\_\+history\+\_\+multi\+\_\+index $>$ {\bfseries aacio\+::account\+\_\+control\+\_\+history\+\_\+index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

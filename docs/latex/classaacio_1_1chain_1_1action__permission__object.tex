@@ -1,0 +1,31 @@
+\hypertarget{classaacio_1_1chain_1_1action__permission__object}{}\section{aacio\+:\+:chain\+:\+:action\+\_\+permission\+\_\+object Class Reference}
+\label{classaacio_1_1chain_1_1action__permission__object}\index{aacio\+::chain\+::action\+\_\+permission\+\_\+object@{aacio\+::chain\+::action\+\_\+permission\+\_\+object}}
+
+
+{\ttfamily \#include $<$action\+\_\+objects.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:action\+\_\+permission\+\_\+object\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:action\+\_\+permission\+\_\+object\+:
+% FIG 1
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Maps the permission level on the code to the permission level specififed by owner, when specifying a contract the contract will specify 1 \mbox{\hyperlink{classaacio_1_1chain_1_1permission__object}{permission\+\_\+object}} per action, and by default the parent of that permission object will be the active permission of the contract; however, the contract owner could group their actions any way they like.
+
+When it comes time to evaluate whether User can call Action on Contract with User\+Permission\+Level the algorithm operates as follows\+:
+
+let scope\+\_\+permission = action\+\_\+code.\+permission while( ! mapping for (scope\+\_\+permission / owner ) scope\+\_\+permission = scope\+\_\+permission.\+parent if( !scope\+\_\+permission ) user permission =$>$ active break;
+
+Now that we know the required user permission...
+
+while( ! transaction.\+has( user\+\_\+permission ) ) user\+\_\+permission = user\+\_\+permission.\+parent if( !user\+\_\+permission ) throw invalid permission pass 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{action__objects_8hpp}{action\+\_\+objects.\+hpp}}\end{DoxyCompactItemize}

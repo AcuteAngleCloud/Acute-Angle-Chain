@@ -1,0 +1,61 @@
+.TH "fc::datastream< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::datastream< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <datastream\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdatastream\fP (\fBT\fP start, size_t s)"
+.br
+.ti -1c
+.RI "void \fBskip\fP (size_t s)"
+.br
+.ti -1c
+.RI "bool \fBread\fP (char *d, size_t s)"
+.br
+.ti -1c
+.RI "bool \fBwrite\fP (const char *d, size_t s)"
+.br
+.ti -1c
+.RI "bool \fBput\fP (char c)"
+.br
+.ti -1c
+.RI "bool \fBget\fP (unsigned char &c)"
+.br
+.ti -1c
+.RI "bool \fBget\fP (char &c)"
+.br
+.ti -1c
+.RI "\fBT\fP \fBpos\fP () const"
+.br
+.ti -1c
+.RI "bool \fBvalid\fP () const"
+.br
+.ti -1c
+.RI "bool \fBseekp\fP (size_t p)"
+.br
+.ti -1c
+.RI "size_t \fBtellp\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBremaining\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class fc::datastream< T >"
+The purpose of this datastream is to provide a fast, effecient, means of calculating the amount of data 'about to be written' and then writing it\&. This means having two modes of operation, 'test run' where you call the entire pack sequence calculating the size, and then actually packing it after doing a single allocation\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

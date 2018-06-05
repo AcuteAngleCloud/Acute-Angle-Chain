@@ -1,0 +1,34 @@
+\hypertarget{scope__sequence__object_8hpp}{}\section{libraries/chain/include/aacio/chain/scope\+\_\+sequence\+\_\+object.hpp File Reference}
+\label{scope__sequence__object_8hpp}\index{libraries/chain/include/aacio/chain/scope\+\_\+sequence\+\_\+object.\+hpp@{libraries/chain/include/aacio/chain/scope\+\_\+sequence\+\_\+object.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/authority.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/block\+\_\+timestamp.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/types.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+index\+\_\+includes.\+hpp\char`\"{}}\newline
+Include dependency graph for scope\+\_\+sequence\+\_\+object.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1scope__sequence__object}{aacio\+::chain\+::scope\+\_\+sequence\+\_\+object}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{scope__sequence__object_8hpp_a02005445b42135155293c2a53dbc4451}\label{scope__sequence__object_8hpp_a02005445b42135155293c2a53dbc4451}} 
+using {\bfseries aacio\+::chain\+::scope\+\_\+sequence\+\_\+id\+\_\+type} = scope\+\_\+sequence\+\_\+object\+::id\+\_\+type
+\item 
+\mbox{\Hypertarget{scope__sequence__object_8hpp_aba83efd711ac5632f6268fc77cffd9b0}\label{scope__sequence__object_8hpp_aba83efd711ac5632f6268fc77cffd9b0}} 
+using {\bfseries aacio\+::chain\+::scope\+\_\+sequence\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ scope\+\_\+sequence\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ scope\+\_\+sequence\+\_\+object, scope\+\_\+sequence\+\_\+object\+::id\+\_\+type, \&scope\+\_\+sequence\+\_\+object\+::id $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+scope\+\_\+receiver $>$, composite\+\_\+key$<$ scope\+\_\+sequence\+\_\+object, member$<$ scope\+\_\+sequence\+\_\+object, scope\+\_\+name, \&scope\+\_\+sequence\+\_\+object\+::scope $>$, member$<$ scope\+\_\+sequence\+\_\+object, account\+\_\+name, \&scope\+\_\+sequence\+\_\+object\+::receiver $>$ $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{scope__sequence__object_8hpp_af0fa27465e8b8c390362a38541d6bd2c}\label{scope__sequence__object_8hpp_af0fa27465e8b8c390362a38541d6bd2c}} 
+typedef \mbox{\hyperlink{classchainbase_1_1generic__index}{chainbase\+::generic\+\_\+index}}$<$ scope\+\_\+sequence\+\_\+multi\+\_\+index $>$ {\bfseries aacio\+::chain\+::scope\+\_\+sequence\+\_\+index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

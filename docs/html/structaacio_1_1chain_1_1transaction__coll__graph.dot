@@ -1,0 +1,14 @@
+digraph "aacio::chain::transaction"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node4 [label="aacio::chain::transaction",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="aacio::chain::transaction\l_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1transaction__header.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" max_net_usage_words\nmax_kcpu_usage\ndelay_sec" ,fontname="Helvetica"];
+  Node6 [label="fc::unsigned_int",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfc_1_1unsigned__int.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" expiration" ,fontname="Helvetica"];
+  Node7 [label="fc::time_point_sec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1time__point__sec.html"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" context_free_actions\nactions" ,fontname="Helvetica"];
+  Node8 [label="std::vector\< aacio\l::chain::action \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+}

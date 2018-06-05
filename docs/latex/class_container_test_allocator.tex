@@ -1,0 +1,59 @@
+\hypertarget{class_container_test_allocator}{}\section{Container\+Test\+Allocator$<$ T, Allow\+ConstructT $>$ Class Template Reference}
+\label{class_container_test_allocator}\index{Container\+Test\+Allocator$<$ T, Allow\+Construct\+T $>$@{Container\+Test\+Allocator$<$ T, Allow\+Construct\+T $>$}}
+
+
+Collaboration diagram for Container\+Test\+Allocator$<$ T, Allow\+ConstructT $>$\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_ab1bb171eccf82e0a5bd1f3a6328da741}\label{class_container_test_allocator_ab1bb171eccf82e0a5bd1f3a6328da741}} 
+typedef \mbox{\hyperlink{struct_t}{T}} {\bfseries value\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_aee9f84ebd1d9523e87f4a34dc2367d06}\label{class_container_test_allocator_aee9f84ebd1d9523e87f4a34dc2367d06}} 
+{\bfseries Container\+Test\+Allocator} (\mbox{\hyperlink{struct_allocator_construct_controller}{Construct\+Controller}} $\ast$c)
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a0013b8d5dda254e70449115c9fc78b75}\label{class_container_test_allocator_a0013b8d5dda254e70449115c9fc78b75}} 
+{\footnotesize template$<$class U $>$ }\\{\bfseries Container\+Test\+Allocator} (\mbox{\hyperlink{class_container_test_allocator}{Container\+Test\+Allocator}}$<$ \mbox{\hyperlink{union_u}{U}}, Allow\+ConstructT $>$ \mbox{\hyperlink{structother}{other}}) T\+E\+S\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a64d6beb960b76b0779a9d1f04b0301cb}\label{class_container_test_allocator_a64d6beb960b76b0779a9d1f04b0301cb}} 
+\mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries allocate} (std\+::size\+\_\+t n)
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a1eab21414871bf309b23535cb7c771dd}\label{class_container_test_allocator_a1eab21414871bf309b23535cb7c771dd}} 
+void {\bfseries deallocate} (\mbox{\hyperlink{struct_t}{T}} $\ast$p, std\+::size\+\_\+t)
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a0a350254bf646da730408412e9045d31}\label{class_container_test_allocator_a0a350254bf646da730408412e9045d31}} 
+{\footnotesize template$<$class Up , class ... Args$>$ }\\void {\bfseries construct} (Up $\ast$p, Args \&\&... args)
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a62ba8237c3261d098e27ff1f0ab65f43}\label{class_container_test_allocator_a62ba8237c3261d098e27ff1f0ab65f43}} 
+{\footnotesize template$<$class Up $>$ }\\void {\bfseries destroy} (Up $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_ae728343576d440142c5b3f81709e1869}\label{class_container_test_allocator_ae728343576d440142c5b3f81709e1869}} 
+int {\bfseries construct\+\_\+called}
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_ac7f5518fc72d8ad25686133280f9e5b8}\label{class_container_test_allocator_ac7f5518fc72d8ad25686133280f9e5b8}} 
+int {\bfseries destroy\+\_\+called}
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a77bdad4aa104c84009399fef8e66ebc4}\label{class_container_test_allocator_a77bdad4aa104c84009399fef8e66ebc4}} 
+\mbox{\hyperlink{struct_allocator_construct_controller}{Construct\+Controller}} $\ast$ {\bfseries controller}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_aa980e4eb9683adacbcc3ca23e2a1450f}\label{class_container_test_allocator_aa980e4eb9683adacbcc3ca23e2a1450f}} 
+bool {\bfseries operator==} (\mbox{\hyperlink{class_container_test_allocator}{Container\+Test\+Allocator}}, \mbox{\hyperlink{class_container_test_allocator}{Container\+Test\+Allocator}})
+\item 
+\mbox{\Hypertarget{class_container_test_allocator_a99bbf6d75d4e7b2246eee69275c15a99}\label{class_container_test_allocator_a99bbf6d75d4e7b2246eee69275c15a99}} 
+bool {\bfseries operator!=} (\mbox{\hyperlink{class_container_test_allocator}{Container\+Test\+Allocator}} x, \mbox{\hyperlink{class_container_test_allocator}{Container\+Test\+Allocator}} y)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/support/container\+\_\+test\+\_\+types.\+h\end{DoxyCompactItemize}

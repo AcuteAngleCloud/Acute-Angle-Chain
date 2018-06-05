@@ -1,0 +1,11 @@
+digraph "contracts/aacio.bios" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ae9b15dd87e066e1908bbd90e8f38627 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="contracts" fontname="Helvetica", fontsize="10", URL="dir_ae9b15dd87e066e1908bbd90e8f38627.html"]
+  dir_515574e446f73b46ff83cb2cc03b71cc [shape=box, label="aacio.bios", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_515574e446f73b46ff83cb2cc03b71cc.html"];
+  }
+  dir_eebd46385ac17dfe81e47e86b6b64bf0 [shape=box label="aaciolib" URL="dir_eebd46385ac17dfe81e47e86b6b64bf0.html"];
+  dir_515574e446f73b46ff83cb2cc03b71cc->dir_eebd46385ac17dfe81e47e86b6b64bf0 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000015.html"];
+}

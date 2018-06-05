@@ -1,0 +1,69 @@
+.TH "wasm::ExpressionRunner< SubType >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ExpressionRunner< SubType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::Visitor< SubType, Flow >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlow\fP \fBvisit\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitBlock\fP (\fBBlock\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitIf\fP (\fBIf\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitLoop\fP (\fBLoop\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitConst\fP (\fBConst\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitUnary\fP (\fBUnary\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitBinary\fP (\fBBinary\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitSelect\fP (\fBSelect\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitDrop\fP (\fBDrop\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitReturn\fP (\fBReturn\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitNop\fP (\fBNop\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitUnreachable\fP (\fBUnreachable\fP *curr)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBtruncSFloat\fP (\fBUnary\fP *curr, \fBLiteral\fP value)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBtruncUFloat\fP (\fBUnary\fP *curr, \fBLiteral\fP value)"
+.br
+.ti -1c
+.RI "virtual void \fBtrap\fP (const char *why)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

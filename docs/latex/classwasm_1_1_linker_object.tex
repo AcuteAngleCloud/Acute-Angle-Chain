@@ -1,0 +1,80 @@
+\hypertarget{classwasm_1_1_linker_object}{}\section{wasm\+:\+:Linker\+Object Class Reference}
+\label{classwasm_1_1_linker_object}\index{wasm\+::\+Linker\+Object@{wasm\+::\+Linker\+Object}}
+
+
+Collaboration diagram for wasm\+:\+:Linker\+Object\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_linker_object_1_1_relocation}{Relocation}}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_linker_object_1_1_symbol_alias}{Symbol\+Alias}}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_linker_object_1_1_symbol_info}{Symbol\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_abe60edb80d182995cf4f96ca0683fb06}\label{classwasm_1_1_linker_object_abe60edb80d182995cf4f96ca0683fb06}} 
+void {\bfseries add\+Static} (\mbox{\hyperlink{structwasm_1_1_address}{Address}} alloc\+Size, \mbox{\hyperlink{structwasm_1_1_address}{Address}} alignment, \mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_af07d6e825d0a2c798a5a1f64863360c2}\label{classwasm_1_1_linker_object_af07d6e825d0a2c798a5a1f64863360c2}} 
+void {\bfseries add\+Global} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_a0e0576c65a281b2f642cab4b2e1c13f6}\label{classwasm_1_1_linker_object_a0e0576c65a281b2f642cab4b2e1c13f6}} 
+void {\bfseries add\+Relocation} (\mbox{\hyperlink{structwasm_1_1_linker_object_1_1_relocation}{Relocation}} $\ast$relocation)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_abe09eafd98adcdf92ab2d746d2a2cff0}\label{classwasm_1_1_linker_object_abe09eafd98adcdf92ab2d746d2a2cff0}} 
+bool {\bfseries is\+Function\+Implemented} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_adacb6ff55feb268227a4476e3cf62f59}\label{classwasm_1_1_linker_object_adacb6ff55feb268227a4476e3cf62f59}} 
+bool {\bfseries is\+Object\+Implemented} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_aa50f84baafcde305843cd8019d5cba68}\label{classwasm_1_1_linker_object_aa50f84baafcde305843cd8019d5cba68}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries resolve\+Alias} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, Relocation\+::\+Kind kind)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_a84557916812293e89b5f8e3e06b4ec38}\label{classwasm_1_1_linker_object_a84557916812293e89b5f8e3e06b4ec38}} 
+\mbox{\hyperlink{structwasm_1_1_linker_object_1_1_symbol_alias}{Symbol\+Alias}} $\ast$ {\bfseries get\+Alias} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, Relocation\+::\+Kind kind)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_a27d31e02ff858ec00fea131f2d05f4bb}\label{classwasm_1_1_linker_object_a27d31e02ff858ec00fea131f2d05f4bb}} 
+void {\bfseries add\+Segment} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, const char $\ast$data, \mbox{\hyperlink{structwasm_1_1_address}{Address}} size)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_aadcb369c611e452468e7b6b316ac9275}\label{classwasm_1_1_linker_object_aadcb369c611e452468e7b6b316ac9275}} 
+void {\bfseries add\+Segment} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ char $>$ \&data)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_aa23094d3903d5e20c12211c7c5e32533}\label{classwasm_1_1_linker_object_aa23094d3903d5e20c12211c7c5e32533}} 
+void {\bfseries add\+Initializer\+Function} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_a3ae379c233d63ea4e75355e9ebf87617}\label{classwasm_1_1_linker_object_a3ae379c233d63ea4e75355e9ebf87617}} 
+void {\bfseries add\+Undefined\+Function\+Call} (\mbox{\hyperlink{classwasm_1_1_call}{Call}} $\ast$call)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_ae78874be897f617c02aea608682ca8d0}\label{classwasm_1_1_linker_object_ae78874be897f617c02aea608682ca8d0}} 
+void {\bfseries add\+Extern\+Type} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_function_type}{Function\+Type}} $\ast$ty)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_aa2aad640c53312aa1d5d3ae35eec2f25}\label{classwasm_1_1_linker_object_aa2aad640c53312aa1d5d3ae35eec2f25}} 
+\mbox{\hyperlink{classwasm_1_1_function_type}{Function\+Type}} $\ast$ {\bfseries get\+Extern\+Type} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_abe788e5511032672756fe615d2940b88}\label{classwasm_1_1_linker_object_abe788e5511032672756fe615d2940b88}} 
+void {\bfseries add\+Indirect\+Index} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{structwasm_1_1_address}{Address}} index)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_ae3c1eff30519df0b94d5fe4a99b4580b}\label{classwasm_1_1_linker_object_ae3c1eff30519df0b94d5fe4a99b4580b}} 
+bool {\bfseries is\+Empty} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_aa94073833dd6c4e73a8adfac0135d188}\label{classwasm_1_1_linker_object_aa94073833dd6c4e73a8adfac0135d188}} 
+\mbox{\hyperlink{classwasm_1_1_module}{Module}} {\bfseries wasm}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_object_a4d44fee533e9a0a3f5211edf3031ec06}\label{classwasm_1_1_linker_object_a4d44fee533e9a0a3f5211edf3031ec06}} 
+class {\bfseries Linker}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm-\/linker.\+h\end{DoxyCompactItemize}

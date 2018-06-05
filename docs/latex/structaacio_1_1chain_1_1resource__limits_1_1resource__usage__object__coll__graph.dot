@@ -1,0 +1,13 @@
+digraph "aacio::chain::resource_limits::resource_usage_object"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="aacio::chain::resource\l_limits::resource_usage\l_object",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="chainbase::object\<\l resource_usage_object\l_type, resource_usage\l_object \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structchainbase_1_1object.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" owner" ];
+  Node4 [label="aacio::chain::name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1name.html"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" net_usage\ncpu_usage" ];
+  Node5 [label="aacio::chain::resource\l_limits::impl::exponential\l_moving_average_accumulator\<\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1resource__limits_1_1impl_1_1exponential__moving__average__accumulator.html"];
+}

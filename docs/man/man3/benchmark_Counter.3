@@ -1,0 +1,42 @@
+.TH "benchmark::Counter" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+benchmark::Counter
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFlags\fP { \fBkDefaults\fP = 0, \fBkIsRate\fP = 1, \fBkAvgThreads\fP = 2, \fBkAvgThreadsRate\fP = kIsRate|kAvgThreads }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE \fBCounter\fP (double v=0\&., Flags f=kDefaults)"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE \fBoperator double const &\fP () const"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE \fBoperator double &\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "double \fBvalue\fP"
+.br
+.ti -1c
+.RI "Flags \fBflags\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

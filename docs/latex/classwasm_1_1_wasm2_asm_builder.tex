@@ -1,0 +1,46 @@
+\hypertarget{classwasm_1_1_wasm2_asm_builder}{}\section{wasm\+:\+:Wasm2\+Asm\+Builder Class Reference}
+\label{classwasm_1_1_wasm2_asm_builder}\index{wasm\+::\+Wasm2\+Asm\+Builder@{wasm\+::\+Wasm2\+Asm\+Builder}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a9b5dce7453c2b46cedce5fe4099af15d}\label{classwasm_1_1_wasm2_asm_builder_a9b5dce7453c2b46cedce5fe4099af15d}} 
+{\bfseries Wasm2\+Asm\+Builder} (bool debug)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a487b71920c400faac26e7e6173d0bca1}\label{classwasm_1_1_wasm2_asm_builder_a487b71920c400faac26e7e6173d0bca1}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries process\+Wasm} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$wasm)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_aa7637fe69bdd04a4768a564382faa3af}\label{classwasm_1_1_wasm2_asm_builder_aa7637fe69bdd04a4768a564382faa3af}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries process\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_ad0962484a5e4ed14b548437a307fdf6b}\label{classwasm_1_1_wasm2_asm_builder_ad0962484a5e4ed14b548437a307fdf6b}} 
+void {\bfseries scan\+Function\+Body} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_ae8f148826c0f4190c1743de42d83b2f6}\label{classwasm_1_1_wasm2_asm_builder_ae8f148826c0f4190c1743de42d83b2f6}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries process\+Function\+Body} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}}, \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} result)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a91fd0b545d87f2f1494e4c06f427cf04}\label{classwasm_1_1_wasm2_asm_builder_a91fd0b545d87f2f1494e4c06f427cf04}} 
+\mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} {\bfseries get\+Temp} (Wasm\+Type type)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a42fa431d363b5741266a3eb8ccfc5388}\label{classwasm_1_1_wasm2_asm_builder_a42fa431d363b5741266a3eb8ccfc5388}} 
+void {\bfseries free\+Temp} (Wasm\+Type type, \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} temp)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a5bd9129432b8d22c7edf3a6734dd2abb}\label{classwasm_1_1_wasm2_asm_builder_a5bd9129432b8d22c7edf3a6734dd2abb}} 
+void {\bfseries set\+Statement} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_ade6d5b9a0653f3cb07d933cddda80774}\label{classwasm_1_1_wasm2_asm_builder_ade6d5b9a0653f3cb07d933cddda80774}} 
+bool {\bfseries is\+Statement} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a962ea4cc286a292b84106eaaaf4e3a9c}\label{classwasm_1_1_wasm2_asm_builder_a962ea4cc286a292b84106eaaaf4e3a9c}} 
+size\+\_\+t {\bfseries get\+Table\+Size} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_wasm2_asm_builder_a30cc43c0d3177422d9692d629451ae5e}\label{classwasm_1_1_wasm2_asm_builder_a30cc43c0d3177422d9692d629451ae5e}} 
+static \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} {\bfseries from\+Name} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm2asm.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,20 @@
+.TH "aacio::chain::transaction_object" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::transaction_object
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transaction_object\&.hpp>\fP
+.PP
+Inherits \fBchainbase::object< transaction_object_type, transaction_object >\fP\&.
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+The purpose of this object is to enable the detection of duplicate transactions\&. When a transaction is included in a block a \fBtransaction_object\fP is added\&. At the end of block processing all transaction_objects that have expired can be removed from the index\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,43 @@
+\hypertarget{structidentity_1_1contract_1_1create}{}\section{identity\+:\+:contract$<$ Deploy\+To\+Account $>$\+:\+:create Struct Reference}
+\label{structidentity_1_1contract_1_1create}\index{identity\+::contract$<$ Deploy\+To\+Account $>$\+::create@{identity\+::contract$<$ Deploy\+To\+Account $>$\+::create}}
+
+
+{\ttfamily \#include $<$identity.\+hpp$>$}
+
+
+
+Inheritance diagram for identity\+:\+:contract$<$ Deploy\+To\+Account $>$\+:\+:create\+:
+% FIG 0
+
+
+Collaboration diagram for identity\+:\+:contract$<$ Deploy\+To\+Account $>$\+:\+:create\+:
+% FIG 1
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structidentity_1_1contract_1_1create_a7ab51fa09f57b794a8d08be27e3fba4e}\label{structidentity_1_1contract_1_1create_a7ab51fa09f57b794a8d08be27e3fba4e}} 
+account\+\_\+name {\bfseries creator}
+\item 
+\mbox{\Hypertarget{structidentity_1_1contract_1_1create_ad3eed7947aada76a30a9c9a3fe3b8c81}\label{structidentity_1_1contract_1_1create_ad3eed7947aada76a30a9c9a3fe3b8c81}} 
+uint64\+\_\+t \mbox{\hyperlink{structidentity_1_1contract_1_1create_ad3eed7947aada76a30a9c9a3fe3b8c81}{identity}} = 0
+\begin{DoxyCompactList}\small\item\em first 32 bits determinsitically derived from creator and tapos \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$uint64\+\_\+t Deploy\+To\+Account$>$\newline
+struct identity\+::contract$<$ Deploy\+To\+Account $>$\+::create}
+
+This action create a new globally unique 64 bit identifier, to minimize collisions each account is automatically assigned a 32 bit identity prefix based upon hash(account\+\_\+name) $^\wedge$ hash(tapos).
+
+With this method no two accounts are likely to be assigned the same 32 bit prefix consistantly due to the constantly changing tapos. This prevents abuse of \textquotesingle{}creator\textquotesingle{} selection to generate intentional conflicts with other users.
+
+The creator can determine the last 32 bits using an algorithm of their choice. We presume the creator\textquotesingle{}s algorithm can avoid collisions with itself.
+
+Even if two accounts get a collision in first 32 bits, a proper creator algorithm should generate randomness in last 32 bits that will minimize collisions. In event of collision transaction will fail and creator can try again.
+
+\mbox{\hyperlink{struct_a}{A}} 64 bit identity is used because the key is used frequently and it makes for more effecient tables/scopes/etc. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/identity/identity.\+hpp\end{DoxyCompactItemize}

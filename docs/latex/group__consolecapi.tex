@@ -1,0 +1,171 @@
+\hypertarget{group__consolecapi}{}\section{Console C A\+PI}
+\label{group__consolecapi}\index{Console C A\+PI@{Console C A\+PI}}
+
+
+\mbox{\hyperlink{struct_c}{C}} A\+PI to log/print text messages.  
+
+
+Collaboration diagram for Console C A\+PI\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__consolecapi_gaa99be0cc1b9e5cbbc2b12a43537e7ed3}{prints}} (const char $\ast$cstr)
+\begin{DoxyCompactList}\small\item\em Prints string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__consolecapi_ga63ff8a7c0b046968ab2864df7284c910}{prints\+\_\+l}} (const char $\ast$cstr, uint32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Prints string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}{printi}} (int64\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Prints value as a 64 bit unsigned integer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__consolecapi_gaaf5e50a1ade4fa863b171b6d5d35a124}\label{group__consolecapi_gaaf5e50a1ade4fa863b171b6d5d35a124}} 
+void {\bfseries printui} (uint64\+\_\+t value)
+\item 
+void \mbox{\hyperlink{group__consolecapi_ga0ac41ae1c31cf87a4adc14d9edb3e6a5}{printi128}} (const uint128\+\_\+t $\ast$value)
+\begin{DoxyCompactList}\small\item\em Prints value as a 128 bit unsigned integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__consolecapi_gaea777842a3946bf2936e0d2d0ba95df2}{printdf}} (double value)
+\begin{DoxyCompactList}\small\item\em Prints value as double. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__consolecapi_ga1e3999c8ae72ad1920c25583b59d4a78}\label{group__consolecapi_ga1e3999c8ae72ad1920c25583b59d4a78}} 
+void {\bfseries printff} (float value)
+\item 
+\mbox{\Hypertarget{group__consolecapi_ga077086d260a56e7ac05dd03342698765}\label{group__consolecapi_ga077086d260a56e7ac05dd03342698765}} 
+void {\bfseries printdi} (int64\+\_\+t value)
+\item 
+void \mbox{\hyperlink{group__consolecapi_ga9ec6a2d163a27b98984065d55fb41475}{printn}} (uint64\+\_\+t name)
+\begin{DoxyCompactList}\small\item\em Prints a 64 bit names as base32 encoded string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__consolecapi_ga578a703ccc378e8e24f62016b06cbc27}\label{group__consolecapi_ga578a703ccc378e8e24f62016b06cbc27}} 
+void {\bfseries printhex} (const void $\ast$data, uint32\+\_\+t datalen)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{struct_c}{C}} A\+PI to log/print text messages. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__consolecapi_gaea777842a3946bf2936e0d2d0ba95df2}\label{group__consolecapi_gaea777842a3946bf2936e0d2d0ba95df2}} 
+\index{Console C A\+PI@{Console C A\+PI}!printdf@{printdf}}
+\index{printdf@{printdf}!Console C A\+PI@{Console C A\+PI}}
+\subsubsection{\texorpdfstring{printdf()}{printdf()}}
+{\footnotesize\ttfamily void printdf (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Prints value as double. 
+
+Prints value as double 
+\begin{DoxyParams}{Parameters}
+{\em value} & of double (interpreted as 64 bit unsigned integer) to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{double} double\_value = 5.0 / 10.0;
+printd(*(uint64\_t*)(&double\_value)); \textcolor{comment}{// Output: 0.5}
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}\label{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}} 
+\index{Console C A\+PI@{Console C A\+PI}!printi@{printi}}
+\index{printi@{printi}!Console C A\+PI@{Console C A\+PI}}
+\subsubsection{\texorpdfstring{printi()}{printi()}}
+{\footnotesize\ttfamily void printi (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Prints value as a 64 bit unsigned integer. 
+
+Prints value as a 64 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em value} & of 64 bit unsigned integer to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}{printi}}(1e+18); \textcolor{comment}{// Output: 1000000000000000000}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__consolecapi_ga0ac41ae1c31cf87a4adc14d9edb3e6a5}\label{group__consolecapi_ga0ac41ae1c31cf87a4adc14d9edb3e6a5}} 
+\index{Console C A\+PI@{Console C A\+PI}!printi128@{printi128}}
+\index{printi128@{printi128}!Console C A\+PI@{Console C A\+PI}}
+\subsubsection{\texorpdfstring{printi128()}{printi128()}}
+{\footnotesize\ttfamily void printi128 (\begin{DoxyParamCaption}\item[{const uint128\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Prints value as a 128 bit unsigned integer. 
+
+Prints value as a 128 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em value} & 128 bit integer to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+uint128\_t large\_int(87654323456);
+\mbox{\hyperlink{group__consolecapi_ga0ac41ae1c31cf87a4adc14d9edb3e6a5}{printi128}}(large\_int); \textcolor{comment}{// Output: 87654323456}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__consolecapi_ga9ec6a2d163a27b98984065d55fb41475}\label{group__consolecapi_ga9ec6a2d163a27b98984065d55fb41475}} 
+\index{Console C A\+PI@{Console C A\+PI}!printn@{printn}}
+\index{printn@{printn}!Console C A\+PI@{Console C A\+PI}}
+\subsubsection{\texorpdfstring{printn()}{printn()}}
+{\footnotesize\ttfamily void printn (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{name }\end{DoxyParamCaption})}
+
+
+
+Prints a 64 bit names as base32 encoded string. 
+
+Prints a 64 bit names as base32 encoded string 
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ 64 bit name to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{group__consolecapi_ga9ec6a2d163a27b98984065d55fb41475}{printn}}(\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(abcde)); \textcolor{comment}{// Output: abcde}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{group__consolecapi_gaa99be0cc1b9e5cbbc2b12a43537e7ed3}\label{group__consolecapi_gaa99be0cc1b9e5cbbc2b12a43537e7ed3}} 
+\index{Console C A\+PI@{Console C A\+PI}!prints@{prints}}
+\index{prints@{prints}!Console C A\+PI@{Console C A\+PI}}
+\subsubsection{\texorpdfstring{prints()}{prints()}}
+{\footnotesize\ttfamily void prints (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cstr }\end{DoxyParamCaption})}
+
+
+
+Prints string. 
+
+Prints string 
+\begin{DoxyParams}{Parameters}
+{\em cstr} & -\/ a null terminated string\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{group__consolecapi_gaa99be0cc1b9e5cbbc2b12a43537e7ed3}{prints}}(\textcolor{stringliteral}{"Hello World!"}); \textcolor{comment}{// Output: Hello World!}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{group__consolecapi_ga63ff8a7c0b046968ab2864df7284c910}\label{group__consolecapi_ga63ff8a7c0b046968ab2864df7284c910}} 
+\index{Console C A\+PI@{Console C A\+PI}!prints\+\_\+l@{prints\+\_\+l}}
+\index{prints\+\_\+l@{prints\+\_\+l}!Console C A\+PI@{Console C A\+PI}}
+\subsubsection{\texorpdfstring{prints\+\_\+l()}{prints\_l()}}
+{\footnotesize\ttfamily void prints\+\_\+l (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cstr,  }\item[{uint32\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+
+
+Prints string. 
+
+Prints string up to given length 
+\begin{DoxyParams}{Parameters}
+{\em cstr} & -\/ pointer to string \\
+\hline
+{\em len} & -\/ len of string to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{group__consolecapi_ga63ff8a7c0b046968ab2864df7284c910}{prints\_l}}(\textcolor{stringliteral}{"Hello World!"}, 5); \textcolor{comment}{// Output: Hello}
+\end{DoxyCode}
+ 

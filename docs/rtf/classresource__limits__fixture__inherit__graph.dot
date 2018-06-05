@@ -1,0 +1,11 @@
+digraph "resource_limits_fixture"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="resource_limits_fixture",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="aacio::chain::test\l::chainbase_fixture\l\< 512 *1024 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1test_1_1chainbase__fixture.html"];
+  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="aacio::chain::resource\l_limits::resource_limits\l_manager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1resource__limits_1_1resource__limits__manager.html"];
+}

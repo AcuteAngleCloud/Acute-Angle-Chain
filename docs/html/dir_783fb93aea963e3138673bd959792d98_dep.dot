@@ -1,0 +1,11 @@
+digraph "plugins/chain_plugin/include/aacio/chain_plugin" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9c6a307288fe0f6b59de3c2725e54fd8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="aacio" fontname="Helvetica", fontsize="10", URL="dir_9c6a307288fe0f6b59de3c2725e54fd8.html"]
+  dir_783fb93aea963e3138673bd959792d98 [shape=box, label="chain_plugin", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_783fb93aea963e3138673bd959792d98.html"];
+  }
+  dir_bc0718b08fb2015b8e59c47b2805f60c [shape=box label="libraries" fillcolor="white" style="filled" color="red" URL="dir_bc0718b08fb2015b8e59c47b2805f60c.html"];
+  dir_783fb93aea963e3138673bd959792d98->dir_bc0718b08fb2015b8e59c47b2805f60c [headlabel="8", labeldistance=1.5 headhref="dir_001851_000004.html"];
+}

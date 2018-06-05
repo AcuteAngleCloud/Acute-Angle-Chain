@@ -1,0 +1,62 @@
+.TH "native_action_handlers" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+native_action_handlers
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_newaccount\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_updateauth\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_deleteauth\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_linkauth\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_unlinkauth\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_postrecovery\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_passrecovery\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_vetorecovery\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_setcode\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_setabi\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_onerror\fP (\fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_canceldelay\fP (\fBapply_context\fP &context)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "void aacio::chain::contracts::apply_aacio_newaccount (\fBapply_context\fP & context)"
+This method is called assuming precondition_system_newaccount succeeds a 
+.SS "void aacio::chain::contracts::apply_aacio_setabi (\fBapply_context\fP & context)"
+if an ABI is specified make sure it is well formed and doesn't reference any undefined types 
+.SS "void aacio::chain::contracts::apply_aacio_setcode (\fBapply_context\fP & context)"
+TODO: consider whether a microsecond level local timestamp is sufficient to detect code version changes 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

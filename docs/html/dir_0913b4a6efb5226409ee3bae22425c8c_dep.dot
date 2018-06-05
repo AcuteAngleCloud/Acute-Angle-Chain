@@ -1,0 +1,15 @@
+digraph "contracts/libc++/upstream/src/experimental" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b3059b9e6c2c4c5015bfaee2e51792e6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_b3059b9e6c2c4c5015bfaee2e51792e6.html"]
+  subgraph clusterdir_0913b4a6efb5226409ee3bae22425c8c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0913b4a6efb5226409ee3bae22425c8c.html"];
+    dir_0913b4a6efb5226409ee3bae22425c8c [shape=plaintext label="experimental"];
+    dir_990a6d5444639bd77d9b1d1f3c42f0c1 [shape=box label="filesystem" color="black" fillcolor="white" style="filled" URL="dir_990a6d5444639bd77d9b1d1f3c42f0c1.html"];
+  }
+  }
+  dir_50d7137a7301a66ec452987911b28b88 [shape=box label="musl" fillcolor="white" style="filled" color="red" URL="dir_50d7137a7301a66ec452987911b28b88.html"];
+  dir_990a6d5444639bd77d9b1d1f3c42f0c1->dir_50d7137a7301a66ec452987911b28b88 [headlabel="2", labeldistance=1.5 headhref="dir_000053_000020.html"];
+}

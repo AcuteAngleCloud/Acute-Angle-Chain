@@ -1,0 +1,84 @@
+.TH "wasm::Function" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Function
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDebugLocation\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBgetNumParams\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBgetNumVars\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBgetNumLocals\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisParam\fP (Index index)"
+.br
+.ti -1c
+.RI "bool \fBisVar\fP (Index index)"
+.br
+.ti -1c
+.RI "\fBName\fP \fBgetLocalName\fP (Index index)"
+.br
+.ti -1c
+.RI "Index \fBgetLocalIndex\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "Index \fBgetVarIndexBase\fP ()"
+.br
+.ti -1c
+.RI "WasmType \fBgetLocalType\fP (Index index)"
+.br
+.ti -1c
+.RI "\fBName\fP \fBgetLocalNameOrDefault\fP (Index index)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBName\fP \fBname\fP"
+.br
+.ti -1c
+.RI "WasmType \fBresult\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< WasmType > \fBparams\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< WasmType > \fBvars\fP"
+.br
+.ti -1c
+.RI "\fBName\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fBbody\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBName\fP > \fBlocalNames\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, Index > \fBlocalIndices\fP"
+.br
+.ti -1c
+.RI "\fBstd::unordered_map\fP< \fBExpression\fP *, \fBDebugLocation\fP > \fBdebugLocations\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

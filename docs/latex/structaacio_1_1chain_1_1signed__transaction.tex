@@ -1,0 +1,40 @@
+\hypertarget{structaacio_1_1chain_1_1signed__transaction}{}\section{aacio\+:\+:chain\+:\+:signed\+\_\+transaction Struct Reference}
+\label{structaacio_1_1chain_1_1signed__transaction}\index{aacio\+::chain\+::signed\+\_\+transaction@{aacio\+::chain\+::signed\+\_\+transaction}}
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:signed\+\_\+transaction\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:signed\+\_\+transaction\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__transaction_a0ea1fb2937069bc7f6c2fa3e3582a717}\label{structaacio_1_1chain_1_1signed__transaction_a0ea1fb2937069bc7f6c2fa3e3582a717}} 
+{\bfseries signed\+\_\+transaction} (\mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} \&\&trx, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature\+\_\+type}} $>$ \&signatures, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{bytes}} $>$ \&\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction_adc8566b0377013a718f0e250b62d0adc}{context\+\_\+free\+\_\+data}})
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__transaction_a8ec08f8818952e7e0f8befb09d58f270}\label{structaacio_1_1chain_1_1signed__transaction_a8ec08f8818952e7e0f8befb09d58f270}} 
+const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature\+\_\+type}} \& {\bfseries sign} (const \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} \&key, const \mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} \&chain\+\_\+id)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__transaction_adc891eb07638ec08f669d1a9378e9c49}\label{structaacio_1_1chain_1_1signed__transaction_adc891eb07638ec08f669d1a9378e9c49}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature\+\_\+type}} {\bfseries sign} (const \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} \&key, const \mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} \&chain\+\_\+id) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__transaction_ad70a956427e336d0a1c00660c1e9b738}\label{structaacio_1_1chain_1_1signed__transaction_ad70a956427e336d0a1c00660c1e9b738}} 
+flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ {\bfseries get\+\_\+signature\+\_\+keys} (const \mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} \&chain\+\_\+id, bool allow\+\_\+duplicate\+\_\+keys=false) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__transaction_a302d185d07cf18219cc878d8f43f0a97}\label{structaacio_1_1chain_1_1signed__transaction_a302d185d07cf18219cc878d8f43f0a97}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature\+\_\+type}} $>$ {\bfseries signatures}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__transaction_adc8566b0377013a718f0e250b62d0adc}\label{structaacio_1_1chain_1_1signed__transaction_adc8566b0377013a718f0e250b62d0adc}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{bytes}} $>$ \mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction_adc8566b0377013a718f0e250b62d0adc}{context\+\_\+free\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em for each context-\/free action, there is an entry here \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{libraries_2chain_2include_2aacio_2chain_2transaction_8hpp}{transaction.\+hpp}}\item 
+libraries/chain/\mbox{\hyperlink{transaction_8cpp}{transaction.\+cpp}}\end{DoxyCompactItemize}

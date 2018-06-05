@@ -1,0 +1,63 @@
+\hypertarget{classaacio__system__tester}{}\section{aacio\+\_\+system\+\_\+tester Class Reference}
+\label{classaacio__system__tester}\index{aacio\+\_\+system\+\_\+tester@{aacio\+\_\+system\+\_\+tester}}
+
+
+Inheritance diagram for aacio\+\_\+system\+\_\+tester\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+\_\+system\+\_\+tester\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a317c067d1a39678f06befae8eecf49eb}\label{classaacio__system__tester_a317c067d1a39678f06befae8eecf49eb}} 
+action\+\_\+result {\bfseries push\+\_\+action} (const account\+\_\+name \&signer, const action\+\_\+name \&\mbox{\hyperlink{structaacio_1_1name}{name}}, const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \&data, bool auth=true)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_ad167999fb7af585aa88caec88bf9056d}\label{classaacio__system__tester_ad167999fb7af585aa88caec88bf9056d}} 
+action\+\_\+result {\bfseries stake} (const account\+\_\+name \&from, const account\+\_\+name \&to, const string \&net, const string \&cpu, const string \&storage)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a1d734938f0abd017286aaf8563619d36}\label{classaacio__system__tester_a1d734938f0abd017286aaf8563619d36}} 
+action\+\_\+result {\bfseries stake} (const account\+\_\+name \&acnt, const string \&net, const string \&cpu, const string \&storage)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a2052f170579ff08fe01980e652b9cc45}\label{classaacio__system__tester_a2052f170579ff08fe01980e652b9cc45}} 
+action\+\_\+result {\bfseries unstake} (const account\+\_\+name \&from, const account\+\_\+name \&to, const string \&net, const string \&cpu, uint64\+\_\+t \mbox{\hyperlink{classstd_1_1vector}{bytes}})
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a8c04819fd8672f024ecbd88524cdda5f}\label{classaacio__system__tester_a8c04819fd8672f024ecbd88524cdda5f}} 
+action\+\_\+result {\bfseries unstake} (const account\+\_\+name \&acnt, const string \&net, const string \&cpu, uint64\+\_\+t \mbox{\hyperlink{classstd_1_1vector}{bytes}})
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a80be3d4dafe5199326ead3e8d3840ee4}\label{classaacio__system__tester_a80be3d4dafe5199326ead3e8d3840ee4}} 
+action\+\_\+result {\bfseries regproducer} (const account\+\_\+name \&acnt, int params\+\_\+fixture=1)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_acffabf89ef4b5f131f8855238ca61df1}\label{classaacio__system__tester_acffabf89ef4b5f131f8855238ca61df1}} 
+uint32\+\_\+t {\bfseries last\+\_\+block\+\_\+time} () const
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a4adad89d43490b877338a009304faa50}\label{classaacio__system__tester_a4adad89d43490b877338a009304faa50}} 
+\mbox{\hyperlink{structaacio_1_1asset}{asset}} {\bfseries get\+\_\+balance} (const account\+\_\+name \&act)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_ab0481ec03c3933a339112b92fa19d780}\label{classaacio__system__tester_ab0481ec03c3933a339112b92fa19d780}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries get\+\_\+total\+\_\+stake} (const account\+\_\+name \&act)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a3900a9c6b5fa958d59d2d25e74693817}\label{classaacio__system__tester_a3900a9c6b5fa958d59d2d25e74693817}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries get\+\_\+voter\+\_\+info} (const account\+\_\+name \&act)
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a162d6eacf226824cff6f60a2f0c06558}\label{classaacio__system__tester_a162d6eacf226824cff6f60a2f0c06558}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries get\+\_\+producer\+\_\+info} (const account\+\_\+name \&act)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_ac162e85c3beec62f6df055f7b998d922}\label{classaacio__system__tester_ac162e85c3beec62f6df055f7b998d922}} 
+static \mbox{\hyperlink{classfc_1_1variant__object}{fc\+::variant\+\_\+object}} {\bfseries producer\+\_\+parameters\+\_\+example} (int n)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio__system__tester_a75ad6f427f0eb36387de7454f9d4c258}\label{classaacio__system__tester_a75ad6f427f0eb36387de7454f9d4c258}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer}{abi\+\_\+serializer}} {\bfseries abi\+\_\+ser}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/wasm\+\_\+tests/aacio.\+system\+\_\+tests.\+cpp\end{DoxyCompactItemize}

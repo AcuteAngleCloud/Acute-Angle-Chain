@@ -1,0 +1,80 @@
+\hypertarget{classwasm_1_1_function}{}\section{wasm\+:\+:Function Class Reference}
+\label{classwasm_1_1_function}\index{wasm\+::\+Function@{wasm\+::\+Function}}
+
+
+Collaboration diagram for wasm\+:\+:Function\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_function_1_1_debug_location}{Debug\+Location}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_afbe4e8f9afb605058628fd487d1f2e6b}\label{classwasm_1_1_function_afbe4e8f9afb605058628fd487d1f2e6b}} 
+size\+\_\+t {\bfseries get\+Num\+Params} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a46d7ab21503d4b594984ce99c2a1c26c}\label{classwasm_1_1_function_a46d7ab21503d4b594984ce99c2a1c26c}} 
+size\+\_\+t {\bfseries get\+Num\+Vars} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_ac0ff84cd1a0c8a9e48bf7298fd60f987}\label{classwasm_1_1_function_ac0ff84cd1a0c8a9e48bf7298fd60f987}} 
+size\+\_\+t {\bfseries get\+Num\+Locals} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a623fe1a52f0e680c27ad08933fd44dd4}\label{classwasm_1_1_function_a623fe1a52f0e680c27ad08933fd44dd4}} 
+bool {\bfseries is\+Param} (Index index)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a8c7c0bdcc76ea20945b38c2cf870eb3b}\label{classwasm_1_1_function_a8c7c0bdcc76ea20945b38c2cf870eb3b}} 
+bool {\bfseries is\+Var} (Index index)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_aaa7aa11b434650040f04bf205fcc4d5c}\label{classwasm_1_1_function_aaa7aa11b434650040f04bf205fcc4d5c}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries get\+Local\+Name} (Index index)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a93821b3eda92a66d18a579318d937c14}\label{classwasm_1_1_function_a93821b3eda92a66d18a579318d937c14}} 
+Index {\bfseries get\+Local\+Index} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a2758c874d089e1bc77fe8bb114a0a1c8}\label{classwasm_1_1_function_a2758c874d089e1bc77fe8bb114a0a1c8}} 
+Index {\bfseries get\+Var\+Index\+Base} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_ad643c3e71007e00e08e0254dfdadcd2b}\label{classwasm_1_1_function_ad643c3e71007e00e08e0254dfdadcd2b}} 
+Wasm\+Type {\bfseries get\+Local\+Type} (Index index)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a6f2436f66468d5c506b987b9c7bd4cc2}\label{classwasm_1_1_function_a6f2436f66468d5c506b987b9c7bd4cc2}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries get\+Local\+Name\+Or\+Default} (Index index)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a7460e2e2d9e0462a428e29be1919c966}\label{classwasm_1_1_function_a7460e2e2d9e0462a428e29be1919c966}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries name}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a139c8e720353f2fa505d92082e06579c}\label{classwasm_1_1_function_a139c8e720353f2fa505d92082e06579c}} 
+Wasm\+Type {\bfseries result}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a5581d882089ee1400c9b80d45eab3b53}\label{classwasm_1_1_function_a5581d882089ee1400c9b80d45eab3b53}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ Wasm\+Type $>$ {\bfseries params}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a1d484833dab12c822e6677e5f0f9f359}\label{classwasm_1_1_function_a1d484833dab12c822e6677e5f0f9f359}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ Wasm\+Type $>$ {\bfseries vars}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a31ceb53949d3ad0753e7adf4878c01e3}\label{classwasm_1_1_function_a31ceb53949d3ad0753e7adf4878c01e3}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries type}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a89c7783c31d07986a4703e43c61dfe8d}\label{classwasm_1_1_function_a89c7783c31d07986a4703e43c61dfe8d}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries body}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_adc1fa5961664fb4939cb67f2816a29df}\label{classwasm_1_1_function_adc1fa5961664fb4939cb67f2816a29df}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries local\+Names}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_a3356ce2e2221726bb62c56548027ea60}\label{classwasm_1_1_function_a3356ce2e2221726bb62c56548027ea60}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, Index $>$ {\bfseries local\+Indices}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_function_ad9abf51d2661dfa3e706c4b123719f1b}\label{classwasm_1_1_function_ad9abf51d2661dfa3e706c4b123719f1b}} 
+\mbox{\hyperlink{classstd_1_1unordered__map}{std\+::unordered\+\_\+map}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$, \mbox{\hyperlink{structwasm_1_1_function_1_1_debug_location}{Debug\+Location}} $>$ {\bfseries debug\+Locations}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm.\+h\item 
+externals/binaryen/src/wasm/wasm.\+cpp\end{DoxyCompactItemize}

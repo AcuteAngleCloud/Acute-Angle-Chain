@@ -1,0 +1,19 @@
+digraph "websocketpp::extensions::permessage_deflate::disabled::is_enabled"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="websocketpp::extensions\l::permessage_deflate::\ldisabled::is_enabled",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::negotiate_extensions_helper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a2bba499a185aa0219c2389532a332393",tooltip="Extension negotiation helper function. "];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::consume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a5c5e3234a0067c7f14fe0ceb4e647659",tooltip="Process new websocket connection bytes. "];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::finalize_message",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a906398e2c23370de53d4f3572657ad05",tooltip="Perform any finalization actions on an incoming message. "];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::prepare_data_frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a72f4833d66eb51e37a956f434895b3ab",tooltip="Prepare a user data message for writing. "];
+  Node14 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::process_payload_bytes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#aa7eece3f48840535f41b625061fa7867",tooltip="Reads bytes from buf into message payload. "];
+  Node14 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="websocketpp::processor\l::hybi13\< stub_config\l \>::validate_incoming_basic_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html#a0c549a5e2766288fb625c03e507cc9ad",tooltip="Validate an incoming basic header. "];
+}

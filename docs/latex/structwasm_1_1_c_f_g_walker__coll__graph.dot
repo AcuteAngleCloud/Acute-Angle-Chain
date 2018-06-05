@@ -1,0 +1,28 @@
+digraph "wasm::CFGWalker&lt; SubType, VisitorType, Contents &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node5 [label="wasm::CFGWalker\< SubType,\l VisitorType, Contents \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="wasm::ControlFlowWalker\l\< SubType, VisitorType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_control_flow_walker.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="wasm::PostWalker\< SubType,\l VisitorType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_post_walker.html"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="wasm::Walker\< SubType,\l VisitorType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_walker.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="VisitorType",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" controlFlowStack" ];
+  Node10 [label="std::vector\< wasm::\lExpression *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node11 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" debugIds" ];
+  Node11 [label="std::map\< wasm::CFGWalker\l::BasicBlock *, size_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+  Node12 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" branches" ];
+  Node12 [label="std::map\< wasm::Expression\l *, std::vector\< wasm::CFGWalker\l::BasicBlock *\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+  Node13 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" basicBlocks" ];
+  Node13 [label="std::vector\< std::unique\l_ptr\< wasm::CFGWalker::\lBasicBlock \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node14 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ifStack\nloopTops\nloopStack" ];
+  Node14 [label="std::vector\< wasm::\lCFGWalker::BasicBlock *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node15 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currBasicBlock\nentry" ];
+  Node15 [label="wasm::CFGWalker\< SubType,\l VisitorType, Contents\l \>::BasicBlock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_c_f_g_walker_1_1_basic_block.html"];
+  Node14 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" in\nout" ];
+}

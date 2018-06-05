@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="chainbase::object\<\l resource_limits_config\l_object_type, resource\l_limits_config_object \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structchainbase_1_1object.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="aacio::chain::resource\l_limits::resource_limits\l_config_object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1resource__limits_1_1resource__limits__config__object.html"];
+}

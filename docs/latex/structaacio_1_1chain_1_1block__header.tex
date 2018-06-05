@@ -1,0 +1,66 @@
+\hypertarget{structaacio_1_1chain_1_1block__header}{}\section{aacio\+:\+:chain\+:\+:block\+\_\+header Struct Reference}
+\label{structaacio_1_1chain_1_1block__header}\index{aacio\+::chain\+::block\+\_\+header@{aacio\+::chain\+::block\+\_\+header}}
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:block\+\_\+header\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:block\+\_\+header\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_acd1d631792698c239c931bee98a741bf}\label{structaacio_1_1chain_1_1block__header_acd1d631792698c239c931bee98a741bf}} 
+\mbox{\hyperlink{classfc_1_1sha256}{digest\+\_\+type}} {\bfseries digest} () const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a559bbcd0575ecc8e163c1a3e45494a8b}\label{structaacio_1_1chain_1_1block__header_a559bbcd0575ecc8e163c1a3e45494a8b}} 
+uint32\+\_\+t {\bfseries block\+\_\+num} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a9a96983b08dc13f7d765b3008d41d14a}\label{structaacio_1_1chain_1_1block__header_a9a96983b08dc13f7d765b3008d41d14a}} 
+static uint32\+\_\+t {\bfseries num\+\_\+from\+\_\+id} (const \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} \&id)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_ab7023162833956e6fea420e8cc07dc44}\label{structaacio_1_1chain_1_1block__header_ab7023162833956e6fea420e8cc07dc44}} 
+\mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} {\bfseries previous}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a2fc29d74ec53ccd92ace1c13e8e55501}\label{structaacio_1_1chain_1_1block__header_a2fc29d74ec53ccd92ace1c13e8e55501}} 
+\mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}} {\bfseries timestamp}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a604daf9d9e7fef6e52752fb5f8631c00}\label{structaacio_1_1chain_1_1block__header_a604daf9d9e7fef6e52752fb5f8631c00}} 
+\mbox{\hyperlink{classfc_1_1sha256}{checksum256\+\_\+type}} {\bfseries transaction\+\_\+mroot}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a1dab4060db389468cc8beecbcb9cf494}\label{structaacio_1_1chain_1_1block__header_a1dab4060db389468cc8beecbcb9cf494}} 
+\mbox{\hyperlink{classfc_1_1sha256}{checksum256\+\_\+type}} \mbox{\hyperlink{structaacio_1_1chain_1_1block__header_a1dab4060db389468cc8beecbcb9cf494}{action\+\_\+mroot}}
+\begin{DoxyCompactList}\small\item\em mroot of cycles\+\_\+summary \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a2052f21035120dae59737546ead4095e}\label{structaacio_1_1chain_1_1block__header_a2052f21035120dae59737546ead4095e}} 
+\mbox{\hyperlink{classfc_1_1sha256}{checksum256\+\_\+type}} {\bfseries block\+\_\+mroot}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a19cc933fa52cb7018e94183bb32ffff3}\label{structaacio_1_1chain_1_1block__header_a19cc933fa52cb7018e94183bb32ffff3}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries producer}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structaacio_1_1chain_1_1block__header_a46ae9f2aef0525817b975e5d4a175026}{schedule\+\_\+version}} = 0
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a72369344e7c2e8b9852978cb5fa59152}\label{structaacio_1_1chain_1_1block__header_a72369344e7c2e8b9852978cb5fa59152}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1producer__schedule__type}{producer\+\_\+schedule\+\_\+type}} $>$ {\bfseries new\+\_\+producers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaacio_1_1chain_1_1block__header_a46ae9f2aef0525817b975e5d4a175026}\label{structaacio_1_1chain_1_1block__header_a46ae9f2aef0525817b975e5d4a175026}} 
+\index{aacio\+::chain\+::block\+\_\+header@{aacio\+::chain\+::block\+\_\+header}!schedule\+\_\+version@{schedule\+\_\+version}}
+\index{schedule\+\_\+version@{schedule\+\_\+version}!aacio\+::chain\+::block\+\_\+header@{aacio\+::chain\+::block\+\_\+header}}
+\subsubsection{\texorpdfstring{schedule\+\_\+version}{schedule\_version}}
+{\footnotesize\ttfamily uint32\+\_\+t aacio\+::chain\+::block\+\_\+header\+::schedule\+\_\+version = 0}
+
+The producer schedule version that should validate this block, this is used to indicate that the prior block which included new\+\_\+producers-\/$>$version has been marked irreversible and that it the new producer schedule takes effect this block. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{block_8hpp}{block.\+hpp}}\item 
+libraries/chain/\mbox{\hyperlink{block_8cpp}{block.\+cpp}}\end{DoxyCompactItemize}

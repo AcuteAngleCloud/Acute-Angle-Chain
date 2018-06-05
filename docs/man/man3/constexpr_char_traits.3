@@ -1,0 +1,77 @@
+.TH "constexpr_char_traits< _CharT >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+constexpr_char_traits< _CharT >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef _CharT \fBchar_type\fP"
+.br
+.ti -1c
+.RI "typedef int \fBint_type\fP"
+.br
+.ti -1c
+.RI "typedef std::streamoff \fBoff_type\fP"
+.br
+.ti -1c
+.RI "typedef std::streampos \fBpos_type\fP"
+.br
+.ti -1c
+.RI "typedef std::mbstate_t \fBstate_type\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 void \fBassign\fP (char_type &__c1, const char_type &__c2) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR bool \fBeq\fP (char_type __c1, char_type __c2) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR bool \fBlt\fP (char_type __c1, char_type __c2) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 int \fBcompare\fP (const char_type *__s1, const char_type *__s2, size_t __n)"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 size_t \fBlength\fP (const char_type *__s)"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 const char_type * \fBfind\fP (const char_type *__s, size_t __n, const char_type &__a)"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 char_type * \fBmove\fP (char_type *__s1, const char_type *__s2, size_t __n)"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 char_type * \fBcopy\fP (char_type *__s1, const char_type *__s2, size_t __n)"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR_CXX14 char_type * \fBassign\fP (char_type *__s, size_t __n, char_type __a)"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR int_type \fBnot_eof\fP (int_type __c) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR char_type \fBto_char_type\fP (int_type __c) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR int_type \fBto_int_type\fP (char_type __c) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR bool \fBeq_int_type\fP (int_type __c1, int_type __c2) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "static TEST_CONSTEXPR int_type \fBeof\fP () TEST_NOEXCEPT"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

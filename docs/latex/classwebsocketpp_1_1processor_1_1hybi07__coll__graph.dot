@@ -1,0 +1,26 @@
+digraph "websocketpp::processor::hybi07&lt; config &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="websocketpp::processor\l::hybi07\< config \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="websocketpp::processor\l::hybi08\< config \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi08.html",tooltip="Processor for Hybi Draft version 08. "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="websocketpp::processor\l::hybi13\< config \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1hybi13.html",tooltip="Processor for Hybi version 13 (RFC6455) "];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="websocketpp::processor\l::processor\< config \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1processor.html",tooltip="WebSocket protocol processor abstract base class. "];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_rng" ];
+  Node8 [label="websocketpp::random\l::none::int_generator\l\< int_type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1random_1_1none_1_1int__generator.html",tooltip="Thread safe stub \"random\" integer generator. "];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_extended_header" ];
+  Node9 [label="websocketpp::frame\l::extended_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1frame_1_1extended__header.html",tooltip="The variable size component of a WebSocket frame header. "];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_msg_manager" ];
+  Node10 [label="shared_ptr",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_basic_header" ];
+  Node11 [label="websocketpp::frame\l::basic_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1frame_1_1basic__header.html",tooltip="The constant size component of a WebSocket frame header. "];
+  Node12 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m_current_msg\nm_control_msg\nm_data_msg" ];
+  Node12 [label="websocketpp::processor\l::hybi13\< config \>::msg\l_metadata",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1processor_1_1hybi13_1_1msg__metadata.html"];
+  Node10 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" msg_ptr" ];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" validator" ];
+  Node13 [label="websocketpp::utf8_validator\l::validator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1utf8__validator_1_1validator.html",tooltip="Provides streaming UTF8 validation functionality. "];
+}

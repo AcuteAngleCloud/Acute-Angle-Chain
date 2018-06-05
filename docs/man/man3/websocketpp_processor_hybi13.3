@@ -1,0 +1,586 @@
+.TH "websocketpp::processor::hybi13< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::processor::hybi13< config > \- Processor for Hybi version 13 (RFC6455)  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hybi13\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::processor::processor< config >\fP\&.
+.PP
+Inherited by \fBwebsocketpp::processor::hybi08< config >\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBmsg_metadata\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBprocessor\fP< \fBconfig\fP > \fBbase\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::request_type\fP \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::response_type\fP \fBresponse_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::message_type\fP \fBmessage_type\fP"
+.br
+.ti -1c
+.RI "typedef message_type::ptr \fBmessage_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::con_msg_manager_type\fP \fBmsg_manager_type\fP"
+.br
+.ti -1c
+.RI "typedef msg_manager_type::ptr \fBmsg_manager_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::rng_type\fP \fBrng_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::permessage_deflate_type\fP \fBpermessage_deflate_type\fP"
+.br
+.ti -1c
+.RI "typedef std::pair< lib::error_code, std::string > \fBerr_str_pair\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBhybi13\fP (bool secure, bool p_is_server, msg_manager_ptr manager, \fBrng_type\fP &rng)"
+.br
+.ti -1c
+.RI "int \fBget_version\fP () const"
+.br
+.RI "Get the protocol version of this processor\&. "
+.ti -1c
+.RI "bool \fBhas_permessage_deflate\fP () const"
+.br
+.ti -1c
+.RI "err_str_pair \fBnegotiate_extensions\fP (\fBrequest_type\fP const &request)"
+.br
+.RI "Initializes extensions based on the Sec-WebSocket-Extensions header\&. "
+.ti -1c
+.RI "err_str_pair \fBnegotiate_extensions\fP (\fBresponse_type\fP const &response)"
+.br
+.RI "Initializes extensions based on the Sec-WebSocket-Extensions header\&. "
+.ti -1c
+.RI "template<typename header_type > err_str_pair \fBnegotiate_extensions_helper\fP (header_type const &header)"
+.br
+.RI "Extension negotiation helper function\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_handshake\fP (\fBrequest_type\fP const &r) const"
+.br
+.RI "validate a WebSocket handshake request for this version "
+.ti -1c
+.RI "lib::error_code \fBprocess_handshake\fP (\fBrequest_type\fP const &request, std::string const &subprotocol, \fBresponse_type\fP &response) const"
+.br
+.RI "Calculate the appropriate response for this websocket request\&. "
+.ti -1c
+.RI "lib::error_code \fBclient_handshake_request\fP (\fBrequest_type\fP &req, \fBuri_ptr\fP \fBuri\fP, \fBstd::vector\fP< std::string > const &subprotocols) const"
+.br
+.RI "Fill in a set of request headers for a client connection request\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_server_handshake_response\fP (\fBrequest_type\fP const &req, \fBresponse_type\fP &res) const"
+.br
+.RI "Validate the server's response to an outgoing handshake request\&. "
+.ti -1c
+.RI "std::string \fBget_raw\fP (\fBresponse_type\fP const &res) const"
+.br
+.RI "Given a completed response, get the raw bytes to put on the wire\&. "
+.ti -1c
+.RI "std::string const  & \fBget_origin\fP (\fBrequest_type\fP const &r) const"
+.br
+.RI "Return the value of the header containing the CORS origin\&. "
+.ti -1c
+.RI "lib::error_code \fBextract_subprotocols\fP (\fBrequest_type\fP const &req, \fBstd::vector\fP< std::string > &subprotocol_list)"
+.br
+.RI "Extracts requested subprotocols from a handshake request\&. "
+.ti -1c
+.RI "\fBuri_ptr\fP \fBget_uri\fP (\fBrequest_type\fP const &request) const"
+.br
+.RI "Extracts client uri from a handshake request\&. "
+.ti -1c
+.RI "size_t \fBconsume\fP (uint8_t *buf, size_t len, lib::error_code &ec)"
+.br
+.RI "Process new websocket connection bytes\&. "
+.ti -1c
+.RI "lib::error_code \fBfinalize_message\fP ()"
+.br
+.RI "Perform any finalization actions on an incoming message\&. "
+.ti -1c
+.RI "void \fBreset_headers\fP ()"
+.br
+.ti -1c
+.RI "bool \fBready\fP () const"
+.br
+.RI "\fBTest\fP whether or not the processor has a message ready\&. "
+.ti -1c
+.RI "message_ptr \fBget_message\fP ()"
+.br
+.RI "Retrieves the most recently processed message\&. "
+.ti -1c
+.RI "bool \fBget_error\fP () const"
+.br
+.RI "\fBTest\fP whether or not the processor is in a fatal error state\&. "
+.ti -1c
+.RI "size_t \fBget_bytes_needed\fP () const"
+.br
+.ti -1c
+.RI "virtual lib::error_code \fBprepare_data_frame\fP (message_ptr in, message_ptr out)"
+.br
+.RI "Prepare a user data message for writing\&. "
+.ti -1c
+.RI "lib::error_code \fBprepare_ping\fP (std::string const &in, message_ptr out) const"
+.br
+.RI "Get URI\&. "
+.ti -1c
+.RI "lib::error_code \fBprepare_pong\fP (std::string const &in, message_ptr out) const"
+.br
+.RI "Prepare a pong frame\&. "
+.ti -1c
+.RI "virtual lib::error_code \fBprepare_close\fP (\fBclose::status::value\fP code, std::string const &reason, message_ptr out) const"
+.br
+.RI "Prepare a close frame\&. "
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBstate\fP { \fBHEADER_BASIC\fP = 0, \fBHEADER_EXTENDED\fP = 1, \fBEXTENSION\fP = 2, \fBAPPLICATION\fP = 3, \fBREADY\fP = 4, \fBFATAL_ERROR\fP = 5 }"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "lib::error_code \fBprocess_handshake_key\fP (std::string &key) const"
+.br
+.RI "Convert a client handshake key into a server response key in place\&. "
+.ti -1c
+.RI "size_t \fBcopy_basic_header_bytes\fP (uint8_t const *buf, size_t len)"
+.br
+.RI "Reads bytes from buf into m_basic_header\&. "
+.ti -1c
+.RI "size_t \fBcopy_extended_header_bytes\fP (uint8_t const *buf, size_t len)"
+.br
+.RI "Reads bytes from buf into m_extended_header\&. "
+.ti -1c
+.RI "size_t \fBprocess_payload_bytes\fP (uint8_t *buf, size_t len, lib::error_code &ec)"
+.br
+.RI "Reads bytes from buf into message payload\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_incoming_basic_header\fP (\fBframe::basic_header\fP const &h, bool is_server, bool new_msg) const"
+.br
+.RI "Validate an incoming basic header\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_incoming_extended_header\fP (\fBframe::basic_header\fP h, \fBframe::extended_header\fP e) const"
+.br
+.RI "Validate an incoming extended header\&. "
+.ti -1c
+.RI "void \fBmasked_copy\fP (std::string const &i, std::string &o, \fBframe::masking_key_type\fP key) const"
+.br
+.RI "Copy and mask/unmask in one operation\&. "
+.ti -1c
+.RI "lib::error_code \fBprepare_control\fP (frame::opcode::value op, std::string const &payload, message_ptr out) const"
+.br
+.RI "Generic prepare control frame with opcode and payload\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBframe::basic_header\fP \fBm_basic_header\fP"
+.br
+.ti -1c
+.RI "msg_manager_ptr \fBm_msg_manager\fP"
+.br
+.ti -1c
+.RI "size_t \fBm_bytes_needed\fP"
+.br
+.ti -1c
+.RI "size_t \fBm_cursor\fP"
+.br
+.ti -1c
+.RI "\fBmsg_metadata\fP \fBm_data_msg\fP"
+.br
+.ti -1c
+.RI "\fBmsg_metadata\fP \fBm_control_msg\fP"
+.br
+.ti -1c
+.RI "\fBmsg_metadata\fP * \fBm_current_msg\fP"
+.br
+.ti -1c
+.RI "\fBframe::extended_header\fP \fBm_extended_header\fP"
+.br
+.ti -1c
+.RI "\fBrng_type\fP & \fBm_rng\fP"
+.br
+.ti -1c
+.RI "state \fBm_state\fP"
+.br
+.ti -1c
+.RI "\fBpermessage_deflate_type\fP \fBm_permessage_deflate\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+class websocketpp::processor::hybi13< config >"
+Processor for Hybi version 13 (RFC6455) 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::client_handshake_request (\fBrequest_type\fP & req, \fBuri_ptr\fP uri, \fBstd::vector\fP< std::string > const & subprotocols) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Fill in a set of request headers for a client connection request\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP Set of headers to fill in 
+.br
+\fIuri\fP The uri being connected to 
+.br
+\fIsubprotocols\fP The list of subprotocols to request 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> size_t \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::consume (uint8_t * buf, size_t len, lib::error_code & ec)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Process new websocket connection bytes\&. Hybi 13 data streams represent a series of variable length frames\&. Each frame is made up of a series of fixed length fields\&. The lengths of later fields are contained in earlier fields\&. The first field length is fixed by the spec\&.
+.PP
+This processor represents a state machine that keeps track of what field is presently being read and how many more bytes are needed to complete it
+.PP
+Read two header bytes Extract full frame length\&. Read extra header bytes Validate frame header (including extension validate) Read extension data into extension message state object Read payload data into payload
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Input buffer
+.br
+\fIlen\fP Length of input buffer
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Number of bytes processed or zero on error 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::extract_subprotocols (\fBrequest_type\fP const & req, \fBstd::vector\fP< std::string > & subprotocol_list)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Extracts requested subprotocols from a handshake request\&. Extracts a list of all subprotocols that the client has requested in the given opening handshake request\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP The request to extract from 
+.br
+\fIsubprotocol_list\fP \fBA\fP reference to a vector of strings to store the results in\&. 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::finalize_message ()\fC [inline]\fP"
+
+.PP
+Perform any finalization actions on an incoming message\&. Called after the full message is received\&. Provides the opportunity for extensions to complete any data post processing as well as final UTF8 validation checks for text messages\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP code indicating errors, if any 
+.RE
+.PP
+
+.SS "template<typename config> size_t \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::get_bytes_needed () const\fC [inline]\fP, \fC [virtual]\fP"
+Retrieves the number of bytes presently needed by the processor This value may be used as a hint to the transport layer as to how many bytes to wait for before running consume again\&. 
+.PP
+Reimplemented from \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> message_ptr \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::get_message ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Retrieves the most recently processed message\&. Retrieves a shared pointer to the recently completed message if there is one\&. If \fBready()\fP returns true then there is a message available\&. Retrieving the message with get_message will reset the state of ready\&. As such, each new message may be retrieved only once\&. Calling get_message when there is no message available will result in a null pointer being returned\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP pointer to the most recently processed message or a null shared pointer\&. 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> void \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::masked_copy (std::string const & i, std::string & o, \fBframe::masking_key_type\fP key) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Copy and mask/unmask in one operation\&. Reads input from one string and writes unmasked output to another\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIi\fP The input string\&. 
+.br
+\fIo\fP The output string\&. 
+.br
+\fIkey\fP The masking key to use for masking/unmasking 
+.RE
+.PP
+
+.SS "template<typename config> err_str_pair \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::negotiate_extensions (\fBrequest_type\fP const &)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Initializes extensions based on the Sec-WebSocket-Extensions header\&. Reads the Sec-WebSocket-Extensions header and determines if any of the requested extensions are supported by this processor\&. If they are their settings data is initialized and an extension string to send to the is returned\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrequest\fP The request or response headers to look at\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> err_str_pair \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::negotiate_extensions (\fBresponse_type\fP const &)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Initializes extensions based on the Sec-WebSocket-Extensions header\&. Reads the Sec-WebSocket-Extensions header and determines if any of the requested extensions were accepted by the server\&. If they are their settings data is initialized\&. If they are not a list of required extensions (if any) is returned\&. This list may be sent back to the server as a part of the 1010/Extension required close code\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresponse\fP The request or response headers to look at\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> template<typename header_type > err_str_pair \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::negotiate_extensions_helper (header_type const & header)\fC [inline]\fP"
+
+.PP
+Extension negotiation helper function\&. This exists mostly because the code for requests and responses is identical and I can't have virtual template methods\&. 
+.SS "template<typename config> virtual lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::prepare_close (\fBclose::status::value\fP code, std::string const & reason, message_ptr out) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a close frame\&. Close preparation is entirely state free\&. The code and reason are both subject to validation\&. Reason must be valid UTF-8\&. Code must be a valid un-reserved WebSocket close code\&. Use close::status::no_status to indicate no code\&. If no code is supplied a reason may not be specified\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcode\fP The close code to send 
+.br
+\fIreason\fP The reason string to send 
+.br
+\fIout\fP The message buffer to prepare the fame in 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code, zero on success, non-zero on failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::prepare_control (frame::opcode::value op, std::string const & payload, message_ptr out) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Generic prepare control frame with opcode and payload\&. Internal control frame building method\&. Handles validation, masking, etc
+.PP
+\fBParameters:\fP
+.RS 4
+\fIop\fP The control opcode to use 
+.br
+\fIpayload\fP The payload to use 
+.br
+\fIout\fP The message buffer to store the prepared frame in 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code, zero on success, non-zero on error 
+.RE
+.PP
+
+.SS "template<typename config> virtual lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::prepare_data_frame (message_ptr in, message_ptr out)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a user data message for writing\&. Performs validation, masking, compression, etc\&. will return an error if there was an error, otherwise msg will be ready to be written
+.PP
+TODO: tests
+.PP
+\fBParameters:\fP
+.RS 4
+\fIin\fP An unprepared message to prepare 
+.br
+\fIout\fP \fBA\fP message to be overwritten with the prepared message 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+error code 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::prepare_pong (std::string const & in, message_ptr out) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a pong frame\&. Pong preparation is entirely state free\&. There is no payload validation other than length\&. Payload need not be UTF-8\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIin\fP The string to use for the pong payload 
+.br
+\fIout\fP The message buffer to prepare the pong in\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code, zero on success, non-zero on failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::process_handshake (\fBrequest_type\fP const & req, std::string const & subprotocol, \fBresponse_type\fP & res) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Calculate the appropriate response for this websocket request\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP The request to process
+.br
+\fIsubprotocol\fP The subprotocol in use
+.br
+\fIres\fP The response to store the processed response in
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An error code, 0 on success, non-zero for other errors 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> size_t \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::process_payload_bytes (uint8_t * buf, size_t len, lib::error_code & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Reads bytes from buf into message payload\&. This function performs unmasking and uncompression, validates the decoded bytes, and writes them to the appropriate message buffer\&.
+.PP
+This member function will use the input buffer as stratch space for its work\&. The raw input bytes will not be preserved\&. This applies only to the bytes actually needed\&. At most min(m_bytes_needed,len) will be processed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Input/working buffer 
+.br
+\fIlen\fP Length of buf 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Number of bytes processed or zero in case of an error 
+.RE
+.PP
+
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::validate_handshake (\fBrequest_type\fP const & request) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+validate a WebSocket handshake request for this version 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrequest\fP The WebSocket handshake request to validate\&. is_websocket_handshake(request) must be true and get_websocket_version(request) must equal this->\fBget_version()\fP\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP status code, 0 on success, non-zero for specific sorts of failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::validate_incoming_basic_header (\fBframe::basic_header\fP const & h, bool is_server, bool new_msg) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Validate an incoming basic header\&. Validates an incoming \fBhybi13\fP basic header\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to validate 
+.br
+\fIis_server\fP Whether or not the endpoint that received this frame is a server\&. 
+.br
+\fInew_msg\fP Whether or not this is the first frame of the message 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+0 on success or a non-zero error code on failure 
+.RE
+.PP
+
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::validate_incoming_extended_header (\fBframe::basic_header\fP h, \fBframe::extended_header\fP e) const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Validate an incoming extended header\&. Validates an incoming \fBhybi13\fP full header\&.
+.PP
+\fBTodo\fP
+.RS 4
+unit test for the >32 bit frames on 32 bit systems case
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to validate 
+.br
+\fIe\fP The extended header to validate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An error_code, non-zero values indicate why the validation failed 
+.RE
+.PP
+
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi13\fP< \fBconfig\fP >::validate_server_handshake_response (\fBrequest_type\fP const & req, \fBresponse_type\fP & res) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Validate the server's response to an outgoing handshake request\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP The original request sent 
+.br
+\fIres\fP The reponse to generate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An error code, 0 on success, non-zero for other errors 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

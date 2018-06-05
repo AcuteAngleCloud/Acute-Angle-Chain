@@ -1,0 +1,72 @@
+.TH "libraries/chain/include/aacio/chain/ext.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/ext.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fc/io/varint\&.hpp>\fP
+.br
+\fC#include <fc/reflect/reflect\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::chain::extension< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::aac_extension_pack_count_visitor< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::aac_extension_pack_read_visitor< Stream, T >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::aac_extension_unpack_visitor< Stream, T >\fP"
+.br
+.ti -1c
+.RI "struct \fBfc::aac_extension_from_variant_visitor< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBfc::aac_extension_to_variant_visitor< T >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBfc\fP"
+.br
+.RI "aacio::chain "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream , class T > void \fBaacio::chain::operator<<\fP (Stream &stream, const \fBaacio::chain::extension\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBaacio::chain::operator>>\fP (Stream &s, \fBaacio::chain::extension\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfc::from_variant\fP (const \fBfc::variant\fP &var, \fBaacio::chain::extension\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfc::to_variant\fP (const \fBaacio::chain::extension\fP< \fBT\fP > &value, \fBfc::variant\fP &var)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

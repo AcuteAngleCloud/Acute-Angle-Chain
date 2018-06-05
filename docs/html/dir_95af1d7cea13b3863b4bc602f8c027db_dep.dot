@@ -1,0 +1,26 @@
+digraph "libraries/fc/vendor/websocketpp/websocketpp" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fff0324180be296840cda1aad5927d64 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="websocketpp" fontname="Helvetica", fontsize="10", URL="dir_fff0324180be296840cda1aad5927d64.html"]
+  subgraph clusterdir_95af1d7cea13b3863b4bc602f8c027db {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_95af1d7cea13b3863b4bc602f8c027db.html"];
+    dir_95af1d7cea13b3863b4bc602f8c027db [shape=plaintext label="websocketpp"];
+    dir_5876731b132e9d7931f4f263a3237a80 [shape=box label="base64" color="black" fillcolor="white" style="filled" URL="dir_5876731b132e9d7931f4f263a3237a80.html"];
+    dir_4573a9d3ca691a2f51ae6ddabd893f85 [shape=box label="common" color="black" fillcolor="white" style="filled" URL="dir_4573a9d3ca691a2f51ae6ddabd893f85.html"];
+    dir_45d9371ea577ca18a0b92f0c04332235 [shape=box label="concurrency" color="black" fillcolor="white" style="filled" URL="dir_45d9371ea577ca18a0b92f0c04332235.html"];
+    dir_2ec64441105b4a5a9623acba890b4d15 [shape=box label="config" color="black" fillcolor="white" style="filled" URL="dir_2ec64441105b4a5a9623acba890b4d15.html"];
+    dir_09da0cf43d77aff35260a1632e91d47d [shape=box label="extensions" color="red" fillcolor="white" style="filled" URL="dir_09da0cf43d77aff35260a1632e91d47d.html"];
+    dir_f671697673d6f8b4eeaa8fabbd152d67 [shape=box label="http" color="red" fillcolor="white" style="filled" URL="dir_f671697673d6f8b4eeaa8fabbd152d67.html"];
+    dir_11df6537e076e62f5251dc1d795bf963 [shape=box label="impl" color="black" fillcolor="white" style="filled" URL="dir_11df6537e076e62f5251dc1d795bf963.html"];
+    dir_ff59b85dc390fca8638b9475c5c99cb9 [shape=box label="logger" color="black" fillcolor="white" style="filled" URL="dir_ff59b85dc390fca8638b9475c5c99cb9.html"];
+    dir_0bff8597e0af571e388354d80e1e8b03 [shape=box label="message_buffer" color="black" fillcolor="white" style="filled" URL="dir_0bff8597e0af571e388354d80e1e8b03.html"];
+    dir_6decf324f1905ad12b9930d642547be7 [shape=box label="processors" color="black" fillcolor="white" style="filled" URL="dir_6decf324f1905ad12b9930d642547be7.html"];
+    dir_0ef739b3f6d80e1174467376e36982c5 [shape=box label="random" color="black" fillcolor="white" style="filled" URL="dir_0ef739b3f6d80e1174467376e36982c5.html"];
+    dir_71a98fee3d171d6c70f3f7c5344f8b9c [shape=box label="roles" color="black" fillcolor="white" style="filled" URL="dir_71a98fee3d171d6c70f3f7c5344f8b9c.html"];
+    dir_6bb1de2a3f5730ab54c91f5a22d0a97f [shape=box label="sha1" color="black" fillcolor="white" style="filled" URL="dir_6bb1de2a3f5730ab54c91f5a22d0a97f.html"];
+    dir_3e769e1e911d4f60713c7afa02470d0a [shape=box label="transport" color="red" fillcolor="white" style="filled" URL="dir_3e769e1e911d4f60713c7afa02470d0a.html"];
+  }
+  }
+}

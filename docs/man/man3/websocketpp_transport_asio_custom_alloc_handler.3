@@ -1,0 +1,35 @@
+.TH "websocketpp::transport::asio::custom_alloc_handler< Handler >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::asio::custom_alloc_handler< Handler >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcustom_alloc_handler\fP (\fBhandler_allocator\fP &a, Handler h)"
+.br
+.ti -1c
+.RI "template<typename Arg1 > void \fBoperator()\fP (Arg1 arg1)"
+.br
+.ti -1c
+.RI "template<typename Arg1 , typename Arg2 > void \fBoperator()\fP (Arg1 arg1, Arg2 arg2)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "void * \fBasio_handler_allocate\fP (std::size_t size, \fBcustom_alloc_handler\fP< Handler > *this_handler)"
+.br
+.ti -1c
+.RI "void \fBasio_handler_deallocate\fP (void *pointer, std::size_t, \fBcustom_alloc_handler\fP< Handler > *this_handler)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

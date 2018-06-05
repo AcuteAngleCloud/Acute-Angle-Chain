@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="chainbase::object\<\l ObjectTypeId, aacio\l::chain::contracts::secondary\l_index::index_object \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structchainbase_1_1object.html"];
+}

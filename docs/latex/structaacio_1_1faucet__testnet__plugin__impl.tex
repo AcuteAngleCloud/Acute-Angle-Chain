@@ -1,0 +1,87 @@
+\hypertarget{structaacio_1_1faucet__testnet__plugin__impl}{}\section{aacio\+:\+:faucet\+\_\+testnet\+\_\+plugin\+\_\+impl Struct Reference}
+\label{structaacio_1_1faucet__testnet__plugin__impl}\index{aacio\+::faucet\+\_\+testnet\+\_\+plugin\+\_\+impl@{aacio\+::faucet\+\_\+testnet\+\_\+plugin\+\_\+impl}}
+
+
+Collaboration diagram for aacio\+:\+:faucet\+\_\+testnet\+\_\+plugin\+\_\+impl\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1faucet__testnet__plugin__impl_1_1create__faucet__account__alternate__results}{create\+\_\+faucet\+\_\+account\+\_\+alternate\+\_\+results}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1faucet__testnet__plugin__impl_1_1extension}{extension}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a8d5389eb02ba9d47862d4670793c7343}\label{structaacio_1_1faucet__testnet__plugin__impl_a8d5389eb02ba9d47862d4670793c7343}} 
+enum {\bfseries http\+\_\+return\+\_\+codes} \{ {\bfseries account\+\_\+created} = 201, 
+{\bfseries conflict\+\_\+with\+\_\+alternates} = 409, 
+{\bfseries too\+\_\+many\+\_\+requests} = 429
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a4fa518e891777de4fe95043f3b6b1976}\label{structaacio_1_1faucet__testnet__plugin__impl_a4fa518e891777de4fe95043f3b6b1976}} 
+{\bfseries faucet\+\_\+testnet\+\_\+plugin\+\_\+impl} (\mbox{\hyperlink{classappbase_1_1application}{appbase\+::application}} \&app)
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_aacca3ce532fc9a8155ea96a6c16fe89c}\label{structaacio_1_1faucet__testnet__plugin__impl_aacca3ce532fc9a8155ea96a6c16fe89c}} 
+void {\bfseries timer\+\_\+fired} ()
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a3e491c7b6f1e89e4bcf52eb9e3e3ff39}\label{structaacio_1_1faucet__testnet__plugin__impl_a3e491c7b6f1e89e4bcf52eb9e3e3ff39}} 
+results\+\_\+pair {\bfseries find\+\_\+alternates} (const std\+::string \&new\+\_\+account\+\_\+name)
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a9a0c480cbf7fbf4f4a10b5b21181017d}\label{structaacio_1_1faucet__testnet__plugin__impl_a9a0c480cbf7fbf4f4a10b5b21181017d}} 
+results\+\_\+pair {\bfseries create\+\_\+account} (const std\+::string \&new\+\_\+account\+\_\+name, const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{fc\+::crypto\+::public\+\_\+key}} \&owner\+\_\+pub\+\_\+key, const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{fc\+::crypto\+::public\+\_\+key}} \&active\+\_\+pub\+\_\+key)
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a4e5b2a9b216ef4cf7c7c337c52badd4c}\label{structaacio_1_1faucet__testnet__plugin__impl_a4e5b2a9b216ef4cf7c7c337c52badd4c}} 
+results\+\_\+pair {\bfseries create\+\_\+faucet\+\_\+account} (const std\+::string \&body)
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a878c043b478b5296e968f0e1ece0b6fb}\label{structaacio_1_1faucet__testnet__plugin__impl_a878c043b478b5296e968f0e1ece0b6fb}} 
+const \mbox{\hyperlink{classchainbase_1_1database}{chainbase\+::database}} \& {\bfseries database} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_afa14d958c77b7c7cd0a42bc9d8ad24a2}\label{structaacio_1_1faucet__testnet__plugin__impl_afa14d958c77b7c7cd0a42bc9d8ad24a2}} 
+\mbox{\hyperlink{classappbase_1_1application}{appbase\+::application}} \& {\bfseries \+\_\+app}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_ab2104e69938cbc9fd319c1e5b12a240c}\label{structaacio_1_1faucet__testnet__plugin__impl_ab2104e69938cbc9fd319c1e5b12a240c}} 
+boost\+::asio\+::deadline\+\_\+timer {\bfseries \+\_\+timer}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a19d7b29db9b98d14012e6ffbd9a9b354}\label{structaacio_1_1faucet__testnet__plugin__impl_a19d7b29db9b98d14012e6ffbd9a9b354}} 
+bool {\bfseries \+\_\+blocking\+\_\+accounts} = false
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a18eb184e3317961f2cfc352bb734eeaf}\label{structaacio_1_1faucet__testnet__plugin__impl_a18eb184e3317961f2cfc352bb734eeaf}} 
+uint32\+\_\+t {\bfseries \+\_\+create\+\_\+interval\+\_\+msec}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_af435e6d5a1f8fa169b09ed8a866f67eb}\label{structaacio_1_1faucet__testnet__plugin__impl_af435e6d5a1f8fa169b09ed8a866f67eb}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{chain\+::account\+\_\+name}} {\bfseries \+\_\+create\+\_\+account\+\_\+name}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a1b22543c0b3b496a0cfeab8c3489d744}\label{structaacio_1_1faucet__testnet__plugin__impl_a1b22543c0b3b496a0cfeab8c3489d744}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{fc\+::crypto\+::private\+\_\+key}} {\bfseries \+\_\+create\+\_\+account\+\_\+private\+\_\+key}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_afa6c97b09e63342c36502deb7ee1d64b}\label{structaacio_1_1faucet__testnet__plugin__impl_afa6c97b09e63342c36502deb7ee1d64b}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} {\bfseries \+\_\+create\+\_\+account\+\_\+public\+\_\+key}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a29ea67f168cf8ef6c484e9c1e0e2e756}\label{structaacio_1_1faucet__testnet__plugin__impl_a29ea67f168cf8ef6c484e9c1e0e2e756}} 
+static const uint32\+\_\+t {\bfseries \+\_\+default\+\_\+create\+\_\+interval\+\_\+msec} = 1000
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_acec153e162a822d38b80657fe501a16d}\label{structaacio_1_1faucet__testnet__plugin__impl_acec153e162a822d38b80657fe501a16d}} 
+static const uint32\+\_\+t {\bfseries \+\_\+default\+\_\+create\+\_\+alternates\+\_\+to\+\_\+return} = 3
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_a98a188255e424ab7bb1b646fc9f29bde}\label{structaacio_1_1faucet__testnet__plugin__impl_a98a188255e424ab7bb1b646fc9f29bde}} 
+static const std\+::string {\bfseries \+\_\+default\+\_\+create\+\_\+account\+\_\+name} = \char`\"{}faucet\char`\"{}
+\item 
+\mbox{\Hypertarget{structaacio_1_1faucet__testnet__plugin__impl_aebc2bb739a93803d4bc8f9120f817e49}\label{structaacio_1_1faucet__testnet__plugin__impl_aebc2bb739a93803d4bc8f9120f817e49}} 
+static const key\+\_\+pair {\bfseries \+\_\+default\+\_\+key\+\_\+pair} = \{\char`\"{}A\+A\+C84snob\+C\+Gtp\+Qv\+T\+Tf\+Vaxv\+Mux\+G\+Dd4p2\+Lht\+Qhb\+W\+X1y\+W\+A\+U5yt4ti\+B55\char`\"{}, \char`\"{}5\+Jgm1\+N6jp3i\+Nb\+F\+M45k\+Ptj66xmbq\+T9f\+Su\+V\+Jg\+P\+Wfn\+C\+S\+Pg\+Qanv\+W6m\+J\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/faucet\+\_\+testnet\+\_\+plugin/\mbox{\hyperlink{faucet__testnet__plugin_8cpp}{faucet\+\_\+testnet\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

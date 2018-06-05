@@ -1,0 +1,95 @@
+.TH "non_default_test_allocator< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+non_default_test_allocator< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBtest_alloc_base\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBrebind\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef int \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBT\fP \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBvalue_type\fP * \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef const \fBvalue_type\fP * \fBconst_pointer\fP"
+.br
+.ti -1c
+.RI "typedef std::add_lvalue_reference< \fBvalue_type\fP >::type \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef std::add_lvalue_reference< const \fBvalue_type\fP >::type \fBconst_reference\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBnon_default_test_allocator\fP (int i) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "\fBnon_default_test_allocator\fP (const \fBnon_default_test_allocator\fP &a) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "template<class U > \fBnon_default_test_allocator\fP (const \fBnon_default_test_allocator\fP< \fBU\fP > &a) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "\fBpointer\fP \fBaddress\fP (reference x) const"
+.br
+.ti -1c
+.RI "\fBconst_pointer\fP \fBaddress\fP (const_reference x) const"
+.br
+.ti -1c
+.RI "\fBpointer\fP \fBallocate\fP (size_type n, const void *=0)"
+.br
+.ti -1c
+.RI "void \fBdeallocate\fP (\fBpointer\fP p, size_type)"
+.br
+.ti -1c
+.RI "size_type \fBmax_size\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "void \fBconstruct\fP (\fBpointer\fP p, const \fBT\fP &val)"
+.br
+.ti -1c
+.RI "void \fBdestroy\fP (\fBpointer\fP p)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<class U > class \fBnon_default_test_allocator\fP"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBnon_default_test_allocator\fP &x, const \fBnon_default_test_allocator\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBnon_default_test_allocator\fP &x, const \fBnon_default_test_allocator\fP &y)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,29 @@
+digraph "fc::retainable"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="fc::retainable",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="fc::appender",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1appender.html"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="fc::console_appender",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1console__appender.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="fc::file_appender",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1file__appender.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="fc::gelf_appender",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1gelf__appender.html"];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="fc::appender_factory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1appender__factory.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="fc::detail::appender\l_factory_impl\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1detail_1_1appender__factory__impl.html"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="fc::file_appender::impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1file__appender_1_1impl.html"];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="fc::gelf_appender::impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1gelf__appender_1_1impl.html"];
+  Node0 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="fc::http::server::response\l::impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1http_1_1server_1_1response_1_1impl.html"];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="fc::logger::impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1logger_1_1impl.html"];
+  Node0 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="fc::udp_socket::impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1udp__socket_1_1impl.html"];
+}

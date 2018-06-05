@@ -1,0 +1,56 @@
+.TH "aacio::chain::crypto_api" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::crypto_api
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::context_aware_api\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcrypto_api\fP (\fBapply_context\fP &ctx)"
+.br
+.ti -1c
+.RI "void \fBassert_recover_key\fP (const \fBfc::sha256\fP &digest, \fBarray_ptr\fP< char > sig, size_t siglen, \fBarray_ptr\fP< char > pub, size_t publen)"
+.br
+.ti -1c
+.RI "int \fBrecover_key\fP (const \fBfc::sha256\fP &digest, \fBarray_ptr\fP< char > sig, size_t siglen, \fBarray_ptr\fP< char > pub, size_t publen)"
+.br
+.ti -1c
+.RI "void \fBassert_sha256\fP (\fBarray_ptr\fP< char > data, size_t datalen, const \fBfc::sha256\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBassert_sha1\fP (\fBarray_ptr\fP< char > data, size_t datalen, const \fBfc::sha1\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBassert_sha512\fP (\fBarray_ptr\fP< char > data, size_t datalen, const \fBfc::sha512\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBassert_ripemd160\fP (\fBarray_ptr\fP< char > data, size_t datalen, const \fBfc::ripemd160\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBsha1\fP (\fBarray_ptr\fP< char > data, size_t datalen, \fBfc::sha1\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBsha256\fP (\fBarray_ptr\fP< char > data, size_t datalen, \fBfc::sha256\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBsha512\fP (\fBarray_ptr\fP< char > data, size_t datalen, \fBfc::sha512\fP &hash_val)"
+.br
+.ti -1c
+.RI "void \fBripemd160\fP (\fBarray_ptr\fP< char > data, size_t datalen, \fBfc::ripemd160\fP &hash_val)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void aacio::chain::crypto_api::assert_recover_key (const \fBfc::sha256\fP & digest, \fBarray_ptr\fP< char > sig, size_t siglen, \fBarray_ptr\fP< char > pub, size_t publen)\fC [inline]\fP"
+This method can be optimized out during replay as it has no possible side effects other than 'passing'\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

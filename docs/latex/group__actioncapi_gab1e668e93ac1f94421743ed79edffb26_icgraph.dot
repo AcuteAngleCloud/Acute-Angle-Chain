@@ -1,0 +1,19 @@
+digraph "require_auth"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="require_auth",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="aaciosystem::voting::on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaaciosystem_1_1voting.html#abbefdfb92fa01d247f1f5ee366d332bc"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="apply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$asserter_8cpp.html#a569d3d0ca7b56fb8c580faaa3d73179a",tooltip="The apply method implements the dispatch of events to this contract. "];
+  Node14 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="aacio::exchange::on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1exchange.html#a43b2bdac8c60fed94c556f2e06bdfda2"];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="identity::contract::on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classidentity_1_1contract.html#ae1223cdb3abe5357783ef6f516dfc7de"];
+  Node14 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="multi_index_test::apply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacemulti__index__test.html#a8109a32ec4bbacf6f7d16183704e2559",tooltip="The apply method implements the dispatch of events to this contract. "];
+  Node14 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="apply_social_post",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$social_8cpp.html#a2f4b1a700aef8a99b9d4c12d252d231a"];
+}

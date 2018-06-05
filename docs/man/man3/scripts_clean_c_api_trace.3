@@ -1,0 +1,34 @@
+.TH "scripts.clean_c_api_trace" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+scripts.clean_c_api_trace
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBtrace\fP = open(sys\&.argv[1])\&.read()"
+.br
+.ti -1c
+.RI "\fBstart\fP = trace\&.find('// beginning a Binaryen API trace')"
+.br
+.ti -1c
+.RI "\fBend\fP = trace\&.find('\\n)', start + 1)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Cleans up output from the C api, makes a runnable C file
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,147 @@
+.TH "aacio::chain_apis::read_only" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain_apis::read_only
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBabi_bin_to_json_params\fP"
+.br
+.ti -1c
+.RI "struct \fBabi_bin_to_json_result\fP"
+.br
+.ti -1c
+.RI "struct \fBabi_json_to_bin_params\fP"
+.br
+.ti -1c
+.RI "struct \fBabi_json_to_bin_result\fP"
+.br
+.ti -1c
+.RI "struct \fBget_account_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_account_results\fP"
+.br
+.ti -1c
+.RI "struct \fBget_block_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_code_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_code_results\fP"
+.br
+.ti -1c
+.RI "struct \fBget_currency_balance_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_currency_stats_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_currency_stats_result\fP"
+.br
+.ti -1c
+.RI "struct \fBget_info_results\fP"
+.br
+.ti -1c
+.RI "struct \fBget_required_keys_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_required_keys_result\fP"
+.br
+.ti -1c
+.RI "struct \fBget_table_rows_params\fP"
+.br
+.ti -1c
+.RI "struct \fBget_table_rows_result\fP"
+.br
+.ti -1c
+.RI "struct \fBproducer_info\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBget_info_params\fP = \fBempty\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBread_only\fP (const \fBchain_controller\fP &db)"
+.br
+.ti -1c
+.RI "\fBget_info_results\fP \fBget_info\fP (const \fBget_info_params\fP &) const"
+.br
+.ti -1c
+.RI "\fBget_account_results\fP \fBget_account\fP (const \fBget_account_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBget_code_results\fP \fBget_code\fP (const \fBget_code_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBabi_json_to_bin_result\fP \fBabi_json_to_bin\fP (const \fBabi_json_to_bin_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBabi_bin_to_json_result\fP \fBabi_bin_to_json\fP (const \fBabi_bin_to_json_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBget_required_keys_result\fP \fBget_required_keys\fP (const \fBget_required_keys_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_block\fP (const \fBget_block_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBget_table_rows_result\fP \fBget_table_rows\fP (const \fBget_table_rows_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBasset\fP > \fBget_currency_balance\fP (const \fBget_currency_balance_params\fP &params) const"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_currency_stats\fP (const \fBget_currency_stats_params\fP &params) const"
+.br
+.ti -1c
+.RI "template<typename IndexType , typename Scope , typename Function > void \fBwalk_table\fP (const \fBname\fP &code, const \fBname\fP &scope, const \fBname\fP &table, Function f) const"
+.br
+.ti -1c
+.RI "template<typename IndexType , typename Scope > \fBread_only::get_table_rows_result\fP \fBget_table_rows_ex\fP (const \fBread_only::get_table_rows_params\fP &p, const \fBabi_def\fP &abi) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBcopy_inline_row\fP (const \fBchain::contracts::key_value_object\fP &obj, \fBvector\fP< char > &data)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const string \fBKEYi64\fP = 'i64'"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "struct \fBresolver_factory< read_only >\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBread_only::get_account_results\fP aacio::chain_apis::read_only::get_account (const \fBget_account_params\fP & params) const"
+TODO: lookup perm->parent name 
+.SS "template<typename IndexType , typename Scope > \fBread_only::get_table_rows_result\fP aacio::chain_apis::read_only::get_table_rows_ex (const \fBread_only::get_table_rows_params\fP & p, const \fBabi_def\fP & abi) const\fC [inline]\fP"
+10ms max time 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

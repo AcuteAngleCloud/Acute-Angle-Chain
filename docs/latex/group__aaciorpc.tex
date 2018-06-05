@@ -1,0 +1,478 @@
+\hypertarget{group__aaciorpc}{}\section{R\+PC Interface}
+\label{group__aaciorpc}\index{R\+P\+C Interface@{R\+P\+C Interface}}
+
+
+Describes how to interface with aacd over H\+T\+TP R\+PC.  
+
+
+Describes how to interface with aacd over H\+T\+TP R\+PC. 
+
+\hypertarget{group__aaciorpc_tableofcontent}{}\subsection{Table Of Contents}\label{group__aaciorpc_tableofcontent}
+
+\begin{DoxyItemize}
+\item \href{#configuration}{\tt Configuration}
+\item \href{#chainrpc}{\tt Chain A\+PI}
+\begin{DoxyItemize}
+\item \href{#v1chaingetinfo}{\tt get\+\_\+info}
+\item \href{#v1chaingetblock}{\tt get\+\_\+block}
+\item \href{#v1chaingetaccount}{\tt get\+\_\+account}
+\item \href{#v1chaingetcode}{\tt get\+\_\+code}
+\item \href{#v1chaingettablerows}{\tt get\+\_\+table\+\_\+rows}
+\item \href{#v1chainabijsontobin}{\tt abi\+\_\+json\+\_\+to\+\_\+bin}
+\item \href{#v1chainabibintojson}{\tt abi\+\_\+bin\+\_\+to\+\_\+json}
+\item \href{#v1chainpushtransaction}{\tt push\+\_\+transaction}
+\item \href{#v1chainpushtransactions}{\tt push\+\_\+transactions}
+\item \href{#v1chaingetrequiredkeys}{\tt get\+\_\+required\+\_\+keys}
+\end{DoxyItemize}
+\item \href{#walletrpc}{\tt Wallet A\+PI}
+\begin{DoxyItemize}
+\item \href{#v1walletcreate}{\tt wallet\+\_\+create}
+\item \href{#v1walletopen}{\tt wallet\+\_\+open}
+\item \href{#v1walletlock}{\tt wallet\+\_\+lock}
+\item \href{#v1walletlockall}{\tt wallet\+\_\+lock\+\_\+all}
+\item \href{#v1walletimportkey}{\tt wallet\+\_\+import\+\_\+key}
+\item \href{#v1walletlist}{\tt wallet\+\_\+list}
+\item \href{#v1walletlistkeys}{\tt wallet\+\_\+list\+\_\+keys}
+\item \href{#v1walletgetpublickeys}{\tt wallet\+\_\+get\+\_\+public\+\_\+keys}
+\item \href{#v1walletsettimeout}{\tt wallet\+\_\+set\+\_\+timeout}
+\item \href{#v1walletsigntrx}{\tt wallet\+\_\+sign\+\_\+trx}
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{group__aaciorpc_configuration}{}\subsection{Configuration}\label{group__aaciorpc_configuration}
+{\ttfamily aacd} uses a R\+E\+ST R\+PC interface where plugins can register their own endpoints with the A\+PI server. This page will explain how to use some of the A\+P\+Is to get information about the blockchain and send transactions.
+
+Before you can query {\ttfamily aacd} you must first enable the necessary A\+PI plugin(s). Depending on which A\+PI you want to enable, add the following line to your {\ttfamily aacd}\textquotesingle{}s {\ttfamily config.\+ini}\+: 
+\begin{DoxyCode}
+plugin = \mbox{\hyperlink{classaacio_1_1chain__api__plugin}{aacio::chain\_api\_plugin}} \textcolor{comment}{// Enable Chain API}
+plugin = \mbox{\hyperlink{classaacio_1_1wallet__api__plugin}{aacio::wallet\_api\_plugin}} \textcolor{comment}{// Enable Wallet API}
+\end{DoxyCode}
+ Alternatively, for Wallet A\+PI, you can also have the wallet functionality separate from {\ttfamily aacd}, by running {\ttfamily aac-\/walletd} separately.
+
+For the following guide, we will assume that we have {\ttfamily aacd} running on {\ttfamily 127.\+0.\+0.\+1\+:8888} (Chain A\+PI Plugin enabled, Wallet A\+PI Plugin disabled) and {\ttfamily aac-\/walletd} running on {\ttfamily 127.\+0.\+0.\+1\+:8889}. 
+
+\hypertarget{group__aaciorpc_chainrpc}{}\subsection{Chain A\+PI}\label{group__aaciorpc_chainrpc}
+\hypertarget{group__aaciorpc_v1chaingetinfo}{}\subsubsection{get\+\_\+info}\label{group__aaciorpc_v1chaingetinfo}
+Get latest information related to a node\hypertarget{group__aaciorpc_examplegetinfo}{}\paragraph{Example get\+\_\+info Usage}\label{group__aaciorpc_examplegetinfo}
+
+\begin{DoxyCode}
+curl http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_info}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplegetinforesult}{}\paragraph{Example get\+\_\+info Result}\label{group__aaciorpc_examplegetinforesult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"server\_version"}: \textcolor{stringliteral}{"b2eb1667"},
+  \textcolor{stringliteral}{"head\_block\_num"}: 259590,
+  \textcolor{stringliteral}{"last\_irreversible\_block\_num"}: 259573,
+  \textcolor{stringliteral}{"head\_block\_id"}: \textcolor{stringliteral}{"0003f60677f3707f0704f16177bf5f007ebd45eb6efbb749fb1c468747f72046"},
+  \textcolor{stringliteral}{"head\_block\_time"}: \textcolor{stringliteral}{"2017-12-10T17:05:36"},
+  \textcolor{stringliteral}{"head\_block\_producer"}: \textcolor{stringliteral}{"initp"},
+  \textcolor{stringliteral}{"recent\_slots"}: \textcolor{stringliteral}{"1111111111111111111111111111111111111111111111111111111111111111"},
+  \textcolor{stringliteral}{"participation\_rate"}: \textcolor{stringliteral}{"1.00000000000000000"}
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingetblock}{}\subsubsection{get\+\_\+block}\label{group__aaciorpc_v1chaingetblock}
+Get information related to a block.\hypertarget{group__aaciorpc_examplegetblock}{}\paragraph{Example get\+\_\+block Usage}\label{group__aaciorpc_examplegetblock}
+
+\begin{DoxyCode}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_block -X POST -d '\{"block\_num\_or\_id":5\}'}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_block -X POST -d
+       '\{"block\_num\_or\_id":0000000445a9f27898383fd7de32835d5d6a978cc14ce40d9f327b5329de796b\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplegetblockresult}{}\paragraph{Example get\+\_\+block Result}\label{group__aaciorpc_examplegetblockresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"previous"}: \textcolor{stringliteral}{"0000000445a9f27898383fd7de32835d5d6a978cc14ce40d9f327b5329de796b"},
+  \textcolor{stringliteral}{"timestamp"}: \textcolor{stringliteral}{"2017-07-18T20:16:36"},
+  \textcolor{stringliteral}{"transaction\_merkle\_root"}: \textcolor{stringliteral}{"0000000000000000000000000000000000000000000000000000000000000000"},
+  \textcolor{stringliteral}{"producer"}: \textcolor{stringliteral}{"initf"},
+  \textcolor{stringliteral}{"producer\_changes"}: [ ],
+  \textcolor{stringliteral}{"producer\_signature"}: \textcolor{stringliteral}{"
+      204cb94b3186c3b4a7f88be4e9db9f8af2ffdb7ef0f27a065c8177a5fcfacf876f684e59c39fb009903c0c59220b147bb07f1144df1c65d26c57b534a76dd29073"},
+  \textcolor{stringliteral}{"cycles"}: [ ],
+  \textcolor{stringliteral}{"id"}:\textcolor{stringliteral}{"000000050c0175cbf218a70131ddc3c3fab8b6e954edef77e0bfe7c36b599b1d"},
+  \textcolor{stringliteral}{"block\_num"}:5,
+  \textcolor{stringliteral}{"ref\_block\_prefix"}:27728114
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingetaccount}{}\subsubsection{get\+\_\+account}\label{group__aaciorpc_v1chaingetaccount}
+Get information related to an account.\hypertarget{group__aaciorpc_examplegetaccount}{}\paragraph{Example get\+\_\+account Usage}\label{group__aaciorpc_examplegetaccount}
+
+\begin{DoxyCode}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_account -X POST -d '\{"account\_name":"inita"\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplegetaccountresult}{}\paragraph{Example get\+\_\+account Result}\label{group__aaciorpc_examplegetaccountresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"inita"},
+  \textcolor{stringliteral}{"aac\_balance"}: \textcolor{stringliteral}{"999998.9574 AAC"},
+  \textcolor{stringliteral}{"staked\_balance"}: \textcolor{stringliteral}{"0.0000 AAC"},
+  \textcolor{stringliteral}{"unstaking\_balance"}: \textcolor{stringliteral}{"0.0000 AAC"},
+  \textcolor{stringliteral}{"last\_unstaking\_time"}: \textcolor{stringliteral}{"2106-02-07T06:28:15"},
+  \textcolor{stringliteral}{"permissions"}: [
+    \{
+      \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"active"},
+      \textcolor{stringliteral}{"parent"}: \textcolor{stringliteral}{"owner"},
+      \textcolor{stringliteral}{"required\_auth"}: \{
+        \textcolor{stringliteral}{"threshold"}: 1,
+        \textcolor{stringliteral}{"keys"}: [
+          \{
+            \textcolor{stringliteral}{"key"}: \textcolor{stringliteral}{"AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"},
+            \textcolor{stringliteral}{"weight"}: 1
+          \}
+        ],
+        \textcolor{stringliteral}{"accounts"}: []
+      \}
+    \},
+    \{
+      \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"owner"},
+      \textcolor{stringliteral}{"parent"}: \textcolor{stringliteral}{"owner"},
+      \textcolor{stringliteral}{"required\_auth"}: \{
+        \textcolor{stringliteral}{"threshold"}: 1,
+        \textcolor{stringliteral}{"keys"}: [
+          \{
+            \textcolor{stringliteral}{"key"}: \textcolor{stringliteral}{"AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"},
+            \textcolor{stringliteral}{"weight"}: 1
+          \}
+        ],
+        \textcolor{stringliteral}{"accounts"}: []
+      \}
+    \}
+  ]
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingetcode}{}\subsubsection{get\+\_\+code}\label{group__aaciorpc_v1chaingetcode}
+Fetch smart contract code.\hypertarget{group__aaciorpc_examplegetcode}{}\paragraph{Example get\+\_\+code Usage}\label{group__aaciorpc_examplegetcode}
+
+\begin{DoxyCode}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_code -X POST -d '\{"account\_name":"currency"\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplegetcoderesult}{}\paragraph{Example get\+\_\+code Result}\label{group__aaciorpc_examplegetcoderesult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"name"}:\textcolor{stringliteral}{"currency"},
+  \textcolor{stringliteral}{"code\_hash"}:\textcolor{stringliteral}{"a1c8c84b4700c09c8edb83522237439e33cf011a4d7ace51075998bd002e04c9"},
+  \textcolor{stringliteral}{"wast"}:\textcolor{stringliteral}{"(module\(\backslash\)n  (type $0 (func (param i64 i64 i32) (result i32)))\(\backslash\)n ...truncated"},
+  \textcolor{stringliteral}{"abi"}: \{
+  \textcolor{stringliteral}{"types"}: [\{
+      \textcolor{stringliteral}{"new\_type\_name"}: \textcolor{stringliteral}{"account\_name"},
+      \textcolor{stringliteral}{"type"}: \textcolor{stringliteral}{"name"}
+    \}
+  ],
+  \textcolor{stringliteral}{"structs"}: [\{
+      \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"transfer"},
+      \textcolor{stringliteral}{"base"}: \textcolor{stringliteral}{""},
+      \textcolor{stringliteral}{"fields"}: [
+        \{\textcolor{stringliteral}{"name"}:\textcolor{stringliteral}{"from"}, \textcolor{stringliteral}{"type"}:\textcolor{stringliteral}{"account\_name"}\},
+        \{\textcolor{stringliteral}{"name"}:\textcolor{stringliteral}{"to"}, \textcolor{stringliteral}{"type"}:\textcolor{stringliteral}{"account\_name"}\},
+        \{\textcolor{stringliteral}{"name"}:\textcolor{stringliteral}{"quantity"}, \textcolor{stringliteral}{"type"}:\textcolor{stringliteral}{"uint64"}\}
+      ]
+    \},\{
+      \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"account"},
+      \textcolor{stringliteral}{"base"}: \textcolor{stringliteral}{""},
+      \textcolor{stringliteral}{"fields"}: [
+        \{\textcolor{stringliteral}{"name"}:\textcolor{stringliteral}{"key"}, \textcolor{stringliteral}{"type"}:\textcolor{stringliteral}{"name"}\},
+        \{\textcolor{stringliteral}{"name"}:\textcolor{stringliteral}{"balance"}, \textcolor{stringliteral}{"type"}:\textcolor{stringliteral}{"uint64"}\}
+      ]
+    \}
+  ],
+  \textcolor{stringliteral}{"actions"}: [\{
+      \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"transfer"},
+      \textcolor{stringliteral}{"type"}: \textcolor{stringliteral}{"transfer"}
+    \}
+  ],
+  \textcolor{stringliteral}{"tables"}: [\{
+      \textcolor{stringliteral}{"name"}: \textcolor{stringliteral}{"account"},
+      \textcolor{stringliteral}{"type"}: \textcolor{stringliteral}{"account"},
+      \textcolor{stringliteral}{"index\_type"}: \textcolor{stringliteral}{"i64"},
+      \textcolor{stringliteral}{"key\_names"} : [\textcolor{stringliteral}{"key"}],
+      \textcolor{stringliteral}{"key\_types"} : [\textcolor{stringliteral}{"name"}]
+    \}
+  ]
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingettablerows}{}\subsubsection{get\+\_\+table\+\_\+rows}\label{group__aaciorpc_v1chaingettablerows}
+Fetch smart contract data from an account.\hypertarget{group__aaciorpc_examplegettablerows}{}\paragraph{get\+\_\+table\+\_\+rows Usage}\label{group__aaciorpc_examplegettablerows}
+
+\begin{DoxyCode}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_table\_rows -X POST -d '\{"scope":"inita", "code":"currency",
+       "table":"account", "json": true\}'}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/get\_table\_rows -X POST -d '\{"scope":"inita", "code":"currency",
+       "table":"account", "json": true, "lower\_bound":0, "upper\_bound":-1, "limit":10\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplegettablerowsresult}{}\paragraph{Example get\+\_\+table\+\_\+rows Result}\label{group__aaciorpc_examplegettablerowsresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"rows"}: [
+    \{
+      \textcolor{stringliteral}{"account"}: \textcolor{stringliteral}{"account"},
+      \textcolor{stringliteral}{"balance"}: 1000
+    \}
+  ],
+  \textcolor{stringliteral}{"more"}: \textcolor{keyword}{false}
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingeabijsontobin}{}\subsubsection{abi\+\_\+json\+\_\+to\+\_\+bin}\label{group__aaciorpc_v1chaingeabijsontobin}
+Serialize json to binary hex. The resulting binary hex is usually used for the data field in \href{#v1chainpushtransaction}{\tt push\+\_\+transaction}.\hypertarget{group__aaciorpc_exampleabijsontobin}{}\paragraph{Example abi\+\_\+json\+\_\+to\+\_\+bin Usage}\label{group__aaciorpc_exampleabijsontobin}
+
+\begin{DoxyCode}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/abi\_json\_to\_bin -X POST -d '\{"code":"currency", "action":"transfer",
+       "args":\{"from":"initb", "to":"initc", "quantity":1000\}\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_exampleabijsontobinresult}{}\paragraph{Example abi\+\_\+json\+\_\+to\+\_\+bin Result}\label{group__aaciorpc_exampleabijsontobinresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"binargs"}: \textcolor{stringliteral}{"000000008093dd74000000000094dd74e803000000000000"},
+  \textcolor{stringliteral}{"required\_scope"}: [],
+  \textcolor{stringliteral}{"required\_auth"}: []
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingeabibintojson}{}\subsubsection{abi\+\_\+bin\+\_\+to\+\_\+json}\label{group__aaciorpc_v1chaingeabibintojson}
+Serialize back binary hex to json.\hypertarget{group__aaciorpc_exampleabibintojson}{}\paragraph{Example abi\+\_\+bin\+\_\+to\+\_\+json Usage}\label{group__aaciorpc_exampleabibintojson}
+
+\begin{DoxyCode}
+$ curl  http:\textcolor{comment}{//127.0.0.1:8888/v1/chain/abi\_bin\_to\_json -X POST -d '\{"code":"currency", "action":"transfer",
+       "binargs":"000000008093dd74000000000094dd74e803000000000000"\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_exampleabibintojsonresult}{}\paragraph{Example abi\+\_\+bin\+\_\+to\+\_\+json Result}\label{group__aaciorpc_exampleabibintojsonresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"args"}: \{
+    \textcolor{stringliteral}{"from"}: \textcolor{stringliteral}{"initb"},
+    \textcolor{stringliteral}{"to"}: \textcolor{stringliteral}{"initc"},
+    \textcolor{stringliteral}{"quantity"}: 1000
+  \},
+  \textcolor{stringliteral}{"required\_scope"}: [],
+  \textcolor{stringliteral}{"required\_auth"}: []
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chainpushtransaction}{}\subsubsection{push\+\_\+transaction}\label{group__aaciorpc_v1chainpushtransaction}
+This method expects a transaction in J\+S\+ON format and will attempt to apply it to the blockchain,
+
+{\bfseries Success Response} 
+
+On success it will return H\+T\+TP 200 and the transaction ID. 
+
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{'transaction\_id'} : \textcolor{stringliteral}{"..."}
+\}
+\end{DoxyCode}
+
+
+Just because the transaction is pushed locally does not mean that the transaction has been incorporated into a block.
+
+{\bfseries Error Response} 
+
+If an error occurs it will return either H\+T\+TP 400 (Invalid arguments) or 500 (Internal Server Error) 
+
+
+\begin{DoxyCode}
+HTTP/1.1 500 Internal Server Error
+Content-Length: 1466
+
+...error message...
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplepushtrx}{}\paragraph{Example push\+\_\+transaction Usage}\label{group__aaciorpc_examplepushtrx}
+This example assumes a transfer operation. The {\ttfamily ref\+\_\+block\+\_\+num} and {\ttfamily ref\+\_\+block\+\_\+prefix} here are provided as a result of {\ttfamily /v1/chain/get\+\_\+block} of the last\+\_\+irreversible\+\_\+block. You also need to use /v1/wallet/sign\+\_\+transaction to get the right signature. 
+\begin{DoxyCode}
+curl  http:\textcolor{comment}{//localhost:8888/v1/chain/push\_transaction -X POST -d
+       '\{"ref\_block\_num":"100","ref\_block\_prefix":
+      "137469861","expiration":"2017-09-25T06:28:49","scope":["initb","initc"],"actions":[\{"code":"currency","type
+      ":"transfer","recipients":["initb","initc"],"authorization":[\{"account":"initb","permission":"active"\}],"data":"000000000041934b000000008041934be803000000000000"\}],"signatures":[],"authorizations":[]\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chainpushtransactions}{}\subsubsection{push\+\_\+transactions}\label{group__aaciorpc_v1chainpushtransactions}
+This method push multiple transactions at once.\hypertarget{group__aaciorpc_examplepushtrxs}{}\paragraph{Example push\+\_\+transactions Usage}\label{group__aaciorpc_examplepushtrxs}
+
+\begin{DoxyCode}
+curl  http:\textcolor{comment}{//localhost:8888/v1/chain/push\_transaction -X POST -d
+       '[\{"ref\_block\_num":"101","ref\_block\_prefix"
+      :"4159312339","expiration":"2017-09-25T06:28:49","scope":["initb","initc"],"actions":[\{"code":"currency","ty
+      pe":"transfer","recipients":["initb","initc"],"authorization":[\{"account":"initb","permission":"active"\}],"data":"000000000041934b000000008041934be803000000000000"\}],"signatures":[],"authorizations":[]\},
+       \{"ref\_block\_
+      num":"101","ref\_block\_prefix":"4159312339","expiration":"2017-09-25T06:28:49","scope":["inita","initc"],"act
+      ions":[\{"code":"currency","type":"transfer","recipients":["inita","initc"],"authorization":[\{"account":"init
+      a","permission":"active"\}],"data":"000000008040934b000000008041934be803000000000000"\}],"signatures":[],"authorizations":[]\}]'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1chaingetrequiredkeys}{}\subsubsection{get\+\_\+required\+\_\+keys}\label{group__aaciorpc_v1chaingetrequiredkeys}
+Get required keys to sign a transaction from list of your keys.\hypertarget{group__aaciorpc_examplegetrequiredkeys}{}\paragraph{Example get\+\_\+required\+\_\+keys Usage}\label{group__aaciorpc_examplegetrequiredkeys}
+
+\begin{DoxyCode}
+curl  http:\textcolor{comment}{//localhost:8888/v1/chain/get\_required\_keys -X POST -d '\{"transaction":
+       \{"ref\_block\_num":"100","r
+      ef\_block\_prefix":"137469861","expiration":"2017-09-25T06:28:49","scope":["initb","initc"],"actions":[\{"code"
+      :"currency","type":"transfer","recipients":["initb","initc"],"authorization":[\{"account":"initb","permission
+      ":"active"\}],"data":"000000000041934b000000008041934be803000000000000"\}],"signatures":[],"authorizations":[]\},
+       "available\_keys":["AAC4toFS3YXEQCkuuw1aqDLrtHim86Gz9u3hBdcBw5KNPZcursVHq","AAC7d9A3uLe6As66jzN8j44TXJUqJSK3bFjjEEqR4oTvNAB3iM9SA","AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"]\}'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplegetrequiredkeysresult}{}\paragraph{Example get\+\_\+required\+\_\+keys Result}\label{group__aaciorpc_examplegetrequiredkeysresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"required\_keys"}: [
+    \textcolor{stringliteral}{"AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"}
+  ]
+\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_walletrpc}{}\subsection{Wallet A\+PI}\label{group__aaciorpc_walletrpc}
+\hypertarget{group__aaciorpc_v1walletcreate}{}\subsubsection{wallet\+\_\+create}\label{group__aaciorpc_v1walletcreate}
+Create a new wallet with the given name\hypertarget{group__aaciorpc_examplewalletcreate}{}\paragraph{Example wallet\+\_\+create Usage}\label{group__aaciorpc_examplewalletcreate}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/create -X POST -d '"default"'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletcreateresult}{}\paragraph{Example wallet\+\_\+create Result}\label{group__aaciorpc_examplewalletcreateresult}
+This command will return the password that can be used to unlock the wallet in the future 
+\begin{DoxyCode}
+PW5KFWYKqvt63d4iNvedfDEPVZL227D3RQ1zpVFzuUwhMAJmRAYyX
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletopen}{}\subsubsection{wallet\+\_\+open}\label{group__aaciorpc_v1walletopen}
+Open an existing wallet of the given name\hypertarget{group__aaciorpc_examplewalletopen}{}\paragraph{Example wallet\+\_\+open Usage}\label{group__aaciorpc_examplewalletopen}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/open -X POST -d '"default"'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletopenresult}{}\paragraph{Example wallet\+\_\+open Result}\label{group__aaciorpc_examplewalletopenresult}
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletlock}{}\subsubsection{wallet\+\_\+lock}\label{group__aaciorpc_v1walletlock}
+Lock a wallet of the given name\hypertarget{group__aaciorpc_examplewalletlock}{}\paragraph{Example wallet\+\_\+lock Usage}\label{group__aaciorpc_examplewalletlock}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/lock -X POST -d '"default"'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletlockresult}{}\paragraph{Example wallet\+\_\+lock Result}\label{group__aaciorpc_examplewalletlockresult}
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletlockall}{}\subsubsection{wallet\+\_\+lock\+\_\+all}\label{group__aaciorpc_v1walletlockall}
+Lock all wallets\hypertarget{group__aaciorpc_examplewalletlockall}{}\paragraph{Example wallet\+\_\+lock\+\_\+all Usage}\label{group__aaciorpc_examplewalletlockall}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/lock\_all }
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletlockallresult}{}\paragraph{Example wallet\+\_\+lock\+\_\+all Result}\label{group__aaciorpc_examplewalletlockallresult}
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletunlock}{}\subsubsection{wallet\+\_\+unlock}\label{group__aaciorpc_v1walletunlock}
+Unlock a wallet with the given name and password\hypertarget{group__aaciorpc_examplewalletunlock}{}\paragraph{Example wallet\+\_\+unlock Usage}\label{group__aaciorpc_examplewalletunlock}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/unlock -X POST -d '["default",
+       "PW5KFWYKqvt63d4iNvedfDEPVZL227D3RQ1zpVFzuUwhMAJmRAYyX"]'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletunlockresult}{}\paragraph{Example wallet\+\_\+unlock Result}\label{group__aaciorpc_examplewalletunlockresult}
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletimport}{}\subsubsection{wallet\+\_\+import\+\_\+key}\label{group__aaciorpc_v1walletimport}
+Import a private key to the wallet of the given name\hypertarget{group__aaciorpc_examplewalletimport}{}\paragraph{Example wallet\+\_\+import\+\_\+key Usage}\label{group__aaciorpc_examplewalletimport}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/import\_key -X POST -d
+       '["default","5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ"]'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletimportresult}{}\paragraph{Example wallet\+\_\+import\+\_\+key Result}\label{group__aaciorpc_examplewalletimportresult}
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletlist}{}\subsubsection{wallet\+\_\+list}\label{group__aaciorpc_v1walletlist}
+List all wallets\hypertarget{group__aaciorpc_examplewalletlist}{}\paragraph{Example wallet\+\_\+list Usage}\label{group__aaciorpc_examplewalletlist}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/list\_wallets}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletlistresult}{}\paragraph{Example wallet\+\_\+list Result}\label{group__aaciorpc_examplewalletlistresult}
+
+\begin{DoxyCode}
+[\textcolor{stringliteral}{"default *"}]
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletlistkeys}{}\subsubsection{wallet\+\_\+list\+\_\+keys}\label{group__aaciorpc_v1walletlistkeys}
+List all key pairs across all wallets\hypertarget{group__aaciorpc_examplewalletlistkeys}{}\paragraph{Example wallet\+\_\+list\+\_\+keys Usage}\label{group__aaciorpc_examplewalletlistkeys}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/list\_keys}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletlistkeysresult}{}\paragraph{Example wallet\+\_\+list\+\_\+keys Result}\label{group__aaciorpc_examplewalletlistkeysresult}
+
+\begin{DoxyCode}
+[[\textcolor{stringliteral}{"AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"},\textcolor{stringliteral}{"
+      5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ"}]]
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletgetpublickeys}{}\subsubsection{wallet\+\_\+get\+\_\+public\+\_\+keys}\label{group__aaciorpc_v1walletgetpublickeys}
+List all public keys across all wallets\hypertarget{group__aaciorpc_examplewalletgetpublickeys}{}\paragraph{Example wallet\+\_\+get\+\_\+public\+\_\+keys Usage}\label{group__aaciorpc_examplewalletgetpublickeys}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/get\_public\_keys }
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewallegetpublickeysresult}{}\paragraph{Example wallet\+\_\+get\+\_\+public\+\_\+keys Result}\label{group__aaciorpc_examplewallegetpublickeysresult}
+
+\begin{DoxyCode}
+[\textcolor{stringliteral}{"AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"}]
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletsettimeout}{}\subsubsection{wallet\+\_\+set\+\_\+timeout}\label{group__aaciorpc_v1walletsettimeout}
+Set wallet auto lock timeout (in seconds)\hypertarget{group__aaciorpc_examplewalletsettimeout}{}\paragraph{Example wallet\+\_\+set\+\_\+timeout Usage}\label{group__aaciorpc_examplewalletsettimeout}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/set\_timeout -X POST -d '10'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletsettimeoutresult}{}\paragraph{Example wallet\+\_\+set\+\_\+timeout Result}\label{group__aaciorpc_examplewalletsettimeoutresult}
+
+\begin{DoxyCode}
+\{\}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_v1walletsigntrx}{}\subsubsection{wallet\+\_\+sign\+\_\+trx}\label{group__aaciorpc_v1walletsigntrx}
+Sign transaction given an array of transaction, require public keys, and chain id\hypertarget{group__aaciorpc_examplewalletsigntrx}{}\paragraph{Example wallet\+\_\+sign\+\_\+trx Usage}\label{group__aaciorpc_examplewalletsigntrx}
+
+\begin{DoxyCode}
+$ curl http:\textcolor{comment}{//localhost:8889/v1/wallet/sign\_transaction -X POST -d
+       '[\{"ref\_block\_num":21453,"ref\_block\_prefi
+      x":3165644999,"expiration":"2017-12-08T10:28:49","scope":["initb","initc"],"read\_scope":[],"messages":[\{"cod
+      e":"currency","type":"transfer","authorization":[\{"account":"initb","permission":"active"\}],"data":"000000008093dd74000000000094dd74e803000000000000"\}],"signatures":[]\},
+       ["AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55"], ""]'}
+\end{DoxyCode}
+\hypertarget{group__aaciorpc_examplewalletsigntrxresult}{}\paragraph{Example wallet\+\_\+sign\+\_\+trx Result}\label{group__aaciorpc_examplewalletsigntrxresult}
+
+\begin{DoxyCode}
+\{
+  \textcolor{stringliteral}{"ref\_block\_num"}: 21453,
+  \textcolor{stringliteral}{"ref\_block\_prefix"}: 3165644999,
+  \textcolor{stringliteral}{"expiration"}: \textcolor{stringliteral}{"2017-12-08T10:28:49"},
+  \textcolor{stringliteral}{"scope"}: [
+    \textcolor{stringliteral}{"initb"},
+    \textcolor{stringliteral}{"initc"}
+  ],
+  \textcolor{stringliteral}{"read\_scope"}: [],
+  \textcolor{stringliteral}{"messages"}: [
+    \{
+      \textcolor{stringliteral}{"code"}: \textcolor{stringliteral}{"currency"},
+      \textcolor{stringliteral}{"type"}: \textcolor{stringliteral}{"transfer"},
+      \textcolor{stringliteral}{"authorization"}: [
+        \{
+          \textcolor{stringliteral}{"account"}: \textcolor{stringliteral}{"initb"},
+          \textcolor{stringliteral}{"permission"}: \textcolor{stringliteral}{"active"}
+        \}
+      ],
+      \textcolor{stringliteral}{"data"}: \textcolor{stringliteral}{"000000008093dd74000000000094dd74e803000000000000"}
+    \}
+  ],
+  \textcolor{stringliteral}{"signatures"}: [
+    \textcolor{stringliteral}{"
+      1f393cc5ce6a6951fb53b11812345bcf14ffd978b07be386fd639eaf440bca7dca16b14833ec661ca0703d15e55a2a599a36d55ce78c4539433f6ce8bcee0158c3"}
+  ]
+\}
+\end{DoxyCode}
+ 

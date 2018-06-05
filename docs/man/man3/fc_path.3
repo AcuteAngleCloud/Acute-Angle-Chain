@@ -1,0 +1,156 @@
+.TH "fc::path" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::path \- wraps boost::filesystem::path to provide platform independent path manipulation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filesystem\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpath\fP (const boost::filesystem::path &)"
+.br
+.ti -1c
+.RI "\fBpath\fP (const std::string &p)"
+.br
+.ti -1c
+.RI "\fBpath\fP (const std::wstring &p)"
+.br
+.RI "Constructor to build path using unicode native characters\&. "
+.ti -1c
+.RI "\fBpath\fP (const char *)"
+.br
+.ti -1c
+.RI "\fBpath\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "\fBpath\fP (\fBpath\fP &&p)"
+.br
+.ti -1c
+.RI "\fBpath\fP & \fBoperator=\fP (const \fBpath\fP &)"
+.br
+.ti -1c
+.RI "\fBpath\fP & \fBoperator=\fP (\fBpath\fP &&)"
+.br
+.ti -1c
+.RI "\fBpath\fP & \fBoperator/=\fP (const \fBfc::path\fP &)"
+.br
+.ti -1c
+.RI "\fBoperator boost::filesystem::path &\fP ()"
+.br
+.ti -1c
+.RI "\fBoperator const boost::filesystem::path &\fP () const"
+.br
+.ti -1c
+.RI "void \fBreplace_extension\fP (const \fBfc::path\fP &e)"
+.br
+.ti -1c
+.RI "\fBfc::path\fP \fBstem\fP () const"
+.br
+.ti -1c
+.RI "\fBfc::path\fP \fBextension\fP () const"
+.br
+.ti -1c
+.RI "\fBfc::path\fP \fBfilename\fP () const"
+.br
+.ti -1c
+.RI "\fBfc::path\fP \fBparent_path\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBstring\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBgeneric_string\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBpreferred_string\fP () const"
+.br
+.ti -1c
+.RI "std::wstring \fBwstring\fP () const"
+.br
+.ti -1c
+.RI "std::wstring \fBgeneric_wstring\fP () const"
+.br
+.ti -1c
+.RI "std::wstring \fBpreferred_wstring\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBto_native_ansi_path\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBwindows_string\fP () const"
+.br
+.RI "replaces '/' with '\\' in the result of generic_string() "
+.ti -1c
+.RI "bool \fBis_relative\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_absolute\fP () const"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static char \fBseparator_char\fP = static_cast<char>(boost::filesystem::path('/')\&.make_preferred()\&.native()[0])"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBpath\fP \fBoperator/\fP (const \fBfc::path\fP &p, const \fBfc::path\fP &)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBfc::path\fP &p, const \fBfc::path\fP &)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBfc::path\fP &p, const \fBfc::path\fP &)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBfc::path\fP &p, const \fBfc::path\fP &)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+wraps boost::filesystem::path to provide platform independent path manipulation\&. 
+
+Most calls are simply a passthrough to boost::filesystem::path, however exceptions are wrapped in an fc::error_report and the additional helper method \fBfc::path::windows_string()\fP, can be used to calculate paths intended for systems different than the host\&.
+.PP
+\fBNote:\fP
+.RS 4
+Serializes to a \fBfc::value()\fP as the result of generic_string() 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "fc::string fc::path::preferred_string () const"
+On windows, returns a path where all path separators are '\\' suitable for displaying to users\&. On other platforms, it does the same as generic_string() 
+.SS "std::string fc::path::to_native_ansi_path () const"
+Retrieves native string path representation and next converts it into ANSI UTF-8 representation\&. It is needed since not all parts of fc library accept unicode paths (\fBfc::file_mapping\fP)\&. 
+.SS "fc::string fc::path::windows_string () const"
+
+.PP
+replaces '/' with '\\' in the result of generic_string() 
+.PP
+\fBNote:\fP
+.RS 4
+not part of boost::filesystem::path
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+use iterators instead of indexes for faster performance 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,155 @@
+\hypertarget{struct_alloc_controller}{}\section{Alloc\+Controller Struct Reference}
+\label{struct_alloc_controller}\index{Alloc\+Controller@{Alloc\+Controller}}
+
+
+Collaboration diagram for Alloc\+Controller\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a6de992d5595832bf3f35bcc7a680afeb}\label{struct_alloc_controller_a6de992d5595832bf3f35bcc7a680afeb}} 
+void {\bfseries count\+Alloc} (void $\ast$p, size\+\_\+t s, size\+\_\+t a)
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a3b602f5ce7cf8907180eb8ea44471af3}\label{struct_alloc_controller_a3b602f5ce7cf8907180eb8ea44471af3}} 
+void {\bfseries count\+Dealloc} (void $\ast$p, size\+\_\+t s, size\+\_\+t a)
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a005df1f4464a5ab8d6ef5e9c56da509b}\label{struct_alloc_controller_a005df1f4464a5ab8d6ef5e9c56da509b}} 
+{\footnotesize template$<$class ... Args, class Alloc , class Tp $>$ }\\void {\bfseries count\+Construct} (Alloc const \&, Tp $\ast$p)
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a7a828306b8845ae0a0780a4cb56aaec7}\label{struct_alloc_controller_a7a828306b8845ae0a0780a4cb56aaec7}} 
+{\footnotesize template$<$class Alloc , class Tp $>$ }\\void {\bfseries count\+Destroy} (Alloc const \&, Tp $\ast$p)
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a89614f848caa680c4f3df3dfde5c648a}\label{struct_alloc_controller_a89614f848caa680c4f3df3dfde5c648a}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a041ddd7c5d244743f9e55d2e0fa0a727}\label{struct_alloc_controller_a041ddd7c5d244743f9e55d2e0fa0a727}} 
+void {\bfseries reset\+Construct\+Destroy} ()
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a3f1565a60d1d77a4a21b0d0f2c1ccac8}\label{struct_alloc_controller_a3f1565a60d1d77a4a21b0d0f2c1ccac8}} 
+bool {\bfseries check\+Alloc} (void $\ast$p, size\+\_\+t s, size\+\_\+t a) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_aa9460d82104a53a8b520260ac7e84da1}\label{struct_alloc_controller_aa9460d82104a53a8b520260ac7e84da1}} 
+bool {\bfseries check\+Alloc} (void $\ast$p, size\+\_\+t s) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a88545e64d7e99aeb680fb13073a6ccf9}\label{struct_alloc_controller_a88545e64d7e99aeb680fb13073a6ccf9}} 
+bool {\bfseries check\+Alloc\+At\+Least} (void $\ast$p, size\+\_\+t s, size\+\_\+t a) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_af1d18c7e8844eabbfbba1b3be5601acb}\label{struct_alloc_controller_af1d18c7e8844eabbfbba1b3be5601acb}} 
+bool {\bfseries check\+Alloc\+At\+Least} (void $\ast$p, size\+\_\+t s) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_ac53a0ca94d8f8a3ef2d72617b3ede673}\label{struct_alloc_controller_ac53a0ca94d8f8a3ef2d72617b3ede673}} 
+bool {\bfseries check\+Dealloc} (void $\ast$p, size\+\_\+t s, size\+\_\+t a) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_ab6bd59dd55e7678424e13ee4a9c9ffff}\label{struct_alloc_controller_ab6bd59dd55e7678424e13ee4a9c9ffff}} 
+bool {\bfseries check\+Dealloc} (void $\ast$p, size\+\_\+t s) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a1541d1b607fc7bd4bbf61441efc0f65d}\label{struct_alloc_controller_a1541d1b607fc7bd4bbf61441efc0f65d}} 
+bool {\bfseries check\+Dealloc\+Matches\+Alloc} () const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a48ffbd41c9a1f0fa7d5e47fbd84962b9}\label{struct_alloc_controller_a48ffbd41c9a1f0fa7d5e47fbd84962b9}} 
+{\footnotesize template$<$class ... Args, class Alloc , class Tp $>$ }\\bool {\bfseries check\+Construct} (Alloc const \&, Tp $\ast$p) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_af69eb64815abcdfb9b7a9c4f771f2610}\label{struct_alloc_controller_af69eb64815abcdfb9b7a9c4f771f2610}} 
+{\footnotesize template$<$class Alloc , class Tp $>$ }\\bool {\bfseries check\+Destroy} (Alloc const \&, Tp $\ast$p) const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a80204e606c31e54f893134110f71a958}\label{struct_alloc_controller_a80204e606c31e54f893134110f71a958}} 
+bool {\bfseries check\+Destroy\+Matches\+Construct} () const
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a2ceab5ce04f1df16f90f8ad61dbf0de3}\label{struct_alloc_controller_a2ceab5ce04f1df16f90f8ad61dbf0de3}} 
+void {\bfseries count\+Is\+Equal} ()
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a4c02d63c6cda7eef2e4c97bfb9162533}\label{struct_alloc_controller_a4c02d63c6cda7eef2e4c97bfb9162533}} 
+bool {\bfseries check\+Is\+Equal\+Called\+Eq} (int n) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a2ca68e9acede86f1ccd02f10c59b097a}\label{struct_alloc_controller_a2ca68e9acede86f1ccd02f10c59b097a}} 
+int {\bfseries copy\+\_\+constructed} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a2a20b662568e13f18b0f99139c8b426d}\label{struct_alloc_controller_a2a20b662568e13f18b0f99139c8b426d}} 
+int {\bfseries move\+\_\+constructed} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a5f7c98dd84119fac467f431fa040662a}\label{struct_alloc_controller_a5f7c98dd84119fac467f431fa040662a}} 
+int {\bfseries alive} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a08102aa2773d26b26f4da23dca63bdd0}\label{struct_alloc_controller_a08102aa2773d26b26f4da23dca63bdd0}} 
+int {\bfseries alloc\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a76611e1876d186ace8d2327072fa2479}\label{struct_alloc_controller_a76611e1876d186ace8d2327072fa2479}} 
+int {\bfseries dealloc\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_ac13132acc089e9d67936e347c988f989}\label{struct_alloc_controller_ac13132acc089e9d67936e347c988f989}} 
+int {\bfseries is\+\_\+equal\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_abc1174ef902ca2a69b6cc1dd326ece7b}\label{struct_alloc_controller_abc1174ef902ca2a69b6cc1dd326ece7b}} 
+std\+::size\+\_\+t {\bfseries alive\+\_\+size}
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a37835f0903b940a8f83c6ce76bfdb9b4}\label{struct_alloc_controller_a37835f0903b940a8f83c6ce76bfdb9b4}} 
+std\+::size\+\_\+t {\bfseries allocated\+\_\+size}
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_abf44ecc3d19d18c17a4c437d1bfb7e5d}\label{struct_alloc_controller_abf44ecc3d19d18c17a4c437d1bfb7e5d}} 
+std\+::size\+\_\+t {\bfseries deallocated\+\_\+size}
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a0259ac979e5081f41e9a8c53e070eee0}\label{struct_alloc_controller_a0259ac979e5081f41e9a8c53e070eee0}} 
+std\+::size\+\_\+t {\bfseries last\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_af18e43256097855660ebe4b9e28ef9ab}\label{struct_alloc_controller_af18e43256097855660ebe4b9e28ef9ab}} 
+std\+::size\+\_\+t {\bfseries last\+\_\+align} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a85621a6cda0d6a474cdbcc852d716a35}\label{struct_alloc_controller_a85621a6cda0d6a474cdbcc852d716a35}} 
+void $\ast$ {\bfseries last\+\_\+pointer} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a7471b4bc854bcdc7bb038c132a9d6349}\label{struct_alloc_controller_a7471b4bc854bcdc7bb038c132a9d6349}} 
+std\+::size\+\_\+t {\bfseries last\+\_\+alloc\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_ae6a8560742f464877150b956e0bb6860}\label{struct_alloc_controller_ae6a8560742f464877150b956e0bb6860}} 
+std\+::size\+\_\+t {\bfseries last\+\_\+alloc\+\_\+align} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a6f7628f770fa702a617cde2bb1e94e9c}\label{struct_alloc_controller_a6f7628f770fa702a617cde2bb1e94e9c}} 
+void $\ast$ {\bfseries last\+\_\+alloc\+\_\+pointer} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a28896d2cafc4dbb9986f8b6f5ae5e6e0}\label{struct_alloc_controller_a28896d2cafc4dbb9986f8b6f5ae5e6e0}} 
+std\+::size\+\_\+t {\bfseries last\+\_\+dealloc\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a328c15c0133ffb0219398aa24af86697}\label{struct_alloc_controller_a328c15c0133ffb0219398aa24af86697}} 
+std\+::size\+\_\+t {\bfseries last\+\_\+dealloc\+\_\+align} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_abf0e7926c8ab41adbd279fa79ccdf555}\label{struct_alloc_controller_abf0e7926c8ab41adbd279fa79ccdf555}} 
+void $\ast$ {\bfseries last\+\_\+dealloc\+\_\+pointer} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a809150afbd307d9e807eef6ee05340fa}\label{struct_alloc_controller_a809150afbd307d9e807eef6ee05340fa}} 
+bool {\bfseries throw\+\_\+on\+\_\+alloc} = false
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a1aa53c576660a65488447c7fc762059a}\label{struct_alloc_controller_a1aa53c576660a65488447c7fc762059a}} 
+int {\bfseries construct\+\_\+called} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_ac0a891fb1c0f6fd32b6b29f6d3ac1494}\label{struct_alloc_controller_ac0a891fb1c0f6fd32b6b29f6d3ac1494}} 
+void $\ast$ {\bfseries last\+\_\+construct\+\_\+pointer} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a9f1b797d1fae3e7e0e80326e15da60a0}\label{struct_alloc_controller_a9f1b797d1fae3e7e0e80326e15da60a0}} 
+\mbox{\hyperlink{struct_type_i_d}{Type\+ID}} const  $\ast$ {\bfseries last\+\_\+construct\+\_\+alloc} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a73710d6b03ec5747c858bd41fc8e3b41}\label{struct_alloc_controller_a73710d6b03ec5747c858bd41fc8e3b41}} 
+\mbox{\hyperlink{struct_type_i_d}{Type\+ID}} const  $\ast$ {\bfseries last\+\_\+construct\+\_\+type} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_abaaeca1746ee594a702601e005304a7b}\label{struct_alloc_controller_abaaeca1746ee594a702601e005304a7b}} 
+\mbox{\hyperlink{struct_type_i_d}{Type\+ID}} const  $\ast$ {\bfseries last\+\_\+construct\+\_\+args} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_ae5a1cba6cb02b054e8d10f01c483c0e7}\label{struct_alloc_controller_ae5a1cba6cb02b054e8d10f01c483c0e7}} 
+int {\bfseries destroy\+\_\+called} = 0
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_aead8037891294d5cf6dcff0347e5b12d}\label{struct_alloc_controller_aead8037891294d5cf6dcff0347e5b12d}} 
+void $\ast$ {\bfseries last\+\_\+destroy\+\_\+pointer} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a8227cfdde5c9e75ffc37790df2c87b54}\label{struct_alloc_controller_a8227cfdde5c9e75ffc37790df2c87b54}} 
+\mbox{\hyperlink{struct_type_i_d}{Type\+ID}} const  $\ast$ {\bfseries last\+\_\+destroy\+\_\+alloc} = nullptr
+\item 
+\mbox{\Hypertarget{struct_alloc_controller_a11ce84e231312194f400d5d9632c820f}\label{struct_alloc_controller_a11ce84e231312194f400d5d9632c820f}} 
+\mbox{\hyperlink{struct_type_i_d}{Type\+ID}} const  $\ast$ {\bfseries last\+\_\+destroy\+\_\+type} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/support/controlled\+\_\+allocators.\+hpp\end{DoxyCompactItemize}

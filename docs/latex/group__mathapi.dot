@@ -1,0 +1,13 @@
+digraph "Math API"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Smart Contract API\l Reference",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__contractdev.html",tooltip="Introduction to writing contracts for AAC.IO. "];
+  Node2 [label="Math C API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__mathcapi.html",tooltip="Defines basic mathematical operations for higher abstractions to use. "];
+  Node3 [label="Math C++ API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__mathcppapi.html",tooltip="Defines common math functions and helper types. "];
+  Node0 [label="Math API",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+}

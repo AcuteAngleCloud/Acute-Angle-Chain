@@ -1,0 +1,174 @@
+\hypertarget{net__plugin_8cpp}{}\section{plugins/net\+\_\+plugin/net\+\_\+plugin.cpp File Reference}
+\label{net__plugin_8cpp}\index{plugins/net\+\_\+plugin/net\+\_\+plugin.\+cpp@{plugins/net\+\_\+plugin/net\+\_\+plugin.\+cpp}}
+{\ttfamily \#include $<$aacio/chain/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/net\+\_\+plugin/net\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/net\+\_\+plugin/protocol.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/net\+\_\+plugin/message\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/chain\+\_\+controller.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/block.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/producer\+\_\+plugin/producer\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/utilities/key\+\_\+conversion.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/network/ip.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/raw.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/log/appender.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/container/flat.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/reflect/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/crypto/rand.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/exception/exception.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/tcp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/host\+\_\+name.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/steady\+\_\+timer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/intrusive/set.\+hpp$>$}\newline
+Include dependency graph for net\+\_\+plugin.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1node__transaction__state}{aacio\+::node\+\_\+transaction\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1update__entry}{aacio\+::update\+\_\+entry}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1update__in__flight}{aacio\+::update\+\_\+in\+\_\+flight}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1net__plugin__impl}{aacio\+::net\+\_\+plugin\+\_\+impl}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1transaction__state}{aacio\+::transaction\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1update__block__num}{aacio\+::update\+\_\+block\+\_\+num}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1block__state}{aacio\+::block\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1update__request__time}{aacio\+::update\+\_\+request\+\_\+time}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1update__known__by__peer}{aacio\+::update\+\_\+known\+\_\+by\+\_\+peer}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1sync__state}{aacio\+::sync\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1handshake__initializer}{aacio\+::handshake\+\_\+initializer}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1connection}{aacio\+::connection}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1connection_1_1queued__write}{aacio\+::connection\+::queued\+\_\+write}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1msg_handler}{aacio\+::msg\+Handler}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1sync__manager}{aacio\+::sync\+\_\+manager}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1big__msg__manager}{aacio\+::big\+\_\+msg\+\_\+manager}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacefc}{fc}}
+\begin{DoxyCompactList}\small\item\em aacio\+::chain \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a431774012703aed05e0635b724a1ff95}\label{net__plugin_8cpp_a431774012703aed05e0635b724a1ff95}} 
+using {\bfseries aacio\+::connection\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ connection $>$
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_ae96935cee83117e783dc991327320e0e}\label{net__plugin_8cpp_ae96935cee83117e783dc991327320e0e}} 
+using {\bfseries aacio\+::connection\+\_\+wptr} = std\+::weak\+\_\+ptr$<$ connection $>$
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a18c363d798157b02616d28c8d688f4f5}\label{net__plugin_8cpp_a18c363d798157b02616d28c8d688f4f5}} 
+using {\bfseries aacio\+::socket\+\_\+ptr} = std\+::shared\+\_\+ptr$<$ tcp\+::socket $>$
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_af39cfc1b65a29d8952ea6b4c084664c1}\label{net__plugin_8cpp_af39cfc1b65a29d8952ea6b4c084664c1}} 
+using {\bfseries aacio\+::net\+\_\+message\+\_\+ptr} = shared\+\_\+ptr$<$ net\+\_\+message $>$
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a555a623b762cfbdf70d5b7482786b29d}\label{net__plugin_8cpp_a555a623b762cfbdf70d5b7482786b29d}} 
+typedef multi\+\_\+index\+\_\+container$<$ node\+\_\+transaction\+\_\+state, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ node\+\_\+transaction\+\_\+state, \mbox{\hyperlink{structchecksum256}{transaction\+\_\+id\+\_\+type}}, \&node\+\_\+transaction\+\_\+state\+::id $>$ $>$, ordered\+\_\+non\+\_\+unique$<$ tag$<$ by\+\_\+expiry $>$, member$<$ node\+\_\+transaction\+\_\+state, \mbox{\hyperlink{classfc_1_1time__point__sec}{fc\+::time\+\_\+point\+\_\+sec}}, \&node\+\_\+transaction\+\_\+state\+::expires $>$ $>$, ordered\+\_\+non\+\_\+unique$<$ tag$<$ by\+\_\+block\+\_\+num $>$, member$<$ node\+\_\+transaction\+\_\+state, uint32\+\_\+t, \&node\+\_\+transaction\+\_\+state\+::block\+\_\+num $>$ $>$ $>$ $>$ {\bfseries aacio\+::node\+\_\+transaction\+\_\+index}
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a1aed3726a1157497a2bffa5e79f8939c}\label{net__plugin_8cpp_a1aed3726a1157497a2bffa5e79f8939c}} 
+typedef multi\+\_\+index\+\_\+container$<$ transaction\+\_\+state, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ transaction\+\_\+state, \mbox{\hyperlink{structchecksum256}{transaction\+\_\+id\+\_\+type}}, \&transaction\+\_\+state\+::id $>$ $>$ $>$ $>$ {\bfseries aacio\+::transaction\+\_\+state\+\_\+index}
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a6f5c817c1a02ce0eb85c10e41a10d629}\label{net__plugin_8cpp_a6f5c817c1a02ce0eb85c10e41a10d629}} 
+typedef multi\+\_\+index\+\_\+container$<$ block\+\_\+state, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ block\+\_\+state, block\+\_\+id\+\_\+type, \&block\+\_\+state\+::id $>$ $>$ $>$ $>$ {\bfseries aacio\+::block\+\_\+state\+\_\+index}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacefc_ad421793956ee8d0fdd40b0f2167ca8a5}\label{namespacefc_ad421793956ee8d0fdd40b0f2167ca8a5}} 
+\mbox{\hyperlink{classstd_1_1unordered__map}{std\+::unordered\+\_\+map}}$<$ std\+::string, logger $>$ \& {\bfseries fc\+::get\+\_\+logger\+\_\+map} ()
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a58513b55552f7124f1c52d313da3a4fe}\label{net__plugin_8cpp_a58513b55552f7124f1c52d313da3a4fe}} 
+struct \mbox{\hyperlink{structaacio_1_1update__in__flight}{aacio\+::update\+\_\+in\+\_\+flight}} {\bfseries aacio\+::incr\+\_\+in\+\_\+flight} (1)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_af4e38d565f031be0385a20375189cb2b}\label{net__plugin_8cpp_af4e38d565f031be0385a20375189cb2b}} 
+{\bfseries update\+\_\+in\+\_\+flight} (int32\+\_\+t delta)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a9f108bd2ed5ea7e093dfaaa6f814859b}\label{net__plugin_8cpp_a9f108bd2ed5ea7e093dfaaa6f814859b}} 
+void {\bfseries operator()} (node\+\_\+transaction\+\_\+state \&nts)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_ae37e02996f3d58952686fe562a5a346a}\label{net__plugin_8cpp_ae37e02996f3d58952686fe562a5a346a}} 
+struct \mbox{\hyperlink{structaacio_1_1update__in__flight}{aacio\+::update\+\_\+in\+\_\+flight}} {\bfseries aacio\+::decr\+\_\+in\+\_\+flight} (-\/1)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a22a049c00bf905be8be6984072ce5387}\label{net__plugin_8cpp_a22a049c00bf905be8be6984072ce5387}} 
+{\footnotesize template$<$class enum\+\_\+type , class  = typename std\+::enable\+\_\+if$<$std\+::is\+\_\+enum$<$enum\+\_\+type$>$\+::value$>$\+::type$>$ }\\enum\+\_\+type \& {\bfseries aacio\+::operator$\vert$=} (enum\+\_\+type \&lhs, const enum\+\_\+type \&rhs)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a3cfa3b5dbca83c023c29f58f02edd56d}\label{net__plugin_8cpp_a3cfa3b5dbca83c023c29f58f02edd56d}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} {\bfseries aacio\+::dejsonify} (const string \&s)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a80e6f8acb791a0b1f24680d8c085d938}\label{net__plugin_8cpp_a80e6f8acb791a0b1f24680d8c085d938}} 
+int32\+\_\+t {\bfseries incr}
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_ae00be2b7a57e96aeb91ae048b2a3c8c1}\label{net__plugin_8cpp_ae00be2b7a57e96aeb91ae048b2a3c8c1}} 
+class \mbox{\hyperlink{classaacio_1_1net__plugin__impl}{aacio\+::net\+\_\+plugin\+\_\+impl}} {\bfseries aacio\+::incr\+\_\+in\+\_\+flight}
+\item 
+constexpr auto \mbox{\hyperlink{net__plugin_8cpp_a72379e72026c9399b8415a3f66b18ef5}{aacio\+::def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb}} = 4
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a428737d0df9d8a52aa77998f747b1a3c}\label{net__plugin_8cpp_a428737d0df9d8a52aa77998f747b1a3c}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+send\+\_\+buffer\+\_\+size} = 1024$\ast$1024$\ast$def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a0dd166f5b0b68bfcd68c2778cdcc6559}\label{net__plugin_8cpp_a0dd166f5b0b68bfcd68c2778cdcc6559}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+max\+\_\+clients} = 25
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a502628b0a0ee9e64ae73ee5645c78bc9}\label{net__plugin_8cpp_a502628b0a0ee9e64ae73ee5645c78bc9}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+conn\+\_\+retry\+\_\+wait} = 30
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a00cc3cdc5edcd26df74bd8191487868a}\label{net__plugin_8cpp_a00cc3cdc5edcd26df74bd8191487868a}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+txn\+\_\+expire\+\_\+wait} = std\+::chrono\+::seconds(3)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a2c57d0eac6798a43797050de3d09f2b8}\label{net__plugin_8cpp_a2c57d0eac6798a43797050de3d09f2b8}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+resp\+\_\+expected\+\_\+wait} = std\+::chrono\+::seconds(1)
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a502a38d4fb6aa9200ae19d6c2052e486}\label{net__plugin_8cpp_a502a38d4fb6aa9200ae19d6c2052e486}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+sync\+\_\+fetch\+\_\+span} = 100
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a06dd9925f0a2b095047f5dfcc90f116a}\label{net__plugin_8cpp_a06dd9925f0a2b095047f5dfcc90f116a}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+max\+\_\+just\+\_\+send} = 1500 $\ast$ 3
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_accefb7c47fe74ffc310ae69554d0bcf0}\label{net__plugin_8cpp_accefb7c47fe74ffc310ae69554d0bcf0}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+send\+\_\+whole\+\_\+blocks} = true
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_aa4dc4a37efe1dc7b4bc4fa31864e52fb}\label{net__plugin_8cpp_aa4dc4a37efe1dc7b4bc4fa31864e52fb}} 
+constexpr auto {\bfseries aacio\+::message\+\_\+header\+\_\+size} = 4
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_a66047e0d55a5bbf647ece1d606354dcb}\label{net__plugin_8cpp_a66047e0d55a5bbf647ece1d606354dcb}} 
+struct \mbox{\hyperlink{structaacio_1_1update__request__time}{aacio\+::update\+\_\+request\+\_\+time}} {\bfseries aacio\+::set\+\_\+request\+\_\+time}
+\item 
+\mbox{\Hypertarget{net__plugin_8cpp_ad08e4c09fea6abdc2ea56f7b29a4af34}\label{net__plugin_8cpp_ad08e4c09fea6abdc2ea56f7b29a4af34}} 
+struct \mbox{\hyperlink{structaacio_1_1update__known__by__peer}{aacio\+::update\+\_\+known\+\_\+by\+\_\+peer}} {\bfseries aacio\+::set\+\_\+is\+\_\+known}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{net__plugin_8cpp_file_a72379e72026c9399b8415a3f66b18ef5}\label{net__plugin_8cpp_file_a72379e72026c9399b8415a3f66b18ef5}} 
+\index{net\+\_\+plugin.\+cpp@{net\+\_\+plugin.\+cpp}!def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb@{def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb}}
+\index{def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb@{def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb}!net\+\_\+plugin.\+cpp@{net\+\_\+plugin.\+cpp}}
+\subsubsection{\texorpdfstring{def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb}{def\_send\_buffer\_size\_mb}}
+{\footnotesize\ttfamily constexpr auto aacio\+::def\+\_\+send\+\_\+buffer\+\_\+size\+\_\+mb = 4}
+
+default value initializers 

@@ -1,0 +1,27 @@
+digraph "aacio::chain::transaction_metadata"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="aacio::chain::transaction\l_metadata",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" processing_deadline" ];
+  Node2 [label="fc::optional\< fc::time\l_point \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" packed_trx" ];
+  Node3 [label="std::vector\< char \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sender" ];
+  Node4 [label="fc::optional\< aacio\l::chain::name \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" context_free_data" ];
+  Node5 [label="std::vector\< std::vector \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" signing_keys" ];
+  Node6 [label="fc::optional\< flat\l_set\< fc::crypto::public\l_key \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allowed_write_locks\nallowed_read_locks" ];
+  Node7 [label="fc::optional\< const\l std::vector\< aacio\l::chain::shard_lock \> *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" raw_trx" ];
+  Node8 [label="fc::optional\< std::\lvector \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" delay" ];
+  Node9 [label="fc::microseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1microseconds.html"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" decompressed_trx" ];
+  Node10 [label="fc::optional\< aacio\l::chain::transaction \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" packed_digest\nid" ];
+  Node11 [label="fc::sha256",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1sha256.html"];
+}

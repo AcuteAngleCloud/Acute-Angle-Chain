@@ -1,0 +1,573 @@
+.TH "websocketpp::transport::asio::connection< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::asio::connection< config > \- Asio based connection transport component\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <connection\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::transport::asio::tls_socket::connection\fP\&.
+.PP
+Inherited by \fBmock_con\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBconnection\fP< \fBconfig\fP > \fBtype\fP"
+.br
+.RI "\fBType\fP of this connection transport component\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBtype\fP > \fBptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to this connection transport component\&. "
+.ti -1c
+.RI "typedef \fBconfig::socket_type::socket_con_type\fP \fBsocket_con_type\fP"
+.br
+.RI "\fBType\fP of the socket connection component\&. "
+.ti -1c
+.RI "typedef \fBsocket_con_type::ptr\fP \fBsocket_con_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to the socket connection component\&. "
+.ti -1c
+.RI "typedef \fBconfig::alog_type\fP \fBalog_type\fP"
+.br
+.RI "\fBType\fP of this transport's access logging policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::elog_type\fP \fBelog_type\fP"
+.br
+.RI "\fBType\fP of this transport's error logging policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::request_type\fP \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef request_type::ptr \fBrequest_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::response_type\fP \fBresponse_type\fP"
+.br
+.ti -1c
+.RI "typedef response_type::ptr \fBresponse_ptr\fP"
+.br
+.ti -1c
+.RI "typedef lib::asio::io_service * \fBio_service_ptr\fP"
+.br
+.RI "\fBType\fP of a pointer to the Asio io_service being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::io_service::strand > \fBstrand_ptr\fP"
+.br
+.RI "\fBType\fP of a pointer to the Asio io_service::strand being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::steady_timer > \fBtimer_ptr\fP"
+.br
+.RI "\fBType\fP of a pointer to the Asio timer class\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBconnection\fP (bool is_server, \fBalog_type\fP &alog, \fBelog_type\fP &elog)"
+.br
+.ti -1c
+.RI "\fBptr\fP \fBget_shared\fP ()"
+.br
+.RI "Get a shared pointer to this component\&. "
+.ti -1c
+.RI "bool \fBis_secure\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_uri\fP (\fBuri_ptr\fP u)"
+.br
+.RI "Set uri hook\&. "
+.ti -1c
+.RI "void \fBset_tcp_pre_init_handler\fP (tcp_init_handler h)"
+.br
+.RI "Sets the tcp pre init handler\&. "
+.ti -1c
+.RI "void \fBset_tcp_init_handler\fP (tcp_init_handler h)"
+.br
+.RI "Sets the tcp pre init handler (deprecated) "
+.ti -1c
+.RI "void \fBset_tcp_post_init_handler\fP (tcp_init_handler h)"
+.br
+.RI "Sets the tcp post init handler\&. "
+.ti -1c
+.RI "void \fBset_proxy\fP (std::string const &\fBuri\fP, lib::error_code &ec)"
+.br
+.RI "Set the proxy to connect through (exception free) "
+.ti -1c
+.RI "void \fBset_proxy\fP (std::string const &\fBuri\fP)"
+.br
+.RI "Set the proxy to connect through (exception) "
+.ti -1c
+.RI "void \fBset_proxy_basic_auth\fP (std::string const &username, std::string const &password, lib::error_code &ec)"
+.br
+.RI "Set the basic auth credentials to use (exception free) "
+.ti -1c
+.RI "void \fBset_proxy_basic_auth\fP (std::string const &username, std::string const &password)"
+.br
+.RI "Set the basic auth credentials to use (exception) "
+.ti -1c
+.RI "void \fBset_proxy_timeout\fP (long duration, lib::error_code &ec)"
+.br
+.RI "Set the proxy timeout duration (exception free) "
+.ti -1c
+.RI "void \fBset_proxy_timeout\fP (long duration)"
+.br
+.RI "Set the proxy timeout duration (exception) "
+.ti -1c
+.RI "std::string const  & \fBget_proxy\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBget_remote_endpoint\fP () const"
+.br
+.RI "Get the remote endpoint address\&. "
+.ti -1c
+.RI "\fBconnection_hdl\fP \fBget_handle\fP () const"
+.br
+.RI "Get the connection handle\&. "
+.ti -1c
+.RI "\fBtimer_ptr\fP \fBset_timer\fP (long duration, \fBtimer_handler\fP callback)"
+.br
+.RI "Call back a function after a period of time\&. "
+.ti -1c
+.RI "void \fBhandle_timer\fP (\fBtimer_ptr\fP, \fBtimer_handler\fP callback, lib::asio::error_code const &ec)"
+.br
+.RI "Timer callback\&. "
+.ti -1c
+.RI "\fBstrand_ptr\fP \fBget_strand\fP ()"
+.br
+.RI "Get a pointer to this connection's strand\&. "
+.ti -1c
+.RI "lib::asio::error_code \fBget_transport_ec\fP () const"
+.br
+.RI "Get the internal transport error code for a closed/failed connection\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (\fBinit_handler\fP callback)"
+.br
+.RI "Initialize transport for reading\&. "
+.ti -1c
+.RI "lib::error_code \fBproxy_init\fP (std::string const &authority)"
+.br
+.RI "initialize the proxy buffers and http parsers "
+.ti -1c
+.RI "lib::error_code \fBinit_asio\fP (\fBio_service_ptr\fP io_service)"
+.br
+.RI "Finish constructing the transport\&. "
+.ti -1c
+.RI "void \fBhandle_pre_init\fP (\fBinit_handler\fP callback, lib::error_code const &ec)"
+.br
+.ti -1c
+.RI "void \fBpost_init\fP (\fBinit_handler\fP callback)"
+.br
+.ti -1c
+.RI "void \fBhandle_post_init_timeout\fP (\fBtimer_ptr\fP, \fBinit_handler\fP callback, lib::error_code const &ec)"
+.br
+.RI "Post init timeout callback\&. "
+.ti -1c
+.RI "void \fBhandle_post_init\fP (\fBtimer_ptr\fP post_timer, \fBinit_handler\fP callback, lib::error_code const &ec)"
+.br
+.RI "Post init timeout callback\&. "
+.ti -1c
+.RI "void \fBproxy_write\fP (\fBinit_handler\fP callback)"
+.br
+.ti -1c
+.RI "void \fBhandle_proxy_timeout\fP (\fBinit_handler\fP callback, lib::error_code const &ec)"
+.br
+.ti -1c
+.RI "void \fBhandle_proxy_write\fP (\fBinit_handler\fP callback, lib::asio::error_code const &ec)"
+.br
+.ti -1c
+.RI "void \fBproxy_read\fP (\fBinit_handler\fP callback)"
+.br
+.ti -1c
+.RI "void \fBhandle_proxy_read\fP (\fBinit_handler\fP callback, lib::asio::error_code const &ec, size_t)"
+.br
+.RI "Proxy read callback\&. "
+.ti -1c
+.RI "void \fBasync_read_at_least\fP (size_t num_bytes, char *buf, size_t len, \fBread_handler\fP handler)"
+.br
+.RI "read at least num_bytes bytes into buf and then call handler\&. "
+.ti -1c
+.RI "void \fBhandle_async_read\fP (\fBread_handler\fP handler, lib::asio::error_code const &ec, size_t bytes_transferred)"
+.br
+.ti -1c
+.RI "void \fBasync_write\fP (const char *buf, size_t len, \fBwrite_handler\fP handler)"
+.br
+.RI "Initiate a potentially asyncronous write of the given buffer\&. "
+.ti -1c
+.RI "void \fBasync_write\fP (\fBstd::vector\fP< \fBbuffer\fP > const &bufs, \fBwrite_handler\fP handler)"
+.br
+.RI "Initiate a potentially asyncronous write of the given buffers\&. "
+.ti -1c
+.RI "void \fBhandle_async_write\fP (\fBwrite_handler\fP handler, lib::asio::error_code const &ec, size_t)"
+.br
+.RI "Async write callback\&. "
+.ti -1c
+.RI "void \fBset_handle\fP (\fBconnection_hdl\fP hdl)"
+.br
+.RI "Set Connection Handle\&. "
+.ti -1c
+.RI "lib::error_code \fBinterrupt\fP (\fBinterrupt_handler\fP handler)"
+.br
+.RI "Trigger the on_interrupt handler\&. "
+.ti -1c
+.RI "lib::error_code \fBdispatch\fP (\fBdispatch_handler\fP handler)"
+.br
+.ti -1c
+.RI "void \fBasync_shutdown\fP (\fBshutdown_handler\fP callback)"
+.br
+.RI "close and clean up the underlying socket "
+.ti -1c
+.RI "void \fBhandle_async_shutdown_timeout\fP (\fBtimer_ptr\fP, \fBinit_handler\fP callback, lib::error_code const &ec)"
+.br
+.RI "Async shutdown timeout handler\&. "
+.ti -1c
+.RI "void \fBhandle_async_shutdown\fP (\fBtimer_ptr\fP shutdown_timer, \fBshutdown_handler\fP callback, lib::asio::error_code const &ec)"
+.br
+.ti -1c
+.RI "void \fBcancel_socket_checked\fP ()"
+.br
+.RI "Cancel the underlying socket and log any errors\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBendpoint< config >\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+class websocketpp::transport::asio::connection< config >"
+Asio based connection transport component\&. 
+
+\fBtransport::asio::connection\fP implements a connection transport component using Asio that works with the \fBtransport::asio::endpoint\fP endpoint transport component\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config > std::string \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::get_remote_endpoint () const\fC [inline]\fP"
+
+.PP
+Get the remote endpoint address\&. The iostream transport has no information about the ultimate remote endpoint\&. It will return the string 'iostream transport'\&. To indicate this\&.
+.PP
+TODO: allow user settable remote endpoint addresses if this seems useful
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP string identifying the address of the remote endpoint 
+.RE
+.PP
+
+.SS "template<typename config > lib::asio::error_code \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::get_transport_ec () const\fC [inline]\fP"
+
+.PP
+Get the internal transport error code for a closed/failed connection\&. Retrieves a machine readable detailed error code indicating the reason that the connection was closed or failed\&. Valid only after the close or fail handler is called\&.
+.PP
+Primarily used if you are using mismatched asio / system_error implementations such as \fCboost::asio\fP with \fCstd::system_error\fP\&. In these cases the transport error type is different than the library error type and some WebSocket++ functions that return transport errors via the library error code type will be coerced into a catch all \fCpass_through\fP or \fCtls_error\fP error\&. This method will return the original machine readable transport error in the native type\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.7\&.0
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Error code indicating the reason the connection was closed or failed 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::handle_async_shutdown_timeout (\fBtimer_ptr\fP, \fBinit_handler\fP callback, lib::error_code const & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Async shutdown timeout handler\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIshutdown_timer\fP \fBA\fP pointer to the timer to keep it in scope 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP The status code 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::handle_async_write (\fBwrite_handler\fP handler, lib::asio::error_code const & ec, size_t)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Async write callback\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIec\fP The status code 
+.br
+\fIbytes_transferred\fP The number of bytes read 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::handle_post_init (\fBtimer_ptr\fP post_timer, \fBinit_handler\fP callback, lib::error_code const & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Post init timeout callback\&. The timer pointer is included to ensure the timer isn't destroyed until after it has expired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpost_timer\fP \fBPointer\fP to the timer in question 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP The status code 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::handle_post_init_timeout (\fBtimer_ptr\fP, \fBinit_handler\fP callback, lib::error_code const & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Post init timeout callback\&. The timer pointer is included to ensure the timer isn't destroyed until after it has expired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpost_timer\fP \fBPointer\fP to the timer in question 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP The status code 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::handle_proxy_read (\fBinit_handler\fP callback, lib::asio::error_code const & ec, size_t)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Proxy read callback\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinit_handler\fP The function to call back 
+.br
+\fIec\fP The status code 
+.br
+\fIbytes_transferred\fP The number of bytes read 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::handle_timer (\fBtimer_ptr\fP, \fBtimer_handler\fP callback, lib::asio::error_code const & ec)\fC [inline]\fP"
+
+.PP
+Timer callback\&. The timer pointer is included to ensure the timer isn't destroyed until after it has expired\&.
+.PP
+TODO: candidate for protected status
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpost_timer\fP \fBPointer\fP to the timer in question 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP The status code 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::init (\fBinit_handler\fP callback)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize transport for reading\&. init_asio is called once immediately after construction to initialize Asio components to the io_service
+.PP
+The transport initialization sequence consists of the following steps:
+.IP "\(bu" 2
+Pre-init: the underlying socket is initialized to the point where bytes may be written\&. No bytes are actually written in this stage
+.IP "\(bu" 2
+Proxy negotiation: if a proxy is set, a request is made to it to start a tunnel to the final destination\&. This stage ends when the proxy is ready to forward the next byte to the remote endpoint\&.
+.IP "\(bu" 2
+Post-init: Perform any i/o with the remote endpoint, such as setting up tunnels for encryption\&. This stage ends when the connection is ready to read or write the WebSocket handshakes\&. At this point the original callback function is called\&. 
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::init_asio (\fBio_service_ptr\fP io_service)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Finish constructing the transport\&. init_asio is called once immediately after construction to initialize Asio components to the io_service\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIio_service\fP \fBA\fP pointer to the io_service to register with this connection
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code for the success or failure of the initialization 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::interrupt (\fBinterrupt_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Trigger the on_interrupt handler\&. This needs to be thread safe 
+.SS "template<typename config > lib::error_code \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::proxy_init (std::string const & authority)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+initialize the proxy buffers and http parsers 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIauthority\fP The address of the server we want the proxy to tunnel to in the format of a URI authority (host:port)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code indicating what errors occurred, if any 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_handle (\fBconnection_hdl\fP hdl)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Set Connection Handle\&. See \fBcommon/connection_hdl\&.hpp\fP for information
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhdl\fP \fBA\fP connection_hdl that the transport will use to refer to itself 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_proxy (std::string const & uri, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set the proxy to connect through (exception free) The URI passed should be a complete URI including scheme\&. For example: http://proxy.example.com:8080/
+.PP
+The proxy must be set up as an explicit (CONNECT) proxy allowed to connect to the port you specify\&. Traffic to the proxy is not encrypted\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuri\fP The full URI of the proxy to connect to\&.
+.br
+\fIec\fP \fBA\fP status value 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_proxy_basic_auth (std::string const & username, std::string const & password, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set the basic auth credentials to use (exception free) The URI passed should be a complete URI including scheme\&. For example: http://proxy.example.com:8080/
+.PP
+The proxy must be set up as an explicit proxy
+.PP
+\fBParameters:\fP
+.RS 4
+\fIusername\fP The username to send
+.br
+\fIpassword\fP The password to send
+.br
+\fIec\fP \fBA\fP status value 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_proxy_timeout (long duration, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set the proxy timeout duration (exception free) Duration is in milliseconds\&. Default value is based on the transport config
+.PP
+\fBParameters:\fP
+.RS 4
+\fIduration\fP The number of milliseconds to wait before aborting the proxy connection\&.
+.br
+\fIec\fP \fBA\fP status value 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_tcp_init_handler (tcp_init_handler h)\fC [inline]\fP"
+
+.PP
+Sets the tcp pre init handler (deprecated) The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, TLS handshakes, etc) have been performed\&.
+.PP
+\fBDeprecated\fP
+.RS 4
+Use set_tcp_pre_init_handler instead
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The handler to call on tcp pre init\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_tcp_post_init_handler (tcp_init_handler h)\fC [inline]\fP"
+
+.PP
+Sets the tcp post init handler\&. The tcp post init handler is called after the tcp connection has been established and all additional wrappers (proxy connects, TLS handshakes, etc have been performed\&. This is fired before any bytes are read or any WebSocket specific handshake logic has been performed\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The handler to call on tcp post init\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_tcp_pre_init_handler (tcp_init_handler h)\fC [inline]\fP"
+
+.PP
+Sets the tcp pre init handler\&. The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, TLS handshakes, etc) have been performed\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The handler to call on tcp pre init\&. 
+.RE
+.PP
+
+.SS "template<typename config > \fBtimer_ptr\fP \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_timer (long duration, \fBtimer_handler\fP callback)\fC [inline]\fP"
+
+.PP
+Call back a function after a period of time\&. Sets a timer that calls back a function after the specified period of milliseconds\&. Returns a handle that can be used to cancel the timer\&. \fBA\fP cancelled timer will return the error code \fBerror::operation_aborted\fP \fBA\fP timer that expired will return no error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIduration\fP Length of time to wait in milliseconds
+.br
+\fIcallback\fP The function to call back when the timer has expired
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP handle that can be used to cancel the timer if it is no longer needed\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::connection\fP< \fBconfig\fP >::set_uri (\fBuri_ptr\fP u)\fC [inline]\fP"
+
+.PP
+Set uri hook\&. Called by the endpoint as a connection is being established to provide the uri being connected to to the transport layer\&.
+.PP
+This transport policy doesn't use the uri except to forward it to the socket layer\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.6\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIu\fP The uri to set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

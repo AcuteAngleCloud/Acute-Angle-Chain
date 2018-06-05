@@ -1,0 +1,48 @@
+.TH "fc::variant::visitor" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::variant::visitor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <variant\&.hpp>\fP
+.PP
+Inherited by \fBfc::raw::variant_packer< Stream >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBhandle\fP () const =0"
+.br
+.RI "handles null_type variants "
+.ti -1c
+.RI "virtual void \fBhandle\fP (const int64_t &v) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBhandle\fP (const uint64_t &v) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBhandle\fP (const double &v) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBhandle\fP (const bool &v) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBhandle\fP (const string &v) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBhandle\fP (const \fBvariant_object\fP &v) const =0"
+.br
+.ti -1c
+.RI "virtual void \fBhandle\fP (const \fBvariants\fP &v) const =0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Read-only access to the content of the variant\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

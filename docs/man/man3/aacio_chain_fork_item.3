@@ -1,0 +1,45 @@
+.TH "aacio::chain::fork_item" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::fork_item
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfork_item\fP (\fBsigned_block\fP d)"
+.br
+.ti -1c
+.RI "\fBblock_id_type\fP \fBprevious_id\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "weak_ptr< \fBfork_item\fP > \fBprev\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBnum\fP"
+.br
+.ti -1c
+.RI "bool \fBinvalid\fP = false"
+.br
+.ti -1c
+.RI "\fBblock_id_type\fP \fBid\fP"
+.br
+.ti -1c
+.RI "\fBsigned_block\fP \fBdata\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "bool aacio::chain::fork_item::invalid = false"
+Used to flag a block as invalid and prevent other blocks from building on top of it\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

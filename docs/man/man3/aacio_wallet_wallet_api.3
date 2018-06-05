@@ -1,0 +1,217 @@
+.TH "aacio::wallet::wallet_api" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::wallet::wallet_api
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <wallet\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBwallet_api\fP (const \fBwallet_data\fP &initial_data)"
+.br
+.ti -1c
+.RI "bool \fBcopy_wallet_file\fP (string destination_filename)"
+.br
+.ti -1c
+.RI "string \fBget_wallet_filename\fP () const"
+.br
+.ti -1c
+.RI "\fBprivate_key_type\fP \fBget_private_key\fP (\fBpublic_key_type\fP pubkey) const"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBprivate_key_type\fP > \fBtry_get_private_key\fP (const \fBpublic_key_type\fP &id) const"
+.br
+.ti -1c
+.RI "\fBpair\fP< \fBpublic_key_type\fP, \fBprivate_key_type\fP > \fBget_private_key_from_password\fP (string \fBaccount\fP, string role, string password) const"
+.br
+.ti -1c
+.RI "bool \fBis_new\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_locked\fP () const"
+.br
+.ti -1c
+.RI "void \fBlock\fP ()"
+.br
+.ti -1c
+.RI "void \fBunlock\fP (string password)"
+.br
+.ti -1c
+.RI "void \fBset_password\fP (string password)"
+.br
+.ti -1c
+.RI "\fBmap\fP< \fBpublic_key_type\fP, \fBprivate_key_type\fP > \fBlist_keys\fP ()"
+.br
+.ti -1c
+.RI "bool \fBload_wallet_file\fP (string wallet_filename='')"
+.br
+.ti -1c
+.RI "void \fBsave_wallet_file\fP (string wallet_filename='')"
+.br
+.ti -1c
+.RI "void \fBset_wallet_filename\fP (string wallet_filename)"
+.br
+.ti -1c
+.RI "bool \fBimport_key\fP (string wif_key)"
+.br
+.ti -1c
+.RI "void \fBencrypt_keys\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< \fBdetail::wallet_api_impl\fP > \fBmy\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This wallet assumes it is connected to the database server with a high-bandwidth, low-latency connection and performs minimal caching\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBprivate_key_type\fP aacio::wallet::wallet_api::get_private_key (\fBpublic_key_type\fP pubkey) const"
+Get the WIF private key corresponding to a public key\&. The private key must already be in the wallet\&. 
+.SS "\fBpair\fP< \fBpublic_key_type\fP, \fBprivate_key_type\fP > aacio::wallet::wallet_api::get_private_key_from_password (string account, string role, string password) const"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrole\fP - active | owner | posting | memo 
+.RE
+.PP
+
+.SS "string aacio::wallet::wallet_api::get_wallet_filename () const"
+Returns the current wallet filename\&.
+.PP
+This is the filename that will be used when automatically saving the wallet\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBset_wallet_filename()\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the wallet filename 
+.RE
+.PP
+
+.SS "bool aacio::wallet::wallet_api::import_key (string wif_key)"
+Imports a WIF Private \fBKey\fP into the wallet to be used to sign transactions by an account\&.
+.PP
+example: import_key 5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwif_key\fP the WIF Private \fBKey\fP to import 
+.RE
+.PP
+
+.SS "bool aacio::wallet::wallet_api::is_locked () const"
+Checks whether the wallet is locked (is unable to use its private keys)\&.
+.PP
+This state can be changed by calling \fC\fBlock()\fP\fP or \fC\fBunlock()\fP\fP\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if the wallet is locked 
+.RE
+.PP
+
+.SS "bool aacio::wallet::wallet_api::is_new () const"
+Checks whether the wallet has just been created and has not yet had a password set\&.
+.PP
+Calling \fCset_password\fP will transition the wallet to the locked state\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if the wallet is new 
+.RE
+.PP
+
+.SS "\fBmap\fP< \fBpublic_key_type\fP, \fBprivate_key_type\fP > aacio::wallet::wallet_api::list_keys ()"
+Dumps all private keys owned by the wallet\&.
+.PP
+The keys are printed in WIF format\&. You can import these keys into another wallet using \fC\fBimport_key()\fP\fP 
+.PP
+\fBReturns:\fP
+.RS 4
+a map containing the private keys, indexed by their public key 
+.RE
+.PP
+
+.SS "bool aacio::wallet::wallet_api::load_wallet_file (string wallet_filename = \fC''\fP)"
+Loads a specified Graphene wallet\&.
+.PP
+The current wallet is closed before the new wallet is loaded\&.
+.PP
+\fBWarning:\fP
+.RS 4
+This does not change the filename that will be used for future wallet writes, so this may cause you to overwrite your original wallet unless you also call \fC\fBset_wallet_filename()\fP\fP 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwallet_filename\fP the filename of the wallet JSON file to load\&. If \fCwallet_filename\fP is empty, it reloads the existing wallet file 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the specified wallet is loaded 
+.RE
+.PP
+
+.SS "void aacio::wallet::wallet_api::lock ()"
+Locks the wallet immediately\&. 
+.SS "void aacio::wallet::wallet_api::save_wallet_file (string wallet_filename = \fC''\fP)"
+Saves the current wallet to the given filename\&.
+.PP
+\fBWarning:\fP
+.RS 4
+This does not change the wallet filename that will be used for future writes, so think of this function as 'Save a Copy As\&.\&.\&.' instead of 'Save As\&.\&.\&.'\&. Use \fC\fBset_wallet_filename()\fP\fP to make the filename persist\&. 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwallet_filename\fP the filename of the new wallet JSON file to create or overwrite\&. If \fCwallet_filename\fP is empty, save to the current filename\&. 
+.RE
+.PP
+
+.SS "void aacio::wallet::wallet_api::set_password (string password)"
+Sets a new password on the wallet\&.
+.PP
+The wallet must be either 'new' or 'unlocked' to execute this command\&. 
+.SS "void aacio::wallet::wallet_api::set_wallet_filename (string wallet_filename)"
+Sets the wallet filename used for future writes\&.
+.PP
+This does not trigger a save, it only changes the default filename that will be used the next time a save is triggered\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwallet_filename\fP the new filename to use for future saves 
+.RE
+.PP
+
+.SS "\fBoptional\fP< \fBprivate_key_type\fP > aacio::wallet::wallet_api::try_get_private_key (const \fBpublic_key_type\fP & id) const"
+Get the private key corresponding to a public key or nothing\&. 
+.SS "void aacio::wallet::wallet_api::unlock (string password)"
+Unlocks the wallet\&.
+.PP
+The wallet remain unlocked until the \fClock\fP is called or the program exits\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpassword\fP the password previously set with \fC\fBset_password()\fP\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

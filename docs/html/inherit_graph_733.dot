@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="chainbase::generic\l_index\< MultiIndexType\l \>::session",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classchainbase_1_1generic__index_1_1session.html"];
+}

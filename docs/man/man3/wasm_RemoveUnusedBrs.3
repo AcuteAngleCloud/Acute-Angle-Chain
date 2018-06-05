@@ -1,0 +1,80 @@
+.TH "wasm::RemoveUnusedBrs" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::RemoveUnusedBrs
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< PostWalker< RemoveUnusedBrs > >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::vector\fP< \fBExpression\fP ** > \fBFlows\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "void \fBvisitLoop\fP (\fBLoop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitIf\fP (\fBIf\fP *curr)"
+.br
+.ti -1c
+.RI "bool \fBoptimizeLoop\fP (\fBLoop\fP *loop)"
+.br
+.ti -1c
+.RI "void \fBdoWalkFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBvisitAny\fP (\fBRemoveUnusedBrs\fP *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBclear\fP (\fBRemoveUnusedBrs\fP *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBsaveIfTrue\fP (\fBRemoveUnusedBrs\fP *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBscan\fP (\fBRemoveUnusedBrs\fP *self, \fBExpression\fP **currp)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBanotherCycle\fP"
+.br
+.ti -1c
+.RI "bool \fBvalueCanFlow\fP"
+.br
+.ti -1c
+.RI "\fBFlows\fP \fBflows\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBFlows\fP > \fBifStack\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBLoop\fP * > \fBloops\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

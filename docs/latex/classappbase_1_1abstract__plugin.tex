@@ -1,0 +1,68 @@
+\hypertarget{classappbase_1_1abstract__plugin}{}\section{appbase\+:\+:abstract\+\_\+plugin Class Reference}
+\label{classappbase_1_1abstract__plugin}\index{appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}}
+
+
+Inheritance diagram for appbase\+:\+:abstract\+\_\+plugin\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408}{state}} \{ \mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408ac712ce3482a78b8bf87080aefd77cf7d}{registered}}, 
+\mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a9ae208bba76e9c0eab1cac52953f947b}{initialized}}, 
+\mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a808ebbf475942017567644697eca3224}{started}}, 
+\mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a320c2eebb5306f385aebfca07336d29e}{stopped}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a8a035293a88d04abf64883c45ac466a5}\label{classappbase_1_1abstract__plugin_a8a035293a88d04abf64883c45ac466a5}} 
+virtual \mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408}{state}} {\bfseries get\+\_\+state} () const =0
+\item 
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_afc5e65cf3fcb92e8819c82ea755cbc56}\label{classappbase_1_1abstract__plugin_afc5e65cf3fcb92e8819c82ea755cbc56}} 
+virtual const std\+::string \& {\bfseries name} () const =0
+\item 
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a274a3c7462de3c699a8eb23741ed7655}\label{classappbase_1_1abstract__plugin_a274a3c7462de3c699a8eb23741ed7655}} 
+virtual void {\bfseries set\+\_\+program\+\_\+options} (options\+\_\+description \&cli, options\+\_\+description \&cfg)=0
+\item 
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a7d8521f978f28ee7689ae336afd64a34}\label{classappbase_1_1abstract__plugin_a7d8521f978f28ee7689ae336afd64a34}} 
+virtual void {\bfseries initialize} (const variables\+\_\+map \&options)=0
+\item 
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_addfbf314be55e7a774db7c65c08e58f7}\label{classappbase_1_1abstract__plugin_addfbf314be55e7a774db7c65c08e58f7}} 
+virtual void {\bfseries startup} ()=0
+\item 
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_ad615b1c385c4cb047e8adbe2e5a13322}\label{classappbase_1_1abstract__plugin_ad615b1c385c4cb047e8adbe2e5a13322}} 
+virtual void {\bfseries shutdown} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408}\label{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408}} 
+\index{appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}!state@{state}}
+\index{state@{state}!appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408}{appbase\+::abstract\+\_\+plugin\+::state}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{registered@{registered}!appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}}\index{appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}!registered@{registered}}}\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408ac712ce3482a78b8bf87080aefd77cf7d}\label{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408ac712ce3482a78b8bf87080aefd77cf7d}} 
+registered&the plugin is constructed but doesn\textquotesingle{}t do anything \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{initialized@{initialized}!appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}}\index{appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}!initialized@{initialized}}}\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a9ae208bba76e9c0eab1cac52953f947b}\label{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a9ae208bba76e9c0eab1cac52953f947b}} 
+initialized&the plugin has initialized any state required but is idle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{started@{started}!appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}}\index{appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}!started@{started}}}\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a808ebbf475942017567644697eca3224}\label{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a808ebbf475942017567644697eca3224}} 
+started&the plugin is actively running \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stopped@{stopped}!appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}}\index{appbase\+::abstract\+\_\+plugin@{appbase\+::abstract\+\_\+plugin}!stopped@{stopped}}}\mbox{\Hypertarget{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a320c2eebb5306f385aebfca07336d29e}\label{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408a320c2eebb5306f385aebfca07336d29e}} 
+stopped&the plugin is no longer running \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/appbase/include/appbase/plugin.\+hpp\end{DoxyCompactItemize}

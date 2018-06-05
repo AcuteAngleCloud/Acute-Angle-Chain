@@ -1,0 +1,57 @@
+.TH "chainbase::undo_state< value_type >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+chainbase::undo_state< value_type >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef value_type::id_type \fBid_type\fP"
+.br
+.ti -1c
+.RI "typedef allocator< std::pair< const id_type, value_type > > \fBid_value_allocator_type\fP"
+.br
+.ti -1c
+.RI "typedef allocator< id_type > \fBid_allocator_type\fP"
+.br
+.ti -1c
+.RI "typedef boost::interprocess::map< id_type, value_type, std::less< id_type >, id_value_allocator_type > \fBid_value_type_map\fP"
+.br
+.ti -1c
+.RI "typedef boost::interprocess::set< id_type, std::less< id_type >, id_allocator_type > \fBid_type_set\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBundo_state\fP (allocator< \fBT\fP > al)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "id_value_type_map \fBold_values\fP"
+.br
+.ti -1c
+.RI "id_value_type_map \fBremoved_values\fP"
+.br
+.ti -1c
+.RI "id_type_set \fBnew_ids\fP"
+.br
+.ti -1c
+.RI "id_type \fBold_next_id\fP = 0"
+.br
+.ti -1c
+.RI "int64_t \fBrevision\fP = 0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

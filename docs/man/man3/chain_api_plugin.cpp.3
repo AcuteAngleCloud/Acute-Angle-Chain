@@ -1,0 +1,80 @@
+.TH "plugins/chain_api_plugin/chain_api_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/chain_api_plugin/chain_api_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain_api_plugin/chain_api_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::chain_api_plugin_impl\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCALL\fP(api_name,  api_handle,  api_namespace,  call_name,  http_response_code)"
+.br
+.ti -1c
+.RI "#define \fBCHAIN_RO_CALL\fP(call_name,  http_response_code)   CALL(chain, ro_api, \fBchain_apis::read_only\fP, call_name, http_response_code)"
+.br
+.ti -1c
+.RI "#define \fBCHAIN_RW_CALL\fP(call_name,  http_response_code)   CALL(chain, rw_api, \fBchain_apis::read_write\fP, call_name, http_response_code)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CALL(api_name, api_handle, api_namespace, call_name, http_response_code)"
+\fBValue:\fP
+.PP
+.nf
+{std::string("/v1/" #api_name "/" #call_name), \
+   [this, api_handle](string, string body, url_response_callback cb) mutable { \
+          try { \
+             if (body\&.empty()) body = "{}"; \
+             auto result = api_handle\&.call_name(fc::json::from_string(body)\&.as<api_namespace::call_name ## _params>()); \
+             cb(http_response_code, fc::json::to_string(result)); \
+          } catch (chain::tx_missing_sigs& e) { \
+             error_results results{401, "UnAuthorized", e}; \
+             cb(401, fc::json::to_string(results)); \
+          } catch (chain::tx_duplicate& e) { \
+             error_results results{409, "Conflict", e}; \
+             cb(409, fc::json::to_string(results)); \
+          } catch (chain::transaction_exception& e) { \
+             error_results results{400, "Bad Request", e}; \
+             cb(400, fc::json::to_string(results)); \
+          } catch (fc::eof_exception& e) { \
+             error_results results{400, "Bad Request", e}; \
+             cb(400, fc::json::to_string(results)); \
+             elog("Unable to parse arguments: ${args}", ("args", body)); \
+          } catch (fc::exception& e) { \
+             error_results results{500, "Internal Service Error", e}; \
+             cb(500, fc::json::to_string(results)); \
+             elog("Exception encountered while processing ${call}: ${e}", ("call", #api_name "\&." #call_name)("e", e)); \
+          } \
+       }}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

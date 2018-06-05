@@ -1,0 +1,228 @@
+\hypertarget{print_8hpp}{}\section{contracts/aaciolib/print.hpp File Reference}
+\label{print_8hpp}\index{contracts/aaciolib/print.\+hpp@{contracts/aaciolib/print.\+hpp}}
+{\ttfamily \#include $<$aaciolib/print.\+h$>$}\newline
+{\ttfamily \#include $<$aaciolib/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aaciolib/math.\+hpp$>$}\newline
+{\ttfamily \#include $<$aaciolib/fixed\+\_\+key.\+hpp$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for print.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1iostream}{aacio\+::iostream}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{print_8hpp_a291145c6469a570728575802ed6ad965}{aacio\+::print}} (const char $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Prints string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8hpp_a4dd5ab8b5da060d121190e68611960a0}{aacio\+::print}} (uint64\+\_\+t \mbox{\hyperlink{structnum}{num}})
+\begin{DoxyCompactList}\small\item\em Prints integer 64 bit unsigned integer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{print_8hpp_a5e6923f7f245f176fc01f6885972efa8}\label{print_8hpp_a5e6923f7f245f176fc01f6885972efa8}} 
+void {\bfseries aacio\+::print} (int64\+\_\+t \mbox{\hyperlink{structnum}{num}})
+\item 
+\mbox{\Hypertarget{print_8hpp_a80fdd4c92a224fec5b8699575d3079f2}\label{print_8hpp_a80fdd4c92a224fec5b8699575d3079f2}} 
+void {\bfseries aacio\+::print} (double d)
+\item 
+\mbox{\Hypertarget{print_8hpp_ad115648d1953dd907838952b924306d1}\label{print_8hpp_ad115648d1953dd907838952b924306d1}} 
+void {\bfseries aacio\+::print} (float f)
+\item 
+void \mbox{\hyperlink{print_8hpp_a33fa2767f9b5a7e5f72c907657c9fed2}{aacio\+::print}} (uint32\+\_\+t \mbox{\hyperlink{structnum}{num}})
+\begin{DoxyCompactList}\small\item\em Prints integer 32 bit unsigned integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8hpp_a730685914a2fda67e9a2af539a09cb90}{aacio\+::print}} (int \mbox{\hyperlink{structnum}{num}})
+\begin{DoxyCompactList}\small\item\em Prints integer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{print_8hpp_a926cc2eb5b775c0377ba247b2ef7440a}\label{print_8hpp_a926cc2eb5b775c0377ba247b2ef7440a}} 
+void {\bfseries aacio\+::print} (long \mbox{\hyperlink{structnum}{num}})
+\item 
+void \mbox{\hyperlink{print_8hpp_a5ad7171e0a6104d84282cf22c89fdea3}{aacio\+::print}} (unsigned int \mbox{\hyperlink{structnum}{num}})
+\begin{DoxyCompactList}\small\item\em Prints unsigned integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8hpp_a8961c915f35d0c45c98d70801631a48a}{aacio\+::print}} (uint128 \mbox{\hyperlink{structnum}{num}})
+\begin{DoxyCompactList}\small\item\em Prints \mbox{\hyperlink{structaacio_1_1uint128}{uint128}} struct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8hpp_a715c1d73241c86b6487a403b2211883e}{aacio\+::print}} (uint128\+\_\+t \mbox{\hyperlink{structnum}{num}})
+\begin{DoxyCompactList}\small\item\em Prints 128 bit unsigned integer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$size\+\_\+t Size$>$ }\\void \mbox{\hyperlink{print_8hpp_aab1319ae1085b47619bea8dfbce93ede}{aacio\+::print}} (const fixed\+\_\+key$<$ Size $>$ \&val)
+\begin{DoxyCompactList}\small\item\em Prints \mbox{\hyperlink{classaacio_1_1fixed__key}{fixed\+\_\+key}} as a hexidecimal string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{print_8hpp_a6ab43adada8fec6e1d7741ea10486c70}{aacio\+::print}} (name name)
+\begin{DoxyCompactList}\small\item\em Prints a 64 bit names as base32 encoded string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{print_8hpp_a33b4cb8ac76e1a2db7778e0d1569e541}\label{print_8hpp_a33b4cb8ac76e1a2db7778e0d1569e541}} 
+void {\bfseries aacio\+::print} (bool val)
+\item 
+\mbox{\Hypertarget{print_8hpp_ad721a5fa6757773e4ec2754592aa237a}\label{print_8hpp_ad721a5fa6757773e4ec2754592aa237a}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries aacio\+::print} (\mbox{\hyperlink{struct_t}{T}} \&\&t)
+\item 
+\mbox{\Hypertarget{print_8hpp_ac2b272766c5e695484893e617ef6d6f9}\label{print_8hpp_ac2b272766c5e695484893e617ef6d6f9}} 
+void {\bfseries aacio\+::print\+\_\+f} (const char $\ast$s)
+\item 
+\mbox{\Hypertarget{print_8hpp_aa9a8382c65e10da828f8cdae97e598f1}\label{print_8hpp_aa9a8382c65e10da828f8cdae97e598f1}} 
+{\footnotesize template$<$typename Arg , typename... Args$>$ }\\void {\bfseries aacio\+::print\+\_\+f} (const char $\ast$s, Arg val, Args... rest)
+\item 
+{\footnotesize template$<$typename Arg , typename... Args$>$ }\\void \mbox{\hyperlink{group__console_cppapi_ga2780132b8484a2674ef9254699d12968}{aacio\+::print}} (Arg \&\&a, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_print}{Print}} out value / list of values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\iostream \& \mbox{\hyperlink{group__console_cppapi_ga9573031ece85c11fb0baeaab3a36eb73}{aacio\+::operator$<$$<$}} (iostream \&out, const \mbox{\hyperlink{struct_t}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Overload c++ iostream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{print_8hpp_file_a291145c6469a570728575802ed6ad965}\label{print_8hpp_file_a291145c6469a570728575802ed6ad965}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints string. 
+
+Prints string 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & -\/ a null terminated string \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{print_8hpp_file_a4dd5ab8b5da060d121190e68611960a0}\label{print_8hpp_file_a4dd5ab8b5da060d121190e68611960a0}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints integer 64 bit unsigned integer. 
+
+Prints 64 bit unsigned integer as a 64 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em num} & to be printed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{print_8hpp_file_a33fa2767f9b5a7e5f72c907657c9fed2}\label{print_8hpp_file_a33fa2767f9b5a7e5f72c907657c9fed2}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints integer 32 bit unsigned integer. 
+
+Prints 32 bit unsigned integer as a 64 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em num} & to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{print_8hpp_file_a730685914a2fda67e9a2af539a09cb90}\label{print_8hpp_file_a730685914a2fda67e9a2af539a09cb90}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints integer. 
+
+Prints integer as a 64 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em num} & to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{print_8hpp_file_a5ad7171e0a6104d84282cf22c89fdea3}\label{print_8hpp_file_a5ad7171e0a6104d84282cf22c89fdea3}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{unsigned int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints unsigned integer. 
+
+Prints unsigned integer as a 64 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em num} & to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{print_8hpp_file_a8961c915f35d0c45c98d70801631a48a}\label{print_8hpp_file_a8961c915f35d0c45c98d70801631a48a}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaacio_1_1uint128}{uint128}}}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints uint128 struct. 
+
+Prints uint128 struct as 128 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em num} & to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{print_8hpp_file_a715c1d73241c86b6487a403b2211883e}\label{print_8hpp_file_a715c1d73241c86b6487a403b2211883e}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{uint128\+\_\+t}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints 128 bit unsigned integer. 
+
+Prints 128 bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em num} & to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{print_8hpp_file_aab1319ae1085b47619bea8dfbce93ede}\label{print_8hpp_file_aab1319ae1085b47619bea8dfbce93ede}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Size$>$ \\
+void aacio\+::print (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1fixed__key}{fixed\+\_\+key}}$<$ Size $>$ \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints fixed\+\_\+key as a hexidecimal string. 
+
+Prints fixed\+\_\+key as a hexidecimal string 
+\begin{DoxyParams}{Parameters}
+{\em val} & to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{print_8hpp_file_a6ab43adada8fec6e1d7741ea10486c70}\label{print_8hpp_file_a6ab43adada8fec6e1d7741ea10486c70}} 
+\index{print.\+hpp@{print.\+hpp}!print@{print}}
+\index{print@{print}!print.\+hpp@{print.\+hpp}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily void aacio\+::print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaacio_1_1name}{name}}}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints a 64 bit names as base32 encoded string. 
+
+Prints a 64 bit names as base32 encoded string 
+\begin{DoxyParams}{Parameters}
+{\em name} & 64 bit name to be printed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 10

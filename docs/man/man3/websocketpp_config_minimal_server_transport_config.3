@@ -1,0 +1,74 @@
+.TH "websocketpp::config::minimal_server::transport_config" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::config::minimal_server::transport_config
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBtype::concurrency_type\fP \fBconcurrency_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtype::elog_type\fP \fBelog_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtype::alog_type\fP \fBalog_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtype::request_type\fP \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtype::response_type\fP \fBresponse_type\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static bool const \fBenable_multithreading\fP = true"
+.br
+.ti -1c
+.RI "static const long \fBtimeout_socket_pre_init\fP = 5000"
+.br
+.RI "Default timer values (in ms) "
+.ti -1c
+.RI "static const long \fBtimeout_proxy\fP = 5000"
+.br
+.RI "Length of time to wait before a proxy handshake is aborted\&. "
+.ti -1c
+.RI "static const long \fBtimeout_socket_post_init\fP = 5000"
+.br
+.RI "Length of time to wait for socket post-initialization\&. "
+.ti -1c
+.RI "static const long \fBtimeout_dns_resolve\fP = 5000"
+.br
+.RI "Length of time to wait for dns resolution\&. "
+.ti -1c
+.RI "static const long \fBtimeout_connect\fP = 5000"
+.br
+.RI "Length of time to wait for TCP connect\&. "
+.ti -1c
+.RI "static const long \fBtimeout_socket_shutdown\fP = 5000"
+.br
+.RI "Length of time to wait for socket shutdown\&. "
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "bool const websocketpp::config::minimal_server::transport_config::enable_multithreading = true\fC [static]\fP"
+Controls compile time enabling/disabling of thread syncronization code Disabling can provide a minor performance improvement to single threaded applications 
+.SS "const long websocketpp::config::minimal_server::transport_config::timeout_socket_post_init = 5000\fC [static]\fP"
+
+.PP
+Length of time to wait for socket post-initialization\&. Exactly what this includes depends on the socket policy in use\&. Often this means the TLS handshake 
+.SS "const long websocketpp::config::minimal_server::transport_config::timeout_socket_pre_init = 5000\fC [static]\fP"
+
+.PP
+Default timer values (in ms) Length of time to wait for socket pre-initialization Exactly what this includes depends on the socket policy in use 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

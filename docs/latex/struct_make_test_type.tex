@@ -1,0 +1,55 @@
+\hypertarget{struct_make_test_type}{}\section{Make\+Test\+Type$<$ CharT $>$ Struct Template Reference}
+\label{struct_make_test_type}\index{Make\+Test\+Type$<$ Char\+T $>$@{Make\+Test\+Type$<$ Char\+T $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_make_test_type_a0084b030b846d64bdf3f540e2f224871}\label{struct_make_test_type_a0084b030b846d64bdf3f540e2f224871}} 
+using {\bfseries value\+\_\+type} = CharT
+\item 
+\mbox{\Hypertarget{struct_make_test_type_af17e3818e0fdc4b094b50531a1ce98ec}\label{struct_make_test_type_af17e3818e0fdc4b094b50531a1ce98ec}} 
+using {\bfseries string\+\_\+type} = std\+::basic\+\_\+string$<$ CharT $>$
+\item 
+\mbox{\Hypertarget{struct_make_test_type_ac71d0fe9197191bdea9f82d6315f5d61}\label{struct_make_test_type_ac71d0fe9197191bdea9f82d6315f5d61}} 
+using {\bfseries string\+\_\+type2} = std\+::basic\+\_\+string$<$ CharT, std\+::char\+\_\+traits$<$ CharT $>$, min\+\_\+allocator$<$ CharT $>$ $>$
+\item 
+\mbox{\Hypertarget{struct_make_test_type_ae6950f697ce3b197e29013717d7a76e2}\label{struct_make_test_type_ae6950f697ce3b197e29013717d7a76e2}} 
+using {\bfseries string\+\_\+view\+\_\+type} = std\+::basic\+\_\+string\+\_\+view$<$ CharT $>$
+\item 
+\mbox{\Hypertarget{struct_make_test_type_af7f053390d860e698989fc78f759cc39}\label{struct_make_test_type_af7f053390d860e698989fc78f759cc39}} 
+using {\bfseries string\+\_\+view\+\_\+type2} = std\+::basic\+\_\+string\+\_\+view$<$ CharT, \mbox{\hyperlink{structconstexpr__char__traits}{constexpr\+\_\+char\+\_\+traits}}$<$ CharT $>$ $>$
+\item 
+\mbox{\Hypertarget{struct_make_test_type_afe230920f2e1663001b4ac84de54965f}\label{struct_make_test_type_afe230920f2e1663001b4ac84de54965f}} 
+using {\bfseries cstr\+\_\+type} = CharT $\ast$const
+\item 
+\mbox{\Hypertarget{struct_make_test_type_a2de04f2fe7d5eec6bfb465aba79ba3be}\label{struct_make_test_type_a2de04f2fe7d5eec6bfb465aba79ba3be}} 
+using {\bfseries const\+\_\+cstr\+\_\+type} = const CharT $\ast$
+\item 
+\mbox{\Hypertarget{struct_make_test_type_a1c17c9dccec671ddfa2a7e60b5154044}\label{struct_make_test_type_a1c17c9dccec671ddfa2a7e60b5154044}} 
+using {\bfseries array\+\_\+type} = CharT\mbox{[}25\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_make_test_type_ac5b1067a6e6a2e259bca994994ff8b2d}\label{struct_make_test_type_ac5b1067a6e6a2e259bca994994ff8b2d}} 
+using {\bfseries const\+\_\+array\+\_\+type} = const CharT\mbox{[}25\mbox{]}
+\item 
+\mbox{\Hypertarget{struct_make_test_type_a4ca09b04b443e981ae1912af6cbbd83e}\label{struct_make_test_type_a4ca09b04b443e981ae1912af6cbbd83e}} 
+using {\bfseries iter\+\_\+type} = \mbox{\hyperlink{classinput__iterator}{input\+\_\+iterator}}$<$ CharT $\ast$ $>$
+\item 
+\mbox{\Hypertarget{struct_make_test_type_ab24b4b74262b367afb7feabd45a92be5}\label{struct_make_test_type_ab24b4b74262b367afb7feabd45a92be5}} 
+using {\bfseries bad\+\_\+iter\+\_\+type} = \mbox{\hyperlink{classinput__iterator}{input\+\_\+iterator}}$<$ signed char $\ast$ $>$
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_make_test_type_a86bdfbabec1f5c8d6b4acde25414c666}\label{struct_make_test_type_a86bdfbabec1f5c8d6b4acde25414c666}} 
+{\footnotesize template$<$class TestT $>$ }\\static void {\bfseries Assert\+Pathable} ()
+\item 
+\mbox{\Hypertarget{struct_make_test_type_a91f1a36ad6e03402808289eea2ecb4e9}\label{struct_make_test_type_a91f1a36ad6e03402808289eea2ecb4e9}} 
+{\footnotesize template$<$class TestT $>$ }\\static void {\bfseries Assert\+Not\+Pathable} ()
+\item 
+\mbox{\Hypertarget{struct_make_test_type_ac28de384f86c34947d2ce456da750b52}\label{struct_make_test_type_ac28de384f86c34947d2ce456da750b52}} 
+static void {\bfseries Test} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/libcxx/experimental/filesystem/class.\+path/path.\+req/is\+\_\+pathable.\+pass.\+cpp\end{DoxyCompactItemize}

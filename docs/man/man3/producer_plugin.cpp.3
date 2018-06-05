@@ -1,0 +1,75 @@
+.TH "plugins/producer_plugin/producer_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/producer_plugin/producer_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/producer_plugin/producer_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/net_plugin/net_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/chain/producer_object\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+\fC#include <fc/smart_ref_impl\&.hpp>\fP
+.br
+\fC#include <boost/asio\&.hpp>\fP
+.br
+\fC#include <boost/date_time/posix_time/posix_time\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::producer_plugin_impl\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOAD_VALUE_SET\fP(options,  \fBname\fP,  container,  type)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaacio::new_chain_banner\fP (const \fBaacio::chain::chain_controller\fP &db)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBaacio::dejsonify\fP (const string &s)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOAD_VALUE_SET(options, \fBname\fP, container, type)"
+\fBValue:\fP
+.PP
+.nf
+if( options\&.count(name) ) { \
+   const std::vector<std::string>& ops = options[name]\&.as<std::vector<std::string>>(); \
+   std::copy(ops\&.begin(), ops\&.end(), std::inserter(container, container\&.end())); \
+}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

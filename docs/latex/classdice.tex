@@ -1,0 +1,45 @@
+\hypertarget{classdice}{}\section{dice Class Reference}
+\label{classdice}\index{dice@{dice}}
+
+
+Inheritance diagram for dice\+:
+% FIG 0
+
+
+Collaboration diagram for dice\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdice_a623f1f179889abb7278c799f8c4cc683}\label{classdice_a623f1f179889abb7278c799f8c4cc683}} 
+{\bfseries dice} (account\+\_\+name self)
+\item 
+\mbox{\Hypertarget{classdice_a736be4404e75ca6c832aa8b78c9c1b80}\label{classdice_a736be4404e75ca6c832aa8b78c9c1b80}} 
+void {\bfseries offerbet} (const \mbox{\hyperlink{structaacio_1_1asset}{asset}} \&bet, const account\+\_\+name player, const \mbox{\hyperlink{structchecksum256}{checksum256}} \&commitment)
+\item 
+\mbox{\Hypertarget{classdice_a9af24c27b8b12806a9acf01d0c6fbe4d}\label{classdice_a9af24c27b8b12806a9acf01d0c6fbe4d}} 
+void {\bfseries canceloffer} (const \mbox{\hyperlink{structchecksum256}{checksum256}} \&commitment)
+\item 
+\mbox{\Hypertarget{classdice_a9809109c1d49e157d4a507e63a290ff9}\label{classdice_a9809109c1d49e157d4a507e63a290ff9}} 
+void {\bfseries reveal} (const \mbox{\hyperlink{structchecksum256}{checksum256}} \&commitment, const \mbox{\hyperlink{structchecksum256}{checksum256}} \&\mbox{\hyperlink{structsource}{source}})
+\item 
+\mbox{\Hypertarget{classdice_a8b5a03abeb022088685abf8d43fce073}\label{classdice_a8b5a03abeb022088685abf8d43fce073}} 
+void {\bfseries claimexpired} (const uint64\+\_\+t gameid)
+\item 
+\mbox{\Hypertarget{classdice_a04668aef3b4ec90f2f5810e67408c67b}\label{classdice_a04668aef3b4ec90f2f5810e67408c67b}} 
+void {\bfseries deposit} (const account\+\_\+name from, const \mbox{\hyperlink{structaacio_1_1asset}{asset}} \&a)
+\item 
+\mbox{\Hypertarget{classdice_a8f0860af7ba0c43ca3bdf979b36baab7}\label{classdice_a8f0860af7ba0c43ca3bdf979b36baab7}} 
+void {\bfseries withdraw} (const account\+\_\+name to, const \mbox{\hyperlink{structaacio_1_1asset}{asset}} \&a)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdice_ad7c3524f00c34c786834f896110e0419}\label{classdice_ad7c3524f00c34c786834f896110e0419}} 
+const uint32\+\_\+t {\bfseries F\+I\+V\+E\+\_\+\+M\+I\+N\+U\+T\+ES} = 5$\ast$60
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/dice/\mbox{\hyperlink{dice_8cpp}{dice.\+cpp}}\end{DoxyCompactItemize}

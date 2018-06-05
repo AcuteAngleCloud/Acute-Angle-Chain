@@ -1,0 +1,29 @@
+.TH "boost::pfr::detail::is_constexpr_aggregate_initializable< T, I >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+boost::pfr::detail::is_constexpr_aggregate_initializable< T, I >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<T  = T{ ubiq_constructor_constexpr_copy{I}\&.\&.\&. }> static std::true_type \fBtest\fP (long) noexcept"
+.br
+.ti -1c
+.RI "static std::false_type \fBtest\fP (\&.\&.\&.) noexcept"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static decltype(\fBtest\fP(0)) constexpr \fBvalue\fP {}"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

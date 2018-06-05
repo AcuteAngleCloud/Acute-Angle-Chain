@@ -1,0 +1,53 @@
+\hypertarget{structwasm_1_1_unique_name_mapper}{}\section{wasm\+:\+:Unique\+Name\+Mapper Struct Reference}
+\label{structwasm_1_1_unique_name_mapper}\index{wasm\+::\+Unique\+Name\+Mapper@{wasm\+::\+Unique\+Name\+Mapper}}
+
+
+Collaboration diagram for wasm\+:\+:Unique\+Name\+Mapper\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a51740094f21a48226975e4bd4944b05a}\label{structwasm_1_1_unique_name_mapper_a51740094f21a48226975e4bd4944b05a}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries get\+Prefixed\+Name} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} prefix)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a9ce52885a7093307a0d3842299f9ed69}\label{structwasm_1_1_unique_name_mapper_a9ce52885a7093307a0d3842299f9ed69}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries push\+Label\+Name} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} s\+Name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a664e3d903e0da837d41dcc217c4ff62a}\label{structwasm_1_1_unique_name_mapper_a664e3d903e0da837d41dcc217c4ff62a}} 
+void {\bfseries pop\+Label\+Name} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a9c88dfc0b2411ac4246cfeed18dc27c2}\label{structwasm_1_1_unique_name_mapper_a9c88dfc0b2411ac4246cfeed18dc27c2}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries source\+To\+Unique} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} s\+Name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a8f851973730c13bdfe016b426c62b63e}\label{structwasm_1_1_unique_name_mapper_a8f851973730c13bdfe016b426c62b63e}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries unique\+To\+Source} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_aafb0a2475cb6ad195c36b15732ddf2f9}\label{structwasm_1_1_unique_name_mapper_aafb0a2475cb6ad195c36b15732ddf2f9}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_ad87862462f3fef6da670d2776b82ed6c}\label{structwasm_1_1_unique_name_mapper_ad87862462f3fef6da670d2776b82ed6c}} 
+static void {\bfseries uniquify} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a1196d38a1750f83751ed5e6c773a2922}\label{structwasm_1_1_unique_name_mapper_a1196d38a1750f83751ed5e6c773a2922}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries label\+Stack}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a665491b91c185b9bcc2de4883d643f15}\label{structwasm_1_1_unique_name_mapper_a665491b91c185b9bcc2de4883d643f15}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ $>$ {\bfseries label\+Mappings}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_a60560a6f37e19d743df55cf7101f35e4}\label{structwasm_1_1_unique_name_mapper_a60560a6f37e19d743df55cf7101f35e4}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries reverse\+Label\+Mapping}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_unique_name_mapper_adfec5e06cf33f19c8e967cb5e3e44846}\label{structwasm_1_1_unique_name_mapper_adfec5e06cf33f19c8e967cb5e3e44846}} 
+Index {\bfseries other\+Index} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/parsing.\+h\end{DoxyCompactItemize}

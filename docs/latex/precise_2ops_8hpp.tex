@@ -1,0 +1,70 @@
+\hypertarget{precise_2ops_8hpp}{}\section{externals/magic\+\_\+get/include/boost/pfr/precise/ops.hpp File Reference}
+\label{precise_2ops_8hpp}\index{externals/magic\+\_\+get/include/boost/pfr/precise/ops.\+hpp@{externals/magic\+\_\+get/include/boost/pfr/precise/ops.\+hpp}}
+{\ttfamily \#include $<$boost/pfr/detail/config.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/detail/detectors.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/precise/functors.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/precise/core.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/precise/io.\+hpp$>$}\newline
+Include dependency graph for ops.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_ab211451f438f6e0bdb706fa6522a5943}\label{precise_2ops_8hpp_ab211451f438f6e0bdb706fa6522a5943}} 
+{\footnotesize template$<$template$<$ class, class $>$ class Detector, class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t} = typename std\+::enable\+\_\+if$<$ not\+\_\+appliable$<$ Detector, \mbox{\hyperlink{struct_t}{T}} const  \&, \mbox{\hyperlink{struct_t}{T}} const  \& $>$\+::value, bool $>$\+::type
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_af9ad1d96ca0a43df88bbcc5fb01ab7a3}\label{precise_2ops_8hpp_af9ad1d96ca0a43df88bbcc5fb01ab7a3}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+eq\+\_\+comp\+\_\+t} = enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+eq\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_a7b86bd7a7fddf3ec39bc17f1eb8633d5}\label{precise_2ops_8hpp_a7b86bd7a7fddf3ec39bc17f1eb8633d5}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+ne\+\_\+comp\+\_\+t} = enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+ne\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_a7d97d4fa74ba1a820933646cb464165f}\label{precise_2ops_8hpp_a7d97d4fa74ba1a820933646cb464165f}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+lt\+\_\+comp\+\_\+t} = enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+lt\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_a1cfc71cb35a029e39354369910427ba0}\label{precise_2ops_8hpp_a1cfc71cb35a029e39354369910427ba0}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+le\+\_\+comp\+\_\+t} = enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+le\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_ae9b779d5313391c6458ce4c059a3a9c0}\label{precise_2ops_8hpp_ae9b779d5313391c6458ce4c059a3a9c0}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+gt\+\_\+comp\+\_\+t} = enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+gt\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_a965e97d5c9960343d0852cda37f72759}\label{precise_2ops_8hpp_a965e97d5c9960343d0852cda37f72759}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+ge\+\_\+comp\+\_\+t} = enable\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+ge\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_aa6aee73aa02bc420aded4b5f89eabfc5}\label{precise_2ops_8hpp_aa6aee73aa02bc420aded4b5f89eabfc5}} 
+{\footnotesize template$<$class Stream , class Type $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+ostreamable\+\_\+t} = typename std\+::enable\+\_\+if$<$ not\+\_\+appliable$<$ ostreamable\+\_\+detector, Stream \&, \mbox{\hyperlink{struct_type}{Type}} const  \& $>$\+::value, Stream \&$>$\+::type
+\item 
+\mbox{\Hypertarget{precise_2ops_8hpp_a2f21c3f064896c7da237a339656ac41b}\label{precise_2ops_8hpp_a2f21c3f064896c7da237a339656ac41b}} 
+{\footnotesize template$<$class Stream , class Type $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+not\+\_\+istreamable\+\_\+t} = typename std\+::enable\+\_\+if$<$ not\+\_\+appliable$<$ istreamable\+\_\+detector, Stream \&, \mbox{\hyperlink{struct_type}{Type}} \& $>$\+::value, Stream \&$>$\+::type
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains comparison operators and stream operators for types that do not have their own operators. If type is comparable or streamable using it\textquotesingle{}s own operator or it\textquotesingle{}s conversion operator, then the original operator is used.
+
+Just write {\bfseries using} {\bfseries namespace} {\bfseries ops}; and operators will be available in scope.
+
+{\bfseries Requires\+:} C++17 or \{C++14 constexpr aggregate intializable type\}.
+
+{\bfseries Example\+:} 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <\mbox{\hyperlink{precise_2ops_8hpp}{boost/pfr/precise/ops.hpp}}>}
+\textcolor{keyword}{struct }\mbox{\hyperlink{structcomparable__struct}{comparable\_struct}} \{      \textcolor{comment}{// No operators defined for that structure}
+    \textcolor{keywordtype}{int} i; \textcolor{keywordtype}{short} s; \textcolor{keywordtype}{char} data[7]; \textcolor{keywordtype}{bool} bl; \textcolor{keywordtype}{int} a,b,c,d,e,f;
+\};
+\textcolor{comment}{// ...}
+
+\textcolor{keyword}{using namespace }ops;
+
+\mbox{\hyperlink{structcomparable__struct}{comparable\_struct}} s1 \{0, 1, \textcolor{stringliteral}{"Hello"}, \textcolor{keyword}{false}, 6,7,8,9,10,11\};
+\mbox{\hyperlink{structcomparable__struct}{comparable\_struct}} s2 \{0, 1, \textcolor{stringliteral}{"Hello"}, \textcolor{keyword}{false}, 6,7,8,9,10,11111\};
+assert(s1 < s2);
+std::cout << s1 << std::endl; \textcolor{comment}{// Outputs: \{0, 1, H, e, l, l, o, , , 0, 6, 7, 8, 9, 10, 11\}}
+\end{DoxyCode}
+
+
+for other ways to define operators and more details.
+
+{\bfseries This} {\bfseries header} {\bfseries contains\+:} 

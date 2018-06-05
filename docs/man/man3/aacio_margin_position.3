@@ -1,0 +1,43 @@
+.TH "aacio::margin_position" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::margin_position
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <market_state\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint64_t \fBget_call\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBprimary_key\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBaccount_name\fP \fBowner\fP"
+.br
+.ti -1c
+.RI "\fBextended_asset\fP \fBborrowed\fP"
+.br
+.ti -1c
+.RI "\fBextended_asset\fP \fBcollateral\fP"
+.br
+.ti -1c
+.RI "double \fBcall_price\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+We calculate a unique scope for each market/borrowed_symbol/collateral_symbol and then instantiate a table of margin positions\&.\&.\&. with in this table each user has exactly one position and therefore the owner can serve as the primary key\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

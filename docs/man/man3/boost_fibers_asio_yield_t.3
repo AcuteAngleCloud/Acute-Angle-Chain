@@ -1,0 +1,39 @@
+.TH "boost::fibers::asio::yield_t" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+boost::fibers::asio::yield_t
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fByield_t\fP \fBoperator[]\fP (boost::system::error_code &ec) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "boost::system::error_code * \fBec_\fP { nullptr }"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "\fByield_t\fP boost::fibers::asio::yield_t::operator[] (boost::system::error_code & ec) const\fC [inline]\fP"
+
+.PP
+.nf
+static yield_t yield;
+boost::system::error_code myec;
+func(yield[myec]);
+
+.fi
+.PP
+ \fCyield\fP[myec] returns an instance of \fC\fByield_t\fP\fP whose \fCec_\fP points to \fCmyec\fP\&. The expression \fCyield\fP[myec] 'binds' \fCmyec\fP to that (anonymous) \fC\fByield_t\fP\fP instance, instructing \fC\fBfunc()\fP\fP to store any \fCerror_code\fP it might produce into \fCmyec\fP rather than throwing \fCboost::system::system_error\fP\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

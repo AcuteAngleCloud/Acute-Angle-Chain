@@ -1,0 +1,141 @@
+.TH "aaciosystem::voting< SystemAccount >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aaciosystem::voting< SystemAccount >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBaaciosystem::delegate_bandwidth< SystemAccount >\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBproducer_info\fP"
+.br
+.ti -1c
+.RI "struct \fBvoter_info\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBcurrency\fP = typename \fBcommon\fP< SystemAccount >::currency"
+.br
+.ti -1c
+.RI "using \fBsystem_token_type\fP = typename \fBcommon\fP< SystemAccount >::system_token_type"
+.br
+.ti -1c
+.RI "using \fBaacio_parameters\fP = typename \fBcommon\fP< SystemAccount >::aacio_parameters"
+.br
+.ti -1c
+.RI "using \fBglobal_state_singleton\fP = typename \fBcommon\fP< SystemAccount >::global_state_singleton"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< \fBN\fP(producerinfo), \fBproducer_info\fP, \fBindexed_by\fP< \fBN\fP(prototalvote), const_mem_fun< \fBproducer_info\fP, uint128_t, &producer_info::by_votes > > > \fBproducers_table\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< \fBN\fP(voters), \fBvoter_info\fP > \fBvoters_table\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBACTION\fP (SystemAccount, regproducer)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (SystemAccount, unregprod)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (SystemAccount, voteproducer)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (SystemAccount, regproxy)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (SystemAccount, unregproxy)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBon\fP (const regproducer &\fBreg\fP)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const unregprod &unreg)"
+.br
+.ti -1c
+.RI "static void \fBincrease_voting_power\fP (account_name acnt, system_token_type amount)"
+.br
+.ti -1c
+.RI "static void \fBdecrease_voting_power\fP (account_name acnt, system_token_type amount)"
+.br
+.ti -1c
+.RI "static system_token_type \fBpayment_per_block\fP (uint32_t percent_of_max_inflation_rate)"
+.br
+.ti -1c
+.RI "static void \fBupdate_elected_producers\fP (time cycle_time)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const voteproducer &vp)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const regproxy &\fBreg\fP)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const unregproxy &\fBreg\fP)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr account_name \fBsystem_account\fP = SystemAccount"
+.br
+.ti -1c
+.RI "static constexpr uint32_t \fBmax_inflation_rate\fP = \fBcommon\fP<SystemAccount>::max_inflation_rate"
+.br
+.ti -1c
+.RI "static constexpr uint32_t \fBblocks_per_year\fP = 52*7*24*2*3600"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<account_name SystemAccount> static void \fBaaciosystem::voting\fP< SystemAccount >::on (const regproducer & reg)\fC [inline]\fP, \fC [static]\fP"
+This method will create a producer_config and \fBproducer_info\fP object for 'producer'
+.PP
+\fBPrecondition:\fP
+.RS 4
+producer is not already registered 
+.PP
+producer to register is an account 
+.PP
+authority of producer to register 
+.RE
+.PP
+
+.SS "template<account_name SystemAccount> static void \fBaaciosystem::voting\fP< SystemAccount >::on (const voteproducer & vp)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+\fBPrecondition:\fP
+.RS 4
+vp\&.producers must be sorted from lowest to highest 
+.PP
+if proxy is set then no producers can be voted for 
+.PP
+every listed producer or proxy must have been previously registered 
+.PP
+vp\&.voter must authorize this action 
+.PP
+voter must have previously staked some AAC for voting 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

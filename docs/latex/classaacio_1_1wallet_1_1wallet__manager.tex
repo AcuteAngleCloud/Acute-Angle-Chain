@@ -1,0 +1,255 @@
+\hypertarget{classaacio_1_1wallet_1_1wallet__manager}{}\section{aacio\+:\+:wallet\+:\+:wallet\+\_\+manager Class Reference}
+\label{classaacio_1_1wallet_1_1wallet__manager}\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+
+
+{\ttfamily \#include $<$wallet\+\_\+manager.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a0547be5d34ce11dd4ccf8cfc7b198bb8}\label{classaacio_1_1wallet_1_1wallet__manager_a0547be5d34ce11dd4ccf8cfc7b198bb8}} 
+{\bfseries wallet\+\_\+manager} (const \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a928cfb7c90206f8d14c890be4d839647}\label{classaacio_1_1wallet_1_1wallet__manager_a928cfb7c90206f8d14c890be4d839647}} 
+{\bfseries wallet\+\_\+manager} (\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a4e37ec3e71d3ca2bfeca314a7e5ad832}\label{classaacio_1_1wallet_1_1wallet__manager_a4e37ec3e71d3ca2bfeca314a7e5ad832}} 
+\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a39adda4cd1923c3f423e1b701d128370}\label{classaacio_1_1wallet_1_1wallet__manager_a39adda4cd1923c3f423e1b701d128370}} 
+\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} \& {\bfseries operator=} (\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a06718c234c36be68c39f63d343eb5289}{set\+\_\+dir}} (const boost\+::filesystem\+::path \&p)
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a0c90d0e8e821ca501a293b4aaa8fe6f2}{set\+\_\+timeout}} (const std\+::chrono\+::seconds \&t)
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a13796a3bd3609d3ffb6ee24fa597e403}{set\+\_\+timeout}} (int64\+\_\+t secs)
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a0fc7c8f5fa99432d546e36ed450ac9c4}\label{classaacio_1_1wallet_1_1wallet__manager_a0fc7c8f5fa99432d546e36ed450ac9c4}} 
+void {\bfseries set\+\_\+aacio\+\_\+key} (const std\+::string \&key)
+\item 
+\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{chain\+::signed\+\_\+transaction}} \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a0538c4f333acbee8b940d1df8a50a883}{sign\+\_\+transaction}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{chain\+::signed\+\_\+transaction}} \&txn, const flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \&keys, const \mbox{\hyperlink{classfc_1_1sha256}{chain\+::chain\+\_\+id\+\_\+type}} \&id)
+\item 
+std\+::string \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a3f00a9c85f0bbef53137253bc020e467}{create}} (const std\+::string \&\mbox{\hyperlink{structaacio_1_1name}{name}})
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_aa0fecf0fb922ca2baeac6f2ff049d6a1}{open}} (const std\+::string \&\mbox{\hyperlink{structaacio_1_1name}{name}})
+\item 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_aeb011a9b1bce04ceb3c84c526b6f50ad}{list\+\_\+wallets}} ()
+\item 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a4ab2d003046199009f52e6600f041dec}{list\+\_\+keys}} ()
+\item 
+flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_aeb2f671ec95e19c2da2170774c0db627}{get\+\_\+public\+\_\+keys}} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a9a428038f33268fddfd05b831fee3170}\label{classaacio_1_1wallet_1_1wallet__manager_a9a428038f33268fddfd05b831fee3170}} 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a9a428038f33268fddfd05b831fee3170}{lock\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Locks all the unlocked wallets. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_aa42127c86142365f2bd51dc1232db9c8}{lock}} (const std\+::string \&\mbox{\hyperlink{structaacio_1_1name}{name}})
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a9ba50fc7c2965c28ccbdeaf82bf818e1}{unlock}} (const std\+::string \&\mbox{\hyperlink{structaacio_1_1name}{name}}, const std\+::string \&password)
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_abd33e1ad084b2ba18398848f99ab62fe}{import\+\_\+key}} (const std\+::string \&\mbox{\hyperlink{structaacio_1_1name}{name}}, const std\+::string \&wif\+\_\+key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides associate of wallet name to wallet and manages the interaction with each wallet.
+
+The name of the wallet is also used as part of the file name by \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api}{wallet\+\_\+api}}. See \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a3f00a9c85f0bbef53137253bc020e467}{wallet\+\_\+manager\+::create}}. No const methods because timeout may cause \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a9a428038f33268fddfd05b831fee3170}{lock\+\_\+all()}} to be called. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a3f00a9c85f0bbef53137253bc020e467}\label{classaacio_1_1wallet_1_1wallet__manager_a3f00a9c85f0bbef53137253bc020e467}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!create@{create}}
+\index{create@{create}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::string aacio\+::wallet\+::wallet\+\_\+manager\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Create a new wallet. \mbox{\hyperlink{struct_a}{A}} new wallet is created in file dir/\{name\}.wallet see set\+\_\+dir. The new wallet is unlocked after creation. 
+\begin{DoxyParams}{Parameters}
+{\em name} & of the wallet and name of the file without ext .wallet. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Plaintext password that is needed to unlock wallet. Caller is responsible for saving password otherwise they will not be able to unlock their wallet. Note user supplied passwords are not supported. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if wallet with name already exists (or filename already exists) \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_aeb2f671ec95e19c2da2170774c0db627}\label{classaacio_1_1wallet_1_1wallet__manager_aeb2f671ec95e19c2da2170774c0db627}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!get\+\_\+public\+\_\+keys@{get\+\_\+public\+\_\+keys}}
+\index{get\+\_\+public\+\_\+keys@{get\+\_\+public\+\_\+keys}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{get\+\_\+public\+\_\+keys()}{get\_public\_keys()}}
+{\footnotesize\ttfamily flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ aacio\+::wallet\+::wallet\+\_\+manager\+::get\+\_\+public\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} set of public keys from all unlocked wallets, use with \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_af2f9f9c166af2e8d8dc8811d242e872a}{chain\+\_\+controller\+::get\+\_\+required\+\_\+keys}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_abd33e1ad084b2ba18398848f99ab62fe}\label{classaacio_1_1wallet_1_1wallet__manager_abd33e1ad084b2ba18398848f99ab62fe}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!import\+\_\+key@{import\+\_\+key}}
+\index{import\+\_\+key@{import\+\_\+key}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{import\+\_\+key()}{import\_key()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::import\+\_\+key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{wif\+\_\+key }\end{DoxyParamCaption})}
+
+Import private key into specified wallet. Imports a W\+IF Private \mbox{\hyperlink{struct_key}{Key}} into specified wallet. Wallet must be opened and unlocked. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the wallet to import into. \\
+\hline
+{\em wif\+\_\+key} & the W\+IF Private \mbox{\hyperlink{struct_key}{Key}} to import, e.\+g. 5\+Jgm1\+N6jp3i\+Nb\+F\+M45k\+Ptj66xmbq\+T9f\+Su\+V\+Jg\+P\+Wfn\+C\+S\+Pg\+Qanv\+W6mJ \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if wallet not found or locked. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a4ab2d003046199009f52e6600f041dec}\label{classaacio_1_1wallet_1_1wallet__manager_a4ab2d003046199009f52e6600f041dec}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!list\+\_\+keys@{list\+\_\+keys}}
+\index{list\+\_\+keys@{list\+\_\+keys}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{list\+\_\+keys()}{list\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ aacio\+::wallet\+::wallet\+\_\+manager\+::list\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} list of private keys from all unlocked wallets in wif format. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_aeb011a9b1bce04ceb3c84c526b6f50ad}\label{classaacio_1_1wallet_1_1wallet__manager_aeb011a9b1bce04ceb3c84c526b6f50ad}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!list\+\_\+wallets@{list\+\_\+wallets}}
+\index{list\+\_\+wallets@{list\+\_\+wallets}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{list\+\_\+wallets()}{list\_wallets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ aacio\+::wallet\+::wallet\+\_\+manager\+::list\+\_\+wallets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} list of wallet names with \char`\"{} $\ast$\char`\"{} appended if the wallet is unlocked. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_aa42127c86142365f2bd51dc1232db9c8}\label{classaacio_1_1wallet_1_1wallet__manager_aa42127c86142365f2bd51dc1232db9c8}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!lock@{lock}}
+\index{lock@{lock}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::lock (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Lock the specified wallet. No-\/op if wallet already locked. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the wallet to lock. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if wallet with name not found. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_aa0fecf0fb922ca2baeac6f2ff049d6a1}\label{classaacio_1_1wallet_1_1wallet__manager_aa0fecf0fb922ca2baeac6f2ff049d6a1}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!open@{open}}
+\index{open@{open}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+Open an existing wallet file dir/\{name\}.wallet. Note this does not unlock the wallet, see \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a9ba50fc7c2965c28ccbdeaf82bf818e1}{wallet\+\_\+manager\+::unlock}}. 
+\begin{DoxyParams}{Parameters}
+{\em name} & of the wallet file (minus ext .wallet) to open. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if unable to find/open the wallet file. \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a06718c234c36be68c39f63d343eb5289}\label{classaacio_1_1wallet_1_1wallet__manager_a06718c234c36be68c39f63d343eb5289}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!set\+\_\+dir@{set\+\_\+dir}}
+\index{set\+\_\+dir@{set\+\_\+dir}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{set\+\_\+dir()}{set\_dir()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::set\+\_\+dir (\begin{DoxyParamCaption}\item[{const boost\+::filesystem\+::path \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the path for location of wallet files. 
+\begin{DoxyParams}{Parameters}
+{\em p} & path to override default ./ location of wallet files. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a0c90d0e8e821ca501a293b4aaa8fe6f2}\label{classaacio_1_1wallet_1_1wallet__manager_a0c90d0e8e821ca501a293b4aaa8fe6f2}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!set\+\_\+timeout@{set\+\_\+timeout}}
+\index{set\+\_\+timeout@{set\+\_\+timeout}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{set\+\_\+timeout()}{set\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::set\+\_\+timeout (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::seconds \&}]{t }\end{DoxyParamCaption})}
+
+Set the timeout for locking all wallets. If set then after t seconds of inactivity then \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a9a428038f33268fddfd05b831fee3170}{lock\+\_\+all()}}. Activity is defined as any \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager}{wallet\+\_\+manager}} method call below. Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a13796a3bd3609d3ffb6ee24fa597e403}\label{classaacio_1_1wallet_1_1wallet__manager_a13796a3bd3609d3ffb6ee24fa597e403}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!set\+\_\+timeout@{set\+\_\+timeout}}
+\index{set\+\_\+timeout@{set\+\_\+timeout}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{set\+\_\+timeout()}{set\_timeout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::set\+\_\+timeout (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{secs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__manager_a0c90d0e8e821ca501a293b4aaa8fe6f2}{wallet\+\_\+manager\+::set\+\_\+timeout(const std\+::chrono\+::seconds\& t)}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em secs} & The timeout in seconds. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 7
+Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a0538c4f333acbee8b940d1df8a50a883}\label{classaacio_1_1wallet_1_1wallet__manager_a0538c4f333acbee8b940d1df8a50a883}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!sign\+\_\+transaction@{sign\+\_\+transaction}}
+\index{sign\+\_\+transaction@{sign\+\_\+transaction}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{sign\+\_\+transaction()}{sign\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{chain\+::signed\+\_\+transaction}} aacio\+::wallet\+::wallet\+\_\+manager\+::sign\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{chain\+::signed\+\_\+transaction}} \&}]{txn,  }\item[{const flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \&}]{keys,  }\item[{const \mbox{\hyperlink{classfc_1_1sha256}{chain\+::chain\+\_\+id\+\_\+type}} \&}]{id }\end{DoxyParamCaption})}
+
+Sign transaction with the private keys specified via their public keys. Use \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_af2f9f9c166af2e8d8dc8811d242e872a}{chain\+\_\+controller\+::get\+\_\+required\+\_\+keys}} to determine which keys are needed for txn. 
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction to sign. \\
+\hline
+{\em keys} & the public keys of the corresponding private keys to sign the transaction with \\
+\hline
+{\em id} & the chain\+\_\+id to sign transaction with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+txn signed 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if corresponding private keys not found in unlocked wallets \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__manager_a9ba50fc7c2965c28ccbdeaf82bf818e1}\label{classaacio_1_1wallet_1_1wallet__manager_a9ba50fc7c2965c28ccbdeaf82bf818e1}} 
+\index{aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}!unlock@{unlock}}
+\index{unlock@{unlock}!aacio\+::wallet\+::wallet\+\_\+manager@{aacio\+::wallet\+::wallet\+\_\+manager}}
+\subsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+manager\+::unlock (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{password }\end{DoxyParamCaption})}
+
+Unlock the specified wallet. The wallet remains unlocked until \+::lock is called or program exit. 
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the wallet to lock. \\
+\hline
+{\em password} & the plaintext password returned from \+::create. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if wallet not found or invalid password. \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+% FIG 9
+Here is the caller graph for this function\+:
+% FIG 10
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/wallet\+\_\+plugin/include/aacio/wallet\+\_\+plugin/\mbox{\hyperlink{wallet__manager_8hpp}{wallet\+\_\+manager.\+hpp}}\item 
+plugins/wallet\+\_\+plugin/\mbox{\hyperlink{wallet__manager_8cpp}{wallet\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

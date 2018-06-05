@@ -1,0 +1,59 @@
+\hypertarget{classwasm_1_1_standalone_expression_runner}{}\section{wasm\+:\+:Standalone\+Expression\+Runner Class Reference}
+\label{classwasm_1_1_standalone_expression_runner}\index{wasm\+::\+Standalone\+Expression\+Runner@{wasm\+::\+Standalone\+Expression\+Runner}}
+
+
+Inheritance diagram for wasm\+:\+:Standalone\+Expression\+Runner\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Standalone\+Expression\+Runner\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_standalone_expression_runner_1_1_nonstandalone_exception}{Nonstandalone\+Exception}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a08235b85f8e19a67f94b9aa8c5c7140a}\label{classwasm_1_1_standalone_expression_runner_a08235b85f8e19a67f94b9aa8c5c7140a}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a851062f9c8d62b27db5dc60797d0ebef}\label{classwasm_1_1_standalone_expression_runner_a851062f9c8d62b27db5dc60797d0ebef}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Call} (\mbox{\hyperlink{classwasm_1_1_call}{Call}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a0ba1e5ffd14fb5dcbe4dc712cd3699b3}\label{classwasm_1_1_standalone_expression_runner_a0ba1e5ffd14fb5dcbe4dc712cd3699b3}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Call\+Import} (\mbox{\hyperlink{classwasm_1_1_call_import}{Call\+Import}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a61eeba243bc11690862fae9f48eb53a1}\label{classwasm_1_1_standalone_expression_runner_a61eeba243bc11690862fae9f48eb53a1}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Call\+Indirect} (\mbox{\hyperlink{classwasm_1_1_call_indirect}{Call\+Indirect}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a672ab021917833d69b06c433a3ccffa8}\label{classwasm_1_1_standalone_expression_runner_a672ab021917833d69b06c433a3ccffa8}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Get\+Local} (\mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a0d20c902e659206dee810109e855cba7}\label{classwasm_1_1_standalone_expression_runner_a0d20c902e659206dee810109e855cba7}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Set\+Local} (\mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a9ad03e6ff6e9e9d231903464bda957c7}\label{classwasm_1_1_standalone_expression_runner_a9ad03e6ff6e9e9d231903464bda957c7}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Get\+Global} (\mbox{\hyperlink{classwasm_1_1_get_global}{Get\+Global}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a9aa108de94ad528c1fc55549b11a9058}\label{classwasm_1_1_standalone_expression_runner_a9aa108de94ad528c1fc55549b11a9058}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Set\+Global} (\mbox{\hyperlink{classwasm_1_1_set_global}{Set\+Global}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a78c79d3e6ad799df9300b42fbd5a6656}\label{classwasm_1_1_standalone_expression_runner_a78c79d3e6ad799df9300b42fbd5a6656}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Load} (\mbox{\hyperlink{classwasm_1_1_load}{Load}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a93bcc8832eaa6a4144f5f83c8693c791}\label{classwasm_1_1_standalone_expression_runner_a93bcc8832eaa6a4144f5f83c8693c791}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Store} (\mbox{\hyperlink{classwasm_1_1_store}{Store}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a16529cc4ad08892ff2d0812a481a00e8}\label{classwasm_1_1_standalone_expression_runner_a16529cc4ad08892ff2d0812a481a00e8}} 
+\mbox{\hyperlink{classwasm_1_1_flow}{Flow}} {\bfseries visit\+Host} (\mbox{\hyperlink{classwasm_1_1_host}{Host}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_standalone_expression_runner_a462ff9582f45c2b0b1b839583f4d57cd}\label{classwasm_1_1_standalone_expression_runner_a462ff9582f45c2b0b1b839583f4d57cd}} 
+void {\bfseries trap} (const char $\ast$why) override
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/passes/Precompute.\+cpp\end{DoxyCompactItemize}

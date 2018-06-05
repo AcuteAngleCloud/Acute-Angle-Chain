@@ -1,0 +1,46 @@
+.TH "fc::logger_config" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::logger_config
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlogger_config\fP (const fc::string &name='')"
+.br
+.ti -1c
+.RI "\fBlogger_config\fP & \fBadd_appender\fP (const string &s)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.ti -1c
+.RI "\fBostring\fP \fBparent\fP"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< \fBlog_level\fP > \fBlevel\fP"
+.br
+.RI "if not set, then parents level is used\&. "
+.ti -1c
+.RI "bool \fBenabled\fP"
+.br
+.ti -1c
+.RI "bool \fBadditivity\fP"
+.br
+.RI "if any appenders are sepecified, then parent's appenders are not set\&. "
+.ti -1c
+.RI "\fBstd::vector\fP< string > \fBappenders\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,63 @@
+.TH "IR::ObjectType" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IR::ObjectType
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObjectType\fP (const \fBFunctionType\fP *inFunction)"
+.br
+.ti -1c
+.RI "\fBObjectType\fP (\fBTableType\fP inTable)"
+.br
+.ti -1c
+.RI "\fBObjectType\fP (\fBMemoryType\fP inMemory)"
+.br
+.ti -1c
+.RI "\fBObjectType\fP (\fBGlobalType\fP inGlobal)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const ObjectKind \fBkind\fP"
+.br
+.ti -1c
+.RI "const \fBFunctionType\fP * \fBfunction\fP"
+.br
+.ti -1c
+.RI "\fBTableType\fP \fBtable\fP"
+.br
+.ti -1c
+.RI "\fBMemoryType\fP \fBmemory\fP"
+.br
+.ti -1c
+.RI "\fBGlobalType\fP \fBglobal\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "const \fBFunctionType\fP * \fBasFunctionType\fP (const \fBObjectType\fP &objectType)"
+.br
+.ti -1c
+.RI "\fBTableType\fP \fBasTableType\fP (const \fBObjectType\fP &objectType)"
+.br
+.ti -1c
+.RI "\fBMemoryType\fP \fBasMemoryType\fP (const \fBObjectType\fP &objectType)"
+.br
+.ti -1c
+.RI "\fBGlobalType\fP \fBasGlobalType\fP (const \fBObjectType\fP &objectType)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

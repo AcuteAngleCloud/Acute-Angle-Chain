@@ -1,0 +1,54 @@
+.TH "libraries/utilities/include/aacio/utilities/parallel_markers.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/utilities/include/aacio/utilities/parallel_markers.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <boost/range/combine\&.hpp>\fP
+.br
+\fC#include <boost/range/adaptor/filtered\&.hpp>\fP
+.br
+\fC#include <boost/range/adaptor/transformed\&.hpp>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename DataRange , typename MarkerRange , typename Marker > DataRange \fBaacio::utilities::filter_data_by_marker\fP (DataRange data, MarkerRange markers, const Marker &markerValue)"
+.br
+.RI "Return values in DataRange corresponding to matching Markers\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "template<typename DataRange , typename MarkerRange , typename Marker > DataRange aacio::utilities::filter_data_by_marker (DataRange data, MarkerRange markers, const Marker & markerValue)"
+
+.PP
+Return values in DataRange corresponding to matching Markers\&. Takes two parallel ranges, a Data range containing data values, and a Marker range containing markers on the corresponding data values\&. Returns a new Data range containing only the values corresponding to markers which match markerValue
+.PP
+For example: 
+.PP
+.nf
+vector<char> data = {'A', 'B', 'C'};
+vector<bool> markers = {true, false, true};
+auto markedData = FilterDataByMarker(data, markers, true);
+// markedData contains {'A', 'C'}
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

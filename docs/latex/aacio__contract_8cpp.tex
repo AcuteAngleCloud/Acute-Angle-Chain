@@ -1,0 +1,57 @@
+\hypertarget{aacio__contract_8cpp}{}\section{libraries/chain/contracts/aacio\+\_\+contract.cpp File Reference}
+\label{aacio__contract_8cpp}\index{libraries/chain/contracts/aacio\+\_\+contract.\+cpp@{libraries/chain/contracts/aacio\+\_\+contract.\+cpp}}
+{\ttfamily \#include $<$aacio/chain/contracts/aac\+\_\+contract.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/contract\+\_\+table\+\_\+objects.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/chain\+\_\+initializer.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/chain\+\_\+controller.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/apply\+\_\+context.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/transaction.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/account\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/permission\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/permission\+\_\+link\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/generated\+\_\+transaction\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/global\+\_\+property\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/producer\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/wasm\+\_\+interface.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/abi\+\_\+serializer.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/resource\+\_\+limits.\+hpp$>$}\newline
+Include dependency graph for aacio\+\_\+contract.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{aacio__contract_8cpp_ae18928058573110e7f5c35f95f027d72}\label{aacio__contract_8cpp_ae18928058573110e7f5c35f95f027d72}} 
+void {\bfseries aacio\+::chain\+::contracts\+::validate\+\_\+authority\+\_\+precondition} (const apply\+\_\+context \&context, const authority \&auth)
+\item 
+void \mbox{\hyperlink{group__native__action__handlers_ga494923d3597992d37753d77c03f572d5}{aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+newaccount}} (apply\+\_\+context \&context)
+\item 
+void \mbox{\hyperlink{group__native__action__handlers_ga347ed41f4279b42111b3864eb74955d5}{aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+setcode}} (apply\+\_\+context \&context)
+\item 
+void \mbox{\hyperlink{group__native__action__handlers_ga2ad87dd9ef3cc42d8e4a0a8b86d60901}{aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+setabi}} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+updateauth} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+deleteauth} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+linkauth} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+unlinkauth} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+onerror} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+postrecovery} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+passrecovery} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+vetorecovery} (apply\+\_\+context \&context)
+\item 
+void {\bfseries aacio\+::chain\+::contracts\+::apply\+\_\+aacio\+\_\+canceldelay} (apply\+\_\+context \&context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

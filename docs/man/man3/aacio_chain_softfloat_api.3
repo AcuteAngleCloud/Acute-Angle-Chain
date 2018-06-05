@@ -1,0 +1,197 @@
+.TH "aacio::chain::softfloat_api" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::softfloat_api
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::context_aware_api\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "float \fB_aacio_f32_add\fP (float a, float b)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_sub\fP (float a, float b)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_div\fP (float a, float b)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_mul\fP (float a, float b)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_min\fP (float af, float \fBbf\fP)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_max\fP (float af, float \fBbf\fP)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_copysign\fP (float af, float \fBbf\fP)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_abs\fP (float af)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_neg\fP (float af)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_sqrt\fP (float a)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_ceil\fP (float af)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_floor\fP (float af)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_trunc\fP (float af)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f32_nearest\fP (float af)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f32_eq\fP (float a, float b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f32_ne\fP (float a, float b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f32_lt\fP (float a, float b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f32_le\fP (float a, float b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f32_gt\fP (float af, float \fBbf\fP)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f32_ge\fP (float af, float \fBbf\fP)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_add\fP (double a, double b)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_sub\fP (double a, double b)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_div\fP (double a, double b)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_mul\fP (double a, double b)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_min\fP (double af, double \fBbf\fP)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_max\fP (double af, double \fBbf\fP)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_copysign\fP (double af, double \fBbf\fP)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_abs\fP (double af)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_neg\fP (double af)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_sqrt\fP (double a)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_ceil\fP (double af)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_floor\fP (double af)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_trunc\fP (double af)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f64_nearest\fP (double af)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f64_eq\fP (double a, double b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f64_ne\fP (double a, double b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f64_lt\fP (double a, double b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f64_le\fP (double a, double b)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f64_gt\fP (double af, double \fBbf\fP)"
+.br
+.ti -1c
+.RI "bool \fB_aacio_f64_ge\fP (double af, double \fBbf\fP)"
+.br
+.ti -1c
+.RI "double \fB_aacio_f32_promote\fP (float a)"
+.br
+.ti -1c
+.RI "float \fB_aacio_f64_demote\fP (double a)"
+.br
+.ti -1c
+.RI "int32_t \fB_aacio_f32_trunc_i32s\fP (float af)"
+.br
+.ti -1c
+.RI "int32_t \fB_aacio_f64_trunc_i32s\fP (double af)"
+.br
+.ti -1c
+.RI "uint32_t \fB_aacio_f32_trunc_i32u\fP (float af)"
+.br
+.ti -1c
+.RI "uint32_t \fB_aacio_f64_trunc_i32u\fP (double af)"
+.br
+.ti -1c
+.RI "int64_t \fB_aacio_f32_trunc_i64s\fP (float af)"
+.br
+.ti -1c
+.RI "int64_t \fB_aacio_f64_trunc_i64s\fP (double af)"
+.br
+.ti -1c
+.RI "uint64_t \fB_aacio_f32_trunc_i64u\fP (float af)"
+.br
+.ti -1c
+.RI "uint64_t \fB_aacio_f64_trunc_i64u\fP (double af)"
+.br
+.ti -1c
+.RI "float \fB_aacio_i32_to_f32\fP (int32_t a)"
+.br
+.ti -1c
+.RI "float \fB_aacio_i64_to_f32\fP (int64_t a)"
+.br
+.ti -1c
+.RI "float \fB_aacio_ui32_to_f32\fP (uint32_t a)"
+.br
+.ti -1c
+.RI "float \fB_aacio_ui64_to_f32\fP (uint64_t a)"
+.br
+.ti -1c
+.RI "double \fB_aacio_i32_to_f64\fP (int32_t a)"
+.br
+.ti -1c
+.RI "double \fB_aacio_i64_to_f64\fP (int64_t a)"
+.br
+.ti -1c
+.RI "double \fB_aacio_ui32_to_f64\fP (uint32_t a)"
+.br
+.ti -1c
+.RI "double \fB_aacio_ui64_to_f64\fP (uint64_t a)"
+.br
+.ti -1c
+.RI "\fBcontext_aware_api\fP (\fBapply_context\fP &ctx, bool context_free=false)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

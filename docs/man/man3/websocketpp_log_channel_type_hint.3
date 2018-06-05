@@ -1,0 +1,44 @@
+.TH "websocketpp::log::channel_type_hint" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::log::channel_type_hint \- Package of values for hinting at the nature of a given logger\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <levels\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef uint32_t \fBvalue\fP"
+.br
+.RI "\fBType\fP of a channel type hint value\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBvalue\fP const \fBnone\fP = 0"
+.br
+.RI "No information\&. "
+.ti -1c
+.RI "static \fBvalue\fP const \fBaccess\fP = 1"
+.br
+.RI "Access log\&. "
+.ti -1c
+.RI "static \fBvalue\fP const \fBerror\fP = 2"
+.br
+.RI "Error log\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Package of values for hinting at the nature of a given logger\&. 
+
+Used by the library to signal to the logging class a hint that it can use to set itself up\&. For example, the \fCaccess\fP hint indicates that it is an access log that might be suitable for being printed to an access log file or to cout whereas \fCerror\fP might be suitable for an error log file or cerr\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

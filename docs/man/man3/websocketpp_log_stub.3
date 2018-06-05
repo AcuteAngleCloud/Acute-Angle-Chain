@@ -1,0 +1,152 @@
+.TH "websocketpp::log::stub" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::log::stub \- Stub logger that ignores all input\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stub\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstub\fP (\fBchannel_type_hint::value\fP)"
+.br
+.RI "Construct the logger\&. "
+.ti -1c
+.RI "\fBstub\fP (level, \fBchannel_type_hint::value\fP)"
+.br
+.RI "Construct the logger\&. "
+.ti -1c
+.RI "void \fBset_channels\fP (level)"
+.br
+.RI "Dynamically enable the given list of channels\&. "
+.ti -1c
+.RI "void \fBclear_channels\fP (level)"
+.br
+.RI "Dynamically disable the given list of channels\&. "
+.ti -1c
+.RI "void \fBwrite\fP (level, std::string const &)"
+.br
+.RI "Write a string message to the given channel\&. "
+.ti -1c
+.RI "void \fBwrite\fP (level, char const *)"
+.br
+.RI "Write a cstring message to the given channel\&. "
+.ti -1c
+.RI "_WEBSOCKETPP_CONSTEXPR_TOKEN_ bool \fBstatic_test\fP (level) const"
+.br
+.RI "\fBTest\fP whether a channel is statically enabled\&. "
+.ti -1c
+.RI "bool \fBdynamic_test\fP (level)"
+.br
+.RI "\fBTest\fP whether a channel is dynamically enabled\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stub logger that ignores all input\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "websocketpp::log::stub::stub (\fBchannel_type_hint::value\fP)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Construct the logger\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhint\fP \fBA\fP channel type specific hint for how to construct the logger 
+.RE
+.PP
+
+.SS "websocketpp::log::stub::stub (level, \fBchannel_type_hint::value\fP)\fC [inline]\fP"
+
+.PP
+Construct the logger\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdefault_channels\fP \fBA\fP set of channels to statically enable 
+.br
+\fIhint\fP \fBA\fP channel type specific hint for how to construct the logger 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void websocketpp::log::stub::clear_channels (level)\fC [inline]\fP"
+
+.PP
+Dynamically disable the given list of channels\&. All operations on the stub logger are no-ops and all arguments are ignored
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannels\fP The package of channels to disable 
+.RE
+.PP
+
+.SS "bool websocketpp::log::stub::dynamic_test (level)\fC [inline]\fP"
+
+.PP
+\fBTest\fP whether a channel is dynamically enabled\&. The stub logger has no channels so all arguments are ignored and \fCdynamic_test\fP always returns false\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The package of channels to test 
+.RE
+.PP
+
+.SS "void websocketpp::log::stub::set_channels (level)\fC [inline]\fP"
+
+.PP
+Dynamically enable the given list of channels\&. All operations on the stub logger are no-ops and all arguments are ignored
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannels\fP The package of channels to enable 
+.RE
+.PP
+
+.SS "_WEBSOCKETPP_CONSTEXPR_TOKEN_ bool websocketpp::log::stub::static_test (level) const\fC [inline]\fP"
+
+.PP
+\fBTest\fP whether a channel is statically enabled\&. The stub logger has no channels so all arguments are ignored and \fCstatic_test\fP always returns false\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The package of channels to test 
+.RE
+.PP
+
+.SS "void websocketpp::log::stub::write (level, std::string const &)\fC [inline]\fP"
+
+.PP
+Write a string message to the given channel\&. Writing on the stub logger is a no-op and all arguments are ignored
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel to write to 
+.br
+\fImsg\fP The message to write 
+.RE
+.PP
+
+.SS "void websocketpp::log::stub::write (level, char const *)\fC [inline]\fP"
+
+.PP
+Write a cstring message to the given channel\&. Writing on the stub logger is a no-op and all arguments are ignored
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel to write to 
+.br
+\fImsg\fP The message to write 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

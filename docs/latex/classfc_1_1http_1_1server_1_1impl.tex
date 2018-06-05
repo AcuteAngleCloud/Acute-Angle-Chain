@@ -1,0 +1,38 @@
+\hypertarget{classfc_1_1http_1_1server_1_1impl}{}\section{fc\+:\+:http\+:\+:server\+:\+:impl Class Reference}
+\label{classfc_1_1http_1_1server_1_1impl}\index{fc\+::http\+::server\+::impl@{fc\+::http\+::server\+::impl}}
+
+
+Collaboration diagram for fc\+:\+:http\+:\+:server\+:\+:impl\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_a37711a9ff92189c2bc7e59678b7c1843}\label{classfc_1_1http_1_1server_1_1impl_a37711a9ff92189c2bc7e59678b7c1843}} 
+{\bfseries impl} (const \mbox{\hyperlink{classfc_1_1ip_1_1endpoint}{fc\+::ip\+::endpoint}} \&p)
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_aabc0d2b805bc3817da2f044adcb40d69}\label{classfc_1_1http_1_1server_1_1impl_aabc0d2b805bc3817da2f044adcb40d69}} 
+void {\bfseries accept\+\_\+loop} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_a7813e46dca69d44eb24a3ee0d6add574}\label{classfc_1_1http_1_1server_1_1impl_a7813e46dca69d44eb24a3ee0d6add574}} 
+void {\bfseries handle\+\_\+connection} (const http\+::connection\+\_\+ptr \&c, std\+::function$<$ void(const http\+::request \&, const server\+::response \&s)$>$ do\+\_\+on\+\_\+req)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_a7b4b735ed75ec432b5ceaf0fc8eb5670}\label{classfc_1_1http_1_1server_1_1impl_a7b4b735ed75ec432b5ceaf0fc8eb5670}} 
+fc\+::future$<$ void $>$ {\bfseries accept\+\_\+complete}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_ab2bc0ecaf14d8ea531b0bd8c30ad5ebf}\label{classfc_1_1http_1_1server_1_1impl_ab2bc0ecaf14d8ea531b0bd8c30ad5ebf}} 
+std\+::function$<$ void(const http\+::request \&, const server\+::response \&s)$>$ {\bfseries on\+\_\+req}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_a16522f5143dd2e01d81cc837acde2af3}\label{classfc_1_1http_1_1server_1_1impl_a16522f5143dd2e01d81cc837acde2af3}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ fc\+::future$<$ void $>$ $>$ {\bfseries requests\+\_\+in\+\_\+progress}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1server_1_1impl_ad32181bd6cc2d0942ca0295a6ea5d5a9}\label{classfc_1_1http_1_1server_1_1impl_ad32181bd6cc2d0942ca0295a6ea5d5a9}} 
+fc\+::tcp\+\_\+server {\bfseries tcp\+\_\+serv}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/src/network/http/http\+\_\+server.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+digraph "aacio::account_history_apis::read_only::get_transactions_results"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="aacio::account_history\l_apis::read_only::get\l_transactions_results",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" time_limit_exceeded\l_error" ,fontname="Helvetica"];
+  Node2 [label="aacio::optional\< bool \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1optional.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transactions" ,fontname="Helvetica"];
+  Node3 [label="std::vector\< aacio\l::account_history_apis\l::read_only::ordered_transaction\l_results \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+}

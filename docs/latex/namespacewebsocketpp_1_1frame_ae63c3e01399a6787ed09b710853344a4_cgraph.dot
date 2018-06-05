@@ -1,0 +1,15 @@
+digraph "websocketpp::frame::prepare_header"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node102 [label="websocketpp::frame\l::prepare_header",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node102 -> Node103 [color="midnightblue",fontsize="10",style="solid"];
+  Node103 [label="websocketpp::frame\l::get_header_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#abd4f23c906cc48fb3b34603fd4284b01",tooltip="Calculates the full length of the header based on the first bytes. "];
+  Node103 -> Node104 [color="midnightblue",fontsize="10",style="solid"];
+  Node104 [label="websocketpp::frame\l::get_masking_key_offset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a001d6c5e538d5eb1ef5ddc21aeb61ee3",tooltip="Calculate the offset location of the masking key within the extended header. "];
+  Node104 -> Node105 [color="midnightblue",fontsize="10",style="solid"];
+  Node105 [label="websocketpp::frame\l::get_basic_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a2ceb63e6a2fe19964d13363ba2bb9e15",tooltip="Extracts the raw payload length specified in the basic header. "];
+  Node103 -> Node106 [color="midnightblue",fontsize="10",style="solid"];
+  Node106 [label="websocketpp::frame\l::get_masked",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a4e8cf8ae88a7a8fdb2b3ea86623d01d2",tooltip="check whether the frame is masked "];
+}

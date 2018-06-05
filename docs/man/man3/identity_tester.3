@@ -1,0 +1,61 @@
+.TH "identity_tester" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+identity_tester
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits TESTER\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "uint64_t \fBget_result_uint64\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBget_owner_for_identity\fP (uint64_t \fBidentity\fP)"
+.br
+.ti -1c
+.RI "uint64_t \fBget_identity_for_account\fP (const string &\fBaccount\fP)"
+.br
+.ti -1c
+.RI "action_result \fBcreate_identity\fP (const string &account_name, uint64_t \fBidentity\fP, bool auth=true)"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_identity\fP (uint64_t idnt)"
+.br
+.ti -1c
+.RI "action_result \fBcertify\fP (const string &certifier, uint64_t \fBidentity\fP, const \fBvector\fP< \fBfc::variant\fP > &fields, bool auth=true)"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_certrow\fP (uint64_t \fBidentity\fP, const string &property, uint64_t trusted, const string &certifier)"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_accountrow\fP (const string &\fBaccount\fP)"
+.br
+.ti -1c
+.RI "action_result \fBsettrust\fP (const string &trustor, const string &trusting, uint64_t trust, bool auth=true)"
+.br
+.ti -1c
+.RI "bool \fBget_trust\fP (const string &trustor, const string &trusting)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBabi_serializer\fP \fBabi_ser\fP"
+.br
+.ti -1c
+.RI "\fBabi_serializer\fP \fBabi_ser_test\fP"
+.br
+.ti -1c
+.RI "std::string \fBproducer_name\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

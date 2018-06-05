@@ -1,0 +1,52 @@
+.TH "websocketpp::random::random_device::int_generator< int_type, concurrency >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::random::random_device::int_generator< int_type, concurrency > \- Thread safe non-deterministic random integer generator\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <random_device\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef concurrency::scoped_lock_type \fBscoped_lock_type\fP"
+.br
+.ti -1c
+.RI "typedef concurrency::mutex_type \fBmutex_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint_generator\fP ()"
+.br
+.RI "constructor "
+.ti -1c
+.RI "int_type \fBoperator()\fP ()"
+.br
+.RI "advances the engine's state and returns the generated value "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename int_type, typename concurrency>
+.br
+class websocketpp::random::random_device::int_generator< int_type, concurrency >"
+Thread safe non-deterministic random integer generator\&. 
+
+This template class provides thread safe non-deterministic random integer generation\&. Numbers are produced in a uniformly distributed range from the smallest to largest value that int_type can store\&.
+.PP
+Thread-safety is provided via locking based on the concurrency template parameter\&.
+.PP
+Non-deterministic RNG is provided via websocketpp::lib which uses either C++11 or Boost 1\&.47+'s \fBrandom_device\fP class\&.
+.PP
+Call operator() to generate the next number 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

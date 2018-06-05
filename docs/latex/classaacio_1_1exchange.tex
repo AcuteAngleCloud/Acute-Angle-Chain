@@ -1,0 +1,83 @@
+\hypertarget{classaacio_1_1exchange}{}\section{aacio\+:\+:exchange Class Reference}
+\label{classaacio_1_1exchange}\index{aacio\+::exchange@{aacio\+::exchange}}
+
+
+{\ttfamily \#include $<$exchange.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1exchange_1_1covermargin}{covermargin}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1exchange_1_1trade}{trade}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1exchange_1_1upmargin}{upmargin}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_a1b32d97f61297d6b7158e9d7d7223928}\label{classaacio_1_1exchange_a1b32d97f61297d6b7158e9d7d7223928}} 
+{\bfseries exchange} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} self)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_a2e10a3d7e1b128f4761a756084e2a95a}\label{classaacio_1_1exchange_a2e10a3d7e1b128f4761a756084e2a95a}} 
+void {\bfseries createx} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} creator, \mbox{\hyperlink{structaacio_1_1asset}{asset}} initial\+\_\+supply, uint32\+\_\+t fee, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} base\+\_\+deposit, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} quote\+\_\+deposit)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_aeab7e2fb40b5038b6233a3116765199c}\label{classaacio_1_1exchange_aeab7e2fb40b5038b6233a3116765199c}} 
+void {\bfseries deposit} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} quantity)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_ad3379e925b8a0d7140a3073484925c06}\label{classaacio_1_1exchange_ad3379e925b8a0d7140a3073484925c06}} 
+void {\bfseries withdraw} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} quantity)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_ab76b632bb43f5135773ee3fcd0724afb}\label{classaacio_1_1exchange_ab76b632bb43f5135773ee3fcd0724afb}} 
+void {\bfseries lend} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} lender, \mbox{\hyperlink{structaacio_1_1symbol__type}{symbol\+\_\+type}} market, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} quantity)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_a6dbd76c9e1a5d5de7ec7b461592d72aa}\label{classaacio_1_1exchange_a6dbd76c9e1a5d5de7ec7b461592d72aa}} 
+void {\bfseries unlend} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} lender, \mbox{\hyperlink{structaacio_1_1symbol__type}{symbol\+\_\+type}} market, double interest\+\_\+shares, \mbox{\hyperlink{structaacio_1_1extended__symbol}{extended\+\_\+symbol}} interest\+\_\+symbol)
+\item 
+void \mbox{\hyperlink{classaacio_1_1exchange_a43b2bdac8c60fed94c556f2e06bdfda2}{on}} (const \mbox{\hyperlink{structaacio_1_1exchange_1_1trade}{trade}} \&t)
+\item 
+void \mbox{\hyperlink{classaacio_1_1exchange_a27ed06b661427aca5e67cd9d514e6635}{on}} (const \mbox{\hyperlink{structaacio_1_1exchange_1_1upmargin}{upmargin}} \&b)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_a9c73fe32e0b96de00e97b8ec907d4d19}\label{classaacio_1_1exchange_a9c73fe32e0b96de00e97b8ec907d4d19}} 
+void {\bfseries on} (const \mbox{\hyperlink{structaacio_1_1exchange_1_1covermargin}{covermargin}} \&b)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_a3061d20b476589c40eba76b1bfcca836}\label{classaacio_1_1exchange_a3061d20b476589c40eba76b1bfcca836}} 
+void {\bfseries on} (const \mbox{\hyperlink{structaacio_1_1currency_1_1transfer}{currency\+::transfer}} \&t, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} code)
+\item 
+\mbox{\Hypertarget{classaacio_1_1exchange_a4c305a7b7166e2b892fe11f67ef70452}\label{classaacio_1_1exchange_a4c305a7b7166e2b892fe11f67ef70452}} 
+void {\bfseries apply} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} act)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This contract enables users to create an exchange between any pair of standard currency types. \mbox{\hyperlink{struct_a}{A}} new exchange is created by funding it with an equal value of both sides of the order book and giving the issuer the initial shares in that orderbook.
+
+To prevent exessive rounding errors, the initial deposit should include a sizeable quantity of both the base and quote currencies and the exchange shares should have a quantity 100x the quantity of the largest initial deposit.
+
+Users must deposit funds into the exchange before they can trade on the exchange.
+
+Each time an exchange is created a new currency for that exchanges market maker is also created. This currencies supply and symbol must be unique and it uses the currency contract\textquotesingle{}s tables to manage it. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1exchange_a43b2bdac8c60fed94c556f2e06bdfda2}\label{classaacio_1_1exchange_a43b2bdac8c60fed94c556f2e06bdfda2}} 
+\index{aacio\+::exchange@{aacio\+::exchange}!on@{on}}
+\index{on@{on}!aacio\+::exchange@{aacio\+::exchange}}
+\subsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void aacio\+::exchange\+::on (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1exchange_1_1trade}{trade}} \&}]{t }\end{DoxyParamCaption})}
+
+T\+O\+DO\+: if pending order start deferred trx to fill it Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classaacio_1_1exchange_a27ed06b661427aca5e67cd9d514e6635}\label{classaacio_1_1exchange_a27ed06b661427aca5e67cd9d514e6635}} 
+\index{aacio\+::exchange@{aacio\+::exchange}!on@{on}}
+\index{on@{on}!aacio\+::exchange@{aacio\+::exchange}}
+\subsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void aacio\+::exchange\+::on (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1exchange_1_1upmargin}{upmargin}} \&}]{b }\end{DoxyParamCaption})}
+
+This action shall fail if it would result in a margin call if this succeeds then the borrower will see their balances adjusted accordingly, if they don\textquotesingle{}t have sufficient balance to either fund the collateral or pay off the debt then this will fail before we go further. Here is the call graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contracts/exchange/exchange.\+hpp\item 
+contracts/exchange/exchange.\+cpp\end{DoxyCompactItemize}

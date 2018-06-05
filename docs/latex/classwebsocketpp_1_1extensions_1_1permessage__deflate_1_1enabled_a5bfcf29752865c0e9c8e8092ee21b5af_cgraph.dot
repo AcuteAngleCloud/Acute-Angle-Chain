@@ -1,0 +1,11 @@
+digraph "websocketpp::extensions::permessage_deflate::enabled::set_client_max_window_bits"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node18 [label="websocketpp::extensions\l::permessage_deflate::\lenabled::set_client_max\l_window_bits",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="websocketpp::extensions\l::permessage_deflate::\lerror::make_error_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1extensions_1_1permessage__deflate_1_1error.html#a9e955844ce4acf0ade5425c98af861ce",tooltip="Create an error code in the permessage-deflate category. "];
+  Node19 -> Node20 [color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="websocketpp::extensions\l::permessage_deflate::\lerror::get_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1extensions_1_1permessage__deflate_1_1error.html#a807fe9b09a702dc8f8a83772b770dfbe",tooltip="Get a reference to a static copy of the permessage-deflate error category. "];
+}

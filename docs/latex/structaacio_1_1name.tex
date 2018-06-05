@@ -1,0 +1,43 @@
+\hypertarget{structaacio_1_1name}{}\section{aacio\+:\+:name Struct Reference}
+\label{structaacio_1_1name}\index{aacio\+::name@{aacio\+::name}}
+
+
+wraps a uint64\+\_\+t to ensure it is only passed to methods that expect a Name  
+
+
+
+
+{\ttfamily \#include $<$types.\+hpp$>$}
+
+
+
+Collaboration diagram for aacio\+:\+:name\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1name_abfb27503ffa5a82d862914b9364b221b}\label{structaacio_1_1name_abfb27503ffa5a82d862914b9364b221b}} 
+{\bfseries operator uint64\+\_\+t} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1name_aca264dddaaed7631acc506e89804287c}\label{structaacio_1_1name_aca264dddaaed7631acc506e89804287c}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries value} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1name_ab35bfaf393e498e39ffe3e280c4c90bf}\label{structaacio_1_1name_ab35bfaf393e498e39ffe3e280c4c90bf}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&a, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+wraps a uint64\+\_\+t to ensure it is only passed to methods that expect a Name 
+
+wraps a uint64\+\_\+t to ensure it is only passed to methods that expect a Name and that no mathematical operations occur. It also enables specialization of print so that it is printed as a base32 string. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aaciolib/\mbox{\hyperlink{contracts_2aaciolib_2types_8hpp}{types.\+hpp}}\end{DoxyCompactItemize}

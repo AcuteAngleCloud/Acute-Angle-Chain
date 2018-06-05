@@ -1,0 +1,75 @@
+.TH "wasm::BufferWithRandomAccess" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::BufferWithRandomAccess
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBstd::vector< uint8_t >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP (bool debug)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (int8_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (int16_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (int32_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (int64_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (\fBU32LEB\fP x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (\fBU64LEB\fP x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (\fBS32LEB\fP x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (\fBS64LEB\fP x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (uint8_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (uint16_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (uint32_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (uint64_t x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (float x)"
+.br
+.ti -1c
+.RI "\fBBufferWithRandomAccess\fP & \fBoperator<<\fP (double x)"
+.br
+.ti -1c
+.RI "void \fBwriteAt\fP (size_t i, uint16_t x)"
+.br
+.ti -1c
+.RI "void \fBwriteAt\fP (size_t i, uint32_t x)"
+.br
+.ti -1c
+.RI "void \fBwriteAt\fP (size_t i, \fBU32LEB\fP x)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBwriteTo\fP (\fBT\fP &o)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

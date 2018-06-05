@@ -1,0 +1,219 @@
+\hypertarget{classaacio_1_1testing_1_1base__tester}{}\section{aacio\+:\+:testing\+:\+:base\+\_\+tester Class Reference}
+\label{classaacio_1_1testing_1_1base__tester}\index{aacio\+::testing\+::base\+\_\+tester@{aacio\+::testing\+::base\+\_\+tester}}
+
+
+Inheritance diagram for aacio\+:\+:testing\+:\+:base\+\_\+tester\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:testing\+:\+:base\+\_\+tester\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a4cebc07a17a0752f33b4d07a56fefda7}\label{classaacio_1_1testing_1_1base__tester_a4cebc07a17a0752f33b4d07a56fefda7}} 
+typedef string {\bfseries action\+\_\+result}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a54ff0e2c7c8fea25827c59b161cad31b}\label{classaacio_1_1testing_1_1base__tester_a54ff0e2c7c8fea25827c59b161cad31b}} 
+void {\bfseries init} (bool push\+\_\+genesis=true, \mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1runtime__limits}{chain\+\_\+controller\+::runtime\+\_\+limits}} limits=\mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1runtime__limits}{chain\+\_\+controller\+::runtime\+\_\+limits}}())
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a2505f8417e9e4b6e8078bad7f2c9a7a2}\label{classaacio_1_1testing_1_1base__tester_a2505f8417e9e4b6e8078bad7f2c9a7a2}} 
+void {\bfseries init} (\mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1controller__config}{chain\+\_\+controller\+::controller\+\_\+config}} \mbox{\hyperlink{classconfig}{config}})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_af17ca39b166f7be2c769e777ab8a16cd}\label{classaacio_1_1testing_1_1base__tester_af17ca39b166f7be2c769e777ab8a16cd}} 
+void {\bfseries close} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a8fb58ffa1557b5813bd971c4dd5a1a4a}\label{classaacio_1_1testing_1_1base__tester_a8fb58ffa1557b5813bd971c4dd5a1a4a}} 
+void {\bfseries open} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ac49f36254cbecbf509102777a3d4b593}\label{classaacio_1_1testing_1_1base__tester_ac49f36254cbecbf509102777a3d4b593}} 
+virtual \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} {\bfseries produce\+\_\+block} (\mbox{\hyperlink{classfc_1_1microseconds}{fc\+::microseconds}} skip\+\_\+time=fc\+::milliseconds(config\+::block\+\_\+interval\+\_\+ms), uint32\+\_\+t skip\+\_\+flag=skip\+\_\+missed\+\_\+block\+\_\+penalty)=0
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_aa9e5773f6264c951a6378bce275f124c}\label{classaacio_1_1testing_1_1base__tester_aa9e5773f6264c951a6378bce275f124c}} 
+void {\bfseries produce\+\_\+blocks} (uint32\+\_\+t n=1)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a5a3edd6d171f95e9be990e81564cafa6}\label{classaacio_1_1testing_1_1base__tester_a5a3edd6d171f95e9be990e81564cafa6}} 
+void {\bfseries produce\+\_\+blocks\+\_\+until\+\_\+end\+\_\+of\+\_\+round} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a410b7109a8c88c635122122ba9c3408d}\label{classaacio_1_1testing_1_1base__tester_a410b7109a8c88c635122122ba9c3408d}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} {\bfseries push\+\_\+block} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} b)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ad06f5cfc121660d35c15658a7adb1c42}\label{classaacio_1_1testing_1_1base__tester_ad06f5cfc121660d35c15658a7adb1c42}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+transaction} (\mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&trx, uint32\+\_\+t skip\+\_\+flag=skip\+\_\+nothing)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a2b1296180e014b88a51e12c3921f42bb}\label{classaacio_1_1testing_1_1base__tester_a2b1296180e014b88a51e12c3921f42bb}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+transaction} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx, uint32\+\_\+t skip\+\_\+flag=skip\+\_\+nothing)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_aceac95957452a86d13b3fa8200f79521}\label{classaacio_1_1testing_1_1base__tester_aceac95957452a86d13b3fa8200f79521}} 
+action\+\_\+result {\bfseries push\+\_\+action} (\mbox{\hyperlink{structaacio_1_1chain_1_1action}{action}} \&\&cert\+\_\+act, uint64\+\_\+t authorizer)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a4d8386b6b1934695d4b09e5d92869065}\label{classaacio_1_1testing_1_1base__tester_a4d8386b6b1934695d4b09e5d92869065}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+action} (const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&code, const action\+\_\+name \&acttype, const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&\mbox{\hyperlink{classfc_1_1actor}{actor}}, const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \&data, uint32\+\_\+t \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}=D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+L\+TA, uint32\+\_\+t delay\+\_\+sec=0)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_acb10b2a3578c833f24ad584fd106d4f5}\label{classaacio_1_1testing_1_1base__tester_acb10b2a3578c833f24ad584fd106d4f5}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+action} (const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&code, const action\+\_\+name \&acttype, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$ \&actors, const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \&data, uint32\+\_\+t \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}=D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+L\+TA, uint32\+\_\+t delay\+\_\+sec=0)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a3214eb4e0664270d9a227b022921f038}\label{classaacio_1_1testing_1_1base__tester_a3214eb4e0664270d9a227b022921f038}} 
+void {\bfseries set\+\_\+tapos} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx, uint32\+\_\+t \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}=D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+L\+TA) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ac87e7444c462b89bae7502ef95de11c7}\label{classaacio_1_1testing_1_1base__tester_ac87e7444c462b89bae7502ef95de11c7}} 
+void {\bfseries set\+\_\+transaction\+\_\+headers} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx, uint32\+\_\+t \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}=D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+L\+TA, uint32\+\_\+t delay\+\_\+sec=0) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a112e0c40d700cc84619a40d52bb656d3}\label{classaacio_1_1testing_1_1base__tester_a112e0c40d700cc84619a40d52bb656d3}} 
+void {\bfseries create\+\_\+accounts} (\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$ names, bool \mbox{\hyperlink{classaacio_1_1multisig}{multisig}}=false)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a0835643b1bc266ef3a6df2f905b61aea}\label{classaacio_1_1testing_1_1base__tester_a0835643b1bc266ef3a6df2f905b61aea}} 
+void {\bfseries push\+\_\+genesis\+\_\+block} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ab2db026803cdd2f938dc1de9728cd936}\label{classaacio_1_1testing_1_1base__tester_ab2db026803cdd2f938dc1de9728cd936}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1producer__schedule__type}{producer\+\_\+schedule\+\_\+type}} {\bfseries set\+\_\+producers} (const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$ \&producer\+\_\+names, const uint32\+\_\+t version=0)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a9e919cd867104151b722e96e11763d35}\label{classaacio_1_1testing_1_1base__tester_a9e919cd867104151b722e96e11763d35}} 
+void {\bfseries link\+\_\+authority} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} code, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} req, action\+\_\+name type=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_aa07e0e4da3f24b1643a9f4887f48c01e}\label{classaacio_1_1testing_1_1base__tester_aa07e0e4da3f24b1643a9f4887f48c01e}} 
+void {\bfseries unlink\+\_\+authority} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} code, action\+\_\+name type=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ae435394fd110476219e6418b4c9367b6}\label{classaacio_1_1testing_1_1base__tester_ae435394fd110476219e6418b4c9367b6}} 
+void {\bfseries set\+\_\+authority} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} perm, \mbox{\hyperlink{structaacio_1_1chain_1_1authority}{authority}} auth, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} parent, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ \&auths, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \&keys)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a21c25bc8bff06e8f0f2c008aefd889e5}\label{classaacio_1_1testing_1_1base__tester_a21c25bc8bff06e8f0f2c008aefd889e5}} 
+void {\bfseries set\+\_\+authority} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} perm, \mbox{\hyperlink{structaacio_1_1chain_1_1authority}{authority}} auth, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} parent=config\+::owner\+\_\+name)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a8986750028bef69ce620d40545c96b61}\label{classaacio_1_1testing_1_1base__tester_a8986750028bef69ce620d40545c96b61}} 
+void {\bfseries delete\+\_\+authority} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} perm, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ \&auths, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \&keys)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ab23a5adc5d11fe8f2b9bc6fb8538c52f}\label{classaacio_1_1testing_1_1base__tester_ab23a5adc5d11fe8f2b9bc6fb8538c52f}} 
+void {\bfseries delete\+\_\+authority} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} perm)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a355e190237bf62eee1d073f44ff651a8}\label{classaacio_1_1testing_1_1base__tester_a355e190237bf62eee1d073f44ff651a8}} 
+void {\bfseries create\+\_\+account} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} creator=config\+::system\+\_\+account\+\_\+name, bool \mbox{\hyperlink{classaacio_1_1multisig}{multisig}}=false)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a66b63791c7f57b55e55f10ba85397c8f}\label{classaacio_1_1testing_1_1base__tester_a66b63791c7f57b55e55f10ba85397c8f}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+reqauth} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ \&auths, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \&keys)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ae2b04a3133131c004292f02aa9f28239}\label{classaacio_1_1testing_1_1base__tester_ae2b04a3133131c004292f02aa9f28239}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+reqauth} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, string role, bool multi\+\_\+sig=false)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_aa929772ca172f424dcc5d3520dd7fff9}\label{classaacio_1_1testing_1_1base__tester_aa929772ca172f424dcc5d3520dd7fff9}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries push\+\_\+dummy} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, const string \&v=\char`\"{}blah\char`\"{})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ac4b762293768bbc54ea0d344374dfaec}\label{classaacio_1_1testing_1_1base__tester_ac4b762293768bbc54ea0d344374dfaec}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries transfer} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, \mbox{\hyperlink{structaacio_1_1asset}{asset}} amount, string memo, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{classaacio_1_1currency}{currency}})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a7df4b122a5d6135b2fdb21dd1d65e7ef}\label{classaacio_1_1testing_1_1base__tester_a7df4b122a5d6135b2fdb21dd1d65e7ef}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries transfer} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, string amount, string memo, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{classaacio_1_1currency}{currency}})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a5e60943e47e7f823bf735a257173e9ab}\label{classaacio_1_1testing_1_1base__tester_a5e60943e47e7f823bf735a257173e9ab}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries issue} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, string amount, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{classaacio_1_1currency}{currency}})
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ad16b7b4603cb9ac3c94b0923ca138a43}\label{classaacio_1_1testing_1_1base__tester_ad16b7b4603cb9ac3c94b0923ca138a43}} 
+{\footnotesize template$<$typename Object\+Type $>$ }\\const auto \& {\bfseries get} (const \mbox{\hyperlink{classchainbase_1_1oid}{chainbase\+::oid}}$<$ Object\+Type $>$ \&key)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a70e57884d840459399f6b2dccd18711f}\label{classaacio_1_1testing_1_1base__tester_a70e57884d840459399f6b2dccd18711f}} 
+{\footnotesize template$<$typename Object\+Type , typename Index\+By , typename... Args$>$ }\\const auto \& {\bfseries get} (Args \&\&... args)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_abb350b3c7142b39015f3cee27bce7964}\label{classaacio_1_1testing_1_1base__tester_abb350b3c7142b39015f3cee27bce7964}} 
+{\footnotesize template$<$typename Object\+Type , typename Index\+By , typename... Args$>$ }\\const auto $\ast$ {\bfseries find} (Args \&\&... args)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_abdedbf1ce468cd03db89bc80a6cf31ff}\label{classaacio_1_1testing_1_1base__tester_abdedbf1ce468cd03db89bc80a6cf31ff}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} {\bfseries get\+\_\+public\+\_\+key} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}} keyname, string role=\char`\"{}owner\char`\"{}) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a36a30b05417dfee3cc102dbe35a09deb}\label{classaacio_1_1testing_1_1base__tester_a36a30b05417dfee3cc102dbe35a09deb}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} {\bfseries get\+\_\+private\+\_\+key} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}} keyname, string role=\char`\"{}owner\char`\"{}) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ad4b251119065313d9a84f2fd21449149}\label{classaacio_1_1testing_1_1base__tester_ad4b251119065313d9a84f2fd21449149}} 
+void {\bfseries set\+\_\+code} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, const char $\ast$wast)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a26f1448e94f00e441541a54e64bdfae5}\label{classaacio_1_1testing_1_1base__tester_a26f1448e94f00e441541a54e64bdfae5}} 
+void {\bfseries set\+\_\+code} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ uint8\+\_\+t $>$ wasm)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_af8d950fcd911687671f11161edcd434d}\label{classaacio_1_1testing_1_1base__tester_af8d950fcd911687671f11161edcd434d}} 
+void {\bfseries set\+\_\+abi} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, const char $\ast$abi\+\_\+json)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a8a5475f325052df37ab253995597b1c8}\label{classaacio_1_1testing_1_1base__tester_a8a5475f325052df37ab253995597b1c8}} 
+bool {\bfseries chain\+\_\+has\+\_\+transaction} (const \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} \&txid) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a85bcd6347fffa4a88527fe99e53261ae}\label{classaacio_1_1testing_1_1base__tester_a85bcd6347fffa4a88527fe99e53261ae}} 
+const \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt}{transaction\+\_\+receipt}} \& {\bfseries get\+\_\+transaction\+\_\+receipt} (const \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} \&txid) const
+\item 
+\mbox{\hyperlink{structaacio_1_1asset}{asset}} \mbox{\hyperlink{classaacio_1_1testing_1_1base__tester_a770b193268f4759839daef090e81fb02}{get\+\_\+currency\+\_\+balance}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&\mbox{\hyperlink{structaacio_1_1contract}{contract}}, const \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} \&asset\+\_\+symbol, const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&\mbox{\hyperlink{structaccount}{account}}) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a3ab423f987435cb04bf59a841d9718d6}\label{classaacio_1_1testing_1_1base__tester_a3ab423f987435cb04bf59a841d9718d6}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ char $>$ {\bfseries get\+\_\+row\+\_\+by\+\_\+account} (uint64\+\_\+t code, uint64\+\_\+t scope, uint64\+\_\+t table, const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&act)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ac36474d87fa7015d2645f55ee8cd43f0}\label{classaacio_1_1testing_1_1base__tester_ac36474d87fa7015d2645f55ee8cd43f0}} 
+auto {\bfseries get\+\_\+resolver} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ac0319f7de0ebeddd8e038f77a1980f4d}\label{classaacio_1_1testing_1_1base__tester_ac0319f7de0ebeddd8e038f77a1980f4d}} 
+void {\bfseries sync\+\_\+with} (\mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&\mbox{\hyperlink{structother}{other}})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a6116609299e6ad51ad409b48faf16e16}\label{classaacio_1_1testing_1_1base__tester_a6116609299e6ad51ad409b48faf16e16}} 
+static \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ uint8\+\_\+t $>$ {\bfseries to\+\_\+uint8\+\_\+vector} (const string \&s)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a5cce52f9063f14bb9a1d81b0aae3cc7f}\label{classaacio_1_1testing_1_1base__tester_a5cce52f9063f14bb9a1d81b0aae3cc7f}} 
+static \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ uint8\+\_\+t $>$ {\bfseries to\+\_\+uint8\+\_\+vector} (uint64\+\_\+t x)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a1c4789032a1f05de20bf0ca41ebc4b14}\label{classaacio_1_1testing_1_1base__tester_a1c4789032a1f05de20bf0ca41ebc4b14}} 
+static uint64\+\_\+t {\bfseries to\+\_\+uint64} (\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} x)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_abe6ae2966637d7fcdd39078e2c8c8ad4}\label{classaacio_1_1testing_1_1base__tester_abe6ae2966637d7fcdd39078e2c8c8ad4}} 
+static string {\bfseries to\+\_\+string} (\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} x)
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a1a9e6db3d66e53d40b22e70838a3760d}\label{classaacio_1_1testing_1_1base__tester_a1a9e6db3d66e53d40b22e70838a3760d}} 
+static action\+\_\+result {\bfseries success} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a05152eb3263c7f35d7ccf5711b818799}\label{classaacio_1_1testing_1_1base__tester_a05152eb3263c7f35d7ccf5711b818799}} 
+static action\+\_\+result {\bfseries error} (const string \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a5ab6e75d594670d547743a7db11babb7}\label{classaacio_1_1testing_1_1base__tester_a5ab6e75d594670d547743a7db11babb7}} 
+\mbox{\hyperlink{classfc_1_1unique__ptr}{unique\+\_\+ptr}}$<$ \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller}{chain\+\_\+controller}} $>$ {\bfseries control}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_aaead4232151a24b7f6ecb599c69117e7}\label{classaacio_1_1testing_1_1base__tester_aaead4232151a24b7f6ecb599c69117e7}} 
+static const uint32\+\_\+t {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+E\+X\+P\+I\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+L\+TA} = 6
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_ab7930dcf3941084cae7bf50f8baf4b95}\label{classaacio_1_1testing_1_1base__tester_ab7930dcf3941084cae7bf50f8baf4b95}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} {\bfseries \+\_\+produce\+\_\+block} (\mbox{\hyperlink{classfc_1_1microseconds}{fc\+::microseconds}} skip\+\_\+time, uint32\+\_\+t skip\+\_\+flag)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a0630031ecb2bb3ddfe42214589115818}\label{classaacio_1_1testing_1_1base__tester_a0630031ecb2bb3ddfe42214589115818}} 
+\mbox{\hyperlink{classfc_1_1temp__directory}{fc\+::temp\+\_\+directory}} {\bfseries tempdir}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_aa80e02a77e74081a385b79423869e358}\label{classaacio_1_1testing_1_1base__tester_aa80e02a77e74081a385b79423869e358}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1controller__config}{chain\+\_\+controller\+::controller\+\_\+config}} {\bfseries cfg}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a6ac5c2a5d5639161cba53f82bd0eaae3}\label{classaacio_1_1testing_1_1base__tester_a6ac5c2a5d5639161cba53f82bd0eaae3}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}}, \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__receipt}{transaction\+\_\+receipt}} $>$ {\bfseries chain\+\_\+transactions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1testing_1_1base__tester_a770b193268f4759839daef090e81fb02}\label{classaacio_1_1testing_1_1base__tester_a770b193268f4759839daef090e81fb02}} 
+\index{aacio\+::testing\+::base\+\_\+tester@{aacio\+::testing\+::base\+\_\+tester}!get\+\_\+currency\+\_\+balance@{get\+\_\+currency\+\_\+balance}}
+\index{get\+\_\+currency\+\_\+balance@{get\+\_\+currency\+\_\+balance}!aacio\+::testing\+::base\+\_\+tester@{aacio\+::testing\+::base\+\_\+tester}}
+\subsubsection{\texorpdfstring{get\+\_\+currency\+\_\+balance()}{get\_currency\_balance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaacio_1_1asset}{asset}} aacio\+::testing\+::base\+\_\+tester\+::get\+\_\+currency\+\_\+balance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&}]{code,  }\item[{const \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} \&}]{asset\+\_\+symbol,  }\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&}]{account }\end{DoxyParamCaption}) const}
+
+Reads balance as stored by \mbox{\hyperlink{classaacio_1_1generic__currency}{generic\+\_\+currency}} contract 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/testing/include/aacio/testing/tester.\+hpp\item 
+libraries/testing/tester.\+cpp\end{DoxyCompactItemize}

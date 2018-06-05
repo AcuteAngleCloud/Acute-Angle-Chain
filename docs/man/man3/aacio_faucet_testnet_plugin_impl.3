@@ -1,0 +1,92 @@
+.TH "aacio::faucet_testnet_plugin_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::faucet_testnet_plugin_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcreate_faucet_account_alternate_results\fP"
+.br
+.ti -1c
+.RI "class \fBextension\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBhttp_return_codes\fP { \fBaccount_created\fP = 201, \fBconflict_with_alternates\fP = 409, \fBtoo_many_requests\fP = 429 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfaucet_testnet_plugin_impl\fP (\fBappbase::application\fP &app)"
+.br
+.ti -1c
+.RI "void \fBtimer_fired\fP ()"
+.br
+.ti -1c
+.RI "results_pair \fBfind_alternates\fP (const std::string &new_account_name)"
+.br
+.ti -1c
+.RI "results_pair \fBcreate_account\fP (const std::string &new_account_name, const \fBfc::crypto::public_key\fP &owner_pub_key, const \fBfc::crypto::public_key\fP &active_pub_key)"
+.br
+.ti -1c
+.RI "results_pair \fBcreate_faucet_account\fP (const std::string &body)"
+.br
+.ti -1c
+.RI "const \fBchainbase::database\fP & \fBdatabase\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBappbase::application\fP & \fB_app\fP"
+.br
+.ti -1c
+.RI "boost::asio::deadline_timer \fB_timer\fP"
+.br
+.ti -1c
+.RI "bool \fB_blocking_accounts\fP = false"
+.br
+.ti -1c
+.RI "uint32_t \fB_create_interval_msec\fP"
+.br
+.ti -1c
+.RI "\fBchain::account_name\fP \fB_create_account_name\fP"
+.br
+.ti -1c
+.RI "\fBfc::crypto::private_key\fP \fB_create_account_private_key\fP"
+.br
+.ti -1c
+.RI "\fBpublic_key_type\fP \fB_create_account_public_key\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint32_t \fB_default_create_interval_msec\fP = 1000"
+.br
+.ti -1c
+.RI "static const uint32_t \fB_default_create_alternates_to_return\fP = 3"
+.br
+.ti -1c
+.RI "static const std::string \fB_default_create_account_name\fP = 'faucet'"
+.br
+.ti -1c
+.RI "static const key_pair \fB_default_key_pair\fP = {'AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55', '5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ'}"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

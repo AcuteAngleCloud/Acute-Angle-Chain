@@ -1,0 +1,56 @@
+.TH "benchmark::BenchmarkReporter" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+benchmark::BenchmarkReporter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBbenchmark::ConsoleReporter\fP, \fBbenchmark::CSVReporter\fP, and \fBbenchmark::JSONReporter\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBContext\fP"
+.br
+.ti -1c
+.RI "struct \fBRun\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBReportContext\fP (const \fBContext\fP &context)=0"
+.br
+.ti -1c
+.RI "virtual void \fBReportRuns\fP (const \fBstd::vector\fP< \fBRun\fP > &report)=0"
+.br
+.ti -1c
+.RI "virtual void \fBFinalize\fP ()"
+.br
+.ti -1c
+.RI "void \fBSetOutputStream\fP (std::ostream *out)"
+.br
+.ti -1c
+.RI "void \fBSetErrorStream\fP (std::ostream *err)"
+.br
+.ti -1c
+.RI "std::ostream & \fBGetOutputStream\fP () const"
+.br
+.ti -1c
+.RI "std::ostream & \fBGetErrorStream\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBPrintBasicContext\fP (std::ostream *out, \fBContext\fP const &context)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

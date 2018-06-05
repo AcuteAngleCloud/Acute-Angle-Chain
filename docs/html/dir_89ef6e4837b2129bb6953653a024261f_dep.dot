@@ -1,0 +1,11 @@
+digraph "libraries/fc/src/compress" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_cf0f4a03667f4d32017c752ae330ec36 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_cf0f4a03667f4d32017c752ae330ec36.html"]
+  dir_89ef6e4837b2129bb6953653a024261f [shape=box, label="compress", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_89ef6e4837b2129bb6953653a024261f.html"];
+  }
+  dir_1c038c3f105811b552ea4d405d1d79e4 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_1c038c3f105811b552ea4d405d1d79e4.html"];
+  dir_89ef6e4837b2129bb6953653a024261f->dir_1c038c3f105811b552ea4d405d1d79e4 [headlabel="1", labeldistance=1.5 headhref="dir_001727_000011.html"];
+}

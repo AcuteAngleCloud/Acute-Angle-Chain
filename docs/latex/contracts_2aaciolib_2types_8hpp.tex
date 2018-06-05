@@ -1,0 +1,42 @@
+\hypertarget{contracts_2aaciolib_2types_8hpp}{}\section{contracts/aaciolib/types.hpp File Reference}
+\label{contracts_2aaciolib_2types_8hpp}\index{contracts/aaciolib/types.\+hpp@{contracts/aaciolib/types.\+hpp}}
+{\ttfamily \#include $<$aaciolib/types.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+Include dependency graph for types.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1name}{aacio\+::name}}
+\begin{DoxyCompactList}\small\item\em wraps a uint64\+\_\+t to ensure it is only passed to methods that expect a Name \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstd_1_1less_3_01checksum256_01_4}{std\+::less$<$ checksum256 $>$}}
+\begin{DoxyCompactList}\small\item\em provide less for \mbox{\hyperlink{structchecksum256}{checksum256}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(\mbox{\hyperlink{class_x}{X}})~\+::aacio\+::string\+\_\+to\+\_\+name(\#\mbox{\hyperlink{class_x}{X}})
+\begin{DoxyCompactList}\small\item\em used to generate a compile time uint64\+\_\+t from the base32 encoded string interpretation of \mbox{\hyperlink{class_x}{X}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{contracts_2aaciolib_2types_8hpp_a0ce0c83f4385ae375a5e26ffa945cdeb}{operator==}} (const \mbox{\hyperlink{structchecksum256}{checksum256}} \&lhs, const \mbox{\hyperlink{structchecksum256}{checksum256}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{contracts_2aaciolib_2types_8hpp_a0ce0c83f4385ae375a5e26ffa945cdeb}\label{contracts_2aaciolib_2types_8hpp_a0ce0c83f4385ae375a5e26ffa945cdeb}} 
+\index{contracts/aaciolib/types.\+hpp@{contracts/aaciolib/types.\+hpp}!operator==@{operator==}}
+\index{operator==@{operator==}!contracts/aaciolib/types.\+hpp@{contracts/aaciolib/types.\+hpp}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structchecksum256}{checksum256}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{structchecksum256}{checksum256}} \&}]{rhs }\end{DoxyParamCaption})}
+
+Provide == for \mbox{\hyperlink{structchecksum256}{checksum256}} in global namespace 

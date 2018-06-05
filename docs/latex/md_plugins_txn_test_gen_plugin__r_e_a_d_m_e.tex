@@ -1,0 +1,34 @@
+This plugin provides a way to generate a given amount of transactions per second against the currency contract. It runs internally to aacd to reduce overhead.
+
+\subsection*{Setup}
+
+Create the two accounts used for transactions and set the currency contract code. Must give account \& private key used for creation.
+
+
+\begin{DoxyCode}
+curl --data-binary '["inita", "5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ"]'
+       http://localhost:7777/v1/txn\_test\_gen/create\_test\_accounts
+\end{DoxyCode}
+
+
+\subsection*{Starting/\+Stopping}
+
+Start generation\+:
+
+
+\begin{DoxyCode}
+curl --data-binary '["one", 20, 16]' http://localhost:7777/v1/txn\_test\_gen/start\_generation
+\end{DoxyCode}
+
+
+First parameter is some \char`\"{}salt\char`\"{} added to the transaction memos to ensure if this test is being run on other nodes concurrently no identical transactions are created. The second parameter is the frequency in milliseconds to wake up and send transactions. The third parameter is how many transactions to send on each wake up (must be an even number). There are some constraints on these numbers to prevent anything too wild.
+
+Stop generation
+
+
+\begin{DoxyCode}
+curl http://localhost:7777/v1/txn\_test\_gen/stop\_generation
+\end{DoxyCode}
+
+
+Generation of transactions is also stopped if a transaction fails to be accepted for any reason. 

@@ -1,0 +1,96 @@
+.TH "contracts/aaciolib/crypto.h" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/crypto.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aaciolib/types\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBassert_sha256\fP (char *data, uint32_t length, const \fBchecksum256\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBassert_sha1\fP (char *data, uint32_t length, const \fBchecksum160\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBassert_sha512\fP (char *data, uint32_t length, const \fBchecksum512\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBassert_ripemd160\fP (char *data, uint32_t length, const \fBchecksum160\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBsha256\fP (char *data, uint32_t length, \fBchecksum256\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBsha1\fP (char *data, uint32_t length, \fBchecksum160\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBsha512\fP (char *data, uint32_t length, \fBchecksum512\fP *hash)"
+.br
+.ti -1c
+.RI "void \fBripemd160\fP (char *data, uint32_t length, \fBchecksum160\fP *hash)"
+.br
+.ti -1c
+.RI "int \fBrecover_key\fP (const \fBchecksum256\fP *digest, const char *sig, size_t siglen, char *pub, size_t publen)"
+.br
+.ti -1c
+.RI "void \fBassert_recover_key\fP (const \fBchecksum256\fP *digest, const char *sig, size_t siglen, const char *pub, size_t publen)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void assert_recover_key (const \fBchecksum256\fP * digest, const char * sig, size_t siglen, const char * pub, size_t publen)"
+Tests a given public key with the generated key from digest and the signature \fCdigest\fP should be checksum<256> 
+.SS "void assert_ripemd160 (char * data, uint32_t length, const \fBchecksum160\fP * hash)"
+This method is implemented as:
+.PP
+checksum calc_hash; ripemd160( data, length, &calc_hash ); aac_assert( calc_hash == hash, 'invalid hash' );
+.PP
+This method is optimized to a NO-OP when in fast evaluation mode 
+.SS "void assert_sha1 (char * data, uint32_t length, const \fBchecksum160\fP * hash)"
+This method is implemented as:
+.PP
+checksum calc_hash; sha1( data, length, &calc_hash ); aac_assert( calc_hash == hash, 'invalid hash' );
+.PP
+This method is optimized to a NO-OP when in fast evaluation mode 
+.SS "void assert_sha256 (char * data, uint32_t length, const \fBchecksum256\fP * hash)"
+This method is implemented as:
+.PP
+checksum calc_hash; \fBsha256( data, length, &calc_hash )\fP; aacio_assert( calc_hash == hash, 'invalid hash' );
+.PP
+This method is optimized to a NO-OP when in fast evaluation mode 
+.SS "void assert_sha512 (char * data, uint32_t length, const \fBchecksum512\fP * hash)"
+This method is implemented as:
+.PP
+checksum calc_hash; \fBsha512( data, length, &calc_hash )\fP; aac_assert( calc_hash == hash, 'invalid hash' );
+.PP
+This method is optimized to a NO-OP when in fast evaluation mode 
+.SS "int recover_key (const \fBchecksum256\fP * digest, const char * sig, size_t siglen, char * pub, size_t publen)"
+Calculates the public key used for a given signature and hash used to create a message and places it in \fCpub\fP returns the number of bytes read into pub \fCdigest\fP should be checksum<256> 
+.SS "void ripemd160 (char * data, uint32_t length, \fBchecksum160\fP * hash)"
+Calculates ripemd160( data,length) and stores result in memory pointed to by hash \fChash\fP should be checksum<160> 
+.SS "void sha1 (char * data, uint32_t length, \fBchecksum160\fP * hash)"
+Calculates sha1( data,length) and stores result in memory pointed to by hash \fChash\fP should be checksum<160> 
+.SS "void \fBsha256\fP (char * data, uint32_t length, \fBchecksum256\fP * hash)"
+Calculates \fBsha256( data,length)\fP and stores result in memory pointed to by hash \fChash\fP should be checksum<256> 
+.SS "void \fBsha512\fP (char * data, uint32_t length, \fBchecksum512\fP * hash)"
+Calculates \fBsha512( data,length)\fP and stores result in memory pointed to by hash \fChash\fP should be checksum<512> 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,212 @@
+.TH "contracts/aaciolib/print.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/print.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aaciolib/print\&.h>\fP
+.br
+\fC#include <aaciolib/types\&.hpp>\fP
+.br
+\fC#include <aaciolib/math\&.hpp>\fP
+.br
+\fC#include <aaciolib/fixed_key\&.hpp>\fP
+.br
+\fC#include <utility>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::iostream\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaacio::print\fP (const char *ptr)"
+.br
+.RI "Prints string\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (uint64_t \fBnum\fP)"
+.br
+.RI "Prints integer 64 bit unsigned integer\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (int64_t \fBnum\fP)"
+.br
+.ti -1c
+.RI "void \fBaacio::print\fP (double d)"
+.br
+.ti -1c
+.RI "void \fBaacio::print\fP (float f)"
+.br
+.ti -1c
+.RI "void \fBaacio::print\fP (uint32_t \fBnum\fP)"
+.br
+.RI "Prints integer 32 bit unsigned integer\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (int \fBnum\fP)"
+.br
+.RI "Prints integer\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (long \fBnum\fP)"
+.br
+.ti -1c
+.RI "void \fBaacio::print\fP (unsigned int \fBnum\fP)"
+.br
+.RI "Prints unsigned integer\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (uint128 \fBnum\fP)"
+.br
+.RI "Prints \fBuint128\fP struct\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (uint128_t \fBnum\fP)"
+.br
+.RI "Prints 128 bit unsigned integer\&. "
+.ti -1c
+.RI "template<size_t Size> void \fBaacio::print\fP (const fixed_key< Size > &val)"
+.br
+.RI "Prints \fBfixed_key\fP as a hexidecimal string\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (name name)"
+.br
+.RI "Prints a 64 bit names as base32 encoded string\&. "
+.ti -1c
+.RI "void \fBaacio::print\fP (bool val)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBaacio::print\fP (\fBT\fP &&t)"
+.br
+.ti -1c
+.RI "void \fBaacio::print_f\fP (const char *s)"
+.br
+.ti -1c
+.RI "template<typename Arg , typename\&.\&.\&. Args> void \fBaacio::print_f\fP (const char *s, Arg val, Args\&.\&.\&. rest)"
+.br
+.ti -1c
+.RI "template<typename Arg , typename\&.\&.\&. Args> void \fBaacio::print\fP (Arg &&a, Args &&\&.\&.\&. args)"
+.br
+.RI "\fBPrint\fP out value / list of values\&. "
+.ti -1c
+.RI "template<typename T > iostream & \fBaacio::operator<<\fP (iostream &out, const \fBT\fP &v)"
+.br
+.RI "Overload c++ iostream\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void aacio::print (const char * ptr)\fC [inline]\fP"
+
+.PP
+Prints string\&. Prints string 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIptr\fP - a null terminated string 
+.RE
+.PP
+
+.SS "void aacio::print (uint64_t num)\fC [inline]\fP"
+
+.PP
+Prints integer 64 bit unsigned integer\&. Prints 64 bit unsigned integer as a 64 bit unsigned integer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP to be printed 
+.RE
+.PP
+
+.SS "void aacio::print (uint32_t num)\fC [inline]\fP"
+
+.PP
+Prints integer 32 bit unsigned integer\&. Prints 32 bit unsigned integer as a 64 bit unsigned integer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP to be printed 
+.RE
+.PP
+
+.SS "void aacio::print (int num)\fC [inline]\fP"
+
+.PP
+Prints integer\&. Prints integer as a 64 bit unsigned integer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP to be printed 
+.RE
+.PP
+
+.SS "void aacio::print (unsigned int num)\fC [inline]\fP"
+
+.PP
+Prints unsigned integer\&. Prints unsigned integer as a 64 bit unsigned integer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP to be printed 
+.RE
+.PP
+
+.SS "void aacio::print (\fBuint128\fP num)\fC [inline]\fP"
+
+.PP
+Prints uint128 struct\&. Prints uint128 struct as 128 bit unsigned integer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP to be printed 
+.RE
+.PP
+
+.SS "void aacio::print (uint128_t num)\fC [inline]\fP"
+
+.PP
+Prints 128 bit unsigned integer\&. Prints 128 bit unsigned integer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum\fP to be printed 
+.RE
+.PP
+
+.SS "template<size_t Size> void aacio::print (const \fBfixed_key\fP< Size > & val)\fC [inline]\fP"
+
+.PP
+Prints fixed_key as a hexidecimal string\&. Prints fixed_key as a hexidecimal string 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIval\fP to be printed 
+.RE
+.PP
+
+.SS "void aacio::print (\fBname\fP name)\fC [inline]\fP"
+
+.PP
+Prints a 64 bit names as base32 encoded string\&. Prints a 64 bit names as base32 encoded string 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP 64 bit name to be printed 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

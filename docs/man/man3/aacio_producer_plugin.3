@@ -1,0 +1,41 @@
+.TH "aacio::producer_plugin" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::producer_plugin
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBappbase::plugin< producer_plugin >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBset_program_options\fP (boost::program_options::options_description &command_line_options, boost::program_options::options_description &config_file_options) override"
+.br
+.ti -1c
+.RI "\fBchain::public_key_type\fP \fBfirst_producer_public_key\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_producer_key\fP (const \fBchain::public_key_type\fP &key) const"
+.br
+.ti -1c
+.RI "\fBchain::signature_type\fP \fBsign_compact\fP (const \fBchain::public_key_type\fP &key, const \fBfc::sha256\fP &digest) const"
+.br
+.ti -1c
+.RI "virtual void \fBplugin_initialize\fP (const boost::program_options::variables_map &options)"
+.br
+.ti -1c
+.RI "virtual void \fBplugin_startup\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBplugin_shutdown\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

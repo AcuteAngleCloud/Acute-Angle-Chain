@@ -1,0 +1,105 @@
+\hypertarget{classbancor_1_1converter__contract}{}\section{bancor\+:\+:converter\+\_\+contract$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$ Class Template Reference}
+\label{classbancor_1_1converter__contract}\index{bancor\+::converter\+\_\+contract$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$@{bancor\+::converter\+\_\+contract$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbancor_1_1converter__contract_1_1connector}{connector}}
+\item 
+struct \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__args}{converter\+\_\+args}}
+\item 
+struct \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbancor_1_1converter__contract_ae3f4a1a3969a82defd0cdcccea700c69}\label{classbancor_1_1converter__contract_ae3f4a1a3969a82defd0cdcccea700c69}} 
+typedef Converter\+Currency {\bfseries converter\+\_\+currency}
+\item 
+\mbox{\Hypertarget{classbancor_1_1converter__contract_a7a46709d66c95ad9c7e4e515e959763f}\label{classbancor_1_1converter__contract_a7a46709d66c95ad9c7e4e515e959763f}} 
+typedef First\+Currency {\bfseries first\+\_\+currency}
+\item 
+\mbox{\Hypertarget{classbancor_1_1converter__contract_aca593e83f7c2c4fb7d84236979cf16fc}\label{classbancor_1_1converter__contract_aca593e83f7c2c4fb7d84236979cf16fc}} 
+typedef Second\+Currency {\bfseries second\+\_\+currency}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classbancor_1_1converter__contract_a606723604418ba5f0432493ba2ffd818}{on\+\_\+convert}} (const typename converter\+\_\+currency\+::transfer \&trans, const \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__args}{converter\+\_\+args}} \&args, \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&state)
+\item 
+{\footnotesize template$<$typename Connector\+Type $>$ }\\static void \mbox{\hyperlink{classbancor_1_1converter__contract_af868857d116887b596094fec4a4cb1e3}{on\+\_\+convert}} (const typename Connector\+Type\+::currency\+\_\+type\+::transfer \&trans, const \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__args}{converter\+\_\+args}} \&args, \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&state)
+\item 
+{\footnotesize template$<$typename Currency\+Type $>$ }\\static void \mbox{\hyperlink{classbancor_1_1converter__contract_ab04abf8e1d02393ddbc9b09b5b5a5be1}{start\+\_\+convert}} (const typename Currency\+Type\+::transfer\+\_\+memo \&trans)
+\item 
+static void \mbox{\hyperlink{classbancor_1_1converter__contract_a9042eadac31dfc5a4133cfbecaefb66e}{on}} (const typename converter\+\_\+currency\+::transfer\+\_\+memo \&trans)
+\item 
+{\footnotesize template$<$typename Currency $>$ }\\static void \mbox{\hyperlink{classbancor_1_1converter__contract_a05d78a86731dfec1c38f8997d3392f79}{on}} (const typename Currency\+::transfer\+\_\+memo \&trans)
+\item 
+\mbox{\Hypertarget{classbancor_1_1converter__contract_a77bbe12a77d7b973402f3d99273f529c}\label{classbancor_1_1converter__contract_a77bbe12a77d7b973402f3d99273f529c}} 
+static void {\bfseries apply} (account\+\_\+name code, action\+\_\+name \mbox{\hyperlink{structaction}{action}})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbancor_1_1converter__contract_a32e3133aa1b0937ef75191348bc966b3}\label{classbancor_1_1converter__contract_a32e3133aa1b0937ef75191348bc966b3}} 
+static const account\+\_\+name {\bfseries converter\+\_\+account} = converter\+\_\+currency\+::code
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classbancor_1_1converter__contract_a9042eadac31dfc5a4133cfbecaefb66e}\label{classbancor_1_1converter__contract_a9042eadac31dfc5a4133cfbecaefb66e}} 
+\index{bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}!on@{on}}
+\index{on@{on}!bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}}
+\subsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Converter\+Currency , typename First\+Currency , typename Second\+Currency $>$ \\
+static void \mbox{\hyperlink{classbancor_1_1converter__contract}{bancor\+::converter\+\_\+contract}}$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::on (\begin{DoxyParamCaption}\item[{const typename converter\+\_\+currency\+::transfer\+\_\+memo \&}]{trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+converter\+\_\+account first needs to call the currency handler to perform user-\/to-\/user transfers of the converter token, then if a transfer is sending the token back to the converter contract, it should convert like everything else.
+
+This method should be called from apply( code, action ) for each of the transfer types that we support (for each currency) Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classbancor_1_1converter__contract_a05d78a86731dfec1c38f8997d3392f79}\label{classbancor_1_1converter__contract_a05d78a86731dfec1c38f8997d3392f79}} 
+\index{bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}!on@{on}}
+\index{on@{on}!bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}}
+\subsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Converter\+Currency , typename First\+Currency , typename Second\+Currency $>$ \\
+template$<$typename Currency $>$ \\
+static void \mbox{\hyperlink{classbancor_1_1converter__contract}{bancor\+::converter\+\_\+contract}}$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::on (\begin{DoxyParamCaption}\item[{const typename Currency\+::transfer\+\_\+memo \&}]{trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+All other currencies simply call start\+\_\+convert if to == converter\+\_\+account Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classbancor_1_1converter__contract_a606723604418ba5f0432493ba2ffd818}\label{classbancor_1_1converter__contract_a606723604418ba5f0432493ba2ffd818}} 
+\index{bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}!on\+\_\+convert@{on\+\_\+convert}}
+\index{on\+\_\+convert@{on\+\_\+convert}!bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}}
+\subsubsection{\texorpdfstring{on\+\_\+convert()}{on\_convert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Converter\+Currency , typename First\+Currency , typename Second\+Currency $>$ \\
+static void \mbox{\hyperlink{classbancor_1_1converter__contract}{bancor\+::converter\+\_\+contract}}$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::on\+\_\+convert (\begin{DoxyParamCaption}\item[{const typename converter\+\_\+currency\+::transfer \&}]{trans,  }\item[{const \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__args}{converter\+\_\+args}} \&}]{args,  }\item[{\mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This is called when we receive R\+E\+L\+AY tokens from user and wish to convert to one of the connector currencies. Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classbancor_1_1converter__contract_af868857d116887b596094fec4a4cb1e3}\label{classbancor_1_1converter__contract_af868857d116887b596094fec4a4cb1e3}} 
+\index{bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}!on\+\_\+convert@{on\+\_\+convert}}
+\index{on\+\_\+convert@{on\+\_\+convert}!bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}}
+\subsubsection{\texorpdfstring{on\+\_\+convert()}{on\_convert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Converter\+Currency , typename First\+Currency , typename Second\+Currency $>$ \\
+template$<$typename Connector\+Type $>$ \\
+static void \mbox{\hyperlink{classbancor_1_1converter__contract}{bancor\+::converter\+\_\+contract}}$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::on\+\_\+convert (\begin{DoxyParamCaption}\item[{const typename Connector\+Type\+::currency\+\_\+type\+::transfer \&}]{trans,  }\item[{const \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__args}{converter\+\_\+args}} \&}]{args,  }\item[{\mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This is called when the converter receives one of the connector currencies and it will send either converter tokens or a different connector currency in response. convert to converter \mbox{\Hypertarget{classbancor_1_1converter__contract_ab04abf8e1d02393ddbc9b09b5b5a5be1}\label{classbancor_1_1converter__contract_ab04abf8e1d02393ddbc9b09b5b5a5be1}} 
+\index{bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}!start\+\_\+convert@{start\+\_\+convert}}
+\index{start\+\_\+convert@{start\+\_\+convert}!bancor\+::converter\+\_\+contract@{bancor\+::converter\+\_\+contract}}
+\subsubsection{\texorpdfstring{start\+\_\+convert()}{start\_convert()}}
+{\footnotesize\ttfamily template$<$typename Converter\+Currency , typename First\+Currency , typename Second\+Currency $>$ \\
+template$<$typename Currency\+Type $>$ \\
+static void \mbox{\hyperlink{classbancor_1_1converter__contract}{bancor\+::converter\+\_\+contract}}$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::start\+\_\+convert (\begin{DoxyParamCaption}\item[{const typename Currency\+Type\+::transfer\+\_\+memo \&}]{trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method factors out the boiler plate for parsing args and loading the initial state before dispatching to the proper on\+\_\+convert case Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/bancor/converter.\+hpp\end{DoxyCompactItemize}

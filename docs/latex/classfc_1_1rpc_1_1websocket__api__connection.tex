@@ -1,0 +1,59 @@
+\hypertarget{classfc_1_1rpc_1_1websocket__api__connection}{}\section{fc\+:\+:rpc\+:\+:websocket\+\_\+api\+\_\+connection Class Reference}
+\label{classfc_1_1rpc_1_1websocket__api__connection}\index{fc\+::rpc\+::websocket\+\_\+api\+\_\+connection@{fc\+::rpc\+::websocket\+\_\+api\+\_\+connection}}
+
+
+Inheritance diagram for fc\+:\+:rpc\+:\+:websocket\+\_\+api\+\_\+connection\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:rpc\+:\+:websocket\+\_\+api\+\_\+connection\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_abe1996df25102b53d14348ef2336f6be}\label{classfc_1_1rpc_1_1websocket__api__connection_abe1996df25102b53d14348ef2336f6be}} 
+{\bfseries websocket\+\_\+api\+\_\+connection} (fc\+::http\+::websocket\+\_\+connection \&c)
+\item 
+virtual \mbox{\hyperlink{classfc_1_1variant}{variant}} \mbox{\hyperlink{classfc_1_1rpc_1_1websocket__api__connection_a30eb8e7cdee7c2ca0049f565f100ab14}{send\+\_\+call}} (api\+\_\+id\+\_\+type api\+\_\+id, string method\+\_\+name, \mbox{\hyperlink{classstd_1_1vector}{variants}} args=\mbox{\hyperlink{classstd_1_1vector}{variants}}()) override
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_a7c420430971d7e9af1b3e11b043de1c8}\label{classfc_1_1rpc_1_1websocket__api__connection_a7c420430971d7e9af1b3e11b043de1c8}} 
+virtual \mbox{\hyperlink{classfc_1_1variant}{variant}} {\bfseries send\+\_\+callback} (uint64\+\_\+t callback\+\_\+id, \mbox{\hyperlink{classstd_1_1vector}{variants}} args=\mbox{\hyperlink{classstd_1_1vector}{variants}}()) override
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_adc639d508ff7b2442badd783c19b469b}\label{classfc_1_1rpc_1_1websocket__api__connection_adc639d508ff7b2442badd783c19b469b}} 
+virtual void {\bfseries send\+\_\+notice} (uint64\+\_\+t callback\+\_\+id, \mbox{\hyperlink{classstd_1_1vector}{variants}} args=\mbox{\hyperlink{classstd_1_1vector}{variants}}()) override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_a1fce181c4cd79f53a796311293201518}\label{classfc_1_1rpc_1_1websocket__api__connection_a1fce181c4cd79f53a796311293201518}} 
+std\+::string {\bfseries on\+\_\+message} (const std\+::string \&message, bool send\+\_\+message=true)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_a5d37db5ef4fe802d87e4f6ee99c2798a}\label{classfc_1_1rpc_1_1websocket__api__connection_a5d37db5ef4fe802d87e4f6ee99c2798a}} 
+fc\+::http\+::websocket\+\_\+connection \& {\bfseries \+\_\+connection}
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_a05bbf1dfec628036d64033dd230af9b5}\label{classfc_1_1rpc_1_1websocket__api__connection_a05bbf1dfec628036d64033dd230af9b5}} 
+fc\+::rpc\+::state {\bfseries \+\_\+rpc\+\_\+state}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1rpc_1_1websocket__api__connection_a30eb8e7cdee7c2ca0049f565f100ab14}\label{classfc_1_1rpc_1_1websocket__api__connection_a30eb8e7cdee7c2ca0049f565f100ab14}} 
+\index{fc\+::rpc\+::websocket\+\_\+api\+\_\+connection@{fc\+::rpc\+::websocket\+\_\+api\+\_\+connection}!send\+\_\+call@{send\+\_\+call}}
+\index{send\+\_\+call@{send\+\_\+call}!fc\+::rpc\+::websocket\+\_\+api\+\_\+connection@{fc\+::rpc\+::websocket\+\_\+api\+\_\+connection}}
+\subsubsection{\texorpdfstring{send\+\_\+call()}{send\_call()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1variant}{variant}} fc\+::rpc\+::websocket\+\_\+api\+\_\+connection\+::send\+\_\+call (\begin{DoxyParamCaption}\item[{api\+\_\+id\+\_\+type}]{api\+\_\+id,  }\item[{string}]{method\+\_\+name,  }\item[{\mbox{\hyperlink{classstd_1_1vector}{variants}}}]{args = {\ttfamily \mbox{\hyperlink{classstd_1_1vector}{variants}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+makes calls to the remote server 
+
+Implements \mbox{\hyperlink{classfc_1_1api__connection_a38d046b1803e1242ce10f36c694b9dea}{fc\+::api\+\_\+connection}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/rpc/websocket\+\_\+api.\+hpp\item 
+libraries/fc/src/rpc/websocket\+\_\+api.\+cpp\end{DoxyCompactItemize}

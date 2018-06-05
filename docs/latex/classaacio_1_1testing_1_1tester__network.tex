@@ -1,0 +1,96 @@
+\hypertarget{classaacio_1_1testing_1_1tester__network}{}\section{aacio\+:\+:testing\+:\+:tester\+\_\+network Class Reference}
+\label{classaacio_1_1testing_1_1tester__network}\index{aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}}
+
+
+The \mbox{\hyperlink{classaacio_1_1testing_1_1tester__network}{tester\+\_\+network}} class provides a simplistic virtual P2P network connecting testing\+\_\+blockchains together.  
+
+
+
+
+{\ttfamily \#include $<$tester\+\_\+network.\+hpp$>$}
+
+
+
+Collaboration diagram for aacio\+:\+:testing\+:\+:tester\+\_\+network\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classaacio_1_1testing_1_1tester__network_ad830c579e32ccfd215de62ff4f45c6e5}{connect\+\_\+blockchain}} (\mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&new\+\_\+blockchain)
+\begin{DoxyCompactList}\small\item\em Add a new blockchain to the network. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1testing_1_1tester__network_ad42cdacd71d075210517b3b76e5b982c}{disconnect\+\_\+blockchain}} (\mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&leaving\+\_\+blockchain)
+\begin{DoxyCompactList}\small\item\em Remove a blockchain from the network. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1tester__network_a8e94db054e9c70766a0e7031cbf7b638}\label{classaacio_1_1testing_1_1tester__network_a8e94db054e9c70766a0e7031cbf7b638}} 
+void \mbox{\hyperlink{classaacio_1_1testing_1_1tester__network_a8e94db054e9c70766a0e7031cbf7b638}{disconnect\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Disconnect all blockchains from the network. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1testing_1_1tester__network_a8d068f63852dc37eb30ae8fd9ce59550}{propagate\+\_\+block}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&block, const \mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&skip\+\_\+db)
+\begin{DoxyCompactList}\small\item\em Send a block to all blockchains in this network. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1testing_1_1tester__network_a59c5e3b5447fb0c9b915907d144a4838}\label{classaacio_1_1testing_1_1tester__network_a59c5e3b5447fb0c9b915907d144a4838}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} $\ast$, scoped\+\_\+connection $>$ {\bfseries blockchains}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classaacio_1_1testing_1_1tester__network}{tester\+\_\+network}} class provides a simplistic virtual P2P network connecting testing\+\_\+blockchains together. 
+
+\mbox{\hyperlink{struct_a}{A}} tester may be connected to zero or more tester\+\_\+networks at any given time. When a new tester joins the network, it will be synced with all other blockchains already in the network (blocks known only to the new chain will be pushed to the prior network members and vice versa, ignoring blocks not on the main fork). After this, whenever any blockchain in the network gets a new block, that block will be pushed to all other blockchains in the network as well. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1testing_1_1tester__network_ad830c579e32ccfd215de62ff4f45c6e5}\label{classaacio_1_1testing_1_1tester__network_ad830c579e32ccfd215de62ff4f45c6e5}} 
+\index{aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}!connect\+\_\+blockchain@{connect\+\_\+blockchain}}
+\index{connect\+\_\+blockchain@{connect\+\_\+blockchain}!aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}}
+\subsubsection{\texorpdfstring{connect\+\_\+blockchain()}{connect\_blockchain()}}
+{\footnotesize\ttfamily void aacio\+::testing\+::tester\+\_\+network\+::connect\+\_\+blockchain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&}]{new\+\_\+blockchain }\end{DoxyParamCaption})}
+
+
+
+Add a new blockchain to the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+blockchain} & The blockchain to add \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classaacio_1_1testing_1_1tester__network_ad42cdacd71d075210517b3b76e5b982c}\label{classaacio_1_1testing_1_1tester__network_ad42cdacd71d075210517b3b76e5b982c}} 
+\index{aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}!disconnect\+\_\+blockchain@{disconnect\+\_\+blockchain}}
+\index{disconnect\+\_\+blockchain@{disconnect\+\_\+blockchain}!aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}}
+\subsubsection{\texorpdfstring{disconnect\+\_\+blockchain()}{disconnect\_blockchain()}}
+{\footnotesize\ttfamily void aacio\+::testing\+::tester\+\_\+network\+::disconnect\+\_\+blockchain (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&}]{leaving\+\_\+blockchain }\end{DoxyParamCaption})}
+
+
+
+Remove a blockchain from the network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em leaving\+\_\+blockchain} & The blockchain to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1testing_1_1tester__network_a8d068f63852dc37eb30ae8fd9ce59550}\label{classaacio_1_1testing_1_1tester__network_a8d068f63852dc37eb30ae8fd9ce59550}} 
+\index{aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}!propagate\+\_\+block@{propagate\+\_\+block}}
+\index{propagate\+\_\+block@{propagate\+\_\+block}!aacio\+::testing\+::tester\+\_\+network@{aacio\+::testing\+::tester\+\_\+network}}
+\subsubsection{\texorpdfstring{propagate\+\_\+block()}{propagate\_block()}}
+{\footnotesize\ttfamily void aacio\+::testing\+::tester\+\_\+network\+::propagate\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&}]{block,  }\item[{const \mbox{\hyperlink{classaacio_1_1testing_1_1base__tester}{base\+\_\+tester}} \&}]{skip\+\_\+db }\end{DoxyParamCaption})}
+
+
+
+Send a block to all blockchains in this network. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em block} & The block to send \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/testing/include/aacio/testing/tester\+\_\+network.\+hpp\item 
+libraries/testing/tester\+\_\+network.\+cpp\end{DoxyCompactItemize}

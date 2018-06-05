@@ -1,0 +1,76 @@
+\hypertarget{classwasm_1_1_expression}{}\section{wasm\+:\+:Expression Class Reference}
+\label{classwasm_1_1_expression}\index{wasm\+::\+Expression@{wasm\+::\+Expression}}
+
+
+Inheritance diagram for wasm\+:\+:Expression\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_af7e9d0128179675c7a58e49955cedf72}\label{classwasm_1_1_expression_af7e9d0128179675c7a58e49955cedf72}} 
+enum {\bfseries Id} \{ \newline
+{\bfseries Invalid\+Id} = 0, 
+{\bfseries Block\+Id}, 
+{\bfseries If\+Id}, 
+{\bfseries Loop\+Id}, 
+\newline
+{\bfseries Break\+Id}, 
+{\bfseries Switch\+Id}, 
+{\bfseries Call\+Id}, 
+{\bfseries Call\+Import\+Id}, 
+\newline
+{\bfseries Call\+Indirect\+Id}, 
+{\bfseries Get\+Local\+Id}, 
+{\bfseries Set\+Local\+Id}, 
+{\bfseries Get\+Global\+Id}, 
+\newline
+{\bfseries Set\+Global\+Id}, 
+{\bfseries Load\+Id}, 
+{\bfseries Store\+Id}, 
+{\bfseries Const\+Id}, 
+\newline
+{\bfseries Unary\+Id}, 
+{\bfseries Binary\+Id}, 
+{\bfseries Select\+Id}, 
+{\bfseries Drop\+Id}, 
+\newline
+{\bfseries Return\+Id}, 
+{\bfseries Host\+Id}, 
+{\bfseries Nop\+Id}, 
+{\bfseries Unreachable\+Id}, 
+\newline
+{\bfseries Num\+Expression\+Ids}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_ab4a4d8fdfc938fc7ab3eb675628bba6a}\label{classwasm_1_1_expression_ab4a4d8fdfc938fc7ab3eb675628bba6a}} 
+{\bfseries Expression} (Id id)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_a113d8dc487c9cf73bc2832f58eaab1a8}\label{classwasm_1_1_expression_a113d8dc487c9cf73bc2832f58eaab1a8}} 
+void {\bfseries finalize} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_a14645482a5f187fc79869ae4f40c0d66}\label{classwasm_1_1_expression_a14645482a5f187fc79869ae4f40c0d66}} 
+{\footnotesize template$<$class T $>$ }\\bool {\bfseries is} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_af8b63bf358cf63877d636940373b2985}\label{classwasm_1_1_expression_af8b63bf358cf63877d636940373b2985}} 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries dyn\+Cast} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_af2d896a6eee6c7c5a66653d4f6865db2}\label{classwasm_1_1_expression_af2d896a6eee6c7c5a66653d4f6865db2}} 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries cast} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_ab2b1595216f4eed28a1533dd2cfc1774}\label{classwasm_1_1_expression_ab2b1595216f4eed28a1533dd2cfc1774}} 
+Id {\bfseries \+\_\+id}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_expression_ade666f88da021232f6bf765bb2c30f75}\label{classwasm_1_1_expression_ade666f88da021232f6bf765bb2c30f75}} 
+Wasm\+Type {\bfseries type}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classfc_1_1smart__ref}{}\section{fc\+:\+:smart\+\_\+ref$<$ T $>$ Class Template Reference}
+\label{classfc_1_1smart__ref}\index{fc\+::smart\+\_\+ref$<$ T $>$@{fc\+::smart\+\_\+ref$<$ T $>$}}
+
+
+Used to forward declare value types and break circular dependencies or use heap allocation.  
+
+
+
+
+{\ttfamily \#include $<$smart\+\_\+ref\+\_\+fwd.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a0947bec23dbb370b8fb443b637ca295b}\label{classfc_1_1smart__ref_a0947bec23dbb370b8fb443b637ca295b}} 
+{\footnotesize template$<$typename U $>$ }\\{\bfseries smart\+\_\+ref} (\mbox{\hyperlink{union_u}{U}} \&\&u)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_aa790989cd742a3b573b9fdf96b45e0d6}\label{classfc_1_1smart__ref_aa790989cd742a3b573b9fdf96b45e0d6}} 
+{\footnotesize template$<$typename U , typename V $>$ }\\{\bfseries smart\+\_\+ref} (\mbox{\hyperlink{union_u}{U}} \&\&u, \mbox{\hyperlink{struct_v}{V}} \&\&v)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_ac341d324daa6df129bd2aaa3877a4a67}\label{classfc_1_1smart__ref_ac341d324daa6df129bd2aaa3877a4a67}} 
+{\footnotesize template$<$typename U , typename V , typename X , typename Y $>$ }\\{\bfseries smart\+\_\+ref} (\mbox{\hyperlink{union_u}{U}} \&\&u, \mbox{\hyperlink{struct_v}{V}} \&\&v, \mbox{\hyperlink{class_x}{X}} \&\&, \mbox{\hyperlink{struct_y}{Y}} \&\&)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a80df2455155c3651e2f26a2927397b1a}\label{classfc_1_1smart__ref_a80df2455155c3651e2f26a2927397b1a}} 
+{\bfseries smart\+\_\+ref} (const \mbox{\hyperlink{classfc_1_1smart__ref}{smart\+\_\+ref}} \&f)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_ac90aa1a103deed7e5ad656bbdc4be2f5}\label{classfc_1_1smart__ref_ac90aa1a103deed7e5ad656bbdc4be2f5}} 
+{\bfseries smart\+\_\+ref} (\mbox{\hyperlink{classfc_1_1smart__ref}{smart\+\_\+ref}} \&\&f)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_ab400289343cd963347d95e475a74470a}\label{classfc_1_1smart__ref_ab400289343cd963347d95e475a74470a}} 
+{\bfseries operator const T \&} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a02e822045528c3b2b7136aba53e46d86}\label{classfc_1_1smart__ref_a02e822045528c3b2b7136aba53e46d86}} 
+{\bfseries operator T \&} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a16fec1f0e06c7bd17e43c6254b5d8e98}\label{classfc_1_1smart__ref_a16fec1f0e06c7bd17e43c6254b5d8e98}} 
+\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_adf5b4cadd6f43472c5693a03bf54d80f}\label{classfc_1_1smart__ref_adf5b4cadd6f43472c5693a03bf54d80f}} 
+const \mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a927275f4dabdbd3aff7e75d66592d90e}\label{classfc_1_1smart__ref_a927275f4dabdbd3aff7e75d66592d90e}} 
+const \mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a16312f22568a2761ea1712c9dd7fd9e6}\label{classfc_1_1smart__ref_a16312f22568a2761ea1712c9dd7fd9e6}} 
+\mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries operator-\/$>$} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_a9b2e3c27fb0a1aa0c9e48bc5a8e44255}\label{classfc_1_1smart__ref_a9b2e3c27fb0a1aa0c9e48bc5a8e44255}} 
+bool {\bfseries operator!} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_af96d5dd0a6f8d8a88e75623a7ddd7245}\label{classfc_1_1smart__ref_af96d5dd0a6f8d8a88e75623a7ddd7245}} 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator=} (\mbox{\hyperlink{union_u}{U}} \&\&u)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_ae63151aab15ce078897005b499d05ba8}\label{classfc_1_1smart__ref_ae63151aab15ce078897005b499d05ba8}} 
+\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1smart__ref}{smart\+\_\+ref}} \&\&u)
+\item 
+\mbox{\Hypertarget{classfc_1_1smart__ref_ad5d5363d5624fbe557dea765c5fffaaa}\label{classfc_1_1smart__ref_ad5d5363d5624fbe557dea765c5fffaaa}} 
+\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1smart__ref}{smart\+\_\+ref}} \&u)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class fc\+::smart\+\_\+ref$<$ T $>$}
+
+Used to forward declare value types and break circular dependencies or use heap allocation. 
+
+\mbox{\hyperlink{struct_a}{A}} smart reference is heap allocated, move-\/aware, and is gauranteed to never be null (except after a move) 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/smart\+\_\+ref\+\_\+fwd.\+hpp\item 
+libraries/fc/include/fc/smart\+\_\+ref\+\_\+impl.\+hpp\end{DoxyCompactItemize}

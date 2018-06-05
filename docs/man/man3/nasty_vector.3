@@ -1,0 +1,201 @@
+.TH "nasty_vector< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nasty_vector< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::vector\fP< \fBT\fP > \fBnested_container\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::value_type \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::reference \fBreference\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::const_reference \fBconst_reference\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::iterator \fBiterator\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::const_iterator \fBconst_iterator\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::size_type \fBsize_type\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::difference_type \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::pointer \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::const_pointer \fBconst_pointer\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::reverse_iterator \fBreverse_iterator\fP"
+.br
+.ti -1c
+.RI "typedef nested_container::const_reverse_iterator \fBconst_reverse_iterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBnasty_vector\fP (size_type n)"
+.br
+.ti -1c
+.RI "\fBnasty_vector\fP (size_type n, const value_type &value)"
+.br
+.ti -1c
+.RI "template<class InputIterator > \fBnasty_vector\fP (InputIterator first, InputIterator last)"
+.br
+.ti -1c
+.RI "template<class InputIterator > void \fBassign\fP (InputIterator first, InputIterator last)"
+.br
+.ti -1c
+.RI "void \fBassign\fP (size_type n, const value_type &u)"
+.br
+.ti -1c
+.RI "iterator \fBbegin\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_iterator \fBbegin\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "iterator \fBend\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_iterator \fBend\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrbegin\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrbegin\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "reverse_iterator \fBrend\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBrend\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_iterator \fBcbegin\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_iterator \fBcend\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBcrbegin\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const_reverse_iterator \fBcrend\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "size_type \fBsize\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "size_type \fBmax_size\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "size_type \fBcapacity\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "void \fBreserve\fP (size_type n)"
+.br
+.ti -1c
+.RI "void \fBshrink_to_fit\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "reference \fBoperator[]\fP (size_type n)"
+.br
+.ti -1c
+.RI "const_reference \fBoperator[]\fP (size_type n) const"
+.br
+.ti -1c
+.RI "reference \fBat\fP (size_type n)"
+.br
+.ti -1c
+.RI "const_reference \fBat\fP (size_type n) const"
+.br
+.ti -1c
+.RI "reference \fBfront\fP ()"
+.br
+.ti -1c
+.RI "const_reference \fBfront\fP () const"
+.br
+.ti -1c
+.RI "reference \fBback\fP ()"
+.br
+.ti -1c
+.RI "const_reference \fBback\fP () const"
+.br
+.ti -1c
+.RI "value_type * \fBdata\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "const value_type * \fBdata\fP () const TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (const value_type &x)"
+.br
+.ti -1c
+.RI "void \fBpop_back\fP ()"
+.br
+.ti -1c
+.RI "iterator \fBinsert\fP (const_iterator pos, const value_type &x)"
+.br
+.ti -1c
+.RI "iterator \fBinsert\fP (const_iterator pos, size_type n, const value_type &x)"
+.br
+.ti -1c
+.RI "template<class InputIterator > iterator \fBinsert\fP (const_iterator pos, InputIterator first, InputIterator last)"
+.br
+.ti -1c
+.RI "iterator \fBerase\fP (const_iterator pos)"
+.br
+.ti -1c
+.RI "iterator \fBerase\fP (const_iterator first, const_iterator last)"
+.br
+.ti -1c
+.RI "void \fBclear\fP () TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "void \fBresize\fP (size_type sz)"
+.br
+.ti -1c
+.RI "void \fBresize\fP (size_type sz, const value_type &c)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (\fBnasty_vector\fP &nv)"
+.br
+.ti -1c
+.RI "\fBnasty_vector\fP * \fBoperator&\fP ()"
+.br
+.ti -1c
+.RI "const \fBnasty_vector\fP * \fBoperator&\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBnested_container\fP \fBv_\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

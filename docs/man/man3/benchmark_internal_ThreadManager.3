@@ -1,0 +1,41 @@
+.TH "benchmark::internal::ThreadManager" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+benchmark::internal::ThreadManager
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBResult\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBThreadManager\fP (int num_threads)"
+.br
+.ti -1c
+.RI "Mutex & \fBGetBenchmarkMutex\fP () const RETURN_CAPABILITY(benchmark_mutex_)"
+.br
+.ti -1c
+.RI "bool \fBStartStopBarrier\fP () EXCLUDES(end_cond_mutex_)"
+.br
+.ti -1c
+.RI "void \fBNotifyThreadComplete\fP () EXCLUDES(end_cond_mutex_)"
+.br
+.ti -1c
+.RI "void \fBWaitForAllThreads\fP () EXCLUDES(end_cond_mutex_)"
+.br
+.ti -1c
+.RI "\fBGUARDED_BY\fP (GetBenchmarkMutex()) \fBResult\fP results"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

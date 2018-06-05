@@ -1,0 +1,151 @@
+.TH "websocketpp::transport::debug::endpoint< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::debug::endpoint< config >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBendpoint\fP \fBtype\fP"
+.br
+.RI "\fBType\fP of this endpoint transport component\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBtype\fP > \fBptr\fP"
+.br
+.RI "\fBType\fP of a pointer to this endpoint transport component\&. "
+.ti -1c
+.RI "typedef \fBconfig::concurrency_type\fP \fBconcurrency_type\fP"
+.br
+.RI "\fBType\fP of this endpoint's concurrency policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::elog_type\fP \fBelog_type\fP"
+.br
+.RI "\fBType\fP of this endpoint's error logging policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::alog_type\fP \fBalog_type\fP"
+.br
+.RI "\fBType\fP of this endpoint's access logging policy\&. "
+.ti -1c
+.RI "typedef \fBdebug::connection\fP< \fBconfig\fP > \fBtransport_con_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBtransport_con_type::ptr\fP \fBtransport_con_ptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBset_secure\fP (bool)"
+.br
+.RI "Set whether or not endpoint can create secure connections\&. "
+.ti -1c
+.RI "bool \fBis_secure\fP () const"
+.br
+.RI "Tests whether or not the underlying transport is secure\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_logging\fP (\fBalog_type\fP *, \fBelog_type\fP *)"
+.br
+.RI "Initialize logging\&. "
+.ti -1c
+.RI "void \fBasync_connect\fP (\fBtransport_con_ptr\fP, \fBuri_ptr\fP, \fBconnect_handler\fP cb)"
+.br
+.RI "Initiate a new connection\&. "
+.ti -1c
+.RI "lib::error_code \fBinit\fP (\fBtransport_con_ptr\fP)"
+.br
+.RI "Initialize a connection\&. "
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename config > typedef \fBtransport_con_type::ptr\fP \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::\fBtransport_con_ptr\fP"
+\fBType\fP of a shared pointer to this endpoint transport component's associated connection transport component 
+.SS "template<typename config > typedef \fBdebug::connection\fP<\fBconfig\fP> \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::\fBtransport_con_type\fP"
+\fBType\fP of this endpoint transport component's associated connection transport component\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::async_connect (\fBtransport_con_ptr\fP, \fBuri_ptr\fP, \fBconnect_handler\fP cb)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initiate a new connection\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItcon\fP \fBA\fP pointer to the transport connection component of the connection to connect\&. 
+.br
+\fIu\fP \fBA\fP URI pointer to the URI to connect to\&. 
+.br
+\fIcb\fP The function to call back with the results when complete\&. 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::init (\fBtransport_con_ptr\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize a connection\&. Init is called by an endpoint once for each newly created connection\&. It's purpose is to give the transport policy the chance to perform any transport specific initialization that couldn't be done via the default constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItcon\fP \fBA\fP pointer to the transport portion of the connection\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP status code indicating the success or failure of the operation 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::init_logging (\fBalog_type\fP *, \fBelog_type\fP *)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize logging\&. The loggers are located in the main endpoint class\&. As such, the transport doesn't have direct access to them\&. This method is called by the endpoint constructor to allow shared logging from the transport component\&. These are raw pointers to member variables of the endpoint\&. In particular, they cannot be used in the transport constructor as they haven't been constructed yet, and cannot be used in the transport destructor as they will have been destroyed by then\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP \fBA\fP pointer to the access logger to use\&. 
+.br
+\fIe\fP \fBA\fP pointer to the error logger to use\&. 
+.RE
+.PP
+
+.SS "template<typename config > bool \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::is_secure () const\fC [inline]\fP"
+
+.PP
+Tests whether or not the underlying transport is secure\&. TODO: docs
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the underlying transport is secure 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::endpoint\fP< \fBconfig\fP >::set_secure (bool)\fC [inline]\fP"
+
+.PP
+Set whether or not endpoint can create secure connections\&. TODO: docs
+.PP
+Setting this value only indicates whether or not the endpoint is capable of producing and managing secure connections\&. Connections produced by this endpoint must also be individually flagged as secure if they are\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0-alpha4
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Whether or not the endpoint can create secure connections\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

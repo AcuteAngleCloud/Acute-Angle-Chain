@@ -1,0 +1,83 @@
+.TH "accountcppapi" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+accountcppapi \- C++ API for querying account data, e\&.g\&. account balance\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBaacio::account::get\fP (account_balance &acnt)"
+.br
+.RI "Retrieve a populated balance structure\&. "
+.in -1c
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::account::PACKED\fP (account_balance)"
+.br
+.RI "The binary structure expected and populated by native balance function\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+C++ API for querying account data, e\&.g\&. account balance\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "bool aacio::account::get (account_balance & acnt)"
+
+.PP
+Retrieve a populated balance structure\&. Retrieve a populated balance structure 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIacnt\fP - account 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if account's balance is found 
+.RE
+.PP
+
+.SS "struct aacio::account::PACKED (account_balance)"
+
+.PP
+The binary structure expected and populated by native balance function\&. Example: 
+.PP
+.nf
+account_balance test1_balance;
+test1_balance\&.account = N(test1);
+if (account_api::get(test1_balance))
+{
+   aacio::print("test1 balance=", test1_balance\&.aac_balance, "\n");
+}
+
+.fi
+.PP
+ Name of the account who's balance this is
+.PP
+Name of the account who's balance this is
+.PP
+Balance for this account
+.PP
+Balance for this account
+.PP
+Staked balance for this account
+.PP
+Staked balance for this account
+.PP
+Unstaking balance for this account
+.PP
+Unstaking balance for this account
+.PP
+Time at which last unstaking occurred for this account
+.PP
+Time at which last unstaking occurred for this account
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

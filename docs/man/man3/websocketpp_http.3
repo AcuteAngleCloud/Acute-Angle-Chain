@@ -1,0 +1,94 @@
+.TH "websocketpp::http" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::http \- HTTP handling support\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBstatus_code\fP"
+.br
+.RI "HTTP Status codes\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBexception\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::map\fP< std::string, std::string > \fBattribute_list\fP"
+.br
+.RI "The type of an HTTP attribute list\&. "
+.ti -1c
+.RI "typedef \fBstd::vector\fP< std::pair< std::string, \fBattribute_list\fP > > \fBparameter_list\fP"
+.br
+.RI "The type of an HTTP parameter list\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBis_token_char\fP (unsigned char c)"
+.br
+.RI "Is the character a token\&. "
+.ti -1c
+.RI "bool \fBis_not_token_char\fP (unsigned char c)"
+.br
+.RI "Is the character a non-token\&. "
+.ti -1c
+.RI "bool \fBis_whitespace_char\fP (unsigned char c)"
+.br
+.RI "Is the character whitespace\&. "
+.ti -1c
+.RI "bool \fBis_not_whitespace_char\fP (unsigned char c)"
+.br
+.RI "Is the character non-whitespace\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "size_t const \fBmax_header_size\fP = 16000"
+.br
+.RI "Maximum size in bytes before rejecting an HTTP header as too big\&. "
+.ti -1c
+.RI "size_t const \fBmax_body_size\fP = 32000000"
+.br
+.RI "Default Maximum size in bytes for HTTP message bodies\&. "
+.ti -1c
+.RI "size_t const \fBistream_buffer\fP = 512"
+.br
+.RI "Number of bytes to use for temporary istream read buffers\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+HTTP handling support\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBstd::map\fP<std::string,std::string> \fBwebsocketpp::http::attribute_list\fP"
+
+.PP
+The type of an HTTP attribute list\&. The attribute list is an unordered key/value map\&. Encoded attribute values are delimited by semicolons\&. 
+.SS "typedef \fBstd::vector\fP< std::pair<std::string,\fBattribute_list\fP> > \fBwebsocketpp::http::parameter_list\fP"
+
+.PP
+The type of an HTTP parameter list\&. The parameter list is an ordered pairing of a parameter and its associated attribute list\&. Encoded parameter values are delimited by commas\&. 
+.SH "Function Documentation"
+.PP 
+.SS "bool websocketpp::http::is_whitespace_char (unsigned char c)\fC [inline]\fP"
+
+.PP
+Is the character whitespace\&. whitespace is space (32) or horizontal tab (9) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

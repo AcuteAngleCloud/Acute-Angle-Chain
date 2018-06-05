@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="fc::crypto::r1::detail\l::public_key_impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1crypto_1_1r1_1_1detail_1_1public__key__impl.html"];
+}

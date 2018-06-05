@@ -1,0 +1,54 @@
+.TH "libraries/chain/include/aacio/chain/generated_transaction_object.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/generated_transaction_object.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fc/io/raw\&.hpp>\fP
+.br
+\fC#include <aacio/chain/transaction\&.hpp>\fP
+.br
+\fC#include <fc/uint128\&.hpp>\fP
+.br
+\fC#include <boost/multi_index/hashed_index\&.hpp>\fP
+.br
+\fC#include <boost/multi_index/mem_fun\&.hpp>\fP
+.br
+\fC#include 'multi_index_includes\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::chain::generated_transaction_object\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::config::billable_size< generated_transaction_object >\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::generated_transaction_multi_index\fP = chainbase::shared_multi_index_container< generated_transaction_object, indexed_by< ordered_unique< tag< by_id >, BOOST_MULTI_INDEX_MEMBER(generated_transaction_object, generated_transaction_object::id_type, id)>, ordered_unique< tag< by_trx_id >, BOOST_MULTI_INDEX_MEMBER(generated_transaction_object, \fBtransaction_id_type\fP, trx_id)>, ordered_unique< tag< by_expiration >, composite_key< generated_transaction_object, BOOST_MULTI_INDEX_MEMBER(generated_transaction_object, time_point, \fBexpiration\fP), > >, ordered_unique< tag< by_delay >, composite_key< generated_transaction_object, BOOST_MULTI_INDEX_MEMBER(generated_transaction_object, time_point, delay_until), > >, ordered_unique< tag< by_sender_id >, composite_key< generated_transaction_object, BOOST_MULTI_INDEX_MEMBER(generated_transaction_object, account_name, sender), > > > >"
+.br
+.ti -1c
+.RI "typedef \fBchainbase::generic_index\fP< generated_transaction_multi_index > \fBaacio::chain::generated_transaction_index\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

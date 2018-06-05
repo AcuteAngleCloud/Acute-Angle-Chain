@@ -1,0 +1,32 @@
+\hypertarget{structaacio_1_1transaction__state}{}\section{aacio\+:\+:transaction\+\_\+state Struct Reference}
+\label{structaacio_1_1transaction__state}\index{aacio\+::transaction\+\_\+state@{aacio\+::transaction\+\_\+state}}
+
+
+Collaboration diagram for aacio\+:\+:transaction\+\_\+state\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1transaction__state_ab1f0e595bc135458667c9fc12d9f4f59}\label{structaacio_1_1transaction__state_ab1f0e595bc135458667c9fc12d9f4f59}} 
+\mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} {\bfseries id}
+\item 
+\mbox{\Hypertarget{structaacio_1_1transaction__state_a495df89bd4743f1d40d9fa47fd813d28}\label{structaacio_1_1transaction__state_a495df89bd4743f1d40d9fa47fd813d28}} 
+bool \mbox{\hyperlink{structaacio_1_1transaction__state_a495df89bd4743f1d40d9fa47fd813d28}{is\+\_\+known\+\_\+by\+\_\+peer}} = false
+\begin{DoxyCompactList}\small\item\em true if we sent or received this trx to this peer or received notice from peer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1transaction__state_ad2d3c972d5bb716c649aa7d1d29f51ff}\label{structaacio_1_1transaction__state_ad2d3c972d5bb716c649aa7d1d29f51ff}} 
+bool \mbox{\hyperlink{structaacio_1_1transaction__state_ad2d3c972d5bb716c649aa7d1d29f51ff}{is\+\_\+noticed\+\_\+to\+\_\+peer}} = false
+\begin{DoxyCompactList}\small\item\em have we sent peer notice we know it (true if we receive from this peer) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1transaction__state_a54bc02434925275f0bb541fcebdc83fe}\label{structaacio_1_1transaction__state_a54bc02434925275f0bb541fcebdc83fe}} 
+uint32\+\_\+t \mbox{\hyperlink{structaacio_1_1transaction__state_a54bc02434925275f0bb541fcebdc83fe}{block\+\_\+num}} = 0
+\begin{DoxyCompactList}\small\item\em the block number the transaction was included in \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1transaction__state_ad9fc1f3156d16ac872d4638b9e79206f}\label{structaacio_1_1transaction__state_ad9fc1f3156d16ac872d4638b9e79206f}} 
+\mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} {\bfseries requested\+\_\+time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Index by id Index by is\+\_\+known, block\+\_\+num, validated\+\_\+time, this is the order we will broadcast to peer. Index by is\+\_\+noticed, validated\+\_\+time 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/net\+\_\+plugin/\mbox{\hyperlink{net__plugin_8cpp}{net\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

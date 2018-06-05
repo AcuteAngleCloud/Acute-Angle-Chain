@@ -1,0 +1,39 @@
+digraph "aacio::testing::base_tester"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="aacio::testing::base\l_tester",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" control" ];
+  Node5 [label="fc::unique_ptr\< aacio\l::chain::chain_controller \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1unique__ptr.html"];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cfg" ];
+  Node6 [label="aacio::chain::chain\l_controller::controller\l_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1chain__controller_1_1controller__config.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shared_memory_dir\nblock_log_dir" ];
+  Node7 [label="fc::path",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1path.html",tooltip="wraps boost::filesystem::path to provide platform independent path manipulation. "];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" applied_block_callbacks" ];
+  Node8 [label="std::vector\< signal\l\< void(const aacio::\lchain::block_trace &)\l\>::slot_type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" on_pending_transaction\l_callbacks" ];
+  Node9 [label="std::vector\< signal\l\< void(const aacio::\lchain::transaction_metadata\l &, const aacio::chain::packed\l_transaction &)\>::slot_type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" limits" ];
+  Node10 [label="aacio::chain::chain\l_controller::runtime\l_limits",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1chain__controller_1_1runtime__limits.html"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" max_push_transaction\l_us\nmax_push_block_us\nmax_deferred_transactions_us" ];
+  Node11 [label="fc::microseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1microseconds.html"];
+  Node12 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" applied_irreversible\l_block_callbacks" ];
+  Node12 [label="std::vector\< signal\l\< void(const aacio::\lchain::signed_block &)\l\>::slot_type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node13 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" genesis" ];
+  Node13 [label="aacio::chain::contracts\l::genesis_state_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1contracts_1_1genesis__state__type.html"];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" initial_key" ];
+  Node14 [label="fc::crypto::public_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1crypto_1_1public__key.html"];
+  Node15 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" initial_configuration" ];
+  Node15 [label="aacio::chain::chain\l_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1chain__config.html",tooltip="Producer-voted blockchain configuration parameters. "];
+  Node16 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" initial_chain_id" ];
+  Node16 [label="fc::sha256",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1sha256.html"];
+  Node17 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" chain_transactions" ];
+  Node17 [label="std::map\< fc::sha256,\l aacio::chain::transaction\l_receipt \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+  Node18 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tempdir" ];
+  Node18 [label="fc::temp_directory",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1temp__directory.html"];
+  Node19 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="fc::temp_file_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1temp__file__base.html"];
+  Node20 -> Node19 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _path" ];
+  Node20 [label="fc::optional\< fc::path \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+}

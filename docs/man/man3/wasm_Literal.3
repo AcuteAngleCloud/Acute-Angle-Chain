@@ -1,0 +1,289 @@
+.TH "wasm::Literal" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Literal
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLiteral\fP (WasmType type)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP (int32_t init)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP (uint32_t init)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP (int64_t init)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP (uint64_t init)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP (float init)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP (double init)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcastToF32\fP ()"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcastToF64\fP ()"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcastToI32\fP ()"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcastToI64\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBgeti32\fP () const"
+.br
+.ti -1c
+.RI "int64_t \fBgeti64\fP () const"
+.br
+.ti -1c
+.RI "float \fBgetf32\fP () const"
+.br
+.ti -1c
+.RI "double \fBgetf64\fP () const"
+.br
+.ti -1c
+.RI "int32_t * \fBgeti32Ptr\fP ()"
+.br
+.ti -1c
+.RI "int32_t \fBreinterpreti32\fP () const"
+.br
+.ti -1c
+.RI "int64_t \fBreinterpreti64\fP () const"
+.br
+.ti -1c
+.RI "float \fBreinterpretf32\fP () const"
+.br
+.ti -1c
+.RI "double \fBreinterpretf64\fP () const"
+.br
+.ti -1c
+.RI "int64_t \fBgetInteger\fP ()"
+.br
+.ti -1c
+.RI "double \fBgetFloat\fP ()"
+.br
+.ti -1c
+.RI "int64_t \fBgetBits\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcountLeadingZeroes\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcountTrailingZeroes\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBpopCount\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBextendToSI64\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBextendToUI64\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBextendToF64\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBtruncateToI32\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBtruncateToF32\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBconvertSToF32\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBconvertUToF32\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBconvertSToF64\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBconvertUToF64\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBneg\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBabs\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBceil\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBfloor\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBtrunc\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBnearbyint\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBsqrt\fP () const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBadd\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBsub\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBmul\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBdiv\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBdivS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBdivU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBremS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBremU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBand_\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBor_\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBxor_\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBshl\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBshrS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBshrU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBrotL\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBrotR\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBeq\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBne\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBltS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBltU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBlt\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBleS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBleU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBle\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBgtS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBgtU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBgt\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBgeS\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBgeU\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBge\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBmin\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBmax\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcopysign\fP (const \fBLiteral\fP &\fBother\fP) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static uint32_t \fBNaNPayload\fP (float f)"
+.br
+.ti -1c
+.RI "static uint64_t \fBNaNPayload\fP (double f)"
+.br
+.ti -1c
+.RI "static float \fBsetQuietNaN\fP (float f)"
+.br
+.ti -1c
+.RI "static double \fBsetQuietNaN\fP (double f)"
+.br
+.ti -1c
+.RI "static void \fBprintFloat\fP (std::ostream &o, float f)"
+.br
+.ti -1c
+.RI "static void \fBprintDouble\fP (std::ostream &o, double d)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "WasmType \fBtype\fP"
+.br
+.ti -1c
+.RI "int32_t \fBi32\fP"
+.br
+.ti -1c
+.RI "int64_t \fBi64\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &o, \fBLiteral\fP literal)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

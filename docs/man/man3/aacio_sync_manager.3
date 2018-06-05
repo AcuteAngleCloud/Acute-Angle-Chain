@@ -1,0 +1,65 @@
+.TH "aacio::sync_manager" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::sync_manager
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsync_manager\fP (uint32_t span)"
+.br
+.ti -1c
+.RI "void \fBset_state\fP (stages s)"
+.br
+.ti -1c
+.RI "bool \fBis_active\fP (connection_ptr conn)"
+.br
+.ti -1c
+.RI "void \fBreset_lib_num\fP (connection_ptr conn)"
+.br
+.ti -1c
+.RI "bool \fBsync_required\fP ()"
+.br
+.ti -1c
+.RI "void \fBrequest_next_chunk\fP (connection_ptr conn=connection_ptr())"
+.br
+.ti -1c
+.RI "void \fBstart_sync\fP (connection_ptr c, uint32_t target)"
+.br
+.ti -1c
+.RI "void \fBsend_handshakes\fP ()"
+.br
+.ti -1c
+.RI "void \fBreassign_fetch\fP (connection_ptr c, \fBgo_away_reason\fP reason)"
+.br
+.ti -1c
+.RI "void \fBverify_catchup\fP (connection_ptr c, uint32_t \fBnum\fP, \fBblock_id_type\fP id)"
+.br
+.ti -1c
+.RI "void \fBrecv_block\fP (connection_ptr c, const \fBblock_id_type\fP &blk_id, uint32_t blk_num, bool accepted)"
+.br
+.ti -1c
+.RI "void \fBrecv_handshake\fP (connection_ptr c, const \fBhandshake_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBrecv_notice\fP (connection_ptr c, const \fBnotice_message\fP &msg)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const fc::string \fBlogger_name\fP"
+.br
+.ti -1c
+.RI "static \fBfc::logger\fP \fBlogger\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

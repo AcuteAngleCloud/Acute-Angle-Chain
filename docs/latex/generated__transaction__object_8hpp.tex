@@ -1,0 +1,34 @@
+\hypertarget{generated__transaction__object_8hpp}{}\section{libraries/chain/include/aacio/chain/generated\+\_\+transaction\+\_\+object.hpp File Reference}
+\label{generated__transaction__object_8hpp}\index{libraries/chain/include/aacio/chain/generated\+\_\+transaction\+\_\+object.\+hpp@{libraries/chain/include/aacio/chain/generated\+\_\+transaction\+\_\+object.\+hpp}}
+{\ttfamily \#include $<$fc/io/raw.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/transaction.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/uint128.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/hashed\+\_\+index.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/mem\+\_\+fun.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+index\+\_\+includes.\+hpp\char`\"{}}\newline
+Include dependency graph for generated\+\_\+transaction\+\_\+object.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1generated__transaction__object}{aacio\+::chain\+::generated\+\_\+transaction\+\_\+object}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01generated__transaction__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ generated\+\_\+transaction\+\_\+object $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{generated__transaction__object_8hpp_ae4031a247c5226c54dff1641f91a798d}\label{generated__transaction__object_8hpp_ae4031a247c5226c54dff1641f91a798d}} 
+using {\bfseries aacio\+::chain\+::generated\+\_\+transaction\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ generated\+\_\+transaction\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(generated\+\_\+transaction\+\_\+object, generated\+\_\+transaction\+\_\+object\+::id\+\_\+type, id)$>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+trx\+\_\+id $>$, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(generated\+\_\+transaction\+\_\+object, \mbox{\hyperlink{structchecksum256}{transaction\+\_\+id\+\_\+type}}, trx\+\_\+id)$>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+expiration $>$, composite\+\_\+key$<$ generated\+\_\+transaction\+\_\+object, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(generated\+\_\+transaction\+\_\+object, time\+\_\+point, \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}), $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+delay $>$, composite\+\_\+key$<$ generated\+\_\+transaction\+\_\+object, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(generated\+\_\+transaction\+\_\+object, time\+\_\+point, delay\+\_\+until), $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+sender\+\_\+id $>$, composite\+\_\+key$<$ generated\+\_\+transaction\+\_\+object, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(generated\+\_\+transaction\+\_\+object, account\+\_\+name, sender), $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{generated__transaction__object_8hpp_aa66594d94abb4dda54ba7711a454062d}\label{generated__transaction__object_8hpp_aa66594d94abb4dda54ba7711a454062d}} 
+typedef \mbox{\hyperlink{classchainbase_1_1generic__index}{chainbase\+::generic\+\_\+index}}$<$ generated\+\_\+transaction\+\_\+multi\+\_\+index $>$ {\bfseries aacio\+::chain\+::generated\+\_\+transaction\+\_\+index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

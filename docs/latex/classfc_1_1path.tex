@@ -1,0 +1,159 @@
+\hypertarget{classfc_1_1path}{}\section{fc\+:\+:path Class Reference}
+\label{classfc_1_1path}\index{fc\+::path@{fc\+::path}}
+
+
+wraps boost\+::filesystem\+::path to provide platform independent path manipulation.  
+
+
+
+
+{\ttfamily \#include $<$filesystem.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1path_add8f88ad5dd493b16904860ce9be6493}\label{classfc_1_1path_add8f88ad5dd493b16904860ce9be6493}} 
+{\bfseries path} (const boost\+::filesystem\+::path \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_aca67292cff9d14da2d8814d09e0a7193}\label{classfc_1_1path_aca67292cff9d14da2d8814d09e0a7193}} 
+{\bfseries path} (const std\+::string \&p)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a53f157da299530b9241885abc9aed113}\label{classfc_1_1path_a53f157da299530b9241885abc9aed113}} 
+\mbox{\hyperlink{classfc_1_1path_a53f157da299530b9241885abc9aed113}{path}} (const std\+::wstring \&p)
+\begin{DoxyCompactList}\small\item\em Constructor to build path using unicode native characters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfc_1_1path_ab7e23e521ace1a15d0958d16e43cb69f}\label{classfc_1_1path_ab7e23e521ace1a15d0958d16e43cb69f}} 
+{\bfseries path} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a29e0e41c28ed846b7c9dca9b3031a4da}\label{classfc_1_1path_a29e0e41c28ed846b7c9dca9b3031a4da}} 
+{\bfseries path} (const \mbox{\hyperlink{classfc_1_1path}{path}} \&p)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_ab7ad3a6bc6a10744488f4fd18c163f16}\label{classfc_1_1path_ab7ad3a6bc6a10744488f4fd18c163f16}} 
+{\bfseries path} (\mbox{\hyperlink{classfc_1_1path}{path}} \&\&p)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a76df00a037a781a2ebb3ae3100e06929}\label{classfc_1_1path_a76df00a037a781a2ebb3ae3100e06929}} 
+\mbox{\hyperlink{classfc_1_1path}{path}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1path}{path}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_abd300298b33db4c752481d93245fcbf4}\label{classfc_1_1path_abd300298b33db4c752481d93245fcbf4}} 
+\mbox{\hyperlink{classfc_1_1path}{path}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1path}{path}} \&\&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_addfacdbec90fcbdea3161373d314300d}\label{classfc_1_1path_addfacdbec90fcbdea3161373d314300d}} 
+\mbox{\hyperlink{classfc_1_1path}{path}} \& {\bfseries operator/=} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a2630b0783273ac09a6db1ecec3661581}\label{classfc_1_1path_a2630b0783273ac09a6db1ecec3661581}} 
+{\bfseries operator boost\+::filesystem\+::path \&} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a39e648d6b1da8270dafeb4b927b984be}\label{classfc_1_1path_a39e648d6b1da8270dafeb4b927b984be}} 
+{\bfseries operator const boost\+::filesystem\+::path \&} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_af7de3b21cee1e93c7496e480181e7af2}\label{classfc_1_1path_af7de3b21cee1e93c7496e480181e7af2}} 
+void {\bfseries replace\+\_\+extension} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&e)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a6756e8e4adb1f4f2423f454adfbbf205}\label{classfc_1_1path_a6756e8e4adb1f4f2423f454adfbbf205}} 
+\mbox{\hyperlink{classfc_1_1path}{fc\+::path}} {\bfseries stem} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_ab0d2cca0994e599a7d65a89c5c8f9e54}\label{classfc_1_1path_ab0d2cca0994e599a7d65a89c5c8f9e54}} 
+\mbox{\hyperlink{classfc_1_1path}{fc\+::path}} {\bfseries extension} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a1e6beb6e05c3f6d6f699c1c448c4b1d6}\label{classfc_1_1path_a1e6beb6e05c3f6d6f699c1c448c4b1d6}} 
+\mbox{\hyperlink{classfc_1_1path}{fc\+::path}} {\bfseries filename} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a10985bab813b9197980458e4345d0f36}\label{classfc_1_1path_a10985bab813b9197980458e4345d0f36}} 
+\mbox{\hyperlink{classfc_1_1path}{fc\+::path}} {\bfseries parent\+\_\+path} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_aaf0107e4a41f9977032b2a604161cf85}\label{classfc_1_1path_aaf0107e4a41f9977032b2a604161cf85}} 
+std\+::string {\bfseries string} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_ab1eae2062df4ea01435348ec52fb3784}\label{classfc_1_1path_ab1eae2062df4ea01435348ec52fb3784}} 
+std\+::string {\bfseries generic\+\_\+string} () const
+\item 
+std\+::string \mbox{\hyperlink{classfc_1_1path_a9708f850e21e668a29523fbe6c4d0dca}{preferred\+\_\+string}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a2eef878144c6265508787f3b9a6355e8}\label{classfc_1_1path_a2eef878144c6265508787f3b9a6355e8}} 
+std\+::wstring {\bfseries wstring} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a018f35936535482432e303d4b7d10c31}\label{classfc_1_1path_a018f35936535482432e303d4b7d10c31}} 
+std\+::wstring {\bfseries generic\+\_\+wstring} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a02b8088f909ec69bd18f1f2617cb1c1f}\label{classfc_1_1path_a02b8088f909ec69bd18f1f2617cb1c1f}} 
+std\+::wstring {\bfseries preferred\+\_\+wstring} () const
+\item 
+std\+::string \mbox{\hyperlink{classfc_1_1path_a9712c4ccfcfc54e02cc913510a858733}{to\+\_\+native\+\_\+ansi\+\_\+path}} () const
+\item 
+std\+::string \mbox{\hyperlink{classfc_1_1path_a12a75eca015d0c9880e2c062e371d08d}{windows\+\_\+string}} () const
+\begin{DoxyCompactList}\small\item\em replaces \textquotesingle{}/\textquotesingle{} with \textquotesingle{}\textbackslash{}\textquotesingle{} in the result of generic\+\_\+string() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfc_1_1path_afbbbaae83c2d714a07cc424dc7b9f329}\label{classfc_1_1path_afbbbaae83c2d714a07cc424dc7b9f329}} 
+bool {\bfseries is\+\_\+relative} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1path_ae8ca694b3a1a776ae4a3c7d4622d746a}\label{classfc_1_1path_ae8ca694b3a1a776ae4a3c7d4622d746a}} 
+bool {\bfseries is\+\_\+absolute} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a613fc8b20159868e1aa62670d81a0aad}\label{classfc_1_1path_a613fc8b20159868e1aa62670d81a0aad}} 
+static char {\bfseries separator\+\_\+char} = static\+\_\+cast$<$char$>$(boost\+::filesystem\+::path(\char`\"{}/\char`\"{}).make\+\_\+preferred().native()\mbox{[}0\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1path_af45dc6cd4ecfc8ca7d0d76fa394e7c3d}\label{classfc_1_1path_af45dc6cd4ecfc8ca7d0d76fa394e7c3d}} 
+\mbox{\hyperlink{classfc_1_1path}{path}} {\bfseries operator/} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&p, const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_afd02e7ea89cb6a2b81d8bc4369e9636b}\label{classfc_1_1path_afd02e7ea89cb6a2b81d8bc4369e9636b}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&p, const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_a8f32b11a97d3c20600c24dc2d0f31643}\label{classfc_1_1path_a8f32b11a97d3c20600c24dc2d0f31643}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&p, const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1path_ad90b5a13641f4566ff587ee41dc964a8}\label{classfc_1_1path_ad90b5a13641f4566ff587ee41dc964a8}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&p, const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+wraps boost\+::filesystem\+::path to provide platform independent path manipulation. 
+
+Most calls are simply a passthrough to boost\+::filesystem\+::path, however exceptions are wrapped in an fc\+::error\+\_\+report and the additional helper method \mbox{\hyperlink{classfc_1_1path_a12a75eca015d0c9880e2c062e371d08d}{fc\+::path\+::windows\+\_\+string()}}, can be used to calculate paths intended for systems different than the host.
+
+\begin{DoxyNote}{Note}
+Serializes to a \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{fc\+::value()}} as the result of generic\+\_\+string() 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1path_a9708f850e21e668a29523fbe6c4d0dca}\label{classfc_1_1path_a9708f850e21e668a29523fbe6c4d0dca}} 
+\index{fc\+::path@{fc\+::path}!preferred\+\_\+string@{preferred\+\_\+string}}
+\index{preferred\+\_\+string@{preferred\+\_\+string}!fc\+::path@{fc\+::path}}
+\subsubsection{\texorpdfstring{preferred\+\_\+string()}{preferred\_string()}}
+{\footnotesize\ttfamily fc\+::string fc\+::path\+::preferred\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+On windows, returns a path where all path separators are \textquotesingle{}\textbackslash{}\textquotesingle{} suitable for displaying to users. On other platforms, it does the same as generic\+\_\+string() \mbox{\Hypertarget{classfc_1_1path_a9712c4ccfcfc54e02cc913510a858733}\label{classfc_1_1path_a9712c4ccfcfc54e02cc913510a858733}} 
+\index{fc\+::path@{fc\+::path}!to\+\_\+native\+\_\+ansi\+\_\+path@{to\+\_\+native\+\_\+ansi\+\_\+path}}
+\index{to\+\_\+native\+\_\+ansi\+\_\+path@{to\+\_\+native\+\_\+ansi\+\_\+path}!fc\+::path@{fc\+::path}}
+\subsubsection{\texorpdfstring{to\+\_\+native\+\_\+ansi\+\_\+path()}{to\_native\_ansi\_path()}}
+{\footnotesize\ttfamily std\+::string fc\+::path\+::to\+\_\+native\+\_\+ansi\+\_\+path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieves native string path representation and next converts it into A\+N\+SI U\+T\+F-\/8 representation. It is needed since not all parts of fc library accept unicode paths (\mbox{\hyperlink{classfc_1_1file__mapping}{fc\+::file\+\_\+mapping}}). Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classfc_1_1path_a12a75eca015d0c9880e2c062e371d08d}\label{classfc_1_1path_a12a75eca015d0c9880e2c062e371d08d}} 
+\index{fc\+::path@{fc\+::path}!windows\+\_\+string@{windows\+\_\+string}}
+\index{windows\+\_\+string@{windows\+\_\+string}!fc\+::path@{fc\+::path}}
+\subsubsection{\texorpdfstring{windows\+\_\+string()}{windows\_string()}}
+{\footnotesize\ttfamily fc\+::string fc\+::path\+::windows\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+replaces \textquotesingle{}/\textquotesingle{} with \textquotesingle{}\textbackslash{}\textquotesingle{} in the result of generic\+\_\+string() 
+
+\begin{DoxyNote}{Note}
+not part of boost\+::filesystem\+::path
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]use iterators instead of indexes for faster performance \end{DoxyRefDesc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/filesystem.\+hpp\item 
+contracts/libc++/upstream/src/experimental/filesystem/path.\+cpp\item 
+libraries/fc/src/filesystem.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+.TH "fc::temp_file_base" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::temp_file_base
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filesystem\&.hpp>\fP
+.PP
+Inherited by \fBfc::temp_directory\fP, and \fBfc::temp_file\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator!\fP () const"
+.br
+.ti -1c
+.RI "const \fBfc::path\fP & \fBpath\fP () const"
+.br
+.ti -1c
+.RI "void \fBremove\fP ()"
+.br
+.ti -1c
+.RI "void \fBrelease\fP ()"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBfc::optional\fP< \fBfc::path\fP > \fBpath_t\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtemp_file_base\fP (const \fBpath_t\fP &\fBpath\fP)"
+.br
+.ti -1c
+.RI "\fBtemp_file_base\fP (\fBpath_t\fP &&\fBpath\fP)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBpath_t\fP \fB_path\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBClass\fP which creates a temporary directory inside an existing temporary directory\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

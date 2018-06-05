@@ -1,0 +1,86 @@
+.TH "stub_con" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+stub_con
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwebsocketpp::transport::iostream::connection< config >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstub_con\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef websocketpp::lib::shared_ptr< \fBtype\fP > \fBptr\fP"
+.br
+.ti -1c
+.RI "typedef iostream_con::timer_ptr \fBtimer_ptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstub_con\fP (bool is_server, \fBconfig::alog_type\fP &a, \fBconfig::elog_type\fP &e)"
+.br
+.ti -1c
+.RI "ptr \fBget_shared\fP ()"
+.br
+.RI "Get a shared pointer to this component\&. "
+.ti -1c
+.RI "void \fBwrite\fP (std::string msg)"
+.br
+.ti -1c
+.RI "void \fBwrite\fP (\fBstd::vector\fP< \fBwebsocketpp::transport::buffer\fP > &bufs)"
+.br
+.ti -1c
+.RI "void \fBasync_read_at_least\fP (size_t num_bytes, char *buf, size_t len)"
+.br
+.ti -1c
+.RI "void \fBhandle_op\fP (websocketpp::lib::error_code const &e)"
+.br
+.ti -1c
+.RI "void \fBasync_read_indef\fP (size_t num_bytes, char *buf, size_t len)"
+.br
+.ti -1c
+.RI "void \fBindef_read\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandle_indef\fP (websocketpp::lib::error_code const &e, size_t amt_read)"
+.br
+.ti -1c
+.RI "void \fBshutdown\fP ()"
+.br
+.ti -1c
+.RI "void \fBhandle_async_shutdown\fP (websocketpp::lib::error_code const &e)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "websocketpp::lib::error_code \fBec\fP"
+.br
+.ti -1c
+.RI "size_t \fBindef_read_size\fP"
+.br
+.ti -1c
+.RI "char * \fBindef_read_buf\fP"
+.br
+.ti -1c
+.RI "size_t \fBindef_read_len\fP"
+.br
+.ti -1c
+.RI "size_t \fBindef_read_total\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

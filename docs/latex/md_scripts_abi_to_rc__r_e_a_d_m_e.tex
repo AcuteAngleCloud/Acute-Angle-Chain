@@ -1,0 +1,17 @@
+The {\ttfamily abi\+\_\+to\+\_\+rc.\+py} script processes a contract\textquotesingle{}s .abi file in order to generate an overview Ricardian Contract and a Ricardian Contract for each action. The overview Ricardian Contract provides a description of the contract\textquotesingle{}s purpose and also specifies the contract\textquotesingle{}s \mbox{\hyperlink{structaction}{action(s)}}, input(s), and input type(s). The action Ricardian Contract provides a description of the action\textquotesingle{}s purpose and also specifies the action\textquotesingle{}s input(s), and input type(s).
+
+\subsection*{How to run}
+
+{\ttfamily \$ python abi\+\_\+to\+\_\+rc.\+py /path/to/smart-\/contract.abi}
+
+\subsection*{Example}
+
+{\ttfamily \$ python abi\+\_\+to\+\_\+rc.\+py ../../contracts/currency/currency.abi}
+
+\subsection*{Results}
+
+For the example above, {\ttfamily abi\+\_\+to\+\_\+rc.\+py} should generate output files that have the following names\+: {\ttfamily currency-\/rc.\+md}, {\ttfamily currency-\/transfer-\/rc.\+md}, {\ttfamily currency-\/issue-\/rc.\+md}, {\ttfamily currency-\/create-\/rc.\+md}.
+
+\subsection*{Notes}
+
+Be sure to have {\ttfamily abi\+\_\+to\+\_\+rc.\+py}, {\ttfamily rc-\/overview-\/template.\+md}, and {\ttfamily rc-\/action-\/template.\+md} in the same folder. 

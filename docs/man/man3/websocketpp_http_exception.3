@@ -1,0 +1,40 @@
+.TH "websocketpp::http::exception" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::http::exception
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits exception\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBexception\fP (const std::string &log_msg, status_code::value error_code, const std::string &error_msg=std::string(), const std::string &body=std::string())"
+.br
+.ti -1c
+.RI "virtual const char * \fBwhat\fP () const  throw ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_msg\fP"
+.br
+.ti -1c
+.RI "std::string \fBm_error_msg\fP"
+.br
+.ti -1c
+.RI "std::string \fBm_body\fP"
+.br
+.ti -1c
+.RI "status_code::value \fBm_error_code\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

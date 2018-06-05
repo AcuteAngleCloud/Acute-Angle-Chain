@@ -1,0 +1,65 @@
+.TH "aacio_system_tester" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio_system_tester
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits TESTER\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "action_result \fBpush_action\fP (const account_name &signer, const action_name &\fBname\fP, const \fBvariant_object\fP &data, bool auth=true)"
+.br
+.ti -1c
+.RI "action_result \fBstake\fP (const account_name &from, const account_name &to, const string &net, const string &cpu, const string &storage)"
+.br
+.ti -1c
+.RI "action_result \fBstake\fP (const account_name &acnt, const string &net, const string &cpu, const string &storage)"
+.br
+.ti -1c
+.RI "action_result \fBunstake\fP (const account_name &from, const account_name &to, const string &net, const string &cpu, uint64_t \fBbytes\fP)"
+.br
+.ti -1c
+.RI "action_result \fBunstake\fP (const account_name &acnt, const string &net, const string &cpu, uint64_t \fBbytes\fP)"
+.br
+.ti -1c
+.RI "action_result \fBregproducer\fP (const account_name &acnt, int params_fixture=1)"
+.br
+.ti -1c
+.RI "uint32_t \fBlast_block_time\fP () const"
+.br
+.ti -1c
+.RI "\fBasset\fP \fBget_balance\fP (const account_name &act)"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_total_stake\fP (const account_name &act)"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_voter_info\fP (const account_name &act)"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBget_producer_info\fP (const account_name &act)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBfc::variant_object\fP \fBproducer_parameters_example\fP (int n)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBabi_serializer\fP \fBabi_ser\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

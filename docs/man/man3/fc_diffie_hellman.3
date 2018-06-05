@@ -1,0 +1,53 @@
+.TH "fc::diffie_hellman" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::diffie_hellman
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBgenerate_params\fP (int s, uint8_t g)"
+.br
+.ti -1c
+.RI "bool \fBgenerate_pub_key\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcompute_shared_key\fP (const char *buf, uint32_t s)"
+.br
+.ti -1c
+.RI "bool \fBcompute_shared_key\fP (const \fBstd::vector\fP< char > &pubk)"
+.br
+.ti -1c
+.RI "bool \fBvalidate\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBp\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBpub_key\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBpriv_key\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBshared_key\fP"
+.br
+.ti -1c
+.RI "bool \fBvalid\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBg\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

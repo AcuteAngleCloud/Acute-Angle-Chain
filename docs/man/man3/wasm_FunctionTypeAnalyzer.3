@@ -1,0 +1,42 @@
+.TH "wasm::FunctionTypeAnalyzer" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::FunctionTypeAnalyzer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::PostWalker< FunctionTypeAnalyzer >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBvisitImport\fP (\fBImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitFunction\fP (\fBFunction\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::vector\fP< \fBImport\fP * > \fBfunctionImports\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBFunction\fP * > \fBfunctions\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBCallIndirect\fP * > \fBindirectCalls\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

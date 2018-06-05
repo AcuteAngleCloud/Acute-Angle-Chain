@@ -1,0 +1,28 @@
+.TH "aacio::chain::action_permission_object" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::action_permission_object
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <action_objects\&.hpp>\fP
+.PP
+Inherits \fBchainbase::object< action_permission_object_type, action_permission_object >\fP\&.
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Maps the permission level on the code to the permission level specififed by owner, when specifying a contract the contract will specify 1 \fBpermission_object\fP per action, and by default the parent of that permission object will be the active permission of the contract; however, the contract owner could group their actions any way they like\&.
+.PP
+When it comes time to evaluate whether User can call Action on Contract with UserPermissionLevel the algorithm operates as follows:
+.PP
+let scope_permission = action_code\&.permission while( ! mapping for (scope_permission / owner ) scope_permission = scope_permission\&.parent if( !scope_permission ) user permission => active break;
+.PP
+Now that we know the required user permission\&.\&.\&.
+.PP
+while( ! transaction\&.has( user_permission ) ) user_permission = user_permission\&.parent if( !user_permission ) throw invalid permission pass 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

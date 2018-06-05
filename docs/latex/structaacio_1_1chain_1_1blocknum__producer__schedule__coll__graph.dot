@@ -1,0 +1,8 @@
+digraph "aacio::chain::blocknum_producer_schedule"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="aacio::chain::blocknum\l_producer_schedule",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" second" ];
+  Node2 [label="aacio::chain::shared\l_producer_schedule_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1shared__producer__schedule__type.html"];
+}

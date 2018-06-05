@@ -1,0 +1,61 @@
+.TH "aacio::chain_apis::read_write" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain_apis::read_write
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpush_transaction_results\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBpush_block_params\fP = \fBchain::signed_block\fP"
+.br
+.ti -1c
+.RI "using \fBpush_block_results\fP = \fBempty\fP"
+.br
+.ti -1c
+.RI "using \fBpush_transaction_params\fP = \fBfc::variant_object\fP"
+.br
+.ti -1c
+.RI "using \fBpush_transactions_params\fP = \fBvector\fP< \fBpush_transaction_params\fP >"
+.br
+.ti -1c
+.RI "using \fBpush_transactions_results\fP = \fBvector\fP< \fBpush_transaction_results\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBread_write\fP (\fBchain_controller\fP &db, uint32_t skip_flags)"
+.br
+.ti -1c
+.RI "\fBpush_block_results\fP \fBpush_block\fP (const \fBpush_block_params\fP &params)"
+.br
+.ti -1c
+.RI "\fBpush_transaction_results\fP \fBpush_transaction\fP (const \fBpush_transaction_params\fP &params)"
+.br
+.ti -1c
+.RI "\fBpush_transactions_results\fP \fBpush_transactions\fP (const \fBpush_transactions_params\fP &params)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "friend \fBresolver_factory< read_write >\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

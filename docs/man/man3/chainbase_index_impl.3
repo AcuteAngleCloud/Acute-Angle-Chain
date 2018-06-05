@@ -1,0 +1,48 @@
+.TH "chainbase::index_impl< BaseIndex >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+chainbase::index_impl< BaseIndex >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBchainbase::abstract_index\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBindex_impl\fP (BaseIndex &\fBbase\fP)"
+.br
+.ti -1c
+.RI "virtual unique_ptr< \fBabstract_session\fP > \fBstart_undo_session\fP (bool enabled) override"
+.br
+.ti -1c
+.RI "virtual void \fBset_revision\fP (uint64_t revision) override"
+.br
+.ti -1c
+.RI "virtual int64_t \fBrevision\fP () const override"
+.br
+.ti -1c
+.RI "virtual void \fBundo\fP () const override"
+.br
+.ti -1c
+.RI "virtual void \fBsquash\fP () const override"
+.br
+.ti -1c
+.RI "virtual void \fBcommit\fP (int64_t revision) const override"
+.br
+.ti -1c
+.RI "virtual void \fBundo_all\fP () const override"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBtype_id\fP () const override"
+.br
+.ti -1c
+.RI "virtual void \fBremove_object\fP (int64_t id) override"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

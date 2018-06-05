@@ -1,0 +1,81 @@
+.TH "fc::unhandled_exception" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::unhandled_exception \- re-thrown whenever an unhandled exception is caught\&.
+.PP
+Any exceptions thrown by 3rd party libraries that are not caught get wrapped in an \fBunhandled_exception\fP exception\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <exception\&.hpp>\fP
+.PP
+Inherits \fBfc::exception\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBcode_enum\fP { \fBcode_value\fP = unhandled_exception_code }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBunhandled_exception\fP (\fBlog_message\fP &&m, std::exception_ptr e=std::current_exception())"
+.br
+.ti -1c
+.RI "\fBunhandled_exception\fP (\fBlog_messages\fP)"
+.br
+.ti -1c
+.RI "\fBunhandled_exception\fP (const \fBexception\fP &)"
+.br
+.ti -1c
+.RI "std::exception_ptr \fBget_inner_exception\fP () const"
+.br
+.ti -1c
+.RI "virtual NO_RETURN void \fBdynamic_rethrow_exception\fP () const"
+.br
+.ti -1c
+.RI "virtual std::shared_ptr< \fBexception\fP > \fBdynamic_copy_exception\fP () const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+re-thrown whenever an unhandled exception is caught\&.
+.PP
+Any exceptions thrown by 3rd party libraries that are not caught get wrapped in an \fBunhandled_exception\fP exception\&. 
+
+The original exception is captured as a std::exception_ptr which may be rethrown\&. The std::exception_ptr does not propgate across process boundaries\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "std::shared_ptr< \fBexception\fP > fc::unhandled_exception::dynamic_copy_exception () const\fC [virtual]\fP"
+This is equivalent to: 
+.PP
+.nf
+try { throwAsDynamic_exception(); }
+catch( \&.\&.\&. ) { return std::current_exception(); }
+
+.fi
+.PP
+ 
+.PP
+Reimplemented from \fBfc::exception\fP\&.
+.SS "NO_RETURN void fc::unhandled_exception::dynamic_rethrow_exception () const\fC [virtual]\fP"
+Throw this exception as its most derived type\&.
+.PP
+\fBNote:\fP
+.RS 4
+does not return\&.
+.RE
+.PP
+Rethrows the exception restoring the proper type based upon the error code\&. This is used to propagate exception types across conversions to/from JSON 
+.PP
+Reimplemented from \fBfc::exception\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

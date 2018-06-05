@@ -1,0 +1,141 @@
+.TH "md__docker__r_e_a_d_m_e" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__docker__r_e_a_d_m_e \- Run in docker 
+Simple and fast setup of AAC\&.IO on Docker is also available\&.
+.PP
+.SS "Install Dependencies"
+.PP
+.IP "\(bu" 2
+\fCDocker\fP Docker 17\&.05 or higher is required
+.IP "\(bu" 2
+\fCdocker-compose\fP version >= 1\&.10\&.0
+.PP
+.PP
+.SS "Docker Requirement"
+.PP
+.IP "\(bu" 2
+At least 8GB RAM (Docker -> Preferences -> Advanced -> Memory -> 8GB or above)
+.PP
+.PP
+.SS "Build aac image"
+.PP
+.PP
+.nf
+git clone https://github\&.com/AACIO/aac\&.git --recursive
+cd AcuteAngleChain/Docker
+docker build \&. -t aacio/aac
+.fi
+.PP
+.PP
+.SS "Start nodaac docker container only"
+.PP
+.PP
+.nf
+docker run --name nodaac -p 8888:8888 -p 9876:9876 -t aacio/aac nodaacd\&.sh arg1 arg2
+.fi
+.PP
+.PP
+By default, all data is persisted in a docker volume\&. It can be deleted if the data is outdated or corrupted: 
+.PP
+.nf
+$ docker inspect --format '{{ range \&.Mounts }}{{ \&.Name }} {{ end }}' nodaac
+fdc265730a4f697346fa8b078c176e315b959e79365fc9cbd11f090ea0cb5cbc
+$ docker volume rm fdc265730a4f697346fa8b078c176e315b959e79365fc9cbd11f090ea0cb5cbc
+
+.fi
+.PP
+.PP
+Alternately, you can directly mount host directory into the container 
+.PP
+.nf
+docker run --name nodaac -v /path-to-data-dir:/opt/aacio/bin/data-dir -p 8888:8888 -p 9876:9876 -t aacio/aac nodaacd\&.sh arg1 arg2
+
+.fi
+.PP
+.PP
+.SS "Get chain info"
+.PP
+.PP
+.nf
+curl http://127\&.0\&.0\&.1:8888/v1/chain/get_info
+.fi
+.PP
+.PP
+.SS "Start both nodaac and kaacd containers"
+.PP
+.PP
+.nf
+docker volume create --name=nodaac-data-volume
+docker volume create --name=kaacd-data-volume
+docker-compose up -d
+.fi
+.PP
+.PP
+After \fCdocker-compose up -d\fP, two services named \fCnodaacd\fP and \fCkaacd\fP will be started\&. nodaac service would expose ports 8888 and 9876 to the host\&. kaacd service does not expose any port to the host, it is only accessible to claac when runing claac is running inside the kaacd container as described in 'Execute claac commands' section\&.
+.PP
+.SS "Execute claac commands"
+.PP
+You can run the \fCclaac\fP commands via a bash alias\&.
+.PP
+.PP
+.nf
+alias claac='docker-compose exec kaacd /opt/aacio/bin/claac -H nodaacd'
+claac get info
+claac get account inita
+.fi
+.PP
+.PP
+Upload sample exchange contract
+.PP
+.PP
+.nf
+claac set contract exchange contracts/exchange/exchange\&.wast contracts/exchange/exchange\&.abi
+.fi
+.PP
+.PP
+If you don't need kaacd afterwards, you can stop the kaacd service using
+.PP
+.PP
+.nf
+docker-compose stop kaacd
+.fi
+.PP
+ 
+.SS "Change default configuration"
+.PP
+You can use docker compose override file to change the default configurations\&. For example, create an alternate config file \fCconfig2\&.ini\fP and a \fCdocker-compose\&.override\&.yml\fP with the following content\&.
+.PP
+.PP
+.nf
+version: "2"
+
+services:
+  nodaac:
+    volumes:
+      - nodaac-data-volume:/opt/aacio/bin/data-dir
+      - \&./config2\&.ini:/opt/aacio/bin/data-dir/config\&.ini
+.fi
+.PP
+.PP
+Then restart your docker containers as follows:
+.PP
+.PP
+.nf
+docker-compose down
+docker-compose up
+.fi
+.PP
+.PP
+.SS "Clear data-dir"
+.PP
+The data volume created by docker-compose can be deleted as follows:
+.PP
+.PP
+.nf
+docker volume rm nodaac-data-volume
+docker volume rm kaacd-data-volume
+.fi
+.PP
+ 

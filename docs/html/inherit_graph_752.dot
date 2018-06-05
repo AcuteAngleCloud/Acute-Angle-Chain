@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="chainbase::object\<\l permission_usage_object\l_type, permission_usage\l_object \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structchainbase_1_1object.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="aacio::chain::permission\l_usage_object",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1permission__usage__object.html"];
+}

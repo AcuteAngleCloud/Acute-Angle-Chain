@@ -1,0 +1,40 @@
+.TH "boost::pfr::greater_equal< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+boost::pfr::greater_equal< T > \- std::greater_equal like comparator  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <functors\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator()\fP (const \fBT\fP &x, const \fBT\fP &y) const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T = void>
+.br
+struct boost::pfr::greater_equal< T >"
+std::greater_equal like comparator 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T  = void> bool \fBboost::pfr::greater_equal\fP< \fBT\fP >::operator() (const \fBT\fP & x, const \fBT\fP & y) const\fC [inline]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+\fBtrue\fP if field of \fBx\fP greater than the field with same index of \fBy\fP and all previous fields of \fBx\fP equal to the same fields of \fBy\fP; or if each field of \fBx\fP equals the field with same index of \fBy\fP\&.
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

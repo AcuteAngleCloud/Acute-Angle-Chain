@@ -1,0 +1,138 @@
+\hypertarget{classaaciosystem_1_1voting}{}\section{aaciosystem\+:\+:voting$<$ System\+Account $>$ Class Template Reference}
+\label{classaaciosystem_1_1voting}\index{aaciosystem\+::voting$<$ System\+Account $>$@{aaciosystem\+::voting$<$ System\+Account $>$}}
+
+
+Inheritance diagram for aaciosystem\+:\+:voting$<$ System\+Account $>$\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1voting_1_1producer__info}{producer\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1voting_1_1voter__info}{voter\+\_\+info}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_ab90861646dedbaaa286b61f8cc4f60dc}\label{classaaciosystem_1_1voting_ab90861646dedbaaa286b61f8cc4f60dc}} 
+using {\bfseries currency} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::currency
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a11004e9a39370a60b4ba520d24d81762}\label{classaaciosystem_1_1voting_a11004e9a39370a60b4ba520d24d81762}} 
+using {\bfseries system\+\_\+token\+\_\+type} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::system\+\_\+token\+\_\+type
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a3da069a90a5e835e3404ab2c661c6ded}\label{classaaciosystem_1_1voting_a3da069a90a5e835e3404ab2c661c6ded}} 
+using {\bfseries aacio\+\_\+parameters} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::aacio\+\_\+parameters
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_ad852bde7fbe64ee843251c7b5a856166}\label{classaaciosystem_1_1voting_ad852bde7fbe64ee843251c7b5a856166}} 
+using {\bfseries global\+\_\+state\+\_\+singleton} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::global\+\_\+state\+\_\+singleton
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a3f7085ee93c937b9a816cf5b1af283c2}\label{classaaciosystem_1_1voting_a3f7085ee93c937b9a816cf5b1af283c2}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(producerinfo), \mbox{\hyperlink{structaaciosystem_1_1voting_1_1producer__info}{producer\+\_\+info}}, \mbox{\hyperlink{structaacio_1_1indexed__by}{indexed\+\_\+by}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(prototalvote), const\+\_\+mem\+\_\+fun$<$ \mbox{\hyperlink{structaaciosystem_1_1voting_1_1producer__info}{producer\+\_\+info}}, uint128\+\_\+t, \&producer\+\_\+info\+::by\+\_\+votes $>$ $>$ $>$ {\bfseries producers\+\_\+table}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_ae7fcccedce2fbb33948d9a17f39b3c9d}\label{classaaciosystem_1_1voting_ae7fcccedce2fbb33948d9a17f39b3c9d}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(voters), \mbox{\hyperlink{structaaciosystem_1_1voting_1_1voter__info}{voter\+\_\+info}} $>$ {\bfseries voters\+\_\+table}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a1b23b346985cf08ec871486c2e2eff9a}\label{classaaciosystem_1_1voting_a1b23b346985cf08ec871486c2e2eff9a}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, regproducer)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a222cfdc404f0df24024ae7bf7c0f7fdd}\label{classaaciosystem_1_1voting_a222cfdc404f0df24024ae7bf7c0f7fdd}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, unregprod)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_ab3aa66d75c632be22f7dd2e861d543e4}\label{classaaciosystem_1_1voting_ab3aa66d75c632be22f7dd2e861d543e4}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, voteproducer)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a5f312a4987a0c83f8de87cdfb1b8a983}\label{classaaciosystem_1_1voting_a5f312a4987a0c83f8de87cdfb1b8a983}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, regproxy)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a3a0ca3251345d5ec48daccced6dfa79a}\label{classaaciosystem_1_1voting_a3a0ca3251345d5ec48daccced6dfa79a}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, unregproxy)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classaaciosystem_1_1voting_abbefdfb92fa01d247f1f5ee366d332bc}{on}} (const regproducer \&\mbox{\hyperlink{structreg}{reg}})
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_ad6b9b4b99af7cd8923c5f66dd0711d30}\label{classaaciosystem_1_1voting_ad6b9b4b99af7cd8923c5f66dd0711d30}} 
+static void {\bfseries on} (const unregprod \&unreg)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a9f07850cdc969f00d8288d07fa12935c}\label{classaaciosystem_1_1voting_a9f07850cdc969f00d8288d07fa12935c}} 
+static void {\bfseries increase\+\_\+voting\+\_\+power} (account\+\_\+name acnt, system\+\_\+token\+\_\+type amount)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a4949c64094e66bcf62042793807372e2}\label{classaaciosystem_1_1voting_a4949c64094e66bcf62042793807372e2}} 
+static void {\bfseries decrease\+\_\+voting\+\_\+power} (account\+\_\+name acnt, system\+\_\+token\+\_\+type amount)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a07c1cf93c15b9c6880fabe41ed65cc21}\label{classaaciosystem_1_1voting_a07c1cf93c15b9c6880fabe41ed65cc21}} 
+static system\+\_\+token\+\_\+type {\bfseries payment\+\_\+per\+\_\+block} (uint32\+\_\+t percent\+\_\+of\+\_\+max\+\_\+inflation\+\_\+rate)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a723e634d6e26a4cffdab1ec5c470d6bb}\label{classaaciosystem_1_1voting_a723e634d6e26a4cffdab1ec5c470d6bb}} 
+static void {\bfseries update\+\_\+elected\+\_\+producers} (time cycle\+\_\+time)
+\item 
+static void \mbox{\hyperlink{classaaciosystem_1_1voting_a58de0ff458be70709e59cd781401dc42}{on}} (const voteproducer \&vp)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a098c998970250bfd86d7cb0afe2a6e09}\label{classaaciosystem_1_1voting_a098c998970250bfd86d7cb0afe2a6e09}} 
+static void {\bfseries on} (const regproxy \&\mbox{\hyperlink{structreg}{reg}})
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_aaf65a992923c136cc1bc6abcdb22380f}\label{classaaciosystem_1_1voting_aaf65a992923c136cc1bc6abcdb22380f}} 
+static void {\bfseries on} (const unregproxy \&\mbox{\hyperlink{structreg}{reg}})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_abf0c5500b0514ed09bb878e2997a8a34}\label{classaaciosystem_1_1voting_abf0c5500b0514ed09bb878e2997a8a34}} 
+static constexpr account\+\_\+name {\bfseries system\+\_\+account} = System\+Account
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_ad99bfb6b601bf55f6e8cfd93a49745ac}\label{classaaciosystem_1_1voting_ad99bfb6b601bf55f6e8cfd93a49745ac}} 
+static constexpr uint32\+\_\+t {\bfseries max\+\_\+inflation\+\_\+rate} = \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$System\+Account$>$\+::max\+\_\+inflation\+\_\+rate
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a58c63d5eb84ff8356a1cf34327f0e039}\label{classaaciosystem_1_1voting_a58c63d5eb84ff8356a1cf34327f0e039}} 
+static constexpr uint32\+\_\+t {\bfseries blocks\+\_\+per\+\_\+year} = 52$\ast$7$\ast$24$\ast$2$\ast$3600
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaaciosystem_1_1voting_abbefdfb92fa01d247f1f5ee366d332bc}\label{classaaciosystem_1_1voting_abbefdfb92fa01d247f1f5ee366d332bc}} 
+\index{aaciosystem\+::voting@{aaciosystem\+::voting}!on@{on}}
+\index{on@{on}!aaciosystem\+::voting@{aaciosystem\+::voting}}
+\subsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$account\+\_\+name System\+Account$>$ \\
+static void \mbox{\hyperlink{classaaciosystem_1_1voting}{aaciosystem\+::voting}}$<$ System\+Account $>$\+::on (\begin{DoxyParamCaption}\item[{const regproducer \&}]{reg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+This method will create a producer\+\_\+config and \mbox{\hyperlink{structaaciosystem_1_1voting_1_1producer__info}{producer\+\_\+info}} object for \textquotesingle{}producer\textquotesingle{}
+
+\begin{DoxyPrecond}{Precondition}
+producer is not already registered 
+
+producer to register is an account 
+
+authority of producer to register 
+\end{DoxyPrecond}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classaaciosystem_1_1voting_a58de0ff458be70709e59cd781401dc42}\label{classaaciosystem_1_1voting_a58de0ff458be70709e59cd781401dc42}} 
+\index{aaciosystem\+::voting@{aaciosystem\+::voting}!on@{on}}
+\index{on@{on}!aaciosystem\+::voting@{aaciosystem\+::voting}}
+\subsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$account\+\_\+name System\+Account$>$ \\
+static void \mbox{\hyperlink{classaaciosystem_1_1voting}{aaciosystem\+::voting}}$<$ System\+Account $>$\+::on (\begin{DoxyParamCaption}\item[{const voteproducer \&}]{vp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyPrecond}{Precondition}
+vp.\+producers must be sorted from lowest to highest 
+
+if proxy is set then no producers can be voted for 
+
+every listed producer or proxy must have been previously registered 
+
+vp.\+voter must authorize this action 
+
+voter must have previously staked some A\+AC for voting 
+\end{DoxyPrecond}
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aacio.\+system/\mbox{\hyperlink{voting_8hpp}{voting.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+.TH "CFG::Relooper" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CFG::Relooper
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAddBlock\fP (\fBBlock\fP *New, int Id=\-1)"
+.br
+.ti -1c
+.RI "void \fBCalculate\fP (\fBBlock\fP *Entry)"
+.br
+.ti -1c
+.RI "\fBwasm::Expression\fP * \fBRender\fP (\fBRelooperBuilder\fP &Builder)"
+.br
+.ti -1c
+.RI "void \fBSetMinSize\fP (bool MinSize_)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::deque\fP< \fBBlock\fP * > \fBBlocks\fP"
+.br
+.ti -1c
+.RI "\fBstd::deque\fP< \fBShape\fP * > \fBShapes\fP"
+.br
+.ti -1c
+.RI "\fBShape\fP * \fBRoot\fP"
+.br
+.ti -1c
+.RI "bool \fBMinSize\fP"
+.br
+.ti -1c
+.RI "int \fBBlockIdCounter\fP"
+.br
+.ti -1c
+.RI "int \fBShapeIdCounter\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

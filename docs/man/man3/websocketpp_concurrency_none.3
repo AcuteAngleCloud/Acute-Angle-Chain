@@ -1,0 +1,42 @@
+.TH "websocketpp::concurrency::none" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::concurrency::none \- Stub concurrency policy that implements the interface using no-ops\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <none\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBnone_impl::fake_mutex\fP \fBmutex_type\fP"
+.br
+.RI "The type of a mutex primitive\&. "
+.ti -1c
+.RI "typedef \fBnone_impl::fake_lock_guard\fP \fBscoped_lock_type\fP"
+.br
+.RI "The type of a scoped/RAII lock primitive\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Stub concurrency policy that implements the interface using no-ops\&. 
+
+This policy documents the concurrency policy interface using no-ops\&. It can be used as a reference or base for building a new concurrency policy\&. It can also be used as is to disable all locking for endpoints used in purely single threaded programs\&. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBnone_impl::fake_mutex\fP \fBwebsocketpp::concurrency::none::mutex_type\fP"
+
+.PP
+The type of a mutex primitive\&. std::mutex is an example\&. 
+.SS "typedef \fBnone_impl::fake_lock_guard\fP \fBwebsocketpp::concurrency::none::scoped_lock_type\fP"
+
+.PP
+The type of a scoped/RAII lock primitive\&. The scoped lock constructor should take a mutex_type as a parameter, acquire that lock, and release it in its destructor\&. std::lock_guard is an example\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

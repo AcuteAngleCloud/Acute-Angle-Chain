@@ -1,0 +1,67 @@
+.TH "CountingAllocator< void, ID >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CountingAllocator< void, ID >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBrebind\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void * \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef const void * \fBconst_pointer\fP"
+.br
+.ti -1c
+.RI "typedef void \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCountingAllocator\fP (\fBAllocController\fP &PP)"
+.br
+.ti -1c
+.RI "\fBCountingAllocator\fP (\fBCountingAllocator\fP const &\fBother\fP)"
+.br
+.ti -1c
+.RI "\fBCountingAllocator\fP (\fBCountingAllocator\fP &&\fBother\fP)"
+.br
+.ti -1c
+.RI "template<class U > \fBCountingAllocator\fP (\fBCountingAllocator\fP< \fBU\fP, ID > const &\fBother\fP) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "template<class U > \fBCountingAllocator\fP (\fBCountingAllocator\fP< \fBU\fP, ID > &&\fBother\fP) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "void \fBconstruct\fP (\&.\&.\&.)=delete"
+.br
+.ti -1c
+.RI "void \fBdestroy\fP (void *)=delete"
+.br
+.ti -1c
+.RI "\fBAllocController\fP & \fBgetController\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<class Tp , size_t > class \fBCountingAllocator\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

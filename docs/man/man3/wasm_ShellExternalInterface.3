@@ -1,0 +1,89 @@
+.TH "wasm::ShellExternalInterface" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ShellExternalInterface
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ExternalInterface\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMemory\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (\fBModule\fP &wasm, \fBModuleInstance\fP &instance) override"
+.br
+.ti -1c
+.RI "void \fBimportGlobals\fP (\fBstd::map\fP< \fBName\fP, \fBLiteral\fP > &globals, \fBModule\fP &wasm) override"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallImport\fP (\fBImport\fP *import, \fBLiteralList\fP &arguments) override"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallTable\fP (Index index, \fBLiteralList\fP &arguments, WasmType result, \fBModuleInstance\fP &instance) override"
+.br
+.ti -1c
+.RI "int8_t \fBload8s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint8_t \fBload8u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "int16_t \fBload16s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint16_t \fBload16u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "int32_t \fBload32s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint32_t \fBload32u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "int64_t \fBload64s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint64_t \fBload64u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "void \fBstore8\fP (\fBAddress\fP addr, int8_t value) override"
+.br
+.ti -1c
+.RI "void \fBstore16\fP (\fBAddress\fP addr, int16_t value) override"
+.br
+.ti -1c
+.RI "void \fBstore32\fP (\fBAddress\fP addr, int32_t value) override"
+.br
+.ti -1c
+.RI "void \fBstore64\fP (\fBAddress\fP addr, int64_t value) override"
+.br
+.ti -1c
+.RI "void \fBgrowMemory\fP (\fBAddress\fP, \fBAddress\fP newSize) override"
+.br
+.ti -1c
+.RI "void \fBtrap\fP (const char *why) override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "class \fBwasm::ShellExternalInterface::Memory\fP \fBmemory\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBName\fP > \fBtable\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

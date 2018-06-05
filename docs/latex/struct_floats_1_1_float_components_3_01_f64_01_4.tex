@@ -1,0 +1,59 @@
+\hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4}{}\section{Floats\+:\+:Float\+Components$<$ F64 $>$ Struct Template Reference}
+\label{struct_floats_1_1_float_components_3_01_f64_01_4}\index{Floats\+::\+Float\+Components$<$ F64 $>$@{Floats\+::\+Float\+Components$<$ F64 $>$}}
+
+
+Collaboration diagram for Floats\+:\+:Float\+Components$<$ F64 $>$\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a1a2a3664f12cd37c562970cd25184ff0}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a1a2a3664f12cd37c562970cd25184ff0}} 
+enum {\bfseries Constants} \+: I64 \{ \newline
+{\bfseries max\+Significand} = 0xfffffffffffff, 
+{\bfseries num\+Significand\+Bits} = 52, 
+{\bfseries num\+Significand\+Hexits} = 13, 
+{\bfseries canonical\+Significand} = 0x8000000000000ull, 
+\newline
+{\bfseries denormal\+Exponent} = -\/1023, 
+{\bfseries min\+Normal\+Exponent} = -\/1022, 
+{\bfseries max\+Normal\+Exponent} = 1023, 
+{\bfseries exponent\+Bias} = 1023, 
+\newline
+{\bfseries max\+Exponent\+Bits} = 0x7ff
+ \}
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a314ef829ce73cfe8558c69a58545635f}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a314ef829ce73cfe8558c69a58545635f}} 
+typedef U64 {\bfseries Bits}
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a402bedbc4f69d6bf267281a521408288}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a402bedbc4f69d6bf267281a521408288}} 
+typedef F64 {\bfseries Float}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a95d5f83cbfd1fcf8593a4e88d1101660}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a95d5f83cbfd1fcf8593a4e88d1101660}} 
+union \mbox{\hyperlink{struct_floats_1_1_float_components}{Floats\+::\+Float\+Components}}$<$ F64 $>$\+:: \{ ... \}  
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a7cb9ca463155603830dc75ef5060fdee}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a7cb9ca463155603830dc75ef5060fdee}} 
+U64 {\bfseries significand}\+: 52
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a194f4f72a216bfd87ff29c107010804c}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a194f4f72a216bfd87ff29c107010804c}} 
+U64 {\bfseries exponent}\+: 11
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a5656836dc260377a1bee30b61c83bf30}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a5656836dc260377a1bee30b61c83bf30}} 
+U64 {\bfseries sign}\+: 1
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_afee7da0e1fc608f96b7a809a32f09545}\label{struct_floats_1_1_float_components_3_01_f64_01_4_afee7da0e1fc608f96b7a809a32f09545}} 
+struct \mbox{\hyperlink{struct_floats_1_1_float_components}{Floats\+::\+Float\+Components}}$<$ F64 $>$\+:: \{ ... \}  {\bfseries bits}
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a2a95fe515c5eb602cae55690b250164b}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a2a95fe515c5eb602cae55690b250164b}} 
+Float {\bfseries value}
+\item 
+\mbox{\Hypertarget{struct_floats_1_1_float_components_3_01_f64_01_4_a11d593f64ee5b76a243222a609877baf}\label{struct_floats_1_1_float_components_3_01_f64_01_4_a11d593f64ee5b76a243222a609877baf}} 
+Bits {\bfseries bitcast\+Int}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/wasm-\/jit/\+Include/\+Inline/Floats.\+h\end{DoxyCompactItemize}

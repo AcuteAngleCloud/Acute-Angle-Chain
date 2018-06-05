@@ -1,0 +1,198 @@
+\hypertarget{structcashew_1_1_value}{}\section{cashew\+:\+:Value Struct Reference}
+\label{structcashew_1_1_value}\index{cashew\+::\+Value@{cashew\+::\+Value}}
+
+
+Inheritance diagram for cashew\+:\+:Value\+:
+% FIG 0
+
+
+Collaboration diagram for cashew\+:\+:Value\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ae531c573fb61a2a71bf0e20ce342cc6b}\label{structcashew_1_1_value_ae531c573fb61a2a71bf0e20ce342cc6b}} 
+enum {\bfseries Type} \{ \newline
+{\bfseries String} = 0, 
+{\bfseries Number} = 1, 
+{\bfseries Array} = 2, 
+{\bfseries Null} = 3, 
+\newline
+{\bfseries Bool} = 4, 
+{\bfseries Object} = 5, 
+{\bfseries Assign\+\_\+} = 6, 
+{\bfseries Assign\+Name\+\_\+} = 7
+ \}
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a98766ae962aa6f7f395bd76c43606935}\label{structcashew_1_1_value_a98766ae962aa6f7f395bd76c43606935}} 
+typedef \mbox{\hyperlink{classstd_1_1unordered__map}{std\+::unordered\+\_\+map}}$<$ \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}}, \mbox{\hyperlink{structcashew_1_1_ref}{Ref}} $>$ {\bfseries Object\+Storage}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a68422ec992ceb86750b121907c3613ce}\label{structcashew_1_1_value_a68422ec992ceb86750b121907c3613ce}} 
+{\bfseries Value} (const char $\ast$s)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_af139306699ecaa69ab637a803eca32af}\label{structcashew_1_1_value_af139306699ecaa69ab637a803eca32af}} 
+{\bfseries Value} (double n)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a65df76518c4015c684e6cc35aa50cf9a}\label{structcashew_1_1_value_a65df76518c4015c684e6cc35aa50cf9a}} 
+{\bfseries Value} (\mbox{\hyperlink{classcashew_1_1_array_storage}{Array\+Storage}} \&a)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aa91d16f7efde0319448b401ad155c1b5}\label{structcashew_1_1_value_aa91d16f7efde0319448b401ad155c1b5}} 
+void {\bfseries free} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a8be7f9a7eab1c09d68fc46e4bbc2a6a6}\label{structcashew_1_1_value_a8be7f9a7eab1c09d68fc46e4bbc2a6a6}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+String} (const char $\ast$s)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a4b74e05bc85480ade022851c8054c5ae}\label{structcashew_1_1_value_a4b74e05bc85480ade022851c8054c5ae}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+String} (const \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} \&s)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ae2baf6b20c0616e84a94a9c0f767ee1d}\label{structcashew_1_1_value_ae2baf6b20c0616e84a94a9c0f767ee1d}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Number} (double n)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aae4774ab6d299481fb60506b2f81d318}\label{structcashew_1_1_value_aae4774ab6d299481fb60506b2f81d318}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Array} (\mbox{\hyperlink{classcashew_1_1_array_storage}{Array\+Storage}} \&a)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a98f8a4a42b50757f6f0361110b1c7909}\label{structcashew_1_1_value_a98f8a4a42b50757f6f0361110b1c7909}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Array} (size\+\_\+t size\+\_\+hint=0)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aec42580acf3503308431beb86e592ddc}\label{structcashew_1_1_value_aec42580acf3503308431beb86e592ddc}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Null} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a0ce3b9d3957f2f801360e699fd1b9b99}\label{structcashew_1_1_value_a0ce3b9d3957f2f801360e699fd1b9b99}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Bool} (bool b)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aa35816a541bb599393e40b8563b01f1a}\label{structcashew_1_1_value_aa35816a541bb599393e40b8563b01f1a}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Object} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aed24a4771ecad5b7b9fc6c3ea7e9b1f3}\label{structcashew_1_1_value_aed24a4771ecad5b7b9fc6c3ea7e9b1f3}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Assign} (\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} target, \mbox{\hyperlink{structcashew_1_1_ref}{Ref}} value)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a491b2f44e505063b5d4b5b70bae68253}\label{structcashew_1_1_value_a491b2f44e505063b5d4b5b70bae68253}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries set\+Assign\+Name} (\mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} target, \mbox{\hyperlink{structcashew_1_1_ref}{Ref}} value)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a39a24106b24b3e450ec909ac715efef3}\label{structcashew_1_1_value_a39a24106b24b3e450ec909ac715efef3}} 
+bool {\bfseries is\+String} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a9c0a95067fe68b714870444f71a313ac}\label{structcashew_1_1_value_a9c0a95067fe68b714870444f71a313ac}} 
+bool {\bfseries is\+Number} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a2adc0ac116aa7db842c61a468252a5f8}\label{structcashew_1_1_value_a2adc0ac116aa7db842c61a468252a5f8}} 
+bool {\bfseries is\+Array} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ad7e7e3c8edb9eacaf08c61976ea8c75a}\label{structcashew_1_1_value_ad7e7e3c8edb9eacaf08c61976ea8c75a}} 
+bool {\bfseries is\+Null} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ab84b35df4d9e1574d32432a74b0e5989}\label{structcashew_1_1_value_ab84b35df4d9e1574d32432a74b0e5989}} 
+bool {\bfseries is\+Bool} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a27c09a9fd92cb635395ce351c2ad5c63}\label{structcashew_1_1_value_a27c09a9fd92cb635395ce351c2ad5c63}} 
+bool {\bfseries is\+Object} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a366a52d00be39a193ab4aadef029b689}\label{structcashew_1_1_value_a366a52d00be39a193ab4aadef029b689}} 
+bool {\bfseries is\+Assign} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a71664481406f57393a37a26072efe1e5}\label{structcashew_1_1_value_a71664481406f57393a37a26072efe1e5}} 
+bool {\bfseries is\+Assign\+Name} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a28f90dd2592a0ecb241fca55338f4619}\label{structcashew_1_1_value_a28f90dd2592a0ecb241fca55338f4619}} 
+bool {\bfseries is\+Bool} (bool b)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_af7713485e5fba9227de76a969526fcad}\label{structcashew_1_1_value_af7713485e5fba9227de76a969526fcad}} 
+bool {\bfseries is\+Array} (\mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} name)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a24dc2a18bc409044f24b9d9a238ca88a}\label{structcashew_1_1_value_a24dc2a18bc409044f24b9d9a238ca88a}} 
+const char $\ast$ {\bfseries get\+C\+String} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aad129ecdf3cd97c654c9c75aea73b25e}\label{structcashew_1_1_value_aad129ecdf3cd97c654c9c75aea73b25e}} 
+\mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} \& {\bfseries get\+I\+String} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ae563a68362fc54aa37f836a95e2887c7}\label{structcashew_1_1_value_ae563a68362fc54aa37f836a95e2887c7}} 
+double \& {\bfseries get\+Number} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_affcbff14ba99ef351cf03e9ffb1138a7}\label{structcashew_1_1_value_affcbff14ba99ef351cf03e9ffb1138a7}} 
+\mbox{\hyperlink{classcashew_1_1_array_storage}{Array\+Storage}} \& {\bfseries get\+Array} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aef57946186c6f3b66144e20e7ae83def}\label{structcashew_1_1_value_aef57946186c6f3b66144e20e7ae83def}} 
+bool \& {\bfseries get\+Bool} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a8a87f6d9189f164b61dc0376b449d713}\label{structcashew_1_1_value_a8a87f6d9189f164b61dc0376b449d713}} 
+\mbox{\hyperlink{structcashew_1_1_assign}{Assign}} $\ast$ {\bfseries as\+Assign} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aa50e6b52f2bc84daddfe3c1570fc8769}\label{structcashew_1_1_value_aa50e6b52f2bc84daddfe3c1570fc8769}} 
+\mbox{\hyperlink{structcashew_1_1_assign_name}{Assign\+Name}} $\ast$ {\bfseries as\+Assign\+Name} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a48663c17e50c7a348d684d8d5374aee5}\label{structcashew_1_1_value_a48663c17e50c7a348d684d8d5374aee5}} 
+int32\+\_\+t {\bfseries get\+Integer} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_aa49dacdfafd61ceaa5633ad0b562d5b7}\label{structcashew_1_1_value_aa49dacdfafd61ceaa5633ad0b562d5b7}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries operator=} (const \mbox{\hyperlink{structcashew_1_1_value}{Value}} \&\mbox{\hyperlink{structother}{other}})
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a9f91db4ec87285ae3dae440404fac90f}\label{structcashew_1_1_value_a9f91db4ec87285ae3dae440404fac90f}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{structcashew_1_1_value}{Value}} \&\mbox{\hyperlink{structother}{other}})
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a48470cc5ba9c37940908473bb0480e31}\label{structcashew_1_1_value_a48470cc5ba9c37940908473bb0480e31}} 
+char $\ast$ {\bfseries parse} (char $\ast$curr)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_afdff3a656e0dd8d81452d65cc03c6676}\label{structcashew_1_1_value_afdff3a656e0dd8d81452d65cc03c6676}} 
+void {\bfseries stringify} (std\+::ostream \&os, bool pretty=false)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ac4d696e70e5aaf9a10b7d627186070f2}\label{structcashew_1_1_value_ac4d696e70e5aaf9a10b7d627186070f2}} 
+size\+\_\+t {\bfseries size} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a499a7294ebaf87c4ac2fdabed8ce7d9f}\label{structcashew_1_1_value_a499a7294ebaf87c4ac2fdabed8ce7d9f}} 
+void {\bfseries set\+Size} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_abcb4170e2a1bc2f54736e3ff601edf12}\label{structcashew_1_1_value_abcb4170e2a1bc2f54736e3ff601edf12}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (unsigned x)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a0f428663b44ab6cfc69b7d26bf3f9b3f}\label{structcashew_1_1_value_a0f428663b44ab6cfc69b7d26bf3f9b3f}} 
+\mbox{\hyperlink{structcashew_1_1_value}{Value}} \& {\bfseries push\+\_\+back} (\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} r)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a5bf413a8210c74320154742c2684d457}\label{structcashew_1_1_value_a5bf413a8210c74320154742c2684d457}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries pop\+\_\+back} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a9b69dc6f974052c4a27488221806e18f}\label{structcashew_1_1_value_a9b69dc6f974052c4a27488221806e18f}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries back} ()
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_af85044220acfd99399c9e20732b98576}\label{structcashew_1_1_value_af85044220acfd99399c9e20732b98576}} 
+int {\bfseries index\+Of} (\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} \mbox{\hyperlink{structother}{other}})
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a2233624e22492af5a3882810becae722}\label{structcashew_1_1_value_a2233624e22492af5a3882810becae722}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries map} (std\+::function$<$ \mbox{\hyperlink{structcashew_1_1_ref}{Ref}}(\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} \mbox{\hyperlink{structnode}{node}})$>$ \mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a6cdee5739d796a6a1139677d4a04af49}\label{structcashew_1_1_value_a6cdee5739d796a6a1139677d4a04af49}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries filter} (std\+::function$<$ bool(\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} \mbox{\hyperlink{structnode}{node}})$>$ \mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a9edeeda915a9b8136e0b391dc18ad13f}\label{structcashew_1_1_value_a9edeeda915a9b8136e0b391dc18ad13f}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (\mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} x)
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a0784f122274b4c27cffbd20c78f971d8}\label{structcashew_1_1_value_a0784f122274b4c27cffbd20c78f971d8}} 
+bool {\bfseries has} (\mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}} x)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_ab943770e8bf1832afee488851819d7cc}\label{structcashew_1_1_value_ab943770e8bf1832afee488851819d7cc}} 
+\mbox{\hyperlink{struct_type}{Type}} {\bfseries type}
+\item 
+\mbox{\Hypertarget{structcashew_1_1_value_a8c9398745d7190cba8e19ed064bc0886}\label{structcashew_1_1_value_a8c9398745d7190cba8e19ed064bc0886}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structcashew_1_1_i_string}{IString}} {\bfseries str}\\
+\>double {\bfseries num}\\
+\>\mbox{\hyperlink{classcashew_1_1_array_storage}{ArrayStorage}} $\ast$ {\bfseries arr}\\
+\>bool {\bfseries boo}\\
+\>\mbox{\hyperlink{classstd_1_1unordered__map}{ObjectStorage}} $\ast$ {\bfseries obj}\\
+\>\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} {\bfseries ref}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/emscripten-\/optimizer/simple\+\_\+ast.\+h\item 
+externals/binaryen/src/emscripten-\/optimizer/simple\+\_\+ast.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+\hypertarget{social_8cpp}{}\section{contracts/social/social.cpp File Reference}
+\label{social_8cpp}\index{contracts/social/social.\+cpp@{contracts/social/social.\+cpp}}
+{\ttfamily \#include $<$aac.\+hpp$>$}\newline
+Include dependency graph for social.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structpost__action}{post\+\_\+action}}
+\item 
+struct \mbox{\hyperlink{structvote__action}{vote\+\_\+action}}
+\item 
+struct \mbox{\hyperlink{structpost__record}{post\+\_\+record}}
+\item 
+struct \mbox{\hyperlink{structaccount}{account}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{social_8cpp_a2f4b1a700aef8a99b9d4c12d252d231a}{apply\+\_\+social\+\_\+post}} ()
+\item 
+void \mbox{\hyperlink{social_8cpp_ac3d5473926cea7fd3ad0bbcb7186fc6f}{apply\+\_\+social\+\_\+vote}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{social_8cpp_a2f4b1a700aef8a99b9d4c12d252d231a}\label{social_8cpp_a2f4b1a700aef8a99b9d4c12d252d231a}} 
+\index{social.\+cpp@{social.\+cpp}!apply\+\_\+social\+\_\+post@{apply\+\_\+social\+\_\+post}}
+\index{apply\+\_\+social\+\_\+post@{apply\+\_\+social\+\_\+post}!social.\+cpp@{social.\+cpp}}
+\subsubsection{\texorpdfstring{apply\+\_\+social\+\_\+post()}{apply\_social\_post()}}
+{\footnotesize\ttfamily void apply\+\_\+social\+\_\+post (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+When a user posts we create a record that tracks the total votes and the time it was created. \mbox{\hyperlink{struct_a}{A}} user can submit this action multiple times, but subsequent calls do nothing.
+
+This method only does something when called in the context of the author, if any other contexts are notified Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{social_8cpp_ac3d5473926cea7fd3ad0bbcb7186fc6f}\label{social_8cpp_ac3d5473926cea7fd3ad0bbcb7186fc6f}} 
+\index{social.\+cpp@{social.\+cpp}!apply\+\_\+social\+\_\+vote@{apply\+\_\+social\+\_\+vote}}
+\index{apply\+\_\+social\+\_\+vote@{apply\+\_\+social\+\_\+vote}!social.\+cpp@{social.\+cpp}}
+\subsubsection{\texorpdfstring{apply\+\_\+social\+\_\+vote()}{apply\_social\_vote()}}
+{\footnotesize\ttfamily void apply\+\_\+social\+\_\+vote (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This action is called when a user casts a vote, it requires that this code is executed in the context of both the voter and the author. When executed in the author\textquotesingle{}s context it updates the vote total. When executed prevent the author\textquotesingle{}s code from rejecting the potentially negative vote Here is the call graph for this function\+:
+% FIG 2

@@ -1,0 +1,97 @@
+.TH "error_group" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+error_group \- Errors thrown by CLI11\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBCLI::Error\fP"
+.br
+.RI "All errors derive from this one\&. "
+.ti -1c
+.RI "struct \fBCLI::ConstructionError\fP"
+.br
+.RI "Construction errors (not in parsing) "
+.ti -1c
+.RI "struct \fBCLI::IncorrectConstruction\fP"
+.br
+.RI "Thrown when an option is set to conflicting values (non-vector and multi args, for example) "
+.ti -1c
+.RI "struct \fBCLI::BadNameString\fP"
+.br
+.RI "Thrown on construction of a bad name\&. "
+.ti -1c
+.RI "struct \fBCLI::OptionAlreadyAdded\fP"
+.br
+.RI "Thrown when an option already exists\&. "
+.ti -1c
+.RI "struct \fBCLI::ParseError\fP"
+.br
+.RI "Anything that can error in Parse\&. "
+.ti -1c
+.RI "struct \fBCLI::Success\fP"
+.br
+.RI "This is a successful completion on parsing, supposed to exit\&. "
+.ti -1c
+.RI "struct \fBCLI::CallForHelp\fP"
+.br
+.RI "-h or --help on command line "
+.ti -1c
+.RI "struct \fBCLI::FileError\fP"
+.br
+.RI "Thrown when parsing an INI file and it is missing\&. "
+.ti -1c
+.RI "struct \fBCLI::ConversionError\fP"
+.br
+.RI "Thrown when conversion call back fails, such as when an int fails to coerse to a string\&. "
+.ti -1c
+.RI "struct \fBCLI::ValidationError\fP"
+.br
+.RI "Thrown when validation of results fails\&. "
+.ti -1c
+.RI "struct \fBCLI::RequiredError\fP"
+.br
+.RI "Thrown when a required option is missing\&. "
+.ti -1c
+.RI "struct \fBCLI::RequiresError\fP"
+.br
+.RI "Thrown when a requires option is missing\&. "
+.ti -1c
+.RI "struct \fBCLI::ExcludesError\fP"
+.br
+.RI "Thrown when a exludes option is present\&. "
+.ti -1c
+.RI "struct \fBCLI::ExtrasError\fP"
+.br
+.RI "Thrown when too many positionals or options are found\&. "
+.ti -1c
+.RI "struct \fBCLI::ExtrasINIError\fP"
+.br
+.RI "Thrown when extra values are found in an INI file\&. "
+.ti -1c
+.RI "struct \fBCLI::InvalidError\fP"
+.br
+.RI "Thrown when validation fails before parsing\&. "
+.ti -1c
+.RI "struct \fBCLI::HorribleError\fP"
+.br
+.RI "This is just a safety check to verify selection and parsing match\&. "
+.ti -1c
+.RI "struct \fBCLI::OptionNotFound\fP"
+.br
+.RI "Thrown when counting a non-existent option\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Errors thrown by CLI11\&. 
+
+These are the errors that can be thrown\&. Some of them, like \fBCLI::Success\fP, are not really errors\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

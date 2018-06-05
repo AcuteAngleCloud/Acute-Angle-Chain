@@ -1,0 +1,58 @@
+.TH "debug_config_client::transport_config" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+debug_config_client::transport_config
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef type::concurrency_type \fBconcurrency_type\fP"
+.br
+.ti -1c
+.RI "typedef type::elog_type \fBelog_type\fP"
+.br
+.ti -1c
+.RI "typedef type::alog_type \fBalog_type\fP"
+.br
+.ti -1c
+.RI "typedef type::request_type \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef type::response_type \fBresponse_type\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static bool const \fBenable_multithreading\fP = true"
+.br
+.ti -1c
+.RI "static const long \fBtimeout_socket_pre_init\fP = 5000"
+.br
+.RI "Default timer values (in ms) "
+.ti -1c
+.RI "static const long \fBtimeout_proxy\fP = 5000"
+.br
+.ti -1c
+.RI "static const long \fBtimeout_socket_post_init\fP = 5000"
+.br
+.ti -1c
+.RI "static const long \fBtimeout_connect\fP = 5000"
+.br
+.ti -1c
+.RI "static const long \fBtimeout_socket_shutdown\fP = 5000"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "bool const debug_config_client::transport_config::enable_multithreading = true\fC [static]\fP"
+Controls compile time enabling/disabling of thread syncronization code Disabling can provide a minor performance improvement to single threaded applications 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

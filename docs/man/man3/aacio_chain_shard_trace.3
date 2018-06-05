@@ -1,0 +1,47 @@
+.TH "aacio::chain::shard_trace" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::shard_trace
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBappend\fP (\fBtransaction_trace\fP &&res)"
+.br
+.ti -1c
+.RI "void \fBappend\fP (const \fBtransaction_trace\fP &res)"
+.br
+.ti -1c
+.RI "void \fBfinalize_shard\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBdigest_type\fP \fBshard_action_root\fP"
+.br
+.ti -1c
+.RI "\fBdigest_type\fP \fBshard_transaction_root\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBtransaction_trace\fP > \fBtransaction_traces\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBcpu_usage\fP"
+.br
+.ti -1c
+.RI "flat_set< \fBshard_lock\fP > \fBread_locks\fP"
+.br
+.ti -1c
+.RI "flat_set< \fBshard_lock\fP > \fBwrite_locks\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

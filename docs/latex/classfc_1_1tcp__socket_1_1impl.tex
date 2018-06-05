@@ -1,0 +1,45 @@
+\hypertarget{classfc_1_1tcp__socket_1_1impl}{}\section{fc\+:\+:tcp\+\_\+socket\+:\+:impl Class Reference}
+\label{classfc_1_1tcp__socket_1_1impl}\index{fc\+::tcp\+\_\+socket\+::impl@{fc\+::tcp\+\_\+socket\+::impl}}
+
+
+Inheritance diagram for fc\+:\+:tcp\+\_\+socket\+:\+:impl\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:tcp\+\_\+socket\+:\+:impl\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_a227d73b46fe2857e60370ae8e6a8b281}\label{classfc_1_1tcp__socket_1_1impl_a227d73b46fe2857e60370ae8e6a8b281}} 
+virtual size\+\_\+t {\bfseries readsome} (boost\+::asio\+::ip\+::tcp\+::socket \&socket, char $\ast$buffer, size\+\_\+t length) override
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_ab2755393e3ba9ee2de7db230d7f98e47}\label{classfc_1_1tcp__socket_1_1impl_ab2755393e3ba9ee2de7db230d7f98e47}} 
+virtual size\+\_\+t {\bfseries readsome} (boost\+::asio\+::ip\+::tcp\+::socket \&socket, const std\+::shared\+\_\+ptr$<$ char $>$ \&buffer, size\+\_\+t length, size\+\_\+t offset) override
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_af400365fe77a5d4bcf65f2c3b469ad7a}\label{classfc_1_1tcp__socket_1_1impl_af400365fe77a5d4bcf65f2c3b469ad7a}} 
+virtual size\+\_\+t {\bfseries writesome} (boost\+::asio\+::ip\+::tcp\+::socket \&socket, const char $\ast$buffer, size\+\_\+t length) override
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_adf212edc6d5e21ffde8524b47f8566a8}\label{classfc_1_1tcp__socket_1_1impl_adf212edc6d5e21ffde8524b47f8566a8}} 
+virtual size\+\_\+t {\bfseries writesome} (boost\+::asio\+::ip\+::tcp\+::socket \&socket, const std\+::shared\+\_\+ptr$<$ const char $>$ \&buffer, size\+\_\+t length, size\+\_\+t offset) override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_a6a27944b846b60683fc76c0722ab0b3d}\label{classfc_1_1tcp__socket_1_1impl_a6a27944b846b60683fc76c0722ab0b3d}} 
+future$<$ size\+\_\+t $>$ {\bfseries \+\_\+write\+\_\+in\+\_\+progress}
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_a8cba3c5b6af202d8d2c41ab98ff11747}\label{classfc_1_1tcp__socket_1_1impl_a8cba3c5b6af202d8d2c41ab98ff11747}} 
+future$<$ size\+\_\+t $>$ {\bfseries \+\_\+read\+\_\+in\+\_\+progress}
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_ac4695f911178daec324a35c6ff0ac265}\label{classfc_1_1tcp__socket_1_1impl_ac4695f911178daec324a35c6ff0ac265}} 
+boost\+::asio\+::ip\+::tcp\+::socket {\bfseries \+\_\+sock}
+\item 
+\mbox{\Hypertarget{classfc_1_1tcp__socket_1_1impl_af5804ebfc87107a3e4a596d307a35158}\label{classfc_1_1tcp__socket_1_1impl_af5804ebfc87107a3e4a596d307a35158}} 
+tcp\+\_\+socket\+\_\+io\+\_\+hooks $\ast$ {\bfseries \+\_\+io\+\_\+hooks}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/src/network/tcp\+\_\+socket.\+cpp\end{DoxyCompactItemize}

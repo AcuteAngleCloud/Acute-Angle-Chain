@@ -1,0 +1,99 @@
+\hypertarget{group__console_cppapi}{}\section{Console C++ A\+PI}
+\label{group__console_cppapi}\index{Console C++ A\+PI@{Console C++ A\+PI}}
+
+
+C++ wrapper for Console \mbox{\hyperlink{struct_c}{C}} A\+PI.  
+
+
+Collaboration diagram for Console C++ A\+PI\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1iostream}{aacio\+::iostream}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Arg , typename... Args$>$ }\\void \mbox{\hyperlink{group__console_cppapi_ga2780132b8484a2674ef9254699d12968}{aacio\+::print}} (Arg \&\&a, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_print}{Print}} out value / list of values. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classaacio_1_1iostream}{iostream}} \& \mbox{\hyperlink{group__console_cppapi_ga9573031ece85c11fb0baeaab3a36eb73}{aacio\+::operator$<$$<$}} (\mbox{\hyperlink{classaacio_1_1iostream}{iostream}} \&out, const \mbox{\hyperlink{struct_t}{T}} \&v)
+\begin{DoxyCompactList}\small\item\em Overload c++ iostream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C++ wrapper for Console \mbox{\hyperlink{struct_c}{C}} A\+PI. 
+
+This A\+PI uses C++ variadic templates and type detection to make it easy to print any native type. You can even overload the {\ttfamily \mbox{\hyperlink{group__console_cppapi_ga2780132b8484a2674ef9254699d12968}{print()}}} method for your own custom types.
+
+{\bfseries Example\+:} 
+\begin{DoxyCode}
+\mbox{\hyperlink{print_8hpp_a291145c6469a570728575802ed6ad965}{print}}( \textcolor{stringliteral}{"hello world, this is a number: "}, 5 );
+\end{DoxyCode}
+\hypertarget{group__console_cppapi_override}{}\subsection{Overriding Print for your Types}\label{group__console_cppapi_override}
+There are two ways to overload print\+:
+\begin{DoxyEnumerate}
+\item implement void print( const T\& )
+\item implement T\+::print()const 
+\end{DoxyEnumerate}
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__console_cppapi_ga9573031ece85c11fb0baeaab3a36eb73}\label{group__console_cppapi_ga9573031ece85c11fb0baeaab3a36eb73}} 
+\index{Console C++ A\+PI@{Console C++ A\+PI}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Console C++ A\+PI@{Console C++ A\+PI}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classaacio_1_1iostream}{iostream}}\& aacio\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaacio_1_1iostream}{iostream}} \&}]{out,  }\item[{const \mbox{\hyperlink{struct_t}{T}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Overload c++ iostream. 
+
+Overload c++ iostream 
+\begin{DoxyParams}{Parameters}
+{\em out} & Output strem \\
+\hline
+{\em v} & \mbox{\hyperlink{struct_value}{Value}} to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s = \textcolor{stringliteral}{"Hello World!"};
+uint64\_t unsigned\_64\_bit\_int = 1e+18;
+uint128\_t unsigned\_128\_bit\_int (87654323456);
+uint64\_t string\_as\_unsigned\_64\_bit = \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(abcde);
+std::out << s << \textcolor{stringliteral}{" "} << unsigned\_64\_bit\_int << \textcolor{stringliteral}{" "}  << unsigned\_128\_bit\_int << \textcolor{stringliteral}{" "} << 
+      string\_as\_unsigned\_64\_bit;
+\textcolor{comment}{// Output: Hello World! 1000000000000000000 87654323456 abcde}
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__console_cppapi_ga2780132b8484a2674ef9254699d12968}\label{group__console_cppapi_ga2780132b8484a2674ef9254699d12968}} 
+\index{Console C++ A\+PI@{Console C++ A\+PI}!print@{print}}
+\index{print@{print}!Console C++ A\+PI@{Console C++ A\+PI}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename Arg , typename... Args$>$ \\
+void aacio\+::print (\begin{DoxyParamCaption}\item[{Arg \&\&}]{a,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{struct_print}{Print}} out value / list of values. 
+
+\mbox{\hyperlink{struct_print}{Print}} out value / list of values (except double) 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} to be printed \\
+\hline
+{\em args} & Other values to be printed\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{const} \textcolor{keywordtype}{char} *s = \textcolor{stringliteral}{"Hello World!"};
+uint64\_t unsigned\_64\_bit\_int = 1e+18;
+uint128\_t unsigned\_128\_bit\_int (87654323456);
+uint64\_t string\_as\_unsigned\_64\_bit = \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(abcde);
+\mbox{\hyperlink{print_8hpp_a291145c6469a570728575802ed6ad965}{print}}(s , unsigned\_64\_bit\_int, unsigned\_128\_bit\_int, string\_as\_unsigned\_64\_bit);
+\textcolor{comment}{// Ouput: Hello World!100000000000000000087654323456abcde}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 2

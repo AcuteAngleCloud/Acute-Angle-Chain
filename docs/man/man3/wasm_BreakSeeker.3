@@ -1,0 +1,55 @@
+.TH "wasm::BreakSeeker" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::BreakSeeker
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::PostWalker< BreakSeeker >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBreakSeeker\fP (\fBName\fP target)"
+.br
+.ti -1c
+.RI "void \fBnoteFound\fP (\fBExpression\fP *value)"
+.br
+.ti -1c
+.RI "void \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBhas\fP (\fBExpression\fP *tree, \fBName\fP target)"
+.br
+.ti -1c
+.RI "static Index \fBcount\fP (\fBExpression\fP *tree, \fBName\fP target)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBName\fP \fBtarget\fP"
+.br
+.ti -1c
+.RI "Index \fBfound\fP"
+.br
+.ti -1c
+.RI "WasmType \fBvalueType\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

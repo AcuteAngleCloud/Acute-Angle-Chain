@@ -1,0 +1,41 @@
+.TH "aacio::chain::signed_block_header" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::signed_block_header
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::block_header\fP\&.
+.PP
+Inherited by \fBaacio::chain::signed_block_summary\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBblock_id_type\fP \fBid\fP () const"
+.br
+.ti -1c
+.RI "\fBpublic_key_type\fP \fBsignee\fP () const"
+.br
+.ti -1c
+.RI "void \fBsign\fP (const \fBprivate_key_type\fP &signer)"
+.br
+.ti -1c
+.RI "bool \fBvalidate_signee\fP (const \fBpublic_key_type\fP &expected_signee) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBsignature_type\fP \fBproducer_signature\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

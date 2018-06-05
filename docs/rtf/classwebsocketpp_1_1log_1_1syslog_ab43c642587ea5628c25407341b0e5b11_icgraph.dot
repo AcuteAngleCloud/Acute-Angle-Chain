@@ -1,0 +1,9 @@
+digraph "websocketpp::log::syslog::syslog"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="websocketpp::log::syslog\l::syslog",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="websocketpp::log::syslog\l::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1log_1_1syslog.html#a2fda2d9b4aa71d4b47b7e93359b5b0d9",tooltip="Write a cstring message to the given channel. "];
+}

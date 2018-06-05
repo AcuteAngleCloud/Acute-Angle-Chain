@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="bancor::converter_contract\l\< ConverterCurrency, FirstCurrency,\l SecondCurrency \>::connector\<\l CurrencyType, Weight, Base \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbancor_1_1converter__contract_1_1connector.html"];
+}

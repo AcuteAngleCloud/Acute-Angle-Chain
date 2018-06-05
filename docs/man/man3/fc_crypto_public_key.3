@@ -1,0 +1,63 @@
+.TH "fc::crypto::public_key" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::crypto::public_key
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBstorage_type\fP = \fBstatic_variant\fP< \fBecc::public_key_shim\fP, \fBr1::public_key_shim\fP >"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpublic_key\fP (\fBpublic_key\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (const \fBpublic_key\fP &)=default"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP & \fBoperator=\fP (const \fBpublic_key\fP &)=default"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (const \fBsignature\fP &c, const \fBsha256\fP &digest, bool check_canonical=true)"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (const string &base58str)"
+.br
+.ti -1c
+.RI "\fBoperator string\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "struct \fBreflector< public_key >\fP"
+.br
+.ti -1c
+.RI "class \fBprivate_key\fP"
+.br
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &s, const \fBpublic_key\fP &k)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBpublic_key\fP &\fBp1\fP, const \fBpublic_key\fP &\fBp2\fP)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBpublic_key\fP &\fBp1\fP, const \fBpublic_key\fP &\fBp2\fP)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBpublic_key\fP &\fBp1\fP, const \fBpublic_key\fP &\fBp2\fP)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

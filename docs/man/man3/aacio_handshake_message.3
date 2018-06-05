@@ -1,0 +1,67 @@
+.TH "aacio::handshake_message" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::handshake_message
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int16_t \fBnetwork_version\fP = 0"
+.br
+.RI "derived from git commit hash, not sequential "
+.ti -1c
+.RI "\fBchain_id_type\fP \fBchain_id\fP"
+.br
+.RI "used to identify chain "
+.ti -1c
+.RI "\fBfc::sha256\fP \fBnode_id\fP"
+.br
+.RI "used to identify peers and prevent self-connect "
+.ti -1c
+.RI "\fBchain::public_key_type\fP \fBkey\fP"
+.br
+.RI "authentication key; may be a producer or peer key, or empty "
+.ti -1c
+.RI "tstamp \fBtime\fP"
+.br
+.ti -1c
+.RI "\fBfc::sha256\fP \fBtoken\fP"
+.br
+.RI "digest of time to prove we own the private key of the key above "
+.ti -1c
+.RI "\fBchain::signature_type\fP \fBsig\fP"
+.br
+.RI "signature for the digest "
+.ti -1c
+.RI "string \fBp2p_address\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBlast_irreversible_block_num\fP = 0"
+.br
+.ti -1c
+.RI "\fBblock_id_type\fP \fBlast_irreversible_block_id\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBhead_num\fP = 0"
+.br
+.ti -1c
+.RI "\fBblock_id_type\fP \fBhead_id\fP"
+.br
+.ti -1c
+.RI "string \fBos\fP"
+.br
+.ti -1c
+.RI "string \fBagent\fP"
+.br
+.ti -1c
+.RI "int16_t \fBgeneration\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

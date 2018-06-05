@@ -1,0 +1,53 @@
+.TH "fc::detail::gntp_notifier_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::detail::gntp_notifier_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBgntp_notifier_impl\fP (const std::string &host_to_notify='127\&.0\&.0\&.1', uint16_t port=23053, const \fBoptional\fP< std::string > &password=\fBoptional\fP< std::string >())"
+.br
+.ti -1c
+.RI "void \fBsend_gntp_message\fP (const std::string &message)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBhostname\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBport\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< std::string > \fBpassword\fP"
+.br
+.ti -1c
+.RI "std::string \fBapplication_name\fP"
+.br
+.ti -1c
+.RI "gntp_icon_ptr \fBapplication_icon\fP"
+.br
+.ti -1c
+.RI "gntp_notification_type_list \fBnotification_types\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< boost::asio::ip::tcp::endpoint > \fBendpoint\fP"
+.br
+.ti -1c
+.RI "bool \fBconnection_failed\fP"
+.br
+.ti -1c
+.RI "bool \fBis_registered\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

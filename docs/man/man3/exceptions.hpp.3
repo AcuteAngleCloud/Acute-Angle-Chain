@@ -1,0 +1,44 @@
+.TH "libraries/chain/include/aacio/chain/exceptions.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/exceptions.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fc/exception/exception\&.hpp>\fP
+.br
+\fC#include <aacio/chain/protocol\&.hpp>\fP
+.br
+\fC#include <aacio/utilities/exception_macros\&.hpp>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBAAC_RECODE_EXC\fP(cause_type,  effect_type)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define AAC_RECODE_EXC(cause_type, effect_type)"
+\fBValue:\fP
+.PP
+.nf
+catch( const cause_type& e ) \
+      { throw( effect_type( e\&.what(), e\&.get_log() ) ); }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

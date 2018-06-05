@@ -1,0 +1,9 @@
+digraph "chainbase::generic_index::session::squash"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="chainbase::generic\l_index::session::squash",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="chainbase::generic\l_index::squash",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classchainbase_1_1generic__index.html#a3ce42fec04c9d19c0f1c72f95e448bc3"];
+}

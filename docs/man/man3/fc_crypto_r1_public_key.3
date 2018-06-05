@@ -1,0 +1,88 @@
+.TH "fc::crypto::r1::public_key" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::crypto::r1::public_key \- contains only the public point of an elliptic curve key\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elliptic_r1\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpublic_key\fP (const \fBpublic_key\fP &k)"
+.br
+.ti -1c
+.RI "bool \fBverify\fP (const \fBfc::sha256\fP &digest, const \fBsignature\fP &sig)"
+.br
+.ti -1c
+.RI "\fBpublic_key_data\fP \fBserialize\fP () const"
+.br
+.ti -1c
+.RI "\fBpublic_key_point_data\fP \fBserialize_ecc_point\fP () const"
+.br
+.ti -1c
+.RI "\fBoperator public_key_data\fP () const"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (const \fBpublic_key_data\fP &v)"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (const \fBpublic_key_point_data\fP &v)"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (const \fBcompact_signature\fP &c, const \fBfc::sha256\fP &digest, bool check_canonical=true)"
+.br
+.ti -1c
+.RI "bool \fBvalid\fP () const"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP \fBmult\fP (const \fBfc::sha256\fP &offset)"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP \fBadd\fP (const \fBfc::sha256\fP &offset) const"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP (\fBpublic_key\fP &&pk)"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP & \fBoperator=\fP (\fBpublic_key\fP &&pk)"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP & \fBoperator=\fP (const \fBpublic_key\fP &pk)"
+.br
+.ti -1c
+.RI "std::string \fBto_base58\fP () const"
+.br
+.RI "Allows to convert current public key object into base58 number\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBpublic_key\fP \fBfrom_base58\fP (const std::string &b58)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBprivate_key\fP"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBpublic_key\fP &a, const \fBpublic_key\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBpublic_key\fP &a, const \fBpublic_key\fP &b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+contains only the public point of an elliptic curve key\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,62 @@
+.TH "aacio::chain_plugin" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain_plugin
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBappbase::plugin< chain_plugin >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBset_program_options\fP (options_description &cli, options_description &cfg) override"
+.br
+.ti -1c
+.RI "void \fBplugin_initialize\fP (const variables_map &options)"
+.br
+.ti -1c
+.RI "void \fBplugin_startup\fP ()"
+.br
+.ti -1c
+.RI "void \fBplugin_shutdown\fP ()"
+.br
+.ti -1c
+.RI "\fBchain_apis::read_only\fP \fBget_read_only_api\fP () const"
+.br
+.ti -1c
+.RI "\fBchain_apis::read_write\fP \fBget_read_write_api\fP ()"
+.br
+.ti -1c
+.RI "bool \fBaccept_block\fP (const \fBchain::signed_block\fP &block, bool currently_syncing)"
+.br
+.ti -1c
+.RI "void \fBaccept_transaction\fP (const \fBchain::packed_transaction\fP &trx)"
+.br
+.ti -1c
+.RI "bool \fBblock_is_on_preferred_chain\fP (const \fBchain::block_id_type\fP &block_id)"
+.br
+.ti -1c
+.RI "bool \fBis_skipping_transaction_signatures\fP () const"
+.br
+.ti -1c
+.RI "\fBchain_controller::controller_config\fP & \fBchain_config\fP ()"
+.br
+.ti -1c
+.RI "\fBchain_controller\fP & \fBchain\fP ()"
+.br
+.ti -1c
+.RI "const \fBchain_controller\fP & \fBchain\fP () const"
+.br
+.ti -1c
+.RI "void \fBget_chain_id\fP (\fBchain::chain_id_type\fP &cid) const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

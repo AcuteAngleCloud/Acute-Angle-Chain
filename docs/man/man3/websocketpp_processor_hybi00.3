@@ -1,0 +1,327 @@
+.TH "websocketpp::processor::hybi00< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::processor::hybi00< config > \- Processor for Hybi Draft version 00\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hybi00\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBprocessor\fP< \fBconfig\fP > \fBbase\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::request_type\fP \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::response_type\fP \fBresponse_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::message_type\fP \fBmessage_type\fP"
+.br
+.ti -1c
+.RI "typedef message_type::ptr \fBmessage_ptr\fP"
+.br
+.ti -1c
+.RI "typedef config::con_msg_manager_type::ptr \fBmsg_manager_ptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBhybi00\fP (bool secure, bool p_is_server, msg_manager_ptr manager)"
+.br
+.ti -1c
+.RI "int \fBget_version\fP () const"
+.br
+.RI "Get the protocol version of this processor\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_handshake\fP (\fBrequest_type\fP const &r) const"
+.br
+.RI "validate a WebSocket handshake request for this version "
+.ti -1c
+.RI "lib::error_code \fBprocess_handshake\fP (\fBrequest_type\fP const &req, std::string const &subprotocol, \fBresponse_type\fP &res) const"
+.br
+.RI "Calculate the appropriate response for this websocket request\&. "
+.ti -1c
+.RI "lib::error_code \fBclient_handshake_request\fP (\fBrequest_type\fP &, \fBuri_ptr\fP, \fBstd::vector\fP< std::string > const &) const"
+.br
+.RI "Fill in a set of request headers for a client connection request\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_server_handshake_response\fP (\fBrequest_type\fP const &, \fBresponse_type\fP &) const"
+.br
+.RI "Validate the server's response to an outgoing handshake request\&. "
+.ti -1c
+.RI "std::string \fBget_raw\fP (\fBresponse_type\fP const &res) const"
+.br
+.RI "Given a completed response, get the raw bytes to put on the wire\&. "
+.ti -1c
+.RI "std::string const  & \fBget_origin\fP (\fBrequest_type\fP const &r) const"
+.br
+.RI "Return the value of the header containing the CORS origin\&. "
+.ti -1c
+.RI "lib::error_code \fBextract_subprotocols\fP (\fBrequest_type\fP const &req, \fBstd::vector\fP< std::string > &subprotocol_list)"
+.br
+.RI "Extracts requested subprotocols from a handshake request\&. "
+.ti -1c
+.RI "\fBuri_ptr\fP \fBget_uri\fP (\fBrequest_type\fP const &request) const"
+.br
+.RI "Extracts client uri from a handshake request\&. "
+.ti -1c
+.RI "std::string \fBget_key3\fP () const"
+.br
+.RI "Get \fBhybi00\fP handshake key3\&. "
+.ti -1c
+.RI "size_t \fBconsume\fP (uint8_t *buf, size_t len, lib::error_code &ec)"
+.br
+.RI "Process new websocket connection bytes\&. "
+.ti -1c
+.RI "bool \fBready\fP () const"
+.br
+.RI "Checks if there is a message ready\&. "
+.ti -1c
+.RI "bool \fBget_error\fP () const"
+.br
+.RI "Tests whether the processor is in a fatal error state\&. "
+.ti -1c
+.RI "message_ptr \fBget_message\fP ()"
+.br
+.RI "Retrieves the most recently processed message\&. "
+.ti -1c
+.RI "virtual lib::error_code \fBprepare_data_frame\fP (message_ptr in, message_ptr out)"
+.br
+.RI "Prepare a message for writing\&. "
+.ti -1c
+.RI "lib::error_code \fBprepare_ping\fP (std::string const &, message_ptr) const"
+.br
+.RI "Prepare a ping frame\&. "
+.ti -1c
+.RI "lib::error_code \fBprepare_pong\fP (std::string const &, message_ptr) const"
+.br
+.RI "Prepare a pong frame\&. "
+.ti -1c
+.RI "lib::error_code \fBprepare_close\fP (\fBclose::status::value\fP, std::string const &, message_ptr out) const"
+.br
+.RI "Prepare a close frame\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+class websocketpp::processor::hybi00< config >"
+Processor for Hybi Draft version 00\&. 
+
+There are many differences between Hybi 00 and Hybi 13 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::client_handshake_request (\fBrequest_type\fP &, \fBuri_ptr\fP, \fBstd::vector\fP< std::string > const &) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Fill in a set of request headers for a client connection request\&. The Hybi 00 processor only implements incoming connections so this will always return an error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP Set of headers to fill in 
+.br
+\fIuri\fP The uri being connected to 
+.br
+\fIsubprotocols\fP The list of subprotocols to request 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::extract_subprotocols (\fBrequest_type\fP const & req, \fBstd::vector\fP< std::string > & subprotocol_list)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Extracts requested subprotocols from a handshake request\&. \fBhybi00\fP does support subprotocols https://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-00#section-1.9
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP The request to extract from 
+.br
+\fIsubprotocol_list\fP \fBA\fP reference to a vector of strings to store the results in\&. 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> std::string \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::get_key3 () const\fC [inline]\fP"
+
+.PP
+Get \fBhybi00\fP handshake key3\&. 
+.PP
+\fBTodo\fP
+.RS 4
+This doesn't appear to be used anymore\&. It might be able to be removed 
+.RE
+.PP
+
+.SS "template<typename config> message_ptr \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::get_message ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Retrieves the most recently processed message\&. Retrieves a shared pointer to the recently completed message if there is one\&. If \fBready()\fP returns true then there is a message available\&. Retrieving the message with get_message will reset the state of ready\&. As such, each new message may be retrieved only once\&. Calling get_message when there is no message available will result in a null pointer being returned\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP pointer to the most recently processed message or a null shared pointer\&. 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::prepare_close (\fBclose::status::value\fP, std::string const &, message_ptr out) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a close frame\&. Hybi 00 doesn't support the close code or reason so these parameters are ignored\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcode\fP The close code to send 
+.br
+\fIreason\fP The reason string to send 
+.br
+\fIout\fP The message buffer to prepare the fame in 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code, zero on success, non-zero on failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> virtual lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::prepare_data_frame (message_ptr in, message_ptr out)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a message for writing\&. Performs validation, masking, compression, etc\&. will return an error if there was an error, otherwise msg will be ready to be written 
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::prepare_ping (std::string const &, message_ptr) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a ping frame\&. Hybi 00 doesn't support pings so this will always return an error
+.PP
+\fBParameters:\fP
+.RS 4
+\fIin\fP The string to use for the ping payload 
+.br
+\fIout\fP The message buffer to prepare the ping in\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code, zero on success, non-zero on failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::prepare_pong (std::string const &, message_ptr) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Prepare a pong frame\&. Hybi 00 doesn't support pongs so this will always return an error
+.PP
+\fBParameters:\fP
+.RS 4
+\fIin\fP The string to use for the pong payload 
+.br
+\fIout\fP The message buffer to prepare the pong in\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code, zero on success, non-zero on failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::process_handshake (\fBrequest_type\fP const & req, std::string const & subprotocol, \fBresponse_type\fP & res) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Calculate the appropriate response for this websocket request\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP The request to process
+.br
+\fIsubprotocol\fP The subprotocol in use
+.br
+\fIres\fP The response to store the processed response in
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An error code, 0 on success, non-zero for other errors 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> bool \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::ready () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Checks if there is a message ready\&. Checks if the most recent consume operation processed enough bytes to complete a new WebSocket message\&. The message can be retrieved by calling \fBget_message()\fP which will reset the internal state to not-ready and allow consume to read more bytes\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not a message is ready\&. 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::validate_handshake (\fBrequest_type\fP const & request) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+validate a WebSocket handshake request for this version 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrequest\fP The WebSocket handshake request to validate\&. is_websocket_handshake(request) must be true and get_websocket_version(request) must equal this->\fBget_version()\fP\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP status code, 0 on success, non-zero for specific sorts of failure 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi00\fP< \fBconfig\fP >::validate_server_handshake_response (\fBrequest_type\fP const &, \fBresponse_type\fP &) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Validate the server's response to an outgoing handshake request\&. The Hybi 00 processor only implements incoming connections so this will always return an error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP The original request sent 
+.br
+\fIres\fP The reponse to generate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An error code, 0 on success, non-zero for other errors 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,59 @@
+\hypertarget{classaacio_1_1chain__plugin__impl}{}\section{aacio\+:\+:chain\+\_\+plugin\+\_\+impl Class Reference}
+\label{classaacio_1_1chain__plugin__impl}\index{aacio\+::chain\+\_\+plugin\+\_\+impl@{aacio\+::chain\+\_\+plugin\+\_\+impl}}
+
+
+Collaboration diagram for aacio\+:\+:chain\+\_\+plugin\+\_\+impl\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a60d7d46209ff4f608b2146a8422016b6}\label{classaacio_1_1chain__plugin__impl_a60d7d46209ff4f608b2146a8422016b6}} 
+bfs\+::path {\bfseries block\+\_\+log\+\_\+dir}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a8fa43d8d86f00085e408de0fe07e5b92}\label{classaacio_1_1chain__plugin__impl_a8fa43d8d86f00085e408de0fe07e5b92}} 
+bfs\+::path {\bfseries genesis\+\_\+file}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a4b976a3f68f869b60fce93021a8538a4}\label{classaacio_1_1chain__plugin__impl_a4b976a3f68f869b60fce93021a8538a4}} 
+\mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} {\bfseries genesis\+\_\+timestamp}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a9dfc44ebb3e8659038b3a3921935c398}\label{classaacio_1_1chain__plugin__impl_a9dfc44ebb3e8659038b3a3921935c398}} 
+uint32\+\_\+t {\bfseries skip\+\_\+flags} = skip\+\_\+nothing
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a2856441213a5ed65606a5f0f5a4005d9}\label{classaacio_1_1chain__plugin__impl_a2856441213a5ed65606a5f0f5a4005d9}} 
+bool {\bfseries readonly} = false
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a867e12892ea07e33786a6270d2d16229}\label{classaacio_1_1chain__plugin__impl_a867e12892ea07e33786a6270d2d16229}} 
+flat\+\_\+map$<$ uint32\+\_\+t, \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} $>$ {\bfseries loaded\+\_\+checkpoints}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_afeea14538c81a31608fceeb9a23615c8}\label{classaacio_1_1chain__plugin__impl_afeea14538c81a31608fceeb9a23615c8}} 
+\mbox{\hyperlink{classfc_1_1optional}{fc\+::optional}}$<$ \mbox{\hyperlink{classaacio_1_1chain_1_1fork__database}{fork\+\_\+database}} $>$ {\bfseries fork\+\_\+db}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a4adbe7e0cdf45aec7085f29c8d2f730e}\label{classaacio_1_1chain__plugin__impl_a4adbe7e0cdf45aec7085f29c8d2f730e}} 
+\mbox{\hyperlink{classfc_1_1optional}{fc\+::optional}}$<$ \mbox{\hyperlink{classaacio_1_1chain_1_1block__log}{block\+\_\+log}} $>$ {\bfseries block\+\_\+logger}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a08ed7789f78b4354cf7580ceaa23238c}\label{classaacio_1_1chain__plugin__impl_a08ed7789f78b4354cf7580ceaa23238c}} 
+\mbox{\hyperlink{classfc_1_1optional}{fc\+::optional}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1controller__config}{chain\+\_\+controller\+::controller\+\_\+config}} $>$ {\bfseries chain\+\_\+config} = \mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1controller__config}{chain\+\_\+controller\+::controller\+\_\+config}}()
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a2e18628e7a2b8b3c78e1617d0afff363}\label{classaacio_1_1chain__plugin__impl_a2e18628e7a2b8b3c78e1617d0afff363}} 
+\mbox{\hyperlink{classfc_1_1optional}{fc\+::optional}}$<$ \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller}{chain\+\_\+controller}} $>$ {\bfseries chain}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_aae2a37510dcc295865347d17ff3ec844}\label{classaacio_1_1chain__plugin__impl_aae2a37510dcc295865347d17ff3ec844}} 
+\mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} {\bfseries chain\+\_\+id}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_aa88207c3d395dede2762c649bf294e8f}\label{classaacio_1_1chain__plugin__impl_aa88207c3d395dede2762c649bf294e8f}} 
+int32\+\_\+t {\bfseries max\+\_\+reversible\+\_\+block\+\_\+time\+\_\+ms}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a99e8b32f449a8e97fe7e72d73a02fc4b}\label{classaacio_1_1chain__plugin__impl_a99e8b32f449a8e97fe7e72d73a02fc4b}} 
+int32\+\_\+t {\bfseries max\+\_\+pending\+\_\+transaction\+\_\+time\+\_\+ms}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_a094d19a7e0bd68ae4602451cd81832bc}\label{classaacio_1_1chain__plugin__impl_a094d19a7e0bd68ae4602451cd81832bc}} 
+int32\+\_\+t {\bfseries max\+\_\+deferred\+\_\+transaction\+\_\+time\+\_\+ms}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain__plugin__impl_ae7b4af552f124d4f857385770f3cde52}\label{classaacio_1_1chain__plugin__impl_ae7b4af552f124d4f857385770f3cde52}} 
+\mbox{\hyperlink{classfc_1_1optional}{fc\+::optional}}$<$ vm\+\_\+type $>$ {\bfseries wasm\+\_\+runtime}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/chain\+\_\+plugin/\mbox{\hyperlink{chain__plugin_8cpp}{chain\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

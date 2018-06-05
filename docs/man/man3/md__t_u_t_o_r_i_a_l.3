@@ -1,0 +1,493 @@
+.TH "md__t_u_t_o_r_i_a_l" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__t_u_t_o_r_i_a_l \- AACIO Developer Tutorial 
+The purpose of this tutorial is to demonstrate how to setup a local blockchain that can be used to experiment with smart contracts\&. The first part of this tutorial will focus on:
+.PP
+.IP "1." 4
+Starting a \fBNode\fP
+.IP "2." 4
+Creating a Wallet
+.IP "3." 4
+Creating Accounts
+.IP "4." 4
+Deploying Contracts
+.IP "5." 4
+Interacting with Contracts
+.PP
+.PP
+The second part of this tutorial will walk you through creating and deploying your own contracts\&.
+.PP
+This tutorial assumes that you have installed AACIO and that \fCnodaac\fP and \fCclaac\fP are in your path\&.
+.PP
+.SS "Starting a Private Blockchain"
+.PP
+You can start your own single-node blockchain with this single command:
+.PP
+.PP
+.nf
+$ nodaac -e -p aacio --plugin aacio::wallet_api_plugin --plugin aacio::chain_api_plugin --plugin aacio::account_history_api_plugin 
+\&.\&.\&.
+aacio generated block 046b9984\&.\&.\&. #101527 @ 2018-04-01T14:24:58\&.000 with 0 trxs
+aacio generated block 5e527ee2\&.\&.\&. #101528 @ 2018-04-01T14:24:58\&.500 with 0 trxs
+.fi
+.PP
+.PP
+This command sets many flags and loads some optional plugins which we will need for the rest of this tutorial\&. Assuming everything worked properly, you should see a block generation message every 0\&.5 seconds\&. 
+.br
+ 
+.PP
+.nf
+aacio generated block 046b9984\&.\&.\&. #101527 @ 2018-04-01T14:24:58\&.000 with 0 trxs
+
+.fi
+.PP
+.PP
+This means your local blockchain is live, producing blocks, and ready to be used\&.
+.PP
+For more information about the arguments to \fCnodaac\fP you can use:
+.PP
+.PP
+.nf
+nodaac --help
+.fi
+.PP
+.PP
+.SS "Creating a Wallet"
+.PP
+\fBA\fP wallet is a repository of private keys necessary to authorize actions on the blockchain\&. These keys are stored on disk encrypted using a password generated for you\&. This password should be stored in a secure password manager\&.
+.PP
+.PP
+.nf
+$ claac wallet create
+Creating wallet: default
+Save password to use in the future to unlock this wallet\&.
+Without password imported keys will not be retrievable\&.
+"PW5JuBXoXJ8JHiCTXfXcYuJabjF9f9UNNqHJjqDVY7igVffe3pXub"
+.fi
+.PP
+.PP
+For the purpose of this simple development environment, your wallet is being managed by your local \fCnodaac\fP via the \fC\fBaacio::wallet_api_plugin\fP\fP we enabled when we started \fCnodaac\fP\&. Any time you restart \fCnodaac\fP you will have to unlock your wallet before you can use the keys within\&.
+.PP
+.PP
+.nf
+$ claac wallet unlock --password PW5JuBXoXJ8JHiCTXfXcYuJabjF9f9UNNqHJjqDVY7igVffe3pXub
+Unlocked: default
+.fi
+.PP
+.PP
+It is generally not secure to use your password directly on the commandline where it gets logged to your bash history, so you can also unlock in interactive mode:
+.PP
+.PP
+.nf
+$ claac wallet unlock
+password:
+.fi
+.PP
+.PP
+For security purposes it is generally best to leave your wallet locked when you are not using it\&. To lock your wallet without shutting down \fCnodaac\fP you can do:
+.PP
+.PP
+.nf
+$ claac wallet lock
+Locked: default
+.fi
+.PP
+.PP
+You will need your wallet unlocked for the rest of this tutorial\&.
+.PP
+All new blockchains start out with a master key for the sole initial account, \fCaacio\fP\&. To interact with the blockchain you will need to import this initial account's private key into your wallet\&.
+.PP
+Import the master key for the \fCaacio\fP account into your wallet\&. The master key can be found in the \fCconfig\&.ini\fP file in the config folder for \fCnodaac\fP\&. In this example, the default config folder is used\&. On Linux systems, this will be in \fC~/\&.local/share/aacio/nodAcuteAngleChain/config\fP and on MacOS, this will be in \fC~/Library/Application Support/aacio/nodAcuteAngleChain/config\fP\&.
+.PP
+.PP
+.nf
+$ claac wallet import 5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ
+imported private key for: AAC84snobCGtpQvTTfVaxvMuxGDd4p2LhtQhbWX1yWAU5yt4tiB55
+.fi
+.PP
+.PP
+.SS "Load the Bios Contract"
+.PP
+Now that we have a wallet with the key for the \fCaacio\fP account loaded, we can set a default system contract\&. For the purposes of development, the default \fC\fBaacio\&.bios\fP\fP contract can be used\&. This contract enables you to have direct control over the resource allocation of other accounts and to access other privileged API calls\&. In a public blockchain, this contract will manage the staking and unstaking of tokens to reserve bandwidth for CPU and network activity, and memory for contracts\&.
+.PP
+The \fC\fBaacio\&.bios\fP\fP contract can be found in the \fCcontracts/aacio\&.bios\fP folder of your AACIO source code\&. The command sequence below assumes it is being executed from the root of the AACIO source, but you can execute it from anywhere by specifying the full path to \fC${AACIO_SOURCE}/build/contracts/aacio\&.bios\fP\&.
+.PP
+.PP
+.nf
+$ claac set contract aacio build/contracts/aacio\&.bios -p aacio
+Reading WAST\&.\&.\&.
+Assembling WASM\&.\&.\&.
+Publishing contract\&.\&.\&.
+executed transaction: 414cf0dc7740d22474992779b2416b0eabdbc91522c16521307dd682051af083  4068 bytes  10000 cycles
+#         aacio <= aacio::setcode               {"account":"aacio","vmtype":0,"vmversion":0,"code":"0061736d0100000001ab011960037f7e7f0060057f7e7e7e\&.\&.\&.
+#         aacio <= aacio::setabi                {"account":"aacio","abi":{"types":[],"structs":[{"name":"set_account_limits","base":"","fields":[{"n\&.\&.\&.
+.fi
+.PP
+.PP
+The result of this command sequence is that \fCclaac\fP generated a transaction with two actions, \fCaacio::setcode\fP and \fCaacio::setabi\fP\&. 
+.br
+ The code defines how the contract runs and the abi describes how to convert between binary and json representations of the arguments\&. While an abi is technically optional, all of the AACIO tooling depends upon it for ease of use\&. 
+.br
+ Any time you execute a transaction you will see output like: 
+.PP
+.nf
+executed transaction: 414cf0dc7740d22474992779b2416b0eabdbc91522c16521307dd682051af083  4068 bytes  10000 cycles
+#         aacio <= aacio::setcode               {"account":"aacio","vmtype":0,"vmversion":0,"code":"0061736d0100000001ab011960037f7e7f0060057f7e7e7e\&.\&.\&.
+#         aacio <= aacio::setabi                {"account":"aacio","abi":{"types":[],"structs":[{"name":"set_account_limits","base":"","fields":[{"n\&.\&.\&.
+
+.fi
+.PP
+.PP
+This can be read as: The action \fCsetcode\fP as defined by \fCaacio\fP was executed by \fCaacio\fP contract with \fC{args\&.\&.\&.}\fP\&.
+.PP
+.PP
+.nf
+#         ${executor} <= ${contract}:${action} ${args\&.\&.\&.}
+> console output from this execution, if any
+.fi
+.PP
+.PP
+As we will see in a bit, actions can be processed by more than one contract\&.
+.PP
+The last argument to this call was \fC-p aacio\fP\&. This tells \fCclaac\fP to sign this action with the active authority of the \fCaacio\fP account, i\&.e\&., to sign the action using the private key for the \fCaacio\fP account that we imported earlier\&.
+.PP
+.SS "Create an Account"
+.PP
+Now that we have setup the basic system contract, we can start to create our own accounts\&. We will create two accounts, \fCuser\fP and \fCtester\fP, and we will need to associate a key with each account\&. In this example, the same key will be used for both accounts\&.
+.PP
+To do this we first generate a key for the accounts\&.
+.PP
+.PP
+.nf
+$ claac create key
+Private key: 5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR
+Public key: AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+.fi
+.PP
+.PP
+Then we import this key into our wallet: 
+.PP
+.nf
+$ claac wallet import 5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR
+imported private key for: AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+
+.fi
+.PP
+ \fBNOTE:\fP Be sure to use the actual key value generated by the \fCclaac\fP command and not the one shown in the example above!
+.PP
+Keys are not automatically added to a wallet, so skipping this step could result in losing control of your account\&.
+.PP
+.SS "Create \fBTwo\fP User Accounts"
+.PP
+Next we will create two accounts, \fCuser\fP and \fCtester\fP, using the key we created and imported above\&.
+.PP
+.PP
+.nf
+$ claac create account aacio user AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+executed transaction: 8aedb926cc1ca31642ada8daf4350833c95cbe98b869230f44da76d70f6d6242  364 bytes  1000 cycles
+#         aacio <= aacio::newaccount            {"creator":"aacio","name":"user","owner":{"threshold":1,"keys":[{"key":"AAC7ijWCBmoXBi3CgtK7DJxentZZ\&.\&.\&.
+
+$ claac create account aacio tester AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+executed transaction: 414cf0dc7740d22474992779b2416b0eabdbc91522c16521307dd682051af083 366 bytes  1000 cycles
+#         aacio <= aacio::newaccount            {"creator":"aacio","name":"tester","owner":{"threshold":1,"keys":[{"key":"AAC7ijWCBmoXBi3CgtK7DJxentZZ\&.\&.\&.
+.fi
+.PP
+ \fBNOTE:\fP The \fCcreate account\fP subcommand requires two keys, one for the OwnerKey (which in a production environment should be kept highly secure) and one for the ActiveKey\&. In this tutorial example, the same key is used for both\&.
+.PP
+Because we are using the \fC\fBaacio::account_history_api_plugin\fP\fP we can query all accounts that are controlled by our key:
+.PP
+.PP
+.nf
+$ claac get accounts AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+{
+  "account_names": [
+    "tester",
+    "user"
+  ]
+}
+.fi
+.PP
+.PP
+.SS "Create Token Contract"
+.PP
+At this stage the blockchain doesn't do much, so let's deploy the \fC\fBaacio\&.token\fP\fP contract\&. This contract enables the creation of many different tokens all running on the same contract but potentially managed by different users\&.
+.PP
+Before we can deploy the token contract we must create an account to deploy it to\&.
+.PP
+.PP
+.nf
+$ claac create account aacio aacio\&.token  AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+\&.\&.\&.
+.fi
+.PP
+.PP
+Then we can deploy the contract which can be found in \fC${AACIO_SOURCE}/build/contracts/aacio\&.token\fP
+.PP
+.PP
+.nf
+$ claac set contract aacio\&.token build/contracts/aacio\&.token -p aacio\&.token
+Reading WAST\&.\&.\&.
+Assembling WASM\&.\&.\&.
+Publishing contract\&.\&.\&.
+executed transaction: 528bdbce1181dc5fd72a24e4181e6587dace8ab43b2d7ac9b22b2017992a07ad  8708 bytes  10000 cycles
+#         aacio <= aacio::setcode               {"account":"aacio\&.token","vmtype":0,"vmversion":0,"code":"0061736d0100000001ce011d60067f7e7f7f7f7f00\&.\&.\&.
+#         aacio <= aacio::setabi                {"account":"aacio\&.token","abi":{"types":[],"structs":[{"name":"transfer","base":"","fields":[{"name"\&.\&.\&.
+.fi
+.PP
+.PP
+.SS "Create the AAC Token"
+.PP
+You can view the interface to \fC\fBaacio\&.token\fP\fP as defined by \fCcontracts/aacio\&.token/aacio\&.\fBtoken\&.hpp\fP\fP: 
+.PP
+.nf
+void create( account_name issuer,
+             asset        maximum_supply,
+             uint8_t      can_freeze,
+             uint8_t      can_recall,
+             uint8_t      can_whitelist );
+
+
+void issue( account_name to, asset quantity, string memo );
+
+void transfer( account_name from,
+               account_name to,
+               asset        quantity,
+               string       memo );
+
+.fi
+.PP
+.PP
+To create a new token we must call the \fCcreate(\&.\&.\&.)\fP action with the proper arguments\&. This command will use the symbol of the maximum supply to uniquely identify this token from other tokens\&. The issuer will be the one with authority to call issue and or perform other actions such as freezing, recalling, and whitelisting of owners\&.
+.PP
+The concise way to call this method, using positional arguments: 
+.PP
+.nf
+$ claac push action aacio\&.token create '[ "aacio", "1000000000\&.0000 AAC", 0, 0, 0]' -p aacio\&.token
+executed transaction: 0e49a421f6e75f4c5e09dd738a02d3f51bd18a0cf31894f68d335cd70d9c0e12  260 bytes  1000 cycles
+#   aacio\&.token <= aacio\&.token::create          {"issuer":"aacio","maximum_supply":"1000000000\&.0000 AAC","can_freeze":0,"can_recall":0,"can_whitelis\&.\&.\&.
+
+.fi
+.PP
+.PP
+Alternatively, a more verbose way to call this method, using named arguments:
+.PP
+.PP
+.nf
+$ claac push action aacio\&.token create '{"issuer":"aacio", "maximum_supply":"1000000000\&.0000 AAC", "can_freeze":0, "can_recall":0, "can_whitelist":0}' -p aacio\&.token
+executed transaction: 0e49a421f6e75f4c5e09dd738a02d3f51bd18a0cf31894f68d335cd70d9c0e12  260 bytes  1000 cycles
+#   aacio\&.token <= aacio\&.token::create          {"issuer":"aacio","maximum_supply":"1000000000\&.0000 AAC","can_freeze":0,"can_recall":0,"can_whitelis\&.\&.\&.
+.fi
+.PP
+.PP
+This command created a new token \fCAAC\fP with a pecision of 4 decimials and a maximum supply of 1000000000\&.0000 AAC\&.
+.PP
+In order to create this token we required the permission of the \fC\fBaacio\&.token\fP\fP contract because it 'owns' the symbol namespace (e\&.g\&. 'AAC')\&. Future versions of this contract may allow other parties to buy symbol names automatically\&. For this reason we must pass \fC-p \fBaacio\&.token\fP\fP to authorize this call\&.
+.PP
+.SS "Issue Tokens to Account 'User'"
+.PP
+Now that we have created the token, the issuer can issue new tokens to the account \fCuser\fP we created earlier\&.
+.PP
+We will use the positional calling convention (vs named args)\&.
+.PP
+.PP
+.nf
+$ claac push action aacio\&.token issue '[ "user", "100\&.0000 AAC", "memo" ]' -p aacio
+executed transaction: 822a607a9196112831ecc2dc14ffb1722634f1749f3ac18b73ffacd41160b019  268 bytes  1000 cycles
+#   aacio\&.token <= aacio\&.token::issue           {"to":"user","quantity":"100\&.0000 AAC","memo":"memo"}
+>> issue
+#   aacio\&.token <= aacio\&.token::transfer        {"from":"aacio","to":"user","quantity":"100\&.0000 AAC","memo":"memo"}
+>> transfer
+#         aacio <= aacio\&.token::transfer        {"from":"aacio","to":"user","quantity":"100\&.0000 AAC","memo":"memo"}
+#          user <= aacio\&.token::transfer        {"from":"aacio","to":"user","quantity":"100\&.0000 AAC","memo":"memo"}
+.fi
+.PP
+.PP
+This time the output contains several different actions: one issue and three transfers\&. While the only action we signed was \fCissue\fP, the \fCissue\fP action performed an 'inline transfer' and the 'inline transfer' notified the sender and receiver accounts\&. The output indicates all of the action handlers that were called, the order they were called in, and whether or not any output was generated by the action\&.
+.PP
+Technically, the \fC\fBaacio\&.token\fP\fP contract could have skipped the \fCinline transfer\fP and opted to just modify the balances directly\&. However, in this case, the \fC\fBaacio\&.token\fP\fP contract is following our token convention that requires that all account balances be derivable by the sum of the transfer actions that reference them\&. It also requires that the sender and receiver of funds be notified so they can automate handling deposits and withdrawals\&.
+.PP
+If you want to see the actual transaction that was broadcast, you can use the \fC-d -j\fP options to indicate 'don't broadcast' and 'return transaction as json'\&.
+.PP
+.PP
+.nf
+$ claac push action aacio\&.token issue '["user", "100\&.0000 AAC", "memo"]' -p aacio -d -j
+{
+  "expiration": "2018-04-01T15:20:44",
+  "region": 0,
+  "ref_block_num": 42580,
+  "ref_block_prefix": 3987474256,
+  "net_usage_words": 21,
+  "kcpu_usage": 1000,
+  "delay_sec": 0,
+  "context_free_actions": [],
+  "actions": [{
+      "account": "aacio\&.token",
+      "name": "issue",
+      "authorization": [{
+          "actor": "aacio",
+          "permission": "active"
+        }
+      ],
+      "data": "00000000007015d640420f000000000004454f5300000000046d656d6f"
+    }
+  ],
+  "signatures": [
+    "AACJzPywCKsgBitRh9kxFNeMJc8BeD6QZLagtXzmdS2ib5gKTeELiVxXvcnrdRUiY3ExP9saVkdkzvUNyRZSXj2CLJnj7U42H"
+  ],
+  "context_free_data": []
+}
+.fi
+.PP
+.PP
+.SS "Transfer Tokens to Account 'Tester'"
+.PP
+Now that account \fCuser\fP has tokens, we will transfer some to account \fCtester\fP\&. We indicate that \fCuser\fP authorized this action using the permission argument \fC-p user\fP\&.
+.PP
+.PP
+.nf
+$ claac push action aacio\&.token transfer '[ "user", "tester", "25\&.0000 AAC", "m" ]' -p user
+executed transaction: 06d0a99652c11637230d08a207520bf38066b8817ef7cafaab2f0344aafd7018  268 bytes  1000 cycles
+#   aacio\&.token <= aacio\&.token::transfer        {"from":"user","to":"tester","quantity":"25\&.0000 AAC","memo":"m"}
+>> transfer
+#          user <= aacio\&.token::transfer        {"from":"user","to":"tester","quantity":"25\&.0000 AAC","memo":"m"}
+#        tester <= aacio\&.token::transfer        {"from":"user","to":"tester","quantity":"25\&.0000 AAC","memo":"m"}
+.fi
+.PP
+.PP
+.SS "Hello World Contract"
+.PP
+We will now create our first 'hello world' contract\&. Create a new folder called 'hello', cd into the folder, then create a file 'hello\&.cpp' with the following contents:
+.PP
+#### hello/hello\&.cpp 
+.PP
+.nf
+#include <aaciolib/aacio\&.hpp>
+#include <aaciolib/print\&.hpp>
+using namespace aacio;
+
+class hello : public aacio::contract {
+  public:
+      using contract::contract;
+
+      /// @abi action 
+      void hi( account_name user ) {
+         print( "Hello, ", name{user} );
+      }
+};
+
+AACIO_ABI( hello, (hi) )
+
+.fi
+.PP
+.PP
+You can compile your code to web assmebly (\&.wast) as follows: 
+.PP
+.nf
+$ aaciocpp -o hello\&.wast hello\&.cpp
+
+.fi
+.PP
+ \fBNOTE:\fP The compiler might generate warnings\&. These can be safely ignored\&.
+.PP
+Now generate the abi:
+.PP
+.PP
+.nf
+$ aaciocpp -g hello\&.abi hello\&.cpp
+Generated hello\&.abi
+.fi
+.PP
+.PP
+Create an account and upload the contract:
+.PP
+.PP
+.nf
+$ claac create account aacio hello\&.code AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+\&.\&.\&.
+$ claac set contract hello\&.code \&.\&./hello -p hello\&.code
+\&.\&.\&.
+.fi
+.PP
+.PP
+Now we can run the contract:
+.PP
+.PP
+.nf
+$ claac push action hello\&.code hi '["user"]' -p user
+executed transaction: 4c10c1426c16b1656e802f3302677594731b380b18a44851d38e8b5275072857  244 bytes  1000 cycles
+#    hello\&.code <= hello\&.code::hi               {"user":"user"}
+>> Hello, user
+.fi
+.PP
+.PP
+At this time the contract allows anyone to authorize it, we could also say:
+.PP
+.PP
+.nf
+$ claac push action hello\&.code hi '["user"]' -p tester
+executed transaction: 28d92256c8ffd8b0255be324e4596b7c745f50f85722d0c4400471bc184b9a16  244 bytes  1000 cycles
+#    hello\&.code <= hello\&.code::hi               {"user":"user"}
+>> Hello, user
+.fi
+.PP
+.PP
+In this case tester is the one who authorized it and user is just an argument\&. If we want our contact to authenticate the user we are saying 'hi' to, then we need to modify the contract to require authentication\&.
+.PP
+Modify the hi() function in hello\&.cpp as follows: 
+.PP
+.nf
+void hi( account_name user ) {
+   require_auth( user );
+   print( "Hello, ", name{user} );
+}
+
+.fi
+.PP
+ Repeat the steps to compile the wast file and generate the abi, then set the contract again to deploy the update\&.
+.PP
+Now if we attempt to mismatch the user and the authority, the contract will throw an error: 
+.PP
+.nf
+$ claac push action hello\&.code hi '["tester"]' -p user
+Error 3030001: missing required authority
+Ensure that you have the related authority inside your transaction!;
+If you are currently using 'claac push action' command, try to add the relevant authority using -p option\&.
+Error Details:
+missing authority of tester
+
+.fi
+.PP
+.PP
+We can fix this by giving the permission of tester:
+.PP
+.PP
+.nf
+$ claac push action hello\&.code hi '["tester"]' -p tester
+executed transaction: 235bd766c2097f4a698cfb948eb2e709532df8d18458b92c9c6aae74ed8e4518  244 bytes  1000 cycles
+#    hello\&.code <= hello\&.code::hi               {"user":"tester"}
+>> Hello, tester
+.fi
+.PP
+.PP
+.SS "Deploy Exchange Contract"
+.PP
+Similar to the examples shown above, we can deploy the exchange contract\&. It is assumed this is being run from the root of the AACIO source\&.
+.PP
+.PP
+.nf
+$ claac create account aacio exchange  AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4 AAC7ijWCBmoXBi3CgtK7DJxentZZeTkeUnaSDvyro9dq7Sd1C3dC4
+executed transaction: 4d38de16631a2dc698f1d433f7eb30982d855219e7c7314a888efbbba04e571c  364 bytes  1000 cycles
+#         aacio <= aacio::newaccount            {"creator":"aacio","name":"exchange","owner":{"threshold":1,"keys":[{"key":"AAC7ijWCBmoXBi3CgtK7DJxe\&.\&.\&.
+
+$ claac set contract exchange build/contracts/exchange -p exchange
+Reading WAST\&.\&.\&.
+Assembling WASM\&.\&.\&.
+Publishing contract\&.\&.\&.
+executed transaction: 5a63b4de8a1da415590778f163c5ed26dc164c960185b20fd834c297cf7fa8f4  35172 bytes  10000 cycles
+#         aacio <= aacio::setcode               {"account":"exchange","vmtype":0,"vmversion":0,"code":"0061736d0100000001f0023460067f7e7f7f7f7f00600\&.\&.\&.
+#         aacio <= aacio::setabi                {"account":"exchange","abi":{"types":[{"new_type_name":"account_name","type":"name"}],"structs":[{"n\&.\&.\&.
+.fi
+.PP
+ 

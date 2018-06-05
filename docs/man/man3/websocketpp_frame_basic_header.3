@@ -1,0 +1,38 @@
+.TH "websocketpp::frame::basic_header" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::frame::basic_header \- The constant size component of a WebSocket frame header\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <frame\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBbasic_header\fP (uint8_t p0, uint8_t \fBp1\fP)"
+.br
+.ti -1c
+.RI "\fBbasic_header\fP (opcode::value op, uint64_t size, bool fin, bool mask, bool rsv1=false, bool rsv2=false, bool rsv3=false)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBb0\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBb1\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The constant size component of a WebSocket frame header\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

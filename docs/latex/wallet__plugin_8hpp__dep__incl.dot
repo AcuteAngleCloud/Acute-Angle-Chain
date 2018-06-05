@@ -1,0 +1,15 @@
+digraph "plugins/wallet_plugin/include/aacio/wallet_plugin/wallet_plugin.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node153 [label="plugins/wallet_plugin\l/include/aacio/wallet\l_plugin/wallet_plugin.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node153 -> Node154 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node154 [label="plugins/wallet_api\l_plugin/include/aacio\l/wallet_api_plugin/wallet\l_api_plugin.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$wallet__api__plugin_8hpp.html"];
+  Node154 -> Node155 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node155 [label="plugins/wallet_api\l_plugin/wallet_api_plugin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$wallet__api__plugin_8cpp.html"];
+  Node154 -> Node156 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node156 [label="programs/kaacd/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$programs_2kaacd_2main_8cpp.html"];
+  Node153 -> Node157 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node157 [label="plugins/wallet_plugin\l/wallet_plugin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$wallet__plugin_8cpp.html"];
+  Node153 -> Node156 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

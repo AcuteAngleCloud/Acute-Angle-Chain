@@ -1,0 +1,35 @@
+.TH "wasm::WalkerPass< WalkerType >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::WalkerPass< WalkerType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::Pass\fP, and WalkerType\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrun\fP (\fBPassRunner\fP *runner, \fBModule\fP *module) override"
+.br
+.ti -1c
+.RI "void \fBrunFunction\fP (\fBPassRunner\fP *runner, \fBModule\fP *module, \fBFunction\fP *\fBfunc\fP) override"
+.br
+.ti -1c
+.RI "\fBPassRunner\fP * \fBgetPassRunner\fP ()"
+.br
+.ti -1c
+.RI "\fBPassOptions\fP & \fBgetPassOptions\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetPassRunner\fP (\fBPassRunner\fP *runner_)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

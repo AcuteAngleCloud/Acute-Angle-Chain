@@ -1,0 +1,52 @@
+.TH "EvilBool" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EvilBool
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvilBool\fP (\fBEvilBool\fP const &)=default"
+.br
+.ti -1c
+.RI "\fBEvilBool\fP (\fBEvilBool\fP &&)=default"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBvalue\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBbang_called\fP = 0"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMoveOnlyCallable< EvilBool >\fP"
+.br
+.ti -1c
+.RI "struct \fBCopyCallable< EvilBool >\fP"
+.br
+.ti -1c
+.RI "struct \fBNoExceptCallable< EvilBool >\fP"
+.br
+.ti -1c
+.RI "\fBEvilBool\fP \fBoperator!\fP (\fBEvilBool\fP const &\fBother\fP)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

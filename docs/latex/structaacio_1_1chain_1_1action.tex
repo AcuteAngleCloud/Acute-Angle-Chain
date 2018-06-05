@@ -1,0 +1,56 @@
+\hypertarget{structaacio_1_1chain_1_1action}{}\section{aacio\+:\+:chain\+:\+:action Struct Reference}
+\label{structaacio_1_1chain_1_1action}\index{aacio\+::chain\+::action@{aacio\+::chain\+::action}}
+
+
+{\ttfamily \#include $<$transaction.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:action\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:action\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_aa96ccc401f8ad3640a1bd8dd6a9be310}\label{structaacio_1_1chain_1_1action_aa96ccc401f8ad3640a1bd8dd6a9be310}} 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ bytes, T $>$\+::value, int $>$  = 1$>$ }\\{\bfseries action} (\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ auth, const \mbox{\hyperlink{struct_t}{T}} \&value)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_aa96ccc401f8ad3640a1bd8dd6a9be310}\label{structaacio_1_1chain_1_1action_aa96ccc401f8ad3640a1bd8dd6a9be310}} 
+{\footnotesize template$<$typename T , std\+::enable\+\_\+if\+\_\+t$<$!std\+::is\+\_\+base\+\_\+of$<$ bytes, T $>$\+::value, int $>$  = 1$>$ }\\{\bfseries action} (\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ auth, const \mbox{\hyperlink{struct_t}{T}} \&value)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_a8b6bfd9e6b688fa629c3702095d4534b}\label{structaacio_1_1chain_1_1action_a8b6bfd9e6b688fa629c3702095d4534b}} 
+{\bfseries action} (\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ auth, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, action\+\_\+name \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, const \mbox{\hyperlink{classstd_1_1vector}{bytes}} \&data)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_a14f4f5cad837026c20f3364142d66967}\label{structaacio_1_1chain_1_1action_a14f4f5cad837026c20f3364142d66967}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} {\bfseries data\+\_\+as} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_a467db613186c546e2c00b8f533536904}\label{structaacio_1_1chain_1_1action_a467db613186c546e2c00b8f533536904}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries account}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_a5586beb5edac202acf4efe5359143b08}\label{structaacio_1_1chain_1_1action_a5586beb5edac202acf4efe5359143b08}} 
+action\+\_\+name {\bfseries name}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_ac8a17c3fb9fe4ad3c444a62e503e6b87}\label{structaacio_1_1chain_1_1action_ac8a17c3fb9fe4ad3c444a62e503e6b87}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ {\bfseries authorization}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1action_aaf6399b1eab23ddeb66b29e28dcef29d}\label{structaacio_1_1chain_1_1action_aaf6399b1eab23ddeb66b29e28dcef29d}} 
+\mbox{\hyperlink{classstd_1_1vector}{bytes}} {\bfseries data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An action is performed by an actor, aka an account. It may be created explicitly and authorized by signatures or might be generated implicitly by executing application code.
+
+This follows the design pattern of React Flux where actions are named and then dispatched to one or more action handlers (aka stores). In the context of aacio, every action is dispatched to the handler defined by account \textquotesingle{}scope\textquotesingle{} and function \textquotesingle{}name\textquotesingle{}, but the default handler may also forward the action to any number of additional handlers. Any application can write a handler for \char`\"{}scope\+::name\char`\"{} that will get executed if and only if this action is forwarded to that application.
+
+Each action may require the permission of specific actors. Actors can define any number of permission levels. The actors and their respective permission levels are declared on the action and validated independently of the executing application code. An application code will check to see if the required authorization were properly declared when it executes. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{libraries_2chain_2include_2aacio_2chain_2transaction_8hpp}{transaction.\+hpp}}\end{DoxyCompactItemize}

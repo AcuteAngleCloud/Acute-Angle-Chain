@@ -1,0 +1,18 @@
+digraph "libraries/fc/vendor/websocketpp" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_46664a8e2debb9e32e1817abb53840c4 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="vendor" fontname="Helvetica", fontsize="10", URL="dir_46664a8e2debb9e32e1817abb53840c4.html"]
+  subgraph clusterdir_fff0324180be296840cda1aad5927d64 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_fff0324180be296840cda1aad5927d64.html"];
+    dir_fff0324180be296840cda1aad5927d64 [shape=plaintext label="websocketpp"];
+    dir_eb599701ac0e09e4115085a4b1bae71f [shape=box label="docs" color="black" fillcolor="white" style="filled" URL="dir_eb599701ac0e09e4115085a4b1bae71f.html"];
+    dir_62a5a6a25a6f616bd43c13bc52a3cc5e [shape=box label="examples" color="red" fillcolor="white" style="filled" URL="dir_62a5a6a25a6f616bd43c13bc52a3cc5e.html"];
+    dir_b766864b3fb76736c15543bf99a7e787 [shape=box label="test" color="red" fillcolor="white" style="filled" URL="dir_b766864b3fb76736c15543bf99a7e787.html"];
+    dir_36f8f97aa5a31980105e1481d41a6ef0 [shape=box label="tutorials" color="red" fillcolor="white" style="filled" URL="dir_36f8f97aa5a31980105e1481d41a6ef0.html"];
+    dir_95af1d7cea13b3863b4bc602f8c027db [shape=box label="websocketpp" color="red" fillcolor="white" style="filled" URL="dir_95af1d7cea13b3863b4bc602f8c027db.html"];
+  }
+  }
+  dir_b766864b3fb76736c15543bf99a7e787->dir_95af1d7cea13b3863b4bc602f8c027db [headlabel="1", labeldistance=1.5 headhref="dir_001651_000025.html"];
+}

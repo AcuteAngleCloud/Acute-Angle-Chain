@@ -1,0 +1,45 @@
+\hypertarget{group__chaincapi}{}\section{Chain C A\+PI}
+\label{group__chaincapi}\index{Chain C A\+PI@{Chain C A\+PI}}
+
+
+\mbox{\hyperlink{struct_c}{C}} A\+PI for querying internal chain state.  
+
+
+Collaboration diagram for Chain C A\+PI\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__chaincapi_gad24c6348e365fca793e903acdfbb776c}{get\+\_\+active\+\_\+producers}} (account\+\_\+name $\ast$\mbox{\hyperlink{structproducers}{producers}}, uint32\+\_\+t datalen)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{struct_c}{C}} A\+PI for querying internal chain state. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__chaincapi_gad24c6348e365fca793e903acdfbb776c}\label{group__chaincapi_gad24c6348e365fca793e903acdfbb776c}} 
+\index{Chain C A\+PI@{Chain C A\+PI}!get\+\_\+active\+\_\+producers@{get\+\_\+active\+\_\+producers}}
+\index{get\+\_\+active\+\_\+producers@{get\+\_\+active\+\_\+producers}!Chain C A\+PI@{Chain C A\+PI}}
+\subsubsection{\texorpdfstring{get\+\_\+active\+\_\+producers()}{get\_active\_producers()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+active\+\_\+producers (\begin{DoxyParamCaption}\item[{account\+\_\+name $\ast$}]{producers,  }\item[{uint32\+\_\+t}]{datalen }\end{DoxyParamCaption})}
+
+Return the set of active producers 
+\begin{DoxyParams}{Parameters}
+{\em producers} & -\/ a pointer to an buffer of account\+\_\+names \\
+\hline
+{\em datalen} & -\/ byte length of buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of bytes actually populated
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+account\_name \mbox{\hyperlink{structproducers}{producers}}[21];
+uint32\_t bytes\_populated = \mbox{\hyperlink{group__chaincapi_gad24c6348e365fca793e903acdfbb776c}{get\_active\_producers}}(\mbox{\hyperlink{structproducers}{producers}}, \textcolor{keyword}{sizeof}(account\_name
+      )*21);
+\end{DoxyCode}
+ 

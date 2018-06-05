@@ -1,0 +1,94 @@
+.TH "wasm::ReFinalizeNode" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ReFinalizeNode
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::Visitor< ReFinalizeNode >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBvisitBlock\fP (\fBBlock\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitIf\fP (\fBIf\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitLoop\fP (\fBLoop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCall\fP (\fBCall\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitGetLocal\fP (\fBGetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSetLocal\fP (\fBSetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitGetGlobal\fP (\fBGetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSetGlobal\fP (\fBSetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitLoad\fP (\fBLoad\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitStore\fP (\fBStore\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitConst\fP (\fBConst\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitUnary\fP (\fBUnary\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBinary\fP (\fBBinary\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSelect\fP (\fBSelect\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitDrop\fP (\fBDrop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitReturn\fP (\fBReturn\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitHost\fP (\fBHost\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitNop\fP (\fBNop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitUnreachable\fP (\fBUnreachable\fP *curr)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBupdateStack\fP (\fBstd::vector\fP< \fBExpression\fP *> &expressionStack)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

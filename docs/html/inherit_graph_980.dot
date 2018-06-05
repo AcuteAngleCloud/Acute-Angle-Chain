@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="fc::crypto::base58\l_str_parser\< fc::static\l_variant\< Ts... \>, Prefixes \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfc_1_1crypto_1_1base58__str__parser_3_01fc_1_1static__variant_3_01_ts_8_8_8_01_4_00_01_prefixes_01_4.html"];
+}

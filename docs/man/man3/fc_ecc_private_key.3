@@ -1,0 +1,87 @@
+.TH "fc::ecc::private_key" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::ecc::private_key \- an elliptic curve private key\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <elliptic\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBprivate_key\fP (\fBprivate_key\fP &&pk)"
+.br
+.ti -1c
+.RI "\fBprivate_key\fP (const \fBprivate_key\fP &pk)"
+.br
+.ti -1c
+.RI "\fBprivate_key\fP & \fBoperator=\fP (\fBprivate_key\fP &&pk)"
+.br
+.ti -1c
+.RI "\fBprivate_key\fP & \fBoperator=\fP (const \fBprivate_key\fP &pk)"
+.br
+.ti -1c
+.RI "\fBprivate_key\fP \fBchild\fP (const \fBfc::sha256\fP &offset) const"
+.br
+.ti -1c
+.RI "\fBprivate_key_secret\fP \fBget_secret\fP () const"
+.br
+.ti -1c
+.RI "\fBoperator private_key_secret\fP () const"
+.br
+.ti -1c
+.RI "\fBfc::sha512\fP \fBget_shared_secret\fP (const \fBpublic_key\fP &pub) const"
+.br
+.ti -1c
+.RI "\fBcompact_signature\fP \fBsign_compact\fP (const \fBfc::sha256\fP &digest, bool require_canonical=true) const"
+.br
+.ti -1c
+.RI "\fBpublic_key\fP \fBget_public_key\fP () const"
+.br
+.ti -1c
+.RI "unsigned int \fBfingerprint\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBprivate_key\fP \fBgenerate\fP ()"
+.br
+.ti -1c
+.RI "static \fBprivate_key\fP \fBregenerate\fP (const \fBfc::sha256\fP &secret)"
+.br
+.ti -1c
+.RI "static \fBprivate_key\fP \fBgenerate_from_seed\fP (const \fBfc::sha256\fP &seed, const \fBfc::sha256\fP &offset=\fBfc::sha256\fP())"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBprivate_key\fP &a, const \fBprivate_key\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBprivate_key\fP &a, const \fBprivate_key\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBprivate_key\fP &a, const \fBprivate_key\fP &b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+an elliptic curve private key\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBprivate_key\fP fc::ecc::private_key::generate_from_seed (const \fBfc::sha256\fP & seed, const \fBfc::sha256\fP & offset = \fC\fBfc::sha256\fP()\fP)\fC [static]\fP"
+This method of generation enables creating a new private key in a deterministic manner relative to an initial seed\&. \fBA\fP \fBpublic_key\fP created from the seed can be multiplied by the offset to calculate the new public key without having to know the private key\&. 
+.SS "\fBfc::sha512\fP fc::ecc::private_key::get_shared_secret (const \fBpublic_key\fP & pub) const"
+Given a public key, calculatse a 512 bit shared secret between that key and this private key\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

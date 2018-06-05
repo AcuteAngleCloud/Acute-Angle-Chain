@@ -1,0 +1,373 @@
+.TH "websocketpp::message_buffer::message< con_msg_manager >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::message_buffer::message< con_msg_manager > \- Represents a buffer for a single WebSocket message\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <message\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBmessage\fP > \fBptr\fP"
+.br
+.ti -1c
+.RI "typedef con_msg_manager< \fBmessage\fP > \fBcon_msg_man_type\fP"
+.br
+.ti -1c
+.RI "typedef con_msg_man_type::ptr \fBcon_msg_man_ptr\fP"
+.br
+.ti -1c
+.RI "typedef con_msg_man_type::weak_ptr \fBcon_msg_man_weak_ptr\fP"
+.br
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBmessage\fP > \fBptr\fP"
+.br
+.ti -1c
+.RI "typedef con_msg_manager::weak_ptr \fBcon_msg_man_ptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmessage\fP (const con_msg_man_ptr manager)"
+.br
+.RI "Construct an empty message\&. "
+.ti -1c
+.RI "\fBmessage\fP (const con_msg_man_ptr manager, frame::opcode::value op, size_t size=128)"
+.br
+.RI "Construct a message and fill in some values\&. "
+.ti -1c
+.RI "bool \fBget_prepared\fP () const"
+.br
+.RI "Return whether or not the message has been prepared for sending\&. "
+.ti -1c
+.RI "void \fBset_prepared\fP (bool value)"
+.br
+.RI "Set or clear the flag that indicates that the message has been prepared\&. "
+.ti -1c
+.RI "bool \fBget_compressed\fP () const"
+.br
+.RI "Return whether or not the message is flagged as compressed\&. "
+.ti -1c
+.RI "void \fBset_compressed\fP (bool value)"
+.br
+.RI "Set or clear the compression flag\&. "
+.ti -1c
+.RI "bool \fBget_terminal\fP () const"
+.br
+.RI "Get whether or not the message is terminal\&. "
+.ti -1c
+.RI "void \fBset_terminal\fP (bool value)"
+.br
+.RI "Set the terminal flag\&. "
+.ti -1c
+.RI "bool \fBget_fin\fP () const"
+.br
+.RI "Read the fin bit\&. "
+.ti -1c
+.RI "void \fBset_fin\fP (bool value)"
+.br
+.RI "Set the fin bit\&. "
+.ti -1c
+.RI "frame::opcode::value \fBget_opcode\fP () const"
+.br
+.RI "Return the message opcode\&. "
+.ti -1c
+.RI "void \fBset_opcode\fP (frame::opcode::value op)"
+.br
+.RI "Set the opcode\&. "
+.ti -1c
+.RI "std::string const  & \fBget_header\fP () const"
+.br
+.RI "Return the prepared frame header\&. "
+.ti -1c
+.RI "void \fBset_header\fP (std::string const &header)"
+.br
+.RI "Set prepared frame header\&. "
+.ti -1c
+.RI "std::string const  & \fBget_extension_data\fP () const"
+.br
+.ti -1c
+.RI "std::string const  & \fBget_payload\fP () const"
+.br
+.RI "Get a reference to the payload string\&. "
+.ti -1c
+.RI "std::string & \fBget_raw_payload\fP ()"
+.br
+.RI "Get a non-const reference to the payload string\&. "
+.ti -1c
+.RI "void \fBset_payload\fP (std::string const &payload)"
+.br
+.RI "Set payload data\&. "
+.ti -1c
+.RI "void \fBset_payload\fP (void const *payload, size_t len)"
+.br
+.RI "Set payload data\&. "
+.ti -1c
+.RI "void \fBappend_payload\fP (std::string const &payload)"
+.br
+.RI "Append payload data\&. "
+.ti -1c
+.RI "void \fBappend_payload\fP (void const *payload, size_t len)"
+.br
+.RI "Append payload data\&. "
+.ti -1c
+.RI "bool \fBrecycle\fP ()"
+.br
+.RI "Recycle the message\&. "
+.ti -1c
+.RI "\fBmessage\fP (con_msg_man_ptr manager, size_t size=128)"
+.br
+.ti -1c
+.RI "frame::opcode::value \fBget_opcode\fP () const"
+.br
+.ti -1c
+.RI "const std::string & \fBget_header\fP () const"
+.br
+.ti -1c
+.RI "const std::string & \fBget_extension_data\fP () const"
+.br
+.ti -1c
+.RI "const std::string & \fBget_payload\fP () const"
+.br
+.ti -1c
+.RI "bool \fBrecycle\fP ()"
+.br
+.RI "Recycle the message\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<template< class > class con_msg_manager>
+.br
+class websocketpp::message_buffer::message< con_msg_manager >"
+Represents a buffer for a single WebSocket message\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<template< class > class con_msg_manager> \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::\fBmessage\fP (const con_msg_man_ptr manager)\fC [inline]\fP"
+
+.PP
+Construct an empty message\&. Construct an empty message 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::append_payload (std::string const & payload)\fC [inline]\fP"
+
+.PP
+Append payload data\&. Append data to the message buffer's payload\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpayload\fP \fBA\fP string containing the data array to append\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::append_payload (void const * payload, size_t len)\fC [inline]\fP"
+
+.PP
+Append payload data\&. Append data to the message buffer's payload\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpayload\fP \fBA\fP pointer to a data array to append 
+.br
+\fIlen\fP The length of payload in bytes 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> bool \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_compressed () const\fC [inline]\fP"
+
+.PP
+Return whether or not the message is flagged as compressed\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+whether or not the message is/should be compressed 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> bool \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_fin () const\fC [inline]\fP"
+
+.PP
+Read the fin bit\&. \fBA\fP message with the fin bit set will be sent as the last message of its sequence\&. \fBA\fP message with the fin bit cleared will require subsequent frames of opcode continuation until one of them has the fin bit set\&.
+.PP
+The remote end likely will not deliver any bytes until the frame with the fin bit set has been received\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the fin bit is set 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> std::string const& \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_header () const\fC [inline]\fP"
+
+.PP
+Return the prepared frame header\&. This value is typically set by a websocket protocol processor and shouldn't be tampered with\&. 
+.SS "template<template< class > class con_msg_manager> std::string const& \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_payload () const\fC [inline]\fP"
+
+.PP
+Get a reference to the payload string\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP const reference to the message's payload string 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> bool \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_prepared () const\fC [inline]\fP"
+
+.PP
+Return whether or not the message has been prepared for sending\&. The prepared flag indicates that the message has been prepared by a websocket protocol processor and is ready to be written to the wire\&.
+.PP
+\fBReturns:\fP
+.RS 4
+whether or not the message has been prepared for sending 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> std::string& \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_raw_payload ()\fC [inline]\fP"
+
+.PP
+Get a non-const reference to the payload string\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP reference to the message's payload string 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> bool \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::get_terminal () const\fC [inline]\fP"
+
+.PP
+Get whether or not the message is terminal\&. Messages can be flagged as terminal, which results in the connection being close after they are written rather than the implementation going on to the next message in the queue\&. This is typically used internally for close messages only\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not this message is marked terminal 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> bool \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::recycle ()\fC [inline]\fP"
+
+.PP
+Recycle the message\&. \fBA\fP request to recycle this message was received\&. Forward that request to the connection message manager for processing\&. Errors and exceptions from the manager's recycle member function should be passed back up the call chain\&. The caller to \fBmessage::recycle\fP will deal with them\&.
+.PP
+Recycle must \fIonly\fP be called by the message shared_ptr's destructor\&. Once recycled successfully, ownership of the memory has been passed to another system and must not be accessed again\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if the message was successfully recycled, false otherwise\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> bool \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::recycle ()\fC [inline]\fP"
+
+.PP
+Recycle the message\&. \fBA\fP request to recycle this message was received\&. Forward that request to the connection message manager for processing\&. Errors and exceptions from the manager's recycle member function should be passed back up the call chain\&. The caller to \fBmessage::recycle\fP will deal with them\&.
+.PP
+Recycle must \fIonly\fP be called by the message shared_ptr's destructor\&. Once recycled successfully, ownership of the memory has been passed to another system and must not be accessed again\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if the message was successfully recycled, false otherwise\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_compressed (bool value)\fC [inline]\fP"
+
+.PP
+Set or clear the compression flag\&. Setting the compression flag indicates that the data in this message would benefit from compression\&. If both endpoints negotiate a compression extension WebSocket++ will attempt to compress messages with this flag\&. Setting this flag does not guarantee that the message will be compressed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to set the compressed flag to 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_fin (bool value)\fC [inline]\fP"
+
+.PP
+Set the fin bit\&. 
+.PP
+\fBSee also:\fP
+.RS 4
+\fBget_fin\fP for a more detailed explaination of the fin bit
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to set the fin bit to\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_header (std::string const & header)\fC [inline]\fP"
+
+.PP
+Set prepared frame header\&. Under normal circumstances this should not be called by end users
+.PP
+\fBParameters:\fP
+.RS 4
+\fIheader\fP \fBA\fP string to set the header to\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_payload (std::string const & payload)\fC [inline]\fP"
+
+.PP
+Set payload data\&. Set the message buffer's payload to the given value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpayload\fP \fBA\fP string to set the payload to\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_payload (void const * payload, size_t len)\fC [inline]\fP"
+
+.PP
+Set payload data\&. Set the message buffer's payload to the given value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpayload\fP \fBA\fP pointer to a data array to set to\&. 
+.br
+\fIlen\fP The length of new payload in bytes\&. 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_prepared (bool value)\fC [inline]\fP"
+
+.PP
+Set or clear the flag that indicates that the message has been prepared\&. This flag should not be set by end user code without a very good reason\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to set the prepared flag to 
+.RE
+.PP
+
+.SS "template<template< class > class con_msg_manager> void \fBwebsocketpp::message_buffer::message\fP< con_msg_manager >::set_terminal (bool value)\fC [inline]\fP"
+
+.PP
+Set the terminal flag\&. This flag should not be set by end user code without a very good reason\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBget_terminal()\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The value to set the terminal flag to\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,141 @@
+.TH "websocketpp::extensions::permessage_deflate::disabled< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::extensions::permessage_deflate::disabled< config > \- Stub class for use when disabling \fBpermessage_deflate\fP extension\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <disabled\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "err_str_pair \fBnegotiate\fP (\fBhttp::attribute_list\fP const &)"
+.br
+.RI "Negotiate extension\&. "
+.ti -1c
+.RI "lib::error_code \fBinit\fP (bool)"
+.br
+.RI "Initialize state\&. "
+.ti -1c
+.RI "bool \fBis_implemented\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_enabled\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBgenerate_offer\fP () const"
+.br
+.RI "Generate extension offer\&. "
+.ti -1c
+.RI "lib::error_code \fBcompress\fP (std::string const &, std::string &)"
+.br
+.RI "Compress bytes\&. "
+.ti -1c
+.RI "lib::error_code \fBdecompress\fP (uint8_t const *, size_t, std::string &)"
+.br
+.RI "Decompress bytes\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+class websocketpp::extensions::permessage_deflate::disabled< config >"
+Stub class for use when disabling \fBpermessage_deflate\fP extension\&. 
+
+This class is a stub that implements the \fBpermessage_deflate\fP interface with minimal dependencies\&. It is used to disable \fBpermessage_deflate\fP functionality at compile time without loading any unnecessary code\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::compress (std::string const &, std::string &)\fC [inline]\fP"
+
+.PP
+Compress bytes\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIin\fP String to compress 
+.br
+\fIout\fP String to append compressed bytes to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Error or status code 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::decompress (uint8_t const *, size_t, std::string &)\fC [inline]\fP"
+
+.PP
+Decompress bytes\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Byte buffer to decompress 
+.br
+\fIlen\fP Length of buf 
+.br
+\fIout\fP String to append decompressed bytes to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Error or status code 
+.RE
+.PP
+
+.SS "template<typename config > std::string \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::generate_offer () const\fC [inline]\fP"
+
+.PP
+Generate extension offer\&. Creates an offer string to include in the Sec-WebSocket-Extensions header of outgoing client requests\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP WebSocket extension offer string for this extension 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::init (bool)\fC [inline]\fP"
+
+.PP
+Initialize state\&. For the disabled extension state initialization is a no-op\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIis_server\fP \fBTrue\fP to initialize as a server, false for a client\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP code representing the error that occurred, if any 
+.RE
+.PP
+
+.SS "template<typename config > bool \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::is_enabled () const\fC [inline]\fP"
+Returns true if \fBpermessage_deflate\fP functionality is active for this connection 
+.SS "template<typename config > bool \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::is_implemented () const\fC [inline]\fP"
+Returns true if the extension is capable of providing \fBpermessage_deflate\fP functionality 
+.SS "template<typename config > err_str_pair \fBwebsocketpp::extensions::permessage_deflate::disabled\fP< \fBconfig\fP >::negotiate (\fBhttp::attribute_list\fP const &)\fC [inline]\fP"
+
+.PP
+Negotiate extension\&. The disabled extension always fails the negotiation with a disabled error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoffer\fP Attribute from client's offer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code and value to return to remote endpoint 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

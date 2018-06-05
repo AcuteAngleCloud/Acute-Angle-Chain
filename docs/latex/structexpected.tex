@@ -1,0 +1,53 @@
+\hypertarget{structexpected}{}\section{expected$<$ T, Error $>$ Struct Template Reference}
+\label{structexpected}\index{expected$<$ T, Error $>$@{expected$<$ T, Error $>$}}
+
+
+Collaboration diagram for expected$<$ T, Error $>$\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structexpected_1_1_data}{Data}}
+\item 
+struct \mbox{\hyperlink{structexpected_1_1_data_ptr}{Data\+Ptr}}
+\item 
+struct \mbox{\hyperlink{structexpected_1_1promise__type}{promise\+\_\+type}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structexpected_a485635a99bc853f556e49fd6c99e73c1}\label{structexpected_a485635a99bc853f556e49fd6c99e73c1}} 
+{\bfseries expected} (\mbox{\hyperlink{struct_t}{T}} val)
+\item 
+\mbox{\Hypertarget{structexpected_abdea0a050dbcb3c958a6056b9bade3ad}\label{structexpected_abdea0a050dbcb3c958a6056b9bade3ad}} 
+{\bfseries expected} (struct \mbox{\hyperlink{structerror}{error}}, Error \mbox{\hyperlink{structerror}{error}})
+\item 
+\mbox{\Hypertarget{structexpected_ab62f4184afb07af1ed04864b2783f17d}\label{structexpected_ab62f4184afb07af1ed04864b2783f17d}} 
+{\bfseries expected} (\mbox{\hyperlink{structexpected_1_1_data_ptr}{Data\+Ptr}} \&p)
+\item 
+\mbox{\Hypertarget{structexpected_ad0d740c862eaab9fcc748945e7ed557f}\label{structexpected_ad0d740c862eaab9fcc748945e7ed557f}} 
+bool {\bfseries await\+\_\+ready} ()
+\item 
+\mbox{\Hypertarget{structexpected_a90ea28a7752af07313a898261737bb39}\label{structexpected_a90ea28a7752af07313a898261737bb39}} 
+\mbox{\hyperlink{struct_t}{T}} {\bfseries await\+\_\+resume} ()
+\item 
+\mbox{\Hypertarget{structexpected_a9228e89970f7ae2943e1fb08eacb0962}\label{structexpected_a9228e89970f7ae2943e1fb08eacb0962}} 
+void {\bfseries await\+\_\+suspend} (coroutine\+\_\+handle$<$ \mbox{\hyperlink{structexpected_1_1promise__type}{promise\+\_\+type}} $>$ h)
+\item 
+\mbox{\Hypertarget{structexpected_ab78ff3610490e450f26a3a95a138b8ce}\label{structexpected_ab78ff3610490e450f26a3a95a138b8ce}} 
+\mbox{\hyperlink{struct_t}{T}} const  \& {\bfseries value} ()
+\item 
+\mbox{\Hypertarget{structexpected_ab73196f4687fff7a71c588e815f60a16}\label{structexpected_ab73196f4687fff7a71c588e815f60a16}} 
+Error const  \& {\bfseries error} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structexpected_a880d4975319306b8ba63b0af807840cf}\label{structexpected_a880d4975319306b8ba63b0af807840cf}} 
+\mbox{\hyperlink{structexpected_1_1_data}{Data}} {\bfseries data}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/std/experimental/language.\+support/support.\+coroutines/end.\+to.\+end/expected.\+pass.\+cpp\end{DoxyCompactItemize}

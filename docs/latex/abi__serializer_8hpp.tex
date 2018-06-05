@@ -1,0 +1,81 @@
+\hypertarget{abi__serializer_8hpp}{}\section{libraries/chain/include/aacio/chain/contracts/abi\+\_\+serializer.hpp File Reference}
+\label{abi__serializer_8hpp}\index{libraries/chain/include/aacio/chain/contracts/abi\+\_\+serializer.\+hpp@{libraries/chain/include/aacio/chain/contracts/abi\+\_\+serializer.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/contracts/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/block\+\_\+trace.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/variant\+\_\+object.\+hpp$>$}\newline
+Include dependency graph for abi\+\_\+serializer.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer}{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1impl_1_1type__requires__abi}{aacio\+::chain\+::contracts\+::impl\+::type\+\_\+requires\+\_\+abi$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1impl_1_1type__requires__abi_3_01_container_3_01_t_00_01_args_8_8_8_01_4_01_4}{aacio\+::chain\+::contracts\+::impl\+::type\+\_\+requires\+\_\+abi$<$ Container$<$ T, Args... $>$ $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1impl_1_1abi__to__variant}{aacio\+::chain\+::contracts\+::impl\+::abi\+\_\+to\+\_\+variant}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1contracts_1_1impl_1_1abi__to__variant__visitor}{aacio\+::chain\+::contracts\+::impl\+::abi\+\_\+to\+\_\+variant\+\_\+visitor$<$ T, Resolver $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1impl_1_1abi__from__variant}{aacio\+::chain\+::contracts\+::impl\+::abi\+\_\+from\+\_\+variant}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1contracts_1_1impl_1_1abi__from__variant__visitor}{aacio\+::chain\+::contracts\+::impl\+::abi\+\_\+from\+\_\+variant\+\_\+visitor$<$ T, Resolver $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{abi__serializer_8hpp_aabcdb6f89fed7f23193a02e2c24024e1}{aacio\+::chain\+::contracts\+::impl\+::not\+\_\+require\+\_\+abi\+\_\+t}} = std\+::enable\+\_\+if\+\_\+t$<$!type\+\_\+requires\+\_\+abi\+\_\+v$<$ \mbox{\hyperlink{struct_t}{T}} $>$(), int $>$
+\item 
+\mbox{\Hypertarget{abi__serializer_8hpp_a3ca7fcf185e87c60757793f191cfd6c8}\label{abi__serializer_8hpp_a3ca7fcf185e87c60757793f191cfd6c8}} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries aacio\+::chain\+::contracts\+::impl\+::require\+\_\+abi\+\_\+t} = std\+::enable\+\_\+if\+\_\+t$<$ type\+\_\+requires\+\_\+abi\+\_\+v$<$ \mbox{\hyperlink{struct_t}{T}} $>$(), int $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{abi__serializer_8hpp_a1045f692287ec390e35fde8f55f21f3f}{aacio\+::chain\+::contracts\+::impl\+::single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v}} ()
+\item 
+\mbox{\Hypertarget{abi__serializer_8hpp_a007db46ebda152d766fc12c4fd84b4c8}\label{abi__serializer_8hpp_a007db46ebda152d766fc12c4fd84b4c8}} 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool {\bfseries aacio\+::chain\+::contracts\+::impl\+::type\+\_\+requires\+\_\+abi\+\_\+v} ()
+\item 
+\mbox{\Hypertarget{abi__serializer_8hpp_a31b0232eadc6947188ae6d15ed87c454}\label{abi__serializer_8hpp_a31b0232eadc6947188ae6d15ed87c454}} 
+{\bfseries aacio\+::chain\+::contracts\+::\+F\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS} (\mbox{\hyperlink{structerror}{error}}, \char`\"{}Failed to serialize type\char`\"{},(\char`\"{}object\char`\"{}, o)) template$<$ typename \mbox{\hyperlink{struct_t}{T}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{abi__serializer_8hpp_file_aabcdb6f89fed7f23193a02e2c24024e1}\label{abi__serializer_8hpp_file_aabcdb6f89fed7f23193a02e2c24024e1}} 
+\index{abi\+\_\+serializer.\+hpp@{abi\+\_\+serializer.\+hpp}!not\+\_\+require\+\_\+abi\+\_\+t@{not\+\_\+require\+\_\+abi\+\_\+t}}
+\index{not\+\_\+require\+\_\+abi\+\_\+t@{not\+\_\+require\+\_\+abi\+\_\+t}!abi\+\_\+serializer.\+hpp@{abi\+\_\+serializer.\+hpp}}
+\subsubsection{\texorpdfstring{not\+\_\+require\+\_\+abi\+\_\+t}{not\_require\_abi\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{abi__serializer_8hpp_aabcdb6f89fed7f23193a02e2c24024e1}{aacio\+::chain\+::contracts\+::impl\+::not\+\_\+require\+\_\+abi\+\_\+t}} = typedef std\+::enable\+\_\+if\+\_\+t$<$!type\+\_\+requires\+\_\+abi\+\_\+v$<$\mbox{\hyperlink{struct_t}{T}}$>$(), int$>$}
+
+convenience aliases for creating overload-\/guards based on whether the type contains A\+BI related info 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{abi__serializer_8hpp_file_a1045f692287ec390e35fde8f55f21f3f}\label{abi__serializer_8hpp_file_a1045f692287ec390e35fde8f55f21f3f}} 
+\index{abi\+\_\+serializer.\+hpp@{abi\+\_\+serializer.\+hpp}!single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v@{single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v}}
+\index{single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v@{single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v}!abi\+\_\+serializer.\+hpp@{abi\+\_\+serializer.\+hpp}}
+\subsubsection{\texorpdfstring{single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v()}{single\_type\_requires\_abi\_v()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool aacio\+::chain\+::contracts\+::impl\+::single\+\_\+type\+\_\+requires\+\_\+abi\+\_\+v (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine if a type contains A\+BI related info, perhaps deeply nested 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \mbox{\hyperlink{struct_t}{T}}} & -\/ the type to check \\
+\hline
+\end{DoxyTemplParams}
+Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3

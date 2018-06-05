@@ -1,0 +1,88 @@
+\hypertarget{classaacio_1_1generic__currency}{}\section{aacio\+:\+:generic\+\_\+currency$<$ Token $>$ Class Template Reference}
+\label{classaacio_1_1generic__currency}\index{aacio\+::generic\+\_\+currency$<$ Token $>$@{aacio\+::generic\+\_\+currency$<$ Token $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1generic__currency_1_1account}{account}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1generic__currency_1_1currency__stats}{currency\+\_\+stats}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1generic__currency_1_1transfer__memo}{transfer\+\_\+memo}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a26c1b9acacbc275fee34a03a0c493f72}\label{classaacio_1_1generic__currency_a26c1b9acacbc275fee34a03a0c493f72}} 
+typedef Token {\bfseries token\+\_\+type}
+\item 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ accounts\+\_\+table\+\_\+name, \mbox{\hyperlink{structaacio_1_1generic__currency_1_1account}{account}} $>$ \mbox{\hyperlink{classaacio_1_1generic__currency_acd98341a9c4955cf55e91a9e61eb6a7e}{accounts}}
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a345973974059d7dc431021343babb793}\label{classaacio_1_1generic__currency_a345973974059d7dc431021343babb793}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ stats\+\_\+table\+\_\+name, \mbox{\hyperlink{structaacio_1_1generic__currency_1_1currency__stats}{currency\+\_\+stats}} $>$ {\bfseries stats}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a9cc3b70f50d0ad3903247b42751acfaa}\label{classaacio_1_1generic__currency_a9cc3b70f50d0ad3903247b42751acfaa}} 
+{\bfseries A\+C\+T\+I\+ON} (code, issue)
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_af03c07981816e2525bfb830aca963d74}\label{classaacio_1_1generic__currency_af03c07981816e2525bfb830aca963d74}} 
+{\bfseries A\+C\+T\+I\+ON} (code, transfer)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_ac440398a7c62bed590dddb600860efdd}\label{classaacio_1_1generic__currency_ac440398a7c62bed590dddb600860efdd}} 
+static token\+\_\+type {\bfseries get\+\_\+balance} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} owner)
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_aacebc3d97827f5c12bc3ebf120e21014}\label{classaacio_1_1generic__currency_aacebc3d97827f5c12bc3ebf120e21014}} 
+static void {\bfseries set\+\_\+balance} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} owner, token\+\_\+type balance, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} create\+\_\+bill\+\_\+to, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} update\+\_\+bill\+\_\+to)
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a198e5214b97db6343a033e251ddb8523}\label{classaacio_1_1generic__currency_a198e5214b97db6343a033e251ddb8523}} 
+static void {\bfseries on} (const issue \&act)
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a5e3a59c14081bd666ba4112d71606a6d}\label{classaacio_1_1generic__currency_a5e3a59c14081bd666ba4112d71606a6d}} 
+static void {\bfseries on} (const transfer \&act)
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a4f301131d33342342d364d78c9f6079e}\label{classaacio_1_1generic__currency_a4f301131d33342342d364d78c9f6079e}} 
+static void {\bfseries inline\+\_\+transfer} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, token\+\_\+type quantity, string memo=string())
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_ab06dc76d83c3d8213b6c434f90ef5a9a}\label{classaacio_1_1generic__currency_ab06dc76d83c3d8213b6c434f90ef5a9a}} 
+static void {\bfseries inline\+\_\+issue} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, token\+\_\+type quantity)
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a5fba4f7b0575da81f2a006183f349ca0}\label{classaacio_1_1generic__currency_a5fba4f7b0575da81f2a006183f349ca0}} 
+static token\+\_\+type {\bfseries get\+\_\+total\+\_\+supply} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a5b51c7ffba32dd5be8a3f0ebdf190ac3}\label{classaacio_1_1generic__currency_a5b51c7ffba32dd5be8a3f0ebdf190ac3}} 
+static void {\bfseries apply} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} c, action\+\_\+name act)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a9a1f3a7d4616ff2b4c5440883a3c9698}\label{classaacio_1_1generic__currency_a9a1f3a7d4616ff2b4c5440883a3c9698}} 
+static const uint64\+\_\+t {\bfseries code} = token\+\_\+type\+::code
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_a424e1d83b10ca0171352ec7c1a00e578}\label{classaacio_1_1generic__currency_a424e1d83b10ca0171352ec7c1a00e578}} 
+static const uint64\+\_\+t {\bfseries symbol} = token\+\_\+type\+::symbol
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_ae0fba59dd33fb06997b002ed1ccb82b2}\label{classaacio_1_1generic__currency_ae0fba59dd33fb06997b002ed1ccb82b2}} 
+static const uint64\+\_\+t {\bfseries accounts\+\_\+table\+\_\+name} = \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(\mbox{\hyperlink{structaacio_1_1generic__currency_1_1account}{account}})
+\item 
+\mbox{\Hypertarget{classaacio_1_1generic__currency_af75c08e6723fe6ce4e8d73f5a969c8cd}\label{classaacio_1_1generic__currency_af75c08e6723fe6ce4e8d73f5a969c8cd}} 
+static const uint64\+\_\+t {\bfseries stats\+\_\+table\+\_\+name} = \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(stat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classaacio_1_1generic__currency_acd98341a9c4955cf55e91a9e61eb6a7e}\label{classaacio_1_1generic__currency_acd98341a9c4955cf55e91a9e61eb6a7e}} 
+\index{aacio\+::generic\+\_\+currency@{aacio\+::generic\+\_\+currency}!accounts@{accounts}}
+\index{accounts@{accounts}!aacio\+::generic\+\_\+currency@{aacio\+::generic\+\_\+currency}}
+\subsubsection{\texorpdfstring{accounts}{accounts}}
+{\footnotesize\ttfamily template$<$typename Token $>$ \\
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$accounts\+\_\+table\+\_\+name, \mbox{\hyperlink{structaacio_1_1generic__currency_1_1account}{account}}$>$ \mbox{\hyperlink{classaacio_1_1generic__currency}{aacio\+::generic\+\_\+currency}}$<$ Token $>$\+::\mbox{\hyperlink{classaacio_1_1generic__currency_acd98341a9c4955cf55e91a9e61eb6a7e}{accounts}}}
+
+Each user stores their balance in the singleton table under the scope of their account name. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aaciolib/generic\+\_\+currency.\+hpp\end{DoxyCompactItemize}

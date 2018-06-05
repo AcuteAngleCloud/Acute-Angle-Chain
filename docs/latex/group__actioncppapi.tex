@@ -1,0 +1,94 @@
+\hypertarget{group__actioncppapi}{}\section{Action C++ A\+PI}
+\label{group__actioncppapi}\index{Action C++ A\+PI@{Action C++ A\+PI}}
+
+
+Type-\/safe C++ wrapers for Action \mbox{\hyperlink{struct_c}{C}} A\+PI.  
+
+
+Collaboration diagram for Action C++ A\+PI\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1permission__level}{aacio\+::permission\+\_\+level}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1action}{aacio\+::action}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1action__meta}{aacio\+::action\+\_\+meta$<$ Account, Name $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{group__actioncppapi_ga1dbfc575654dd0016e4701e719edbe28}{aacio\+::current\+\_\+action\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Interpret the action body as type \mbox{\hyperlink{struct_t}{T}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__actioncppapi_ga49955f80ab60a4520ce84539bc21c233}\label{group__actioncppapi_ga49955f80ab60a4520ce84539bc21c233}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} {\bfseries aacio\+::unpack\+\_\+action\+\_\+data} ()
+\item 
+{\footnotesize template$<$typename... accounts$>$ }\\void \mbox{\hyperlink{group__actioncppapi_ga21fa91780aa540fc37c9db54fec25afb}{aacio\+::require\+\_\+recipient}} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1name}{name}}, accounts... remaining\+\_\+accounts)
+\begin{DoxyCompactList}\small\item\em Verify specified accounts exist in the set of notified accounts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__actioncppapi_ga2fe9e8c9c64d44d4bef7fddcfd9f340f}\label{group__actioncppapi_ga2fe9e8c9c64d44d4bef7fddcfd9f340f}} 
+void {\bfseries aacio\+::require\+\_\+auth} (const \mbox{\hyperlink{structaacio_1_1permission__level}{permission\+\_\+level}} \&level)
+\item 
+\mbox{\Hypertarget{group__actioncppapi_ga688202e925674a1037bc2104a31467aa}\label{group__actioncppapi_ga688202e925674a1037bc2104a31467aa}} 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\void {\bfseries aacio\+::dispatch\+\_\+inline} (\mbox{\hyperlink{structaacio_1_1permission__level}{permission\+\_\+level}} perm, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} code, action\+\_\+name act, void(T\+::$\ast$)(Args...), std\+::tuple$<$ Args... $>$ args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Type-\/safe C++ wrapers for Action \mbox{\hyperlink{struct_c}{C}} A\+PI. 
+
+\begin{DoxyNote}{Note}
+There are some methods from the \mbox{\hyperlink{group__actioncapi}{Action C A\+PI}} that can be used directly from C++ 
+\end{DoxyNote}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__actioncppapi_ga1dbfc575654dd0016e4701e719edbe28}\label{group__actioncppapi_ga1dbfc575654dd0016e4701e719edbe28}} 
+\index{Action C++ A\+PI@{Action C++ A\+PI}!current\+\_\+action\+\_\+data@{current\+\_\+action\+\_\+data}}
+\index{current\+\_\+action\+\_\+data@{current\+\_\+action\+\_\+data}!Action C++ A\+PI@{Action C++ A\+PI}}
+\subsubsection{\texorpdfstring{current\+\_\+action\+\_\+data()}{current\_action\_data()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_t}{T}} aacio\+::current\+\_\+action\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Interpret the action body as type \mbox{\hyperlink{struct_t}{T}}. 
+
+This method attempts to reinterpret the action body as type \mbox{\hyperlink{struct_t}{T}}. This will only work if the action has no dynamic fields and the struct packing on type \mbox{\hyperlink{struct_t}{T}} is properly defined.
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\mbox{\hyperlink{structdummy__action}{dummy\_action}} \{
+  \textcolor{keywordtype}{char} a; \textcolor{comment}{//1}
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} b; \textcolor{comment}{//8}
+  \textcolor{keywordtype}{int}  c; \textcolor{comment}{//4}
+\};
+\mbox{\hyperlink{structdummy__action}{dummy\_action}} msg = current\_action\_data<dummy\_action>();
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__actioncppapi_ga21fa91780aa540fc37c9db54fec25afb}\label{group__actioncppapi_ga21fa91780aa540fc37c9db54fec25afb}} 
+\index{Action C++ A\+PI@{Action C++ A\+PI}!require\+\_\+recipient@{require\+\_\+recipient}}
+\index{require\+\_\+recipient@{require\+\_\+recipient}!Action C++ A\+PI@{Action C++ A\+PI}}
+\subsubsection{\texorpdfstring{require\+\_\+recipient()}{require\_recipient()}}
+{\footnotesize\ttfamily template$<$typename... accounts$>$ \\
+void aacio\+::require\+\_\+recipient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}}}]{name,  }\item[{accounts...}]{remaining\+\_\+accounts }\end{DoxyParamCaption})}
+
+
+
+Verify specified accounts exist in the set of notified accounts. 
+
+All of the listed accounts will be added to the set of accounts to be notified
+
+This helper method enables you to add multiple accounts to accounts to be notified list with a single call rather than having to call the similar \mbox{\hyperlink{struct_c}{C}} A\+PI multiple times.
+
+\begin{DoxyNote}{Note}
+action.\+code is also considered as part of the set of notified accounts
+\end{DoxyNote}
+Example\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{group__actioncapi_gae232893c733f02b94dbb70fae39d19f7}{require\_recipient}}(\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(Account1), \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(Account2), \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(Account3)); \textcolor{comment}{// throws exception if any of
+       them not in set.}
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 2

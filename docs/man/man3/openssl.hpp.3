@@ -1,0 +1,91 @@
+.TH "libraries/fc/include/fc/crypto/openssl.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/fc/include/fc/crypto/openssl.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <openssl/ec\&.h>\fP
+.br
+\fC#include <openssl/crypto\&.h>\fP
+.br
+\fC#include <openssl/evp\&.h>\fP
+.br
+\fC#include <openssl/conf\&.h>\fP
+.br
+\fC#include <openssl/err\&.h>\fP
+.br
+\fC#include <openssl/ecdsa\&.h>\fP
+.br
+\fC#include <openssl/ecdh\&.h>\fP
+.br
+\fC#include <openssl/sha\&.h>\fP
+.br
+\fC#include <openssl/obj_mac\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBfc::ssl_wrapper< ssl_type >\fP"
+.br
+.ti -1c
+.RI "struct \fBfc::ssl_bignum\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBfc\fP"
+.br
+.RI "aacio::chain "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSSL_TYPE\fP(name,  ssl_type,  free_func)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBECDSA_SIG_get0\fP (const ECDSA_SIG *sig, const BIGNUM **pr, const BIGNUM **ps)"
+.br
+.ti -1c
+.RI "int \fBECDSA_SIG_set0\fP (ECDSA_SIG *sig, BIGNUM *r, BIGNUM *s)"
+.br
+.ti -1c
+.RI "void \fBfc::store_configuration_path\fP (const path &filePath)"
+.br
+.ti -1c
+.RI "int \fBfc::init_openssl\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides common utility calls for wrapping openssl c api\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SSL_TYPE(name, ssl_type, free_func)"
+\fBValue:\fP
+.PP
+.nf
+struct name  : public ssl_wrapper<ssl_type> \
+        { \
+            name(ssl_type* obj=nullptr) \
+              : ssl_wrapper(obj) {} \
+            ~name() \
+            { \
+                if( obj != nullptr ) \
+                free_func(obj); \
+            } \
+        };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

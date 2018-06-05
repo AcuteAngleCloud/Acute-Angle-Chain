@@ -1,0 +1,45 @@
+.TH "Intrinsics::Singleton" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Intrinsics::Singleton
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSingleton\fP (const \fBSingleton\fP &)=delete"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBSingleton\fP & \fBget\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::map\fP< std::string, \fBIntrinsics::Function\fP * > \fBfunctionMap\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< std::string, \fBIntrinsics::Global\fP * > \fBvariableMap\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< std::string, \fBIntrinsics::Memory\fP * > \fBmemoryMap\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< std::string, \fBIntrinsics::Table\fP * > \fBtableMap\fP"
+.br
+.ti -1c
+.RI "\fBPlatform::Mutex\fP * \fBmutex\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

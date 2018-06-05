@@ -1,0 +1,76 @@
+\hypertarget{structwasm_1_1_remove_unused_brs}{}\section{wasm\+:\+:Remove\+Unused\+Brs Struct Reference}
+\label{structwasm_1_1_remove_unused_brs}\index{wasm\+::\+Remove\+Unused\+Brs@{wasm\+::\+Remove\+Unused\+Brs}}
+
+
+Inheritance diagram for wasm\+:\+:Remove\+Unused\+Brs\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Remove\+Unused\+Brs\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a93b09750b0b75394f0bdef0fdb65fd8d}\label{structwasm_1_1_remove_unused_brs_a93b09750b0b75394f0bdef0fdb65fd8d}} 
+typedef \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$ $>$ {\bfseries Flows}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a84e7ce164cab06b75e490e94fdce162b}\label{structwasm_1_1_remove_unused_brs_a84e7ce164cab06b75e490e94fdce162b}} 
+bool {\bfseries is\+Function\+Parallel} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a20110337941ef0dbaf76b17ede5a1325}\label{structwasm_1_1_remove_unused_brs_a20110337941ef0dbaf76b17ede5a1325}} 
+\mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$ {\bfseries create} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a65a3e1db3ea3dc596ce328f24bb6cf0a}\label{structwasm_1_1_remove_unused_brs_a65a3e1db3ea3dc596ce328f24bb6cf0a}} 
+void {\bfseries visit\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_ae189a508256cc43e3d945e23e3b0ac3a}\label{structwasm_1_1_remove_unused_brs_ae189a508256cc43e3d945e23e3b0ac3a}} 
+void {\bfseries visit\+If} (\mbox{\hyperlink{classwasm_1_1_if}{If}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_abca94a396859dad21640cfd064a7a39e}\label{structwasm_1_1_remove_unused_brs_abca94a396859dad21640cfd064a7a39e}} 
+bool {\bfseries optimize\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$loop)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a870bde9480f3950370d75a4bc109c937}\label{structwasm_1_1_remove_unused_brs_a870bde9480f3950370d75a4bc109c937}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a4cf5b39cda93b6d64da8914d80717def}\label{structwasm_1_1_remove_unused_brs_a4cf5b39cda93b6d64da8914d80717def}} 
+static void {\bfseries visit\+Any} (\mbox{\hyperlink{structwasm_1_1_remove_unused_brs}{Remove\+Unused\+Brs}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a6ac6af547760c65128c7bcc546c15805}\label{structwasm_1_1_remove_unused_brs_a6ac6af547760c65128c7bcc546c15805}} 
+static void {\bfseries clear} (\mbox{\hyperlink{structwasm_1_1_remove_unused_brs}{Remove\+Unused\+Brs}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_aa62fc1bc17d9e913f897fd18bdb136d1}\label{structwasm_1_1_remove_unused_brs_aa62fc1bc17d9e913f897fd18bdb136d1}} 
+static void {\bfseries save\+If\+True} (\mbox{\hyperlink{structwasm_1_1_remove_unused_brs}{Remove\+Unused\+Brs}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a8b859f26d07f46174f7a842da7c6cb45}\label{structwasm_1_1_remove_unused_brs_a8b859f26d07f46174f7a842da7c6cb45}} 
+static void {\bfseries scan} (\mbox{\hyperlink{structwasm_1_1_remove_unused_brs}{Remove\+Unused\+Brs}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a0744762088df011c731181ea18a5c345}\label{structwasm_1_1_remove_unused_brs_a0744762088df011c731181ea18a5c345}} 
+bool {\bfseries another\+Cycle}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a897d170368b655a5dbb84692e6781c74}\label{structwasm_1_1_remove_unused_brs_a897d170368b655a5dbb84692e6781c74}} 
+bool {\bfseries value\+Can\+Flow}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a1132147724763f4bdae21defc90f334f}\label{structwasm_1_1_remove_unused_brs_a1132147724763f4bdae21defc90f334f}} 
+\mbox{\hyperlink{classstd_1_1vector}{Flows}} {\bfseries flows}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_a48def56d356adebc645aeea14a3ed9fc}\label{structwasm_1_1_remove_unused_brs_a48def56d356adebc645aeea14a3ed9fc}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{Flows}} $>$ {\bfseries if\+Stack}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_remove_unused_brs_ae2504de896bee9e965fdf60c00f36342}\label{structwasm_1_1_remove_unused_brs_ae2504de896bee9e965fdf60c00f36342}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$ $>$ {\bfseries loops}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/passes/Remove\+Unused\+Brs.\+cpp\end{DoxyCompactItemize}

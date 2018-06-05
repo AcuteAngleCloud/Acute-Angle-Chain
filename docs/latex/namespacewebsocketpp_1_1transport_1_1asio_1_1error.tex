@@ -1,0 +1,72 @@
+\hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error}{}\section{websocketpp\+:\+:transport\+:\+:asio\+:\+:error Namespace Reference}
+\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}
+
+
+Asio transport errors.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1asio_1_1error_1_1category}{category}}
+\begin{DoxyCompactList}\small\item\em Asio transport error category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045}{value}} \{ \newline
+\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a883593fb292745d5e7dc0edb402fd23a}{general}} = 1, 
+\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045ac5a5a94c79697f82d95d1f6d3a35e02c}{invalid\+\_\+num\+\_\+bytes}}, 
+\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a46f70de40cb49260f1d5aa454b4ecb78}{pass\+\_\+through}}, 
+\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a70868b579b442f39074623c5072f86a0}{proxy\+\_\+failed}}, 
+\newline
+\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a41380a32ff02e5e43a1ced0318c2f357}{proxy\+\_\+invalid}}, 
+\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045afd008efc340690681fb451d7a4cc8029}{invalid\+\_\+host\+\_\+service}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_a1426d0b17f41c944b1da43a28031f372}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_a1426d0b17f41c944b1da43a28031f372}} 
+lib\+::error\+\_\+category const  \& \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_a1426d0b17f41c944b1da43a28031f372}{get\+\_\+category}} ()
+\begin{DoxyCompactList}\small\item\em Get a reference to a static copy of the asio transport error category. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_ae47ed03449a199118bd7413c48203820}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_ae47ed03449a199118bd7413c48203820}} 
+lib\+::error\+\_\+code \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_ae47ed03449a199118bd7413c48203820}{make\+\_\+error\+\_\+code}} (\mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045}{error\+::value}} e)
+\begin{DoxyCompactList}\small\item\em Create an error code with the given value and the asio transport category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Asio transport errors. 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045}} 
+\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!value@{value}}
+\index{value@{value}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}
+\subsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045}{websocketpp\+::transport\+::asio\+::error\+::value}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{general@{general}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!general@{general}}}\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a883593fb292745d5e7dc0edb402fd23a}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a883593fb292745d5e7dc0edb402fd23a}} 
+general&Catch-\/all error for transport policy errors that don\textquotesingle{}t fit in other categories \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\+\_\+num\+\_\+bytes@{invalid\+\_\+num\+\_\+bytes}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!invalid\+\_\+num\+\_\+bytes@{invalid\+\_\+num\+\_\+bytes}}}\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045ac5a5a94c79697f82d95d1f6d3a35e02c}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045ac5a5a94c79697f82d95d1f6d3a35e02c}} 
+invalid\+\_\+num\+\_\+bytes&async\+\_\+read\+\_\+at\+\_\+least call requested more bytes than buffer can store \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pass\+\_\+through@{pass\+\_\+through}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!pass\+\_\+through@{pass\+\_\+through}}}\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a46f70de40cb49260f1d5aa454b4ecb78}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a46f70de40cb49260f1d5aa454b4ecb78}} 
+pass\+\_\+through&there was an error in the underlying transport library \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{proxy\+\_\+failed@{proxy\+\_\+failed}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!proxy\+\_\+failed@{proxy\+\_\+failed}}}\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a70868b579b442f39074623c5072f86a0}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a70868b579b442f39074623c5072f86a0}} 
+proxy\+\_\+failed&The connection to the requested proxy server failed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{proxy\+\_\+invalid@{proxy\+\_\+invalid}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!proxy\+\_\+invalid@{proxy\+\_\+invalid}}}\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a41380a32ff02e5e43a1ced0318c2f357}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045a41380a32ff02e5e43a1ced0318c2f357}} 
+proxy\+\_\+invalid&Invalid Proxy U\+RI. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{invalid\+\_\+host\+\_\+service@{invalid\+\_\+host\+\_\+service}!websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}}\index{websocketpp\+::transport\+::asio\+::error@{websocketpp\+::transport\+::asio\+::error}!invalid\+\_\+host\+\_\+service@{invalid\+\_\+host\+\_\+service}}}\mbox{\Hypertarget{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045afd008efc340690681fb451d7a4cc8029}\label{namespacewebsocketpp_1_1transport_1_1asio_1_1error_aeb44b27fc0ffac2a8991bf629cbfd045afd008efc340690681fb451d7a4cc8029}} 
+invalid\+\_\+host\+\_\+service&Invalid host or service. \\
+\hline
+
+\end{DoxyEnumFields}

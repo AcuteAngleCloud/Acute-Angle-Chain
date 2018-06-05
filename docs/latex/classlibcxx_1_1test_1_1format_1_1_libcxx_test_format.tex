@@ -1,0 +1,56 @@
+\hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format}{}\section{libcxx.\+test.\+format.\+Libcxx\+Test\+Format Class Reference}
+\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format}\index{libcxx.\+test.\+format.\+Libcxx\+Test\+Format@{libcxx.\+test.\+format.\+Libcxx\+Test\+Format}}
+
+
+Inheritance diagram for libcxx.\+test.\+format.\+Libcxx\+Test\+Format\+:
+% FIG 0
+
+
+Collaboration diagram for libcxx.\+test.\+format.\+Libcxx\+Test\+Format\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a9dd88d3e24f66d2ac1c1696992d767a9}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a9dd88d3e24f66d2ac1c1696992d767a9}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self, cxx, use\+\_\+verify\+\_\+for\+\_\+fail, execute\+\_\+external, executor, exec\+\_\+env)
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_aa8d0967468b1faaf978664399b8f7bb7}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_aa8d0967468b1faaf978664399b8f7bb7}} 
+def {\bfseries get\+Tests\+In\+Directory} (self, test\+Suite, path\+\_\+in\+\_\+suite, lit\+Config, local\+Config)
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a1a0106f18759bdc147b74781cadb40be}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a1a0106f18759bdc147b74781cadb40be}} 
+def {\bfseries execute} (self, \mbox{\hyperlink{structtest}{test}}, lit\+\_\+config)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_aa74fe3ad9558b79b0976530b43116f2b}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_aa74fe3ad9558b79b0976530b43116f2b}} 
+{\bfseries cxx}
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_aa13bff87319530d45bbb567e3fe2a3d8}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_aa13bff87319530d45bbb567e3fe2a3d8}} 
+{\bfseries use\+\_\+verify\+\_\+for\+\_\+fail}
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a8175cc56244cbbbe3d5559eae01085eb}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a8175cc56244cbbbe3d5559eae01085eb}} 
+{\bfseries execute\+\_\+external}
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a54d43fa81c7973c15d80640b9d1bafd8}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a54d43fa81c7973c15d80640b9d1bafd8}} 
+{\bfseries executor}
+\item 
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a40e3dd16f69c84f68a6ab7210ff9580a}\label{classlibcxx_1_1test_1_1format_1_1_libcxx_test_format_a40e3dd16f69c84f68a6ab7210ff9580a}} 
+{\bfseries exec\+\_\+env}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Custom test format handler for use with the test format use by libc++.
+
+Tests fall into two categories:
+  FOO.pass.cpp - Executable test which should compile, run, and exit with
+                 code 0.
+  FOO.fail.cpp - Negative test case which is expected to fail compilation.
+  FOO.sh.cpp   - A test that uses LIT's ShTest format.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/utils/libcxx/test/format.\+py\end{DoxyCompactItemize}

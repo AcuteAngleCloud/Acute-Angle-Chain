@@ -1,0 +1,14 @@
+.TH "HasNonTrivialABI< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HasNonTrivialABI< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits integral_constant< bool, !std::is_trivially_destructible< T >::value||(std::is_copy_constructible< T >::value &&!std::is_trivially_copy_constructible< T >::value) >\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

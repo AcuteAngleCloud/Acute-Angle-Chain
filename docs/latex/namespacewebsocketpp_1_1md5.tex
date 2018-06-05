@@ -1,0 +1,52 @@
+\hypertarget{namespacewebsocketpp_1_1md5}{}\section{websocketpp\+:\+:md5 Namespace Reference}
+\label{namespacewebsocketpp_1_1md5}\index{websocketpp\+::md5@{websocketpp\+::md5}}
+
+
+Provides M\+D5 hashing functionality.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwebsocketpp_1_1md5_1_1md5__state__s}{md5\+\_\+state\+\_\+s}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a0c434041715d244182207c3413e36e71}\label{namespacewebsocketpp_1_1md5_a0c434041715d244182207c3413e36e71}} 
+typedef unsigned char {\bfseries md5\+\_\+byte\+\_\+t}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a0ece422ac11bb1332dcf342ced42ac96}\label{namespacewebsocketpp_1_1md5_a0ece422ac11bb1332dcf342ced42ac96}} 
+typedef unsigned int {\bfseries md5\+\_\+word\+\_\+t}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a4be84c20ee3f9d9c76d4e2f7befe2eff}\label{namespacewebsocketpp_1_1md5_a4be84c20ee3f9d9c76d4e2f7befe2eff}} 
+typedef struct \mbox{\hyperlink{structwebsocketpp_1_1md5_1_1md5__state__s}{websocketpp\+::md5\+::md5\+\_\+state\+\_\+s}} {\bfseries md5\+\_\+state\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a73499ae9912f813cdbb98d27b6487112}\label{namespacewebsocketpp_1_1md5_a73499ae9912f813cdbb98d27b6487112}} 
+void {\bfseries md5\+\_\+init} (\mbox{\hyperlink{structwebsocketpp_1_1md5_1_1md5__state__s}{md5\+\_\+state\+\_\+t}} $\ast$pms)
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_afd827a71255e45a8293b9df13342ceb3}\label{namespacewebsocketpp_1_1md5_afd827a71255e45a8293b9df13342ceb3}} 
+void {\bfseries md5\+\_\+append} (\mbox{\hyperlink{structwebsocketpp_1_1md5_1_1md5__state__s}{md5\+\_\+state\+\_\+t}} $\ast$pms, md5\+\_\+byte\+\_\+t const $\ast$data, size\+\_\+t nbytes)
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a29e7adb892ae2de7d2c4853bc7ace034}\label{namespacewebsocketpp_1_1md5_a29e7adb892ae2de7d2c4853bc7ace034}} 
+void {\bfseries md5\+\_\+finish} (\mbox{\hyperlink{structwebsocketpp_1_1md5_1_1md5__state__s}{md5\+\_\+state\+\_\+t}} $\ast$pms, md5\+\_\+byte\+\_\+t digest\mbox{[}16\mbox{]})
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_ab445cdc2367665afb8fd4e983a354e0f}\label{namespacewebsocketpp_1_1md5_ab445cdc2367665afb8fd4e983a354e0f}} 
+std\+::string {\bfseries md5\+\_\+hash\+\_\+string} (std\+::string const \&s)
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a9fbd05134b509739ff15175fe7104443}\label{namespacewebsocketpp_1_1md5_a9fbd05134b509739ff15175fe7104443}} 
+std\+::string {\bfseries md5\+\_\+hash\+\_\+hex} (std\+::string const \&input)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1md5_a6c9cff96cd43c87cb0fc47f7d641dac8}\label{namespacewebsocketpp_1_1md5_a6c9cff96cd43c87cb0fc47f7d641dac8}} 
+const char {\bfseries hexval} \mbox{[}16\mbox{]} = \{\textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{}, \textquotesingle{}3\textquotesingle{}, \textquotesingle{}4\textquotesingle{}, \textquotesingle{}5\textquotesingle{}, \textquotesingle{}6\textquotesingle{}, \textquotesingle{}7\textquotesingle{}, \textquotesingle{}8\textquotesingle{}, \textquotesingle{}9\textquotesingle{}, \textquotesingle{}a\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}c\textquotesingle{}, \textquotesingle{}d\textquotesingle{}, \textquotesingle{}e\textquotesingle{}, \textquotesingle{}f\textquotesingle{}\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides M\+D5 hashing functionality. 

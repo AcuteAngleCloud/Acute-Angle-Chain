@@ -1,0 +1,55 @@
+.TH "fc::udp_socket" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::udp_socket
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <udp_socket\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBimpl\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBudp_socket\fP (const \fBudp_socket\fP &s)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (boost::asio::io_service &)"
+.br
+.ti -1c
+.RI "void \fBopen\fP ()"
+.br
+.ti -1c
+.RI "void \fBsend_to\fP (const char *b, size_t l, boost::asio::ip::udp::endpoint &to)"
+.br
+.ti -1c
+.RI "void \fBsend_to\fP (const std::shared_ptr< const char > &b, size_t l, boost::asio::ip::udp::endpoint &to)"
+.br
+.ti -1c
+.RI "void \fBclose\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_reuse_address\fP (bool)"
+.br
+.ti -1c
+.RI "void \fBconnect\fP (const boost::asio::ip::udp::endpoint &e)"
+.br
+.ti -1c
+.RI "const boost::asio::ip::udp::endpoint \fBlocal_endpoint\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBudp_socket\fP class has reference semantics, all copies will refer to the same underlying socket\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,44 @@
+.TH "libraries/chain/include/aacio/chain/permission_link_object.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/permission_link_object.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/authority\&.hpp>\fP
+.br
+\fC#include 'multi_index_includes\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::chain::permission_link_object\fP"
+.br
+.RI "The \fBpermission_link_object\fP class assigns permission_objects to message types\&. "
+.ti -1c
+.RI "struct \fBaacio::chain::config::billable_size< permission_link_object >\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::permission_link_index\fP = chainbase::shared_multi_index_container< permission_link_object, indexed_by< ordered_unique< tag< by_id >, >, ordered_unique< tag< by_action_name >, composite_key< permission_link_object, BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, \fBaccount\fP), BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, code), > >, ordered_unique< tag< by_permission_name >, composite_key< permission_link_object, BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, \fBaccount\fP), BOOST_MULTI_INDEX_MEMBER(permission_link_object, permission_name, required_permission), BOOST_MULTI_INDEX_MEMBER(permission_link_object, account_name, code), > > > >"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

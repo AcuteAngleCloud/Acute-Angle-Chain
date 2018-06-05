@@ -1,0 +1,117 @@
+.TH "transactioncapi" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+transactioncapi \- Define API for sending transactions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsend_deferred\fP (const uint128_t &sender_id, account_name payer, const char *serialized_transaction, size_t size)"
+.br
+.ti -1c
+.RI "void \fBcancel_deferred\fP (const uint128_t &sender_id)"
+.br
+.ti -1c
+.RI "size_t \fBread_transaction\fP (char *buffer, size_t size)"
+.br
+.ti -1c
+.RI "size_t \fBtransaction_size\fP ()"
+.br
+.ti -1c
+.RI "int \fBtapos_block_num\fP ()"
+.br
+.ti -1c
+.RI "int \fBtapos_block_prefix\fP ()"
+.br
+.ti -1c
+.RI "time \fBexpiration\fP ()"
+.br
+.ti -1c
+.RI "int \fBget_action\fP (uint32_t type, uint32_t index, char *buff, size_t size)"
+.br
+.ti -1c
+.RI "int \fBget_context_free_data\fP (uint32_t index, char *buff, size_t size)"
+.br
+.ti -1c
+.RI "void \fBcheck_auth\fP (const char *serialized_transaction, size_t size, const char *permissions, size_t psize)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Define API for sending transactions\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "void \fBcheck_auth\fP (const char * serialized_transaction, size_t size, const char * permissions, size_t psize)"
+Check that prodived authorizations is enough to execute the transaction 
+.SS "time expiration ()"
+get the expiration of the currently executing transaction 
+.SS "int get_action (uint32_t type, uint32_t index, char * buff, size_t size)"
+Retrieve the indicated action from the active transaction\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItype\fP - 0 for context free action, 1 for action 
+.br
+\fIindex\fP - the index of the requested action 
+.br
+\fIbuff\fP - output packed buff of the action 
+.br
+\fIsize\fP - amount of buff read, pass 0 to have size returned 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the action, -1 on failure 
+.RE
+.PP
+
+.SS "int get_context_free_data (uint32_t index, char * buff, size_t size)"
+Retrieve the signed_transaction\&.context_free_data[index]\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIindex\fP - the index of the context_free_data entry to retrieve 
+.br
+\fIbuff\fP - output buff of the context_free_data entry 
+.br
+\fIsize\fP - amount of context_free_data[index] to retrieve into buff 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+signed_transaction\&.context_free_data[index]\&.size() or -1 if index not valid 
+.RE
+.PP
+
+.SS "size_t read_transaction (char * buffer, size_t size)"
+access a copy of the currently executing transaction
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuffer\fP - a buffer to write the current transaction to 
+.br
+\fIsize\fP - the size of the buffer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the transaction written to the buffer 
+.RE
+.PP
+
+.SS "int tapos_block_num ()"
+get the block number used for TAPOS on the currently executing transaction 
+.SS "int tapos_block_prefix ()"
+get the block prefix used for TAPOS on the currently executing transaction 
+.SS "size_t transaction_size ()"
+get the size of the currently executing transaction 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

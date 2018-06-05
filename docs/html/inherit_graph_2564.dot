@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="websocketpp::config\l::minimal_server::transport\l_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1config_1_1minimal__server_1_1transport__config.html"];
+}

@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="aacio::chain::webassembly\l::binaryen::intrinsic_function\l_invoker_wrapper\< Ret(Cls::*)\l(Params...)\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__function__invoker__wrapper_3_01_reae18afa02f6a4417d269a4739bb748cd.html"];
+}

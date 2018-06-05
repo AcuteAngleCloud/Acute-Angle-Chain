@@ -1,0 +1,123 @@
+.TH "fc::optional< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::optional< T > \- provides stack-based nullable value similar to boost::optional  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <optional\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBT\fP \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef std::aligned_storage< sizeof(\fBT\fP), alignof(\fBT\fP)>::type \fBstorage_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBoptional\fP (\fBoptional\fP &o)"
+.br
+.ti -1c
+.RI "\fBoptional\fP (const \fBoptional\fP &o)"
+.br
+.ti -1c
+.RI "\fBoptional\fP (\fBoptional\fP &&o)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP (const \fBoptional\fP< \fBU\fP > &o)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP (\fBoptional\fP< \fBU\fP > &o)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP (\fBoptional\fP< \fBU\fP > &&o)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP (\fBU\fP &&u)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP & \fBoperator=\fP (\fBU\fP &&u)"
+.br
+.ti -1c
+.RI "template<typename \&.\&.\&. Args> void \fBemplace\fP (Args &&\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP & \fBoperator=\fP (\fBoptional\fP< \fBU\fP > &o)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP & \fBoperator=\fP (const \fBoptional\fP< \fBU\fP > &o)"
+.br
+.ti -1c
+.RI "\fBoptional\fP & \fBoperator=\fP (\fBoptional\fP &o)"
+.br
+.ti -1c
+.RI "\fBoptional\fP & \fBoperator=\fP (const \fBoptional\fP &o)"
+.br
+.ti -1c
+.RI "template<typename U > \fBoptional\fP & \fBoperator=\fP (\fBoptional\fP< \fBU\fP > &&o)"
+.br
+.ti -1c
+.RI "\fBoptional\fP & \fBoperator=\fP (\fBoptional\fP &&o)"
+.br
+.ti -1c
+.RI "bool \fBvalid\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator!\fP () const"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP & \fBoperator*\fP ()"
+.br
+.ti -1c
+.RI "const \fBT\fP & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBoperator\->\fP ()"
+.br
+.ti -1c
+.RI "const \fBT\fP * \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "\fBoptional\fP & \fBoperator=\fP (std::nullptr_t)"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename U > class \fBoptional\fP"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBoptional\fP a, \fBoptional\fP b)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBoptional\fP a, \fBoptional\fP b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class fc::optional< T >"
+provides stack-based nullable value similar to boost::optional 
+
+Simply including boost::optional adds 35,000 lines to each object file, using \fBfc::optional\fP adds less than 400\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

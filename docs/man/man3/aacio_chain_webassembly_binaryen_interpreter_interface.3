@@ -1,0 +1,113 @@
+.TH "aacio::chain::webassembly::binaryen::interpreter_interface" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::webassembly::binaryen::interpreter_interface
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ExternalInterface\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBinterpreter_interface\fP (\fBlinear_memory_type\fP &memory, \fBcall_indirect_table_type\fP &table, \fBimport_lut_type\fP &import_lut, const unsigned &initial_memory_size, \fBapply_context\fP &context)"
+.br
+.ti -1c
+.RI "void \fBimportGlobals\fP (\fBstd::map\fP< \fBName\fP, \fBLiteral\fP > &globals, \fBModule\fP &wasm) override"
+.br
+.ti -1c
+.RI "void \fBinit\fP (\fBModule\fP &wasm, \fBModuleInstance\fP &instance) override"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallImport\fP (\fBImport\fP *import, \fBLiteralList\fP &args) override"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallTable\fP (Index index, \fBLiteralList\fP &arguments, WasmType result, \fBModuleInstance\fP &instance) override"
+.br
+.ti -1c
+.RI "void \fBtrap\fP (const char *why) override"
+.br
+.ti -1c
+.RI "void \fBassert_memory_is_accessible\fP (uint32_t offset, size_t size)"
+.br
+.ti -1c
+.RI "char * \fBget_validated_pointer\fP (uint32_t offset, size_t size)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBload_memory\fP (uint32_t offset)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBstore_memory\fP (uint32_t offset, \fBT\fP value)"
+.br
+.ti -1c
+.RI "void \fBgrowMemory\fP (\fBAddress\fP old_size, \fBAddress\fP new_size) override"
+.br
+.ti -1c
+.RI "int8_t \fBload8s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint8_t \fBload8u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "int16_t \fBload16s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint16_t \fBload16u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "int32_t \fBload32s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint32_t \fBload32u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "int64_t \fBload64s\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "uint64_t \fBload64u\fP (\fBAddress\fP addr) override"
+.br
+.ti -1c
+.RI "void \fBstore8\fP (\fBAddress\fP addr, int8_t value) override"
+.br
+.ti -1c
+.RI "void \fBstore16\fP (\fBAddress\fP addr, int16_t value) override"
+.br
+.ti -1c
+.RI "void \fBstore32\fP (\fBAddress\fP addr, int32_t value) override"
+.br
+.ti -1c
+.RI "void \fBstore64\fP (\fBAddress\fP addr, int64_t value) override"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > static bool \fBaligned_for\fP (const void *address)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBlinear_memory_type\fP & \fBmemory\fP"
+.br
+.ti -1c
+.RI "\fBcall_indirect_table_type\fP & \fBtable\fP"
+.br
+.ti -1c
+.RI "\fBimport_lut_type\fP & \fBimport_lut\fP"
+.br
+.ti -1c
+.RI "unsigned \fBcurrent_memory_size\fP"
+.br
+.ti -1c
+.RI "\fBapply_context\fP & \fBcontext\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

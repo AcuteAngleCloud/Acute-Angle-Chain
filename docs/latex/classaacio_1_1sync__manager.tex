@@ -1,0 +1,62 @@
+\hypertarget{classaacio_1_1sync__manager}{}\section{aacio\+:\+:sync\+\_\+manager Class Reference}
+\label{classaacio_1_1sync__manager}\index{aacio\+::sync\+\_\+manager@{aacio\+::sync\+\_\+manager}}
+
+
+Collaboration diagram for aacio\+:\+:sync\+\_\+manager\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_ac937ef8291bda86c14057223e61a9717}\label{classaacio_1_1sync__manager_ac937ef8291bda86c14057223e61a9717}} 
+{\bfseries sync\+\_\+manager} (uint32\+\_\+t span)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a8d1749f777288c9e7fefcac0ed5957cf}\label{classaacio_1_1sync__manager_a8d1749f777288c9e7fefcac0ed5957cf}} 
+void {\bfseries set\+\_\+state} (stages s)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_af8fc6738ff35b77ffddce2388b8ff519}\label{classaacio_1_1sync__manager_af8fc6738ff35b77ffddce2388b8ff519}} 
+bool {\bfseries is\+\_\+active} (connection\+\_\+ptr conn)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a4da69da1a21cde1f4e38935d89eb407c}\label{classaacio_1_1sync__manager_a4da69da1a21cde1f4e38935d89eb407c}} 
+void {\bfseries reset\+\_\+lib\+\_\+num} (connection\+\_\+ptr conn)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a6523b5f01322f5f9522b527b541bf929}\label{classaacio_1_1sync__manager_a6523b5f01322f5f9522b527b541bf929}} 
+bool {\bfseries sync\+\_\+required} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_af976350628a51cb5774dd474a8885f2e}\label{classaacio_1_1sync__manager_af976350628a51cb5774dd474a8885f2e}} 
+void {\bfseries request\+\_\+next\+\_\+chunk} (connection\+\_\+ptr conn=connection\+\_\+ptr())
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_ad3f0ebfbaeb303667db067898e228323}\label{classaacio_1_1sync__manager_ad3f0ebfbaeb303667db067898e228323}} 
+void {\bfseries start\+\_\+sync} (connection\+\_\+ptr c, uint32\+\_\+t target)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_aedc70b71c0faff032a7217443b3b9996}\label{classaacio_1_1sync__manager_aedc70b71c0faff032a7217443b3b9996}} 
+void {\bfseries send\+\_\+handshakes} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a3a353340b10e47ad071d7802c3c431f1}\label{classaacio_1_1sync__manager_a3a353340b10e47ad071d7802c3c431f1}} 
+void {\bfseries reassign\+\_\+fetch} (connection\+\_\+ptr c, \mbox{\hyperlink{plugins_2net__plugin_2include_2aacio_2net__plugin_2protocol_8hpp_a1b8490273cc36ec0241920722ba18ab4}{go\+\_\+away\+\_\+reason}} reason)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a4e1711ff67f42434ac05e5309bf68a92}\label{classaacio_1_1sync__manager_a4e1711ff67f42434ac05e5309bf68a92}} 
+void {\bfseries verify\+\_\+catchup} (connection\+\_\+ptr c, uint32\+\_\+t \mbox{\hyperlink{structnum}{num}}, \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} id)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_abc9c6325b16c5f0e8ff16a4c6a2eccd1}\label{classaacio_1_1sync__manager_abc9c6325b16c5f0e8ff16a4c6a2eccd1}} 
+void {\bfseries recv\+\_\+block} (connection\+\_\+ptr c, const \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} \&blk\+\_\+id, uint32\+\_\+t blk\+\_\+num, bool accepted)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_aa98f9ef3c02302b916e87fb52c2b6bf8}\label{classaacio_1_1sync__manager_aa98f9ef3c02302b916e87fb52c2b6bf8}} 
+void {\bfseries recv\+\_\+handshake} (connection\+\_\+ptr c, const \mbox{\hyperlink{structaacio_1_1handshake__message}{handshake\+\_\+message}} \&msg)
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a61b5c9ffaf4c8ef99a30b5e29fe47433}\label{classaacio_1_1sync__manager_a61b5c9ffaf4c8ef99a30b5e29fe47433}} 
+void {\bfseries recv\+\_\+notice} (connection\+\_\+ptr c, const \mbox{\hyperlink{structaacio_1_1notice__message}{notice\+\_\+message}} \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_ae82ed7e8dc081cea39ac845010a11340}\label{classaacio_1_1sync__manager_ae82ed7e8dc081cea39ac845010a11340}} 
+static const fc\+::string {\bfseries logger\+\_\+name}
+\item 
+\mbox{\Hypertarget{classaacio_1_1sync__manager_a1a3b2b430aecd4a0638d7e4838ff51c9}\label{classaacio_1_1sync__manager_a1a3b2b430aecd4a0638d7e4838ff51c9}} 
+static \mbox{\hyperlink{classfc_1_1logger}{fc\+::logger}} {\bfseries logger}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/net\+\_\+plugin/\mbox{\hyperlink{net__plugin_8cpp}{net\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,71 @@
+.TH "libraries/chain/include/aacio/chain/authority_checker.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/authority_checker.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/types\&.hpp>\fP
+.br
+\fC#include <aacio/chain/authority\&.hpp>\fP
+.br
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <aacio/utilities/parallel_markers\&.hpp>\fP
+.br
+\fC#include <fc/scoped_exit\&.hpp>\fP
+.br
+\fC#include <boost/range/algorithm/find\&.hpp>\fP
+.br
+\fC#include <boost/algorithm/cxx11/all_of\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::chain::detail::get_weight_visitor\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::detail::meta_permission_comparator\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::chain::authority_checker< PermissionToAuthorityFunc, PermissionVisitorFunc >\fP"
+.br
+.RI "namespace detail "
+.ti -1c
+.RI "class \fBaacio::chain::noop_permission_visitor\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::detail::meta_permission\fP = static_variant< key_weight, permission_level_weight >"
+.br
+.ti -1c
+.RI "using \fBaacio::chain::detail::meta_permission_set\fP = boost::container::flat_multiset< meta_permission, meta_permission_comparator >"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename PermissionToAuthorityFunc , typename PermissionVisitorFunc > auto \fBaacio::chain::make_auth_checker\fP (PermissionToAuthorityFunc &&pta, PermissionVisitorFunc &&permission_visitor, uint16_t recursion_depth_limit, const flat_set< \fBpublic_key_type\fP > &signing_keys, const flat_set< account_name > &accounts=flat_set< account_name >(), const flat_set< permission_level > &levels=flat_set< permission_level >())"
+.br
+.RI "\fBauthority_checker\fP "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

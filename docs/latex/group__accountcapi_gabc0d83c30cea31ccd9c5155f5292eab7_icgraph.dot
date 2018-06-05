@@ -1,0 +1,13 @@
+digraph "account_balance_get"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="account_balance_get",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="aacio::account::get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__accountcppapi.html#ga1f55ade0cb1bd173ca8eaf88ac60dff9",tooltip="Retrieve a populated balance structure. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="apply_social_post",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$social_8cpp.html#a2f4b1a700aef8a99b9d4c12d252d231a"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="apply_social_vote",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$social_8cpp.html#ac3d5473926cea7fd3ad0bbcb7186fc6f"];
+}

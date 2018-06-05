@@ -1,0 +1,109 @@
+\hypertarget{classaacio_1_1optional}{}\section{aacio\+:\+:optional$<$ T $>$ Class Template Reference}
+\label{classaacio_1_1optional}\index{aacio\+::optional$<$ T $>$@{aacio\+::optional$<$ T $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a74014133325a59b9b2bda357c5d8210f}\label{classaacio_1_1optional_a74014133325a59b9b2bda357c5d8210f}} 
+typedef \mbox{\hyperlink{struct_t}{T}} {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a15460c4528496af18658b5ee0b5fb6b2}\label{classaacio_1_1optional_a15460c4528496af18658b5ee0b5fb6b2}} 
+typedef std\+::aligned\+\_\+storage$<$ sizeof(\mbox{\hyperlink{struct_t}{T}}), alignof(\mbox{\hyperlink{struct_t}{T}})$>$\+::type {\bfseries storage\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_aa261f79c69f50322b9dfd928663c71c1}\label{classaacio_1_1optional_aa261f79c69f50322b9dfd928663c71c1}} 
+{\bfseries optional} (\mbox{\hyperlink{classaacio_1_1optional}{optional}} \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_af4d8f6e828d0ed31cd949005ab66782d}\label{classaacio_1_1optional_af4d8f6e828d0ed31cd949005ab66782d}} 
+{\bfseries optional} (const \mbox{\hyperlink{classaacio_1_1optional}{optional}} \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_aab01f24182a424b82c680548304ea2fd}\label{classaacio_1_1optional_aab01f24182a424b82c680548304ea2fd}} 
+{\bfseries optional} (\mbox{\hyperlink{classaacio_1_1optional}{optional}} \&\&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_ac7ccf40d6bd5fc16b80673383287f179}\label{classaacio_1_1optional_ac7ccf40d6bd5fc16b80673383287f179}} 
+{\footnotesize template$<$typename U $>$ }\\{\bfseries optional} (const \mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a922e971c529dcc842aade6f002a48b91}\label{classaacio_1_1optional_a922e971c529dcc842aade6f002a48b91}} 
+{\footnotesize template$<$typename U $>$ }\\{\bfseries optional} (\mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a5591c672161f66af82533320c99eeebb}\label{classaacio_1_1optional_a5591c672161f66af82533320c99eeebb}} 
+{\footnotesize template$<$typename U $>$ }\\{\bfseries optional} (\mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&\&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a1fa7443515bdd493ce5bc37320e332dd}\label{classaacio_1_1optional_a1fa7443515bdd493ce5bc37320e332dd}} 
+{\footnotesize template$<$typename U $>$ }\\{\bfseries optional} (\mbox{\hyperlink{union_u}{U}} \&\&u)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a4fbd1b922cfb0d0edc00b2e44f7ef789}\label{classaacio_1_1optional_a4fbd1b922cfb0d0edc00b2e44f7ef789}} 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (\mbox{\hyperlink{union_u}{U}} \&\&u)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a9ac40cab1d5c818a6839aeda0bf7bfc5}\label{classaacio_1_1optional_a9ac40cab1d5c818a6839aeda0bf7bfc5}} 
+{\footnotesize template$<$typename ... Args$>$ }\\void {\bfseries emplace} (Args \&\&... args)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_af930244475107c4004cf7b6c3c0ceb7d}\label{classaacio_1_1optional_af930244475107c4004cf7b6c3c0ceb7d}} 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (\mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_aef5ccdf76041e72b9d74c1e8628c465e}\label{classaacio_1_1optional_aef5ccdf76041e72b9d74c1e8628c465e}} 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (const \mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a260aed74bb97079b1da6989d4372c11e}\label{classaacio_1_1optional_a260aed74bb97079b1da6989d4372c11e}} 
+\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (\mbox{\hyperlink{classaacio_1_1optional}{optional}} \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a24e3700e8f4f86a8a5176f9848c46bbf}\label{classaacio_1_1optional_a24e3700e8f4f86a8a5176f9848c46bbf}} 
+\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (const \mbox{\hyperlink{classaacio_1_1optional}{optional}} \&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a4e30a2411077c3cf54497e2caa3539b9}\label{classaacio_1_1optional_a4e30a2411077c3cf54497e2caa3539b9}} 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (\mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&\&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a0e929f17e813c882f71006ffd8bd7fcb}\label{classaacio_1_1optional_a0e929f17e813c882f71006ffd8bd7fcb}} 
+\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (\mbox{\hyperlink{classaacio_1_1optional}{optional}} \&\&o)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_ac9bc03fc2084c83489b022f37a30206c}\label{classaacio_1_1optional_ac9bc03fc2084c83489b022f37a30206c}} 
+bool {\bfseries valid} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a77ef6bdebabcba87e107408ad97a4a96}\label{classaacio_1_1optional_a77ef6bdebabcba87e107408ad97a4a96}} 
+bool {\bfseries operator!} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a744c41ef13c04533c783f88440793b72}\label{classaacio_1_1optional_a744c41ef13c04533c783f88440793b72}} 
+{\bfseries operator bool} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a7c7cb77a21c5c823ec1e94e8433e9eac}\label{classaacio_1_1optional_a7c7cb77a21c5c823ec1e94e8433e9eac}} 
+\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator$\ast$} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a6f530ae14ef1971f9cffbcf2d066eceb}\label{classaacio_1_1optional_a6f530ae14ef1971f9cffbcf2d066eceb}} 
+const \mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_ae51b16f1774f0953edd5426fa26c1846}\label{classaacio_1_1optional_ae51b16f1774f0953edd5426fa26c1846}} 
+\mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries operator-\/$>$} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a51a963668cf6dfcfb610ac053393d4c7}\label{classaacio_1_1optional_a51a963668cf6dfcfb610ac053393d4c7}} 
+const \mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a0ee736900db4a830202f6da105cbcf24}\label{classaacio_1_1optional_a0ee736900db4a830202f6da105cbcf24}} 
+\mbox{\hyperlink{classaacio_1_1optional}{optional}} \& {\bfseries operator=} (std\+::nullptr\+\_\+t)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a89f371546e228ee4c486546623cf8486}\label{classaacio_1_1optional_a89f371546e228ee4c486546623cf8486}} 
+void {\bfseries reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_aa756d67787488b1e2bba885ce4da6fe0}\label{classaacio_1_1optional_aa756d67787488b1e2bba885ce4da6fe0}} 
+{\footnotesize template$<$typename U $>$ }\\class {\bfseries optional}
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_aed3aa0cd5eb4f7ef600b2e9ad295320f}\label{classaacio_1_1optional_aed3aa0cd5eb4f7ef600b2e9ad295320f}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classaacio_1_1optional}{optional}} a, \mbox{\hyperlink{classaacio_1_1optional}{optional}} b)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a608be2170eb1ffcef97954156c7ebbd8}\label{classaacio_1_1optional_a608be2170eb1ffcef97954156c7ebbd8}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classaacio_1_1optional}{optional}} a, \mbox{\hyperlink{classaacio_1_1optional}{optional}} b)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_ac832bb17538296c8ef66f0250d9fcd54}\label{classaacio_1_1optional_ac832bb17538296c8ef66f0250d9fcd54}} 
+{\footnotesize template$<$typename Stream $>$ }\\\mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ Stream $>$ \& {\bfseries operator$>$$>$} (\mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ Stream $>$ \&ds, \mbox{\hyperlink{classaacio_1_1optional}{optional}} \&op)
+\item 
+\mbox{\Hypertarget{classaacio_1_1optional_a61ac09dcfc7a19fdd3f1cec5578004f6}\label{classaacio_1_1optional_a61ac09dcfc7a19fdd3f1cec5578004f6}} 
+{\footnotesize template$<$typename Stream $>$ }\\\mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ Stream $>$ \& {\bfseries operator$<$$<$} (\mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ Stream $>$ \&ds, const \mbox{\hyperlink{classaacio_1_1optional}{optional}} \&op)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aaciolib/optional.\+hpp\end{DoxyCompactItemize}

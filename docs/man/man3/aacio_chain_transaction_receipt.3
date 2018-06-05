@@ -1,0 +1,68 @@
+.TH "aacio::chain::transaction_receipt" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::transaction_receipt
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transaction\&.hpp>\fP
+.PP
+Inherited by \fBaacio::chain::transaction_trace\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBstatus_enum\fP { \fBexecuted\fP = 0, \fBsoft_fail\fP = 1, \fBhard_fail\fP = 2, \fBdelayed\fP = 3 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtransaction_receipt\fP (\fBtransaction_id_type\fP tid)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBfc::enum_type\fP< uint8_t, \fBstatus_enum\fP > \fBstatus\fP"
+.br
+.ti -1c
+.RI "\fBfc::unsigned_int\fP \fBkcpu_usage\fP"
+.br
+.ti -1c
+.RI "\fBfc::unsigned_int\fP \fBnet_usage_words\fP"
+.br
+.ti -1c
+.RI "\fBtransaction_id_type\fP \fBid\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+When a transaction is referenced by a block it could imply one of several outcomes which describe the state-transition undertaken by the block producer\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBaacio::chain::transaction_receipt::status_enum\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIexecuted \fP\fP
+succeed, no error handler executed 
+.TP
+\fB\fIsoft_fail \fP\fP
+objectively failed (not executed), error handler executed 
+.TP
+\fB\fIhard_fail \fP\fP
+objectively failed and error handler objectively failed thus no state change 
+.TP
+\fB\fIdelayed \fP\fP
+transaction delayed 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

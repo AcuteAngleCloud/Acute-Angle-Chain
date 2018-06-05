@@ -1,0 +1,119 @@
+.TH "chainbase::database" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+chainbase::database
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <chainbase\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBsession\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBopen_flags\fP { \fBread_only\fP = 0, \fBread_write\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdatabase\fP (const bfs::path &dir, open_flags write=read_only, uint64_t shared_file_size=0)"
+.br
+.ti -1c
+.RI "\fBdatabase\fP (\fBdatabase\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBdatabase\fP & \fBoperator=\fP (\fBdatabase\fP &&)=default"
+.br
+.ti -1c
+.RI "bool \fBis_read_only\fP () const"
+.br
+.ti -1c
+.RI "void \fBflush\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_require_locking\fP (bool enable_require_locking)"
+.br
+.ti -1c
+.RI "\fBsession\fP \fBstart_undo_session\fP (bool enabled)"
+.br
+.ti -1c
+.RI "int64_t \fBrevision\fP () const"
+.br
+.ti -1c
+.RI "void \fBundo\fP ()"
+.br
+.ti -1c
+.RI "void \fBsquash\fP ()"
+.br
+.ti -1c
+.RI "void \fBcommit\fP (int64_t revision)"
+.br
+.ti -1c
+.RI "void \fBundo_all\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_revision\fP (uint64_t revision)"
+.br
+.ti -1c
+.RI "template<typename MultiIndexType > void \fBadd_index\fP ()"
+.br
+.ti -1c
+.RI "auto \fBget_segment_manager\fP () \-> decltype(((bip::managed_mapped_file *) nullptr) \->get_segment_manager())"
+.br
+.ti -1c
+.RI "size_t \fBget_free_memory\fP () const"
+.br
+.ti -1c
+.RI "template<typename MultiIndexType > const \fBgeneric_index\fP< MultiIndexType > & \fBget_index\fP () const"
+.br
+.ti -1c
+.RI "template<typename MultiIndexType , typename ByIndex > auto \fBget_index\fP () const \-> decltype(((\fBgeneric_index\fP< MultiIndexType > *)(nullptr)) \->indicies()\&.template get< ByIndex >())"
+.br
+.ti -1c
+.RI "template<typename MultiIndexType > \fBgeneric_index\fP< MultiIndexType > & \fBget_mutable_index\fP ()"
+.br
+.ti -1c
+.RI "template<typename ObjectType , typename IndexedByType , typename CompatibleKey > const ObjectType * \fBfind\fP (CompatibleKey &&key) const"
+.br
+.ti -1c
+.RI "template<typename ObjectType > const ObjectType * \fBfind\fP (\fBoid\fP< ObjectType > key=\fBoid\fP< ObjectType >()) const"
+.br
+.ti -1c
+.RI "template<typename ObjectType , typename IndexedByType , typename CompatibleKey > const ObjectType & \fBget\fP (CompatibleKey &&key) const"
+.br
+.ti -1c
+.RI "template<typename ObjectType > const ObjectType & \fBget\fP (const \fBoid\fP< ObjectType > &key=\fBoid\fP< ObjectType >()) const"
+.br
+.ti -1c
+.RI "template<typename ObjectType , typename Modifier > void \fBmodify\fP (const ObjectType &obj, Modifier &&m)"
+.br
+.ti -1c
+.RI "template<typename ObjectType > void \fBremove\fP (const ObjectType &obj)"
+.br
+.ti -1c
+.RI "template<typename ObjectType , typename Constructor > const ObjectType & \fBcreate\fP (Constructor &&con)"
+.br
+.ti -1c
+.RI "template<typename Lambda > auto \fBwith_read_lock\fP (Lambda &&callback, uint64_t wait_micro=1000000) const \-> decltype((*(Lambda *) nullptr)())"
+.br
+.ti -1c
+.RI "template<typename Lambda > auto \fBwith_write_lock\fP (Lambda &&callback, uint64_t wait_micro=1000000) \-> decltype((*(Lambda *) nullptr)())"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

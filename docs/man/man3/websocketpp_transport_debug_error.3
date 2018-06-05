@@ -1,0 +1,55 @@
+.TH "websocketpp::transport::debug::error" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::debug::error \- debug transport errors  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBcategory\fP"
+.br
+.RI "debug transport error category "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBvalue\fP { \fBgeneral\fP = 1, \fBnot_implemented\fP, \fBinvalid_num_bytes\fP, \fBdouble_read\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "lib::error_category const  & \fBget_category\fP ()"
+.br
+.RI "Get a reference to a static copy of the debug transport error category\&. "
+.ti -1c
+.RI "lib::error_code \fBmake_error_code\fP (\fBerror::value\fP e)"
+.br
+.RI "Get an error code with the given value and the debug transport category\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+debug transport errors 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBwebsocketpp::transport::debug::error::value\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIgeneral \fP\fP
+Catch-all error for transport policy errors that don't fit in other categories 
+.TP
+\fB\fInot_implemented \fP\fP
+not implemented 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

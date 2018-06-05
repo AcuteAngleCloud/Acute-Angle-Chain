@@ -1,0 +1,29 @@
+.TH "Runtime::Exception" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Runtime::Exception
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBCause\fP : U8 { \fBunknown\fP, \fBaccessViolation\fP, \fBstackOverflow\fP, \fBintegerDivideByZeroOrIntegerOverflow\fP, \fBinvalidFloatOperation\fP, \fBinvokeSignatureMismatch\fP, \fBreachedUnreachable\fP, \fBindirectCallSignatureMismatch\fP, \fBundefinedTableElement\fP, \fBcalledAbort\fP, \fBcalledUnimplementedIntrinsic\fP, \fBoutOfMemory\fP, \fBinvalidSegmentOffset\fP, \fBmisalignedAtomicMemoryAccess\fP }"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Cause \fBcause\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::string > \fBcallStack\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

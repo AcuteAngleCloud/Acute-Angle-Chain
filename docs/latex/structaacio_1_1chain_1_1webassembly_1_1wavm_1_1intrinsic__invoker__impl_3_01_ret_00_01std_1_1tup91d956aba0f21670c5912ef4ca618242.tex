@@ -1,0 +1,46 @@
+\hypertarget{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242}{}\section{aacio\+:\+:chain\+:\+:webassembly\+:\+:wavm\+:\+:intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+:\+:tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$, std\+:\+:tuple$<$ Translated... $>$ $>$ Struct Template Reference}
+\label{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242}\index{aacio\+::chain\+::webassembly\+::wavm\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$, std\+::tuple$<$ Translated... $>$ $>$@{aacio\+::chain\+::webassembly\+::wavm\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$, std\+::tuple$<$ Translated... $>$ $>$}}
+
+
+{\ttfamily \#include $<$wavm.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_a02df18d7e5161af6e43c3b3e5d5cee8e}\label{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_a02df18d7e5161af6e43c3b3e5d5cee8e}} 
+using {\bfseries next\+\_\+step} = \mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl}{intrinsic\+\_\+invoker\+\_\+impl}}$<$ Ret, std\+::tuple$<$ Inputs... $>$, std\+::tuple$<$ Translated..., I32 $>$ $>$
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_ae5f7ceabb2317312ad0b1bf5c66f93d9}\label{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_ae5f7ceabb2317312ad0b1bf5c66f93d9}} 
+using {\bfseries then\+\_\+type} = Ret($\ast$)(\mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1running__instance__context}{running\+\_\+instance\+\_\+context}} \&, \mbox{\hyperlink{structaacio_1_1chain_1_1null__terminated__ptr}{null\+\_\+terminated\+\_\+ptr}}, Inputs..., Translated...)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_a8956a2c94761cbfd8f3a9e3841f01d5c}\label{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_a8956a2c94761cbfd8f3a9e3841f01d5c}} 
+{\footnotesize template$<$then\+\_\+type Then$>$ }\\static Ret {\bfseries translate\+\_\+one} (\mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1running__instance__context}{running\+\_\+instance\+\_\+context}} \&ctx, Inputs... rest, Translated... translated, I32 ptr)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_ae75599935cfc60522f43b8983f8708ae}\label{structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_1tup91d956aba0f21670c5912ef4ca618242_ae75599935cfc60522f43b8983f8708ae}} 
+{\footnotesize template$<$then\+\_\+type Then$>$ }\\static const auto {\bfseries fn} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Ret, typename... Inputs, typename ... Translated$>$\newline
+struct aacio\+::chain\+::webassembly\+::wavm\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$, std\+::tuple$<$ Translated... $>$ $>$}
+
+Specialization for transcribing a \mbox{\hyperlink{structaacio_1_1chain_1_1null__terminated__ptr}{null\+\_\+terminated\+\_\+ptr}} type in the native method signature This type transcribes 1 wasm parameters\+: a char pointer which is validated to contain a null value before the end of the allocated memory.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Ret} & -\/ the return type of the native method \\
+\hline
+{\em Inputs} & -\/ the remaining native parameters to transcribe \\
+\hline
+{\em Translated} & -\/ the list of transcribed wasm parameters \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/webassembly/wavm.\+hpp\end{DoxyCompactItemize}

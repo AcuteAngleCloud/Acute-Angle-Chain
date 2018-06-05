@@ -1,0 +1,55 @@
+.TH "WAST::ModuleParseState" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WAST::ModuleParseState
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBWAST::ParseState\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBModuleParseState\fP (const char *inString, const \fBLineInfo\fP *inLineInfo, \fBstd::vector\fP< \fBUnresolvedError\fP > &inErrors, const Token *inNextToken, \fBIR::Module\fP &inModule)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIR::Module\fP & \fBmodule\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< const \fBIR::FunctionType\fP *, U32 > \fBfunctionTypeToIndexMap\fP"
+.br
+.ti -1c
+.RI "\fBNameToIndexMap\fP \fBtypeNameToIndexMap\fP"
+.br
+.ti -1c
+.RI "\fBNameToIndexMap\fP \fBfunctionNameToIndexMap\fP"
+.br
+.ti -1c
+.RI "\fBNameToIndexMap\fP \fBtableNameToIndexMap\fP"
+.br
+.ti -1c
+.RI "\fBNameToIndexMap\fP \fBmemoryNameToIndexMap\fP"
+.br
+.ti -1c
+.RI "\fBNameToIndexMap\fP \fBglobalNameToIndexMap\fP"
+.br
+.ti -1c
+.RI "\fBIR::DisassemblyNames\fP \fBdisassemblyNames\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::function< void(\fBModuleParseState\fP &)> > \fBpostTypeCallbacks\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::function< void(\fBModuleParseState\fP &)> > \fBpostDeclarationCallbacks\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

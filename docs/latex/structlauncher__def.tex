@@ -1,0 +1,236 @@
+\hypertarget{structlauncher__def}{}\section{launcher\+\_\+def Struct Reference}
+\label{structlauncher__def}\index{launcher\+\_\+def@{launcher\+\_\+def}}
+
+
+Collaboration diagram for launcher\+\_\+def\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ae97fc8e7f54a424296a3e6a006f14618}\label{structlauncher__def_ae97fc8e7f54a424296a3e6a006f14618}} 
+void {\bfseries assign\+\_\+name} (\mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}}, bool is\+\_\+bios)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a1cb1885545cb81aad9c087f135bf8b66}\label{structlauncher__def_a1cb1885545cb81aad9c087f135bf8b66}} 
+void {\bfseries set\+\_\+options} (bpo\+::options\+\_\+description \&cli)
+\item 
+\mbox{\Hypertarget{structlauncher__def_af3c15f068ff5a367e343aa83be62c3a3}\label{structlauncher__def_af3c15f068ff5a367e343aa83be62c3a3}} 
+void {\bfseries initialize} (const variables\+\_\+map \&vmap)
+\item 
+\mbox{\Hypertarget{structlauncher__def_abb9e5492e4e034ffcc42a74d893b0f71}\label{structlauncher__def_abb9e5492e4e034ffcc42a74d893b0f71}} 
+void {\bfseries init\+\_\+genesis} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_a7a92f6e8142ed7cbc9f4448e8c673740}\label{structlauncher__def_a7a92f6e8142ed7cbc9f4448e8c673740}} 
+void {\bfseries load\+\_\+servers} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_aba7038ee47ccc688104d0d527fa99843}\label{structlauncher__def_aba7038ee47ccc688104d0d527fa99843}} 
+bool {\bfseries generate} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_a8f050260f20b2369158e085e412bc838}\label{structlauncher__def_a8f050260f20b2369158e085e412bc838}} 
+void {\bfseries define\+\_\+network} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_aa2490bf4908ce8f8ee2faaacd2372f2c}\label{structlauncher__def_aa2490bf4908ce8f8ee2faaacd2372f2c}} 
+void {\bfseries bind\+\_\+nodes} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_ad4f922524a20063f61dfe6e9b3ebb0f5}\label{structlauncher__def_ad4f922524a20063f61dfe6e9b3ebb0f5}} 
+\mbox{\hyperlink{classhost__def}{host\+\_\+def}} $\ast$ {\bfseries find\+\_\+host} (const string \&name)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a3f52c46eb6f3592d0f19d5d8c1be5ed8}\label{structlauncher__def_a3f52c46eb6f3592d0f19d5d8c1be5ed8}} 
+\mbox{\hyperlink{classhost__def}{host\+\_\+def}} $\ast$ {\bfseries find\+\_\+host\+\_\+by\+\_\+name\+\_\+or\+\_\+address} (const string \&name)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a5b8462aec95e05816386f8f8ba35900a}\label{structlauncher__def_a5b8462aec95e05816386f8f8ba35900a}} 
+\mbox{\hyperlink{classhost__def}{host\+\_\+def}} $\ast$ {\bfseries deploy\+\_\+config\+\_\+files} (\mbox{\hyperlink{classtn__node__def}{tn\+\_\+node\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}})
+\item 
+\mbox{\Hypertarget{structlauncher__def_a2762b394d1c15e89b4a094fbb2115126}\label{structlauncher__def_a2762b394d1c15e89b4a094fbb2115126}} 
+string {\bfseries compose\+\_\+scp\+\_\+command} (const \mbox{\hyperlink{classhost__def}{host\+\_\+def}} \&host, const bfs\+::path \&\mbox{\hyperlink{structsource}{source}}, const bfs\+::path \&destination)
+\item 
+\mbox{\Hypertarget{structlauncher__def_afab86712c24b14b123f859ec0ae1511c}\label{structlauncher__def_afab86712c24b14b123f859ec0ae1511c}} 
+void {\bfseries write\+\_\+config\+\_\+file} (\mbox{\hyperlink{classtn__node__def}{tn\+\_\+node\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}})
+\item 
+\mbox{\Hypertarget{structlauncher__def_a67e91c13bd8b19d76efc5facba90b90f}\label{structlauncher__def_a67e91c13bd8b19d76efc5facba90b90f}} 
+void {\bfseries write\+\_\+logging\+\_\+config\+\_\+file} (\mbox{\hyperlink{classtn__node__def}{tn\+\_\+node\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}})
+\item 
+\mbox{\Hypertarget{structlauncher__def_a6d1727a1ea8e7560df911855c1021ac6}\label{structlauncher__def_a6d1727a1ea8e7560df911855c1021ac6}} 
+void {\bfseries write\+\_\+genesis\+\_\+file} (\mbox{\hyperlink{classtn__node__def}{tn\+\_\+node\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}})
+\item 
+\mbox{\Hypertarget{structlauncher__def_a1f0bbc8e52a2761b7ae2bb56e73e0f85}\label{structlauncher__def_a1f0bbc8e52a2761b7ae2bb56e73e0f85}} 
+void {\bfseries write\+\_\+setprods\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_a512b1b81132adb4d2c5ee0b680d276e9}\label{structlauncher__def_a512b1b81132adb4d2c5ee0b680d276e9}} 
+void {\bfseries write\+\_\+bios\+\_\+boot} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_ac0e3968f40fee377535b9b5b0a063f47}\label{structlauncher__def_ac0e3968f40fee377535b9b5b0a063f47}} 
+bool {\bfseries is\+\_\+bios\+\_\+ndx} (size\+\_\+t ndx)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a938ddf2e57d2b843911ff88678100ea1}\label{structlauncher__def_a938ddf2e57d2b843911ff88678100ea1}} 
+size\+\_\+t {\bfseries start\+\_\+ndx} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_af994e3a4da3e0768833b3779707cf2e8}\label{structlauncher__def_af994e3a4da3e0768833b3779707cf2e8}} 
+bool {\bfseries next\+\_\+ndx} (size\+\_\+t \&ndx)
+\item 
+\mbox{\Hypertarget{structlauncher__def_ad2a447983792ae923564a0e314d48cf5}\label{structlauncher__def_ad2a447983792ae923564a0e314d48cf5}} 
+size\+\_\+t {\bfseries skip\+\_\+ndx} (size\+\_\+t from, size\+\_\+t offset)
+\item 
+\mbox{\Hypertarget{structlauncher__def_ac600ca49796bfc3bd1c68e7ff58acab2}\label{structlauncher__def_ac600ca49796bfc3bd1c68e7ff58acab2}} 
+void {\bfseries make\+\_\+ring} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_a1830ff82f11b854218c383e032c678a7}\label{structlauncher__def_a1830ff82f11b854218c383e032c678a7}} 
+void {\bfseries make\+\_\+star} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_a99c0d0530c0b48a76aa992524ec732ee}\label{structlauncher__def_a99c0d0530c0b48a76aa992524ec732ee}} 
+void {\bfseries make\+\_\+mesh} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_ae990fd816eed74dd05c7a2d35cbe4dc7}\label{structlauncher__def_ae990fd816eed74dd05c7a2d35cbe4dc7}} 
+void {\bfseries make\+\_\+custom} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_a57dfb96440ba0b4874d921979179b6a3}\label{structlauncher__def_a57dfb96440ba0b4874d921979179b6a3}} 
+void {\bfseries write\+\_\+dot\+\_\+file} ()
+\item 
+\mbox{\Hypertarget{structlauncher__def_af1b7d62253cacd97d1b757a5ff912bcf}\label{structlauncher__def_af1b7d62253cacd97d1b757a5ff912bcf}} 
+void {\bfseries format\+\_\+ssh} (const string \&cmd, const string \&host\+\_\+name, string \&ssh\+\_\+cmd\+\_\+line)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a016f09fbb85268c29c46e28c1ae06660}\label{structlauncher__def_a016f09fbb85268c29c46e28c1ae06660}} 
+bool {\bfseries do\+\_\+ssh} (const string \&cmd, const string \&host\+\_\+name)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a94c3a60c08a454e2a19291762276d9f9}\label{structlauncher__def_a94c3a60c08a454e2a19291762276d9f9}} 
+void {\bfseries prep\+\_\+remote\+\_\+config\+\_\+dir} (\mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}}, \mbox{\hyperlink{classhost__def}{host\+\_\+def}} $\ast$host)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a2ee45c641e2a8ea06482ca0662ab286f}\label{structlauncher__def_a2ee45c641e2a8ea06482ca0662ab286f}} 
+void {\bfseries launch} (\mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}} \&\mbox{\hyperlink{structnode}{node}}, string \&gts)
+\item 
+\mbox{\Hypertarget{structlauncher__def_ae482f4211c61affef1625564844ddcd3}\label{structlauncher__def_ae482f4211c61affef1625564844ddcd3}} 
+void {\bfseries kill} (launch\+\_\+modes mode, string sig\+\_\+opt)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a696de5478091aff9263d31588533210e}\label{structlauncher__def_a696de5478091aff9263d31588533210e}} 
+\mbox{\hyperlink{structpair}{pair}}$<$ \mbox{\hyperlink{classhost__def}{host\+\_\+def}}, \mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}} $>$ {\bfseries find\+\_\+node} (uint16\+\_\+t node\+\_\+num)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a4e4aa086d6c2692077849d587e3d750e}\label{structlauncher__def_a4e4aa086d6c2692077849d587e3d750e}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structpair}{pair}}$<$ \mbox{\hyperlink{classhost__def}{host\+\_\+def}}, \mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}} $>$ $>$ {\bfseries get\+\_\+nodes} (const string \&node\+\_\+number\+\_\+list)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a500893d4e0bbd09b4c33bca41fd07790}\label{structlauncher__def_a500893d4e0bbd09b4c33bca41fd07790}} 
+void {\bfseries bounce} (const string \&node\+\_\+numbers)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a0508d513aecd0e758140675d33e65054}\label{structlauncher__def_a0508d513aecd0e758140675d33e65054}} 
+void {\bfseries down} (const string \&node\+\_\+numbers)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a4a62e759ad911ad59b7d6ca08a72f665}\label{structlauncher__def_a4a62e759ad911ad59b7d6ca08a72f665}} 
+void {\bfseries roll} (const string \&host\+\_\+names)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a94d21163ede9d4d2dd2d4b0638a7b4f8}\label{structlauncher__def_a94d21163ede9d4d2dd2d4b0638a7b4f8}} 
+void {\bfseries start\+\_\+all} (string \&gts, launch\+\_\+modes mode)
+\item 
+\mbox{\Hypertarget{structlauncher__def_a774763197fe2f2055152f8e80bfbae8e}\label{structlauncher__def_a774763197fe2f2055152f8e80bfbae8e}} 
+void {\bfseries ignite} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a2f2bd48449ee1b6e029bd926c26c0af4}\label{structlauncher__def_a2f2bd48449ee1b6e029bd926c26c0af4}} 
+bool {\bfseries force\+\_\+overwrite}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ac37e3cdbe9c52e16683c0051cf6e3860}\label{structlauncher__def_ac37e3cdbe9c52e16683c0051cf6e3860}} 
+size\+\_\+t {\bfseries total\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a756c5d66b063700e192663e7ab25e768}\label{structlauncher__def_a756c5d66b063700e192663e7ab25e768}} 
+size\+\_\+t {\bfseries prod\+\_\+nodes}
+\item 
+\mbox{\Hypertarget{structlauncher__def_adef376a3bd9c59a20fc3e2bec3e6cf98}\label{structlauncher__def_adef376a3bd9c59a20fc3e2bec3e6cf98}} 
+size\+\_\+t {\bfseries producers}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a0760b0cb8c33e9056e3f45d4685971fb}\label{structlauncher__def_a0760b0cb8c33e9056e3f45d4685971fb}} 
+size\+\_\+t {\bfseries next\+\_\+node}
+\item 
+\mbox{\Hypertarget{structlauncher__def_acee5315ece7d6df5c5ebd2439d210c93}\label{structlauncher__def_acee5315ece7d6df5c5ebd2439d210c93}} 
+string {\bfseries shape}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ab953be9b54989d0ba574d4bd4e736dfc}\label{structlauncher__def_ab953be9b54989d0ba574d4bd4e736dfc}} 
+allowed\+\_\+connection {\bfseries allowed\+\_\+connections} = P\+C\+\_\+\+N\+O\+NE
+\item 
+\mbox{\Hypertarget{structlauncher__def_a072eaad3508fab180d950a945cfcf3b6}\label{structlauncher__def_a072eaad3508fab180d950a945cfcf3b6}} 
+bfs\+::path {\bfseries genesis}
+\item 
+\mbox{\Hypertarget{structlauncher__def_acd9a944cbdb5b0e0418419601e7b4973}\label{structlauncher__def_acd9a944cbdb5b0e0418419601e7b4973}} 
+bfs\+::path {\bfseries output}
+\item 
+\mbox{\Hypertarget{structlauncher__def_af546fce2bb184182d067839d79a58d03}\label{structlauncher__def_af546fce2bb184182d067839d79a58d03}} 
+bfs\+::path {\bfseries host\+\_\+map\+\_\+file}
+\item 
+\mbox{\Hypertarget{structlauncher__def_aa1dc3bdc23477e9f8d30cf11282d8540}\label{structlauncher__def_aa1dc3bdc23477e9f8d30cf11282d8540}} 
+bfs\+::path {\bfseries server\+\_\+ident\+\_\+file}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a7d8c2890c8a7a4229125c3ede9c954a5}\label{structlauncher__def_a7d8c2890c8a7a4229125c3ede9c954a5}} 
+bfs\+::path {\bfseries stage}
+\item 
+\mbox{\Hypertarget{structlauncher__def_afc7e6377c29229eb93443d7a49f3e436}\label{structlauncher__def_afc7e6377c29229eb93443d7a49f3e436}} 
+string {\bfseries erd}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a14ab93cccdc754a6467e2b5cdb7b4b2c}\label{structlauncher__def_a14ab93cccdc754a6467e2b5cdb7b4b2c}} 
+bfs\+::path {\bfseries config\+\_\+dir\+\_\+base}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a963c76c2d307645cf98d1e796c1327ab}\label{structlauncher__def_a963c76c2d307645cf98d1e796c1327ab}} 
+bfs\+::path {\bfseries data\+\_\+dir\+\_\+base}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ac7a18967df8a9726bad195f628ebb34d}\label{structlauncher__def_ac7a18967df8a9726bad195f628ebb34d}} 
+bool {\bfseries skip\+\_\+transaction\+\_\+signatures} = false
+\item 
+\mbox{\Hypertarget{structlauncher__def_a896a1e1ad7dbcc48cca6724556441de4}\label{structlauncher__def_a896a1e1ad7dbcc48cca6724556441de4}} 
+string {\bfseries aacd\+\_\+extra\+\_\+args}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a18060f5d187f7ee454e5618fbc925db4}\label{structlauncher__def_a18060f5d187f7ee454e5618fbc925db4}} 
+\mbox{\hyperlink{structtestnet__def}{testnet\+\_\+def}} {\bfseries network}
+\item 
+\mbox{\Hypertarget{structlauncher__def_abb71007dba0e53fb94932f65b96db4b1}\label{structlauncher__def_abb71007dba0e53fb94932f65b96db4b1}} 
+string {\bfseries gelf\+\_\+endpoint}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a80a2954ced2e22fab24a84482aa1872c}\label{structlauncher__def_a80a2954ced2e22fab24a84482aa1872c}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ string $>$ {\bfseries aliases}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ab826b2e5d4181fcfe907c17f14443bcf}\label{structlauncher__def_ab826b2e5d4181fcfe907c17f14443bcf}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classhost__def}{host\+\_\+def}} $>$ {\bfseries bindings}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a3931f991aa3a62e6ceb6cc6c1e3097c7}\label{structlauncher__def_a3931f991aa3a62e6ceb6cc6c1e3097c7}} 
+int {\bfseries per\+\_\+host} = 0
+\item 
+\mbox{\Hypertarget{structlauncher__def_a20a69a397eb7c4cfb9166cea27cbb1fa}\label{structlauncher__def_a20a69a397eb7c4cfb9166cea27cbb1fa}} 
+\mbox{\hyperlink{structlast__run__def}{last\+\_\+run\+\_\+def}} {\bfseries last\+\_\+run}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a6c58a0e1a0421daa55d74370e06ff5fe}\label{structlauncher__def_a6c58a0e1a0421daa55d74370e06ff5fe}} 
+int {\bfseries start\+\_\+delay} = 0
+\item 
+\mbox{\Hypertarget{structlauncher__def_a8bbf6008adfb2850afdddf8444807e10}\label{structlauncher__def_a8bbf6008adfb2850afdddf8444807e10}} 
+bool {\bfseries gelf\+\_\+enabled}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a53c7494c73df6abd6c13d36f407aef12}\label{structlauncher__def_a53c7494c73df6abd6c13d36f407aef12}} 
+bool {\bfseries nogen}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a1bec49ec7a5ba6c2b427a0f8a0099f92}\label{structlauncher__def_a1bec49ec7a5ba6c2b427a0f8a0099f92}} 
+bool {\bfseries boot}
+\item 
+\mbox{\Hypertarget{structlauncher__def_af9a99d83ac2a21b57fb0bc8cc93307fa}\label{structlauncher__def_af9a99d83ac2a21b57fb0bc8cc93307fa}} 
+bool {\bfseries add\+\_\+enable\+\_\+stale\+\_\+production} = false
+\item 
+\mbox{\Hypertarget{structlauncher__def_a666bcc5ca7db69c6cb12e6647b9788c2}\label{structlauncher__def_a666bcc5ca7db69c6cb12e6647b9788c2}} 
+string {\bfseries launch\+\_\+name}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ae73a438801909c3eac0d8c0900bab099}\label{structlauncher__def_ae73a438801909c3eac0d8c0900bab099}} 
+string {\bfseries launch\+\_\+time}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ad5791a913cbe9309f08d1775113c8457}\label{structlauncher__def_ad5791a913cbe9309f08d1775113c8457}} 
+\mbox{\hyperlink{structserver__identities}{server\+\_\+identities}} {\bfseries servers}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a0eb0238ea646d3e4d13f4a53b3e91b35}\label{structlauncher__def_a0eb0238ea646d3e4d13f4a53b3e91b35}} 
+\mbox{\hyperlink{structproducer__set__def}{producer\+\_\+set\+\_\+def}} {\bfseries producer\+\_\+set}
+\item 
+\mbox{\Hypertarget{structlauncher__def_ae7dfe640d7baa64b85d6e0e170c214a7}\label{structlauncher__def_ae7dfe640d7baa64b85d6e0e170c214a7}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ string $>$ {\bfseries genesis\+\_\+block}
+\item 
+\mbox{\Hypertarget{structlauncher__def_a826f6196994c1d7e638fc28ac6cc1b87}\label{structlauncher__def_a826f6196994c1d7e638fc28ac6cc1b87}} 
+string {\bfseries start\+\_\+temp}
+\item 
+\mbox{\Hypertarget{structlauncher__def_abf494e2174d7e02f7ffbd13b88548135}\label{structlauncher__def_abf494e2174d7e02f7ffbd13b88548135}} 
+string {\bfseries start\+\_\+script}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+programs/aacio-\/launcher/\mbox{\hyperlink{programs_2aacio-launcher_2main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

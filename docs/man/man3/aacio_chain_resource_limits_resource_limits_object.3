@@ -1,0 +1,42 @@
+.TH "aacio::chain::resource_limits::resource_limits_object" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::resource_limits::resource_limits_object
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <resource_limits_private\&.hpp>\fP
+.PP
+Inherits \fBchainbase::object< resource_limits_object_type, resource_limits_object >\fP\&.
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBid_type\fP \fBid\fP"
+.br
+.ti -1c
+.RI "\fBaccount_name\fP \fBowner\fP"
+.br
+.ti -1c
+.RI "bool \fBpending\fP = false"
+.br
+.ti -1c
+.RI "int64_t \fBnet_weight\fP = \-1"
+.br
+.ti -1c
+.RI "int64_t \fBcpu_weight\fP = \-1"
+.br
+.ti -1c
+.RI "int64_t \fBram_bytes\fP = \-1"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Every account that authorizes a transaction is billed for the full size of that transaction\&. This object tracks the average usage of that account\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

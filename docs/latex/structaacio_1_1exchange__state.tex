@@ -1,0 +1,63 @@
+\hypertarget{structaacio_1_1exchange__state}{}\section{aacio\+:\+:exchange\+\_\+state Struct Reference}
+\label{structaacio_1_1exchange__state}\index{aacio\+::exchange\+\_\+state@{aacio\+::exchange\+\_\+state}}
+
+
+{\ttfamily \#include $<$exchange\+\_\+state.\+hpp$>$}
+
+
+
+Collaboration diagram for aacio\+:\+:exchange\+\_\+state\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1exchange__state_1_1connector}{connector}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a841039a94a3f68ac7a233b258d6b3116}\label{structaacio_1_1exchange__state_a841039a94a3f68ac7a233b258d6b3116}} 
+uint64\+\_\+t {\bfseries primary\+\_\+key} () const
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_aad9c4477d2dc03615a103c751e303710}\label{structaacio_1_1exchange__state_aad9c4477d2dc03615a103c751e303710}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries convert\+\_\+to\+\_\+exchange} (\mbox{\hyperlink{structaacio_1_1exchange__state_1_1connector}{connector}} \&c, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} in)
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a88701ca6d384e4b3ba3ee71d77a0cd1b}\label{structaacio_1_1exchange__state_a88701ca6d384e4b3ba3ee71d77a0cd1b}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries convert\+\_\+from\+\_\+exchange} (\mbox{\hyperlink{structaacio_1_1exchange__state_1_1connector}{connector}} \&c, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} in)
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a34d21c83cb533dc149e2ae278c80eafa}\label{structaacio_1_1exchange__state_a34d21c83cb533dc149e2ae278c80eafa}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries convert} (\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} from, \mbox{\hyperlink{structaacio_1_1extended__symbol}{extended\+\_\+symbol}} to)
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a8b952d4e7a46d9e2ee5a345175768268}\label{structaacio_1_1exchange__state_a8b952d4e7a46d9e2ee5a345175768268}} 
+bool {\bfseries requires\+\_\+margin\+\_\+call} (const \mbox{\hyperlink{structaacio_1_1exchange__state_1_1connector}{exchange\+\_\+state\+::connector}} \&con) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a70853261055882362825df165cb36f4f}\label{structaacio_1_1exchange__state_a70853261055882362825df165cb36f4f}} 
+bool {\bfseries requires\+\_\+margin\+\_\+call} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a8832d6597d5c19f5e5af2cb885bdd504}\label{structaacio_1_1exchange__state_a8832d6597d5c19f5e5af2cb885bdd504}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries manager}
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_ace09a7ae78d70f90be4c2f1b16c69b66}\label{structaacio_1_1exchange__state_ace09a7ae78d70f90be4c2f1b16c69b66}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries supply}
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_aab1bd505221ac6a13fb838a58ac92adb}\label{structaacio_1_1exchange__state_aab1bd505221ac6a13fb838a58ac92adb}} 
+uint32\+\_\+t {\bfseries fee} = 0
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_a30412a29ca5fecc301ccf7a1b7edffe0}\label{structaacio_1_1exchange__state_a30412a29ca5fecc301ccf7a1b7edffe0}} 
+\mbox{\hyperlink{structaacio_1_1exchange__state_1_1connector}{connector}} {\bfseries base}
+\item 
+\mbox{\Hypertarget{structaacio_1_1exchange__state_af3c5671f82f3873e06ce284c38295008}\label{structaacio_1_1exchange__state_af3c5671f82f3873e06ce284c38295008}} 
+\mbox{\hyperlink{structaacio_1_1exchange__state_1_1connector}{connector}} {\bfseries quote}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Uses Bancor math to create a 50/50 relay between two asset types. The state of the bancor exchange is entirely contained within this struct. There are no external side effects associated with using this A\+PI. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contracts/exchange/exchange\+\_\+state.\+hpp\item 
+contracts/exchange/exchange\+\_\+state.\+cpp\end{DoxyCompactItemize}

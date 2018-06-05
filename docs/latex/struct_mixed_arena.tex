@@ -1,0 +1,45 @@
+\hypertarget{struct_mixed_arena}{}\section{Mixed\+Arena Struct Reference}
+\label{struct_mixed_arena}\index{Mixed\+Arena@{Mixed\+Arena}}
+
+
+Inheritance diagram for Mixed\+Arena\+:
+% FIG 0
+
+
+Collaboration diagram for Mixed\+Arena\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a47027c560ef6da8d252da84c95847716}\label{struct_mixed_arena_a47027c560ef6da8d252da84c95847716}} 
+void $\ast$ {\bfseries alloc\+Space} (size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a8620fbe4e9d15ab6674e15bb4e18bc1d}\label{struct_mixed_arena_a8620fbe4e9d15ab6674e15bb4e18bc1d}} 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{struct_t}{T}} $\ast$ {\bfseries alloc} ()
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_acb20f019c4536779ab3841065ef270ed}\label{struct_mixed_arena_acb20f019c4536779ab3841065ef270ed}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a07e88604ea4c98925742f09e5f0d78b2}\label{struct_mixed_arena_a07e88604ea4c98925742f09e5f0d78b2}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ char $\ast$ $>$ {\bfseries chunks}
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a6dc7fdbda4d6e59678c2225f8110de1e}\label{struct_mixed_arena_a6dc7fdbda4d6e59678c2225f8110de1e}} 
+size\+\_\+t {\bfseries chunk\+Size} = 32768
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a19a67553935f474ef0a66f015059e0da}\label{struct_mixed_arena_a19a67553935f474ef0a66f015059e0da}} 
+size\+\_\+t {\bfseries index}
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a8ac33dd75bc5ea2daf8a121434a02793}\label{struct_mixed_arena_a8ac33dd75bc5ea2daf8a121434a02793}} 
+std\+::thread\+::id {\bfseries thread\+Id}
+\item 
+\mbox{\Hypertarget{struct_mixed_arena_a75fb05ab3bd5dc63662ed3e16804256d}\label{struct_mixed_arena_a75fb05ab3bd5dc63662ed3e16804256d}} 
+std\+::atomic$<$ \mbox{\hyperlink{struct_mixed_arena}{Mixed\+Arena}} $\ast$ $>$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/mixed\+\_\+arena.\+h\end{DoxyCompactItemize}

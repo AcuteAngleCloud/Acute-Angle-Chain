@@ -1,0 +1,49 @@
+.TH "fc::appender" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::appender
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBfc::retainable\fP\&.
+.PP
+Inherited by \fBfc::console_appender\fP, \fBfc::file_appender\fP, and \fBfc::gelf_appender\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBfc::shared_ptr\fP< \fBappender\fP > \fBptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBinitialize\fP (boost::asio::io_service &io_service)=0"
+.br
+.ti -1c
+.RI "virtual void \fBlog\fP (const \fBlog_message\fP &m)=0"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > static bool \fBregister_appender\fP (const fc::string &type)"
+.br
+.ti -1c
+.RI "static \fBappender::ptr\fP \fBcreate\fP (const fc::string &name, const fc::string &type, const \fBvariant\fP &args)"
+.br
+.ti -1c
+.RI "static \fBappender::ptr\fP \fBget\fP (const fc::string &name)"
+.br
+.ti -1c
+.RI "static bool \fBregister_appender\fP (const fc::string &type, const \fBappender_factory::ptr\fP &f)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,96 @@
+.TH "aacio::generic_currency< Token >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::generic_currency< Token >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaccount\fP"
+.br
+.ti -1c
+.RI "struct \fBcurrency_stats\fP"
+.br
+.ti -1c
+.RI "struct \fBtransfer_memo\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Token \fBtoken_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< accounts_table_name, \fBaccount\fP > \fBaccounts\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< stats_table_name, \fBcurrency_stats\fP > \fBstats\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBACTION\fP (code, issue)"
+.br
+.ti -1c
+.RI "\fBACTION\fP (code, transfer)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static token_type \fBget_balance\fP (\fBaccount_name\fP owner)"
+.br
+.ti -1c
+.RI "static void \fBset_balance\fP (\fBaccount_name\fP owner, token_type balance, \fBaccount_name\fP create_bill_to, \fBaccount_name\fP update_bill_to)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const issue &act)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const transfer &act)"
+.br
+.ti -1c
+.RI "static void \fBinline_transfer\fP (\fBaccount_name\fP from, \fBaccount_name\fP to, token_type quantity, string memo=string())"
+.br
+.ti -1c
+.RI "static void \fBinline_issue\fP (\fBaccount_name\fP to, token_type quantity)"
+.br
+.ti -1c
+.RI "static token_type \fBget_total_supply\fP ()"
+.br
+.ti -1c
+.RI "static void \fBapply\fP (\fBaccount_name\fP c, action_name act)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint64_t \fBcode\fP = token_type::code"
+.br
+.ti -1c
+.RI "static const uint64_t \fBsymbol\fP = token_type::symbol"
+.br
+.ti -1c
+.RI "static const uint64_t \fBaccounts_table_name\fP = \fBN\fP(\fBaccount\fP)"
+.br
+.ti -1c
+.RI "static const uint64_t \fBstats_table_name\fP = \fBN\fP(stat)"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename Token > typedef \fBaacio::multi_index\fP<accounts_table_name, \fBaccount\fP> \fBaacio::generic_currency\fP< Token >::\fBaccounts\fP"
+Each user stores their balance in the singleton table under the scope of their account name\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

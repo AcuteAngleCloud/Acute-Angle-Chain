@@ -1,0 +1,111 @@
+\hypertarget{log__message_8hpp}{}\section{libraries/fc/include/fc/log/log\+\_\+message.hpp File Reference}
+\label{log__message_8hpp}\index{libraries/fc/include/fc/log/log\+\_\+message.\+hpp@{libraries/fc/include/fc/log/log\+\_\+message.\+hpp}}
+
+
+Defines types and helper macros necessary for generating log messages.  
+
+
+{\ttfamily \#include $<$fc/time.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/variant\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/shared\+\_\+ptr.\+hpp$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for log\+\_\+message.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfc_1_1log__level}{fc\+::log\+\_\+level}}
+\item 
+class \mbox{\hyperlink{classfc_1_1log__context}{fc\+::log\+\_\+context}}
+\begin{DoxyCompactList}\small\item\em provides information about where and when a log message was generated. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classfc_1_1log__message}{fc\+::log\+\_\+message}}
+\begin{DoxyCompactList}\small\item\em aggregates a message along with the context and associated meta-\/information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacefc}{fc}}
+\begin{DoxyCompactList}\small\item\em aacio\+::chain \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{log__message_8hpp_a7d6e1cf1a8d53f38471e9e9db3faf740}\label{log__message_8hpp_a7d6e1cf1a8d53f38471e9e9db3faf740}} 
+\#define {\bfseries \+\_\+\+\_\+func\+\_\+\+\_\+}~\+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+
+\item 
+\#define \mbox{\hyperlink{log__message_8hpp_a123cc04b932788928fbe261f7c9bce5c}{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT}}(L\+O\+G\+\_\+\+L\+E\+V\+EL)~\mbox{\hyperlink{classfc_1_1log__context}{fc\+::log\+\_\+context}}( fc\+::log\+\_\+level\+::\+L\+O\+G\+\_\+\+L\+E\+V\+EL, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+ )
+\begin{DoxyCompactList}\small\item\em Automatically captures the File, Line, and Method names and passes them to the constructor of \mbox{\hyperlink{classfc_1_1log__context}{fc\+::log\+\_\+context}} along with L\+O\+G\+\_\+\+L\+E\+V\+EL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}}(L\+O\+G\+\_\+\+L\+E\+V\+EL,  F\+O\+R\+M\+AT, ...)~\mbox{\hyperlink{classfc_1_1log__message}{fc\+::log\+\_\+message}}( \mbox{\hyperlink{log__message_8hpp_a123cc04b932788928fbe261f7c9bce5c}{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT}}(L\+O\+G\+\_\+\+L\+E\+V\+EL), F\+O\+R\+M\+AT, \mbox{\hyperlink{classfc_1_1mutable__variant__object}{fc\+::mutable\+\_\+variant\+\_\+object}}()\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ )
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_a}{A}} helper method for generating log messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacefc_a54370140f7c964a12e90393d525605d1}\label{namespacefc_a54370140f7c964a12e90393d525605d1}} 
+typedef \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ log\+\_\+message $>$ {\bfseries fc\+::log\+\_\+messages}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacefc_aee0810f1b1db08ece638309bbb69c83f}\label{namespacefc_aee0810f1b1db08ece638309bbb69c83f}} 
+void {\bfseries fc\+::to\+\_\+variant} (log\+\_\+level e, variant \&v)
+\item 
+\mbox{\Hypertarget{namespacefc_a097ff38ff4be4e50bd7f201fa95420ff}\label{namespacefc_a097ff38ff4be4e50bd7f201fa95420ff}} 
+void {\bfseries fc\+::from\+\_\+variant} (const variant \&e, log\+\_\+level \&ll)
+\item 
+\mbox{\Hypertarget{namespacefc_a1872b514f4232a25742f1de9ee3fbbd1}\label{namespacefc_a1872b514f4232a25742f1de9ee3fbbd1}} 
+void {\bfseries fc\+::to\+\_\+variant} (const log\+\_\+context \&l, variant \&v)
+\item 
+\mbox{\Hypertarget{namespacefc_a78e632d9c5e00255b798eca04cd5cce8}\label{namespacefc_a78e632d9c5e00255b798eca04cd5cce8}} 
+void {\bfseries fc\+::from\+\_\+variant} (const variant \&l, log\+\_\+context \&c)
+\item 
+\mbox{\Hypertarget{namespacefc_ab05ec647d778a15b40131c0aa3fb1d6a}\label{namespacefc_ab05ec647d778a15b40131c0aa3fb1d6a}} 
+void {\bfseries fc\+::to\+\_\+variant} (const log\+\_\+message \&l, variant \&v)
+\item 
+\mbox{\Hypertarget{namespacefc_a414797c3e1b2bde73ccae17379991abc}\label{namespacefc_a414797c3e1b2bde73ccae17379991abc}} 
+void {\bfseries fc\+::from\+\_\+variant} (const variant \&l, log\+\_\+message \&c)
+\item 
+\mbox{\Hypertarget{log__message_8hpp_aa0b61f6968f811ab4871538712795174}\label{log__message_8hpp_aa0b61f6968f811ab4871538712795174}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+N\+A\+ME} (\mbox{\hyperlink{classfc_1_1log__message}{fc\+::log\+\_\+message}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines types and helper macros necessary for generating log messages. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{log__message_8hpp_a123cc04b932788928fbe261f7c9bce5c}\label{log__message_8hpp_a123cc04b932788928fbe261f7c9bce5c}} 
+\index{log\+\_\+message.\+hpp@{log\+\_\+message.\+hpp}!F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT@{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT}}
+\index{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT@{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT}!log\+\_\+message.\+hpp@{log\+\_\+message.\+hpp}}
+\subsubsection{\texorpdfstring{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT}{FC\_LOG\_CONTEXT}}
+{\footnotesize\ttfamily \#define F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT(\begin{DoxyParamCaption}\item[{}]{L\+O\+G\+\_\+\+L\+E\+V\+EL }\end{DoxyParamCaption})~\mbox{\hyperlink{classfc_1_1log__context}{fc\+::log\+\_\+context}}( fc\+::log\+\_\+level\+::\+L\+O\+G\+\_\+\+L\+E\+V\+EL, \+\_\+\+\_\+\+F\+I\+L\+E\+\_\+\+\_\+, \+\_\+\+\_\+\+L\+I\+N\+E\+\_\+\+\_\+, \+\_\+\+\_\+func\+\_\+\+\_\+ )}
+
+
+
+Automatically captures the File, Line, and Method names and passes them to the constructor of \mbox{\hyperlink{classfc_1_1log__context}{fc\+::log\+\_\+context}} along with L\+O\+G\+\_\+\+L\+E\+V\+EL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+O\+G\+\_\+\+L\+E\+V\+EL} & -\/ a valid log\+\_\+level\+::\+Enum name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}\label{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}} 
+\index{log\+\_\+message.\+hpp@{log\+\_\+message.\+hpp}!F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE@{F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}}
+\index{F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE@{F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}!log\+\_\+message.\+hpp@{log\+\_\+message.\+hpp}}
+\subsubsection{\texorpdfstring{F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}{FC\_LOG\_MESSAGE}}
+{\footnotesize\ttfamily \#define F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE(\begin{DoxyParamCaption}\item[{}]{L\+O\+G\+\_\+\+L\+E\+V\+EL,  }\item[{}]{F\+O\+R\+M\+AT,  }\item[{}]{... }\end{DoxyParamCaption})~\mbox{\hyperlink{classfc_1_1log__message}{fc\+::log\+\_\+message}}( \mbox{\hyperlink{log__message_8hpp_a123cc04b932788928fbe261f7c9bce5c}{F\+C\+\_\+\+L\+O\+G\+\_\+\+C\+O\+N\+T\+E\+XT}}(L\+O\+G\+\_\+\+L\+E\+V\+EL), F\+O\+R\+M\+AT, \mbox{\hyperlink{classfc_1_1mutable__variant__object}{fc\+::mutable\+\_\+variant\+\_\+object}}()\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ )}
+
+
+
+\mbox{\hyperlink{struct_a}{A}} helper method for generating log messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+O\+G\+\_\+\+L\+E\+V\+EL} & a valid log\+\_\+level\+::\+Enum name to be passed to the log\+\_\+context \\
+\hline
+{\em F\+O\+R\+M\+AT} & \mbox{\hyperlink{struct_a}{A}} const char$\ast$ string containing zero or more references to keys as \char`\"{}\$\{key\}\char`\"{} \\
+\hline
+{\em ...} & \mbox{\hyperlink{struct_a}{A}} set of key/value pairs denoted as (\char`\"{}key\char`\"{},val)(\char`\"{}key2\char`\"{},val2)... \\
+\hline
+\end{DoxyParams}

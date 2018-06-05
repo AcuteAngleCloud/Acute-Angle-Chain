@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3534 [label="ostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3534 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="fc::buffered_ostream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1buffered__ostream.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="aacio::utilities::padding\l_ostream\< BlockSize, PaddingChar \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1utilities_1_1padding__ostream.html"];
+  Node3534 -> Node3537 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3537 [label="fc::size_stream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1size__stream.html"];
+}

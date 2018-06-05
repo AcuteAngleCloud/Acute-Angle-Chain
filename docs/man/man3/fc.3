@@ -1,0 +1,2129 @@
+.TH "fc" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc \- aacio::chain  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBraw\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaac_extension_from_variant_visitor\fP"
+.br
+.ti -1c
+.RI "struct \fBaac_extension_to_variant_visitor\fP"
+.br
+.ti -1c
+.RI "class \fBactor\fP"
+.br
+.ti -1c
+.RI "class \fBaes_decoder\fP"
+.br
+.ti -1c
+.RI "class \fBaes_encoder\fP"
+.br
+.ti -1c
+.RI "struct \fBaligned\fP"
+.br
+.ti -1c
+.RI "class \fBapi\fP"
+.br
+.ti -1c
+.RI "class \fBapi_base\fP"
+.br
+.ti -1c
+.RI "class \fBapi_connection\fP"
+.br
+.ti -1c
+.RI "class \fBappender\fP"
+.br
+.ti -1c
+.RI "struct \fBappender_config\fP"
+.br
+.ti -1c
+.RI "class \fBappender_factory\fP"
+.br
+.ti -1c
+.RI "class \fBarray\fP"
+.br
+.ti -1c
+.RI "class \fBarray< char, N >\fP"
+.br
+.ti -1c
+.RI "class \fBarray< unsigned char, N >\fP"
+.br
+.ti -1c
+.RI "class \fBbigint\fP"
+.br
+.ti -1c
+.RI "class \fBbinary_api_connection\fP"
+.br
+.ti -1c
+.RI "struct \fBblob\fP"
+.br
+.ti -1c
+.RI "class \fBbloom_filter\fP"
+.br
+.ti -1c
+.RI "class \fBbloom_parameters\fP"
+.br
+.ti -1c
+.RI "class \fBblowfish\fP"
+.br
+.ti -1c
+.RI "class \fBbuffered_istream\fP"
+.br
+.RI "Reads data from an unbuffered stream and enables peek functionality\&. "
+.ti -1c
+.RI "class \fBbuffered_ostream\fP"
+.br
+.ti -1c
+.RI "class \fBcomma_numpunct\fP"
+.br
+.ti -1c
+.RI "class \fBconsole_appender\fP"
+.br
+.ti -1c
+.RI "class \fBdatastream\fP"
+.br
+.ti -1c
+.RI "class \fBdatastream< size_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBdeduce\fP"
+.br
+.ti -1c
+.RI "struct \fBdeduce< const T & >\fP"
+.br
+.ti -1c
+.RI "struct \fBdeduce< const T && >\fP"
+.br
+.ti -1c
+.RI "struct \fBdeduce< T & >\fP"
+.br
+.ti -1c
+.RI "struct \fBdeduce< T && >\fP"
+.br
+.ti -1c
+.RI "struct \fBdiffie_hellman\fP"
+.br
+.ti -1c
+.RI "class \fBdirectory_iterator\fP"
+.br
+.ti -1c
+.RI "class \fBenum_type\fP"
+.br
+.ti -1c
+.RI "class \fBexception\fP"
+.br
+.RI "Used to generate a useful error report when an exception is thrown\&.
+.PP
+At each level in the stack where the exception is caught and rethrown a new \fBlog_message\fP is added to the exception\&. "
+.ti -1c
+.RI "class \fBexception_factory\fP"
+.br
+.ti -1c
+.RI "struct \fBfalse_type\fP"
+.br
+.ti -1c
+.RI "class \fBfile_appender\fP"
+.br
+.ti -1c
+.RI "class \fBfile_mapping\fP"
+.br
+.ti -1c
+.RI "class \fBfixed_string\fP"
+.br
+.ti -1c
+.RI "struct \fBfrom_static_variant\fP"
+.br
+.ti -1c
+.RI "class \fBfrom_variant_visitor\fP"
+.br
+.ti -1c
+.RI "class \fBfwd\fP"
+.br
+.RI "Used to forward declare value types\&. "
+.ti -1c
+.RI "class \fBgelf_appender\fP"
+.br
+.ti -1c
+.RI "class \fBgeneric_api\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< bool >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< char >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< double >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< fc::array< T, N > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< fc::exception >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< flat_set< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< float >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< int16_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< int32_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< int64_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< int8_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< optional< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< path >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< signed_int >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< std::deque< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< std::map< K, V > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< std::vector< char > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< std::vector< T > >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< string >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< uint160_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< uint16_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< uint32_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< uint64_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< uint8_t >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< unsigned_int >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< value >\fP"
+.br
+.ti -1c
+.RI "struct \fBget_typename< void >\fP"
+.br
+.ti -1c
+.RI "class \fBhmac\fP"
+.br
+.ti -1c
+.RI "struct \fBidentity_member\fP"
+.br
+.ti -1c
+.RI "struct \fBif_enum\fP"
+.br
+.ti -1c
+.RI "struct \fBif_enum< fc::true_type >\fP"
+.br
+.ti -1c
+.RI "class \fBiobuffer\fP"
+.br
+.ti -1c
+.RI "class \fBiprocess\fP"
+.br
+.RI "abstract interface for interacting with external processes "
+.ti -1c
+.RI "struct \fBis_class\fP"
+.br
+.ti -1c
+.RI "struct \fBis_tuple\fP"
+.br
+.ti -1c
+.RI "class \fBjson\fP"
+.br
+.ti -1c
+.RI "class \fBlocal_api_connection\fP"
+.br
+.ti -1c
+.RI "class \fBlocal_binary_api_connection\fP"
+.br
+.ti -1c
+.RI "class \fBlog_context\fP"
+.br
+.RI "provides information about where and when a log message was generated\&. "
+.ti -1c
+.RI "class \fBlog_level\fP"
+.br
+.ti -1c
+.RI "class \fBlog_message\fP"
+.br
+.RI "aggregates a message along with the context and associated meta-information\&. "
+.ti -1c
+.RI "class \fBlogger\fP"
+.br
+.ti -1c
+.RI "struct \fBlogger_config\fP"
+.br
+.ti -1c
+.RI "struct \fBlogging_config\fP"
+.br
+.ti -1c
+.RI "class \fBmapped_region\fP"
+.br
+.ti -1c
+.RI "class \fBmicroseconds\fP"
+.br
+.ti -1c
+.RI "class \fBmmap_struct\fP"
+.br
+.RI "\fBA\fP struct that has been mapped from a file\&. "
+.ti -1c
+.RI "class \fBmutable_url\fP"
+.br
+.ti -1c
+.RI "class \fBmutable_variant_object\fP"
+.br
+.RI "An order-perserving dictionary of variant's\&. "
+.ti -1c
+.RI "class \fBnoncopyable\fP"
+.br
+.ti -1c
+.RI "struct \fBopenssl_scope\fP"
+.br
+.ti -1c
+.RI "struct \fBopenssl_thread_config\fP"
+.br
+.ti -1c
+.RI "class \fBoptional\fP"
+.br
+.RI "provides stack-based nullable value similar to boost::optional "
+.ti -1c
+.RI "class \fBpath\fP"
+.br
+.RI "wraps boost::filesystem::path to provide platform independent path manipulation\&. "
+.ti -1c
+.RI "class \fBprivate_key\fP"
+.br
+.ti -1c
+.RI "class \fBprocess\fP"
+.br
+.RI "start and manage an local process "
+.ti -1c
+.RI "class \fBpublic_key\fP"
+.br
+.ti -1c
+.RI "class \fBreal128\fP"
+.br
+.ti -1c
+.RI "class \fBrecursive_directory_iterator\fP"
+.br
+.ti -1c
+.RI "struct \fBreflector\fP"
+.br
+.RI "defines visit functions for \fBT\fP Unless this is specialized, visit() will not be defined for \fBT\fP\&. "
+.ti -1c
+.RI "struct \fBremove_reference\fP"
+.br
+.ti -1c
+.RI "struct \fBremove_reference< T & >\fP"
+.br
+.ti -1c
+.RI "struct \fBremove_reference< T && >\fP"
+.br
+.ti -1c
+.RI "class \fBretainable\fP"
+.br
+.RI "used to create reference counted types\&. "
+.ti -1c
+.RI "class \fBripemd160\fP"
+.br
+.ti -1c
+.RI "struct \fBsafe\fP"
+.br
+.ti -1c
+.RI "struct \fBsblock\fP"
+.br
+.ti -1c
+.RI "class \fBscoped_exit\fP"
+.br
+.ti -1c
+.RI "class \fBsha1\fP"
+.br
+.ti -1c
+.RI "class \fBsha224\fP"
+.br
+.ti -1c
+.RI "class \fBsha256\fP"
+.br
+.ti -1c
+.RI "class \fBsha512\fP"
+.br
+.ti -1c
+.RI "class \fBshared_ptr\fP"
+.br
+.ti -1c
+.RI "struct \fBsigned_int\fP"
+.br
+.RI "serializes a 32 bit signed interger in as few bytes as possible "
+.ti -1c
+.RI "class \fBsimple_lock_file\fP"
+.br
+.ti -1c
+.RI "class \fBsize_stream\fP"
+.br
+.ti -1c
+.RI "class \fBsmart_ref\fP"
+.br
+.RI "Used to forward declare value types and break circular dependencies or use heap allocation\&. "
+.ti -1c
+.RI "struct \fBssl_bignum\fP"
+.br
+.ti -1c
+.RI "struct \fBssl_wrapper\fP"
+.br
+.ti -1c
+.RI "class \fBstatic_variant\fP"
+.br
+.ti -1c
+.RI "class \fBtemp_directory\fP"
+.br
+.ti -1c
+.RI "class \fBtemp_file\fP"
+.br
+.ti -1c
+.RI "class \fBtemp_file_base\fP"
+.br
+.ti -1c
+.RI "class \fBtime_point\fP"
+.br
+.ti -1c
+.RI "class \fBtime_point_sec\fP"
+.br
+.ti -1c
+.RI "struct \fBto_static_variant\fP"
+.br
+.ti -1c
+.RI "class \fBto_variant_visitor\fP"
+.br
+.ti -1c
+.RI "struct \fBtrue_type\fP"
+.br
+.ti -1c
+.RI "struct \fBtuple\fP"
+.br
+.ti -1c
+.RI "struct \fBtuple<>\fP"
+.br
+.ti -1c
+.RI "class \fBudp_socket\fP"
+.br
+.ti -1c
+.RI "class \fBudt_epoll_service\fP"
+.br
+.ti -1c
+.RI "class \fBuint128\fP"
+.br
+.RI "an implementation of 128 bit unsigned integer "
+.ti -1c
+.RI "class \fBunhandled_exception\fP"
+.br
+.RI "re-thrown whenever an unhandled exception is caught\&.
+.PP
+Any exceptions thrown by 3rd party libraries that are not caught get wrapped in an \fBunhandled_exception\fP exception\&. "
+.ti -1c
+.RI "class \fBunique_ptr\fP"
+.br
+.ti -1c
+.RI "struct \fBunsigned_int\fP"
+.br
+.ti -1c
+.RI "class \fBurl\fP"
+.br
+.ti -1c
+.RI "class \fBvariant\fP"
+.br
+.RI "stores null, int64, uint64, double, bool, string, std::vector<variant>, and \fBvariant_object\fP's\&. "
+.ti -1c
+.RI "class \fBvariant_object\fP"
+.br
+.RI "An order-perserving dictionary of variant's\&. "
+.ti -1c
+.RI "class \fBvariant_stream\fP"
+.br
+.ti -1c
+.RI "class \fBvector\fP"
+.br
+.ti -1c
+.RI "struct \fBvisitor\fP"
+.br
+.ti -1c
+.RI "struct \fBvtable\fP"
+.br
+.ti -1c
+.RI "struct \fBvtable_copy_visitor\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef boost::any \fBany\fP"
+.br
+.ti -1c
+.RI "typedef uint32_t \fBapi_id_type\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr< \fBapi_base\fP > \fBapi_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBhmac\fP< \fBfc::sha224\fP > \fBhmac_sha224\fP"
+.br
+.ti -1c
+.RI "typedef \fBhmac\fP< \fBfc::sha256\fP > \fBhmac_sha256\fP"
+.br
+.ti -1c
+.RI "typedef \fBhmac\fP< \fBfc::sha512\fP > \fBhmac_sha512\fP"
+.br
+.ti -1c
+.RI "typedef \fBstd::vector\fP< char > \fBbytes\fP"
+.br
+.ti -1c
+.RI "typedef \fBbytes\fP \fBsignature\fP"
+.br
+.ti -1c
+.RI "typedef \fBripemd160\fP \fBuint160_t\fP"
+.br
+.ti -1c
+.RI "typedef \fBripemd160\fP \fBuint160\fP"
+.br
+.ti -1c
+.RI "typedef \fBsha256\fP \fBuint256\fP"
+.br
+.ti -1c
+.RI "typedef \fBfc::sha512\fP \fBuint512\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr< \fBexception\fP > \fBexception_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBoptional\fP< \fBexception\fP > \fBoexception\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr< \fBiprocess\fP > \fBiprocess_ptr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr< \fBprocess\fP > \fBprocess_ptr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr< \fBbuffered_istream\fP > \fBbuffered_istream_ptr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr< \fBbuffered_ostream\fP > \fBbuffered_ostream_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBstd::vector\fP< \fBlog_message\fP > \fBlog_messages\fP"
+.br
+.ti -1c
+.RI "typedef \fBfc::optional\fP< fc::string > \fBostring\fP"
+.br
+.ti -1c
+.RI "typedef \fBfc::optional\fP< \fBfc::path\fP > \fBopath\fP"
+.br
+.ti -1c
+.RI "typedef \fBfc::optional\fP< \fBfc::variant_object\fP > \fBovariant_object\fP"
+.br
+.ti -1c
+.RI "typedef std::string \fBstring\fP"
+.br
+.ti -1c
+.RI "typedef \fBfc::optional\fP< \fBtime_point\fP > \fBotime_point\fP"
+.br
+.ti -1c
+.RI "typedef \fBuint128\fP \fBuint128_t\fP"
+.br
+.ti -1c
+.RI "template<size_t Size> using \fBUInt\fP = number< cpp_int_backend< Size, Size, unsigned_magnitude, unchecked, void > >"
+.br
+.ti -1c
+.RI "template<size_t Size> using \fBInt\fP = number< cpp_int_backend< Size, Size, signed_magnitude, unchecked, void > >"
+.br
+.ti -1c
+.RI "typedef \fBstd::vector\fP< \fBvariant\fP > \fBvariants\fP"
+.br
+.ti -1c
+.RI "typedef \fBoptional\fP< \fBvariant\fP > \fBovariant\fP"
+.br
+.ti -1c
+.RI "typedef const char * \fBconst_char_ptr\fP"
+.br
+.ti -1c
+.RI "typedef boost::multiprecision::uint128_t \fBm128\fP"
+.br
+.ti -1c
+.RI "typedef const \fBvariant_object\fP * \fBconst_variant_object_ptr\fP"
+.br
+.ti -1c
+.RI "typedef const \fBvariants\fP * \fBconst_variants_ptr\fP"
+.br
+.ti -1c
+.RI "typedef const \fBblob\fP * \fBconst_blob_ptr\fP"
+.br
+.ti -1c
+.RI "typedef const string * \fBconst_string_ptr\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBexception_code\fP { \fBunspecified_exception_code\fP = 0, \fBunhandled_exception_code\fP = 1, \fBtimeout_exception_code\fP = 2, \fBfile_not_found_exception_code\fP = 3, \fBparse_error_exception_code\fP = 4, \fBinvalid_arg_exception_code\fP = 5, \fBkey_not_found_exception_code\fP = 6, \fBbad_cast_exception_code\fP = 7, \fBout_of_range_exception_code\fP = 8, \fBcanceled_exception_code\fP = 9, \fBassert_exception_code\fP = 10, \fBeof_exception_code\fP = 11, \fBstd_exception_code\fP = 13, \fBinvalid_operation_exception_code\fP = 14, \fBunknown_host_exception_code\fP = 15, \fBnull_optional_code\fP = 16, \fBudt_error_code\fP = 17, \fBaes_error_code\fP = 18, \fBoverflow_code\fP = 19, \fBunderflow_code\fP = 20, \fBdivide_by_zero_code\fP = 21 }"
+.br
+.ti -1c
+.RI "enum \fBmode_t\fP { \fBread_only\fP, \fBwrite_only\fP, \fBread_write\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<uint16_t IntervalMs, uint64_t EpochMs> void \fBto_variant\fP (const \fBaacio::chain::block_timestamp\fP< IntervalMs, EpochMs > &t, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "template<uint16_t IntervalMs, uint64_t EpochMs> void \fBfrom_variant\fP (const \fBfc::variant\fP &v, \fBaacio::chain::block_timestamp\fP< IntervalMs, EpochMs > &t)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBfc::variant\fP &var, \fBaacio::chain::extension\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBaacio::chain::extension\fP< \fBT\fP > &value, \fBfc::variant\fP &var)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBaacio::chain::name\fP &c, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBfc::variant\fP &v, \fBaacio::chain::name\fP &check)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBaacio::chain::symbol\fP &var, \fBfc::variant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBfc::variant\fP &var, \fBaacio::chain::symbol\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBaacio::chain::symbol_code\fP &var, \fBfc::variant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBfc::variant\fP &var, \fBaacio::chain::symbol_code\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T , size_t N> bool \fBoperator==\fP (const \fBarray\fP< \fBT\fP, \fBN\fP > &a, const \fBarray\fP< \fBT\fP, \fBN\fP > &b)"
+.br
+.ti -1c
+.RI "template<typename T , size_t N> bool \fBoperator<\fP (const \fBarray\fP< \fBT\fP, \fBN\fP > &a, const \fBarray\fP< \fBT\fP, \fBN\fP > &b)"
+.br
+.ti -1c
+.RI "template<typename T , size_t N> bool \fBoperator>\fP (const \fBarray\fP< \fBT\fP, \fBN\fP > &a, const \fBarray\fP< \fBT\fP, \fBN\fP > &b)"
+.br
+.ti -1c
+.RI "template<typename T , size_t N> bool \fBoperator!=\fP (const \fBarray\fP< \fBT\fP, \fBN\fP > &a, const \fBarray\fP< \fBT\fP, \fBN\fP > &b)"
+.br
+.ti -1c
+.RI "template<typename T , size_t N> void \fBto_variant\fP (const \fBarray\fP< \fBT\fP, \fBN\fP > &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T , size_t N> void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBarray\fP< \fBT\fP, \fBN\fP > &bi)"
+.br
+.ti -1c
+.RI "uint64_t \fBendian_reverse_u64\fP (uint64_t x)"
+.br
+.ti -1c
+.RI "uint32_t \fBendian_reverse_u32\fP (uint32_t x)"
+.br
+.ti -1c
+.RI "\fBbloom_filter\fP \fBoperator&\fP (const \fBbloom_filter\fP &a, const \fBbloom_filter\fP &b)"
+.br
+.ti -1c
+.RI "\fBbloom_filter\fP \fBoperator|\fP (const \fBbloom_filter\fP &a, const \fBbloom_filter\fP &b)"
+.br
+.ti -1c
+.RI "\fBbloom_filter\fP \fBoperator^\fP (const \fBbloom_filter\fP &a, const \fBbloom_filter\fP &b)"
+.br
+.ti -1c
+.RI "std::string \fBsmaz_compress\fP (const std::string &in)"
+.br
+.ti -1c
+.RI "std::string \fBsmaz_decompress\fP (const std::string &compressed)"
+.br
+.ti -1c
+.RI "string \fBzlib_compress\fP (const string &in)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const flat_set< \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, flat_set< \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename\&.\&.\&. T> void \fBto_variant\fP (const flat_map< K, T\&.\&.\&. > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T , typename\&.\&.\&. A> void \fBfrom_variant\fP (const \fBvariant\fP &var, flat_map< K, \fBT\fP, A\&.\&.\&. > &vo)"
+.br
+.ti -1c
+.RI "unsigned \fBaes_encrypt\fP (unsigned char *plaintext, int plaintext_len, unsigned char *key, unsigned char *iv, unsigned char *ciphertext)"
+.br
+.ti -1c
+.RI "unsigned \fBaes_decrypt\fP (unsigned char *ciphertext, int ciphertext_len, unsigned char *key, unsigned char *iv, unsigned char *plaintext)"
+.br
+.ti -1c
+.RI "unsigned \fBaes_cfb_decrypt\fP (unsigned char *ciphertext, int ciphertext_len, unsigned char *key, unsigned char *iv, unsigned char *plaintext)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBaes_encrypt\fP (const \fBfc::sha512\fP &key, const \fBstd::vector\fP< char > &plain_text)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBaes_decrypt\fP (const \fBfc::sha512\fP &key, const \fBstd::vector\fP< char > &cipher_text)"
+.br
+.ti -1c
+.RI "void \fBaes_save\fP (const \fBfc::path\fP &file, const \fBfc::sha512\fP &key, \fBstd::vector\fP< char > plain_text)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBaes_load\fP (const \fBfc::path\fP &file, const \fBfc::sha512\fP &key)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBfrom_base32\fP (const fc::string &b32)"
+.br
+.ti -1c
+.RI "fc::string \fBto_base32\fP (const \fBstd::vector\fP< char > &vec)"
+.br
+.ti -1c
+.RI "fc::string \fBto_base32\fP (const char *data, size_t len)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBfrom_base36\fP (const fc::string &b36)"
+.br
+.ti -1c
+.RI "fc::string \fBto_base36\fP (const \fBstd::vector\fP< char > &vec)"
+.br
+.ti -1c
+.RI "fc::string \fBto_base36\fP (const char *data, size_t len)"
+.br
+.ti -1c
+.RI "std::string \fBto_base58\fP (const char *d, size_t s)"
+.br
+.ti -1c
+.RI "std::string \fBto_base58\fP (const \fBstd::vector\fP< char > &data)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< char > \fBfrom_base58\fP (const std::string &base58_str)"
+.br
+.ti -1c
+.RI "size_t \fBfrom_base58\fP (const std::string &base58_str, char *out_data, size_t out_data_len)"
+.br
+.ti -1c
+.RI "std::string \fBbase64_encode\fP (unsigned char const *bytes_to_encode, unsigned int in_len)"
+.br
+.ti -1c
+.RI "std::string \fBbase64_encode\fP (char const *bytes_to_encode, unsigned int in_len)"
+.br
+.ti -1c
+.RI "std::string \fBbase64_encode\fP (const std::string &enc)"
+.br
+.ti -1c
+.RI "std::string \fBbase64_decode\fP (const std::string &encoded_string)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBbigint\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBbigint\fP &bi)"
+.br
+.ti -1c
+.RI "uint64_t \fBcity_hash64\fP (const char *buf, size_t len)"
+.br
+.ti -1c
+.RI "uint32_t \fBcity_hash32\fP (const char *buf, size_t len)"
+.br
+.ti -1c
+.RI "size_t \fBcity_hash_size_t\fP (const char *buf, size_t len)"
+.br
+.ti -1c
+.RI "\fBuint128\fP \fBcity_hash128\fP (const char *s, size_t len)"
+.br
+.ti -1c
+.RI "uint64_t \fBcity_hash_crc_64\fP (const char *buf, size_t len)"
+.br
+.ti -1c
+.RI "\fBuint128\fP \fBcity_hash_crc_128\fP (const char *s, size_t len)"
+.br
+.ti -1c
+.RI "\fBarray\fP< uint64_t, 4 > \fBcity_hash_crc_256\fP (const char *s, size_t len)"
+.br
+.ti -1c
+.RI "template<typename T > \fBfc::sha256\fP \fBdigest\fP (const \fBT\fP &value)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBecc::private_key\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBecc::private_key\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBecc::public_key\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBecc::public_key\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBcrypto::r1::private_key\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBcrypto::r1::private_key\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBcrypto::r1::public_key\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBcrypto::r1::public_key\fP &vo)"
+.br
+.ti -1c
+.RI "uint8_t \fBfrom_hex\fP (char c)"
+.br
+.ti -1c
+.RI "fc::string \fBto_hex\fP (const char *d, uint32_t s)"
+.br
+.ti -1c
+.RI "std::string \fBto_hex\fP (const \fBstd::vector\fP< char > &data)"
+.br
+.ti -1c
+.RI "size_t \fBfrom_hex\fP (const fc::string &hex_str, char *out_data, size_t out_data_len)"
+.br
+.ti -1c
+.RI "void \fBstore_configuration_path\fP (const \fBpath\fP &filePath)"
+.br
+.ti -1c
+.RI "int \fBinit_openssl\fP ()"
+.br
+.ti -1c
+.RI "void \fBgenerate_key_pair\fP (\fBpublic_key\fP &, \fBprivate_key\fP &)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBprivate_key\fP &a, const \fBprivate_key\fP &b)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBpublic_key\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBpublic_key\fP &bi)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBprivate_key\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBprivate_key\fP &bi)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBcrypto::private_key\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBcrypto::private_key\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBcrypto::public_key\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBcrypto::public_key\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBrand_bytes\fP (char *buf, int count)"
+.br
+.ti -1c
+.RI "void \fBrand_pseudo_bytes\fP (char *buf, int count)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBripemd160\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBripemd160\fP &bi)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBsha1\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBsha1\fP &bi)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBsha224\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBsha224\fP &bi)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBsha256\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBsha256\fP &bi)"
+.br
+.ti -1c
+.RI "uint64_t \fBhash64\fP (const char *buf, size_t len)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBsha512\fP &bi, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBsha512\fP &bi)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBcrypto::signature\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBcrypto::signature\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBexception\fP &e, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &e, \fBexception\fP &ll)"
+.br
+.ti -1c
+.RI "template<typename T > fc::exception_ptr \fBcopy_exception\fP (\fBT\fP &&e)"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (timeout_exception, \fBtimeout_exception_code\fP, 'Timeout')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (file_not_found_exception, file_not_found_exception_code, 'File Not Found')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (parse_error_exception, parse_error_exception_code, 'Parse Error')"
+.br
+.RI "report's parse errors "
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (invalid_arg_exception, invalid_arg_exception_code, 'Invalid Argument')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (key_not_found_exception, key_not_found_exception_code, 'Key Not Found')"
+.br
+.RI "reports when a key, guid, or other item is not found\&. "
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (bad_cast_exception, bad_cast_exception_code, 'Bad Cast')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (out_of_range_exception, out_of_range_exception_code, 'Out of Range')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (invalid_operation_exception, invalid_operation_exception_code, 'Invalid \fBOperation\fP')"
+.br
+.RI "if an operation is unsupported or not valid this may be thrown "
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (unknown_host_exception, unknown_host_exception_code, 'Unknown Host')"
+.br
+.RI "if an host name can not be resolved this may be thrown "
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (canceled_exception, canceled_exception_code, 'Canceled')"
+.br
+.RI "used to report a canceled \fBOperation\fP "
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (assert_exception, assert_exception_code, 'Assert Exception')"
+.br
+.RI "used inplace of assert() to report violations of pre conditions\&. "
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (eof_exception, eof_exception_code, 'End Of File')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (null_optional, null_optional_code, 'null \fBoptional\fP')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (udt_exception, udt_error_code, 'UDT \fBerror\fP')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (aes_exception, aes_error_code, 'AES \fBerror\fP')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (overflow_exception, overflow_code, 'Integer Overflow')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (underflow_exception, underflow_code, 'Integer Underflow')"
+.br
+.ti -1c
+.RI "\fBFC_DECLARE_EXCEPTION\fP (divide_by_zero_exception, divide_by_zero_code, 'Integer Divide By \fBZero\fP')"
+.br
+.ti -1c
+.RI "std::string \fBexcept_str\fP ()"
+.br
+.ti -1c
+.RI "void \fBrecord_assert_trip\fP (const char *filename, uint32_t lineno, const char *expr)"
+.br
+.ti -1c
+.RI "bool \fBexists\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "bool \fBis_directory\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "bool \fBis_regular_file\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "void \fBcreate_directories\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "void \fBremove_all\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBabsolute\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBmake_relative\fP (const \fBpath\fP &from, const \fBpath\fP &to)"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBcanonical\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "uint64_t \fBfile_size\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "uint64_t \fBdirectory_size\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "bool \fBremove\fP (const \fBpath\fP &p)"
+.br
+.ti -1c
+.RI "void \fBcopy\fP (const \fBpath\fP &from, const \fBpath\fP &to)"
+.br
+.ti -1c
+.RI "void \fBrename\fP (const \fBpath\fP &from, const \fBpath\fP &to)"
+.br
+.ti -1c
+.RI "void \fBresize_file\fP (const \fBpath\fP &file, size_t s)"
+.br
+.ti -1c
+.RI "void \fBchmod\fP (const \fBpath\fP &p, int perm)"
+.br
+.ti -1c
+.RI "void \fBcreate_hard_link\fP (const \fBpath\fP &from, const \fBpath\fP &to)"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBunique_path\fP ()"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBtemp_directory_path\fP ()"
+.br
+.ti -1c
+.RI "const \fBpath\fP & \fBhome_path\fP ()"
+.br
+.ti -1c
+.RI "const \fBpath\fP & \fBapp_path\fP ()"
+.br
+.ti -1c
+.RI "const \fBfc::path\fP & \fBcurrent_path\fP ()"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBfc::path\fP &, \fBfc::variant\fP &)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBfc::variant\fP &, \fBfc::path\fP &)"
+.br
+.ti -1c
+.RI "template<typename Storage > void \fBto_variant\fP (const \fBfixed_string\fP< \fBStorage\fP > &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Storage > void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBfixed_string\fP< \fBStorage\fP > &s)"
+.br
+.ti -1c
+.RI "template<typename T , unsigned int S, typename U , typename A > auto \fBoperator+\fP (const \fBfwd\fP< \fBT\fP, \fBS\fP, \fBA\fP > &x, \fBU\fP &&u) \-> typename \fBdetail::add\fP< \fBT\fP, \fBU\fP >::type"
+.br
+.ti -1c
+.RI "template<typename T , unsigned int S, typename U , typename A > auto \fBoperator\-\fP (const \fBfwd\fP< \fBT\fP, \fBS\fP, \fBA\fP > &x, \fBU\fP &&u) \-> typename \fBdetail::sub\fP< \fBT\fP, \fBU\fP >::type"
+.br
+.ti -1c
+.RI "template<typename T , unsigned int S, typename U , typename A > auto \fBoperator<<\fP (\fBU\fP &u, const \fBfwd\fP< \fBT\fP, \fBS\fP, \fBA\fP > &f) \-> typename \fBdetail::insert_op\fP< \fBU\fP, \fBT\fP >::type"
+.br
+.ti -1c
+.RI "template<typename T , unsigned int S, typename U , typename A > auto \fBoperator>>\fP (\fBU\fP &u, \fBfwd\fP< \fBT\fP, \fBS\fP, \fBA\fP > &f) \-> typename \fBdetail::extract_op\fP< \fBU\fP, \fBT\fP >::type"
+.br
+.ti -1c
+.RI "template<uint64_t RequiredSize, uint64_t ProvidedSize> void \fBcheck_size\fP ()"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. T> void \fBto_variant\fP (const bip::deque< T\&.\&.\&. > &t, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. A> void \fBfrom_variant\fP (const \fBfc::variant\fP &v, bip::deque< \fBT\fP, A\&.\&.\&. > &d)"
+.br
+.ti -1c
+.RI "template<typename K , typename V , typename\&.\&.\&. T> void \fBto_variant\fP (const bip::map< K, \fBV\fP, T\&.\&.\&. > &var, \fBfc::variant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. T> void \fBto_variant\fP (const bip::vector< T\&.\&.\&. > &t, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. A> void \fBfrom_variant\fP (const \fBfc::variant\fP &v, bip::vector< \fBT\fP, A\&.\&.\&. > &d)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. T> void \fBto_variant\fP (const bip::set< T\&.\&.\&. > &t, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. A> void \fBto_variant\fP (const bip::vector< char, A\&.\&.\&. > &t, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. A> void \fBfrom_variant\fP (const \fBfc::variant\fP &v, bip::vector< char, A\&.\&.\&. > &d)"
+.br
+.ti -1c
+.RI "\fBfc::path\fP \fBfind_executable_in_path\fP (const fc::string name)"
+.br
+.ti -1c
+.RI "void \fBset_console_echo\fP (bool enable_echo)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const int32_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, int32_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const uint32_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, uint32_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const int64_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, int64_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const uint64_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, uint64_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const int16_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, int16_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const uint16_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, uint16_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const int8_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, int8_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST > \fBdatastream\fP< ST > & \fBoperator<<\fP (\fBdatastream\fP< ST > &ds, const uint8_t &d)"
+.br
+.ti -1c
+.RI "template<typename ST , typename DATA > \fBdatastream\fP< ST > & \fBoperator>>\fP (\fBdatastream\fP< ST > &ds, uint8_t &d)"
+.br
+.ti -1c
+.RI "template<typename IntType , typename EnumType > void \fBto_variant\fP (const \fBenum_type\fP< IntType, \fBEnumType\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename IntType , typename EnumType > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBenum_type\fP< IntType, \fBEnumType\fP > &vo)"
+.br
+.ti -1c
+.RI "void \fBread_file_contents\fP (const \fBfc::path\fP &filename, std::string &result)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBsigned_int\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBsigned_int\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBunsigned_int\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBunsigned_int\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (\fBlog_level\fP e, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &e, \fBlog_level\fP &ll)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBlog_context\fP &l, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &l, \fBlog_context\fP &c)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBlog_message\fP &l, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &l, \fBlog_message\fP &c)"
+.br
+.ti -1c
+.RI "void \fBconfigure_logging\fP (const \fBfc::path\fP &log_config)"
+.br
+.ti -1c
+.RI "bool \fBconfigure_logging\fP (const \fBlogging_config\fP &l)"
+.br
+.ti -1c
+.RI "void \fBset_thread_name\fP (const string &name)"
+.br
+.ti -1c
+.RI "const string & \fBget_thread_name\fP ()"
+.br
+.ti -1c
+.RI "template<typename R > std::function< R, \fBfc::tuple\fP<> > \fBmake_fused\fP (const std::function< R > &f)"
+.br
+.ti -1c
+.RI "template<typename R , typename A > std::function< R(\fBfc::tuple\fP< \fBA\fP >) > \fBmake_fused\fP (const std::function< R(\fBA\fP)> &f)"
+.br
+.ti -1c
+.RI "template<typename R , typename A , typename B > std::function< R(\fBfc::tuple\fP< \fBA\fP, \fBB\fP >) > \fBmake_fused\fP (const std::function< R(\fBA\fP, \fBB\fP)> &f)"
+.br
+.ti -1c
+.RI "template<typename R , typename A , typename B , typename C > std::function< R(\fBfc::tuple\fP< \fBA\fP, \fBB\fP, \fBC\fP >) > \fBmake_fused\fP (const std::function< R(\fBA\fP, \fBB\fP, \fBC\fP)> &f)"
+.br
+.ti -1c
+.RI "template<typename R , typename A , typename B , typename C , typename D > std::function< R(\fBfc::tuple\fP< \fBA\fP, \fBB\fP, \fBC\fP, \fBD\fP >) > \fBmake_fused\fP (const std::function< R(\fBA\fP, \fBB\fP, \fBC\fP, \fBD\fP)> &f)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBip::endpoint\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBip::endpoint\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBip::address\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBip::address\fP &vo)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< boost::asio::ip::udp::endpoint > \fBresolve\fP (boost::asio::io_service &io_service, const std::string &host, uint16_t port)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBurl\fP &u, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBfc::variant\fP &v, \fBurl\fP &u)"
+.br
+.ti -1c
+.RI "bool \fBassert_optional\fP (bool is_valid)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBoperator==\fP (const \fBoptional\fP< \fBT\fP > &left, const \fBoptional\fP< \fBT\fP > &right)"
+.br
+.ti -1c
+.RI "template<typename T , typename U > bool \fBoperator==\fP (const \fBoptional\fP< \fBT\fP > &left, const \fBU\fP &u)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBoperator!=\fP (const \fBoptional\fP< \fBT\fP > &left, const \fBoptional\fP< \fBT\fP > &right)"
+.br
+.ti -1c
+.RI "template<typename T , typename U > bool \fBoperator!=\fP (const \fBoptional\fP< \fBT\fP > &left, const \fBU\fP &u)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBreal128\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBreal128\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBthrow_bad_enum_cast\fP (int64_t i, const char *e)"
+.br
+.ti -1c
+.RI "void \fBthrow_bad_enum_cast\fP (const char *k, const char *e)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBT\fP &o, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBT\fP &o)"
+.br
+.ti -1c
+.RI "template<typename Callback > \fBscoped_exit\fP< Callback > \fBmake_scoped_exit\fP (Callback &&c)"
+.br
+.ti -1c
+.RI "template<typename T , typename O > \fBfc::shared_ptr\fP< \fBT\fP > \fBdynamic_pointer_cast\fP (const \fBfc::shared_ptr\fP< O > &t)"
+.br
+.ti -1c
+.RI "template<typename T , typename O > \fBfc::shared_ptr\fP< \fBT\fP > \fBstatic_pointer_cast\fP (const \fBfc::shared_ptr\fP< O > &t)"
+.br
+.ti -1c
+.RI "template<typename T , typename U > auto \fBoperator<<\fP (\fBU\fP &u, const \fBsmart_ref\fP< \fBT\fP > &f) \-> typename \fBdetail::insert_op\fP< \fBU\fP, \fBT\fP >::type"
+.br
+.ti -1c
+.RI "template<typename T , typename U > auto \fBoperator>>\fP (\fBU\fP &u, \fBsmart_ref\fP< \fBT\fP > &f) \-> typename \fBdetail::extract_op\fP< \fBU\fP, \fBT\fP >::type"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. T> void \fBto_variant\fP (const \fBfc::static_variant\fP< T\&.\&.\&. > &s, \fBfc::variant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. T> void \fBfrom_variant\fP (const \fBfc::variant\fP &v, \fBfc::static_variant\fP< T\&.\&.\&. > &s)"
+.br
+.ti -1c
+.RI "int64_t \fBto_int64\fP (const fc::string &)"
+.br
+.ti -1c
+.RI "uint64_t \fBto_uint64\fP (const fc::string &)"
+.br
+.ti -1c
+.RI "double \fBto_double\fP (const fc::string &)"
+.br
+.ti -1c
+.RI "fc::string \fBto_string\fP (double)"
+.br
+.ti -1c
+.RI "fc::string \fBto_string\fP (uint64_t)"
+.br
+.ti -1c
+.RI "fc::string \fBto_string\fP (int64_t)"
+.br
+.ti -1c
+.RI "fc::string \fBto_string\fP (uint16_t)"
+.br
+.ti -1c
+.RI "std::string \fBto_pretty_string\fP (int64_t)"
+.br
+.ti -1c
+.RI "fc::string \fBto_string\fP (int32_t v)"
+.br
+.ti -1c
+.RI "fc::string \fBto_string\fP (uint32_t v)"
+.br
+.ti -1c
+.RI "fc::string \fBformat_string\fP (const fc::string &, const \fBvariant_object\fP &)"
+.br
+.ti -1c
+.RI "fc::string \fBtrim\fP (const fc::string &)"
+.br
+.ti -1c
+.RI "fc::string \fBto_lower\fP (const fc::string &)"
+.br
+.ti -1c
+.RI "string \fBtrim_and_normalize_spaces\fP (const string &s)"
+.br
+.ti -1c
+.RI "\fBmicroseconds\fP \fBseconds\fP (int64_t s)"
+.br
+.ti -1c
+.RI "\fBmicroseconds\fP \fBmilliseconds\fP (int64_t s)"
+.br
+.ti -1c
+.RI "\fBmicroseconds\fP \fBminutes\fP (int64_t m)"
+.br
+.ti -1c
+.RI "\fBmicroseconds\fP \fBhours\fP (int64_t h)"
+.br
+.ti -1c
+.RI "\fBmicroseconds\fP \fBdays\fP (int64_t d)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBfc::microseconds\fP &, \fBfc::variant\fP &)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBfc::variant\fP &, \fBfc::microseconds\fP &)"
+.br
+.ti -1c
+.RI "string \fBget_approximate_relative_time_string\fP (const \fBtime_point_sec\fP &event_time, const \fBtime_point_sec\fP &relative_to_time=fc::time_point::now(), const std::string &ago=' ago')"
+.br
+.ti -1c
+.RI "string \fBget_approximate_relative_time_string\fP (const \fBtime_point\fP &event_time, const \fBtime_point\fP &relative_to_time=fc::time_point::now(), const std::string &ago=' ago')"
+.br
+.ti -1c
+.RI "template<typename Functor > auto \fBcall_fused\fP (Functor f, const \fBtuple\fP<> &t) \-> decltype(f())"
+.br
+.ti -1c
+.RI "\fBtuple\fP \fBmake_tuple\fP ()"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBuint128\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBuint128\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const unsigned __int128 &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, unsigned __int128 &vo)"
+.br
+.ti -1c
+.RI "std::string \fBprune_invalid_utf8\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "bool \fBis_utf8\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "void \fBdecodeUtf8\fP (const std::string &input, std::wstring *storage)"
+.br
+.ti -1c
+.RI "void \fBencodeUtf8\fP (const std::wstring &input, std::string *storage)"
+.br
+.ti -1c
+.RI "template<typename T > \fBfc::remove_reference\fP< \fBT\fP >::type && \fBmove\fP (\fBT\fP &&t)"
+.br
+.ti -1c
+.RI "template<typename T , typename U > \fBT\fP && \fBforward\fP (\fBU\fP &&u)"
+.br
+.ti -1c
+.RI "template<typename T > const \fBT\fP & \fBmin\fP (const \fBT\fP &a, const \fBT\fP &b)"
+.br
+.ti -1c
+.RI "constexpr size_t \fBconst_strlen\fP (const char *str)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBmove_append\fP (\fBstd::vector\fP< \fBT\fP > &dest, \fBstd::vector\fP< \fBT\fP > &&src)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBcopy_append\fP (\fBstd::vector\fP< \fBT\fP > &dest, const \fBstd::vector\fP< \fBT\fP > &src)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBdeduplicate\fP (\fBstd::vector\fP< \fBT\fP > &entries)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBblob\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBblob\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. Args> void \fBto_variant\fP (const boost::multi_index_container< \fBT\fP, Args\&.\&.\&. > &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. Args> void \fBfrom_variant\fP (const \fBvariant\fP &v, boost::multi_index_container< \fBT\fP, Args\&.\&.\&. > &s)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const UInt< 8 > &n, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, UInt< 8 > &n)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const UInt< 16 > &n, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, UInt< 16 > &n)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const UInt< 32 > &n, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, UInt< 32 > &n)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const UInt< 64 > &n, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &v, UInt< 64 > &n)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const boost::multiprecision::number< \fBT\fP > &n, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &v, boost::multiprecision::number< \fBT\fP > &n)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBsmart_ref\fP< \fBT\fP > &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBsmart_ref\fP< \fBT\fP > &s)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBsafe\fP< \fBT\fP > &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &v, \fBsafe\fP< \fBT\fP > &s)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const std::unique_ptr< \fBT\fP > &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &v, std::unique_ptr< \fBT\fP > &s)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const uint8_t &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, uint8_t &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const int8_t &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, int8_t &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const uint16_t &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, uint16_t &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const int16_t &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, int16_t &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const uint32_t &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, uint32_t &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const int32_t &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, int32_t &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBvariant_object\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBvariant_object\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBmutable_variant_object\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBmutable_variant_object\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBstd::vector\fP< char > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::vector\fP< char > &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T > void \fBto_variant\fP (const \fBstd::unordered_map\fP< K, \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::unordered_map\fP< K, \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename\&.\&.\&. T> void \fBfrom_variant\fP (const \fBvariant\fP &var, fc::flat_map< K, T\&.\&.\&. > &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T > void \fBto_variant\fP (const \fBstd::map\fP< K, \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::map\fP< K, \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T > void \fBto_variant\fP (const \fBstd::multimap\fP< K, \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename K , typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::multimap\fP< K, \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBstd::unordered_set\fP< \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::unordered_set\fP< \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBstd::deque\fP< \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::deque\fP< \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBstd::set\fP< \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::set\fP< \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBtime_point\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBtime_point\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const \fBtime_point_sec\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBtime_point_sec\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (long long int s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (unsigned long long int s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "void \fBto_variant\fP (const std::string &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const std::shared_ptr< \fBT\fP > &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, std::shared_ptr< \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename A , typename B > void \fBto_variant\fP (const std::pair< \fBA\fP, \fBB\fP > &t, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename A , typename B > void \fBfrom_variant\fP (const \fBvariant\fP &v, std::pair< \fBA\fP, \fBB\fP > &p)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, string &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBvariants\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBvariant\fP &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, int64_t &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, uint64_t &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, bool &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, double &vo)"
+.br
+.ti -1c
+.RI "void \fBfrom_variant\fP (const \fBvariant\fP &var, float &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBoptional\fP< \fBT\fP > &vo)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBfrom_variant\fP (const \fBvariant\fP &var, \fBstd::vector\fP< \fBT\fP > &tmp)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_variant\fP (const \fBstd::vector\fP< \fBT\fP > &t, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "\fBvariant\fP \fBoperator+\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "\fBvariant\fP \fBoperator\-\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "\fBvariant\fP \fBoperator*\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "\fBvariant\fP \fBoperator/\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!\fP (const \fBvariant\fP &a)"
+.br
+.ti -1c
+.RI "uint32_t \fBsmaz_compress\fP (const char *in, int inlen, char *out, int outlen)"
+.br
+.ti -1c
+.RI "void \fBsmaz_decompress\fP (const char *in, uint32_t inlen, std::stringstream &ss)"
+.br
+.ti -1c
+.RI "const std::string & \fBbase64_chars\fP ()"
+.br
+.ti -1c
+.RI "unsigned char \fBByte\fP (unsigned int ui)"
+.br
+.ti -1c
+.RI "void \fBBytesToBlock\fP (unsigned char const *p, \fBsblock\fP &b)"
+.br
+.ti -1c
+.RI "void \fBBlockToBytes\fP (\fBsblock\fP const &b, unsigned char *p)"
+.br
+.ti -1c
+.RI "uint64_t \fBUint128Low64\fP (const \fBuint128\fP &x)"
+.br
+.ti -1c
+.RI "uint64_t \fBUint128High64\fP (const \fBuint128\fP &x)"
+.br
+.ti -1c
+.RI "uint64_t \fBHash128to64\fP (const \fBuint128\fP &x)"
+.br
+.ti -1c
+.RI "uint64_t \fBCityHash64WithSeeds\fP (const char *s, size_t len, uint64_t seed0, uint64_t seed1)"
+.br
+.ti -1c
+.RI "uint64_t \fBCityHash64WithSeed\fP (const char *s, size_t len, uint64_t seed)"
+.br
+.ti -1c
+.RI "\fBuint128\fP \fBCityHash128WithSeed\fP (const char *s, size_t len, \fBuint128\fP seed)"
+.br
+.ti -1c
+.RI "void \fBCityHashCrc256\fP (const char *s, size_t len, uint64_t *result)"
+.br
+.ti -1c
+.RI "\fBuint128\fP \fBCityHashCrc128WithSeed\fP (const char *s, size_t len, \fBuint128\fP seed)"
+.br
+.ti -1c
+.RI "\fBripemd160\fP \fBoperator<<\fP (const \fBripemd160\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "\fBripemd160\fP \fBoperator^\fP (const \fBripemd160\fP &h1, const \fBripemd160\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBripemd160\fP &h1, const \fBripemd160\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBripemd160\fP &h1, const \fBripemd160\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBripemd160\fP &h1, const \fBripemd160\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBripemd160\fP &h1, const \fBripemd160\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBripemd160\fP &h1, const \fBripemd160\fP &h2)"
+.br
+.ti -1c
+.RI "\fBsha1\fP \fBoperator<<\fP (const \fBsha1\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "\fBsha1\fP \fBoperator^\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "\fBsha224\fP \fBoperator<<\fP (const \fBsha224\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "\fBsha224\fP \fBoperator^\fP (const \fBsha224\fP &h1, const \fBsha224\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBsha224\fP &h1, const \fBsha224\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBsha224\fP &h1, const \fBsha224\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBsha224\fP &h1, const \fBsha224\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBsha224\fP &h1, const \fBsha224\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBsha224\fP &h1, const \fBsha224\fP &h2)"
+.br
+.ti -1c
+.RI "\fBsha256\fP \fBoperator<<\fP (const \fBsha256\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "\fBsha256\fP \fBoperator>>\fP (const \fBsha256\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "\fBsha256\fP \fBoperator^\fP (const \fBsha256\fP &h1, const \fBsha256\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBsha256\fP &h1, const \fBsha256\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBsha256\fP &h1, const \fBsha256\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBsha256\fP &h1, const \fBsha256\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBsha256\fP &h1, const \fBsha256\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBsha256\fP &h1, const \fBsha256\fP &h2)"
+.br
+.ti -1c
+.RI "\fBsha512\fP \fBoperator<<\fP (const \fBsha512\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "\fBsha512\fP \fBoperator^\fP (const \fBsha512\fP &h1, const \fBsha512\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBsha512\fP &h1, const \fBsha512\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBsha512\fP &h1, const \fBsha512\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBsha512\fP &h1, const \fBsha512\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBsha512\fP &h1, const \fBsha512\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBsha512\fP &h1, const \fBsha512\fP &h2)"
+.br
+.ti -1c
+.RI "() file_not_found_exception() parse_error_exception() invalid_arg_exception() invalid_operation_exception() key_not_found_exception() bad_cast_exception() out_of_range_exception() canceled_exception() assert_exception() eof_exception() unknown_host_exception() null_optional() udt_exception() aes_exception() overflow_exception() \fBunderflow_exception\fP (divide_by_zero_exception)) namespace detail"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBfc::path\fP &l, const \fBfc::path\fP &r)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBfc::path\fP &l, const \fBfc::path\fP &r)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBfc::path\fP &l, const \fBfc::path\fP &r)"
+.br
+.ti -1c
+.RI "\fBpath\fP \fBoperator/\fP (const \fBfc::path\fP &p, const \fBfc::path\fP &o)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBdirectory_iterator\fP &r, const \fBdirectory_iterator\fP &l)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBdirectory_iterator\fP &r, const \fBdirectory_iterator\fP &l)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBrecursive_directory_iterator\fP &r, const \fBrecursive_directory_iterator\fP &l)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBrecursive_directory_iterator\fP &r, const \fBrecursive_directory_iterator\fP &l)"
+.br
+.ti -1c
+.RI "template<typename T , json::parse_type parser_type> \fBvariant\fP \fBvariant_from_stream\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T > char \fBparseEscape\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T > std::string \fBstringFromStream\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T > bool \fBskip_white_space\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T > std::string \fBstringFromToken\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T , json::parse_type parser_type> \fBvariant_object\fP \fBobjectFromStream\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T , json::parse_type parser_type> \fBvariants\fP \fBarrayFromStream\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T , json::parse_type parser_type> \fBvariant\fP \fBnumber_from_stream\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "template<typename T > \fBvariant\fP \fBtoken_from_stream\fP (\fBT\fP &in)"
+.br
+.ti -1c
+.RI "void \fBescape_string\fP (const std::string &str, std::ostream &os)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_stream\fP (\fBT\fP &os, const \fBvariants\fP &a, json::output_formatting format)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_stream\fP (\fBT\fP &os, const \fBvariant_object\fP &o, json::output_formatting format)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBto_stream\fP (\fBT\fP &os, const \fBvariant\fP &v, json::output_formatting format)"
+.br
+.ti -1c
+.RI "std::string \fBpretty_print\fP (const std::string &v, uint8_t indent)"
+.br
+.ti -1c
+.RI "void \fBcheck_string_depth\fP (const string &utf8_str)"
+.br
+.ti -1c
+.RI "\fBstd::unordered_map\fP< std::string, \fBappender::ptr\fP > & \fBget_appender_map\fP ()"
+.br
+.ti -1c
+.RI "\fBstd::unordered_map\fP< std::string, \fBappender_factory::ptr\fP > & \fBget_appender_factory_map\fP ()"
+.br
+.ti -1c
+.RI "boost::mutex & \fBlog_mutex\fP ()"
+.br
+.ti -1c
+.RI "boost::mutex & \fBgelf_log_mutex\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBlogger\fP &l, std::nullptr_t)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBlogger\fP &l, std::nullptr_t)"
+.br
+.ti -1c
+.RI "\fBstd::unordered_map\fP< std::string, \fBlogger\fP > & \fBget_logger_map\fP ()"
+.br
+.ti -1c
+.RI "void \fBcheck_udt_errors\fP ()"
+.br
+.ti -1c
+.RI "\fBudt_epoll_service\fP & \fBdefault_epool_service\fP ()"
+.br
+.ti -1c
+.RI "std::shared_ptr< \fBdetail::url_impl\fP > \fBget_null_url\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_variant_type\fP (\fBvariant\fP *v, variant::type_id t)"
+.br
+.ti -1c
+.RI "bool \fBoperator<=\fP (const \fBvariant\fP &a, const \fBvariant\fP &b)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "bool \fBenable_record_assert_trip\fP = false"
+.br
+.ti -1c
+.RI "const char *const \fBgit_revision_sha\fP"
+.br
+.ti -1c
+.RI "const uint32_t \fBgit_revision_unix_timestamp\fP"
+.br
+.ti -1c
+.RI "decltype(nullptr) typedef \fBnullptr_t\fP"
+.br
+.ti -1c
+.RI "\fBopenssl_thread_config\fP \fBopenssl_thread_config_manager\fP"
+.br
+.ti -1c
+.RI "bool \fBdo_default_config\fP = configure_logging( logging_config::default_config() )"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+aacio::chain 
+
+This file contains general purpose utilities related to UTF-8 <-> Unicode conversions\&.
+.PP
+This source adapted from https://github.com/kmicklas/variadic-static_variant
+.PP
+Copyright (\fBC\fP) 2013 Kenneth Micklas
+.PP
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+.PP
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software\&.
+.PP
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR \fBA\fP PARTICULAR PURPOSE AND NONINFRINGEMENT\&. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE\&.
+.PP
+Implemented with std::string for now\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBfc::exception_code\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIunspecified_exception_code \fP\fP
+for exceptions we threw that don't have an assigned code 
+.TP
+\fB\fIunhandled_exception_code \fP\fP
+for unhandled 3rd party exceptions 
+.TP
+\fB\fItimeout_exception_code \fP\fP
+timeout exceptions 
+.SH "Function Documentation"
+.PP 
+.SS "unsigned fc::aes_encrypt (unsigned char * plaintext, int plaintext_len, unsigned char * key, unsigned char * iv, unsigned char * ciphertext)"
+example method from wiki\&.opensslfoundation\&.com 
+.SS "\fBstd::vector\fP< char > fc::aes_load (const \fBfc::path\fP & file, const \fBfc::sha512\fP & key)"
+recovers the plain_text saved via \fBaes_save()\fP 
+.SS "void fc::aes_save (const \fBfc::path\fP & file, const \fBfc::sha512\fP & key, \fBstd::vector\fP< char > plain_text)"
+encrypts plain_text and then includes a checksum that enables us to verify the integrety of the file / key prior to decryption\&. 
+.SS "const \fBfc::path\fP & fc::app_path ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the \fBhome_path()\fP on Linux, \fBhome_path()\fP/Library/Application Support/ on OS \fBX\fP, and APPDATA on windows 
+.RE
+.PP
+
+.SS "void fc::check_string_depth (const string & utf8_str)"
+the purpose of this check is to verify that we will not get a stack overflow in the recursive descent parser 
+.SS "const \fBfc::path\fP & fc::current_path ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+application executable path 
+.RE
+.PP
+
+.SS "void fc::decodeUtf8 (const std::string & input, std::wstring * storage)"
+Decodes utf 8 std::string into unicode string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinput\fP - input string to be decoded and stored in 'storage' 
+.br
+\fIstorage\fP - buffer for converted text\&. Cannot be nullptr\&. 
+.RE
+.PP
+
+.SS "void fc::encodeUtf8 (const std::wstring & input, std::string * storage)"
+Encodes given wide (unicode) string into UTF-8 representation\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinput\fP - input string to be encoded and stored in 'storage' 
+.br
+\fIstorage\fP - buffer for converted text\&. Cannot be nullptr\&. 
+.RE
+.PP
+
+.SS "void fc::escape_string (const string & str, std::ostream & os)"
+Convert '', '\fI\fP', '
+.br
+', '\\' and ''' to '\\t\\a\\n\\\\\\'"
+.PP
+All other characters are printed as UTF8\&. 
+.SS "size_t fc::from_base58 (const std::string & base58_str, char * out_data, size_t out_data_len)"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of bytes decoded 
+.RE
+.PP
+
+.SS "size_t fc::from_hex (const fc::string & hex_str, char * out_data, size_t out_data_len)"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the number of bytes decoded 
+.RE
+.PP
+
+.SS "void fc::from_variant (const \fBvariant\fP & v, \fBbigint\fP & bi)"
+decodes the big int as base64 string, or a number 
+.SS "void fc::from_variant (const \fBvariant\fP & var, uint32_t & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, int32_t & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, \fBvariant_object\fP & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, \fBmutable_variant_object\fP & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & v, \fBpublic_key\fP & bi)"
+decodes the big int as base64 string, or a number 
+.SS "void fc::from_variant (const \fBvariant\fP & v, \fBprivate_key\fP & bi)"
+decodes the big int as base64 string, or a number 
+.SS "template<typename T > void fc::from_variant (const \fBvariant\fP & var, \fBstd::deque\fP< \fBT\fP > & tmp)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, string & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, \fBvariants\fP & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, int64_t & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, uint64_t & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, bool & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, double & vo)"
+
+.SS "void fc::from_variant (const \fBvariant\fP & var, float & vo)"
+
+.SS "template<typename T > void fc::from_variant (const \fBvariant\fP & var, \fBoptional\fP< \fBT\fP > & vo)"
+
+.SS "template<typename T > void fc::from_variant (const \fBvariant\fP & var, \fBstd::vector\fP< \fBT\fP > & tmp)"
+
+.SS "string fc::get_approximate_relative_time_string (const \fBtime_point_sec\fP & event_time, const \fBtime_point_sec\fP & relative_to_time = \fCfc::time_point::now()\fP, const std::string & ago = \fC' ago'\fP)"
+return a human-readable approximate time, relative to \fBnow()\fP e\&.g\&., '4 hours ago', '2 months ago', etc\&. 
+.SS "const \fBfc::path\fP & fc::home_path ()"
+
+.PP
+\fBReturns:\fP
+.RS 4
+the home directory on Linux and OS \fBX\fP and the Profile directory on Windows 
+.RE
+.PP
+
+.SS "void fc::read_file_contents (const \fBfc::path\fP & filename, std::string & result)"
+Grab the full contents of a file into a string object\&. NB reading a full file into memory is a poor choice if the file may be very large\&. 
+.SS "void fc::set_console_echo (bool enable_echo)"
+enables / disables echoing of console input, useful for entering passwords on the console\&. 
+.SS "void fc::set_variant_type (\fBvariant\fP * v, variant::type_id t)"
+The \fBTypeID\fP is stored in the 'last byte' of the variant\&. 
+.SS "void fc::store_configuration_path (const \fBpath\fP & filePath)"
+Allows to explicitly specify OpenSSL configuration file path to be loaded at OpenSSL library init\&. If not set OpenSSL will try to load the conf\&. file (openssl\&.cnf) from the path it was configured with what caused serious Keyhotee startup bugs on some Win7, Win8 machines\&. 
+.PP
+\fBWarning:\fP
+.RS 4
+to be effective this method should be used before any part using OpenSSL, especially before init_openssl call 
+.RE
+.PP
+
+.SS "void fc::to_variant (const \fBbigint\fP & bi, \fBvariant\fP & v)"
+encodes the big int as base64 string, or a number 
+.SS "void fc::to_variant (const \fBvariant_object\fP & var, \fBvariant\fP & vo)"
+
+.SS "void fc::to_variant (const \fBmutable_variant_object\fP & var, \fBvariant\fP & vo)"
+
+.SS "void fc::to_variant (const \fBpublic_key\fP & bi, \fBvariant\fP & v)"
+encodes the big int as base64 string, or a number 
+.SS "void fc::to_variant (const \fBprivate_key\fP & bi, \fBvariant\fP & v)"
+encodes the big int as base64 string, or a number 
+.SS "template<typename T > void fc::to_variant (const \fBstd::deque\fP< \fBT\fP > & t, \fBvariant\fP & v)"
+
+.SS "template<typename A , typename B > void fc::to_variant (const std::pair< \fBA\fP, \fBB\fP > & t, \fBvariant\fP & v)"
+
+.SS "template<typename T > void fc::to_variant (const \fBstd::vector\fP< \fBT\fP > & t, \fBvariant\fP & v)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

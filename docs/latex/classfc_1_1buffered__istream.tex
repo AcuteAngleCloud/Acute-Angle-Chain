@@ -1,0 +1,74 @@
+\hypertarget{classfc_1_1buffered__istream}{}\section{fc\+:\+:buffered\+\_\+istream Class Reference}
+\label{classfc_1_1buffered__istream}\index{fc\+::buffered\+\_\+istream@{fc\+::buffered\+\_\+istream}}
+
+
+Reads data from an unbuffered stream and enables peek functionality.  
+
+
+
+
+{\ttfamily \#include $<$buffered\+\_\+iostream.\+hpp$>$}
+
+
+
+Inheritance diagram for fc\+:\+:buffered\+\_\+istream\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:buffered\+\_\+istream\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1buffered__istream_a2685f9f7e8514c848839b859d173dec6}\label{classfc_1_1buffered__istream_a2685f9f7e8514c848839b859d173dec6}} 
+{\bfseries buffered\+\_\+istream} (istream\+\_\+ptr is)
+\item 
+\mbox{\Hypertarget{classfc_1_1buffered__istream_a6af022ec9841657f60d00089ddd2de90}\label{classfc_1_1buffered__istream_a6af022ec9841657f60d00089ddd2de90}} 
+{\bfseries buffered\+\_\+istream} (\mbox{\hyperlink{classfc_1_1buffered__istream}{buffered\+\_\+istream}} \&\&o)
+\item 
+\mbox{\Hypertarget{classfc_1_1buffered__istream_aa312532164c62e95fc7ecb2927d15465}\label{classfc_1_1buffered__istream_aa312532164c62e95fc7ecb2927d15465}} 
+\mbox{\hyperlink{classfc_1_1buffered__istream}{buffered\+\_\+istream}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1buffered__istream}{buffered\+\_\+istream}} \&\&i)
+\item 
+virtual std\+::size\+\_\+t \mbox{\hyperlink{classfc_1_1buffered__istream_aeadf77cad3bfaa31b52fe719f6b01fce}{readsome}} (char $\ast$buf, std\+::size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classfc_1_1buffered__istream_a462190e5205b4aaad1ad0108f31dd7d4}\label{classfc_1_1buffered__istream_a462190e5205b4aaad1ad0108f31dd7d4}} 
+virtual size\+\_\+t {\bfseries readsome} (const std\+::shared\+\_\+ptr$<$ char $>$ \&buf, size\+\_\+t len, size\+\_\+t offset)
+\item 
+virtual char \mbox{\hyperlink{classfc_1_1buffered__istream_a35c2540f97e42e3281457af50a7717b9}{peek}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Reads data from an unbuffered stream and enables peek functionality. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1buffered__istream_a35c2540f97e42e3281457af50a7717b9}\label{classfc_1_1buffered__istream_a35c2540f97e42e3281457af50a7717b9}} 
+\index{fc\+::buffered\+\_\+istream@{fc\+::buffered\+\_\+istream}!peek@{peek}}
+\index{peek@{peek}!fc\+::buffered\+\_\+istream@{fc\+::buffered\+\_\+istream}}
+\subsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily char fc\+::buffered\+\_\+istream\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This method may block until at least 1 character is available. \mbox{\Hypertarget{classfc_1_1buffered__istream_aeadf77cad3bfaa31b52fe719f6b01fce}\label{classfc_1_1buffered__istream_aeadf77cad3bfaa31b52fe719f6b01fce}} 
+\index{fc\+::buffered\+\_\+istream@{fc\+::buffered\+\_\+istream}!readsome@{readsome}}
+\index{readsome@{readsome}!fc\+::buffered\+\_\+istream@{fc\+::buffered\+\_\+istream}}
+\subsubsection{\texorpdfstring{readsome()}{readsome()}}
+{\footnotesize\ttfamily virtual std\+::size\+\_\+t fc\+::buffered\+\_\+istream\+::readsome (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{std\+::size\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+read at least 1 byte or throw, if no data is available this method should block cooperatively until data is available or fc\+::eof\+\_\+exception is thrown.
+
+\begin{DoxyPrecond}{Precondition}
+len $>$ 0 
+
+buf != nullptr 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em fc\+::eof} & if at least 1 byte cannot be read \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/io/buffered\+\_\+iostream.\+hpp\item 
+libraries/fc/src/io/buffered\+\_\+iostream.\+cpp\end{DoxyCompactItemize}

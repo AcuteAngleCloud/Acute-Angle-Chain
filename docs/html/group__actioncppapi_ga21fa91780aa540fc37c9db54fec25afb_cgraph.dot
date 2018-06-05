@@ -1,0 +1,9 @@
+digraph "aacio::require_recipient"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="aacio::require_recipient",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="require_recipient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__actioncapi.html#gae232893c733f02b94dbb70fae39d19f7",tooltip="Add the specified account to set of accounts to be notified. "];
+}

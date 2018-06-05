@@ -1,0 +1,151 @@
+.TH "identity::contract< DeployToAccount >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+identity::contract< DeployToAccount >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <identity\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcertprop\fP"
+.br
+.ti -1c
+.RI "struct \fBcertrow\fP"
+.br
+.ti -1c
+.RI "struct \fBcertvalue\fP"
+.br
+.ti -1c
+.RI "struct \fBcreate\fP"
+.br
+.ti -1c
+.RI "struct \fBidentrow\fP"
+.br
+.ti -1c
+.RI "struct \fBsettrust\fP"
+.br
+.ti -1c
+.RI "struct \fBtrustrow\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef uint64_t \fBidentity_name\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBproperty_name\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBproperty_type_name\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< \fBN\fP(certs), \fBcertrow\fP, \fBaacio::indexed_by\fP< \fBN\fP(bytuple), aacio::const_mem_fun< \fBcertrow\fP, key256, &certrow::get_key > > > \fBcerts_table\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< \fBN\fP(ident), \fBidentrow\fP > \fBidents_table\fP"
+.br
+.ti -1c
+.RI "typedef \fBsingleton\fP< code, \fBN\fP(\fBaccount\fP), code, identity_name > \fBaccounts_table\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::multi_index\fP< \fBN\fP(trust), \fBtrustrow\fP > \fBtrust_table\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static identity_name \fBget_claimed_identity\fP (account_name acnt)"
+.br
+.ti -1c
+.RI "static account_name \fBget_owner_for_identity\fP (uint64_t receiver, identity_name ident)"
+.br
+.ti -1c
+.RI "static identity_name \fBget_identity_for_account\fP (uint64_t receiver, account_name acnt)"
+.br
+.ti -1c
+.RI "static bool \fBis_trusted_by\fP (account_name trusted, account_name by)"
+.br
+.ti -1c
+.RI "static bool \fBis_trusted\fP (account_name acnt)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const \fBsettrust\fP &t)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const \fBcreate\fP &c)"
+.br
+.ti -1c
+.RI "static void \fBon\fP (const \fBcertprop\fP &cert)"
+.br
+.ti -1c
+.RI "static void \fBapply\fP (account_name c, action_name act)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint64_t \fBcode\fP = DeployToAccount"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<uint64_t DeployToAccount>
+.br
+class identity::contract< DeployToAccount >"
+This contract maintains a graph database of certified statements about an identity\&. An identity is separated from the concept of an account because the mapping of identity to accounts is subject to community consensus\&.
+.PP
+Some use cases need a global source of trust, this trust rooted in the voter who selects block producers\&. \fBA\fP block producer's opinion is 'trusted' and so is the opinion of anyone the block producer marks as 'trusted'\&.
+.PP
+When a block producer is voted out the implicit trust in every certification they made or those they trusted made is removed\&. All users are liable for making false certifications\&.
+.PP
+An account needs to claim the identity and a trusted account must certify the claim\&.
+.PP
+Data for an identity is stored:
+.PP
+DeployToAccount / identity / certs / [property, trusted, certifier] => value
+.PP
+Questions database is designed to answer:
+.PP
+.IP "1." 4
+has $identity\&.$unique been certified a 'trusted' certifier
+.IP "2." 4
+has $identity\&.$property been certified by $account
+.IP "3." 4
+has $identity\&.$trusted been certified by a 'trusted' certifier
+.IP "4." 4
+what account has authority to speak on behalf of identity?
+.IP "  \(bu" 4
+for each trusted owner certification check to see if the account has claimed it
+.PP
+
+.IP "5." 4
+what identity does account have authority to speak on behalf?
+.IP "  \(bu" 4
+check what identity the account has self certified owner
+.IP "  \(bu" 4
+verify that a trusted certifier has confirmed owner
+.PP
+
+.PP
+.PP
+This database structure enables parallel opeartions on independent identities\&.
+.PP
+When an account certs a property we check to see if that 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<uint64_t DeployToAccount> static void \fBidentity::contract\fP< DeployToAccount >::on (const \fBcertprop\fP & cert)\fC [inline]\fP, \fC [static]\fP"
+the table exists in the scope of the identity 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

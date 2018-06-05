@@ -1,0 +1,24 @@
+.TH "aacio::chain::config::billable_size< contracts::index_double_object >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::config::billable_size< contracts::index_double_object >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint64_t \fBoverhead\fP = overhead_per_row_per_index_ram_bytes * 3"
+.br
+.RI "overhead for potentially single-row table, 3x indices internal-key, primary key and primary+secondary key "
+.ti -1c
+.RI "static const uint64_t \fBvalue\fP = 24 + 8 + \fBoverhead\fP"
+.br
+.RI "24 bytes for fixed fields + 32 bytes key + overhead "
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

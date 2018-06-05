@@ -1,0 +1,41 @@
+.TH "aacio::chain::block_trace" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::block_trace
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBblock_trace\fP (const \fBsigned_block\fP &s)"
+.br
+.ti -1c
+.RI "\fBdigest_type\fP \fBcalculate_action_merkle_root\fP () const"
+.br
+.ti -1c
+.RI "\fBdigest_type\fP \fBcalculate_transaction_merkle_root\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBcalculate_cpu_usage\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBsigned_block\fP & \fBblock\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBregion_trace\fP > \fBregion_traces\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBtransaction\fP > \fBimplicit_transactions\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

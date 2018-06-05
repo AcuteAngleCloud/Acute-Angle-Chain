@@ -1,0 +1,144 @@
+.TH "aacio::fixed_point128< Q >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::fixed_point128< Q > \- 128 bits representation of Fixed Point class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fixedpoint\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfixed_point128\fP (int128_t v=0)"
+.br
+.RI "Can create \fBfixed_point128\fP instance from an int128_t, \fBfixed_point128\fP,64,32 instance\&. "
+.ti -1c
+.RI "template<uint8_t qr> \fBfixed_point128\fP (const \fBfixed_point128\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> \fBfixed_point128\fP (const \fBfixed_point64\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> \fBfixed_point128\fP (const \fBfixed_point32\fP< qr > &r)"
+.br
+.ti -1c
+.RI "int128_t \fBint_part\fP () const"
+.br
+.RI "To get the integer part of the fixed number\&. "
+.ti -1c
+.RI "uint128_t \fBfrac_part\fP () const"
+.br
+.RI "To get the decimal part of the fixed number\&. "
+.ti -1c
+.RI "void \fBprint\fP () const"
+.br
+.ti -1c
+.RI "template<uint8_t qr> \fBfixed_point128\fP & \fBoperator=\fP (const \fBfixed_point32\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> \fBfixed_point128\fP & \fBoperator=\fP (const \fBfixed_point64\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> \fBfixed_point128\fP & \fBoperator=\fP (const \fBfixed_point128\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> bool \fBoperator==\fP (const \fBfixed_point128\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> bool \fBoperator>\fP (const \fBfixed_point128\fP< qr > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t qr> bool \fBoperator<\fP (const \fBfixed_point128\fP< qr > &r)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int128_t \fBval\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<uint8_t Q>
+.br
+struct aacio::fixed_point128< Q >"
+128 bits representation of Fixed Point class\&. 
+
+The template param Q represents the Q Factor i\&.e number of decimals Example: 
+.PP
+.nf
+fixed_point128<6> a(123232\&.455667233)
+fixed_point128<0> a(123424)
+fixed_point128<18> c = a*b;
+fixed_point128<24> d = a+b+c;
+fixed_point128<24> e = b/a;
+
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<uint8_t Q> \fBaacio::fixed_point128\fP< Q >::\fBfixed_point128\fP (int128_t v = \fC0\fP)\fC [inline]\fP"
+
+.PP
+Can create \fBfixed_point128\fP instance from an int128_t, \fBfixed_point128\fP,64,32 instance\&. Various constructors for \fBfixed_point128\fP Example: 
+.PP
+.nf
+          fixed_point64<18> a(1234\&.455667);
+ope        * fixed_point128<3> b(a);
+          fixed_point32<6> b(13324\&.32323);
+          fixed_point128<5> c(a);
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<uint8_t Q> uint128_t \fBaacio::fixed_point128\fP< Q >::frac_part () const\fC [inline]\fP"
+
+.PP
+To get the decimal part of the fixed number\&. Get the decimal part of the 64 bit fixed number 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns decimal part of the fixed number
+.RE
+.PP
+Example: 
+.PP
+.nf
+fixed_point128<3> a(1234\&.455667)
+std::cout << a\&.decimal_part(); // Output: 455
+
+.fi
+.PP
+ 
+.SS "template<uint8_t Q> int128_t \fBaacio::fixed_point128\fP< Q >::int_part () const\fC [inline]\fP"
+
+.PP
+To get the integer part of the fixed number\&. Get the integer part of the 64 bit fixed number 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns integer part of the fixed number
+.RE
+.PP
+Example: 
+.PP
+.nf
+fixed_point64<5> a(1234\&.455667)
+std::cout << a\&.int_part(); // Output: 1234
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

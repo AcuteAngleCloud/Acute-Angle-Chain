@@ -1,0 +1,131 @@
+.TH "aacio::chain::compiler_builtins" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::compiler_builtins
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::context_aware_api\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB__ashlti3\fP (__int128 &ret, uint64_t low, uint64_t high, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__ashrti3\fP (__int128 &ret, uint64_t low, uint64_t high, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__lshlti3\fP (__int128 &ret, uint64_t low, uint64_t high, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__lshrti3\fP (__int128 &ret, uint64_t low, uint64_t high, uint32_t shift)"
+.br
+.ti -1c
+.RI "void \fB__divti3\fP (__int128 &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__udivti3\fP (unsigned __int128 &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__multi3\fP (__int128 &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__modti3\fP (__int128 &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__umodti3\fP (unsigned __int128 &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__addtf3\fP (\fBfloat128_t\fP &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__subtf3\fP (\fBfloat128_t\fP &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__multf3\fP (\fBfloat128_t\fP &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "void \fB__divtf3\fP (\fBfloat128_t\fP &ret, uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__eqtf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__netf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__getf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__gttf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__letf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__lttf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__cmptf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "int \fB__unordtf2\fP (uint64_t la, uint64_t ha, uint64_t lb, uint64_t hb)"
+.br
+.ti -1c
+.RI "double \fB__floatsidf\fP (int32_t i)"
+.br
+.ti -1c
+.RI "void \fB__floatsitf\fP (\fBfloat128_t\fP &ret, int32_t i)"
+.br
+.ti -1c
+.RI "void \fB__floatunsitf\fP (\fBfloat128_t\fP &ret, uint32_t i)"
+.br
+.ti -1c
+.RI "void \fB__extendsftf2\fP (\fBfloat128_t\fP &ret, uint32_t f)"
+.br
+.ti -1c
+.RI "void \fB__extenddftf2\fP (\fBfloat128_t\fP &ret, double in)"
+.br
+.ti -1c
+.RI "int64_t \fB__fixtfdi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "int32_t \fB__fixtfsi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "uint64_t \fB__fixunstfdi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "uint32_t \fB__fixunstfsi\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "uint64_t \fB__trunctfdf2\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "uint32_t \fB__trunctfsf2\fP (uint64_t l, uint64_t h)"
+.br
+.ti -1c
+.RI "\fBcontext_aware_api\fP (\fBapply_context\fP &ctx, bool context_free=false)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr uint32_t \fBSHIFT_WIDTH\fP = (sizeof(uint64_t)*8)\-1"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "void aacio::chain::compiler_builtins::__floatsitf (\fBfloat128_t\fP & ret, int32_t i)\fC [inline]\fP"
+TODO: should be 128 
+.SS "void aacio::chain::compiler_builtins::__floatunsitf (\fBfloat128_t\fP & ret, uint32_t i)\fC [inline]\fP"
+TODO: should be 128 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

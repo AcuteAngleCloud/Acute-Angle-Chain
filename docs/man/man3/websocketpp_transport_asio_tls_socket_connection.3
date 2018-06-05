@@ -1,0 +1,300 @@
+.TH "websocketpp::transport::asio::tls_socket::connection" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::asio::tls_socket::connection \- TLS enabled Asio connection socket component\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tls\&.hpp>\fP
+.PP
+Inherits enable_shared_from_this< connection >\&.
+.PP
+Inherited by \fBwebsocketpp::transport::asio::connection< config >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBconnection\fP \fBtype\fP"
+.br
+.RI "\fBType\fP of this connection socket component\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBtype\fP > \fBptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to this connection socket component\&. "
+.ti -1c
+.RI "typedef lib::asio::ssl::stream< lib::asio::ip::tcp::socket > \fBsocket_type\fP"
+.br
+.RI "\fBType\fP of the ASIO socket being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBsocket_type\fP > \fBsocket_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to the ASIO socket being used\&. "
+.ti -1c
+.RI "typedef lib::asio::io_service * \fBio_service_ptr\fP"
+.br
+.RI "\fBType\fP of a pointer to the ASIO io_service being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::io_service::strand > \fBstrand_ptr\fP"
+.br
+.RI "\fBType\fP of a pointer to the ASIO io_service strand being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::ssl::context > \fBcontext_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to the ASIO TLS context being used\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBptr\fP \fBget_shared\fP ()"
+.br
+.RI "Get a shared pointer to this component\&. "
+.ti -1c
+.RI "bool \fBis_secure\fP () const"
+.br
+.RI "Check whether or not this connection is secure\&. "
+.ti -1c
+.RI "socket_type::lowest_layer_type & \fBget_raw_socket\fP ()"
+.br
+.RI "Retrieve a pointer to the underlying socket\&. "
+.ti -1c
+.RI "socket_type::next_layer_type & \fBget_next_layer\fP ()"
+.br
+.RI "Retrieve a pointer to the layer below the ssl stream\&. "
+.ti -1c
+.RI "\fBsocket_type\fP & \fBget_socket\fP ()"
+.br
+.RI "Retrieve a pointer to the wrapped socket\&. "
+.ti -1c
+.RI "void \fBset_socket_init_handler\fP (\fBsocket_init_handler\fP h)"
+.br
+.RI "Set the socket initialization handler\&. "
+.ti -1c
+.RI "void \fBset_tls_init_handler\fP (\fBtls_init_handler\fP h)"
+.br
+.RI "Set TLS init handler\&. "
+.ti -1c
+.RI "std::string \fBget_remote_endpoint\fP (lib::error_code &ec) const"
+.br
+.RI "Get the remote endpoint address\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "lib::error_code \fBinit_asio\fP (\fBio_service_ptr\fP service, \fBstrand_ptr\fP strand, bool is_server)"
+.br
+.RI "Perform one time initializations\&. "
+.ti -1c
+.RI "void \fBset_uri\fP (\fBuri_ptr\fP u)"
+.br
+.RI "Set hostname hook\&. "
+.ti -1c
+.RI "void \fBpre_init\fP (\fBinit_handler\fP callback)"
+.br
+.RI "Pre-initialize security policy\&. "
+.ti -1c
+.RI "void \fBpost_init\fP (\fBinit_handler\fP callback)"
+.br
+.RI "Post-initialize security policy\&. "
+.ti -1c
+.RI "void \fBset_handle\fP (\fBconnection_hdl\fP hdl)"
+.br
+.RI "Sets the connection handle\&. "
+.ti -1c
+.RI "void \fBhandle_init\fP (\fBinit_handler\fP callback, lib::asio::error_code const &ec)"
+.br
+.ti -1c
+.RI "lib::error_code \fBget_ec\fP () const"
+.br
+.ti -1c
+.RI "lib::asio::error_code \fBcancel_socket\fP ()"
+.br
+.RI "Cancel all async operations on this socket\&. "
+.ti -1c
+.RI "void \fBasync_shutdown\fP (socket::shutdown_handler callback)"
+.br
+.ti -1c
+.RI "template<typename ErrorCodeType > lib::error_code \fBtranslate_ec\fP (ErrorCodeType ec)"
+.br
+.RI "Translate any security policy specific information about an error code\&. "
+.ti -1c
+.RI "lib::error_code \fBtranslate_ec\fP (lib::error_code ec)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+TLS enabled Asio connection socket component\&. 
+
+\fBtransport::asio::tls_socket::connection\fP implements a secure connection socket component that uses Asio's ssl::stream to wrap an ip::tcp::socket\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "lib::asio::error_code websocketpp::transport::asio::tls_socket::connection::cancel_socket ()\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Cancel all async operations on this socket\&. Attempts to cancel all async operations on this socket and reports any failures\&.
+.PP
+NOTE: Windows XP and earlier do not support socket cancellation\&.
+.PP
+\fBReturns:\fP
+.RS 4
+The error that occurred, if any\&. 
+.RE
+.PP
+
+.SS "socket_type::next_layer_type& websocketpp::transport::asio::tls_socket::connection::get_next_layer ()\fC [inline]\fP"
+
+.PP
+Retrieve a pointer to the layer below the ssl stream\&. This is used internally\&. 
+.SS "socket_type::lowest_layer_type& websocketpp::transport::asio::tls_socket::connection::get_raw_socket ()\fC [inline]\fP"
+
+.PP
+Retrieve a pointer to the underlying socket\&. This is used internally\&. It can also be used to set socket options, etc 
+.SS "std::string websocketpp::transport::asio::tls_socket::connection::get_remote_endpoint (lib::error_code & ec) const\fC [inline]\fP"
+
+.PP
+Get the remote endpoint address\&. The iostream transport has no information about the ultimate remote endpoint\&. It will return the string 'iostream transport'\&. To indicate this\&.
+.PP
+TODO: allow user settable remote endpoint addresses if this seems useful
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP string identifying the address of the remote endpoint 
+.RE
+.PP
+
+.SS "\fBsocket_type\fP& websocketpp::transport::asio::tls_socket::connection::get_socket ()\fC [inline]\fP"
+
+.PP
+Retrieve a pointer to the wrapped socket\&. This is used internally\&. 
+.SS "lib::error_code websocketpp::transport::asio::tls_socket::connection::init_asio (\fBio_service_ptr\fP service, \fBstrand_ptr\fP strand, bool is_server)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Perform one time initializations\&. init_asio is called once immediately after construction to initialize Asio components to the io_service
+.PP
+\fBParameters:\fP
+.RS 4
+\fIservice\fP \fBA\fP pointer to the endpoint's io_service 
+.br
+\fIstrand\fP \fBA\fP pointer to the connection's strand 
+.br
+\fIis_server\fP Whether or not the endpoint is a server or not\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::transport::asio::tls_socket::connection::is_secure () const\fC [inline]\fP"
+
+.PP
+Check whether or not this connection is secure\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not this connection is secure 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::connection::post_init (\fBinit_handler\fP callback)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Post-initialize security policy\&. Called by the transport after all intermediate proxies have been negotiated\&. This gives the security policy the chance to talk with the real remote endpoint for a bit before the websocket handshake\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcallback\fP Handler to call back with completion information 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::connection::pre_init (\fBinit_handler\fP callback)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Pre-initialize security policy\&. Called by the transport after a new connection is created to initialize the socket component of the connection\&. This method is not allowed to write any bytes to the wire\&. This initialization happens before any proxies or other intermediate wrappers are negotiated\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcallback\fP Handler to call back with completion information 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::connection::set_handle (\fBconnection_hdl\fP hdl)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Sets the connection handle\&. The connection handle is passed to any handlers to identify the connection
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhdl\fP The new handle 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::connection::set_socket_init_handler (\fBsocket_init_handler\fP h)\fC [inline]\fP"
+
+.PP
+Set the socket initialization handler\&. The socket initialization handler is called after the socket object is created but before it is used\&. This gives the application a chance to set any ASIO socket options it needs\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The new socket_init_handler 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::connection::set_tls_init_handler (\fBtls_init_handler\fP h)\fC [inline]\fP"
+
+.PP
+Set TLS init handler\&. The tls init handler is called when needed to request a TLS context for the library to use\&. \fBA\fP TLS init handler must be set and it must return a valid TLS context in order for this endpoint to be able to initialize TLS connections
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The new tls_init_handler 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::connection::set_uri (\fBuri_ptr\fP u)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Set hostname hook\&. Called by the transport as a connection is being established to provide the hostname being connected to to the security/socket layer\&.
+.PP
+This socket policy uses the hostname to set the appropriate TLS SNI header\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.6\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIu\fP The uri to set 
+.RE
+.PP
+
+.SS "template<typename ErrorCodeType > lib::error_code websocketpp::transport::asio::tls_socket::connection::translate_ec (ErrorCodeType ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Translate any security policy specific information about an error code\&. Translate_ec takes an Asio error code and attempts to convert its value to an appropriate websocketpp error code\&. In the case that the Asio and Websocketpp error types are the same (such as using boost::asio and boost::system_error or using standalone asio and std::system_error the code will be passed through natively\&.
+.PP
+In the case of a mismatch (boost::asio with std::system_error) a translated code will be returned\&. Any error that is determined to be related to TLS but does not have a more specific websocketpp error code is returned under the catch all error \fCtls_error\fP\&. Non-TLS related errors are returned as the transport generic error \fCpass_through\fP
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIec\fP The error code to translate_ec 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The translated error code 
+.RE
+.PP
+
+.SS "lib::error_code websocketpp::transport::asio::tls_socket::connection::translate_ec (lib::error_code ec)\fC [inline]\fP, \fC [protected]\fP"
+Overload of translate_ec to catch cases where lib::error_code is the same type as lib::asio::error_code 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

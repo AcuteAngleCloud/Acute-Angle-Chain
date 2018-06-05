@@ -1,0 +1,20 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1879 [label="moneypunct",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1879 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="Fnf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fnf.html"];
+  Node1879 -> Node1876 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1876 [label="Fnt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fnt.html"];
+  Node1879 -> Node1877 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1877 [label="Fwf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fwf.html"];
+  Node1879 -> Node1878 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1878 [label="Fwt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fwt.html"];
+  Node1874 [label="moneypunct_byname",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1874 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1874 -> Node1876 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1874 -> Node1877 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1874 -> Node1878 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

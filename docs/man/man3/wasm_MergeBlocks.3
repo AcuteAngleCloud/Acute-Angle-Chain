@@ -1,0 +1,74 @@
+.TH "wasm::MergeBlocks" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::MergeBlocks
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< PostWalker< MergeBlocks > >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "void \fBvisitBlock\fP (\fBBlock\fP *curr)"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBoptimize\fP (\fBExpression\fP *curr, \fBExpression\fP *&child, \fBBlock\fP *outer=nullptr, \fBExpression\fP **dependency1=nullptr, \fBExpression\fP **dependency2=nullptr)"
+.br
+.ti -1c
+.RI "void \fBvisitUnary\fP (\fBUnary\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSetLocal\fP (\fBSetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitLoad\fP (\fBLoad\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitReturn\fP (\fBReturn\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBinary\fP (\fBBinary\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitStore\fP (\fBStore\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSelect\fP (\fBSelect\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitDrop\fP (\fBDrop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBhandleCall\fP (\fBT\fP *curr, \fBBlock\fP *outer=nullptr)"
+.br
+.ti -1c
+.RI "void \fBvisitCall\fP (\fBCall\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

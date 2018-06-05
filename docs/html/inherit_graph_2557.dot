@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="websocketpp::config\l::core_client::permessage\l_deflate_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1config_1_1core__client_1_1permessage__deflate__config.html",tooltip="Extension specific settings: "];
+}

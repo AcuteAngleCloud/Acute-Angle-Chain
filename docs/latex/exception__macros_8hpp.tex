@@ -1,0 +1,167 @@
+\hypertarget{exception__macros_8hpp}{}\section{libraries/utilities/include/aacio/utilities/exception\+\_\+macros.hpp File Reference}
+\label{exception__macros_8hpp}\index{libraries/utilities/include/aacio/utilities/exception\+\_\+macros.\+hpp@{libraries/utilities/include/aacio/utilities/exception\+\_\+macros.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries A\+A\+C\+\_\+\+A\+S\+S\+E\+RT}(expr,  exc\+\_\+type,  F\+O\+R\+M\+AT, ...)
+\item 
+\mbox{\Hypertarget{exception__macros_8hpp_a07e529868fe6c5ae314d408f34380584}\label{exception__macros_8hpp_a07e529868fe6c5ae314d408f34380584}} 
+\#define {\bfseries A\+A\+C\+\_\+\+T\+H\+R\+OW}(exc\+\_\+type,  F\+O\+R\+M\+AT, ...)~throw exc\+\_\+type( \mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{F\+C\+\_\+\+L\+O\+G\+\_\+\+M\+E\+S\+S\+A\+GE}}( \mbox{\hyperlink{structerror}{error}}, F\+O\+R\+M\+AT, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+ ) );
+\item 
+\#define \mbox{\hyperlink{exception__macros_8hpp_a37221f91ec1de6e358b5adbbf73a302f}{A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}}(exception\+\_\+type,  F\+O\+R\+M\+AT, ...)
+\item 
+\#define \mbox{\hyperlink{exception__macros_8hpp_a48c6198bb0aec23ee6b3bfe278df1397}{A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW}}(exception\+\_\+type, ...)
+\item 
+\#define {\bfseries A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}(op\+\_\+name)
+\item 
+\#define {\bfseries A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}(exc\+\_\+name,  op\+\_\+name,  seqnum,  msg)
+\item 
+\#define {\bfseries A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}(exc\+\_\+name,  op\+\_\+name,  seqnum,  msg)
+\item 
+\#define {\bfseries A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC}(cause\+\_\+type,  effect\+\_\+type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{exception__macros_8hpp_a0f2bce9313911780b857461dac3b8aeb}\label{exception__macros_8hpp_a0f2bce9313911780b857461dac3b8aeb}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+A\+S\+S\+E\+RT@{A\+A\+C\+\_\+\+A\+S\+S\+E\+RT}}
+\index{A\+A\+C\+\_\+\+A\+S\+S\+E\+RT@{A\+A\+C\+\_\+\+A\+S\+S\+E\+RT}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+A\+S\+S\+E\+RT}{AAC\_ASSERT}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{exc\+\_\+type,  }\item[{}]{F\+O\+R\+M\+AT,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+FC\_MULTILINE\_MACRO\_BEGIN                                           \(\backslash\)
+   if( !(expr) )                                                      \(\backslash\)
+      FC\_THROW\_EXCEPTION( exc\_type, FORMAT, \_\_VA\_ARGS\_\_ );            \(\backslash\)
+   FC\_MULTILINE\_MACRO\_END
+\end{DoxyCode}
+\mbox{\Hypertarget{exception__macros_8hpp_a48c6198bb0aec23ee6b3bfe278df1397}\label{exception__macros_8hpp_a48c6198bb0aec23ee6b3bfe278df1397}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW@{A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW}}
+\index{A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW@{A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW}{AAC\_CAPTURE\_AND\_RETHROW}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW(\begin{DoxyParamCaption}\item[{}]{exception\+\_\+type,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{catch} (aacio::chain::chain\_exception& e) \{ \(\backslash\)
+      FC\_RETHROW\_EXCEPTION( e, warn, \textcolor{stringliteral}{""}, FC\_FORMAT\_ARG\_PARAMS(\_\_VA\_ARGS\_\_) ); \(\backslash\)
+   \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classfc_1_1exception}{fc::exception}}& e) \{ \(\backslash\)
+      exception\_type new\_exception(e.\mbox{\hyperlink{classfc_1_1exception_a70b72c1e4fe0d17485a8b7a0a6f397de}{get\_log}}()); \(\backslash\)
+      throw new\_exception; \(\backslash\)
+   \} \textcolor{keywordflow}{catch}( \textcolor{keyword}{const} std::exception& e ) \{  \(\backslash\)
+      exception\_type fce( \(\backslash\)
+                \mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{FC\_LOG\_MESSAGE}}( warn, \textcolor{stringliteral}{"$\{what\}: "},FC\_FORMAT\_ARG\_PARAMS(\_\_VA\_ARGS\_\_)(\textcolor{stringliteral}{"what"},e.
+      what())), \(\backslash\)
+                fc::std\_exception\_code,\(\backslash\)
+                BOOST\_CORE\_TYPEID(decltype(e)).name(), \(\backslash\)
+                e.what() ) ; \textcolor{keywordflow}{throw} fce;\(\backslash\)
+   \} \textcolor{keywordflow}{catch}( ... ) \{  \(\backslash\)
+      throw \mbox{\hyperlink{classfc_1_1unhandled__exception}{fc::unhandled\_exception}}( \(\backslash\)
+                \mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{FC\_LOG\_MESSAGE}}( warn, \textcolor{stringliteral}{""},FC\_FORMAT\_ARG\_PARAMS(\_\_VA\_ARGS\_\_)), \(\backslash\)
+                std::current\_exception() ); \(\backslash\)
+   \}
+\end{DoxyCode}
+Macro inspired from F\+C\+\_\+\+C\+A\+P\+T\+U\+R\+E\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW The main difference here is that if the exception caught isn\textquotesingle{}t of type \char`\"{}aacio\+::chain\+::chain\+\_\+exception\char`\"{} This macro will rethrow the exception as the specified \char`\"{}exception\+\_\+type\char`\"{} \mbox{\Hypertarget{exception__macros_8hpp_a9a9206c26635cd00075f533bde1f3f9a}\label{exception__macros_8hpp_a9a9206c26635cd00075f533bde1f3f9a}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}}
+\index{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}{AAC\_DECLARE\_OP\_BASE\_EXCEPTIONS}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+B\+A\+S\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS(\begin{DoxyParamCaption}\item[{}]{op\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+FC\_DECLARE\_DERIVED\_EXCEPTION(                                      \(\backslash\)
+      op\_name ## \_validate\_exception,                                 \(\backslash\)
+      aacio::chain::message\_validate\_exception,                  \(\backslash\)
+      3040000 + 100 * \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{operation::tag< op\_name ## \_operation >::value}}
+      , \(\backslash\)
+      #op\_name \textcolor{stringliteral}{"\_operation validation exception"}                      \(\backslash\)
+      )                                                               \(\backslash\)
+   FC\_DECLARE\_DERIVED\_EXCEPTION(                                      \(\backslash\)
+      op\_name ## \_evaluate\_exception,                                 \(\backslash\)
+      aacio::chain::message\_evaluate\_exception,                  \(\backslash\)
+      3050000 + 100 * \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{operation::tag< op\_name ## \_operation >::value}}
+      , \(\backslash\)
+      #op\_name \textcolor{stringliteral}{"\_operation evaluation exception"}                      \(\backslash\)
+      )
+\end{DoxyCode}
+\mbox{\Hypertarget{exception__macros_8hpp_a8959b3b83a96e32078f7b0c30f5e5961}\label{exception__macros_8hpp_a8959b3b83a96e32078f7b0c30f5e5961}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+\index{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}{AAC\_DECLARE\_OP\_EVALUATE\_EXCEPTION}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+E\+V\+A\+L\+U\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{exc\+\_\+name,  }\item[{}]{op\+\_\+name,  }\item[{}]{seqnum,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+FC\_DECLARE\_DERIVED\_EXCEPTION(                                      \(\backslash\)
+      op\_name ## \_ ## exc\_name,                                       \(\backslash\)
+      aacio::chain::op\_name ## \_evaluate\_exception,                \(\backslash\)
+      3050000 + 100 * \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{operation::tag< op\_name ## \_operation >::value}}
+        \(\backslash\)
+         + seqnum,                                                    \(\backslash\)
+      msg                                                             \(\backslash\)
+      )
+\end{DoxyCode}
+\mbox{\Hypertarget{exception__macros_8hpp_a640d1fac24b6ffcc465f6054845ed783}\label{exception__macros_8hpp_a640d1fac24b6ffcc465f6054845ed783}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+\index{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}{AAC\_DECLARE\_OP\_VALIDATE\_EXCEPTION}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+O\+P\+\_\+\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{exc\+\_\+name,  }\item[{}]{op\+\_\+name,  }\item[{}]{seqnum,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+FC\_DECLARE\_DERIVED\_EXCEPTION(                                      \(\backslash\)
+      op\_name ## \_ ## exc\_name,                                       \(\backslash\)
+      aacio::chain::op\_name ## \_validate\_exception,                \(\backslash\)
+      3040000 + 100 * \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{operation::tag< op\_name ## \_operation >::value}}
+        \(\backslash\)
+         + seqnum,                                                    \(\backslash\)
+      msg                                                             \(\backslash\)
+      )
+\end{DoxyCode}
+\mbox{\Hypertarget{exception__macros_8hpp_a0edb7cb18a2b468ec123b7642aaae4d4}\label{exception__macros_8hpp_a0edb7cb18a2b468ec123b7642aaae4d4}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC@{A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC}}
+\index{A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC@{A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC}{AAC\_RECODE\_EXC}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+R\+E\+C\+O\+D\+E\+\_\+\+E\+XC(\begin{DoxyParamCaption}\item[{}]{cause\+\_\+type,  }\item[{}]{effect\+\_\+type }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{catch}( \textcolor{keyword}{const} cause\_type& e ) \(\backslash\)
+   \{ \textcolor{keywordflow}{throw}( effect\_type( e.what(), e.get\_log() ) ); \}
+\end{DoxyCode}
+\mbox{\Hypertarget{exception__macros_8hpp_a37221f91ec1de6e358b5adbbf73a302f}\label{exception__macros_8hpp_a37221f91ec1de6e358b5adbbf73a302f}} 
+\index{exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}!A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS@{A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}}
+\index{A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS@{A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}!exception\+\_\+macros.\+hpp@{exception\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}{AAC\_RETHROW\_EXCEPTIONS}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS(\begin{DoxyParamCaption}\item[{}]{exception\+\_\+type,  }\item[{}]{F\+O\+R\+M\+AT,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{catch} (aacio::chain::chain\_exception& e) \{ \(\backslash\)
+      FC\_RETHROW\_EXCEPTION( e, warn, FORMAT, \_\_VA\_ARGS\_\_ ); \(\backslash\)
+   \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classfc_1_1exception}{fc::exception}}& e) \{ \(\backslash\)
+      exception\_type new\_exception(\mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{FC\_LOG\_MESSAGE}}( warn, FORMAT, \_\_VA\_ARGS\_\_ )); \(\backslash\)
+      for (\textcolor{keyword}{const} \textcolor{keyword}{auto}& log: e.\mbox{\hyperlink{classfc_1_1exception_a70b72c1e4fe0d17485a8b7a0a6f397de}{get\_log}}()) \{ \(\backslash\)
+         new\_exception.append\_log(log); \(\backslash\)
+      \} \(\backslash\)
+      throw new\_exception; \(\backslash\)
+   \} \textcolor{keywordflow}{catch}( \textcolor{keyword}{const} std::exception& e ) \{  \(\backslash\)
+      exception\_type fce(\mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{FC\_LOG\_MESSAGE}}( warn, FORMAT\textcolor{stringliteral}{" ($\{what\})"} ,\_\_VA\_ARGS\_\_(\textcolor{stringliteral}{"what"},e.what(
+      )))); \(\backslash\)
+      throw fce;\(\backslash\)
+   \} \textcolor{keywordflow}{catch}( ... ) \{  \(\backslash\)
+      throw \mbox{\hyperlink{classfc_1_1unhandled__exception}{fc::unhandled\_exception}}( \(\backslash\)
+                \mbox{\hyperlink{log__message_8hpp_a4a4df4bb5cffbe07aadf7d29fd44c75e}{FC\_LOG\_MESSAGE}}( warn, FORMAT,\_\_VA\_ARGS\_\_), \(\backslash\)
+                std::current\_exception() ); \(\backslash\)
+   \}
+\end{DoxyCode}
+Macro inspired from F\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS The main difference here is that if the exception caught isn\textquotesingle{}t of type \char`\"{}aacio\+::chain\+::chain\+\_\+exception\char`\"{} This macro will rethrow the exception as the specified \char`\"{}exception\+\_\+type\char`\"{} 

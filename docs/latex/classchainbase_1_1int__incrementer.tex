@@ -1,0 +1,27 @@
+\hypertarget{classchainbase_1_1int__incrementer}{}\section{chainbase\+:\+:int\+\_\+incrementer Class Reference}
+\label{classchainbase_1_1int__incrementer}\index{chainbase\+::int\+\_\+incrementer@{chainbase\+::int\+\_\+incrementer}}
+
+
+{\ttfamily \#include $<$chainbase.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classchainbase_1_1int__incrementer_aaaca8550f525722150a6ab6429979c00}\label{classchainbase_1_1int__incrementer_aaaca8550f525722150a6ab6429979c00}} 
+{\bfseries int\+\_\+incrementer} (int32\+\_\+t \&target)
+\item 
+\mbox{\Hypertarget{classchainbase_1_1int__incrementer_a820e57f55564be8450cd2597147da56f}\label{classchainbase_1_1int__incrementer_a820e57f55564be8450cd2597147da56f}} 
+int32\+\_\+t {\bfseries get} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The code we want to implement is this\+:
+
+++target; try \{ ... \} finally \{ --target \}
+
+In C++ the only way to implement finally is to create a class with a destructor, so that\textquotesingle{}s what we do here. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chainbase/include/chainbase/chainbase.\+hpp\end{DoxyCompactItemize}

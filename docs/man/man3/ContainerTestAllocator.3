@@ -1,0 +1,64 @@
+.TH "ContainerTestAllocator< T, AllowConstructT >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ContainerTestAllocator< T, AllowConstructT >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBT\fP \fBvalue_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBContainerTestAllocator\fP (\fBConstructController\fP *c)"
+.br
+.ti -1c
+.RI "template<class U > \fBContainerTestAllocator\fP (\fBContainerTestAllocator\fP< \fBU\fP, AllowConstructT > \fBother\fP) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBallocate\fP (std::size_t n)"
+.br
+.ti -1c
+.RI "void \fBdeallocate\fP (\fBT\fP *p, std::size_t)"
+.br
+.ti -1c
+.RI "template<class Up , class \&.\&.\&. Args> void \fBconstruct\fP (Up *p, Args &&\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<class Up > void \fBdestroy\fP (Up *p)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBconstruct_called\fP"
+.br
+.ti -1c
+.RI "int \fBdestroy_called\fP"
+.br
+.ti -1c
+.RI "\fBConstructController\fP * \fBcontroller\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (\fBContainerTestAllocator\fP, \fBContainerTestAllocator\fP)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (\fBContainerTestAllocator\fP x, \fBContainerTestAllocator\fP y)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

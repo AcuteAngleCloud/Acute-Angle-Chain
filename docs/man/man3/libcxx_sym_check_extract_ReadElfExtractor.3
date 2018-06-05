@@ -1,0 +1,90 @@
+.TH "libcxx.sym_check.extract.ReadElfExtractor" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libcxx.sym_check.extract.ReadElfExtractor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self)"
+.br
+.ti -1c
+.RI "def \fBextract\fP (self, lib)"
+.br
+.ti -1c
+.RI "def \fBprocess_syms\fP (self, sym_list)"
+.br
+.ti -1c
+.RI "def \fBget_dynsym_table\fP (self, out)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBfind_tool\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtool\fP"
+.br
+.ti -1c
+.RI "\fBflags\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+ReadElfExtractor - Extract symbol lists from libraries using readelf.
+
+.fi
+.PP
+ 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def libcxx\&.sym_check\&.extract\&.ReadElfExtractor\&.__init__ ( self)"
+
+.PP
+.nf
+Initialize the readelf executable and flags that will be used to
+extract symbols from shared libraries.
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "def libcxx\&.sym_check\&.extract\&.ReadElfExtractor\&.extract ( self,  lib)"
+
+.PP
+.nf
+Extract symbols from a library and return the results as a dict of
+parsed symbols.
+
+.fi
+.PP
+ 
+.SS "def libcxx\&.sym_check\&.extract\&.ReadElfExtractor\&.find_tool ()\fC [static]\fP"
+
+.PP
+.nf
+Search for the readelf executable and return the path.
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

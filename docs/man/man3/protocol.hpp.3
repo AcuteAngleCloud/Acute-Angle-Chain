@@ -1,0 +1,135 @@
+.TH "plugins/net_plugin/include/aacio/net_plugin/protocol.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/net_plugin/include/aacio/net_plugin/protocol.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/block\&.hpp>\fP
+.br
+\fC#include <aacio/chain/types\&.hpp>\fP
+.br
+\fC#include <chrono>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::handshake_message\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::go_away_message\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::time_message\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::select_ids< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::notice_message\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::request_message\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::sync_request_message\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::chrono::system_clock::duration::rep \fBaacio::tstamp\fP"
+.br
+.ti -1c
+.RI "typedef int32_t \fBaacio::tdist\fP"
+.br
+.ti -1c
+.RI "using \fBaacio::ordered_txn_ids\fP = select_ids< \fBtransaction_id_type\fP >"
+.br
+.ti -1c
+.RI "using \fBaacio::ordered_blk_ids\fP = select_ids< block_id_type >"
+.br
+.ti -1c
+.RI "using \fBaacio::net_message\fP = \fBstatic_variant\fP< handshake_message, go_away_message, time_message, notice_message, request_message, sync_request_message, signed_block_summary, signed_block, signed_transaction, packed_transaction >"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBaacio::go_away_reason\fP { \fBaacio::no_reason\fP, \fBaacio::self\fP, \fBaacio::duplicate\fP, \fBaacio::wrong_chain\fP, \fBaacio::wrong_version\fP, \fBaacio::forked\fP, \fBaacio::unlinkable\fP, \fBaacio::bad_transaction\fP, \fBaacio::validation\fP, \fBaacio::benign_other\fP, \fBaacio::fatal_other\fP, \fBaacio::authentication\fP }"
+.br
+.ti -1c
+.RI "enum \fBid_list_modes\fP { \fBnone\fP, \fBcatch_up\fP, \fBlast_irr_catch_up\fP, \fBnormal\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "constexpr auto \fBaacio::reason_str\fP (go_away_reason rsn)"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::modes_str\fP (id_list_modes m)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBaacio::go_away_reason\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIno_reason \fP\fP
+no reason to go away 
+.TP
+\fB\fIself \fP\fP
+the connection is to itself 
+.TP
+\fB\fIduplicate \fP\fP
+the connection is redundant 
+.TP
+\fB\fIwrong_chain \fP\fP
+the peer's chain id doesn't match 
+.TP
+\fB\fIwrong_version \fP\fP
+the peer's network version doesn't match 
+.TP
+\fB\fIforked \fP\fP
+the peer's irreversible blocks are different 
+.TP
+\fB\fIunlinkable \fP\fP
+the peer sent a block we couldn't use 
+.TP
+\fB\fIbad_transaction \fP\fP
+the peer sent a transaction that failed verification 
+.TP
+\fB\fIvalidation \fP\fP
+the peer sent a block that failed validation 
+.TP
+\fB\fIbenign_other \fP\fP
+reasons such as a timeout\&. not fatal but warrant resetting 
+.TP
+\fB\fIfatal_other \fP\fP
+a catch-all for errors we don't have discriminated 
+.TP
+\fB\fIauthentication \fP\fP
+peer failed authenicatio 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

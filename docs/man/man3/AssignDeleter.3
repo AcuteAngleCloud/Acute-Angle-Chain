@@ -1,0 +1,43 @@
+.TH "AssignDeleter< From, AssignIsConst >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AssignDeleter< From, AssignIsConst >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAssignDeleter\fP (\fBAssignDeleter\fP const &)=default"
+.br
+.ti -1c
+.RI "\fBAssignDeleter\fP (\fBAssignDeleter\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBAssignDeleter\fP & \fBoperator=\fP (\fBAssignDeleter\fP const &)=delete"
+.br
+.ti -1c
+.RI "\fBAssignDeleter\fP & \fBoperator=\fP (\fBAssignDeleter\fP &&)=delete"
+.br
+.ti -1c
+.RI "template<class T > \fBAssignDeleter\fP & \fBoperator=\fP (\fBT\fP &&) &&=delete"
+.br
+.ti -1c
+.RI "template<class T > \fBAssignDeleter\fP & \fBoperator=\fP (\fBT\fP &&) const &&=delete"
+.br
+.ti -1c
+.RI "template<class T , class  = typename std::enable_if<      std::is_same<T&&, From>::value && !AssignIsConst    >::type> \fBAssignDeleter\fP & \fBoperator=\fP (\fBT\fP &&) &"
+.br
+.ti -1c
+.RI "template<class T , class  = typename std::enable_if<      std::is_same<T&&, From>::value && AssignIsConst    >::type> const \fBAssignDeleter\fP & \fBoperator=\fP (\fBT\fP &&) const &"
+.br
+.ti -1c
+.RI "template<class T > void \fBoperator()\fP (\fBT\fP) const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

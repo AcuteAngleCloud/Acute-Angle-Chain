@@ -1,0 +1,35 @@
+.TH "websocketpp::frame::extended_header" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::frame::extended_header \- The variable size component of a WebSocket frame header\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <frame\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBextended_header\fP (uint64_t payload_size)"
+.br
+.ti -1c
+.RI "\fBextended_header\fP (uint64_t payload_size, uint32_t masking_key)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBbytes\fP [MAX_EXTENDED_HEADER_LENGTH]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The variable size component of a WebSocket frame header\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

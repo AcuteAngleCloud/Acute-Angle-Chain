@@ -1,0 +1,48 @@
+\hypertarget{struct_serialization_1_1_input_stream}{}\section{Serialization\+:\+:Input\+Stream Struct Reference}
+\label{struct_serialization_1_1_input_stream}\index{Serialization\+::\+Input\+Stream@{Serialization\+::\+Input\+Stream}}
+
+
+Inheritance diagram for Serialization\+:\+:Input\+Stream\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_a4ae57f5c560c97a0b37f6aca678b6042}\label{struct_serialization_1_1_input_stream_a4ae57f5c560c97a0b37f6aca678b6042}} 
+enum \{ {\bfseries is\+Input} = true
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_aab2721dd35672f8484a4e4045fd03e9f}\label{struct_serialization_1_1_input_stream_aab2721dd35672f8484a4e4045fd03e9f}} 
+{\bfseries Input\+Stream} (const U8 $\ast$in\+Next, const U8 $\ast$in\+End)
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_a960a261ed276a5f6e81472739c0958ca}\label{struct_serialization_1_1_input_stream_a960a261ed276a5f6e81472739c0958ca}} 
+virtual Uptr {\bfseries capacity} () const =0
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_a9169d0c0f944437fa6308d4264592984}\label{struct_serialization_1_1_input_stream_a9169d0c0f944437fa6308d4264592984}} 
+const U8 $\ast$ {\bfseries advance} (Uptr num\+Bytes)
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_ae5e2523c34d201e5f80581f456a01d55}\label{struct_serialization_1_1_input_stream_ae5e2523c34d201e5f80581f456a01d55}} 
+const U8 $\ast$ {\bfseries peek} (Uptr num\+Bytes)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_a888d6a1c0486a2bd4024f1f5c9be2d22}\label{struct_serialization_1_1_input_stream_a888d6a1c0486a2bd4024f1f5c9be2d22}} 
+virtual void {\bfseries get\+More\+Data} (Uptr num\+Bytes)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_a3b710216e24ed9386dcf28ead395ef0d}\label{struct_serialization_1_1_input_stream_a3b710216e24ed9386dcf28ead395ef0d}} 
+const U8 $\ast$ {\bfseries next}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_input_stream_ac94b47818b240805db6babfe91814000}\label{struct_serialization_1_1_input_stream_ac94b47818b240805db6babfe91814000}} 
+const U8 $\ast$ {\bfseries end}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/wasm-\/jit/\+Include/\+Inline/Serialization.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - cd ~/aac && docker build -t aacio/aac -f Docker/Dockerfile .
+
+test:
+  pre:
+    - sleep 5
+  override:
+    - docker run aacio/aac

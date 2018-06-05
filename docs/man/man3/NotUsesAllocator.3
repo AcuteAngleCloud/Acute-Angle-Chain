@@ -1,0 +1,45 @@
+.TH "NotUsesAllocator< Alloc, Arity >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NotUsesAllocator< Alloc, Arity >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBUsesAllocatorTestBase< NotUsesAllocator< Alloc, Arity >, Alloc >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBBase\fP = \fBUsesAllocatorTestBase\fP< \fBNotUsesAllocator\fP, Alloc >"
+.br
+.ti -1c
+.RI "using \fBCtorAlloc\fP = typename Base::CtorAlloc"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNotUsesAllocator\fP (\fBNotUsesAllocator\fP const &)"
+.br
+.ti -1c
+.RI "\fBNotUsesAllocator\fP (\fBNotUsesAllocator\fP &&)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args, EnableIfB< sizeof\&.\&.\&.(Args)==Arity >  = false> \fBNotUsesAllocator\fP (Args &&\&.\&.\&.)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> \fBNotUsesAllocator\fP (std::allocator_arg_t tag, CtorAlloc const &alloc, Args &&\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args, EnableIfB< sizeof\&.\&.\&.(Args)==Arity+1 >  = false> \fBNotUsesAllocator\fP (Args &&\&.\&.\&. args)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

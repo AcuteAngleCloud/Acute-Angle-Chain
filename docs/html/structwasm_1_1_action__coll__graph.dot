@@ -1,0 +1,42 @@
+digraph "wasm::Action"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="wasm::Action",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" origin" ,fontname="Helvetica"];
+  Node2 [label="wasm::Expression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_expression.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" contents" ,fontname="Helvetica"];
+  Node3 [label="wasm::Function",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_function.html"];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" body" ,fontname="Helvetica"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" params\nvars" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< WasmType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type\nname" ,fontname="Helvetica"];
+  Node5 [label="wasm::Name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_name.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="cashew::IString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcashew_1_1_i_string.html"];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" localIndices" ,fontname="Helvetica"];
+  Node7 [label="std::map\< wasm::Name,\l Index \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" localNames" ,fontname="Helvetica"];
+  Node8 [label="std::vector\< wasm::\lName \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" debugLocations" ,fontname="Helvetica"];
+  Node9 [label="std::unordered_map\l\< wasm::Expression *,\l wasm::Function::DebugLocation \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1unordered__map.html"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" call" ,fontname="Helvetica"];
+  Node10 [label="wasm::Call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_call.html"];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="wasm::SpecificExpression\l\< Expression::CallId \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_specific_expression.html"];
+  Node2 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" target" ,fontname="Helvetica"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" operands" ,fontname="Helvetica"];
+  Node12 [label="ArenaVector\< Expression * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_arena_vector.html"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="ArenaVectorBase\< ArenaVector\l\< Expression * \>, Expression * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_arena_vector_base.html"];
+  Node2 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" data" ,fontname="Helvetica"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" block" ,fontname="Helvetica"];
+  Node14 [label="wasm::Block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_block.html"];
+  Node15 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="wasm::SpecificExpression\l\< Expression::BlockId \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_specific_expression.html"];
+  Node2 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="Helvetica"];
+  Node12 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" list" ,fontname="Helvetica"];
+}

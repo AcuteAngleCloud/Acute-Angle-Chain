@@ -1,0 +1,329 @@
+.TH "fc::variant" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::variant \- stores null, int64, uint64, double, bool, string, std::vector<variant>, and \fBvariant_object\fP's\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <variant\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBvisitor\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBtype_id\fP { \fBnull_type\fP = 0, \fBint64_type\fP = 1, \fBuint64_type\fP = 2, \fBdouble_type\fP = 3, \fBbool_type\fP = 4, \fBstring_type\fP = 5, \fBarray_type\fP = 6, \fBobject_type\fP = 7, \fBblob_type\fP = 8 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvariant\fP ()"
+.br
+.RI "Constructs a null_type variant\&. "
+.ti -1c
+.RI "\fBvariant\fP (nullptr_t)"
+.br
+.RI "Constructs a null_type variant\&. "
+.ti -1c
+.RI "\fBvariant\fP (const char *str)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (char *str)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (wchar_t *str)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (const wchar_t *str)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (float val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (uint8_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (int8_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (uint16_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (int16_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (uint32_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (int32_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (uint64_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (int64_t val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (double val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (bool val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (\fBblob\fP val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (fc::string val)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (\fBvariant_object\fP)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (\fBmutable_variant_object\fP)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (\fBvariants\fP)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (const \fBvariant\fP &)"
+.br
+.ti -1c
+.RI "\fBvariant\fP (\fBvariant\fP &&)"
+.br
+.ti -1c
+.RI "void \fBvisit\fP (const \fBvisitor\fP &v) const"
+.br
+.ti -1c
+.RI "type_id \fBget_type\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_null\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_string\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_bool\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_int64\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_uint64\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_double\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_object\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_array\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_blob\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_numeric\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_integer\fP () const"
+.br
+.ti -1c
+.RI "int64_t \fBas_int64\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBas_uint64\fP () const"
+.br
+.ti -1c
+.RI "bool \fBas_bool\fP () const"
+.br
+.ti -1c
+.RI "double \fBas_double\fP () const"
+.br
+.ti -1c
+.RI "\fBblob\fP & \fBget_blob\fP ()"
+.br
+.ti -1c
+.RI "const \fBblob\fP & \fBget_blob\fP () const"
+.br
+.ti -1c
+.RI "\fBblob\fP \fBas_blob\fP () const"
+.br
+.ti -1c
+.RI "string \fBas_string\fP () const"
+.br
+.ti -1c
+.RI "const string & \fBget_string\fP () const"
+.br
+.ti -1c
+.RI "\fBvariants\fP & \fBget_array\fP ()"
+.br
+.ti -1c
+.RI "const \fBvariants\fP & \fBget_array\fP () const"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP & \fBget_object\fP ()"
+.br
+.ti -1c
+.RI "const \fBvariant_object\fP & \fBget_object\fP () const"
+.br
+.ti -1c
+.RI "const \fBvariant\fP & \fBoperator[]\fP (const char *) const"
+.br
+.ti -1c
+.RI "const \fBvariant\fP & \fBoperator[]\fP (size_t pos) const"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBas\fP () const"
+.br
+.ti -1c
+.RI "template<typename T > void \fBas\fP (\fBT\fP &v) const"
+.br
+.ti -1c
+.RI "\fBvariant\fP & \fBoperator=\fP (\fBvariant\fP &&v)"
+.br
+.ti -1c
+.RI "\fBvariant\fP & \fBoperator=\fP (const \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > \fBvariant\fP & \fBoperator=\fP (\fBT\fP &&v)"
+.br
+.ti -1c
+.RI "template<typename T > \fBvariant\fP (const \fBoptional\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename T > \fBvariant\fP (const \fBT\fP &val)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+stores null, int64, uint64, double, bool, string, std::vector<variant>, and \fBvariant_object\fP's\&. 
+
+variant's allocate everything but strings, arrays, and objects on the stack and are 'move aware' for values allcoated on the heap\&.
+.PP
+Memory usage on 64 bit systems is 16 bytes and 12 bytes on 32 bit systems\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "fc::variant::variant (const char * str)"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstr\fP - UTF8 string 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > \fBT\fP fc::variant::as () const\fC [inline]\fP"
+_types that use non-intrusive variant conversion can implement the following method to implement conversion from variant to \fBT\fP\&.
+.PP
+\fC void from_variant( const Variant& var, T& val ) \fP
+.PP
+The above form is not always convienant, so the this templated method is used to enable conversion from Variants to other types\&. 
+.SS "string fc::variant::as_string () const"
+Convert's double, ints, bools, etc to a string 
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIif\fP get_type() == array_type | get_type() == object_type 
+.RE
+.PP
+
+.SS "\fBvariants\fP & fc::variant::get_array ()"
+
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIif\fP get_type() != array_type | null_type 
+.RE
+.PP
+
+.SS "const \fBvariants\fP & fc::variant::get_array () const"
+
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIif\fP get_type() != array_type 
+.RE
+.PP
+
+.SS "\fBvariant_object\fP & fc::variant::get_object ()"
+
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIif\fP get_type() != object_type | null_type 
+.RE
+.PP
+
+.SS "const \fBvariant_object\fP & fc::variant::get_object () const"
+
+.PP
+\fBExceptions:\fP
+.RS 4
+\fIif\fP get_type() != object_type 
+.RE
+.PP
+
+.SS "const string & fc::variant::get_string () const"
+
+.PP
+\fBPrecondition:\fP
+.RS 4
+get_type() == string_type 
+.RE
+.PP
+
+.SS "bool fc::variant::is_integer () const"
+int64, uint64, bool 
+.SS "bool fc::variant::is_numeric () const"
+int64, uint64, double,bool 
+.SS "const \fBvariant\fP & fc::variant::operator[] (const char * key) const"
+
+.PP
+\fBPrecondition:\fP
+.RS 4
+is_object() 
+.RE
+.PP
+
+.SS "const \fBvariant\fP & fc::variant::operator[] (size_t pos) const"
+
+.PP
+\fBPrecondition:\fP
+.RS 4
+is_array() 
+.RE
+.PP
+
+.SS "size_t fc::variant::size () const"
+
+.PP
+\fBPrecondition:\fP
+.RS 4
+is_array() 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

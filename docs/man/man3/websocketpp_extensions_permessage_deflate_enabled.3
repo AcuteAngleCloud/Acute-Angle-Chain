@@ -1,0 +1,289 @@
+.TH "websocketpp::extensions::permessage_deflate::enabled< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::extensions::permessage_deflate::enabled< config >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "lib::error_code \fBinit\fP (bool is_server)"
+.br
+.RI "Initialize zlib state\&. "
+.ti -1c
+.RI "bool \fBis_implemented\fP () const"
+.br
+.RI "\fBTest\fP if this object implements the permessage-deflate specification\&. "
+.ti -1c
+.RI "bool \fBis_enabled\fP () const"
+.br
+.RI "\fBTest\fP if the extension was negotiated for this connection\&. "
+.ti -1c
+.RI "void \fBenable_server_no_context_takeover\fP ()"
+.br
+.RI "Reset server's outgoing LZ77 sliding window for each new message\&. "
+.ti -1c
+.RI "void \fBenable_client_no_context_takeover\fP ()"
+.br
+.RI "Reset client's outgoing LZ77 sliding window for each new message\&. "
+.ti -1c
+.RI "lib::error_code \fBset_server_max_window_bits\fP (uint8_t bits, mode::value mode)"
+.br
+.RI "Limit server LZ77 sliding window size\&. "
+.ti -1c
+.RI "lib::error_code \fBset_client_max_window_bits\fP (uint8_t bits, mode::value mode)"
+.br
+.RI "Limit client LZ77 sliding window size\&. "
+.ti -1c
+.RI "std::string \fBgenerate_offer\fP () const"
+.br
+.RI "Generate extension offer\&. "
+.ti -1c
+.RI "lib::error_code \fBvalidate_offer\fP (\fBhttp::attribute_list\fP const &)"
+.br
+.RI "Validate extension response\&. "
+.ti -1c
+.RI "\fBerr_str_pair\fP \fBnegotiate\fP (\fBhttp::attribute_list\fP const &offer)"
+.br
+.RI "Negotiate extension\&. "
+.ti -1c
+.RI "lib::error_code \fBcompress\fP (std::string const &in, std::string &out)"
+.br
+.RI "Compress bytes\&. "
+.ti -1c
+.RI "lib::error_code \fBdecompress\fP (uint8_t const *buf, size_t len, std::string &out)"
+.br
+.RI "Decompress bytes\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::compress (std::string const & in, std::string & out)\fC [inline]\fP"
+
+.PP
+Compress bytes\&. 
+.PP
+\fBTodo\fP
+.RS 4
+: avail_in/out is 32 bit, need to fix for cases of >32 bit frames on 64 bit machines\&.
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIin\fP String to compress 
+.br
+\fIout\fP String to append compressed bytes to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Error or status code 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::decompress (uint8_t const * buf, size_t len, std::string & out)\fC [inline]\fP"
+
+.PP
+Decompress bytes\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Byte buffer to decompress 
+.br
+\fIlen\fP Length of buf 
+.br
+\fIout\fP String to append decompressed bytes to 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Error or status code 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::enable_client_no_context_takeover ()\fC [inline]\fP"
+
+.PP
+Reset client's outgoing LZ77 sliding window for each new message\&. Enabling this setting will cause the client's compressor to reset the compression state (the LZ77 sliding window) for every message\&. This means that the compressor will not look back to patterns in previous messages to improve compression\&. This will reduce the compression efficiency for large messages somewhat and small messages drastically\&.
+.PP
+This option may reduce client compressor memory usage and server decompressor memory usage\&. 
+.PP
+\fBTodo\fP
+.RS 4
+Document to what extent memory usage will be reduced
+.RE
+.PP
+.PP
+This option is supported by all compliant clients and servers\&. Enabling it via either endpoint should be sufficient to ensure it is used\&. 
+.SS "template<typename config > void \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::enable_server_no_context_takeover ()\fC [inline]\fP"
+
+.PP
+Reset server's outgoing LZ77 sliding window for each new message\&. Enabling this setting will cause the server's compressor to reset the compression state (the LZ77 sliding window) for every message\&. This means that the compressor will not look back to patterns in previous messages to improve compression\&. This will reduce the compression efficiency for large messages somewhat and small messages drastically\&.
+.PP
+This option may reduce server compressor memory usage and client decompressor memory usage\&. 
+.PP
+\fBTodo\fP
+.RS 4
+Document to what extent memory usage will be reduced
+.RE
+.PP
+.PP
+For clients, this option is dependent on server support\&. Enabling it via this method does not guarantee that it will be successfully negotiated, only that it will be requested\&.
+.PP
+For servers, no client support is required\&. Enabling this option on a server will result in its use\&. The server will signal to clients that the option will be in use so they can optimize resource usage if they are able\&. 
+.SS "template<typename config > std::string \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::generate_offer () const\fC [inline]\fP"
+
+.PP
+Generate extension offer\&. Creates an offer string to include in the Sec-WebSocket-Extensions header of outgoing client requests\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP WebSocket extension offer string for this extension 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::init (bool is_server)\fC [inline]\fP"
+
+.PP
+Initialize zlib state\&. Note: this should be called \fIafter\fP the negotiation methods\&. It will use information from the negotiation to determine how to initialize the zlib data structures\&.
+.PP
+\fBTodo\fP
+.RS 4
+memory level, strategy, etc are hardcoded
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIis_server\fP \fBTrue\fP to initialize as a server, false for a client\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP code representing the error that occurred, if any 
+.RE
+.PP
+
+.SS "template<typename config > bool \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::is_enabled () const\fC [inline]\fP"
+
+.PP
+\fBTest\fP if the extension was negotiated for this connection\&. Retrieves whether or not this extension is in use based on the initial handshake extension negotiations\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the extension is in use 
+.RE
+.PP
+
+.SS "template<typename config > bool \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::is_implemented () const\fC [inline]\fP"
+
+.PP
+\fBTest\fP if this object implements the permessage-deflate specification\&. Because this object does implieent it, it will always return true\&.
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not this object implements permessage-deflate 
+.RE
+.PP
+
+.SS "template<typename config > \fBerr_str_pair\fP \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::negotiate (\fBhttp::attribute_list\fP const & offer)\fC [inline]\fP"
+
+.PP
+Negotiate extension\&. Confirm that the client's extension negotiation offer has settings compatible with local policy\&. If so, generate a reply and apply those settings to the extension state\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIoffer\fP Attribute from client's offer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Status code and value to return to remote endpoint 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::set_client_max_window_bits (uint8_t bits, mode::value mode)\fC [inline]\fP"
+
+.PP
+Limit client LZ77 sliding window size\&. The bits setting is the base 2 logarithm of the window size that the client must use to compress outgoing messages\&. The permitted range is 8 to 15 inclusive\&. 8 represents a 256 byte window and 15 a 32KiB window\&. The default setting is 15\&.
+.PP
+Mode Options:
+.IP "\(bu" 2
+accept: Accept whatever the remote endpoint offers\&.
+.IP "\(bu" 2
+decline: Decline any offers to deviate from the defaults
+.IP "\(bu" 2
+largest: Accept largest window size acceptable to both endpoints
+.IP "\(bu" 2
+smallest: Accept smallest window size acceptiable to both endpoints
+.PP
+.PP
+This setting is dependent on client support\&. \fBA\fP client may limit its own outgoing window size unilaterally\&. \fBA\fP server may only limit the client's window size if the remote client supports that feature\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbits\fP The size to request for the outgoing window size 
+.br
+\fImode\fP The mode to use for negotiating this parameter 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP status code 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::set_server_max_window_bits (uint8_t bits, mode::value mode)\fC [inline]\fP"
+
+.PP
+Limit server LZ77 sliding window size\&. The bits setting is the base 2 logarithm of the maximum window size that the server must use to compress outgoing messages\&. The permitted range is 8 to 15 inclusive\&. 8 represents a 256 byte window and 15 a 32KiB window\&. The default setting is 15\&.
+.PP
+Mode Options:
+.IP "\(bu" 2
+accept: Accept whatever the remote endpoint offers\&.
+.IP "\(bu" 2
+decline: Decline any offers to deviate from the defaults
+.IP "\(bu" 2
+largest: Accept largest window size acceptable to both endpoints
+.IP "\(bu" 2
+smallest: Accept smallest window size acceptiable to both endpoints
+.PP
+.PP
+This setting is dependent on server support\&. \fBA\fP client requesting this setting may be rejected by the server or have the exact value used adjusted by the server\&. \fBA\fP server may unilaterally set this value without client support\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbits\fP The size to request for the outgoing window size 
+.br
+\fImode\fP The mode to use for negotiating this parameter 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP status code 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::extensions::permessage_deflate::enabled\fP< \fBconfig\fP >::validate_offer (\fBhttp::attribute_list\fP const &)\fC [inline]\fP"
+
+.PP
+Validate extension response\&. Confirm that the server has negotiated settings compatible with our original offer and apply those settings to the extension state\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIresponse\fP The server response attribute list to validate 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Validation error or 0 on success 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

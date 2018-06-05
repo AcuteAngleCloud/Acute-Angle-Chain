@@ -1,0 +1,44 @@
+.TH "aacio::margin_state" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::margin_state
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "real_type \fBlend\fP (int64_t new_lendable)"
+.br
+.ti -1c
+.RI "\fBextended_asset\fP \fBunlend\fP (double ishares)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBextended_asset\fP \fBtotal_lendable\fP"
+.br
+.ti -1c
+.RI "\fBextended_asset\fP \fBtotal_lent\fP"
+.br
+.ti -1c
+.RI "real_type \fBleast_collateralized\fP = std::numeric_limits<double>::max()"
+.br
+.ti -1c
+.RI "real_type \fBinterest_shares\fP = 0"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "real_type aacio::margin_state::interest_shares = 0"
+Total shares allocated to those who have lent, when someone unlends they get total_lendable * user_interest_shares / interest_shares and total_lendable is reduced\&.
+.PP
+When interest is paid, it shows up in total_lendable 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,29 @@
+.TH "boost::pfr::detail::loophole_ubiq< T, N >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+boost::pfr::detail::loophole_ubiq< T, N >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class U , std::size_t  = sizeof(fn_def<T, U, N, sizeof(ins<U, N>(0)) == sizeof(char)>)> constexpr \fBoperator U &\fP () const noexcept"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class U , std::size_t M> static std::size_t \fBins\fP (\&.\&.\&.)"
+.br
+.ti -1c
+.RI "template<class U , std::size_t M, std::size_t  = sizeof(loophole(tag<T,M>{}))> static char \fBins\fP (int)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

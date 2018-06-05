@@ -1,0 +1,54 @@
+\hypertarget{classbootseq__tester}{}\section{bootseq\+\_\+tester Class Reference}
+\label{classbootseq__tester}\index{bootseq\+\_\+tester@{bootseq\+\_\+tester}}
+
+
+Inheritance diagram for bootseq\+\_\+tester\+:
+% FIG 0
+
+
+Collaboration diagram for bootseq\+\_\+tester\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a852d6205099c4fc87284c4d52667def8}\label{classbootseq__tester_a852d6205099c4fc87284c4d52667def8}} 
+action\+\_\+result {\bfseries push\+\_\+action} (const account\+\_\+name \&\mbox{\hyperlink{structaccount}{account}}, const account\+\_\+name \&signer, const action\+\_\+name \&\mbox{\hyperlink{structaacio_1_1name}{name}}, const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \&data, bool auth=true)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_aa0cf907c8314c78fa1008daaee0e8fd4}\label{classbootseq__tester_aa0cf907c8314c78fa1008daaee0e8fd4}} 
+void {\bfseries create\+\_\+currency} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} manager, \mbox{\hyperlink{structaacio_1_1asset}{asset}} maxsupply)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_adda32bfb79dea78bad37d32f2099bdc7}\label{classbootseq__tester_adda32bfb79dea78bad37d32f2099bdc7}} 
+void {\bfseries issue} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} manager, \mbox{\hyperlink{structaacio_1_1name}{name}} to, \mbox{\hyperlink{structaacio_1_1asset}{asset}} amount)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a71d608950bdce19f8da27dd1ded33896}\label{classbootseq__tester_a71d608950bdce19f8da27dd1ded33896}} 
+action\+\_\+result {\bfseries stake} (const account\+\_\+name \&from, const account\+\_\+name \&to, const string \&net, const string \&cpu, const string \&storage)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a81f2dd7305cba47d6683a4ee332312f6}\label{classbootseq__tester_a81f2dd7305cba47d6683a4ee332312f6}} 
+action\+\_\+result {\bfseries stake} (const account\+\_\+name \&acnt, const string \&net, const string \&cpu, const string \&storage)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a0928ad9c565d061ce132ac14d40b649e}\label{classbootseq__tester_a0928ad9c565d061ce132ac14d40b649e}} 
+\mbox{\hyperlink{structaacio_1_1asset}{asset}} {\bfseries get\+\_\+balance} (const account\+\_\+name \&act)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_abfc7cb3cdcd052a610a4b7cc532bd396}\label{classbootseq__tester_abfc7cb3cdcd052a610a4b7cc532bd396}} 
+action\+\_\+result {\bfseries regproducer} (const account\+\_\+name \&acnt, int params\+\_\+fixture=1)
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a4975d416f48a5ff314d931965e007b9b}\label{classbootseq__tester_a4975d416f48a5ff314d931965e007b9b}} 
+void {\bfseries set\+\_\+code\+\_\+abi} (const account\+\_\+name \&\mbox{\hyperlink{structaccount}{account}}, const char $\ast$wast, const char $\ast$abi)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a5b5258f8a3bb3956d0fa709483d63948}\label{classbootseq__tester_a5b5258f8a3bb3956d0fa709483d63948}} 
+static \mbox{\hyperlink{classfc_1_1variant__object}{fc\+::variant\+\_\+object}} {\bfseries producer\+\_\+parameters\+\_\+example} (int n)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbootseq__tester_a2f21db9754306d1d88d2beafcd8e20b7}\label{classbootseq__tester_a2f21db9754306d1d88d2beafcd8e20b7}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer}{abi\+\_\+serializer}} {\bfseries abi\+\_\+ser}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/chain\+\_\+tests/bootseq\+\_\+tests.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{classaacio_1_1producer__plugin__impl}{}\section{aacio\+:\+:producer\+\_\+plugin\+\_\+impl Class Reference}
+\label{classaacio_1_1producer__plugin__impl}\index{aacio\+::producer\+\_\+plugin\+\_\+impl@{aacio\+::producer\+\_\+plugin\+\_\+impl}}
+
+
+Collaboration diagram for aacio\+:\+:producer\+\_\+plugin\+\_\+impl\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a3a8c6324583decf47259359f2da1a868}\label{classaacio_1_1producer__plugin__impl_a3a8c6324583decf47259359f2da1a868}} 
+{\bfseries producer\+\_\+plugin\+\_\+impl} (boost\+::asio\+::io\+\_\+service \&io)
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a32052da610e0054f927973a04a9d0df9}\label{classaacio_1_1producer__plugin__impl_a32052da610e0054f927973a04a9d0df9}} 
+void {\bfseries schedule\+\_\+production\+\_\+loop} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a0065f496c54064c42ea4537aaae15528}\label{classaacio_1_1producer__plugin__impl_a0065f496c54064c42ea4537aaae15528}} 
+block\+\_\+production\+\_\+condition\+::block\+\_\+production\+\_\+condition\+\_\+enum {\bfseries block\+\_\+production\+\_\+loop} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a9b713a9f20bcf6cef537134775305292}\label{classaacio_1_1producer__plugin__impl_a9b713a9f20bcf6cef537134775305292}} 
+block\+\_\+production\+\_\+condition\+::block\+\_\+production\+\_\+condition\+\_\+enum {\bfseries maybe\+\_\+produce\+\_\+block} (\mbox{\hyperlink{classfc_1_1mutable__variant__object}{fc\+::mutable\+\_\+variant\+\_\+object}} \&capture)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a232b1f3747767551d4819a09e8b3884f}\label{classaacio_1_1producer__plugin__impl_a232b1f3747767551d4819a09e8b3884f}} 
+boost\+::program\+\_\+options\+::variables\+\_\+map {\bfseries \+\_\+options}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a19f4804cecef6bd6eba939d583ed782f}\label{classaacio_1_1producer__plugin__impl_a19f4804cecef6bd6eba939d583ed782f}} 
+bool {\bfseries \+\_\+production\+\_\+enabled} = false
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a3ec6d3b1c356afa260c39e220ec0a508}\label{classaacio_1_1producer__plugin__impl_a3ec6d3b1c356afa260c39e220ec0a508}} 
+uint32\+\_\+t {\bfseries \+\_\+required\+\_\+producer\+\_\+participation} = uint32\+\_\+t(config\+::required\+\_\+producer\+\_\+participation)
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a3ce5f117a27ae80cb13f8936703441b8}\label{classaacio_1_1producer__plugin__impl_a3ce5f117a27ae80cb13f8936703441b8}} 
+uint32\+\_\+t {\bfseries \+\_\+production\+\_\+skip\+\_\+flags} = aacio\+::chain\+::skip\+\_\+nothing
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a6247ac32459fafff72a739aa04b76aaa}\label{classaacio_1_1producer__plugin__impl_a6247ac32459fafff72a739aa04b76aaa}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{chain\+::public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{chain\+::private\+\_\+key\+\_\+type}} $>$ {\bfseries \+\_\+private\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a8409c819ae6328cd23e05849616b7183}\label{classaacio_1_1producer__plugin__impl_a8409c819ae6328cd23e05849616b7183}} 
+\mbox{\hyperlink{classstd_1_1set}{std\+::set}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{chain\+::account\+\_\+name}} $>$ {\bfseries \+\_\+producers}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a3476b946f6c436231e341dfa5b214c4a}\label{classaacio_1_1producer__plugin__impl_a3476b946f6c436231e341dfa5b214c4a}} 
+boost\+::asio\+::deadline\+\_\+timer {\bfseries \+\_\+timer}
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a7f61b52f676246ad1c4b03201e5b8b2f}\label{classaacio_1_1producer__plugin__impl_a7f61b52f676246ad1c4b03201e5b8b2f}} 
+block\+\_\+production\+\_\+condition\+::block\+\_\+production\+\_\+condition\+\_\+enum {\bfseries \+\_\+prev\+\_\+result} = block\+\_\+production\+\_\+condition\+::produced
+\item 
+\mbox{\Hypertarget{classaacio_1_1producer__plugin__impl_a6b83be56b7e165b16cc9f304102e7826}\label{classaacio_1_1producer__plugin__impl_a6b83be56b7e165b16cc9f304102e7826}} 
+uint32\+\_\+t {\bfseries \+\_\+prev\+\_\+result\+\_\+count} = 0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/producer\+\_\+plugin/\mbox{\hyperlink{producer__plugin_8cpp}{producer\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

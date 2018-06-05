@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="aacio::chain::webassembly\l::wavm::intrinsic_function\l_invoker_wrapper\< WasmSig,\l Ret(Cls::*)(Params...) volatile \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__function__invoker__wrapper_3_01_wasm_s07e61c33adfedee6c122dcc742235f31.html"];
+}

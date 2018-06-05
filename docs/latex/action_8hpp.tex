@@ -1,0 +1,43 @@
+\hypertarget{action_8hpp}{}\section{contracts/aaciolib/action.hpp File Reference}
+\label{action_8hpp}\index{contracts/aaciolib/action.\+hpp@{contracts/aaciolib/action.\+hpp}}
+{\ttfamily \#include $<$aaciolib/action.\+h$>$}\newline
+{\ttfamily \#include $<$aaciolib/datastream.\+hpp$>$}\newline
+{\ttfamily \#include $<$aaciolib/serialize.\+hpp$>$}\newline
+Include dependency graph for action.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1permission__level}{aacio\+::permission\+\_\+level}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1action}{aacio\+::action}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1action__meta}{aacio\+::action\+\_\+meta$<$ Account, Name $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{action_8hpp_a9d122b71125adff0bba25f06d27eca2d}\label{action_8hpp_a9d122b71125adff0bba25f06d27eca2d}} 
+\#define {\bfseries A\+C\+T\+I\+ON}(C\+O\+DE,  N\+A\+ME)~struct N\+A\+ME \+: \+::\mbox{\hyperlink{structaacio_1_1action__meta}{aacio\+::action\+\_\+meta}}$<$C\+O\+DE, \+::aacio\+::string\+\_\+to\+\_\+name(\#N\+A\+ME) $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{group__actioncppapi_ga1dbfc575654dd0016e4701e719edbe28}{aacio\+::current\+\_\+action\+\_\+data}} ()
+\begin{DoxyCompactList}\small\item\em Interpret the action body as type \mbox{\hyperlink{struct_t}{T}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} {\bfseries aacio\+::unpack\+\_\+action\+\_\+data} ()
+\item 
+{\footnotesize template$<$typename... accounts$>$ }\\void \mbox{\hyperlink{group__actioncppapi_ga21fa91780aa540fc37c9db54fec25afb}{aacio\+::require\+\_\+recipient}} (account\+\_\+name name, accounts... remaining\+\_\+accounts)
+\begin{DoxyCompactList}\small\item\em Verify specified accounts exist in the set of notified accounts. \end{DoxyCompactList}\item 
+void {\bfseries aacio\+::require\+\_\+auth} (const permission\+\_\+level \&level)
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\void {\bfseries aacio\+::dispatch\+\_\+inline} (permission\+\_\+level perm, account\+\_\+name code, action\+\_\+name act, void(T\+::$\ast$)(Args...), std\+::tuple$<$ Args... $>$ args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

@@ -1,0 +1,49 @@
+\hypertarget{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config}{}\section{websocketpp\+:\+:config\+:\+:core\+:\+:permessage\+\_\+deflate\+\_\+config Struct Reference}
+\label{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config}\index{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config@{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config}}
+
+
+Extension specific settings\+:  
+
+
+
+
+{\ttfamily \#include $<$core.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_aba198d4d1a05699588fb13335b57b38c}\label{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_aba198d4d1a05699588fb13335b57b38c}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1http_1_1parser_1_1request}{core\+::request\+\_\+type}} {\bfseries request\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const bool \mbox{\hyperlink{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_ac9b85348637f891c2965e15532a7018e}{allow\+\_\+disabling\+\_\+context\+\_\+takeover}} = true
+\item 
+static const uint8\+\_\+t \mbox{\hyperlink{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_aa43d8526e2b89349b3fd9a5372507594}{minimum\+\_\+outgoing\+\_\+window\+\_\+bits}} = 8
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Extension specific settings\+: 
+
+permessage\+\_\+compress extension 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_ac9b85348637f891c2965e15532a7018e}\label{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_ac9b85348637f891c2965e15532a7018e}} 
+\index{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config@{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config}!allow\+\_\+disabling\+\_\+context\+\_\+takeover@{allow\+\_\+disabling\+\_\+context\+\_\+takeover}}
+\index{allow\+\_\+disabling\+\_\+context\+\_\+takeover@{allow\+\_\+disabling\+\_\+context\+\_\+takeover}!websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config@{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config}}
+\subsubsection{\texorpdfstring{allow\+\_\+disabling\+\_\+context\+\_\+takeover}{allow\_disabling\_context\_takeover}}
+{\footnotesize\ttfamily const bool websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config\+::allow\+\_\+disabling\+\_\+context\+\_\+takeover = true\hspace{0.3cm}{\ttfamily [static]}}
+
+If the remote endpoint requests that we reset the compression context after each message should we honor the request? \mbox{\Hypertarget{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_aa43d8526e2b89349b3fd9a5372507594}\label{structwebsocketpp_1_1config_1_1core_1_1permessage__deflate__config_aa43d8526e2b89349b3fd9a5372507594}} 
+\index{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config@{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config}!minimum\+\_\+outgoing\+\_\+window\+\_\+bits@{minimum\+\_\+outgoing\+\_\+window\+\_\+bits}}
+\index{minimum\+\_\+outgoing\+\_\+window\+\_\+bits@{minimum\+\_\+outgoing\+\_\+window\+\_\+bits}!websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config@{websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config}}
+\subsubsection{\texorpdfstring{minimum\+\_\+outgoing\+\_\+window\+\_\+bits}{minimum\_outgoing\_window\_bits}}
+{\footnotesize\ttfamily const uint8\+\_\+t websocketpp\+::config\+::core\+::permessage\+\_\+deflate\+\_\+config\+::minimum\+\_\+outgoing\+\_\+window\+\_\+bits = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+If the remote endpoint requests that we reduce the size of the L\+Z77 sliding window size this is the lowest value that will be allowed. Values range from 8 to 15. \mbox{\hyperlink{struct_a}{A}} value of 8 means we will allow any possible window size. \mbox{\hyperlink{struct_a}{A}} value of 15 means do not allow negotiation of the window size (ie require the default). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/websocketpp/config/core.\+hpp\end{DoxyCompactItemize}

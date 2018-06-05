@@ -1,0 +1,41 @@
+\hypertarget{classlibcxx_1_1test_1_1executor_1_1_executor}{}\section{libcxx.\+test.\+executor.\+Executor Class Reference}
+\label{classlibcxx_1_1test_1_1executor_1_1_executor}\index{libcxx.\+test.\+executor.\+Executor@{libcxx.\+test.\+executor.\+Executor}}
+
+
+Inheritance diagram for libcxx.\+test.\+executor.\+Executor\+:
+% FIG 0
+
+
+Collaboration diagram for libcxx.\+test.\+executor.\+Executor\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classlibcxx_1_1test_1_1executor_1_1_executor_a5e0df4e96bb18e815b8cf77bb2e598d3}{run}} (self, exe\+\_\+path, cmd, local\+\_\+cwd, file\+\_\+deps=None, env=None)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibcxx_1_1test_1_1executor_1_1_executor_a5e0df4e96bb18e815b8cf77bb2e598d3}\label{classlibcxx_1_1test_1_1executor_1_1_executor_a5e0df4e96bb18e815b8cf77bb2e598d3}} 
+\index{libcxx\+::test\+::executor\+::\+Executor@{libcxx\+::test\+::executor\+::\+Executor}!run@{run}}
+\index{run@{run}!libcxx\+::test\+::executor\+::\+Executor@{libcxx\+::test\+::executor\+::\+Executor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily def libcxx.\+test.\+executor.\+Executor.\+run (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{exe\+\_\+path,  }\item[{}]{cmd,  }\item[{}]{local\+\_\+cwd,  }\item[{}]{file\+\_\+deps = {\ttfamily None},  }\item[{}]{env = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Execute a command.
+    Be very careful not to change shared state in this function.
+    Executor objects are shared between python processes in `lit -jN`.
+Args:
+    exe_path: str:    Local path to the executable to be run
+    cmd: [str]:       subprocess.call style command
+    local_cwd: str:   Local path to the working directory
+    file_deps: [str]: Files required by the test
+    env: {str: str}:  Environment variables to execute under
+Returns:
+    cmd, out, err, exitCode
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/utils/libcxx/test/executor.\+py\end{DoxyCompactItemize}

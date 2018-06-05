@@ -1,0 +1,11 @@
+digraph "externals/magic_get/test/precise" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_234817ef0c9f06eb6181bd7128efa1a6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_234817ef0c9f06eb6181bd7128efa1a6.html"]
+  dir_d449b752c16b4db524a10fe133615610 [shape=box, label="precise", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d449b752c16b4db524a10fe133615610.html"];
+  }
+  dir_ef55966fe9be6878d4242767a3adebe0 [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_ef55966fe9be6878d4242767a3adebe0.html"];
+  dir_d449b752c16b4db524a10fe133615610->dir_ef55966fe9be6878d4242767a3adebe0 [headlabel="5", labeldistance=1.5 headhref="dir_001675_001661.html"];
+}

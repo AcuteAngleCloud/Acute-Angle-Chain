@@ -1,0 +1,44 @@
+\hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335}{}\section{aacio\+:\+:chain\+:\+:webassembly\+:\+:binaryen\+:\+:intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+:\+:tuple$<$ array\+\_\+ptr$<$ T $>$, array\+\_\+ptr$<$ U $>$, size\+\_\+t, Inputs... $>$ $>$ Struct Template Reference}
+\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335}\index{aacio\+::chain\+::webassembly\+::binaryen\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ array\+\_\+ptr$<$ T $>$, array\+\_\+ptr$<$ U $>$, size\+\_\+t, Inputs... $>$ $>$@{aacio\+::chain\+::webassembly\+::binaryen\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ array\+\_\+ptr$<$ T $>$, array\+\_\+ptr$<$ U $>$, size\+\_\+t, Inputs... $>$ $>$}}
+
+
+{\ttfamily \#include $<$binaryen.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_a25ce81c8656aaa572b79223b1c547cc0}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_a25ce81c8656aaa572b79223b1c547cc0}} 
+using {\bfseries next\+\_\+step} = \mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl}{intrinsic\+\_\+invoker\+\_\+impl}}$<$ Ret, std\+::tuple$<$ Inputs... $>$ $>$
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_a363ba3409be2f4bb5cfbf1eb80e26495}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_a363ba3409be2f4bb5cfbf1eb80e26495}} 
+using {\bfseries then\+\_\+type} = Ret($\ast$)(\mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1interpreter__interface}{interpreter\+\_\+interface}} $\ast$, \mbox{\hyperlink{structaacio_1_1chain_1_1array__ptr}{array\+\_\+ptr}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$, \mbox{\hyperlink{structaacio_1_1chain_1_1array__ptr}{array\+\_\+ptr}}$<$ \mbox{\hyperlink{union_u}{U}} $>$, size\+\_\+t, Inputs..., \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&, int)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_abcd6fd0b0f4945778129ddd8fa2df619}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_abcd6fd0b0f4945778129ddd8fa2df619}} 
+{\footnotesize template$<$then\+\_\+type Then$>$ }\\static Ret {\bfseries translate\+\_\+one} (\mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1interpreter__interface}{interpreter\+\_\+interface}} $\ast$interface, Inputs... rest, \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&args, int offset)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_a4d4561c0e6e35c371ed3306b7d96c57f}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_bb369d557572a35c29e4f57bf73f5335_a4d4561c0e6e35c371ed3306b7d96c57f}} 
+{\footnotesize template$<$then\+\_\+type Then$>$ }\\static const auto {\bfseries fn} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename U, typename Ret, typename... Inputs$>$\newline
+struct aacio\+::chain\+::webassembly\+::binaryen\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ array\+\_\+ptr$<$ T $>$, array\+\_\+ptr$<$ U $>$, size\+\_\+t, Inputs... $>$ $>$}
+
+Specialization for transcribing a pair of \mbox{\hyperlink{structaacio_1_1chain_1_1array__ptr}{array\+\_\+ptr}} types in the native method signature that share size This type transcribes into 3 wasm parameters\+: 2 pointers and byte length and checks the validity of those memory ranges before dispatching to the native method
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Ret} & -\/ the return type of the native method \\
+\hline
+{\em Inputs} & -\/ the remaining native parameters to transcribe \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/webassembly/binaryen.\+hpp\end{DoxyCompactItemize}

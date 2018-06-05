@@ -1,0 +1,46 @@
+\hypertarget{classfc_1_1appender}{}\section{fc\+:\+:appender Class Reference}
+\label{classfc_1_1appender}\index{fc\+::appender@{fc\+::appender}}
+
+
+Inheritance diagram for fc\+:\+:appender\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:appender\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_ad365cd5c08b3c5d4f304ed6302d3e954}\label{classfc_1_1appender_ad365cd5c08b3c5d4f304ed6302d3e954}} 
+typedef \mbox{\hyperlink{classfc_1_1shared__ptr}{fc\+::shared\+\_\+ptr}}$<$ \mbox{\hyperlink{classfc_1_1appender}{appender}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_ae86b4e5cfde6548556295692ba2badca}\label{classfc_1_1appender_ae86b4e5cfde6548556295692ba2badca}} 
+virtual void {\bfseries initialize} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service)=0
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_a2c7c23788e18c882ced73b8a6f24e3c9}\label{classfc_1_1appender_a2c7c23788e18c882ced73b8a6f24e3c9}} 
+virtual void {\bfseries log} (const \mbox{\hyperlink{classfc_1_1log__message}{log\+\_\+message}} \&m)=0
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_a17851a47296d3c9d02947dba7d2bf924}\label{classfc_1_1appender_a17851a47296d3c9d02947dba7d2bf924}} 
+{\footnotesize template$<$typename T $>$ }\\static bool {\bfseries register\+\_\+appender} (const fc\+::string \&type)
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_a7d474a3ade4d0a88c25c1b8dfd16fbc9}\label{classfc_1_1appender_a7d474a3ade4d0a88c25c1b8dfd16fbc9}} 
+static \mbox{\hyperlink{classfc_1_1shared__ptr}{appender\+::ptr}} {\bfseries create} (const fc\+::string \&name, const fc\+::string \&type, const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&args)
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_a346c3cde73e77dcfc101f28983d7c0f9}\label{classfc_1_1appender_a346c3cde73e77dcfc101f28983d7c0f9}} 
+static \mbox{\hyperlink{classfc_1_1shared__ptr}{appender\+::ptr}} {\bfseries get} (const fc\+::string \&name)
+\item 
+\mbox{\Hypertarget{classfc_1_1appender_a012af8b950f47f2fb1e89e70f1e60388}\label{classfc_1_1appender_a012af8b950f47f2fb1e89e70f1e60388}} 
+static bool {\bfseries register\+\_\+appender} (const fc\+::string \&type, const \mbox{\hyperlink{classfc_1_1shared__ptr}{appender\+\_\+factory\+::ptr}} \&f)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/log/appender.\+hpp\item 
+libraries/fc/src/log/appender.\+cpp\end{DoxyCompactItemize}

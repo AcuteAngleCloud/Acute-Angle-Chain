@@ -1,0 +1,66 @@
+.TH "plugins/account_history_api_plugin/account_history_api_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/account_history_api_plugin/account_history_api_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/account_history_api_plugin/account_history_api_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/chain/chain_controller\&.hpp>\fP
+.br
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCALL\fP(api_name,  api_handle,  api_namespace,  call_name)"
+.br
+.ti -1c
+.RI "#define \fBCHAIN_RO_CALL\fP(call_name)   CALL(account_history, ro_api, \fBaccount_history_apis::read_only\fP, call_name)"
+.br
+.ti -1c
+.RI "#define \fBCHAIN_RW_CALL\fP(call_name)   CALL(account_history, rw_api, \fBaccount_history_apis::read_write\fP, call_name)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CALL(api_name, api_handle, api_namespace, call_name)"
+\fBValue:\fP
+.PP
+.nf
+{std::string("/v1/" #api_name "/" #call_name), \
+   [this, api_handle](string, string body, url_response_callback cb) mutable { \
+          try { \
+             if (body\&.empty()) body = "{}"; \
+             auto result = api_handle\&.call_name(fc::json::from_string(body)\&.as<api_namespace::call_name ## _params>()); \
+             cb(200, fc::json::to_string(result)); \
+          } catch (fc::eof_exception& e) { \
+             error_results results{400, "Bad Request", e}; \
+             cb(400, fc::json::to_string(results)); \
+             elog("Unable to parse arguments: ${args}", ("args", body)); \
+          } catch (fc::exception& e) { \
+             error_results results{500, "Internal Service Error", e}; \
+             cb(500, fc::json::to_string(results)); \
+             elog("Exception encountered while processing ${call}: ${e}", ("call", #api_name "\&." #call_name)("e", e)); \
+          } \
+       }}
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

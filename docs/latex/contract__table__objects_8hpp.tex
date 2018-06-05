@@ -1,0 +1,93 @@
+\hypertarget{contract__table__objects_8hpp}{}\section{libraries/chain/include/aacio/chain/contracts/contract\+\_\+table\+\_\+objects.hpp File Reference}
+\label{contract__table__objects_8hpp}\index{libraries/chain/include/aacio/chain/contracts/contract\+\_\+table\+\_\+objects.\+hpp@{libraries/chain/include/aacio/chain/contracts/contract\+\_\+table\+\_\+objects.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/contracts/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/multi\+\_\+index\+\_\+includes.\+hpp$>$}\newline
+{\ttfamily \#include $<$softfloat.\+hpp$>$}\newline
+{\ttfamily \#include $<$chainbase/chainbase.\+hpp$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for contract\+\_\+table\+\_\+objects.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1contracts_1_1table__id__object}{aacio\+::chain\+::contracts\+::table\+\_\+id\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classaacio_1_1chain_1_1contracts_1_1table__id__object}{table\+\_\+id\+\_\+object}} class tracks the mapping of (scope, code, table) to an opaque identifier. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1key__value__object}{aacio\+::chain\+::contracts\+::key\+\_\+value\+\_\+object}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1secondary__index}{aacio\+::chain\+::contracts\+::secondary\+\_\+index$<$ Secondary\+Key, Object\+Type\+Id, Secondary\+Key\+Less $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1secondary__index_1_1index__object}{aacio\+::chain\+::contracts\+::secondary\+\_\+index$<$ Secondary\+Key, Object\+Type\+Id, Secondary\+Key\+Less $>$\+::index\+\_\+object}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1soft__double__less}{aacio\+::chain\+::contracts\+::soft\+\_\+double\+\_\+less}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01contracts_1_1table__id__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ contracts\+::table\+\_\+id\+\_\+object $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01contracts_1_1key__value__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ contracts\+::key\+\_\+value\+\_\+object $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01contracts_1_1index64__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ contracts\+::index64\+\_\+object $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01contracts_1_1index128__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ contracts\+::index128\+\_\+object $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01contracts_1_1index256__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ contracts\+::index256\+\_\+object $>$}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01contracts_1_1index__double__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ contracts\+::index\+\_\+double\+\_\+object $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a5a74942203ef1e0a34298b16031adaf4}\label{contract__table__objects_8hpp_a5a74942203ef1e0a34298b16031adaf4}} 
+using {\bfseries aacio\+::chain\+::contracts\+::table\+\_\+id\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ table\+\_\+id\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ table\+\_\+id\+\_\+object, table\+\_\+id\+\_\+object\+::id\+\_\+type, \&table\+\_\+id\+\_\+object\+::id $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+code\+\_\+scope\+\_\+table $>$, composite\+\_\+key$<$ table\+\_\+id\+\_\+object, member$<$ table\+\_\+id\+\_\+object, account\+\_\+name, \&table\+\_\+id\+\_\+object\+::code $>$, member$<$ table\+\_\+id\+\_\+object, scope\+\_\+name, \&table\+\_\+id\+\_\+object\+::scope $>$, member$<$ table\+\_\+id\+\_\+object, table\+\_\+name, \&table\+\_\+id\+\_\+object\+::table $>$ $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_ab012826b388d84fe9b69e46ec8343740}\label{contract__table__objects_8hpp_ab012826b388d84fe9b69e46ec8343740}} 
+using {\bfseries aacio\+::chain\+::contracts\+::table\+\_\+id} = table\+\_\+id\+\_\+object\+::id\+\_\+type
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_aeb5a548f37a0804fc71723c2a80b60b8}\label{contract__table__objects_8hpp_aeb5a548f37a0804fc71723c2a80b60b8}} 
+using {\bfseries aacio\+::chain\+::contracts\+::key\+\_\+value\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ key\+\_\+value\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ key\+\_\+value\+\_\+object, key\+\_\+value\+\_\+object\+::id\+\_\+type, \&key\+\_\+value\+\_\+object\+::id $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+scope\+\_\+primary $>$, composite\+\_\+key$<$ key\+\_\+value\+\_\+object, member$<$ key\+\_\+value\+\_\+object, table\+\_\+id, \&key\+\_\+value\+\_\+object\+::t\+\_\+id $>$, member$<$ key\+\_\+value\+\_\+object, uint64\+\_\+t, \&key\+\_\+value\+\_\+object\+::primary\+\_\+key $>$ $>$, composite\+\_\+key\+\_\+compare$<$ std\+::less$<$ table\+\_\+id $>$, std\+::less$<$ uint64\+\_\+t $>$ $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a20c8a3af0d7f63ec8e745c5f7f070c7c}\label{contract__table__objects_8hpp_a20c8a3af0d7f63ec8e745c5f7f070c7c}} 
+typedef secondary\+\_\+index$<$ uint64\+\_\+t, index64\+\_\+object\+\_\+type $>$\+::index\+\_\+object {\bfseries aacio\+::chain\+::contracts\+::index64\+\_\+object}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a89319b6304d1c9c7393ebca0291bf02d}\label{contract__table__objects_8hpp_a89319b6304d1c9c7393ebca0291bf02d}} 
+typedef secondary\+\_\+index$<$ uint64\+\_\+t, index64\+\_\+object\+\_\+type $>$\+::index\+\_\+index {\bfseries aacio\+::chain\+::contracts\+::index64\+\_\+index}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a125add4fbe001a2bccc0a5090d6e77df}\label{contract__table__objects_8hpp_a125add4fbe001a2bccc0a5090d6e77df}} 
+typedef secondary\+\_\+index$<$ uint128\+\_\+t, index128\+\_\+object\+\_\+type $>$\+::index\+\_\+object {\bfseries aacio\+::chain\+::contracts\+::index128\+\_\+object}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a72053ca09ef4c97c689febed031ba1d8}\label{contract__table__objects_8hpp_a72053ca09ef4c97c689febed031ba1d8}} 
+typedef secondary\+\_\+index$<$ uint128\+\_\+t, index128\+\_\+object\+\_\+type $>$\+::index\+\_\+index {\bfseries aacio\+::chain\+::contracts\+::index128\+\_\+index}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_adac8c4cc0eb0501c08fbfdd1c5fef19b}\label{contract__table__objects_8hpp_adac8c4cc0eb0501c08fbfdd1c5fef19b}} 
+typedef std\+::array$<$ uint128\+\_\+t, 2 $>$ {\bfseries aacio\+::chain\+::contracts\+::key256\+\_\+t}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a9b680229a46fcc1605e5efc899935a89}\label{contract__table__objects_8hpp_a9b680229a46fcc1605e5efc899935a89}} 
+typedef secondary\+\_\+index$<$ key256\+\_\+t, index256\+\_\+object\+\_\+type $>$\+::index\+\_\+object {\bfseries aacio\+::chain\+::contracts\+::index256\+\_\+object}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a3c23d6f23489dc4b5fce2a034aab102a}\label{contract__table__objects_8hpp_a3c23d6f23489dc4b5fce2a034aab102a}} 
+typedef secondary\+\_\+index$<$ key256\+\_\+t, index256\+\_\+object\+\_\+type $>$\+::index\+\_\+index {\bfseries aacio\+::chain\+::contracts\+::index256\+\_\+index}
+\item 
+typedef secondary\+\_\+index$<$ uint64\+\_\+t, index\+\_\+double\+\_\+object\+\_\+type, soft\+\_\+double\+\_\+less $>$\+::index\+\_\+object \mbox{\hyperlink{contract__table__objects_8hpp_a39dd0e3528464bbc3e1688edd03cdae6}{aacio\+::chain\+::contracts\+::index\+\_\+double\+\_\+object}}
+\item 
+\mbox{\Hypertarget{contract__table__objects_8hpp_a935ed8f883cd2f0017018c6164f5334a}\label{contract__table__objects_8hpp_a935ed8f883cd2f0017018c6164f5334a}} 
+typedef secondary\+\_\+index$<$ uint64\+\_\+t, index\+\_\+double\+\_\+object\+\_\+type, soft\+\_\+double\+\_\+less $>$\+::index\+\_\+index {\bfseries aacio\+::chain\+::contracts\+::index\+\_\+double\+\_\+index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{contract__table__objects_8hpp_file_a39dd0e3528464bbc3e1688edd03cdae6}\label{contract__table__objects_8hpp_file_a39dd0e3528464bbc3e1688edd03cdae6}} 
+\index{contract\+\_\+table\+\_\+objects.\+hpp@{contract\+\_\+table\+\_\+objects.\+hpp}!index\+\_\+double\+\_\+object@{index\+\_\+double\+\_\+object}}
+\index{index\+\_\+double\+\_\+object@{index\+\_\+double\+\_\+object}!contract\+\_\+table\+\_\+objects.\+hpp@{contract\+\_\+table\+\_\+objects.\+hpp}}
+\subsubsection{\texorpdfstring{index\+\_\+double\+\_\+object}{index\_double\_object}}
+{\footnotesize\ttfamily typedef secondary\+\_\+index$<$uint64\+\_\+t,index\+\_\+double\+\_\+object\+\_\+type,soft\+\_\+double\+\_\+less$>$\+::index\+\_\+object \mbox{\hyperlink{contract__table__objects_8hpp_a39dd0e3528464bbc3e1688edd03cdae6}{aacio\+::chain\+::contracts\+::index\+\_\+double\+\_\+object}}}
+
+This index supports a deterministic software implementation of double as the secondary key.
+
+The software double implementation is using the Berkeley softfloat library (release 3). 

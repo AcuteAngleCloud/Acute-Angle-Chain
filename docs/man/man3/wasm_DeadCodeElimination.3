@@ -1,0 +1,133 @@
+.TH "wasm::DeadCodeElimination" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::DeadCodeElimination
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< PostWalker< DeadCodeElimination > >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fBreplaceCurrent\fP (\fBExpression\fP *expression)"
+.br
+.ti -1c
+.RI "void \fBdoWalkFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.ti -1c
+.RI "void \fBaddBreak\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "bool \fBisDead\fP (\fBExpression\fP *child)"
+.br
+.ti -1c
+.RI "bool \fBisUnreachable\fP (\fBExpression\fP *child)"
+.br
+.ti -1c
+.RI "void \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitReturn\fP (\fBReturn\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitUnreachable\fP (\fBUnreachable\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBlock\fP (\fBBlock\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitLoop\fP (\fBLoop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitIf\fP (\fBIf\fP *curr)"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fBdrop\fP (\fBExpression\fP *toDrop)"
+.br
+.ti -1c
+.RI "template<typename T > \fBExpression\fP * \fBhandleCall\fP (\fBT\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCall\fP (\fBCall\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSetLocal\fP (\fBSetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitLoad\fP (\fBLoad\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitStore\fP (\fBStore\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitUnary\fP (\fBUnary\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBinary\fP (\fBBinary\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSelect\fP (\fBSelect\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitDrop\fP (\fBDrop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitHost\fP (\fBHost\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitFunction\fP (\fBFunction\fP *curr)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdoAfterIfCondition\fP (\fBDeadCodeElimination\fP *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoAfterIfElseTrue\fP (\fBDeadCodeElimination\fP *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBscan\fP (\fBDeadCodeElimination\fP *self, \fBExpression\fP **currp)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBTypeUpdater\fP \fBtypeUpdater\fP"
+.br
+.ti -1c
+.RI "bool \fBreachable\fP"
+.br
+.ti -1c
+.RI "\fBstd::set\fP< \fBName\fP > \fBreachableBreaks\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< bool > \fBifStack\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

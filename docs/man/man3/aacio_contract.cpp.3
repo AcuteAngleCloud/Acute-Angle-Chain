@@ -1,0 +1,99 @@
+.TH "libraries/chain/contracts/aacio_contract.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/contracts/aacio_contract.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/contracts/aac_contract\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/contract_table_objects\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/chain_initializer\&.hpp>\fP
+.br
+\fC#include <aacio/chain/chain_controller\&.hpp>\fP
+.br
+\fC#include <aacio/chain/apply_context\&.hpp>\fP
+.br
+\fC#include <aacio/chain/transaction\&.hpp>\fP
+.br
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <aacio/chain/account_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/permission_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/permission_link_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/generated_transaction_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/global_property_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/types\&.hpp>\fP
+.br
+\fC#include <aacio/chain/producer_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/wasm_interface\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/abi_serializer\&.hpp>\fP
+.br
+\fC#include <aacio/chain/resource_limits\&.hpp>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaacio::chain::contracts::validate_authority_precondition\fP (const apply_context &context, const authority &auth)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_newaccount\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_setcode\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_setabi\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_updateauth\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_deleteauth\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_linkauth\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_unlinkauth\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_onerror\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_postrecovery\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_passrecovery\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_vetorecovery\fP (apply_context &context)"
+.br
+.ti -1c
+.RI "void \fBaacio::chain::contracts::apply_aacio_canceldelay\fP (apply_context &context)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

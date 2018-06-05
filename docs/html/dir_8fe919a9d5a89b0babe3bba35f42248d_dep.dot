@@ -1,0 +1,29 @@
+digraph "contracts/libc++/upstream/test/std" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_52576429c2ea572b538c7b817f3a6ed0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="test" fontname="Helvetica", fontsize="10", URL="dir_52576429c2ea572b538c7b817f3a6ed0.html"]
+  subgraph clusterdir_8fe919a9d5a89b0babe3bba35f42248d {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_8fe919a9d5a89b0babe3bba35f42248d.html"];
+    dir_8fe919a9d5a89b0babe3bba35f42248d [shape=plaintext label="std"];
+    dir_5f1dd822ea7d58d41b19d71678859f32 [shape=box label="algorithms" color="red" fillcolor="white" style="filled" URL="dir_5f1dd822ea7d58d41b19d71678859f32.html"];
+    dir_89156434537f3aea9856f5e276526db3 [shape=box label="atomics" color="red" fillcolor="white" style="filled" URL="dir_89156434537f3aea9856f5e276526db3.html"];
+    dir_68b5503f8eb70347ca136ac0f5382d87 [shape=box label="containers" color="red" fillcolor="white" style="filled" URL="dir_68b5503f8eb70347ca136ac0f5382d87.html"];
+    dir_3f71702592c8a90340816a3521bc771b [shape=box label="depr" color="red" fillcolor="white" style="filled" URL="dir_3f71702592c8a90340816a3521bc771b.html"];
+    dir_4b18a377fdbddebd466dbf989430e841 [shape=box label="diagnostics" color="red" fillcolor="white" style="filled" URL="dir_4b18a377fdbddebd466dbf989430e841.html"];
+    dir_96caba06ff6a9aa8abb95482aff3fcdc [shape=box label="experimental" color="red" fillcolor="white" style="filled" URL="dir_96caba06ff6a9aa8abb95482aff3fcdc.html"];
+    dir_616827ea129755725c747fe20d0c3b57 [shape=box label="input.output" color="red" fillcolor="white" style="filled" URL="dir_616827ea129755725c747fe20d0c3b57.html"];
+    dir_37442631b0ff1704b3556fe2a7c96cd0 [shape=box label="iterators" color="red" fillcolor="white" style="filled" URL="dir_37442631b0ff1704b3556fe2a7c96cd0.html"];
+    dir_057b00a4873054fd12c351e3e096f9a6 [shape=box label="language.support" color="red" fillcolor="white" style="filled" URL="dir_057b00a4873054fd12c351e3e096f9a6.html"];
+    dir_4a58fb2c236d1f6a52215be51d6a0ed2 [shape=box label="localization" color="red" fillcolor="white" style="filled" URL="dir_4a58fb2c236d1f6a52215be51d6a0ed2.html"];
+    dir_d342b1e3caed7e9dbc1c14cd32c0353d [shape=box label="numerics" color="red" fillcolor="white" style="filled" URL="dir_d342b1e3caed7e9dbc1c14cd32c0353d.html"];
+    dir_ad423355d5e2a8fb6c2788b3b4feaea8 [shape=box label="re" color="red" fillcolor="white" style="filled" URL="dir_ad423355d5e2a8fb6c2788b3b4feaea8.html"];
+    dir_97fe825ae0720752cc7d6539562cb2dd [shape=box label="strings" color="red" fillcolor="white" style="filled" URL="dir_97fe825ae0720752cc7d6539562cb2dd.html"];
+    dir_aeca8a4dcf068eeb3a34fbf9e8e69435 [shape=box label="thread" color="red" fillcolor="white" style="filled" URL="dir_aeca8a4dcf068eeb3a34fbf9e8e69435.html"];
+    dir_bb74c89a194ffb402300fbe7c6882bc3 [shape=box label="utilities" color="red" fillcolor="white" style="filled" URL="dir_bb74c89a194ffb402300fbe7c6882bc3.html"];
+  }
+  }
+  dir_50d7137a7301a66ec452987911b28b88 [shape=box label="musl" fillcolor="white" style="filled" color="red" URL="dir_50d7137a7301a66ec452987911b28b88.html"];
+  dir_d342b1e3caed7e9dbc1c14cd32c0353d->dir_50d7137a7301a66ec452987911b28b88 [headlabel="1", labeldistance=1.5 headhref="dir_000182_000020.html"];
+}

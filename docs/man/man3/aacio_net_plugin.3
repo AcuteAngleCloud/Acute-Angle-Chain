@@ -1,0 +1,53 @@
+.TH "aacio::net_plugin" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::net_plugin
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBappbase::plugin< net_plugin >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBset_program_options\fP (options_description &cli, options_description &cfg) override"
+.br
+.ti -1c
+.RI "void \fBplugin_initialize\fP (const variables_map &options)"
+.br
+.ti -1c
+.RI "void \fBplugin_startup\fP ()"
+.br
+.ti -1c
+.RI "void \fBplugin_shutdown\fP ()"
+.br
+.ti -1c
+.RI "void \fBbroadcast_block\fP (const \fBchain::signed_block\fP &sb)"
+.br
+.ti -1c
+.RI "string \fBconnect\fP (const string &endpoint)"
+.br
+.ti -1c
+.RI "string \fBdisconnect\fP (const string &endpoint)"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBconnection_status\fP > \fBstatus\fP (const string &endpoint) const"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBconnection_status\fP > \fBconnections\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBnum_peers\fP () const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "string net_plugin::connect (const string & host)"
+Used to trigger a new connection from RPC API 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

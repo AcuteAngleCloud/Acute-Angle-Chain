@@ -1,0 +1,81 @@
+.TH "fc::json" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::json
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <json\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBparse_type\fP { \fBlegacy_parser\fP = 0, \fBstrict_parser\fP = 1, \fBrelaxed_parser\fP = 2, \fBlegacy_parser_with_string_doubles\fP = 3 }"
+.br
+.ti -1c
+.RI "enum \fBoutput_formatting\fP { \fBstringify_large_ints_and_doubles\fP = 0, \fBlegacy_generator\fP = 1 }"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static ostream & \fBto_stream\fP (ostream &out, const fc::string &)"
+.br
+.ti -1c
+.RI "static ostream & \fBto_stream\fP (ostream &out, const \fBvariant\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static ostream & \fBto_stream\fP (ostream &out, const \fBvariants\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static ostream & \fBto_stream\fP (ostream &out, const \fBvariant_object\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static \fBvariant\fP \fBfrom_string\fP (const string &utf8_str, parse_type ptype=legacy_parser)"
+.br
+.ti -1c
+.RI "static \fBvariants\fP \fBvariants_from_string\fP (const string &utf8_str, parse_type ptype=legacy_parser)"
+.br
+.ti -1c
+.RI "static string \fBto_string\fP (const \fBvariant\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static string \fBto_pretty_string\fP (const \fBvariant\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static bool \fBis_valid\fP (const std::string &json_str, parse_type ptype=legacy_parser)"
+.br
+.ti -1c
+.RI "template<typename T > static void \fBsave_to_file\fP (const \fBT\fP &v, const \fBfc::path\fP &fi, bool pretty=true, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static void \fBsave_to_file\fP (const \fBvariant\fP &v, const \fBfc::path\fP &fi, bool pretty=true, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "static \fBvariant\fP \fBfrom_file\fP (const \fBfc::path\fP &p, parse_type ptype=legacy_parser)"
+.br
+.ti -1c
+.RI "template<typename T > static \fBT\fP \fBfrom_file\fP (const \fBfc::path\fP &p, parse_type ptype=legacy_parser)"
+.br
+.ti -1c
+.RI "template<typename T > static string \fBto_string\fP (const \fBT\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "template<typename T > static string \fBto_pretty_string\fP (const \fBT\fP &v, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.ti -1c
+.RI "template<typename T > static void \fBsave_to_file\fP (const \fBT\fP &v, const std::string &p, bool pretty=true, output_formatting format=stringify_large_ints_and_doubles)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides interface for json serialization\&.
+.PP
+json strings are always UTF8 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

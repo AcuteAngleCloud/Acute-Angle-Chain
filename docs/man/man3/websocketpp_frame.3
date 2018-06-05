@@ -1,0 +1,683 @@
+.TH "websocketpp::frame" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::frame \- Data structures and utility functions for manipulating WebSocket frames\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBlimits\fP"
+.br
+.RI "Constants related to frame and payload limits\&. "
+.ti -1c
+.RI " \fBopcode\fP"
+.br
+.RI "Constants and utility functions related to WebSocket opcodes\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBbasic_header\fP"
+.br
+.RI "The constant size component of a WebSocket frame header\&. "
+.ti -1c
+.RI "struct \fBextended_header\fP"
+.br
+.RI "The variable size component of a WebSocket frame header\&. "
+.ti -1c
+.RI "union \fBuint16_converter\fP"
+.br
+.RI "\fBTwo\fP byte conversion union\&. "
+.ti -1c
+.RI "union \fBuint32_converter\fP"
+.br
+.RI "Four byte conversion union\&. "
+.ti -1c
+.RI "union \fBuint64_converter\fP"
+.br
+.RI "Eight byte conversion union\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBuint32_converter\fP \fBmasking_key_type\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBget_fin\fP (\fBbasic_header\fP const &h)"
+.br
+.RI "Check whether the frame's FIN bit is set\&. "
+.ti -1c
+.RI "void \fBset_fin\fP (\fBbasic_header\fP &h, bool value)"
+.br
+.RI "Set the frame's FIN bit\&. "
+.ti -1c
+.RI "bool \fBget_rsv1\fP (const \fBbasic_header\fP &h)"
+.br
+.RI "check whether the frame's RSV1 bit is set "
+.ti -1c
+.RI "void \fBset_rsv1\fP (\fBbasic_header\fP &h, bool value)"
+.br
+.RI "Set the frame's RSV1 bit\&. "
+.ti -1c
+.RI "bool \fBget_rsv2\fP (const \fBbasic_header\fP &h)"
+.br
+.RI "check whether the frame's RSV2 bit is set "
+.ti -1c
+.RI "void \fBset_rsv2\fP (\fBbasic_header\fP &h, bool value)"
+.br
+.RI "Set the frame's RSV2 bit\&. "
+.ti -1c
+.RI "bool \fBget_rsv3\fP (const \fBbasic_header\fP &h)"
+.br
+.RI "check whether the frame's RSV3 bit is set "
+.ti -1c
+.RI "void \fBset_rsv3\fP (\fBbasic_header\fP &h, bool value)"
+.br
+.RI "Set the frame's RSV3 bit\&. "
+.ti -1c
+.RI "opcode::value \fBget_opcode\fP (const \fBbasic_header\fP &h)"
+.br
+.RI "Extract opcode from basic header\&. "
+.ti -1c
+.RI "bool \fBget_masked\fP (\fBbasic_header\fP const &h)"
+.br
+.RI "check whether the frame is masked "
+.ti -1c
+.RI "void \fBset_masked\fP (\fBbasic_header\fP &h, bool value)"
+.br
+.RI "Set the frame's MASK bit\&. "
+.ti -1c
+.RI "uint8_t \fBget_basic_size\fP (const \fBbasic_header\fP &h)"
+.br
+.RI "Extracts the raw payload length specified in the basic header\&. "
+.ti -1c
+.RI "size_t \fBget_header_len\fP (\fBbasic_header\fP const &h)"
+.br
+.RI "Calculates the full length of the header based on the first bytes\&. "
+.ti -1c
+.RI "unsigned int \fBget_masking_key_offset\fP (const \fBbasic_header\fP &h)"
+.br
+.RI "Calculate the offset location of the masking key within the extended header\&. "
+.ti -1c
+.RI "std::string \fBwrite_header\fP (\fBbasic_header\fP const &, \fBextended_header\fP const &)"
+.br
+.ti -1c
+.RI "\fBmasking_key_type\fP \fBget_masking_key\fP (const \fBbasic_header\fP &h, const \fBextended_header\fP &e)"
+.br
+.RI "Extract the masking key from a frame header\&. "
+.ti -1c
+.RI "uint16_t \fBget_extended_size\fP (const \fBextended_header\fP &e)"
+.br
+.RI "Extract the extended size field from an extended header\&. "
+.ti -1c
+.RI "uint64_t \fBget_jumbo_size\fP (const \fBextended_header\fP &e)"
+.br
+.RI "Extract the jumbo size field from an extended header\&. "
+.ti -1c
+.RI "uint64_t \fBget_payload_size\fP (const \fBbasic_header\fP &h, const \fBextended_header\fP &e)"
+.br
+.RI "Extract the full payload size field from a WebSocket header\&. "
+.ti -1c
+.RI "size_t \fBprepare_masking_key\fP (const \fBmasking_key_type\fP &key)"
+.br
+.RI "Extract a masking key into a value the size of a machine word\&. "
+.ti -1c
+.RI "size_t \fBcircshift_prepared_key\fP (size_t prepared_key, size_t offset)"
+.br
+.RI "circularly shifts the supplied prepared masking key by offset bytes "
+.ti -1c
+.RI "template<typename input_iter , typename output_iter > void \fBbyte_mask\fP (input_iter first, input_iter last, output_iter result, \fBmasking_key_type\fP const &key, size_t key_offset)"
+.br
+.RI "Byte by byte mask/unmask\&. "
+.ti -1c
+.RI "template<typename iter_type > void \fBbyte_mask\fP (iter_type b, iter_type e, \fBmasking_key_type\fP const &key, size_t key_offset)"
+.br
+.RI "Byte by byte mask/unmask (in place) "
+.ti -1c
+.RI "void \fBword_mask_exact\fP (uint8_t *input, uint8_t *output, size_t length, const \fBmasking_key_type\fP &key)"
+.br
+.RI "Exact word aligned mask/unmask\&. "
+.ti -1c
+.RI "void \fBword_mask_exact\fP (uint8_t *data, size_t length, const \fBmasking_key_type\fP &key)"
+.br
+.RI "Exact word aligned mask/unmask (in place) "
+.ti -1c
+.RI "size_t \fBword_mask_circ\fP (uint8_t *input, uint8_t *output, size_t length, size_t prepared_key)"
+.br
+.RI "Circular word aligned mask/unmask\&. "
+.ti -1c
+.RI "size_t \fBword_mask_circ\fP (uint8_t *data, size_t length, size_t prepared_key)"
+.br
+.RI "Circular word aligned mask/unmask (in place) "
+.ti -1c
+.RI "std::string \fBprepare_header\fP (const \fBbasic_header\fP &h, const \fBextended_header\fP &e)"
+.br
+.RI "Generate a properly sized contiguous string that encodes a full frame header\&. "
+.ti -1c
+.RI "size_t \fBbyte_mask_circ\fP (uint8_t *input, uint8_t *output, size_t length, size_t prepared_key)"
+.br
+.RI "Circular byte aligned mask/unmask\&. "
+.ti -1c
+.RI "size_t \fBbyte_mask_circ\fP (uint8_t *data, size_t length, size_t prepared_key)"
+.br
+.RI "Circular byte aligned mask/unmask (in place) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Data structures and utility functions for manipulating WebSocket frames\&. 
+
+namespace frame provides a number of data structures and utility functions for reading, writing, and manipulating binary encoded WebSocket frames\&. 
+.SH "Function Documentation"
+.PP 
+.SS "template<typename input_iter , typename output_iter > void websocketpp::frame::byte_mask (input_iter first, input_iter last, output_iter result, \fBmasking_key_type\fP const & key, size_t key_offset)"
+
+.PP
+Byte by byte mask/unmask\&. Iterator based byte by byte masking and unmasking for WebSocket payloads\&. Performs masking in place using the supplied key offset by the supplied offset number of bytes\&.
+.PP
+This function is simple and can be done in place on input with arbitrary lengths and does not vary based on machine word size\&. It is slow\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIb\fP Beginning iterator to start masking
+.br
+\fIe\fP Ending iterator to end masking
+.br
+\fIo\fP Beginning iterator to store masked results
+.br
+\fIkey\fP 32 bit key to mask with\&.
+.br
+\fIkey_offset\fP offset value to start masking at\&. 
+.RE
+.PP
+
+.SS "template<typename iter_type > void websocketpp::frame::byte_mask (iter_type b, iter_type e, \fBmasking_key_type\fP const & key, size_t key_offset)"
+
+.PP
+Byte by byte mask/unmask (in place) Iterator based byte by byte masking and unmasking for WebSocket payloads\&. Performs masking in place using the supplied key offset by the supplied offset number of bytes\&.
+.PP
+This function is simple and can be done in place on input with arbitrary lengths and does not vary based on machine word size\&. It is slow\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIb\fP Beginning iterator to start masking
+.br
+\fIe\fP Ending iterator to end masking
+.br
+\fIkey\fP 32 bit key to mask with\&.
+.br
+\fIkey_offset\fP offset value to start masking at\&. 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::byte_mask_circ (uint8_t * input, uint8_t * output, size_t length, size_t prepared_key)\fC [inline]\fP"
+
+.PP
+Circular byte aligned mask/unmask\&. Performs a circular mask/unmask in byte sized chunks using pre-prepared keys that store state between calls\&. Best for providing streaming masking or unmasking of small chunks at a time of a larger message\&. Requires that the underlying allocated size of the data buffer be a multiple of the word size\&. Data in the buffer after \fClength\fP will be overwritten only with the same values that were originally present\&.
+.PP
+word_mask returns a copy of prepared_key circularly shifted based on the length value\&. The returned value may be fed back into byte_mask when more data is available\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Character buffer to mask
+.br
+\fIlength\fP Length of data
+.br
+\fIprepared_key\fP Prepared key to use\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the prepared_key shifted to account for the input length 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::byte_mask_circ (uint8_t * data, size_t length, size_t prepared_key)\fC [inline]\fP"
+
+.PP
+Circular byte aligned mask/unmask (in place) In place version of byte_mask_circ
+.PP
+\fBSee also:\fP
+.RS 4
+\fBbyte_mask_circ\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Character buffer to read from and write to
+.br
+\fIlength\fP Length of data
+.br
+\fIprepared_key\fP Prepared key to use\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the prepared_key shifted to account for the input length 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::circshift_prepared_key (size_t prepared_key, size_t offset)\fC [inline]\fP"
+
+.PP
+circularly shifts the supplied prepared masking key by offset bytes Prepared_key must be the output of prepare_masking_key with the associated restrictions on the machine word size\&. offset must be greater than or equal to zero and less than sizeof(size_t)\&. 
+.SS "uint8_t websocketpp::frame::get_basic_size (const \fBbasic_header\fP & h)\fC [inline]\fP"
+
+.PP
+Extracts the raw payload length specified in the basic header\&. \fBA\fP basic WebSocket frame header contains a 7 bit value that represents the payload size\&. There are two reserved values that are used to indicate that the actual payload size will not fit in 7 bits and that the full payload size is included in a separate field\&. The values are as follows:
+.PP
+PAYLOAD_SIZE_CODE_16BIT (0x7E) indicates that the actual payload is less than 16 bit
+.PP
+PAYLOAD_SIZE_CODE_64BIT (0x7F) indicates that the actual payload is less than 63 bit
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Basic header to read value from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The exact size encoded in h\&. 
+.RE
+.PP
+
+.SS "uint16_t websocketpp::frame::get_extended_size (const \fBextended_header\fP & e)\fC [inline]\fP"
+
+.PP
+Extract the extended size field from an extended header\&. It is the responsibility of the caller to verify that e is a valid extended header\&. This function assumes that e contains an extended payload size\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The extended header to extract from
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The size encoded in the extended header in host byte order 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::get_fin (\fBbasic_header\fP const & h)\fC [inline]\fP"
+
+.PP
+Check whether the frame's FIN bit is set\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBTrue\fP if the header's fin bit is set\&. 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::get_header_len (\fBbasic_header\fP const & h)\fC [inline]\fP"
+
+.PP
+Calculates the full length of the header based on the first bytes\&. \fBA\fP WebSocket frame header always has at least two bytes\&. Encoded within the first two bytes is all the information necessary to calculate the full (variable) header length\&. \fBget_header_len()\fP calculates the full header length for the given two byte basic header\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Basic frame header to extract size from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Full length of the extended header\&. 
+.RE
+.PP
+
+.SS "uint64_t websocketpp::frame::get_jumbo_size (const \fBextended_header\fP & e)\fC [inline]\fP"
+
+.PP
+Extract the jumbo size field from an extended header\&. It is the responsibility of the caller to verify that e is a valid extended header\&. This function assumes that e contains a jumbo payload size\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIe\fP The extended header to extract from
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The size encoded in the extended header in host byte order 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::get_masked (\fBbasic_header\fP const & h)\fC [inline]\fP"
+
+.PP
+check whether the frame is masked 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBTrue\fP if the header mask bit is set\&. 
+.RE
+.PP
+
+.SS "\fBmasking_key_type\fP websocketpp::frame::get_masking_key (const \fBbasic_header\fP & h, const \fBextended_header\fP & e)\fC [inline]\fP"
+
+.PP
+Extract the masking key from a frame header\&. Note that while read and written as an integer at times, this value is not an integer and should never be interpreted as one\&. Big and little endian machines will generate and store masking keys differently without issue as long as the integer values remain irrelivant\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from 
+.br
+\fIe\fP The extended header to extract from
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The masking key as an integer\&. 
+.RE
+.PP
+
+.SS "unsigned int websocketpp::frame::get_masking_key_offset (const \fBbasic_header\fP & h)\fC [inline]\fP"
+
+.PP
+Calculate the offset location of the masking key within the extended header\&. Calculate the offset location of the masking key within the extended header using information from its corresponding basic header
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Corresponding basic header to calculate from\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+byte offset of the first byte of the masking key 
+.RE
+.PP
+
+.SS "opcode::value websocketpp::frame::get_opcode (const \fBbasic_header\fP & h)\fC [inline]\fP"
+
+.PP
+Extract opcode from basic header\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The opcode value of the header\&. 
+.RE
+.PP
+
+.SS "uint64_t websocketpp::frame::get_payload_size (const \fBbasic_header\fP & h, const \fBextended_header\fP & e)\fC [inline]\fP"
+
+.PP
+Extract the full payload size field from a WebSocket header\&. It is the responsibility of the caller to verify that h and e together represent a valid WebSocket frame header\&. This function assumes only that h and e are valid\&. It uses information in the basic header to determine where to look for the payload_size
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from 
+.br
+\fIe\fP The extended header to extract from
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The size encoded in the combined header in host byte order\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::get_rsv1 (const \fBbasic_header\fP & h)\fC [inline]\fP"
+
+.PP
+check whether the frame's RSV1 bit is set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBTrue\fP if the header's RSV1 bit is set\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::get_rsv2 (const \fBbasic_header\fP & h)\fC [inline]\fP"
+
+.PP
+check whether the frame's RSV2 bit is set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBTrue\fP if the header's RSV2 bit is set\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::get_rsv3 (const \fBbasic_header\fP & h)\fC [inline]\fP"
+
+.PP
+check whether the frame's RSV3 bit is set 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to extract from\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBTrue\fP if the header's RSV3 bit is set\&. 
+.RE
+.PP
+
+.SS "std::string websocketpp::frame::prepare_header (const \fBbasic_header\fP & h, const \fBextended_header\fP & e)\fC [inline]\fP"
+
+.PP
+Generate a properly sized contiguous string that encodes a full frame header\&. Copy the basic header h and extended header e into a properly sized contiguous frame header string for the purposes of writing out to the wire\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The basic header to include 
+.br
+\fIe\fP The extended header to include
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP contiguous string containing h and e 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::prepare_masking_key (const \fBmasking_key_type\fP & key)\fC [inline]\fP"
+
+.PP
+Extract a masking key into a value the size of a machine word\&. Machine word size must be 4 or 8\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP Masking key to extract from
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+prepared key as a machine word 
+.RE
+.PP
+
+.SS "void websocketpp::frame::set_fin (\fBbasic_header\fP & h, bool value)\fC [inline]\fP"
+
+.PP
+Set the frame's FIN bit\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Header to set\&. 
+.br
+\fIvalue\fP \fBValue\fP to set it to\&. 
+.RE
+.PP
+
+.SS "void websocketpp::frame::set_masked (\fBbasic_header\fP & h, bool value)\fC [inline]\fP"
+
+.PP
+Set the frame's MASK bit\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Header to set\&. 
+.br
+\fIvalue\fP \fBValue\fP to set it to\&. 
+.RE
+.PP
+
+.SS "void websocketpp::frame::set_rsv1 (\fBbasic_header\fP & h, bool value)\fC [inline]\fP"
+
+.PP
+Set the frame's RSV1 bit\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Header to set\&. 
+.br
+\fIvalue\fP \fBValue\fP to set it to\&. 
+.RE
+.PP
+
+.SS "void websocketpp::frame::set_rsv2 (\fBbasic_header\fP & h, bool value)\fC [inline]\fP"
+
+.PP
+Set the frame's RSV2 bit\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Header to set\&. 
+.br
+\fIvalue\fP \fBValue\fP to set it to\&. 
+.RE
+.PP
+
+.SS "void websocketpp::frame::set_rsv3 (\fBbasic_header\fP & h, bool value)\fC [inline]\fP"
+
+.PP
+Set the frame's RSV3 bit\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP Header to set\&. 
+.br
+\fIvalue\fP \fBValue\fP to set it to\&. 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::word_mask_circ (uint8_t * input, uint8_t * output, size_t length, size_t prepared_key)\fC [inline]\fP"
+
+.PP
+Circular word aligned mask/unmask\&. Performs a circular mask/unmask in word sized chunks using pre-prepared keys that store state between calls\&. Best for providing streaming masking or unmasking of small chunks at a time of a larger message\&. Requires that the underlying allocated size of the data buffer be a multiple of the word size\&. Data in the buffer after \fClength\fP will be overwritten only with the same values that were originally present\&.
+.PP
+Buffer based word by word masking and unmasking for WebSocket payloads\&. Performs masking in place using the supplied key\&. Casts the data buffer to an array of size_t's and performs masking word by word\&. The underlying buffer size must be a muliple of the word size\&.
+.PP
+word_mask returns a copy of prepared_key circularly shifted based on the length value\&. The returned value may be fed back into word_mask when more data is available\&.
+.PP
+input and output must both have length at least: ceil(length/sizeof(size_t))*sizeof(size_t) Exactly that many bytes will be written, although only exactly length bytes will be changed (trailing bytes will be replaced without masking)
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Character buffer to mask
+.br
+\fIlength\fP Length of data
+.br
+\fIprepared_key\fP Prepared key to use\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the prepared_key shifted to account for the input length 
+.RE
+.PP
+
+.SS "size_t websocketpp::frame::word_mask_circ (uint8_t * data, size_t length, size_t prepared_key)\fC [inline]\fP"
+
+.PP
+Circular word aligned mask/unmask (in place) In place version of word_mask_circ
+.PP
+\fBSee also:\fP
+.RS 4
+\fBword_mask_circ\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP Character buffer to read from and write to
+.br
+\fIlength\fP Length of data
+.br
+\fIprepared_key\fP Prepared key to use\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the prepared_key shifted to account for the input length 
+.RE
+.PP
+
+.SS "void websocketpp::frame::word_mask_exact (uint8_t * input, uint8_t * output, size_t length, const \fBmasking_key_type\fP & key)\fC [inline]\fP"
+
+.PP
+Exact word aligned mask/unmask\&. Balanced combination of byte by byte and circular word by word masking\&. Best used to mask complete messages at once\&. Has much higher setup costs than word_mask_circ but works with exact sized buffers\&.
+.PP
+Buffer based word by word masking and unmasking for WebSocket payloads\&. Masking is done in word by word chunks with the remainder not divisible by the word size done byte by byte\&.
+.PP
+input and output must both be at least length bytes\&. Exactly length bytes will be written\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinput\fP buffer to mask or unmask
+.br
+\fIoutput\fP buffer to store the output\&. May be the same as input\&.
+.br
+\fIlength\fP length of data buffer
+.br
+\fIkey\fP Masking key to use 
+.RE
+.PP
+
+.SS "void websocketpp::frame::word_mask_exact (uint8_t * data, size_t length, const \fBmasking_key_type\fP & key)\fC [inline]\fP"
+
+.PP
+Exact word aligned mask/unmask (in place) In place version of word_mask_exact
+.PP
+\fBSee also:\fP
+.RS 4
+\fBword_mask_exact\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata\fP buffer to read and write from
+.br
+\fIlength\fP length of data buffer
+.br
+\fIkey\fP Masking key to use 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

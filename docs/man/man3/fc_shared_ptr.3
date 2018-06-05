@@ -1,0 +1,58 @@
+.TH "fc::shared_ptr< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::shared_ptr< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Other > \fBshared_ptr\fP (const \fBshared_ptr\fP< Other > &o)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP (const \fBshared_ptr\fP &o)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP (\fBT\fP *t, bool inc=false)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP (\fBshared_ptr\fP &&p)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP & \fBreset\fP (\fBT\fP *v=nullptr, bool inc=false)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP & \fBoperator=\fP (const \fBshared_ptr\fP &p)"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP & \fBoperator=\fP (\fBshared_ptr\fP &&p)"
+.br
+.ti -1c
+.RI "\fBT\fP & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBshared_ptr\fP &p) const"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBshared_ptr\fP &p) const"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBget\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator!\fP () const"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

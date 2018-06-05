@@ -1,0 +1,82 @@
+.TH "fc::iprocess" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::iprocess \- abstract interface for interacting with external processes  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <iprocess\&.hpp>\fP
+.PP
+Inherited by \fBfc::process\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBexec_opts\fP { \fBopen_none\fP = 0, \fBopen_stdin\fP = 0x01, \fBopen_stdout\fP = 0x02, \fBopen_stderr\fP = 0x04, \fBopen_all\fP = open_stdin|open_stdout|open_stderr, \fBsuppress_console\fP = 0x08 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBiprocess\fP & \fBexec\fP (const \fBpath\fP &exe, \fBstd::vector\fP< std::string > args, const \fBpath\fP &work_dir=\fBpath\fP(), int opts=open_all)=0"
+.br
+.ti -1c
+.RI "virtual int \fBresult\fP (const \fBmicroseconds\fP &timeout=microseconds::maximum())=0"
+.br
+.ti -1c
+.RI "virtual void \fBkill\fP ()=0"
+.br
+.ti -1c
+.RI "virtual buffered_ostream_ptr \fBin_stream\fP ()=0"
+.br
+.RI "returns a stream that writes to the process' stdin "
+.ti -1c
+.RI "virtual buffered_istream_ptr \fBout_stream\fP ()=0"
+.br
+.RI "returns a stream that reads from the process' stdout "
+.ti -1c
+.RI "virtual buffered_istream_ptr \fBerr_stream\fP ()=0"
+.br
+.RI "returns a stream that reads from the process' stderr "
+.in -1c
+.SH "Detailed Description"
+.PP 
+abstract interface for interacting with external processes 
+
+At the very least we have ssh::process and direct child processes, and there may be other processes that need to implement this protocol\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBiprocess\fP& fc::iprocess::exec (const \fBpath\fP & exe, \fBstd::vector\fP< std::string > args, const \fBpath\fP & work_dir = \fC\fBpath\fP()\fP, int opts = \fCopen_all\fP)\fC [pure virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+*this 
+.RE
+.PP
+
+.PP
+Implemented in \fBfc::process\fP\&.
+.SS "virtual void fc::iprocess::kill ()\fC [pure virtual]\fP"
+Forcefully kills the process\&. 
+.PP
+Implemented in \fBfc::process\fP\&.
+.SS "virtual int fc::iprocess::result (const \fBmicroseconds\fP & timeout = \fCmicroseconds::maximum()\fP)\fC [pure virtual]\fP"
+
+.PP
+\fBReturns:\fP
+.RS 4
+blocks until the process exits 
+.RE
+.PP
+
+.PP
+Implemented in \fBfc::process\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

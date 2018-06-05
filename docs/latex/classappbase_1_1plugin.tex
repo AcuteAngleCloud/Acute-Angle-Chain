@@ -1,0 +1,56 @@
+\hypertarget{classappbase_1_1plugin}{}\section{appbase\+:\+:plugin$<$ Impl $>$ Class Template Reference}
+\label{classappbase_1_1plugin}\index{appbase\+::plugin$<$ Impl $>$@{appbase\+::plugin$<$ Impl $>$}}
+
+
+Inheritance diagram for appbase\+:\+:plugin$<$ Impl $>$\+:
+% FIG 0
+
+
+Collaboration diagram for appbase\+:\+:plugin$<$ Impl $>$\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classappbase_1_1plugin_a857288c2424b57a898c0579d25dacbb0}\label{classappbase_1_1plugin_a857288c2424b57a898c0579d25dacbb0}} 
+virtual \mbox{\hyperlink{classappbase_1_1abstract__plugin_a4a997c146c27d5baf538a6c987c86408}{state}} {\bfseries get\+\_\+state} () const override
+\item 
+\mbox{\Hypertarget{classappbase_1_1plugin_a5f4d78270db430516429d70b1ff3abbe}\label{classappbase_1_1plugin_a5f4d78270db430516429d70b1ff3abbe}} 
+virtual const std\+::string \& {\bfseries name} () const override
+\item 
+\mbox{\Hypertarget{classappbase_1_1plugin_a6a0cd7ccc873527ebb5e6716b249ea17}\label{classappbase_1_1plugin_a6a0cd7ccc873527ebb5e6716b249ea17}} 
+virtual void {\bfseries register\+\_\+dependencies} ()
+\item 
+virtual void \mbox{\hyperlink{classappbase_1_1plugin_ac28755a82831d41e5d0ef0ce56b10fa9}{initialize}} (const variables\+\_\+map \&options) override
+\item 
+\mbox{\Hypertarget{classappbase_1_1plugin_a10e4e1c582bfadf67f510df76d87abfd}\label{classappbase_1_1plugin_a10e4e1c582bfadf67f510df76d87abfd}} 
+virtual void {\bfseries startup} () override
+\item 
+\mbox{\Hypertarget{classappbase_1_1plugin_a21e5be5587fca41fbc91367d449b8f27}\label{classappbase_1_1plugin_a21e5be5587fca41fbc91367d449b8f27}} 
+virtual void {\bfseries shutdown} () override
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classappbase_1_1plugin_a51f43c3c64ab8524928698a72a186822}\label{classappbase_1_1plugin_a51f43c3c64ab8524928698a72a186822}} 
+{\bfseries plugin} (const string \&name)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classappbase_1_1plugin_ac28755a82831d41e5d0ef0ce56b10fa9}\label{classappbase_1_1plugin_ac28755a82831d41e5d0ef0ce56b10fa9}} 
+\index{appbase\+::plugin@{appbase\+::plugin}!initialize@{initialize}}
+\index{initialize@{initialize}!appbase\+::plugin@{appbase\+::plugin}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename Impl$>$ \\
+virtual void \mbox{\hyperlink{classappbase_1_1plugin}{appbase\+::plugin}}$<$ Impl $>$\+::initialize (\begin{DoxyParamCaption}\item[{const variables\+\_\+map \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+if initial state was not registered, final state cannot be initiaized 
+
+Implements \mbox{\hyperlink{classappbase_1_1abstract__plugin}{appbase\+::abstract\+\_\+plugin}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/appbase/include/appbase/application.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+.TH "websocketpp::transport::asio::socket::error" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::asio::socket::error \- Errors related to asio transport sockets\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBvalue\fP { \fBsecurity\fP = 1, \fBsocket\fP, \fBinvalid_state\fP, \fBinvalid_tls_context\fP, \fBtls_handshake_timeout\fP, \fBpass_through\fP, \fBmissing_tls_init_handler\fP, \fBtls_handshake_failed\fP, \fBtls_failed_sni_hostname\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Errors related to asio transport sockets\&. 
+
+The transport::asio::socket::* classes are a set of security/socket related policies and support code for the ASIO transport types\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBwebsocketpp::transport::asio::socket::error::value\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIsecurity \fP\fP
+Catch-all error for security policy errors that don't fit in other categories 
+.TP
+\fB\fIsocket \fP\fP
+Catch-all error for socket component errors that don't fit in other categories 
+.TP
+\fB\fIinvalid_state \fP\fP
+\fBA\fP function was called in a state that it was illegal to do so\&. 
+.TP
+\fB\fIinvalid_tls_context \fP\fP
+The application was prompted to provide a TLS context and it was empty or otherwise invalid 
+.TP
+\fB\fItls_handshake_timeout \fP\fP
+TLS Handshake Timeout\&. 
+.TP
+\fB\fIpass_through \fP\fP
+pass_through from underlying library 
+.TP
+\fB\fImissing_tls_init_handler \fP\fP
+Required tls_init handler not present\&. 
+.TP
+\fB\fItls_handshake_failed \fP\fP
+TLS Handshake Failed\&. 
+.TP
+\fB\fItls_failed_sni_hostname \fP\fP
+Failed to set TLS SNI hostname\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

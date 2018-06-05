@@ -1,0 +1,10 @@
+digraph "debug_custom"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="debug_custom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="websocketpp::config\l::debug_asio",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1config_1_1debug__asio.html",tooltip="Client/Server debug config with asio transport and TLS disabled. "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="websocketpp::config\l::debug_core",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1config_1_1debug__core.html",tooltip="Client/Server debug config with iostream transport. "];
+}

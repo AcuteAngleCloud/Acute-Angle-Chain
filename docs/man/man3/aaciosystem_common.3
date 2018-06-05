@@ -1,0 +1,64 @@
+.TH "aaciosystem::common< SystemAccount >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aaciosystem::common< SystemAccount >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio_global_state\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio_parameters\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBaacio::generic_currency\fP< \fBaacio::token\fP< system_account, \fBS\fP(4, AAC)> > \fBcurrency\fP"
+.br
+.ti -1c
+.RI "typedef currency::token_type \fBsystem_token_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBaacio::singleton\fP< SystemAccount, \fBN\fP(inflation), SystemAccount, \fBaacio_global_state\fP > \fBglobal_state_singleton\fP"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBaacio_global_state\fP & \fBget_default_parameters\fP ()"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr account_name \fBsystem_account\fP = SystemAccount"
+.br
+.ti -1c
+.RI "static constexpr uint64_t \fBcurrency_symbol\fP = currency::symbol"
+.br
+.ti -1c
+.RI "static constexpr uint32_t \fBmax_inflation_rate\fP = 5"
+.br
+.ti -1c
+.RI "static constexpr uint32_t \fBblocks_per_producer\fP = 6"
+.br
+.ti -1c
+.RI "static constexpr uint32_t \fBseconds_per_day\fP = 24 * 3600"
+.br
+.ti -1c
+.RI "static constexpr uint32_t \fBdays_per_4years\fP = 1461"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

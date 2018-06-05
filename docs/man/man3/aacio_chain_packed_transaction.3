@@ -1,0 +1,72 @@
+.TH "aacio::chain::packed_transaction" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::packed_transaction
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBcompression_type\fP { \fBnone\fP = 0, \fBzlib\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpacked_transaction\fP (const \fBtransaction\fP &t, compression_type _compression=none)"
+.br
+.ti -1c
+.RI "\fBpacked_transaction\fP (const \fBsigned_transaction\fP &t, compression_type _compression=none)"
+.br
+.ti -1c
+.RI "\fBpacked_transaction\fP (\fBsigned_transaction\fP &&t, compression_type _compression=none)"
+.br
+.ti -1c
+.RI "uint32_t \fBget_billable_size\fP () const"
+.br
+.ti -1c
+.RI "\fBdigest_type\fP \fBpacked_digest\fP () const"
+.br
+.ti -1c
+.RI "\fBbytes\fP \fBget_raw_transaction\fP () const"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBbytes\fP > \fBget_context_free_data\fP () const"
+.br
+.ti -1c
+.RI "\fBtransaction\fP \fBget_transaction\fP () const"
+.br
+.ti -1c
+.RI "\fBsigned_transaction\fP \fBget_signed_transaction\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_transaction\fP (const \fBtransaction\fP &t, compression_type _compression=none)"
+.br
+.ti -1c
+.RI "void \fBset_transaction\fP (const \fBtransaction\fP &t, const \fBvector\fP< \fBbytes\fP > &cfd, compression_type _compression=none)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBvector\fP< \fBsignature_type\fP > \fBsignatures\fP"
+.br
+.ti -1c
+.RI "\fBfc::enum_type\fP< uint8_t, compression_type > \fBcompression\fP"
+.br
+.ti -1c
+.RI "\fBbytes\fP \fBpacked_context_free_data\fP"
+.br
+.ti -1c
+.RI "\fBbytes\fP \fBpacked_trx\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

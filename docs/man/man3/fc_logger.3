@@ -1,0 +1,106 @@
+.TH "fc::logger" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::logger
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <logger\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBimpl\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlogger\fP (const string &name, const \fBlogger\fP &parent=nullptr)"
+.br
+.ti -1c
+.RI "\fBlogger\fP (std::nullptr_t)"
+.br
+.ti -1c
+.RI "\fBlogger\fP (const \fBlogger\fP &c)"
+.br
+.ti -1c
+.RI "\fBlogger\fP (\fBlogger\fP &&c)"
+.br
+.ti -1c
+.RI "\fBlogger\fP & \fBoperator=\fP (const \fBlogger\fP &)"
+.br
+.ti -1c
+.RI "\fBlogger\fP & \fBoperator=\fP (\fBlogger\fP &&)"
+.br
+.ti -1c
+.RI "\fBlogger\fP & \fBset_log_level\fP (\fBlog_level\fP e)"
+.br
+.ti -1c
+.RI "\fBlog_level\fP \fBget_log_level\fP () const"
+.br
+.ti -1c
+.RI "\fBlogger\fP & \fBset_parent\fP (const \fBlogger\fP &l)"
+.br
+.ti -1c
+.RI "\fBlogger\fP \fBget_parent\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_name\fP (const fc::string &n)"
+.br
+.ti -1c
+.RI "const fc::string & \fBname\fP () const"
+.br
+.ti -1c
+.RI "void \fBadd_appender\fP (const \fBfc::shared_ptr\fP< \fBappender\fP > &a)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBfc::shared_ptr\fP< \fBappender\fP > > \fBget_appenders\fP () const"
+.br
+.ti -1c
+.RI "void \fBremove_appender\fP (const \fBfc::shared_ptr\fP< \fBappender\fP > &a)"
+.br
+.ti -1c
+.RI "bool \fBis_enabled\fP (\fBlog_level\fP e) const"
+.br
+.ti -1c
+.RI "void \fBlog\fP (\fBlog_message\fP m)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBlogger\fP \fBget\fP (const fc::string &name='default')"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBlogger\fP &, nullptr_t)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBlogger\fP &, nullptr_t)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+void my_class::func() 
+{
+   fc_dlog( my_class_logger, "Format four: ${arg}  five: ${five}", ("arg",4)("five",5) );
+}
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

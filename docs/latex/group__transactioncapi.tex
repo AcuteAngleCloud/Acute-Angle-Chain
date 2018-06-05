@@ -1,0 +1,131 @@
+\hypertarget{group__transactioncapi}{}\section{Transaction C A\+PI}
+\label{group__transactioncapi}\index{Transaction C A\+PI@{Transaction C A\+PI}}
+
+
+Define A\+PI for sending transactions.  
+
+
+Collaboration diagram for Transaction C A\+PI\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__transactioncapi_gaa7c68af746c8bd721d7c0817d6904a76}\label{group__transactioncapi_gaa7c68af746c8bd721d7c0817d6904a76}} 
+void {\bfseries send\+\_\+deferred} (const uint128\+\_\+t \&sender\+\_\+id, account\+\_\+name payer, const char $\ast$serialized\+\_\+transaction, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{group__transactioncapi_ga040f3e33d271531da96e0f5244d1a365}\label{group__transactioncapi_ga040f3e33d271531da96e0f5244d1a365}} 
+void {\bfseries cancel\+\_\+deferred} (const uint128\+\_\+t \&sender\+\_\+id)
+\item 
+size\+\_\+t \mbox{\hyperlink{group__transactioncapi_ga73fa4253ae0aec55399c26b740223bc6}{read\+\_\+transaction}} (char $\ast$buffer, size\+\_\+t size)
+\item 
+size\+\_\+t \mbox{\hyperlink{group__transactioncapi_gadfcd2e00f00461eac891ee8433508609}{transaction\+\_\+size}} ()
+\item 
+int \mbox{\hyperlink{group__transactioncapi_gac0b858a766ca73c6415bdb799d6ef45a}{tapos\+\_\+block\+\_\+num}} ()
+\item 
+int \mbox{\hyperlink{group__transactioncapi_gaef5458ccfe8ca5d6b273e35d04c56371}{tapos\+\_\+block\+\_\+prefix}} ()
+\item 
+time \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}} ()
+\item 
+int \mbox{\hyperlink{group__transactioncapi_gaf1fe78f3caf24010302e5cac1edad61d}{get\+\_\+action}} (uint32\+\_\+t type, uint32\+\_\+t index, char $\ast$buff, size\+\_\+t size)
+\item 
+int \mbox{\hyperlink{group__transactioncapi_gad0f4f1bd76077b3ee4289aadfb84c2b2}{get\+\_\+context\+\_\+free\+\_\+data}} (uint32\+\_\+t index, char $\ast$buff, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{group__transactioncapi_ga4eb270c6316a15e6f579b4b448bc8a74}{check\+\_\+auth}} (const char $\ast$serialized\+\_\+transaction, size\+\_\+t size, const char $\ast$permissions, size\+\_\+t psize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Define A\+PI for sending transactions. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__transactioncapi_ga4eb270c6316a15e6f579b4b448bc8a74}\label{group__transactioncapi_ga4eb270c6316a15e6f579b4b448bc8a74}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!check\+\_\+auth@{check\+\_\+auth}}
+\index{check\+\_\+auth@{check\+\_\+auth}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{check\+\_\+auth()}{check\_auth()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structcheck__auth}{check\+\_\+auth}} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{serialized\+\_\+transaction,  }\item[{size\+\_\+t}]{size,  }\item[{const char $\ast$}]{permissions,  }\item[{size\+\_\+t}]{psize }\end{DoxyParamCaption})}
+
+Check that prodived authorizations is enough to execute the transaction \mbox{\Hypertarget{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}\label{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!expiration@{expiration}}
+\index{expiration@{expiration}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{expiration()}{expiration()}}
+{\footnotesize\ttfamily time expiration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the expiration of the currently executing transaction \mbox{\Hypertarget{group__transactioncapi_gaf1fe78f3caf24010302e5cac1edad61d}\label{group__transactioncapi_gaf1fe78f3caf24010302e5cac1edad61d}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!get\+\_\+action@{get\+\_\+action}}
+\index{get\+\_\+action@{get\+\_\+action}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{get\+\_\+action()}{get\_action()}}
+{\footnotesize\ttfamily int get\+\_\+action (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{type,  }\item[{uint32\+\_\+t}]{index,  }\item[{char $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Retrieve the indicated action from the active transaction. 
+\begin{DoxyParams}{Parameters}
+{\em type} & -\/ 0 for context free action, 1 for action \\
+\hline
+{\em index} & -\/ the index of the requested action \\
+\hline
+{\em buff} & -\/ output packed buff of the action \\
+\hline
+{\em size} & -\/ amount of buff read, pass 0 to have size returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the action, -\/1 on failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__transactioncapi_gad0f4f1bd76077b3ee4289aadfb84c2b2}\label{group__transactioncapi_gad0f4f1bd76077b3ee4289aadfb84c2b2}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!get\+\_\+context\+\_\+free\+\_\+data@{get\+\_\+context\+\_\+free\+\_\+data}}
+\index{get\+\_\+context\+\_\+free\+\_\+data@{get\+\_\+context\+\_\+free\+\_\+data}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{get\+\_\+context\+\_\+free\+\_\+data()}{get\_context\_free\_data()}}
+{\footnotesize\ttfamily int get\+\_\+context\+\_\+free\+\_\+data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{index,  }\item[{char $\ast$}]{buff,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Retrieve the signed\+\_\+transaction.\+context\+\_\+free\+\_\+data\mbox{[}index\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ the index of the context\+\_\+free\+\_\+data entry to retrieve \\
+\hline
+{\em buff} & -\/ output buff of the context\+\_\+free\+\_\+data entry \\
+\hline
+{\em size} & -\/ amount of context\+\_\+free\+\_\+data\mbox{[}index\mbox{]} to retrieve into buff \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+signed\+\_\+transaction.\+context\+\_\+free\+\_\+data\mbox{[}index\mbox{]}.size() or -\/1 if index not valid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__transactioncapi_ga73fa4253ae0aec55399c26b740223bc6}\label{group__transactioncapi_ga73fa4253ae0aec55399c26b740223bc6}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!read\+\_\+transaction@{read\+\_\+transaction}}
+\index{read\+\_\+transaction@{read\+\_\+transaction}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{read\+\_\+transaction()}{read\_transaction()}}
+{\footnotesize\ttfamily size\+\_\+t read\+\_\+transaction (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+access a copy of the currently executing transaction
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & -\/ a buffer to write the current transaction to \\
+\hline
+{\em size} & -\/ the size of the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the transaction written to the buffer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__transactioncapi_gac0b858a766ca73c6415bdb799d6ef45a}\label{group__transactioncapi_gac0b858a766ca73c6415bdb799d6ef45a}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!tapos\+\_\+block\+\_\+num@{tapos\+\_\+block\+\_\+num}}
+\index{tapos\+\_\+block\+\_\+num@{tapos\+\_\+block\+\_\+num}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{tapos\+\_\+block\+\_\+num()}{tapos\_block\_num()}}
+{\footnotesize\ttfamily int tapos\+\_\+block\+\_\+num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the block number used for T\+A\+P\+OS on the currently executing transaction \mbox{\Hypertarget{group__transactioncapi_gaef5458ccfe8ca5d6b273e35d04c56371}\label{group__transactioncapi_gaef5458ccfe8ca5d6b273e35d04c56371}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!tapos\+\_\+block\+\_\+prefix@{tapos\+\_\+block\+\_\+prefix}}
+\index{tapos\+\_\+block\+\_\+prefix@{tapos\+\_\+block\+\_\+prefix}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{tapos\+\_\+block\+\_\+prefix()}{tapos\_block\_prefix()}}
+{\footnotesize\ttfamily int tapos\+\_\+block\+\_\+prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the block prefix used for T\+A\+P\+OS on the currently executing transaction \mbox{\Hypertarget{group__transactioncapi_gadfcd2e00f00461eac891ee8433508609}\label{group__transactioncapi_gadfcd2e00f00461eac891ee8433508609}} 
+\index{Transaction C A\+PI@{Transaction C A\+PI}!transaction\+\_\+size@{transaction\+\_\+size}}
+\index{transaction\+\_\+size@{transaction\+\_\+size}!Transaction C A\+PI@{Transaction C A\+PI}}
+\subsubsection{\texorpdfstring{transaction\+\_\+size()}{transaction\_size()}}
+{\footnotesize\ttfamily size\+\_\+t transaction\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the size of the currently executing transaction 

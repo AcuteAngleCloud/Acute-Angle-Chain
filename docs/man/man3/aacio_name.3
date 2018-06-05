@@ -1,0 +1,41 @@
+.TH "aacio::name" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::name \- wraps a uint64_t to ensure it is only passed to methods that expect a Name  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <types\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBoperator uint64_t\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBaccount_name\fP \fBvalue\fP = 0"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBname\fP &a, const \fBname\fP &b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+wraps a uint64_t to ensure it is only passed to methods that expect a Name 
+
+wraps a uint64_t to ensure it is only passed to methods that expect a Name and that no mathematical operations occur\&. It also enables specialization of print so that it is printed as a base32 string\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

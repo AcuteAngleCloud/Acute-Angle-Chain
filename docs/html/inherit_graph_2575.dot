@@ -1,0 +1,27 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3541 [label="error_category",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3541 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="websocketpp::error\l::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1error_1_1category.html"];
+  Node3541 -> Node3543 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3543 [label="websocketpp::extensions\l::error::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1extensions_1_1error_1_1category.html"];
+  Node3541 -> Node3544 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3544 [label="websocketpp::extensions\l::permessage_deflate::\lerror::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1extensions_1_1permessage__deflate_1_1error_1_1category.html",tooltip="Permessage-deflate error category. "];
+  Node3541 -> Node3545 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3545 [label="websocketpp::processor\l::error::processor_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1processor_1_1error_1_1processor__category.html",tooltip="Category for processor errors. "];
+  Node3541 -> Node3546 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3546 [label="websocketpp::transport\l::asio::error::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1error_1_1category.html",tooltip="Asio transport error category. "];
+  Node3541 -> Node3547 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3547 [label="websocketpp::transport\l::asio::socket::socket\l_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1socket_1_1socket__category.html",tooltip="Error category related to asio transport socket policies. "];
+  Node3541 -> Node3548 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3548 [label="websocketpp::transport\l::debug::error::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1debug_1_1error_1_1category.html",tooltip="debug transport error category "];
+  Node3541 -> Node3549 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3549 [label="websocketpp::transport\l::error::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1error_1_1category.html"];
+  Node3541 -> Node3550 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3550 [label="websocketpp::transport\l::iostream::error::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1iostream_1_1error_1_1category.html",tooltip="iostream transport error category "];
+  Node3541 -> Node3551 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3551 [label="websocketpp::transport\l::stub::error::category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1stub_1_1error_1_1category.html",tooltip="stub transport error category "];
+}

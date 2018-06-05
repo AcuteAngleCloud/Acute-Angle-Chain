@@ -1,0 +1,367 @@
+\hypertarget{classfc_1_1variant}{}\section{fc\+:\+:variant Class Reference}
+\label{classfc_1_1variant}\index{fc\+::variant@{fc\+::variant}}
+
+
+stores null, int64, uint64, double, bool, string, std\+::vector$<$variant$>$, and \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}}\textquotesingle{}s.  
+
+
+
+
+{\ttfamily \#include $<$variant.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfc_1_1variant_1_1visitor}{visitor}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a8e472a4f69eccec5336dde2646c69c5f}\label{classfc_1_1variant_a8e472a4f69eccec5336dde2646c69c5f}} 
+enum {\bfseries type\+\_\+id} \{ \newline
+{\bfseries null\+\_\+type} = 0, 
+{\bfseries int64\+\_\+type} = 1, 
+{\bfseries uint64\+\_\+type} = 2, 
+{\bfseries double\+\_\+type} = 3, 
+\newline
+{\bfseries bool\+\_\+type} = 4, 
+{\bfseries string\+\_\+type} = 5, 
+{\bfseries array\+\_\+type} = 6, 
+{\bfseries object\+\_\+type} = 7, 
+\newline
+{\bfseries blob\+\_\+type} = 8
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ab18b9c0de85df3571204f86805bf6c5e}\label{classfc_1_1variant_ab18b9c0de85df3571204f86805bf6c5e}} 
+\mbox{\hyperlink{classfc_1_1variant_ab18b9c0de85df3571204f86805bf6c5e}{variant}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a null\+\_\+type variant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classfc_1_1variant_a08377c8927ed9f8f62211cd9dca566e7}\label{classfc_1_1variant_a08377c8927ed9f8f62211cd9dca566e7}} 
+\mbox{\hyperlink{classfc_1_1variant_a08377c8927ed9f8f62211cd9dca566e7}{variant}} (nullptr\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Constructs a null\+\_\+type variant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfc_1_1variant_a045c86b5101d4e46e30c03dcb2ce9794}{variant}} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_af645ca0b7a8dc9f545bd1271c34ecf74}\label{classfc_1_1variant_af645ca0b7a8dc9f545bd1271c34ecf74}} 
+{\bfseries variant} (char $\ast$str)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a737d936a212681bd29cea8afaa1bbda1}\label{classfc_1_1variant_a737d936a212681bd29cea8afaa1bbda1}} 
+{\bfseries variant} (wchar\+\_\+t $\ast$str)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_af63dd9292e7dbee67323047eb8f892ab}\label{classfc_1_1variant_af63dd9292e7dbee67323047eb8f892ab}} 
+{\bfseries variant} (const wchar\+\_\+t $\ast$str)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a89b8a8bab932ad360be4c8436e1c5dda}\label{classfc_1_1variant_a89b8a8bab932ad360be4c8436e1c5dda}} 
+{\bfseries variant} (float val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ade702fd608763e0c1c44a4297ef22aca}\label{classfc_1_1variant_ade702fd608763e0c1c44a4297ef22aca}} 
+{\bfseries variant} (uint8\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a743d279294b6f1ca9f1e14c01b71802a}\label{classfc_1_1variant_a743d279294b6f1ca9f1e14c01b71802a}} 
+{\bfseries variant} (int8\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a1f91d872520c59395ab44b337ef30e58}\label{classfc_1_1variant_a1f91d872520c59395ab44b337ef30e58}} 
+{\bfseries variant} (uint16\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a6480dc77c355024b39448319caae9a98}\label{classfc_1_1variant_a6480dc77c355024b39448319caae9a98}} 
+{\bfseries variant} (int16\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a858fb98a073c500744896a75d83c55c0}\label{classfc_1_1variant_a858fb98a073c500744896a75d83c55c0}} 
+{\bfseries variant} (uint32\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a8e3df3c9259e45f4d052c384c1be18ef}\label{classfc_1_1variant_a8e3df3c9259e45f4d052c384c1be18ef}} 
+{\bfseries variant} (int32\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_af541c3713ccf43d5a3a031aa70f83c40}\label{classfc_1_1variant_af541c3713ccf43d5a3a031aa70f83c40}} 
+{\bfseries variant} (uint64\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_aace180d69f4ec94a7bddc12887128638}\label{classfc_1_1variant_aace180d69f4ec94a7bddc12887128638}} 
+{\bfseries variant} (int64\+\_\+t val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_abf264769c98ab0ef6b3c2dd6306ba0d7}\label{classfc_1_1variant_abf264769c98ab0ef6b3c2dd6306ba0d7}} 
+{\bfseries variant} (double val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a407d960e0391593c6c0c0445db1a6e4c}\label{classfc_1_1variant_a407d960e0391593c6c0c0445db1a6e4c}} 
+{\bfseries variant} (bool val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_af099123791ba91d6c1fd2c3b384578ca}\label{classfc_1_1variant_af099123791ba91d6c1fd2c3b384578ca}} 
+{\bfseries variant} (\mbox{\hyperlink{structfc_1_1blob}{blob}} val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_aaf133bf73eb77eda72cfed51a6dfc7ad}\label{classfc_1_1variant_aaf133bf73eb77eda72cfed51a6dfc7ad}} 
+{\bfseries variant} (fc\+::string val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a7850e84b5671f9b18e31276678ed0288}\label{classfc_1_1variant_a7850e84b5671f9b18e31276678ed0288}} 
+{\bfseries variant} (\mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}})
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ad0fbaa5228660c7fb39fe4b1b1e7ba2c}\label{classfc_1_1variant_ad0fbaa5228660c7fb39fe4b1b1e7ba2c}} 
+{\bfseries variant} (\mbox{\hyperlink{classfc_1_1mutable__variant__object}{mutable\+\_\+variant\+\_\+object}})
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a525e612e5c6a007d426a1184acdd880b}\label{classfc_1_1variant_a525e612e5c6a007d426a1184acdd880b}} 
+{\bfseries variant} (\mbox{\hyperlink{classstd_1_1vector}{variants}})
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a33013c40e9afe5c953d7cc45cfdfe2b9}\label{classfc_1_1variant_a33013c40e9afe5c953d7cc45cfdfe2b9}} 
+{\bfseries variant} (const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a7df504e005cca53f8dbe8f6286698d66}\label{classfc_1_1variant_a7df504e005cca53f8dbe8f6286698d66}} 
+{\bfseries variant} (\mbox{\hyperlink{classfc_1_1variant}{variant}} \&\&)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a327534c432bafeffa193555109c2dd6f}\label{classfc_1_1variant_a327534c432bafeffa193555109c2dd6f}} 
+void {\bfseries visit} (const \mbox{\hyperlink{classfc_1_1variant_1_1visitor}{visitor}} \&v) const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_afaae1df286ff97c83301eda21dbd51ea}\label{classfc_1_1variant_afaae1df286ff97c83301eda21dbd51ea}} 
+type\+\_\+id {\bfseries get\+\_\+type} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a531450deac912ee3e1bc606422714a68}\label{classfc_1_1variant_a531450deac912ee3e1bc606422714a68}} 
+bool {\bfseries is\+\_\+null} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ac51c0354c1fcef2cc5ce43a5062e8de6}\label{classfc_1_1variant_ac51c0354c1fcef2cc5ce43a5062e8de6}} 
+bool {\bfseries is\+\_\+string} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a99a395b36d39966512f7ac52473aeaaf}\label{classfc_1_1variant_a99a395b36d39966512f7ac52473aeaaf}} 
+bool {\bfseries is\+\_\+bool} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a2ec4c0d3b694adcf41d846b8af9b610a}\label{classfc_1_1variant_a2ec4c0d3b694adcf41d846b8af9b610a}} 
+bool {\bfseries is\+\_\+int64} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ac06c2b8b4af18cefcaee6cd91b29b293}\label{classfc_1_1variant_ac06c2b8b4af18cefcaee6cd91b29b293}} 
+bool {\bfseries is\+\_\+uint64} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_adf93b827afeac79e87d6a7e84341d6f2}\label{classfc_1_1variant_adf93b827afeac79e87d6a7e84341d6f2}} 
+bool {\bfseries is\+\_\+double} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_aa542b555ee260a07e61a2d38ff765d87}\label{classfc_1_1variant_aa542b555ee260a07e61a2d38ff765d87}} 
+bool {\bfseries is\+\_\+object} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a102129c61e671e93d0d6899976fffc96}\label{classfc_1_1variant_a102129c61e671e93d0d6899976fffc96}} 
+bool {\bfseries is\+\_\+array} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_adfc583823fe5ba9e4f7f1a7720796535}\label{classfc_1_1variant_adfc583823fe5ba9e4f7f1a7720796535}} 
+bool {\bfseries is\+\_\+blob} () const
+\item 
+bool \mbox{\hyperlink{classfc_1_1variant_a5c2238ce8bbeb5dc454134ec92624aab}{is\+\_\+numeric}} () const
+\item 
+bool \mbox{\hyperlink{classfc_1_1variant_a59f43987b39a2e02b9699e917f5cc3d2}{is\+\_\+integer}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ab5d7877d2c19dbd6ac9eac7a1205dbeb}\label{classfc_1_1variant_ab5d7877d2c19dbd6ac9eac7a1205dbeb}} 
+int64\+\_\+t {\bfseries as\+\_\+int64} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a483bb1f23d9b71ae03e9ca03136ee453}\label{classfc_1_1variant_a483bb1f23d9b71ae03e9ca03136ee453}} 
+uint64\+\_\+t {\bfseries as\+\_\+uint64} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a86ffd49f6eec1c0fd16ead01e2735107}\label{classfc_1_1variant_a86ffd49f6eec1c0fd16ead01e2735107}} 
+bool {\bfseries as\+\_\+bool} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a61f334febee9b226fb077f6da3c52276}\label{classfc_1_1variant_a61f334febee9b226fb077f6da3c52276}} 
+double {\bfseries as\+\_\+double} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_aa475101b0f2181350d76a2fdc6cf7c76}\label{classfc_1_1variant_aa475101b0f2181350d76a2fdc6cf7c76}} 
+\mbox{\hyperlink{structfc_1_1blob}{blob}} \& {\bfseries get\+\_\+blob} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_ae5eb8afda3a41fc20854875e4d91d5c8}\label{classfc_1_1variant_ae5eb8afda3a41fc20854875e4d91d5c8}} 
+const \mbox{\hyperlink{structfc_1_1blob}{blob}} \& {\bfseries get\+\_\+blob} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a026901a2f99914f10aa5c516eca76d40}\label{classfc_1_1variant_a026901a2f99914f10aa5c516eca76d40}} 
+\mbox{\hyperlink{structfc_1_1blob}{blob}} {\bfseries as\+\_\+blob} () const
+\item 
+string \mbox{\hyperlink{classfc_1_1variant_acbd70a93184e4277631f2a261acb707c}{as\+\_\+string}} () const
+\item 
+const string \& \mbox{\hyperlink{classfc_1_1variant_a2ca9f4d2feb8c9743da4128b18bfa886}{get\+\_\+string}} () const
+\item 
+\mbox{\hyperlink{classstd_1_1vector}{variants}} \& \mbox{\hyperlink{classfc_1_1variant_aea83c87e4e1b1e185f57717b4bd683a5}{get\+\_\+array}} ()
+\item 
+const \mbox{\hyperlink{classstd_1_1vector}{variants}} \& \mbox{\hyperlink{classfc_1_1variant_a5cb44834253397df276f5107cf9211b6}{get\+\_\+array}} () const
+\item 
+\mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \& \mbox{\hyperlink{classfc_1_1variant_a17a7054a10963360c6a14d60f6e30128}{get\+\_\+object}} ()
+\item 
+const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \& \mbox{\hyperlink{classfc_1_1variant_a3efce335057e900b569af78acb1cad6c}{get\+\_\+object}} () const
+\item 
+const \mbox{\hyperlink{classfc_1_1variant}{variant}} \& \mbox{\hyperlink{classfc_1_1variant_afc8519b6b2c1c192506a10289196cbf5}{operator\mbox{[}$\,$\mbox{]}}} (const char $\ast$) const
+\item 
+const \mbox{\hyperlink{classfc_1_1variant}{variant}} \& \mbox{\hyperlink{classfc_1_1variant_af88be0a0533f9d58f36d88339d42f9fd}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t pos) const
+\item 
+size\+\_\+t \mbox{\hyperlink{classfc_1_1variant_a67f6416c5dd1b9c53b4b20b73f9cd117}{size}} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{classfc_1_1variant_a82edd1f33199355d3a1f19bbb92909cc}{as}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a38d824a91168bea0aed58a29d782d4cd}\label{classfc_1_1variant_a38d824a91168bea0aed58a29d782d4cd}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries as} (\mbox{\hyperlink{struct_t}{T}} \&v) const
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a0dca5e5489ee3baac5bdab51417d9e02}\label{classfc_1_1variant_a0dca5e5489ee3baac5bdab51417d9e02}} 
+\mbox{\hyperlink{classfc_1_1variant}{variant}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1variant}{variant}} \&\&v)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_af0367a0aa45efe02b3db8e17ce94e43e}\label{classfc_1_1variant_af0367a0aa45efe02b3db8e17ce94e43e}} 
+\mbox{\hyperlink{classfc_1_1variant}{variant}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&v)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_aec8b90765a89a37567b4b50aa0f61928}\label{classfc_1_1variant_aec8b90765a89a37567b4b50aa0f61928}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classfc_1_1variant}{variant}} \& {\bfseries operator=} (\mbox{\hyperlink{struct_t}{T}} \&\&v)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a32a8721d020e95b4f6a838e9dc8e99a9}\label{classfc_1_1variant_a32a8721d020e95b4f6a838e9dc8e99a9}} 
+{\footnotesize template$<$typename T $>$ }\\{\bfseries variant} (const \mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$ \&v)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a9c0d8a975fbe4a35be95976ba3d457e1}\label{classfc_1_1variant_a9c0d8a975fbe4a35be95976ba3d457e1}} 
+{\footnotesize template$<$typename T $>$ }\\{\bfseries variant} (const \mbox{\hyperlink{struct_t}{T}} \&val)
+\item 
+\mbox{\Hypertarget{classfc_1_1variant_a201c1ea686618f06d5839e541da3d641}\label{classfc_1_1variant_a201c1ea686618f06d5839e541da3d641}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+stores null, int64, uint64, double, bool, string, std\+::vector$<$variant$>$, and \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}}\textquotesingle{}s. 
+
+variant\textquotesingle{}s allocate everything but strings, arrays, and objects on the stack and are \textquotesingle{}move aware\textquotesingle{} for values allcoated on the heap.
+
+Memory usage on 64 bit systems is 16 bytes and 12 bytes on 32 bit systems. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfc_1_1variant_a045c86b5101d4e46e30c03dcb2ce9794}\label{classfc_1_1variant_a045c86b5101d4e46e30c03dcb2ce9794}} 
+\index{fc\+::variant@{fc\+::variant}!variant@{variant}}
+\index{variant@{variant}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{variant()}{variant()}}
+{\footnotesize\ttfamily fc\+::variant\+::variant (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ U\+T\+F8 string \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 0
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1variant_a82edd1f33199355d3a1f19bbb92909cc}\label{classfc_1_1variant_a82edd1f33199355d3a1f19bbb92909cc}} 
+\index{fc\+::variant@{fc\+::variant}!as@{as}}
+\index{as@{as}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{as()}{as()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_t}{T}} fc\+::variant\+::as (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\+\_\+types that use non-\/intrusive variant conversion can implement the following method to implement conversion from variant to \mbox{\hyperlink{struct_t}{T}}.
+
+{\ttfamily  void from\+\_\+variant( const Variant\& var, T\& val ) }
+
+The above form is not always convienant, so the this templated method is used to enable conversion from Variants to other types. Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classfc_1_1variant_acbd70a93184e4277631f2a261acb707c}\label{classfc_1_1variant_acbd70a93184e4277631f2a261acb707c}} 
+\index{fc\+::variant@{fc\+::variant}!as\+\_\+string@{as\+\_\+string}}
+\index{as\+\_\+string@{as\+\_\+string}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{as\+\_\+string()}{as\_string()}}
+{\footnotesize\ttfamily string fc\+::variant\+::as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Convert\textquotesingle{}s double, ints, bools, etc to a string 
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & get\+\_\+type() == array\+\_\+type $\vert$ get\+\_\+type() == object\+\_\+type \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classfc_1_1variant_aea83c87e4e1b1e185f57717b4bd683a5}\label{classfc_1_1variant_aea83c87e4e1b1e185f57717b4bd683a5}} 
+\index{fc\+::variant@{fc\+::variant}!get\+\_\+array@{get\+\_\+array}}
+\index{get\+\_\+array@{get\+\_\+array}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{get\+\_\+array()}{get\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstd_1_1vector}{variants}} \& fc\+::variant\+::get\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & get\+\_\+type() != array\+\_\+type $\vert$ null\+\_\+type \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classfc_1_1variant_a5cb44834253397df276f5107cf9211b6}\label{classfc_1_1variant_a5cb44834253397df276f5107cf9211b6}} 
+\index{fc\+::variant@{fc\+::variant}!get\+\_\+array@{get\+\_\+array}}
+\index{get\+\_\+array@{get\+\_\+array}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{get\+\_\+array()}{get\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classstd_1_1vector}{variants}} \& fc\+::variant\+::get\+\_\+array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & get\+\_\+type() != array\+\_\+type \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classfc_1_1variant_a17a7054a10963360c6a14d60f6e30128}\label{classfc_1_1variant_a17a7054a10963360c6a14d60f6e30128}} 
+\index{fc\+::variant@{fc\+::variant}!get\+\_\+object@{get\+\_\+object}}
+\index{get\+\_\+object@{get\+\_\+object}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{get\+\_\+object()}{get\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \& fc\+::variant\+::get\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & get\+\_\+type() != object\+\_\+type $\vert$ null\+\_\+type \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classfc_1_1variant_a3efce335057e900b569af78acb1cad6c}\label{classfc_1_1variant_a3efce335057e900b569af78acb1cad6c}} 
+\index{fc\+::variant@{fc\+::variant}!get\+\_\+object@{get\+\_\+object}}
+\index{get\+\_\+object@{get\+\_\+object}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{get\+\_\+object()}{get\_object()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \& fc\+::variant\+::get\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & get\+\_\+type() != object\+\_\+type \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classfc_1_1variant_a2ca9f4d2feb8c9743da4128b18bfa886}\label{classfc_1_1variant_a2ca9f4d2feb8c9743da4128b18bfa886}} 
+\index{fc\+::variant@{fc\+::variant}!get\+\_\+string@{get\+\_\+string}}
+\index{get\+\_\+string@{get\+\_\+string}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{get\+\_\+string()}{get\_string()}}
+{\footnotesize\ttfamily const string \& fc\+::variant\+::get\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyPrecond}{Precondition}
+get\+\_\+type() == string\+\_\+type 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classfc_1_1variant_a59f43987b39a2e02b9699e917f5cc3d2}\label{classfc_1_1variant_a59f43987b39a2e02b9699e917f5cc3d2}} 
+\index{fc\+::variant@{fc\+::variant}!is\+\_\+integer@{is\+\_\+integer}}
+\index{is\+\_\+integer@{is\+\_\+integer}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{is\+\_\+integer()}{is\_integer()}}
+{\footnotesize\ttfamily bool fc\+::variant\+::is\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+int64, uint64, bool \mbox{\Hypertarget{classfc_1_1variant_a5c2238ce8bbeb5dc454134ec92624aab}\label{classfc_1_1variant_a5c2238ce8bbeb5dc454134ec92624aab}} 
+\index{fc\+::variant@{fc\+::variant}!is\+\_\+numeric@{is\+\_\+numeric}}
+\index{is\+\_\+numeric@{is\+\_\+numeric}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{is\+\_\+numeric()}{is\_numeric()}}
+{\footnotesize\ttfamily bool fc\+::variant\+::is\+\_\+numeric (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+int64, uint64, double,bool \mbox{\Hypertarget{classfc_1_1variant_afc8519b6b2c1c192506a10289196cbf5}\label{classfc_1_1variant_afc8519b6b2c1c192506a10289196cbf5}} 
+\index{fc\+::variant@{fc\+::variant}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfc_1_1variant}{variant}} \& fc\+::variant\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key }\end{DoxyParamCaption}) const}
+
+\begin{DoxyPrecond}{Precondition}
+is\+\_\+object() 
+\end{DoxyPrecond}
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classfc_1_1variant_af88be0a0533f9d58f36d88339d42f9fd}\label{classfc_1_1variant_af88be0a0533f9d58f36d88339d42f9fd}} 
+\index{fc\+::variant@{fc\+::variant}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfc_1_1variant}{variant}} \& fc\+::variant\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pos }\end{DoxyParamCaption}) const}
+
+\begin{DoxyPrecond}{Precondition}
+is\+\_\+array() 
+\end{DoxyPrecond}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classfc_1_1variant_a67f6416c5dd1b9c53b4b20b73f9cd117}\label{classfc_1_1variant_a67f6416c5dd1b9c53b4b20b73f9cd117}} 
+\index{fc\+::variant@{fc\+::variant}!size@{size}}
+\index{size@{size}!fc\+::variant@{fc\+::variant}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t fc\+::variant\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyPrecond}{Precondition}
+is\+\_\+array() 
+\end{DoxyPrecond}
+Here is the call graph for this function\+:
+% FIG 7
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/variant.\+hpp\item 
+libraries/fc/src/variant.\+cpp\end{DoxyCompactItemize}

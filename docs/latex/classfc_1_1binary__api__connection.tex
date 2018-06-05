@@ -1,0 +1,75 @@
+\hypertarget{classfc_1_1binary__api__connection}{}\section{fc\+:\+:binary\+\_\+api\+\_\+connection Class Reference}
+\label{classfc_1_1binary__api__connection}\index{fc\+::binary\+\_\+api\+\_\+connection@{fc\+::binary\+\_\+api\+\_\+connection}}
+
+
+Inheritance diagram for fc\+:\+:binary\+\_\+api\+\_\+connection\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:binary\+\_\+api\+\_\+connection\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a5cd517232544117270d959d4eceec9a8}\label{classfc_1_1binary__api__connection_a5cd517232544117270d959d4eceec9a8}} 
+typedef \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ char $>$ {\bfseries params\+\_\+type}
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a46e3e3672d36e425939c515e05090d57}\label{classfc_1_1binary__api__connection_a46e3e3672d36e425939c515e05090d57}} 
+typedef \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ char $>$ {\bfseries result\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a6d6a77fb12a278a9c5becdffcbc418db}\label{classfc_1_1binary__api__connection_a6d6a77fb12a278a9c5becdffcbc418db}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classfc_1_1api}{api}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$ {\bfseries get\+\_\+remote\+\_\+api} (api\+\_\+id\+\_\+type api\+\_\+id=0)
+\item 
+virtual \mbox{\hyperlink{classstd_1_1vector}{result\+\_\+type}} \mbox{\hyperlink{classfc_1_1binary__api__connection_af4db40adde5c6271df5163f5e3e7159f}{send\+\_\+call}} (api\+\_\+id\+\_\+type api\+\_\+id, string method\+\_\+name, \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}} args=\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}())=0
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a685bce1e116b7a14437e619ec7caa222}\label{classfc_1_1binary__api__connection_a685bce1e116b7a14437e619ec7caa222}} 
+virtual \mbox{\hyperlink{classstd_1_1vector}{result\+\_\+type}} {\bfseries send\+\_\+callback} (uint64\+\_\+t callback\+\_\+id, \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}} args=\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}())=0
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a28984937cdd6989e47fb903559e07550}\label{classfc_1_1binary__api__connection_a28984937cdd6989e47fb903559e07550}} 
+virtual void {\bfseries send\+\_\+notice} (uint64\+\_\+t callback\+\_\+id, \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}} args=\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}())=0
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a0ce42b56e43afc811facd136c7abca50}\label{classfc_1_1binary__api__connection_a0ce42b56e43afc811facd136c7abca50}} 
+\mbox{\hyperlink{classstd_1_1vector}{result\+\_\+type}} {\bfseries receive\+\_\+call} (api\+\_\+id\+\_\+type api\+\_\+id, const string \&method\+\_\+name, const \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}} \&args=\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}()) const
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a9bb2b3c0efeff20719352d025a88aa5e}\label{classfc_1_1binary__api__connection_a9bb2b3c0efeff20719352d025a88aa5e}} 
+\mbox{\hyperlink{classstd_1_1vector}{result\+\_\+type}} {\bfseries receive\+\_\+callback} (uint64\+\_\+t callback\+\_\+id, const \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}} \&args=\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}()) const
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a1f599aec11f482a0129788eed1327982}\label{classfc_1_1binary__api__connection_a1f599aec11f482a0129788eed1327982}} 
+void {\bfseries receive\+\_\+notice} (uint64\+\_\+t callback\+\_\+id, const \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}} \&args=\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}()) const
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a2948663f79c2bb806351873d5433b4c8}\label{classfc_1_1binary__api__connection_a2948663f79c2bb806351873d5433b4c8}} 
+{\footnotesize template$<$typename Interface $>$ }\\api\+\_\+id\+\_\+type {\bfseries register\+\_\+api} (const Interface \&a)
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a8918ff5fdb0058166b54fef916331afa}\label{classfc_1_1binary__api__connection_a8918ff5fdb0058166b54fef916331afa}} 
+{\footnotesize template$<$typename Signature $>$ }\\uint64\+\_\+t {\bfseries register\+\_\+callback} (const std\+::function$<$ Signature $>$ \&cb)
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_aea3fafc93b95de3a43c0e923d50f34b9}\label{classfc_1_1binary__api__connection_aea3fafc93b95de3a43c0e923d50f34b9}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ {\bfseries get\+\_\+method\+\_\+names} (api\+\_\+id\+\_\+type local\+\_\+api\+\_\+id=0) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_a1ae80889395951dff4c6fc5e18fa839a}\label{classfc_1_1binary__api__connection_a1ae80889395951dff4c6fc5e18fa839a}} 
+fc\+::signal$<$ void()$>$ {\bfseries closed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1binary__api__connection_af4db40adde5c6271df5163f5e3e7159f}\label{classfc_1_1binary__api__connection_af4db40adde5c6271df5163f5e3e7159f}} 
+\index{fc\+::binary\+\_\+api\+\_\+connection@{fc\+::binary\+\_\+api\+\_\+connection}!send\+\_\+call@{send\+\_\+call}}
+\index{send\+\_\+call@{send\+\_\+call}!fc\+::binary\+\_\+api\+\_\+connection@{fc\+::binary\+\_\+api\+\_\+connection}}
+\subsubsection{\texorpdfstring{send\+\_\+call()}{send\_call()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classstd_1_1vector}{result\+\_\+type}} fc\+::binary\+\_\+api\+\_\+connection\+::send\+\_\+call (\begin{DoxyParamCaption}\item[{api\+\_\+id\+\_\+type}]{api\+\_\+id,  }\item[{string}]{method\+\_\+name,  }\item[{\mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}}]{args = {\ttfamily \mbox{\hyperlink{classstd_1_1vector}{params\+\_\+type}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+makes calls to the remote server 
+
+Implemented in \mbox{\hyperlink{classfc_1_1local__binary__api__connection_afe5ad41916d1118fcb24f14146df9485}{fc\+::local\+\_\+binary\+\_\+api\+\_\+connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/rpc/binary\+\_\+api\+\_\+connection.\+hpp\end{DoxyCompactItemize}

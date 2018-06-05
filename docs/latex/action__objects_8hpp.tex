@@ -1,0 +1,26 @@
+\hypertarget{action__objects_8hpp}{}\section{libraries/chain/include/aacio/chain/action\+\_\+objects.hpp File Reference}
+\label{action__objects_8hpp}\index{libraries/chain/include/aacio/chain/action\+\_\+objects.\+hpp@{libraries/chain/include/aacio/chain/action\+\_\+objects.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/permission\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+index\+\_\+includes.\+hpp\char`\"{}}\newline
+Include dependency graph for action\+\_\+objects.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1action__permission__object}{aacio\+::chain\+::action\+\_\+permission\+\_\+object}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{action__objects_8hpp_a18e78ad2c022bc55baea78ebbb94e46a}\label{action__objects_8hpp_a18e78ad2c022bc55baea78ebbb94e46a}} 
+using {\bfseries aacio\+::chain\+::action\+\_\+permission\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ action\+\_\+permission\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ action\+\_\+permission\+\_\+object, action\+\_\+permission\+\_\+object\+::id\+\_\+type, \&action\+\_\+permission\+\_\+object\+::id $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+owner\+\_\+scope $>$, composite\+\_\+key$<$ action\+\_\+permission\+\_\+object, member$<$ action\+\_\+permission\+\_\+object, account\+\_\+name, \&action\+\_\+permission\+\_\+object\+::owner $>$, member$<$ action\+\_\+permission\+\_\+object, permission\+\_\+object\+::id\+\_\+type, \&action\+\_\+permission\+\_\+object\+::scope\+\_\+permission $>$ $>$ $>$ $>$ $>$
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

@@ -1,0 +1,83 @@
+.TH "websocketpp::close" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::close \- \fBA\fP package of types and methods for manipulating WebSocket close codes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBstatus\fP"
+.br
+.RI "\fBA\fP package of types and methods for manipulating WebSocket close status'\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "union \fBcode_converter\fP"
+.br
+.RI "\fBType\fP used to convert close statuses between integer and wire representations\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstatus::value\fP \fBextract_code\fP (std::string const &payload, lib::error_code &ec)"
+.br
+.RI "Extract a close code value from a close payload\&. "
+.ti -1c
+.RI "std::string \fBextract_reason\fP (std::string const &payload, lib::error_code &ec)"
+.br
+.RI "Extract the reason string from a close payload\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBA\fP package of types and methods for manipulating WebSocket close codes\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBstatus::value\fP websocketpp::close::extract_code (std::string const & payload, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Extract a close code value from a close payload\&. If there is no close value (ie string is empty) status::no_status is returned\&. If a code couldn't be extracted (usually do to a short or otherwise mangled payload) status::protocol_error is returned and the ec value is flagged as an error\&. Note that this case is different than the case where protocol error is received over the wire\&.
+.PP
+If the value is in an invalid or reserved range ec is set accordingly\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpayload\fP Close frame payload value received over the wire\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The extracted value 
+.RE
+.PP
+
+.SS "std::string websocketpp::close::extract_reason (std::string const & payload, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Extract the reason string from a close payload\&. The string should be a valid UTF8 message\&. \fBerror::invalid_utf8\fP will be set if the function extracts a reason that is not valid UTF8\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpayload\fP The payload string to extract a reason from\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The reason string\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,73 @@
+.TH "websocketpp::extensions::permessage_deflate::error" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::extensions::permessage_deflate::error \- Permessage deflate error values\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBcategory\fP"
+.br
+.RI "Permessage-deflate error category\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBvalue\fP { \fBgeneral\fP = 1, \fBinvalid_attributes\fP, \fBinvalid_attribute_value\fP, \fBinvalid_mode\fP, \fBunsupported_attributes\fP, \fBinvalid_max_window_bits\fP, \fBzlib_error\fP, \fBuninitialized\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "lib::error_category const  & \fBget_category\fP ()"
+.br
+.RI "Get a reference to a static copy of the permessage-deflate error category\&. "
+.ti -1c
+.RI "lib::error_code \fBmake_error_code\fP (\fBerror::value\fP e)"
+.br
+.RI "Create an error code in the permessage-deflate category\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Permessage deflate error values\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBwebsocketpp::extensions::permessage_deflate::error::value\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIgeneral \fP\fP
+Catch all\&. 
+.TP
+\fB\fIinvalid_attributes \fP\fP
+Invalid extension attributes\&. 
+.TP
+\fB\fIinvalid_attribute_value \fP\fP
+Invalid extension attribute value\&. 
+.TP
+\fB\fIinvalid_mode \fP\fP
+Invalid megotiation mode\&. 
+.TP
+\fB\fIunsupported_attributes \fP\fP
+Unsupported extension attributes\&. 
+.TP
+\fB\fIinvalid_max_window_bits \fP\fP
+Invalid value for max_window_bits\&. 
+.TP
+\fB\fIzlib_error \fP\fP
+ZLib Error\&. 
+.TP
+\fB\fIuninitialized \fP\fP
+Uninitialized\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

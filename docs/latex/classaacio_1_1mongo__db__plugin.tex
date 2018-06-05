@@ -1,0 +1,45 @@
+\hypertarget{classaacio_1_1mongo__db__plugin}{}\section{aacio\+:\+:mongo\+\_\+db\+\_\+plugin Class Reference}
+\label{classaacio_1_1mongo__db__plugin}\index{aacio\+::mongo\+\_\+db\+\_\+plugin@{aacio\+::mongo\+\_\+db\+\_\+plugin}}
+
+
+{\ttfamily \#include $<$mongo\+\_\+db\+\_\+plugin.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:mongo\+\_\+db\+\_\+plugin\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:mongo\+\_\+db\+\_\+plugin\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin_a86f9257b63da541cab0a1a2315b723c7}\label{classaacio_1_1mongo__db__plugin_a86f9257b63da541cab0a1a2315b723c7}} 
+virtual void {\bfseries set\+\_\+program\+\_\+options} (options\+\_\+description \&cli, options\+\_\+description \&cfg) override
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin_a497af45a326e2ad872bd263731accf05}\label{classaacio_1_1mongo__db__plugin_a497af45a326e2ad872bd263731accf05}} 
+void {\bfseries plugin\+\_\+initialize} (const variables\+\_\+map \&options)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin_afb4e2a4413831b3cbf5d4a93e5937c63}\label{classaacio_1_1mongo__db__plugin_afb4e2a4413831b3cbf5d4a93e5937c63}} 
+void {\bfseries plugin\+\_\+startup} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin_acb72f24f30c6f81b2b1cc24455a37be7}\label{classaacio_1_1mongo__db__plugin_acb72f24f30c6f81b2b1cc24455a37be7}} 
+void {\bfseries plugin\+\_\+shutdown} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Provides persistence to Mongo\+DB for\+: Blocks Transactions Actions Accounts
+
+See data dictionary (DB Schema Definition -\/ A\+AC A\+PI) for description of Mongo\+DB schema.
+
+The goal ultimately is for all chainbase data to be mirrored in Mongo\+DB via a delayed node processing irreversible blocks. Currently, only Blocks, Transactions, Messages, and Account balance it mirrored. Chainbase is being rewritten to be multi-\/threaded. Once chainbase is stable, integration directly with a mirror database approach can be followed removing the need for the direct processing of Blocks employed with this implementation.
+
+If Mongo\+DB env not available (\#ifndef M\+O\+N\+G\+O\+DB) this plugin is a no-\/op. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/mongo\+\_\+db\+\_\+plugin/include/aacio/mongo\+\_\+db\+\_\+plugin/\mbox{\hyperlink{mongo__db__plugin_8hpp}{mongo\+\_\+db\+\_\+plugin.\+hpp}}\item 
+plugins/mongo\+\_\+db\+\_\+plugin/\mbox{\hyperlink{mongo__db__plugin_8cpp}{mongo\+\_\+db\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

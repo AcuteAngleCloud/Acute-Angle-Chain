@@ -1,0 +1,152 @@
+.TH "libraries/chain/include/aacio/chain/chain_controller.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/chain_controller.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/global_property_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/account_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/permission_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/fork_database\&.hpp>\fP
+.br
+\fC#include <aacio/chain/block_log\&.hpp>\fP
+.br
+\fC#include <aacio/chain/block_trace\&.hpp>\fP
+.br
+\fC#include <chainbase/chainbase\&.hpp>\fP
+.br
+\fC#include <fc/scoped_exit\&.hpp>\fP
+.br
+\fC#include <boost/signals2/signal\&.hpp>\fP
+.br
+\fC#include <aacio/chain/protocol\&.hpp>\fP
+.br
+\fC#include <aacio/chain/apply_context\&.hpp>\fP
+.br
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/genesis_state\&.hpp>\fP
+.br
+\fC#include <aacio/chain/resource_limits\&.hpp>\fP
+.br
+\fC#include <aacio/chain/wasm_interface\&.hpp>\fP
+.br
+\fC#include <aacio/chain/webassembly/runtime_interface\&.hpp>\fP
+.br
+\fC#include <fc/log/logger\&.hpp>\fP
+.br
+\fC#include <map>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::chain::chain_controller\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::chain_controller::runtime_limits\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::chain_controller::controller_config\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::database\fP = \fBchainbase::database\fP"
+.br
+.ti -1c
+.RI "using \fBaacio::chain::resource_limits_manager\fP = resource_limits::resource_limits_manager"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBaacio::chain::validation_steps\fP { \fBskip_nothing\fP = 0, \fBaacio::chain::skip_producer_signature\fP = 1 << 0, \fBaacio::chain::skip_transaction_signatures\fP = 1 << 1, \fBaacio::chain::skip_transaction_dupe_check\fP = 1 << 2, \fBaacio::chain::skip_fork_db\fP = 1 << 3, \fBaacio::chain::skip_block_size_check\fP = 1 << 4, \fBaacio::chain::skip_tapos_check\fP = 1 << 5, \fBaacio::chain::skip_authority_check\fP = 1 << 6, \fBaacio::chain::skip_merkle_check\fP = 1 << 7, \fBaacio::chain::skip_assert_evaluation\fP = 1 << 8, \fBaacio::chain::skip_undo_history_check\fP = 1 << 9, \fBaacio::chain::skip_producer_schedule_check\fP = 1 << 10, \fBaacio::chain::skip_validate\fP = 1 << 11, \fBaacio::chain::skip_scope_check\fP = 1 << 12, \fBaacio::chain::skip_output_check\fP = 1 << 13, \fBaacio::chain::pushed_transaction\fP = 1 << 14, \fBaacio::chain::created_block\fP = 1 << 15, \fBaacio::chain::received_block\fP = 1 << 16, \fBaacio::chain::genesis_setup\fP = 1 << 17, \fBaacio::chain::skip_missed_block_penalty\fP = 1 << 18 }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBaacio::chain::validation_steps\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIskip_producer_signature \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_transaction_signatures \fP\fP
+used by non-producer nodes 
+.TP
+\fB\fIskip_transaction_dupe_check \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_fork_db \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_block_size_check \fP\fP
+used when applying locally generated transactions 
+.TP
+\fB\fIskip_tapos_check \fP\fP
+used while reindexing -- note this skips expiration check as well 
+.TP
+\fB\fIskip_authority_check \fP\fP
+used while reindexing -- disables any checking of authority on transactions 
+.TP
+\fB\fIskip_merkle_check \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_assert_evaluation \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_undo_history_check \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_producer_schedule_check \fP\fP
+used while reindexing 
+.TP
+\fB\fIskip_validate \fP\fP
+used prior to checkpoint, skips transaction validation 
+.TP
+\fB\fIskip_scope_check \fP\fP
+used to skip checks for proper scope 
+.TP
+\fB\fIskip_output_check \fP\fP
+used to skip checks for outputs in block exactly matching those created from apply 
+.TP
+\fB\fIpushed_transaction \fP\fP
+used to indicate that the origination of the call was from a push_transaction, to determine time allotment 
+.TP
+\fB\fIcreated_block \fP\fP
+used to indicate that the origination of the call was for creating a block, to determine time allotment 
+.TP
+\fB\fIreceived_block \fP\fP
+used to indicate that the origination of the call was for a received block, to determine time allotment 
+.TP
+\fB\fIgenesis_setup \fP\fP
+used to indicate that the origination of the call was for a genesis transaction 
+.TP
+\fB\fIskip_missed_block_penalty \fP\fP
+used to indicate that missed blocks shouldn't count against producers (used in long unit tests) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,60 @@
+.TH "InputMergeable" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+InputMergeable
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::ExpressionStackWalker< InputMergeable, Visitor< InputMergeable > >\fP, and \fBMergeable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInputMergeable\fP (\fBModule\fP &wasm, \fBOutputMergeable\fP &outputMergeable)"
+.br
+.ti -1c
+.RI "void \fBvisitCall\fP (\fBCall\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitGetGlobal\fP (\fBGetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSetGlobal\fP (\fBSetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBmerge\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBOutputMergeable\fP & \fBoutputMergeable\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBName\fP > \fBftNames\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBName\fP > \fBeNames\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBName\fP > \fBfNames\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBName\fP > \fBgNames\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,45 @@
+.TH "LLVMJIT::UnitMemoryManager" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LLVMJIT::UnitMemoryManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits RTDyldMemoryManager\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBregisterEHFrames\fP (U8 *addr, U64 loadAddr, uintptr_t numBytes) override"
+.br
+.ti -1c
+.RI "void \fBderegisterEHFrames\fP (U8 *addr, U64 loadAddr, uintptr_t numBytes) override"
+.br
+.ti -1c
+.RI "virtual bool \fBneedsToReserveAllocationSpace\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBreserveAllocationSpace\fP (uintptr_t numCodeBytes, U32 codeAlignment, uintptr_t numReadOnlyBytes, U32 readOnlyAlignment, uintptr_t numReadWriteBytes, U32 readWriteAlignment) override"
+.br
+.ti -1c
+.RI "virtual U8 * \fBallocateCodeSection\fP (uintptr_t numBytes, U32 alignment, U32 sectionID, llvm::StringRef sectionName) override"
+.br
+.ti -1c
+.RI "virtual U8 * \fBallocateDataSection\fP (uintptr_t numBytes, U32 alignment, U32 sectionID, llvm::StringRef SectionName, bool isReadOnly) override"
+.br
+.ti -1c
+.RI "virtual bool \fBfinalizeMemory\fP (std::string *ErrMsg=nullptr) override"
+.br
+.ti -1c
+.RI "virtual void \fBinvalidateInstructionCache\fP ()"
+.br
+.ti -1c
+.RI "U8 * \fBgetImageBaseAddress\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

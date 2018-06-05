@@ -1,0 +1,61 @@
+.TH "aacio::chain_plugin_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain_plugin_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bfs::path \fBblock_log_dir\fP"
+.br
+.ti -1c
+.RI "bfs::path \fBgenesis_file\fP"
+.br
+.ti -1c
+.RI "\fBtime_point\fP \fBgenesis_timestamp\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBskip_flags\fP = skip_nothing"
+.br
+.ti -1c
+.RI "bool \fBreadonly\fP = false"
+.br
+.ti -1c
+.RI "flat_map< uint32_t, \fBblock_id_type\fP > \fBloaded_checkpoints\fP"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< \fBfork_database\fP > \fBfork_db\fP"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< \fBblock_log\fP > \fBblock_logger\fP"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< \fBchain_controller::controller_config\fP > \fBchain_config\fP = \fBchain_controller::controller_config\fP()"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< \fBchain_controller\fP > \fBchain\fP"
+.br
+.ti -1c
+.RI "\fBchain_id_type\fP \fBchain_id\fP"
+.br
+.ti -1c
+.RI "int32_t \fBmax_reversible_block_time_ms\fP"
+.br
+.ti -1c
+.RI "int32_t \fBmax_pending_transaction_time_ms\fP"
+.br
+.ti -1c
+.RI "int32_t \fBmax_deferred_transaction_time_ms\fP"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< vm_type > \fBwasm_runtime\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

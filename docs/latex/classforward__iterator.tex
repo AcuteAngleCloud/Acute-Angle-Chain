@@ -1,0 +1,64 @@
+\hypertarget{classforward__iterator}{}\section{forward\+\_\+iterator$<$ It $>$ Class Template Reference}
+\label{classforward__iterator}\index{forward\+\_\+iterator$<$ It $>$@{forward\+\_\+iterator$<$ It $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforward__iterator_a605ebfcf02816d92b5b3087c80df0353}\label{classforward__iterator_a605ebfcf02816d92b5b3087c80df0353}} 
+typedef std\+::forward\+\_\+iterator\+\_\+tag {\bfseries iterator\+\_\+category}
+\item 
+\mbox{\Hypertarget{classforward__iterator_a202702314b69abdac8a5613c8579b340}\label{classforward__iterator_a202702314b69abdac8a5613c8579b340}} 
+typedef std\+::iterator\+\_\+traits$<$ It $>$\+::value\+\_\+type {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classforward__iterator_a44999d48a27d8954f8d044d6c2cafe73}\label{classforward__iterator_a44999d48a27d8954f8d044d6c2cafe73}} 
+typedef std\+::iterator\+\_\+traits$<$ It $>$\+::difference\+\_\+type {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classforward__iterator_a5a7eb422ec2ded1ac633d87aa3789474}\label{classforward__iterator_a5a7eb422ec2ded1ac633d87aa3789474}} 
+typedef It {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classforward__iterator_ae870577b48424a4f8b464dccd1cc4cd1}\label{classforward__iterator_ae870577b48424a4f8b464dccd1cc4cd1}} 
+typedef std\+::iterator\+\_\+traits$<$ It $>$\+::reference {\bfseries reference}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforward__iterator_af1bd4cde98790c17c18e9c06167bfbeb}\label{classforward__iterator_af1bd4cde98790c17c18e9c06167bfbeb}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 It {\bfseries base} () const
+\item 
+\mbox{\Hypertarget{classforward__iterator_aaafa251889c5e1ff9c8cc056ad130c9f}\label{classforward__iterator_aaafa251889c5e1ff9c8cc056ad130c9f}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 {\bfseries forward\+\_\+iterator} (It it)
+\item 
+\mbox{\Hypertarget{classforward__iterator_a8d24b59548ed9d510a7480b472814586}\label{classforward__iterator_a8d24b59548ed9d510a7480b472814586}} 
+{\footnotesize template$<$class U $>$ }\\T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 {\bfseries forward\+\_\+iterator} (const \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&u)
+\item 
+\mbox{\Hypertarget{classforward__iterator_a7ef35cae8bc4b2aa605d80659358dfe0}\label{classforward__iterator_a7ef35cae8bc4b2aa605d80659358dfe0}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 reference {\bfseries operator$\ast$} () const
+\item 
+\mbox{\Hypertarget{classforward__iterator_a461c94571e1add6d5cbf52b1f297bcbc}\label{classforward__iterator_a461c94571e1add6d5cbf52b1f297bcbc}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 pointer {\bfseries operator-\/$>$} () const
+\item 
+\mbox{\Hypertarget{classforward__iterator_ae56b4230e3682716c071fe19e1ee7e2f}\label{classforward__iterator_ae56b4230e3682716c071fe19e1ee7e2f}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}} \& {\bfseries operator++} ()
+\item 
+\mbox{\Hypertarget{classforward__iterator_a18d1a4757e33d1b52130b63e8c1d1a4d}\label{classforward__iterator_a18d1a4757e33d1b52130b63e8c1d1a4d}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}} {\bfseries operator++} (int)
+\item 
+\mbox{\Hypertarget{classforward__iterator_a8253cc2b74384c65aa29bbc2ef3b1f5a}\label{classforward__iterator_a8253cc2b74384c65aa29bbc2ef3b1f5a}} 
+{\footnotesize template$<$class T $>$ }\\void {\bfseries operator,} (\mbox{\hyperlink{struct_t}{T}} const \&) D\+E\+L\+E\+T\+E\+\_\+\+F\+U\+N\+C\+T\+I\+ON
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classforward__iterator_ad408782e21285fc911c8030273b9d176}\label{classforward__iterator_ad408782e21285fc911c8030273b9d176}} 
+{\footnotesize template$<$class U $>$ }\\class {\bfseries forward\+\_\+iterator}
+\item 
+\mbox{\Hypertarget{classforward__iterator_a8c751fa69305aeec994fe55879d5c2dc}\label{classforward__iterator_a8c751fa69305aeec994fe55879d5c2dc}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 bool {\bfseries operator==} (const \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}} \&x, const \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}} \&y)
+\item 
+\mbox{\Hypertarget{classforward__iterator_afaf87cf408c3d91c4201b10d12bb24a8}\label{classforward__iterator_afaf87cf408c3d91c4201b10d12bb24a8}} 
+T\+E\+S\+T\+\_\+\+C\+O\+N\+S\+T\+E\+X\+P\+R\+\_\+\+C\+X\+X14 bool {\bfseries operator!=} (const \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}} \&x, const \mbox{\hyperlink{classforward__iterator}{forward\+\_\+iterator}} \&y)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/support/test\+\_\+iterators.\+h\end{DoxyCompactItemize}

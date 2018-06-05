@@ -1,0 +1,70 @@
+.TH "plugins/http_plugin/http_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/http_plugin/http_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/http_plugin/http_plugin\&.hpp>\fP
+.br
+\fC#include <fc/network/ip\&.hpp>\fP
+.br
+\fC#include <fc/log/logger_config\&.hpp>\fP
+.br
+\fC#include <fc/reflect/variant\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+\fC#include <boost/asio\&.hpp>\fP
+.br
+\fC#include <boost/optional\&.hpp>\fP
+.br
+\fC#include <websocketpp/config/asio_client\&.hpp>\fP
+.br
+\fC#include <websocketpp/config/asio\&.hpp>\fP
+.br
+\fC#include <websocketpp/server\&.hpp>\fP
+.br
+\fC#include <websocketpp/client\&.hpp>\fP
+.br
+\fC#include <websocketpp/logger/stub\&.hpp>\fP
+.br
+\fC#include <thread>\fP
+.br
+\fC#include <memory>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::detail::asio_with_stub_log\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::detail::asio_with_stub_log::transport_config\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::http_plugin_impl\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::websocket_server_type\fP = \fBwebsocketpp::server\fP< detail::asio_with_stub_log >"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

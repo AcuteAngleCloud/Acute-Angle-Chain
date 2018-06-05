@@ -1,0 +1,226 @@
+.TH "plugins/net_plugin/net_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/net_plugin/net_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/types\&.hpp>\fP
+.br
+\fC#include <aacio/net_plugin/net_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/net_plugin/protocol\&.hpp>\fP
+.br
+\fC#include <aacio/net_plugin/message_buffer\&.hpp>\fP
+.br
+\fC#include <aacio/chain/chain_controller\&.hpp>\fP
+.br
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <aacio/chain/block\&.hpp>\fP
+.br
+\fC#include <aacio/producer_plugin/producer_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/utilities/key_conversion\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/types\&.hpp>\fP
+.br
+\fC#include <fc/network/ip\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+\fC#include <fc/io/raw\&.hpp>\fP
+.br
+\fC#include <fc/log/appender\&.hpp>\fP
+.br
+\fC#include <fc/container/flat\&.hpp>\fP
+.br
+\fC#include <fc/reflect/variant\&.hpp>\fP
+.br
+\fC#include <fc/crypto/rand\&.hpp>\fP
+.br
+\fC#include <fc/exception/exception\&.hpp>\fP
+.br
+\fC#include <boost/asio/ip/tcp\&.hpp>\fP
+.br
+\fC#include <boost/asio/ip/host_name\&.hpp>\fP
+.br
+\fC#include <boost/asio/steady_timer\&.hpp>\fP
+.br
+\fC#include <boost/intrusive/set\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::node_transaction_state\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_entry\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_in_flight\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::net_plugin_impl\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::transaction_state\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_block_num\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::block_state\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_request_time\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_known_by_peer\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::sync_state\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::handshake_initializer\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::connection\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::connection::queued_write\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::msgHandler\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::sync_manager\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::big_msg_manager\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBfc\fP"
+.br
+.RI "aacio::chain "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::connection_ptr\fP = std::shared_ptr< connection >"
+.br
+.ti -1c
+.RI "using \fBaacio::connection_wptr\fP = std::weak_ptr< connection >"
+.br
+.ti -1c
+.RI "using \fBaacio::socket_ptr\fP = std::shared_ptr< tcp::socket >"
+.br
+.ti -1c
+.RI "using \fBaacio::net_message_ptr\fP = shared_ptr< net_message >"
+.br
+.ti -1c
+.RI "typedef multi_index_container< node_transaction_state, indexed_by< ordered_unique< tag< by_id >, member< node_transaction_state, \fBtransaction_id_type\fP, &node_transaction_state::id > >, ordered_non_unique< tag< by_expiry >, member< node_transaction_state, \fBfc::time_point_sec\fP, &node_transaction_state::expires > >, ordered_non_unique< tag< by_block_num >, member< node_transaction_state, uint32_t, &node_transaction_state::block_num > > > > \fBaacio::node_transaction_index\fP"
+.br
+.ti -1c
+.RI "typedef multi_index_container< transaction_state, indexed_by< ordered_unique< tag< by_id >, member< transaction_state, \fBtransaction_id_type\fP, &transaction_state::id > > > > \fBaacio::transaction_state_index\fP"
+.br
+.ti -1c
+.RI "typedef multi_index_container< block_state, indexed_by< ordered_unique< tag< by_id >, member< block_state, block_id_type, &block_state::id > > > > \fBaacio::block_state_index\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::unordered_map\fP< std::string, logger > & \fBfc::get_logger_map\fP ()"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_in_flight\fP \fBaacio::incr_in_flight\fP (1)"
+.br
+.ti -1c
+.RI "\fBupdate_in_flight\fP (int32_t delta)"
+.br
+.ti -1c
+.RI "void \fBoperator()\fP (node_transaction_state &nts)"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_in_flight\fP \fBaacio::decr_in_flight\fP (\-1)"
+.br
+.ti -1c
+.RI "template<class enum_type , class  = typename std::enable_if<std::is_enum<enum_type>::value>::type> enum_type & \fBaacio::operator|=\fP (enum_type &lhs, const enum_type &rhs)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBaacio::dejsonify\fP (const string &s)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int32_t \fBincr\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::net_plugin_impl\fP \fBaacio::incr_in_flight\fP"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_send_buffer_size_mb\fP = 4"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_send_buffer_size\fP = 1024*1024*def_send_buffer_size_mb"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_max_clients\fP = 25"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_conn_retry_wait\fP = 30"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_txn_expire_wait\fP = std::chrono::seconds(3)"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_resp_expected_wait\fP = std::chrono::seconds(1)"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_sync_fetch_span\fP = 100"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_max_just_send\fP = 1500 * 3"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::def_send_whole_blocks\fP = true"
+.br
+.ti -1c
+.RI "constexpr auto \fBaacio::message_header_size\fP = 4"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_request_time\fP \fBaacio::set_request_time\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::update_known_by_peer\fP \fBaacio::set_is_known\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "constexpr auto aacio::def_send_buffer_size_mb = 4"
+default value initializers 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

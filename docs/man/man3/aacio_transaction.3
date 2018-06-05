@@ -1,0 +1,36 @@
+.TH "aacio::transaction" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::transaction
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::transaction_header\fP\&.
+.PP
+Inherited by \fBaacio::deferred_transaction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtransaction\fP (time exp=\fBnow\fP()+60, region_id r=0)"
+.br
+.ti -1c
+.RI "void \fBsend\fP (uint64_t sender_id, \fBaccount_name\fP payer) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBvector\fP< \fBaction\fP > \fBcontext_free_actions\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBaction\fP > \fBactions\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

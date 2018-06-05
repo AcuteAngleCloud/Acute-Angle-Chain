@@ -1,0 +1,371 @@
+.TH "fc::raw" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::raw
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpack_static_variant\fP"
+.br
+.ti -1c
+.RI "struct \fBunpack_static_variant\fP"
+.br
+.ti -1c
+.RI "class \fBvariant_packer\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBshared_string\fP = bip::basic_string< char, std::char_traits< char >, bip::allocator< char, bip::managed_mapped_file::segment_manager > >"
+.br
+.ti -1c
+.RI "template<size_t Size> using \fBUInt\fP = number< cpp_int_backend< Size, Size, unsigned_magnitude, unchecked, void > >"
+.br
+.ti -1c
+.RI "template<size_t Size> using \fBInt\fP = number< cpp_int_backend< Size, Size, signed_magnitude, unchecked, void > >"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBstd::deque\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBstd::deque\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const flat_set< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, flat_set< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename\&.\&.\&. V> void \fBpack\fP (Stream &s, const flat_map< K, V\&.\&.\&. > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V , typename\&.\&.\&. A> void \fBunpack\fP (Stream &s, flat_map< K, \fBV\fP, A\&.\&.\&. > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , typename A > void \fBpack\fP (Stream &s, const bip::vector< \fBT\fP, \fBA\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , typename A > void \fBunpack\fP (Stream &s, bip::vector< \fBT\fP, \fBA\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename\&.\&.\&. V> void \fBunpack\fP (Stream &s, flat_map< K, V\&.\&.\&. > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::ecc::public_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::ecc::public_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::ecc::private_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::ecc::private_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::crypto::r1::public_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::crypto::r1::public_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::crypto::r1::private_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::crypto::r1::private_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::public_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::public_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::private_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::private_key\fP &pk)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename Storage > void \fBpack\fP (Stream &s, const \fBfc::fixed_string\fP< \fBStorage\fP > &u)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename Storage > void \fBunpack\fP (Stream &s, \fBfc::fixed_string\fP< \fBStorage\fP > &u)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , typename\&.\&.\&. A> void \fBpack\fP (Stream &s, const bip::vector< \fBT\fP, A\&.\&.\&. > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , typename\&.\&.\&. A> void \fBunpack\fP (Stream &s, bip::vector< \fBT\fP, A\&.\&.\&. > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename IntType , typename EnumType > void \fBpack\fP (Stream &s, const \fBfc::enum_type\fP< IntType, \fBEnumType\fP > &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename IntType , typename EnumType > void \fBunpack\fP (Stream &s, \fBfc::enum_type\fP< IntType, \fBEnumType\fP > &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const UInt< 256 > &n)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, UInt< 256 > &n)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBInt\fP< 256 > &n)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBInt\fP< 256 > &n)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const boost::multiprecision::number< \fBT\fP > &n)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, boost::multiprecision::number< \fBT\fP > &n)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename Arg0 , typename\&.\&.\&. Args> void \fBpack\fP (Stream &s, const Arg0 &a0, Args\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::exception\fP &e)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::exception\fP &e)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::log_message\fP &msg)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::log_message\fP &msg)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::path\fP &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::path\fP &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::time_point_sec\fP &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::time_point_sec\fP &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::time_point\fP &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::time_point\fP &tp)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBfc::microseconds\fP &usec)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBfc::microseconds\fP &usec)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , size_t N> void \fBpack\fP (Stream &s, const \fBfc::array\fP< \fBT\fP, \fBN\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const std::shared_ptr< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , size_t N> void \fBunpack\fP (Stream &s, \fBfc::array\fP< \fBT\fP, \fBN\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, std::shared_ptr< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBsigned_int\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBunsigned_int\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBsigned_int\fP &vi)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBunsigned_int\fP &vi)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, const \fBT\fP &vi)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const char *v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBsafe\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBfc::safe\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , unsigned int S, typename Align > void \fBpack\fP (Stream &s, const \fBfc::fwd\fP< \fBT\fP, \fBS\fP, Align > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T , unsigned int S, typename Align > void \fBunpack\fP (Stream &s, \fBfc::fwd\fP< \fBT\fP, \fBS\fP, Align > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBfc::smart_ref\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBfc::smart_ref\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBfc::optional\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBfc::optional\fP< \fBT\fP > &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBstd::vector\fP< char > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBstd::vector\fP< char > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const fc::string &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, fc::string &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const shared_string &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, shared_string &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const bool &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, bool &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBstd::unordered_set\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBstd::unordered_set\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V > void \fBpack\fP (Stream &s, const std::pair< K, \fBV\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V > void \fBunpack\fP (Stream &s, std::pair< K, \fBV\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V > void \fBpack\fP (Stream &s, const \fBstd::unordered_map\fP< K, \fBV\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V > void \fBunpack\fP (Stream &s, \fBstd::unordered_map\fP< K, \fBV\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V > void \fBpack\fP (Stream &s, const \fBstd::map\fP< K, \fBV\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename K , typename V > void \fBunpack\fP (Stream &s, \fBstd::map\fP< K, \fBV\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBstd::vector\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBstd::vector\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBstd::set\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBstd::set\fP< \fBT\fP > &value)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBpack\fP (Stream &s, const \fBT\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename T > void \fBunpack\fP (Stream &s, \fBT\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > size_t \fBpack_size\fP (const \fBT\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > \fBstd::vector\fP< char > \fBpack\fP (const \fBT\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. Next> \fBstd::vector\fP< char > \fBpack\fP (const \fBT\fP &v, Next\&.\&.\&. next)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBunpack\fP (const \fBstd::vector\fP< char > &s)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBunpack\fP (const \fBstd::vector\fP< char > &s, \fBT\fP &tmp)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBpack\fP (char *d, uint32_t s, const \fBT\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBunpack\fP (const char *d, uint32_t s)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBunpack\fP (const char *d, uint32_t s, \fBT\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename\&.\&.\&. T> void \fBpack\fP (Stream &s, const \fBstatic_variant\fP< T\&.\&.\&. > &sv)"
+.br
+.ti -1c
+.RI "template<typename Stream , typename\&.\&.\&. T> void \fBunpack\fP (Stream &s, \fBstatic_variant\fP< T\&.\&.\&. > &sv)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBvariant_object\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBvariant_object\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBvariant\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBip::endpoint\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBip::endpoint\fP &v)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBunpack_file\fP (const \fBfc::path\fP &filename, \fBT\fP &obj)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBip::address\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBip::address\fP &v)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBreal128\fP &value_to_pack)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBreal128\fP &value_to_unpack)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBpack\fP (Stream &s, const \fBuint128\fP &u)"
+.br
+.ti -1c
+.RI "template<typename Stream > void \fBunpack\fP (Stream &s, \fBuint128\fP &u)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+serializes like an IntType 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,45 @@
+.TH "CLI::Error" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CLI::Error \- All errors derive from this one\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CLI11\&.hpp>\fP
+.PP
+Inherits runtime_error\&.
+.PP
+Inherited by \fBCLI::ConstructionError\fP, \fBCLI::OptionNotFound\fP, and \fBCLI::ParseError\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBget_exit_code\fP () const"
+.br
+.ti -1c
+.RI "\fBError\fP (std::string parent, std::string name, ExitCodes exit_code=ExitCodes::BaseClass, bool print_help=true)"
+.br
+.ti -1c
+.RI "\fBError\fP (std::string parent, std::string name, int exit_code=static_cast< int >(ExitCodes::BaseClass), bool print_help=true)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBexit_code\fP"
+.br
+.ti -1c
+.RI "bool \fBprint_help\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+All errors derive from this one\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

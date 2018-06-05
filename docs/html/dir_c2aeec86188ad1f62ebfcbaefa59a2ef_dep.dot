@@ -1,0 +1,11 @@
+digraph "programs/aacio-launcher" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7b0a5d1507c7f681cbfa1deb5990c6ea {
+    graph [ bgcolor="#ddddee", pencolor="black", label="programs" fontname="Helvetica", fontsize="10", URL="dir_7b0a5d1507c7f681cbfa1deb5990c6ea.html"]
+  dir_c2aeec86188ad1f62ebfcbaefa59a2ef [shape=box, label="aacio-launcher", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_c2aeec86188ad1f62ebfcbaefa59a2ef.html"];
+  }
+  dir_bc0718b08fb2015b8e59c47b2805f60c [shape=box label="libraries" fillcolor="white" style="filled" color="red" URL="dir_bc0718b08fb2015b8e59c47b2805f60c.html"];
+  dir_c2aeec86188ad1f62ebfcbaefa59a2ef->dir_bc0718b08fb2015b8e59c47b2805f60c [headlabel="1", labeldistance=1.5 headhref="dir_001687_000004.html"];
+}

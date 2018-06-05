@@ -1,0 +1,106 @@
+.TH "websocketpp::log::syslog< concurrency, names >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::log::syslog< concurrency, names > \- Basic logger that outputs to syslog\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <syslog\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::log::basic< concurrency, names >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBbasic\fP< concurrency, names > \fBbase\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsyslog\fP (\fBchannel_type_hint::value\fP hint=\fBchannel_type_hint::access\fP)"
+.br
+.RI "Construct the logger\&. "
+.ti -1c
+.RI "\fBsyslog\fP (level channels, \fBchannel_type_hint::value\fP hint=\fBchannel_type_hint::access\fP)"
+.br
+.RI "Construct the logger\&. "
+.ti -1c
+.RI "void \fBwrite\fP (level \fBchannel\fP, std::string const &msg)"
+.br
+.RI "Write a string message to the given channel\&. "
+.ti -1c
+.RI "void \fBwrite\fP (level \fBchannel\fP, char const *msg)"
+.br
+.RI "Write a cstring message to the given channel\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename concurrency, typename names>
+.br
+class websocketpp::log::syslog< concurrency, names >"
+Basic logger that outputs to syslog\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename concurrency, typename names> \fBwebsocketpp::log::syslog\fP< concurrency, names >::\fBsyslog\fP (\fBchannel_type_hint::value\fP hint = \fC\fBchannel_type_hint::access\fP\fP)\fC [inline]\fP"
+
+.PP
+Construct the logger\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhint\fP \fBA\fP channel type specific hint for how to construct the logger 
+.RE
+.PP
+
+.SS "template<typename concurrency, typename names> \fBwebsocketpp::log::syslog\fP< concurrency, names >::\fBsyslog\fP (level channels, \fBchannel_type_hint::value\fP hint = \fC\fBchannel_type_hint::access\fP\fP)\fC [inline]\fP"
+
+.PP
+Construct the logger\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannels\fP \fBA\fP set of channels to statically enable 
+.br
+\fIhint\fP \fBA\fP channel type specific hint for how to construct the logger 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename concurrency, typename names> void \fBwebsocketpp::log::syslog\fP< concurrency, names >::write (level channel, std::string const & msg)\fC [inline]\fP"
+
+.PP
+Write a string message to the given channel\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel to write to 
+.br
+\fImsg\fP The message to write 
+.RE
+.PP
+
+.SS "template<typename concurrency, typename names> void \fBwebsocketpp::log::syslog\fP< concurrency, names >::write (level channel, char const * msg)\fC [inline]\fP"
+
+.PP
+Write a cstring message to the given channel\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel to write to 
+.br
+\fImsg\fP The message to write 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

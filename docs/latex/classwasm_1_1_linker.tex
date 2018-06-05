@@ -1,0 +1,29 @@
+\hypertarget{classwasm_1_1_linker}{}\section{wasm\+:\+:Linker Class Reference}
+\label{classwasm_1_1_linker}\index{wasm\+::\+Linker@{wasm\+::\+Linker}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_a3fe3b385c541b1d011006a0ee972184d}\label{classwasm_1_1_linker_a3fe3b385c541b1d011006a0ee972184d}} 
+{\bfseries Linker} (\mbox{\hyperlink{structwasm_1_1_address}{Address}} global\+Base, \mbox{\hyperlink{structwasm_1_1_address}{Address}} stack\+Allocation, \mbox{\hyperlink{structwasm_1_1_address}{Address}} user\+Initial\+Memory, \mbox{\hyperlink{structwasm_1_1_address}{Address}} user\+Max\+Memory, bool import\+Memory, bool ignore\+Unknown\+Symbols, \mbox{\hyperlink{structwasm_1_1_name}{Name}} start\+Function, bool debug)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_a91f056f375c04b7c0c3d977dd448a78f}\label{classwasm_1_1_linker_a91f056f375c04b7c0c3d977dd448a78f}} 
+\mbox{\hyperlink{classwasm_1_1_linker_object}{Linker\+Object}} \& {\bfseries get\+Output} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_ad2d719645b45d8669488e9efc7e493d1}\label{classwasm_1_1_linker_ad2d719645b45d8669488e9efc7e493d1}} 
+void {\bfseries layout} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_a724669f5d6b5bdd6fbbf6a628e05e991}\label{classwasm_1_1_linker_a724669f5d6b5bdd6fbbf6a628e05e991}} 
+void {\bfseries emscripten\+Glue} (std\+::ostream \&o)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_a39c739ec8ac400fffc74aa47a27f4d45}\label{classwasm_1_1_linker_a39c739ec8ac400fffc74aa47a27f4d45}} 
+bool {\bfseries link\+Object} (S2\+Wasm\+Builder \&builder)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_linker_ae35aa87ecf6f3b7b318cd29faa56f341}\label{classwasm_1_1_linker_ae35aa87ecf6f3b7b318cd29faa56f341}} 
+bool {\bfseries link\+Archive} (\mbox{\hyperlink{class_archive}{Archive}} \&archive)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm-\/linker.\+h\item 
+externals/binaryen/src/wasm-\/linker.\+cpp\end{DoxyCompactItemize}

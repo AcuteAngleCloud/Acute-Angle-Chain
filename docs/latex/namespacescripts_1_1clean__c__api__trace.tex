@@ -1,0 +1,20 @@
+\hypertarget{namespacescripts_1_1clean__c__api__trace}{}\section{scripts.\+clean\+\_\+c\+\_\+api\+\_\+trace Namespace Reference}
+\label{namespacescripts_1_1clean__c__api__trace}\index{scripts.\+clean\+\_\+c\+\_\+api\+\_\+trace@{scripts.\+clean\+\_\+c\+\_\+api\+\_\+trace}}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacescripts_1_1clean__c__api__trace_aa8c38f4d71cff99cae91bca53b8b79c1}\label{namespacescripts_1_1clean__c__api__trace_aa8c38f4d71cff99cae91bca53b8b79c1}} 
+{\bfseries trace} = open(sys.\+argv\mbox{[}1\mbox{]}).read()
+\item 
+\mbox{\Hypertarget{namespacescripts_1_1clean__c__api__trace_a8f104a9d5cf4e981d86673304e610c1d}\label{namespacescripts_1_1clean__c__api__trace_a8f104a9d5cf4e981d86673304e610c1d}} 
+{\bfseries start} = trace.\+find(\textquotesingle{}// beginning a Binaryen A\+PI trace\textquotesingle{})
+\item 
+\mbox{\Hypertarget{namespacescripts_1_1clean__c__api__trace_aade5f6b9d7dcd87674999cd2fa5ec74e}\label{namespacescripts_1_1clean__c__api__trace_aade5f6b9d7dcd87674999cd2fa5ec74e}} 
+{\bfseries end} = trace.\+find(\textquotesingle{}\textbackslash{}n)\textquotesingle{}, start + 1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Cleans up output from the C api, makes a runnable C file
+\end{DoxyVerb}
+ 

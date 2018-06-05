@@ -1,0 +1,180 @@
+\hypertarget{classfc_1_1exception}{}\section{fc\+:\+:exception Class Reference}
+\label{classfc_1_1exception}\index{fc\+::exception@{fc\+::exception}}
+
+
+Used to generate a useful error report when an exception is thrown.
+
+At each level in the stack where the exception is caught and rethrown a new \mbox{\hyperlink{classfc_1_1log__message}{log\+\_\+message}} is added to the exception.  
+
+
+
+
+{\ttfamily \#include $<$exception.\+hpp$>$}
+
+
+
+Inheritance diagram for fc\+:\+:exception\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a2635b9fb22bb7f1471b8353463ef9b66}\label{classfc_1_1exception_a2635b9fb22bb7f1471b8353463ef9b66}} 
+enum {\bfseries code\+\_\+enum} \{ {\bfseries code\+\_\+value} = unspecified\+\_\+exception\+\_\+code
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a438cb875c834068b29e0a6cd3319e7f3}\label{classfc_1_1exception_a438cb875c834068b29e0a6cd3319e7f3}} 
+{\bfseries exception} (int64\+\_\+t code=\mbox{\hyperlink{namespacefc_ab52b42f18c442a260897c74c66c3d35ca54c3c8b9caa13270a23c57af7bf9c52c}{unspecified\+\_\+exception\+\_\+code}}, const std\+::string \&name\+\_\+value=\char`\"{}exception\char`\"{}, const std\+::string \&what\+\_\+value=\char`\"{}unspecified\char`\"{})
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_af4312be4f267fda7b0bf8bccbfac232b}\label{classfc_1_1exception_af4312be4f267fda7b0bf8bccbfac232b}} 
+{\bfseries exception} (\mbox{\hyperlink{classfc_1_1log__message}{log\+\_\+message}} \&\&, int64\+\_\+t code=\mbox{\hyperlink{namespacefc_ab52b42f18c442a260897c74c66c3d35ca54c3c8b9caa13270a23c57af7bf9c52c}{unspecified\+\_\+exception\+\_\+code}}, const std\+::string \&name\+\_\+value=\char`\"{}exception\char`\"{}, const std\+::string \&what\+\_\+value=\char`\"{}unspecified\char`\"{})
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a536774ba4cc639d3215bd91f412ffded}\label{classfc_1_1exception_a536774ba4cc639d3215bd91f412ffded}} 
+{\bfseries exception} (\mbox{\hyperlink{classstd_1_1vector}{log\+\_\+messages}} \&\&, int64\+\_\+t code=\mbox{\hyperlink{namespacefc_ab52b42f18c442a260897c74c66c3d35ca54c3c8b9caa13270a23c57af7bf9c52c}{unspecified\+\_\+exception\+\_\+code}}, const std\+::string \&name\+\_\+value=\char`\"{}exception\char`\"{}, const std\+::string \&what\+\_\+value=\char`\"{}unspecified\char`\"{})
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a57f2149839df7dc42ee356ca62a2dc90}\label{classfc_1_1exception_a57f2149839df7dc42ee356ca62a2dc90}} 
+{\bfseries exception} (const \mbox{\hyperlink{classstd_1_1vector}{log\+\_\+messages}} \&, int64\+\_\+t code=\mbox{\hyperlink{namespacefc_ab52b42f18c442a260897c74c66c3d35ca54c3c8b9caa13270a23c57af7bf9c52c}{unspecified\+\_\+exception\+\_\+code}}, const std\+::string \&name\+\_\+value=\char`\"{}exception\char`\"{}, const std\+::string \&what\+\_\+value=\char`\"{}unspecified\char`\"{})
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_ae8accd0c86f53a5f0c0c473609b642dc}\label{classfc_1_1exception_ae8accd0c86f53a5f0c0c473609b642dc}} 
+{\bfseries exception} (const \mbox{\hyperlink{classfc_1_1exception}{exception}} \&e)
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_acb133b17f42ee76692b472e887373720}\label{classfc_1_1exception_acb133b17f42ee76692b472e887373720}} 
+{\bfseries exception} (\mbox{\hyperlink{classfc_1_1exception}{exception}} \&\&e)
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_aa5734af6ae6e44c7c8a9b3c4ea8131e1}\label{classfc_1_1exception_aa5734af6ae6e44c7c8a9b3c4ea8131e1}} 
+const char $\ast$ {\bfseries name} () const  throw ()
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a79a36225cde10dcd23057bbe19d3390f}\label{classfc_1_1exception_a79a36225cde10dcd23057bbe19d3390f}} 
+int64\+\_\+t {\bfseries code} () const  throw ()
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a6c67d14894efbcab7650e8213f0a1e71}\label{classfc_1_1exception_a6c67d14894efbcab7650e8213f0a1e71}} 
+virtual const char $\ast$ {\bfseries what} () const  throw ()
+\item 
+const \mbox{\hyperlink{classstd_1_1vector}{log\+\_\+messages}} \& \mbox{\hyperlink{classfc_1_1exception_a70b72c1e4fe0d17485a8b7a0a6f397de}{get\+\_\+log}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a685fab238fa9b86dcf64b35417eb63b2}\label{classfc_1_1exception_a685fab238fa9b86dcf64b35417eb63b2}} 
+void {\bfseries append\+\_\+log} (\mbox{\hyperlink{classfc_1_1log__message}{log\+\_\+message}} m)
+\item 
+std\+::string \mbox{\hyperlink{classfc_1_1exception_a7611ea8fbe25dde56649b685c2298a37}{to\+\_\+detail\+\_\+string}} (\mbox{\hyperlink{classfc_1_1log__level}{log\+\_\+level}} ll=log\+\_\+level\+::all) const
+\item 
+std\+::string \mbox{\hyperlink{classfc_1_1exception_adbc4557b14bc29b74e9cf9f0ed5fb8d8}{to\+\_\+string}} (\mbox{\hyperlink{classfc_1_1log__level}{log\+\_\+level}} ll=log\+\_\+level\+::info) const
+\item 
+std\+::string \mbox{\hyperlink{classfc_1_1exception_aeea900db85f79e5b4be0710a9df373db}{top\+\_\+message}} () const
+\item 
+virtual N\+O\+\_\+\+R\+E\+T\+U\+RN void \mbox{\hyperlink{classfc_1_1exception_ace951e3b4efa51ea203b0e111f7e99a2}{dynamic\+\_\+rethrow\+\_\+exception}} () const
+\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classfc_1_1exception}{exception}} $>$ \mbox{\hyperlink{classfc_1_1exception_a38ac38d910ba13a339ce5855a51c9127}{dynamic\+\_\+copy\+\_\+exception}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_afb0e1fac60179c7b2e171c87d295f690}\label{classfc_1_1exception_afb0e1fac60179c7b2e171c87d295f690}} 
+\mbox{\hyperlink{classfc_1_1exception}{exception}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1exception}{exception}} \&copy)
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a4f257882990e94900d31d030be6601b2}\label{classfc_1_1exception_a4f257882990e94900d31d030be6601b2}} 
+\mbox{\hyperlink{classfc_1_1exception}{exception}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1exception}{exception}} \&\&copy)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a91cc1ed42499761c2f750de4a89ce627}\label{classfc_1_1exception_a91cc1ed42499761c2f750de4a89ce627}} 
+std\+::unique\+\_\+ptr$<$ detail\+::exception\+\_\+impl $>$ {\bfseries my}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a3c086911538b2c7cd63462c1d237c79d}\label{classfc_1_1exception_a3c086911538b2c7cd63462c1d237c79d}} 
+void {\bfseries to\+\_\+variant} (const \mbox{\hyperlink{classfc_1_1exception}{exception}} \&e, \mbox{\hyperlink{classfc_1_1variant}{variant}} \&v)
+\item 
+\mbox{\Hypertarget{classfc_1_1exception_a9b482ebad3fb861a17f968e015519e41}\label{classfc_1_1exception_a9b482ebad3fb861a17f968e015519e41}} 
+void {\bfseries from\+\_\+variant} (const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&e, \mbox{\hyperlink{classfc_1_1exception}{exception}} \&ll)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to generate a useful error report when an exception is thrown.
+
+At each level in the stack where the exception is caught and rethrown a new \mbox{\hyperlink{classfc_1_1log__message}{log\+\_\+message}} is added to the exception. 
+
+exception\textquotesingle{}s are designed to be serialized to a variant and deserialized from an variant.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{exception_8hpp_a7590ddac4f181b661c3eeaf5feccc6ac}{F\+C\+\_\+\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+\mbox{\hyperlink{exception_8hpp_ad1d295500555ec25b5cc63a27c2eaa59}{F\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}} 
+
+\mbox{\hyperlink{exception_8hpp_af3731d6e3beb140d9e652adf7a18113b}{F\+C\+\_\+\+R\+E\+T\+H\+R\+O\+W\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS}} 
+\end{DoxySeeAlso}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1exception_a38ac38d910ba13a339ce5855a51c9127}\label{classfc_1_1exception_a38ac38d910ba13a339ce5855a51c9127}} 
+\index{fc\+::exception@{fc\+::exception}!dynamic\+\_\+copy\+\_\+exception@{dynamic\+\_\+copy\+\_\+exception}}
+\index{dynamic\+\_\+copy\+\_\+exception@{dynamic\+\_\+copy\+\_\+exception}!fc\+::exception@{fc\+::exception}}
+\subsubsection{\texorpdfstring{dynamic\+\_\+copy\+\_\+exception()}{dynamic\_copy\_exception()}}
+{\footnotesize\ttfamily exception\+\_\+ptr fc\+::exception\+::dynamic\+\_\+copy\+\_\+exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This is equivalent to\+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{try} \{ throwAsDynamic\_exception(); \}
+\textcolor{keywordflow}{catch}( ... ) \{ \textcolor{keywordflow}{return} std::current\_exception(); \}
+\end{DoxyCode}
+ 
+
+Reimplemented in \mbox{\hyperlink{classfc_1_1unhandled__exception_a7946c956fb83ac7167173be9fdcac3e8}{fc\+::unhandled\+\_\+exception}}.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classfc_1_1exception_ace951e3b4efa51ea203b0e111f7e99a2}\label{classfc_1_1exception_ace951e3b4efa51ea203b0e111f7e99a2}} 
+\index{fc\+::exception@{fc\+::exception}!dynamic\+\_\+rethrow\+\_\+exception@{dynamic\+\_\+rethrow\+\_\+exception}}
+\index{dynamic\+\_\+rethrow\+\_\+exception@{dynamic\+\_\+rethrow\+\_\+exception}!fc\+::exception@{fc\+::exception}}
+\subsubsection{\texorpdfstring{dynamic\+\_\+rethrow\+\_\+exception()}{dynamic\_rethrow\_exception()}}
+{\footnotesize\ttfamily N\+O\+\_\+\+R\+E\+T\+U\+RN void fc\+::exception\+::dynamic\+\_\+rethrow\+\_\+exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Throw this exception as its most derived type.
+
+\begin{DoxyNote}{Note}
+does not return.
+\end{DoxyNote}
+Rethrows the exception restoring the proper type based upon the error code. This is used to propagate exception types across conversions to/from J\+S\+ON 
+
+Reimplemented in \mbox{\hyperlink{classfc_1_1unhandled__exception_a8177e0f7154591583154cf4e4ccf0c9e}{fc\+::unhandled\+\_\+exception}}.
+
+\mbox{\Hypertarget{classfc_1_1exception_a70b72c1e4fe0d17485a8b7a0a6f397de}\label{classfc_1_1exception_a70b72c1e4fe0d17485a8b7a0a6f397de}} 
+\index{fc\+::exception@{fc\+::exception}!get\+\_\+log@{get\+\_\+log}}
+\index{get\+\_\+log@{get\+\_\+log}!fc\+::exception@{fc\+::exception}}
+\subsubsection{\texorpdfstring{get\+\_\+log()}{get\_log()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classstd_1_1vector}{log\+\_\+messages}} \& fc\+::exception\+::get\+\_\+log (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a reference to log messages that have been added to this log. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfc_1_1exception_a7611ea8fbe25dde56649b685c2298a37}\label{classfc_1_1exception_a7611ea8fbe25dde56649b685c2298a37}} 
+\index{fc\+::exception@{fc\+::exception}!to\+\_\+detail\+\_\+string@{to\+\_\+detail\+\_\+string}}
+\index{to\+\_\+detail\+\_\+string@{to\+\_\+detail\+\_\+string}!fc\+::exception@{fc\+::exception}}
+\subsubsection{\texorpdfstring{to\+\_\+detail\+\_\+string()}{to\_detail\_string()}}
+{\footnotesize\ttfamily string fc\+::exception\+::to\+\_\+detail\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfc_1_1log__level}{log\+\_\+level}}}]{ll = {\ttfamily log\+\_\+level\+:\+:all} }\end{DoxyParamCaption}) const}
+
+Generates a detailed string including file, line, method, and other information that is generally only useful for developers. Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classfc_1_1exception_adbc4557b14bc29b74e9cf9f0ed5fb8d8}\label{classfc_1_1exception_adbc4557b14bc29b74e9cf9f0ed5fb8d8}} 
+\index{fc\+::exception@{fc\+::exception}!to\+\_\+string@{to\+\_\+string}}
+\index{to\+\_\+string@{to\+\_\+string}!fc\+::exception@{fc\+::exception}}
+\subsubsection{\texorpdfstring{to\+\_\+string()}{to\_string()}}
+{\footnotesize\ttfamily string fc\+::exception\+::to\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfc_1_1log__level}{log\+\_\+level}}}]{ll = {\ttfamily log\+\_\+level\+:\+:info} }\end{DoxyParamCaption}) const}
+
+Generates a user-\/friendly error report. Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classfc_1_1exception_aeea900db85f79e5b4be0710a9df373db}\label{classfc_1_1exception_aeea900db85f79e5b4be0710a9df373db}} 
+\index{fc\+::exception@{fc\+::exception}!top\+\_\+message@{top\+\_\+message}}
+\index{top\+\_\+message@{top\+\_\+message}!fc\+::exception@{fc\+::exception}}
+\subsubsection{\texorpdfstring{top\+\_\+message()}{top\_message()}}
+{\footnotesize\ttfamily string fc\+::exception\+::top\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Generates a user-\/friendly error report. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/exception/\mbox{\hyperlink{exception_8hpp}{exception.\+hpp}}\item 
+libraries/fc/src/exception.\+cpp\end{DoxyCompactItemize}

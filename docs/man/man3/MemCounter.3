@@ -1,0 +1,142 @@
+.TH "MemCounter" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MemCounter
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBMemCounterCtorArg_\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemCounter\fP (\fBMemCounterCtorArg_\fP)"
+.br
+.ti -1c
+.RI "void \fBnewCalled\fP (std::size_t s)"
+.br
+.ti -1c
+.RI "void \fBdeleteCalled\fP (void *p)"
+.br
+.ti -1c
+.RI "void \fBnewArrayCalled\fP (std::size_t s)"
+.br
+.ti -1c
+.RI "void \fBdeleteArrayCalled\fP (void *p)"
+.br
+.ti -1c
+.RI "void \fBdisableAllocations\fP ()"
+.br
+.ti -1c
+.RI "void \fBenableAllocations\fP ()"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcheckOutstandingNewEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckOutstandingNewNotEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckNewCalledEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckNewCalledNotEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckNewCalledGreaterThan\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckDeleteCalledEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckDeleteCalledNotEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckLastNewSizeEq\fP (std::size_t n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckLastNewSizeNotEq\fP (std::size_t n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckOutstandingArrayNewEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckOutstandingArrayNewNotEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckNewArrayCalledEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckNewArrayCalledNotEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckDeleteArrayCalledEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckDeleteArrayCalledNotEq\fP (int n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckLastNewArraySizeEq\fP (std::size_t n) const"
+.br
+.ti -1c
+.RI "bool \fBcheckLastNewArraySizeNotEq\fP (std::size_t n) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBdisable_allocations\fP"
+.br
+.ti -1c
+.RI "unsigned \fBthrow_after\fP"
+.br
+.ti -1c
+.RI "int \fBoutstanding_new\fP"
+.br
+.ti -1c
+.RI "int \fBnew_called\fP"
+.br
+.ti -1c
+.RI "int \fBdelete_called\fP"
+.br
+.ti -1c
+.RI "std::size_t \fBlast_new_size\fP"
+.br
+.ti -1c
+.RI "int \fBoutstanding_array_new\fP"
+.br
+.ti -1c
+.RI "int \fBnew_array_called\fP"
+.br
+.ti -1c
+.RI "int \fBdelete_array_called\fP"
+.br
+.ti -1c
+.RI "std::size_t \fBlast_new_array_size\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const bool \fBdisable_checking\fP = false"
+.br
+.ti -1c
+.RI "static const unsigned \fBnever_throw_value\fP = static_cast<unsigned>(\-1)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,116 @@
+.TH "websocketpp::transport::asio::tls_socket::endpoint" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::asio::tls_socket::endpoint \- TLS enabled Asio endpoint socket component\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <tls\&.hpp>\fP
+.PP
+Inherited by \fBwebsocketpp::transport::asio::endpoint< config >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBendpoint\fP \fBtype\fP"
+.br
+.RI "The type of this endpoint socket component\&. "
+.ti -1c
+.RI "typedef \fBconnection\fP \fBsocket_con_type\fP"
+.br
+.RI "The type of the corresponding connection socket component\&. "
+.ti -1c
+.RI "typedef \fBsocket_con_type::ptr\fP \fBsocket_con_ptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBis_secure\fP () const"
+.br
+.RI "Checks whether the endpoint creates secure connections\&. "
+.ti -1c
+.RI "void \fBset_socket_init_handler\fP (\fBsocket_init_handler\fP h)"
+.br
+.RI "Set socket init handler\&. "
+.ti -1c
+.RI "void \fBset_tls_init_handler\fP (\fBtls_init_handler\fP h)"
+.br
+.RI "Set TLS init handler\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "lib::error_code \fBinit\fP (\fBsocket_con_ptr\fP scon)"
+.br
+.RI "Initialize a connection\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+TLS enabled Asio endpoint socket component\&. 
+
+\fBtransport::asio::tls_socket::endpoint\fP implements a secure endpoint socket component that uses Asio's ssl::stream to wrap an ip::tcp::socket\&. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef \fBsocket_con_type::ptr\fP \fBwebsocketpp::transport::asio::tls_socket::endpoint::socket_con_ptr\fP"
+The type of a shared pointer to the corresponding connection socket component\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "lib::error_code websocketpp::transport::asio::tls_socket::endpoint::init (\fBsocket_con_ptr\fP scon)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize a connection\&. Called by the transport after a new connection is created to initialize the socket component of the connection\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIscon\fP \fBPointer\fP to the socket component of the connection
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Error code (empty on success) 
+.RE
+.PP
+
+.SS "bool websocketpp::transport::asio::tls_socket::endpoint::is_secure () const\fC [inline]\fP"
+
+.PP
+Checks whether the endpoint creates secure connections\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the endpoint creates secure connections 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::endpoint::set_socket_init_handler (\fBsocket_init_handler\fP h)\fC [inline]\fP"
+
+.PP
+Set socket init handler\&. The socket init handler is called after a connection's socket is created but before it is used\&. This gives the end application an opportunity to set asio socket specific parameters\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The new socket_init_handler 
+.RE
+.PP
+
+.SS "void websocketpp::transport::asio::tls_socket::endpoint::set_tls_init_handler (\fBtls_init_handler\fP h)\fC [inline]\fP"
+
+.PP
+Set TLS init handler\&. The tls init handler is called when needed to request a TLS context for the library to use\&. \fBA\fP TLS init handler must be set and it must return a valid TLS context in order for this endpoint to be able to initialize TLS connections
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The new tls_init_handler 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,41 @@
+\hypertarget{libraries_2chain_2include_2aacio_2chain_2config_8hpp}{}\section{libraries/chain/include/aacio/chain/config.hpp File Reference}
+\label{libraries_2chain_2include_2aacio_2chain_2config_8hpp}\index{libraries/chain/include/aacio/chain/config.\+hpp@{libraries/chain/include/aacio/chain/config.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/asset.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/wasm\+\_\+interface.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/time.\+hpp$>$}\newline
+Include dependency graph for config.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ T $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{libraries_2chain_2include_2aacio_2chain_2config_8hpp_a2756d0a49c581b22b75afd1f34ce9eb7}\label{libraries_2chain_2include_2aacio_2chain_2config_8hpp_a2756d0a49c581b22b75afd1f34ce9eb7}} 
+typedef \+\_\+\+\_\+uint128\+\_\+t {\bfseries aacio\+::chain\+::config\+::uint128\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{libraries_2chain_2include_2aacio_2chain_2config_8hpp_a6b775e9030efbad57b1d179f0ab63ee7}\label{libraries_2chain_2include_2aacio_2chain_2config_8hpp_a6b775e9030efbad57b1d179f0ab63ee7}} 
+{\footnotesize template$<$typename Number $>$ }\\Number {\bfseries A\+A\+C\+\_\+\+P\+E\+R\+C\+E\+NT} (Number value, uint32\+\_\+t percentage)
+\item 
+\mbox{\Hypertarget{libraries_2chain_2include_2aacio_2chain_2config_8hpp_a576f6e2379b216b9e09a0fb311d79f6d}\label{libraries_2chain_2include_2aacio_2chain_2config_8hpp_a576f6e2379b216b9e09a0fb311d79f6d}} 
+{\footnotesize template$<$typename Number $>$ }\\Number {\bfseries A\+A\+C\+\_\+\+P\+E\+R\+C\+E\+N\+T\+\_\+\+C\+E\+IL} (Number value, uint32\+\_\+t percentage)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{libraries_2chain_2include_2aacio_2chain_2config_8hpp_ab87614e070787554d0b6c2d4d5402c9d}\label{libraries_2chain_2include_2aacio_2chain_2config_8hpp_ab87614e070787554d0b6c2d4d5402c9d}} 
+{\footnotesize template$<$typename T $>$ }\\constexpr uint64\+\_\+t {\bfseries aacio\+::chain\+::config\+::billable\+\_\+size\+\_\+v} = ((billable\+\_\+size$<$\mbox{\hyperlink{struct_t}{T}}$>$\+::value + billable\+\_\+alignment -\/ 1) / billable\+\_\+alignment) $\ast$ billable\+\_\+alignment
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

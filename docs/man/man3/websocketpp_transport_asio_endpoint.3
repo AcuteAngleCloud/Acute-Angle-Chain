@@ -1,0 +1,769 @@
+.TH "websocketpp::transport::asio::endpoint< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::asio::endpoint< config > \- Asio based endpoint transport component\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <endpoint\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::transport::asio::tls_socket::endpoint\fP\&.
+.PP
+Inherited by \fBwebsocketpp::endpoint< connection< config >, config >\fP, \fBmock_endpoint\fP, and \fBwebsocketpp::endpoint< connection, config >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBendpoint\fP< \fBconfig\fP > \fBtype\fP"
+.br
+.RI "\fBType\fP of this endpoint transport component\&. "
+.ti -1c
+.RI "typedef \fBconfig::concurrency_type\fP \fBconcurrency_type\fP"
+.br
+.RI "\fBType\fP of the concurrency policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::socket_type\fP \fBsocket_type\fP"
+.br
+.RI "\fBType\fP of the socket policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::elog_type\fP \fBelog_type\fP"
+.br
+.RI "\fBType\fP of the error logging policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::alog_type\fP \fBalog_type\fP"
+.br
+.RI "\fBType\fP of the access logging policy\&. "
+.ti -1c
+.RI "typedef \fBsocket_type::socket_con_type\fP \fBsocket_con_type\fP"
+.br
+.RI "\fBType\fP of the socket connection component\&. "
+.ti -1c
+.RI "typedef \fBsocket_con_type::ptr\fP \fBsocket_con_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to the socket connection component\&. "
+.ti -1c
+.RI "typedef asio::connection< \fBconfig\fP > \fBtransport_con_type\fP"
+.br
+.ti -1c
+.RI "typedef transport_con_type::ptr \fBtransport_con_ptr\fP"
+.br
+.ti -1c
+.RI "typedef lib::asio::io_service * \fBio_service_ptr\fP"
+.br
+.RI "\fBType\fP of a pointer to the ASIO io_service being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::ip::tcp::acceptor > \fBacceptor_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to the acceptor being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::ip::tcp::resolver > \fBresolver_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to the resolver being used\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::steady_timer > \fBtimer_ptr\fP"
+.br
+.RI "\fBType\fP of timer handle\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< lib::asio::io_service::work > \fBwork_ptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to an io_service work object\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBis_secure\fP () const"
+.br
+.RI "Return whether or not the endpoint produces secure connections\&. "
+.ti -1c
+.RI "void \fBinit_asio\fP (\fBio_service_ptr\fP ptr, lib::error_code &ec)"
+.br
+.RI "initialize asio transport with external io_service (exception free) "
+.ti -1c
+.RI "void \fBinit_asio\fP (\fBio_service_ptr\fP ptr)"
+.br
+.RI "initialize asio transport with external io_service "
+.ti -1c
+.RI "void \fBinit_asio\fP (lib::error_code &ec)"
+.br
+.RI "Initialize asio transport with internal io_service (exception free) "
+.ti -1c
+.RI "void \fBinit_asio\fP ()"
+.br
+.RI "Initialize asio transport with internal io_service\&. "
+.ti -1c
+.RI "void \fBset_tcp_pre_init_handler\fP (tcp_init_handler h)"
+.br
+.RI "Sets the tcp pre init handler\&. "
+.ti -1c
+.RI "void \fBset_tcp_init_handler\fP (tcp_init_handler h)"
+.br
+.RI "Sets the tcp pre init handler (deprecated) "
+.ti -1c
+.RI "void \fBset_tcp_post_init_handler\fP (tcp_init_handler h)"
+.br
+.RI "Sets the tcp post init handler\&. "
+.ti -1c
+.RI "void \fBset_listen_backlog\fP (int backlog)"
+.br
+.RI "Sets the maximum length of the queue of pending connections\&. "
+.ti -1c
+.RI "void \fBset_reuse_addr\fP (bool value)"
+.br
+.RI "Sets whether to use the SO_REUSEADDR flag when opening listening sockets\&. "
+.ti -1c
+.RI "lib::asio::io_service & \fBget_io_service\fP ()"
+.br
+.RI "Retrieve a reference to the endpoint's io_service\&. "
+.ti -1c
+.RI "lib::asio::ip::tcp::endpoint \fBget_local_endpoint\fP (lib::asio::error_code &ec)"
+.br
+.RI "Get local TCP endpoint\&. "
+.ti -1c
+.RI "void \fBlisten\fP (lib::asio::ip::tcp::endpoint const &ep, lib::error_code &ec)"
+.br
+.RI "Set up endpoint for listening manually (exception free) "
+.ti -1c
+.RI "void \fBlisten\fP (lib::asio::ip::tcp::endpoint const &ep)"
+.br
+.RI "Set up endpoint for listening manually\&. "
+.ti -1c
+.RI "template<typename InternetProtocol > void \fBlisten\fP (InternetProtocol const &internet_protocol, uint16_t port, lib::error_code &ec)"
+.br
+.RI "Set up endpoint for listening with protocol and port (exception free) "
+.ti -1c
+.RI "template<typename InternetProtocol > void \fBlisten\fP (InternetProtocol const &internet_protocol, uint16_t port)"
+.br
+.RI "Set up endpoint for listening with protocol and port\&. "
+.ti -1c
+.RI "void \fBlisten\fP (uint16_t port, lib::error_code &ec)"
+.br
+.RI "Set up endpoint for listening on a port (exception free) "
+.ti -1c
+.RI "void \fBlisten\fP (uint16_t port)"
+.br
+.RI "Set up endpoint for listening on a port\&. "
+.ti -1c
+.RI "void \fBlisten\fP (std::string const &host, std::string const &service, lib::error_code &ec)"
+.br
+.RI "Set up endpoint for listening on a host and service (exception free) "
+.ti -1c
+.RI "void \fBlisten\fP (std::string const &host, std::string const &service)"
+.br
+.RI "Set up endpoint for listening on a host and service\&. "
+.ti -1c
+.RI "void \fBstop_listening\fP (lib::error_code &ec)"
+.br
+.RI "Stop listening (exception free) "
+.ti -1c
+.RI "void \fBstop_listening\fP ()"
+.br
+.RI "Stop listening\&. "
+.ti -1c
+.RI "bool \fBis_listening\fP () const"
+.br
+.RI "Check if the endpoint is listening\&. "
+.ti -1c
+.RI "std::size_t \fBrun\fP ()"
+.br
+.RI "wraps the run method of the internal io_service object "
+.ti -1c
+.RI "std::size_t \fBrun_one\fP ()"
+.br
+.RI "wraps the run_one method of the internal io_service object "
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.RI "wraps the stop method of the internal io_service object "
+.ti -1c
+.RI "std::size_t \fBpoll\fP ()"
+.br
+.RI "wraps the poll method of the internal io_service object "
+.ti -1c
+.RI "std::size_t \fBpoll_one\fP ()"
+.br
+.RI "wraps the poll_one method of the internal io_service object "
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.RI "wraps the reset method of the internal io_service object "
+.ti -1c
+.RI "bool \fBstopped\fP () const"
+.br
+.RI "wraps the stopped method of the internal io_service object "
+.ti -1c
+.RI "void \fBstart_perpetual\fP ()"
+.br
+.RI "Marks the endpoint as perpetual, stopping it from exiting when empty\&. "
+.ti -1c
+.RI "void \fBstop_perpetual\fP ()"
+.br
+.RI "Clears the endpoint's perpetual flag, allowing it to exit when empty\&. "
+.ti -1c
+.RI "\fBtimer_ptr\fP \fBset_timer\fP (long duration, \fBtimer_handler\fP callback)"
+.br
+.RI "Call back a function after a period of time\&. "
+.ti -1c
+.RI "void \fBhandle_timer\fP (\fBtimer_ptr\fP, \fBtimer_handler\fP callback, lib::asio::error_code const &ec)"
+.br
+.RI "Timer handler\&. "
+.ti -1c
+.RI "void \fBasync_accept\fP (\fBtransport_con_ptr\fP tcon, \fBaccept_handler\fP callback, lib::error_code &ec)"
+.br
+.RI "Accept the next connection attempt and assign it to con (exception free) "
+.ti -1c
+.RI "void \fBasync_accept\fP (\fBtransport_con_ptr\fP tcon, \fBaccept_handler\fP callback)"
+.br
+.RI "Accept the next connection attempt and assign it to con\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit_logging\fP (\fBalog_type\fP *a, \fBelog_type\fP *e)"
+.br
+.RI "Initialize logging\&. "
+.ti -1c
+.RI "void \fBhandle_accept\fP (\fBaccept_handler\fP callback, lib::asio::error_code const &asio_ec)"
+.br
+.ti -1c
+.RI "void \fBasync_connect\fP (\fBtransport_con_ptr\fP tcon, \fBuri_ptr\fP u, \fBconnect_handler\fP cb)"
+.br
+.RI "Initiate a new connection\&. "
+.ti -1c
+.RI "void \fBhandle_resolve_timeout\fP (\fBtimer_ptr\fP, \fBconnect_handler\fP callback, lib::error_code const &ec)"
+.br
+.RI "DNS resolution timeout handler\&. "
+.ti -1c
+.RI "void \fBhandle_resolve\fP (\fBtransport_con_ptr\fP tcon, \fBtimer_ptr\fP dns_timer, \fBconnect_handler\fP callback, lib::asio::error_code const &ec, lib::asio::ip::tcp::resolver::iterator iterator)"
+.br
+.ti -1c
+.RI "void \fBhandle_connect_timeout\fP (\fBtransport_con_ptr\fP tcon, \fBtimer_ptr\fP, \fBconnect_handler\fP callback, lib::error_code const &ec)"
+.br
+.RI "Asio connect timeout handler\&. "
+.ti -1c
+.RI "void \fBhandle_connect\fP (\fBtransport_con_ptr\fP tcon, \fBtimer_ptr\fP con_timer, \fBconnect_handler\fP callback, lib::asio::error_code const &ec)"
+.br
+.ti -1c
+.RI "lib::error_code \fBinit\fP (\fBtransport_con_ptr\fP tcon)"
+.br
+.RI "Initialize a connection\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+class websocketpp::transport::asio::endpoint< config >"
+Asio based endpoint transport component\&. 
+
+\fBtransport::asio::endpoint\fP implements an endpoint transport component using Asio\&. 
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename config > typedef transport_con_type::ptr \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::\fBtransport_con_ptr\fP"
+\fBType\fP of a shared pointer to the connection transport component associated with this endpoint transport component 
+.SS "template<typename config > typedef asio::connection<\fBconfig\fP> \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::\fBtransport_con_type\fP"
+\fBType\fP of the connection transport component associated with this endpoint transport component 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::async_accept (\fBtransport_con_ptr\fP tcon, \fBaccept_handler\fP callback, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Accept the next connection attempt and assign it to con (exception free) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItcon\fP The connection to accept into\&. 
+.br
+\fIcallback\fP The function to call when the operation is complete\&. 
+.br
+\fIec\fP \fBA\fP status code indicating an error, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::async_accept (\fBtransport_con_ptr\fP tcon, \fBaccept_handler\fP callback)\fC [inline]\fP"
+
+.PP
+Accept the next connection attempt and assign it to con\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItcon\fP The connection to accept into\&. 
+.br
+\fIcallback\fP The function to call when the operation is complete\&. 
+.RE
+.PP
+
+.SS "template<typename config > lib::asio::io_service& \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::get_io_service ()\fC [inline]\fP"
+
+.PP
+Retrieve a reference to the endpoint's io_service\&. The io_service may be an internal or external one\&. This may be used to call methods of the io_service that are not explicitly wrapped by the endpoint\&.
+.PP
+This method is only valid after the endpoint has been initialized with \fCinit_asio\fP\&. No error will be returned if it isn't\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP reference to the endpoint's io_service 
+.RE
+.PP
+
+.SS "template<typename config > lib::asio::ip::tcp::endpoint \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::get_local_endpoint (lib::asio::error_code & ec)\fC [inline]\fP"
+
+.PP
+Get local TCP endpoint\&. Extracts the local endpoint from the acceptor\&. This represents the address that WebSocket++ is listening on\&.
+.PP
+Sets a bad_descriptor error if the acceptor is not currently listening or otherwise unavailable\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.7\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The local endpoint 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::handle_connect_timeout (\fBtransport_con_ptr\fP tcon, \fBtimer_ptr\fP, \fBconnect_handler\fP callback, lib::error_code const & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Asio connect timeout handler\&. The timer pointer is included to ensure the timer isn't destroyed until after it has expired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItcon\fP \fBPointer\fP to the transport connection that is being connected 
+.br
+\fIcon_timer\fP \fBPointer\fP to the timer in question 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP \fBA\fP status code indicating an error, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::handle_resolve_timeout (\fBtimer_ptr\fP, \fBconnect_handler\fP callback, lib::error_code const & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+DNS resolution timeout handler\&. The timer pointer is included to ensure the timer isn't destroyed until after it has expired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdns_timer\fP \fBPointer\fP to the timer in question 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP \fBA\fP status code indicating an error, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::handle_timer (\fBtimer_ptr\fP, \fBtimer_handler\fP callback, lib::asio::error_code const & ec)\fC [inline]\fP"
+
+.PP
+Timer handler\&. The timer pointer is included to ensure the timer isn't destroyed until after it has expired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIt\fP \fBPointer\fP to the timer in question 
+.br
+\fIcallback\fP The function to call back 
+.br
+\fIec\fP \fBA\fP status code indicating an error, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::init (\fBtransport_con_ptr\fP tcon)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize a connection\&. init is called by an endpoint once for each newly created connection\&. It's purpose is to give the transport policy the chance to perform any transport specific initialization that couldn't be done via the default constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItcon\fP \fBA\fP pointer to the transport portion of the connection\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP status code indicating the success or failure of the operation 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::init_asio (\fBio_service_ptr\fP ptr, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+initialize asio transport with external io_service (exception free) Initialize the ASIO transport policy for this endpoint using the provided io_service object\&. asio_init must be called exactly once on any endpoint that uses \fBtransport::asio\fP before it can be used\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIptr\fP \fBA\fP pointer to the io_service to use for asio events 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::init_asio (\fBio_service_ptr\fP ptr)\fC [inline]\fP"
+
+.PP
+initialize asio transport with external io_service Initialize the ASIO transport policy for this endpoint using the provided io_service object\&. asio_init must be called exactly once on any endpoint that uses \fBtransport::asio\fP before it can be used\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIptr\fP \fBA\fP pointer to the io_service to use for asio events 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::init_asio (lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Initialize asio transport with internal io_service (exception free) This method of initialization will allocate and use an internally managed io_service\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBinit_asio(io_service_ptr ptr)\fP
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::init_asio ()\fC [inline]\fP"
+
+.PP
+Initialize asio transport with internal io_service\&. This method of initialization will allocate and use an internally managed io_service\&.
+.PP
+\fBSee also:\fP
+.RS 4
+\fBinit_asio(io_service_ptr ptr)\fP 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::init_logging (\fBalog_type\fP * a, \fBelog_type\fP * e)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize logging\&. The loggers are located in the main endpoint class\&. As such, the transport doesn't have direct access to them\&. This method is called by the endpoint constructor to allow shared logging from the transport component\&. These are raw pointers to member variables of the endpoint\&. In particular, they cannot be used in the transport constructor as they haven't been constructed yet, and cannot be used in the transport destructor as they will have been destroyed by then\&. 
+.SS "template<typename config > bool \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::is_listening () const\fC [inline]\fP"
+
+.PP
+Check if the endpoint is listening\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the endpoint is listening\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (lib::asio::ip::tcp::endpoint< \fBconfig\fP > const & ep, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening manually (exception free) Bind the internal acceptor using the specified settings\&. The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIep\fP An endpoint to read settings from 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (lib::asio::ip::tcp::endpoint< \fBconfig\fP > const & ep)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening manually\&. Bind the internal acceptor using the settings specified by the endpoint e
+.PP
+\fBParameters:\fP
+.RS 4
+\fIep\fP An endpoint to read settings from 
+.RE
+.PP
+
+.SS "template<typename config > template<typename InternetProtocol > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (InternetProtocol const & internet_protocol, uint16_t port, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening with protocol and port (exception free) Bind the internal acceptor using the given internet protocol and port\&. The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+Common options include:
+.IP "\(bu" 2
+IPv6 with mapped IPv4 for dual stack hosts lib::asio::ip::tcp::v6()
+.IP "\(bu" 2
+IPv4 only: lib::asio::ip::tcp::v4()
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinternet_protocol\fP The internet protocol to use\&. 
+.br
+\fIport\fP The port to listen on\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > template<typename InternetProtocol > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (InternetProtocol const & internet_protocol, uint16_t port)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening with protocol and port\&. Bind the internal acceptor using the given internet protocol and port\&. The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+Common options include:
+.IP "\(bu" 2
+IPv6 with mapped IPv4 for dual stack hosts lib::asio::ip::tcp::v6()
+.IP "\(bu" 2
+IPv4 only: lib::asio::ip::tcp::v4()
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinternet_protocol\fP The internet protocol to use\&. 
+.br
+\fIport\fP The port to listen on\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (uint16_t port, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening on a port (exception free) Bind the internal acceptor using the given port\&. The IPv6 protocol with mapped IPv4 for dual stack hosts will be used\&. If you need IPv4 only use the overload that allows specifying the protocol explicitly\&.
+.PP
+The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIport\fP The port to listen on\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (uint16_t port)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening on a port\&. Bind the internal acceptor using the given port\&. The IPv6 protocol with mapped IPv4 for dual stack hosts will be used\&. If you need IPv4 only use the overload that allows specifying the protocol explicitly\&.
+.PP
+The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIport\fP The port to listen on\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (std::string const & host, std::string const & service, lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening on a host and service (exception free) Bind the internal acceptor using the given host and service\&. More details about what host and service can be are available in the Asio documentation for ip::basic_resolver_query::basic_resolver_query's constructors\&.
+.PP
+The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhost\fP \fBA\fP string identifying a location\&. May be a descriptive name or a numeric address string\&. 
+.br
+\fIservice\fP \fBA\fP string identifying the requested service\&. This may be a descriptive name or a numeric string corresponding to a port number\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::listen (std::string const & host, std::string const & service)\fC [inline]\fP"
+
+.PP
+Set up endpoint for listening on a host and service\&. Bind the internal acceptor using the given host and service\&. More details about what host and service can be are available in the Asio documentation for ip::basic_resolver_query::basic_resolver_query's constructors\&.
+.PP
+The endpoint must have been initialized by calling init_asio before listening\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhost\fP \fBA\fP string identifying a location\&. May be a descriptive name or a numeric address string\&. 
+.br
+\fIservice\fP \fBA\fP string identifying the requested service\&. This may be a descriptive name or a numeric string corresponding to a port number\&. 
+.br
+\fIec\fP Set to indicate what error occurred, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > std::size_t \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::run_one ()\fC [inline]\fP"
+
+.PP
+wraps the run_one method of the internal io_service object 
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0-alpha4 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::set_listen_backlog (int backlog)\fC [inline]\fP"
+
+.PP
+Sets the maximum length of the queue of pending connections\&. Sets the maximum length of the queue of pending connections\&. Increasing this will allow WebSocket++ to queue additional incoming connections\&. Setting it higher may prevent failed connections at high connection rates but may cause additional latency\&.
+.PP
+For this value to take effect you may need to adjust operating system settings\&.
+.PP
+New values affect future calls to listen only\&.
+.PP
+\fBA\fP value of zero will use the operating system default\&. This is the default value\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbacklog\fP The maximum length of the queue of pending connections 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::set_reuse_addr (bool value)\fC [inline]\fP"
+
+.PP
+Sets whether to use the SO_REUSEADDR flag when opening listening sockets\&. Specifies whether or not to use the SO_REUSEADDR TCP socket option\&. What this flag does depends on your operating system\&. Please consult operating system documentation for more details\&.
+.PP
+New values affect future calls to listen only\&.
+.PP
+The default is false\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Whether or not to use the SO_REUSEADDR option 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::set_tcp_init_handler (tcp_init_handler h)\fC [inline]\fP"
+
+.PP
+Sets the tcp pre init handler (deprecated) The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, TLS handshakes, etc) have been performed\&.
+.PP
+\fBDeprecated\fP
+.RS 4
+Use set_tcp_pre_init_handler instead
+.RE
+.PP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The handler to call on tcp pre init\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::set_tcp_post_init_handler (tcp_init_handler h)\fC [inline]\fP"
+
+.PP
+Sets the tcp post init handler\&. The tcp post init handler is called after the tcp connection has been established and all additional wrappers (proxy connects, TLS handshakes, etc have been performed\&. This is fired before any bytes are read or any WebSocket specific handshake logic has been performed\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The handler to call on tcp post init\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::set_tcp_pre_init_handler (tcp_init_handler h)\fC [inline]\fP"
+
+.PP
+Sets the tcp pre init handler\&. The tcp pre init handler is called after the raw tcp connection has been established but before any additional wrappers (proxy connects, TLS handshakes, etc) have been performed\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The handler to call on tcp pre init\&. 
+.RE
+.PP
+
+.SS "template<typename config > \fBtimer_ptr\fP \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::set_timer (long duration, \fBtimer_handler\fP callback)\fC [inline]\fP"
+
+.PP
+Call back a function after a period of time\&. Sets a timer that calls back a function after the specified period of milliseconds\&. Returns a handle that can be used to cancel the timer\&. \fBA\fP cancelled timer will return the error code \fBerror::operation_aborted\fP \fBA\fP timer that expired will return no error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIduration\fP Length of time to wait in milliseconds 
+.br
+\fIcallback\fP The function to call back when the timer has expired 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP handle that can be used to cancel the timer if it is no longer needed\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::start_perpetual ()\fC [inline]\fP"
+
+.PP
+Marks the endpoint as perpetual, stopping it from exiting when empty\&. Marks the endpoint as perpetual\&. Perpetual endpoints will not automatically exit when they run out of connections to process\&. To stop a perpetual endpoint call \fCend_perpetual\fP\&.
+.PP
+An endpoint may be marked perpetual at any time by any thread\&. It must be called either before the endpoint has run out of work or before it was started
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::stop_listening (lib::error_code & ec)\fC [inline]\fP"
+
+.PP
+Stop listening (exception free) Stop listening and accepting new connections\&. This will not end any existing connections\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0-alpha4 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIec\fP \fBA\fP status code indicating an error, if any\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::stop_listening ()\fC [inline]\fP"
+
+.PP
+Stop listening\&. Stop listening and accepting new connections\&. This will not end any existing connections\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0-alpha4 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::asio::endpoint\fP< \fBconfig\fP >::stop_perpetual ()\fC [inline]\fP"
+
+.PP
+Clears the endpoint's perpetual flag, allowing it to exit when empty\&. Clears the endpoint's perpetual flag\&. This will cause the endpoint's run method to exit normally when it runs out of connections\&. If there are currently active connections it will not end until they are complete\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

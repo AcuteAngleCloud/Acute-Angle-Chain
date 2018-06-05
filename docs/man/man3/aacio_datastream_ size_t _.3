@@ -1,0 +1,50 @@
+.TH "aacio::datastream< size_t >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::datastream< size_t > \- Specialization of datastream used to help determine the final size of a serialized value\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <datastream\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdatastream\fP (size_t init_size=0)"
+.br
+.ti -1c
+.RI "bool \fBskip\fP (size_t s)"
+.br
+.ti -1c
+.RI "bool \fBwrite\fP (const char *, size_t s)"
+.br
+.ti -1c
+.RI "bool \fBput\fP (char)"
+.br
+.ti -1c
+.RI "bool \fBvalid\fP () const"
+.br
+.ti -1c
+.RI "bool \fBseekp\fP (size_t p)"
+.br
+.ti -1c
+.RI "size_t \fBtellp\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBremaining\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<>
+.br
+class aacio::datastream< size_t >"
+Specialization of datastream used to help determine the final size of a serialized value\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

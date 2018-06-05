@@ -1,0 +1,53 @@
+.TH "telemetry_server" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+telemetry_server
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBwebsocketpp::connection_hdl\fP \fBconnection_hdl\fP"
+.br
+.ti -1c
+.RI "typedef \fBwebsocketpp::server\fP< \fBwebsocketpp::config::asio\fP > \fBserver\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrun\fP (std::string docroot, uint16_t port)"
+.br
+.ti -1c
+.RI "void \fBset_timer\fP ()"
+.br
+.ti -1c
+.RI "void \fBon_timer\fP (websocketpp::lib::error_code const &ec)"
+.br
+.ti -1c
+.RI "void \fBon_http\fP (connection_hdl hdl)"
+.br
+.ti -1c
+.RI "void \fBon_open\fP (connection_hdl hdl)"
+.br
+.ti -1c
+.RI "void \fBon_close\fP (connection_hdl hdl)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The telemetry server accepts connections and sends a message every second to each client containing an integer count\&. This example can be used as the basis for programs that expose a stream of telemetry data for logging, dashboards, etc\&.
+.PP
+This example uses the timer based concurrency method and is self contained and singled threaded\&. Refer to telemetry client for an example of a similar telemetry setup using threads rather than timers\&.
+.PP
+This example also includes an example simple HTTP server that serves a web dashboard displaying the count\&. This simple design is suitable for use delivering a small number of files to a small number of clients\&. It is ideal for cases like embedded dashboards that don't want the complexity of an extra HTTP server to serve static files\&.
+.PP
+This design \fIwill\fP fall over under high traffic or DoS conditions\&. In such cases you are much better off proxying to a real HTTP server for the http requests\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

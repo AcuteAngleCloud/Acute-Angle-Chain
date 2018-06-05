@@ -1,0 +1,73 @@
+\hypertarget{struct_asm_data}{}\section{Asm\+Data Struct Reference}
+\label{struct_asm_data}\index{Asm\+Data@{Asm\+Data}}
+
+
+Collaboration diagram for Asm\+Data\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_asm_data_1_1_local}{Local}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_asm_data_ac79f513ef5a409d6da59943212efbb9f}\label{struct_asm_data_ac79f513ef5a409d6da59943212efbb9f}} 
+typedef \mbox{\hyperlink{classstd_1_1unordered__map}{std\+::unordered\+\_\+map}}$<$ \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}}, \mbox{\hyperlink{struct_asm_data_1_1_local}{Local}} $>$ {\bfseries Locals}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_asm_data_a8f5ac899108e9ea73a3cc8b55d2d87c5}\label{struct_asm_data_a8f5ac899108e9ea73a3cc8b55d2d87c5}} 
+Asm\+Type {\bfseries get\+Type} (const \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} \&name)
+\item 
+\mbox{\Hypertarget{struct_asm_data_a1ba2c322c57d5efbe1da80e43e741e3c}\label{struct_asm_data_a1ba2c322c57d5efbe1da80e43e741e3c}} 
+void {\bfseries set\+Type} (const \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} \&name, Asm\+Type type)
+\item 
+\mbox{\Hypertarget{struct_asm_data_a5ad35d00d1529b927625e07e4a62bf8e}\label{struct_asm_data_a5ad35d00d1529b927625e07e4a62bf8e}} 
+bool {\bfseries is\+Local} (const \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} \&name)
+\item 
+\mbox{\Hypertarget{struct_asm_data_aadf289087c531ed645fd893398dbfd4c}\label{struct_asm_data_aadf289087c531ed645fd893398dbfd4c}} 
+bool {\bfseries is\+Param} (const \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} \&name)
+\item 
+\mbox{\Hypertarget{struct_asm_data_aafdccc0a652a0fbf9c0f2325005a63b1}\label{struct_asm_data_aafdccc0a652a0fbf9c0f2325005a63b1}} 
+bool {\bfseries is\+Var} (const \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} \&name)
+\item 
+\mbox{\Hypertarget{struct_asm_data_aff7220612c66ce94f13b6226f325bfe2}\label{struct_asm_data_aff7220612c66ce94f13b6226f325bfe2}} 
+{\bfseries Asm\+Data} (\mbox{\hyperlink{structcashew_1_1_ref}{cashew\+::\+Ref}} f)
+\item 
+\mbox{\Hypertarget{struct_asm_data_a72a82911967ff5dd097399fdf2277bfa}\label{struct_asm_data_a72a82911967ff5dd097399fdf2277bfa}} 
+void {\bfseries denormalize} ()
+\item 
+\mbox{\Hypertarget{struct_asm_data_a59a895b3fc1b1d2efcdddb819b84cad6}\label{struct_asm_data_a59a895b3fc1b1d2efcdddb819b84cad6}} 
+void {\bfseries add\+Param} (\mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} name, Asm\+Type type)
+\item 
+\mbox{\Hypertarget{struct_asm_data_a7a763a57c92cecaf4e7e67bb36764f96}\label{struct_asm_data_a7a763a57c92cecaf4e7e67bb36764f96}} 
+void {\bfseries add\+Var} (\mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} name, Asm\+Type type)
+\item 
+\mbox{\Hypertarget{struct_asm_data_a1b267ffcd7714a25da42dc8057c0ead5}\label{struct_asm_data_a1b267ffcd7714a25da42dc8057c0ead5}} 
+void {\bfseries delete\+Var} (\mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} name)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_asm_data_a83dbf78c554c67dd33e62526fb2ae685}\label{struct_asm_data_a83dbf78c554c67dd33e62526fb2ae685}} 
+\mbox{\hyperlink{classstd_1_1unordered__map}{Locals}} {\bfseries locals}
+\item 
+\mbox{\Hypertarget{struct_asm_data_a8058c3eb21a1d6b44880ff574b24c15c}\label{struct_asm_data_a8058c3eb21a1d6b44880ff574b24c15c}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} $>$ {\bfseries params}
+\item 
+\mbox{\Hypertarget{struct_asm_data_a7f45d34d8fc7f4a89f4953edd40c96ea}\label{struct_asm_data_a7f45d34d8fc7f4a89f4953edd40c96ea}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structcashew_1_1_i_string}{cashew\+::\+I\+String}} $>$ {\bfseries vars}
+\item 
+\mbox{\Hypertarget{struct_asm_data_a89ce2624982d4e35fb25d2c95b5e8fb6}\label{struct_asm_data_a89ce2624982d4e35fb25d2c95b5e8fb6}} 
+Asm\+Type {\bfseries ret}
+\item 
+\mbox{\Hypertarget{struct_asm_data_a28f47eca50a0eb7c9d3d8e9b22cb50d6}\label{struct_asm_data_a28f47eca50a0eb7c9d3d8e9b22cb50d6}} 
+\mbox{\hyperlink{structcashew_1_1_ref}{cashew\+::\+Ref}} {\bfseries func}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/emscripten-\/optimizer/optimizer.\+h\end{DoxyCompactItemize}

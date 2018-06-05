@@ -1,0 +1,170 @@
+\hypertarget{programs_2claac_2main_8cpp}{}\section{programs/claac/main.cpp File Reference}
+\label{programs_2claac_2main_8cpp}\index{programs/claac/main.\+cpp@{programs/claac/main.\+cpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$boost/asio.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/format.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fc/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/console.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/exception/exception.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/utilities/key\+\_\+conversion.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/config.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/wast\+\_\+to\+\_\+wasm.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/transaction\+\_\+trace.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain\+\_\+plugin/chain\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/algorithm/find\+\_\+if.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/algorithm/sort.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/adaptor/transformed.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string/predicate.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string/split.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/algorithm/copy.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string/classification.\+hpp$>$}\newline
+{\ttfamily \#include $<$Inline/\+Basic\+Types.\+h$>$}\newline
+{\ttfamily \#include $<$I\+R/\+Module.\+h$>$}\newline
+{\ttfamily \#include $<$I\+R/\+Validate.\+h$>$}\newline
+{\ttfamily \#include $<$W\+A\+S\+T/\+W\+A\+S\+T.\+h$>$}\newline
+{\ttfamily \#include $<$W\+A\+S\+M/\+W\+A\+S\+M.\+h$>$}\newline
+{\ttfamily \#include $<$Runtime/\+Runtime.\+h$>$}\newline
+{\ttfamily \#include $<$fc/io/fstream.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}C\+L\+I11.\+hpp\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structset__account__permission__subcommand}{set\+\_\+account\+\_\+permission\+\_\+subcommand}}
+\item 
+struct \mbox{\hyperlink{structset__action__permission__subcommand}{set\+\_\+action\+\_\+permission\+\_\+subcommand}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a3e4fc2bf9faf25c06896bb1a8364c00a}\label{programs_2claac_2main_8cpp_a3e4fc2bf9faf25c06896bb1a8364c00a}} 
+{\bfseries F\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON} (explained\+\_\+exception, 9000000, \char`\"{}explained \mbox{\hyperlink{classfc_1_1exception}{exception}}, see \mbox{\hyperlink{structerror}{error}} log\char`\"{})
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a8695083e0c4ce33a55bac75b97d3ba8f}\label{programs_2claac_2main_8cpp_a8695083e0c4ce33a55bac75b97d3ba8f}} 
+{\bfseries F\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON} (localized\+\_\+exception, 10000000, \char`\"{}an \mbox{\hyperlink{structerror}{error}} occured\char`\"{})
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_aa5d53f41b83b5323c73622fbbb15e9cd}\label{programs_2claac_2main_8cpp_aa5d53f41b83b5323c73622fbbb15e9cd}} 
+void {\bfseries add\+\_\+standard\+\_\+transaction\+\_\+options} (C\+L\+I\+::\+App $\ast$cmd, string default\+\_\+permission=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a5e0745521468810a686f92d4b0247290}\label{programs_2claac_2main_8cpp_a5e0745521468810a686f92d4b0247290}} 
+string {\bfseries generate\+\_\+nonce\+\_\+value} ()
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a67e140f604ca128436f08d4994926bb1}\label{programs_2claac_2main_8cpp_a67e140f604ca128436f08d4994926bb1}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries generate\+\_\+nonce} ()
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a2a33bbdb2cac6e74f4ab37917adde31f}\label{programs_2claac_2main_8cpp_a2a33bbdb2cac6e74f4ab37917adde31f}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{chain\+::permission\+\_\+level}} $>$ {\bfseries get\+\_\+account\+\_\+permissions} (const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ string $>$ \&permissions)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ae9a0c14c7363f4a9978773b060300da5}\label{programs_2claac_2main_8cpp_ae9a0c14c7363f4a9978773b060300da5}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries call} (const std\+::string \&\mbox{\hyperlink{classwebsocketpp_1_1server}{server}}, uint16\+\_\+t port, const std\+::string \&\mbox{\hyperlink{classfc_1_1path}{path}}, const \mbox{\hyperlink{struct_t}{T}} \&v)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a5a6bc001a1fcbd41f52e5dc62234599d}\label{programs_2claac_2main_8cpp_a5a6bc001a1fcbd41f52e5dc62234599d}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries call} (const std\+::string \&\mbox{\hyperlink{classfc_1_1path}{path}}, const \mbox{\hyperlink{struct_t}{T}} \&v)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a5a8ea7258ae442871381aacb848384e1}\label{programs_2claac_2main_8cpp_a5a8ea7258ae442871381aacb848384e1}} 
+\mbox{\hyperlink{structaacio_1_1chain__apis_1_1read__only_1_1get__info__results}{aacio\+::chain\+\_\+apis\+::read\+\_\+only\+::get\+\_\+info\+\_\+results}} {\bfseries get\+\_\+info} ()
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ac9e70fb692ee8a495d50afcfdc622b08}\label{programs_2claac_2main_8cpp_ac9e70fb692ee8a495d50afcfdc622b08}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries determine\+\_\+required\+\_\+keys} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a79810ab82b545b1d162aef4feb67e1d0}\label{programs_2claac_2main_8cpp_a79810ab82b545b1d162aef4feb67e1d0}} 
+void {\bfseries sign\+\_\+transaction} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx, \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&required\+\_\+keys)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a142181301c13107be5639db7c8d8299a}\label{programs_2claac_2main_8cpp_a142181301c13107be5639db7c8d8299a}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries push\+\_\+transaction} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx, int32\+\_\+t extra\+\_\+kcpu=1000, packed\+\_\+transaction\+::compression\+\_\+type compression=packed\+\_\+transaction\+::none)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a055905724eae9afdbf64c8dd72e8f56e}\label{programs_2claac_2main_8cpp_a055905724eae9afdbf64c8dd72e8f56e}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries push\+\_\+actions} (\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} $>$ \&\&actions, int32\+\_\+t extra\+\_\+kcpu, packed\+\_\+transaction\+::compression\+\_\+type compression=packed\+\_\+transaction\+::none)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a0fe0a01686eecdc7192ab7a549a71936}\label{programs_2claac_2main_8cpp_a0fe0a01686eecdc7192ab7a549a71936}} 
+void {\bfseries print\+\_\+result} (const \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&result)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a87dfba3d7685af7b33faffd67746af28}\label{programs_2claac_2main_8cpp_a87dfba3d7685af7b33faffd67746af28}} 
+void {\bfseries send\+\_\+actions} (\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} $>$ \&\&actions, int32\+\_\+t extra\+\_\+kcpu=1000, packed\+\_\+transaction\+::compression\+\_\+type compression=packed\+\_\+transaction\+::none)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_abf856afb6f5cd1c379993eee8d6512ff}\label{programs_2claac_2main_8cpp_abf856afb6f5cd1c379993eee8d6512ff}} 
+void {\bfseries send\+\_\+transaction} (\mbox{\hyperlink{structaacio_1_1chain_1_1signed__transaction}{signed\+\_\+transaction}} \&trx, int32\+\_\+t extra\+\_\+kcpu, packed\+\_\+transaction\+::compression\+\_\+type compression=packed\+\_\+transaction\+::none)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ae6b983f300b69a696bff0ce3f9c8c656}\label{programs_2claac_2main_8cpp_ae6b983f300b69a696bff0ce3f9c8c656}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+newaccount} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&creator, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1newaccount}{newaccount}}, \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} owner, \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} active)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a71f527aa16b765642b95047cbe494838}\label{programs_2claac_2main_8cpp_a71f527aa16b765642b95047cbe494838}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+transfer} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&sender, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&recipient, uint64\+\_\+t amount, const string \&memo)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a5823b684309d61a3909c7d57fbd792c6}\label{programs_2claac_2main_8cpp_a5823b684309d61a3909c7d57fbd792c6}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+setabi} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaccount}{account}}, const \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{contracts\+::abi\+\_\+def}} \&abi)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a9ba1b32cf443a1b7d05d816404a0c231}\label{programs_2claac_2main_8cpp_a9ba1b32cf443a1b7d05d816404a0c231}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+setcode} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaccount}{account}}, const \mbox{\hyperlink{classstd_1_1vector}{bytes}} \&code)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a1e59aa4ce38b95b536f6c1ba48b351fe}\label{programs_2claac_2main_8cpp_a1e59aa4ce38b95b536f6c1ba48b351fe}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+updateauth} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaccount}{account}}, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&permission, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&parent, const \mbox{\hyperlink{structaacio_1_1chain_1_1authority}{authority}} \&auth)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ae36938e832446f8de4df66a5f3541d1b}\label{programs_2claac_2main_8cpp_ae36938e832446f8de4df66a5f3541d1b}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+deleteauth} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaccount}{account}}, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&permission)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a7a4d40801cad71c78959641b5f99155f}\label{programs_2claac_2main_8cpp_a7a4d40801cad71c78959641b5f99155f}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+linkauth} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaccount}{account}}, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&code, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&type, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&requirement)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a9e2e3d87f5264529deabe3cac39ce57e}\label{programs_2claac_2main_8cpp_a9e2e3d87f5264529deabe3cac39ce57e}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} {\bfseries create\+\_\+unlinkauth} (const \mbox{\hyperlink{structaacio_1_1name}{name}} \&\mbox{\hyperlink{structaccount}{account}}, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&code, const \mbox{\hyperlink{structaacio_1_1name}{name}} \&type)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a2535757eabc4f9cd5f180ad45e6fcd54}\label{programs_2claac_2main_8cpp_a2535757eabc4f9cd5f180ad45e6fcd54}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries json\+\_\+from\+\_\+file\+\_\+or\+\_\+string} (const string \&file\+\_\+or\+\_\+str, fc\+::json\+::parse\+\_\+type ptype=fc\+::json\+::legacy\+\_\+parser)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{programs_2claac_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+int {\bfseries main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ae27e850a5ebb21f46faa1e13c2dcc447}\label{programs_2claac_2main_8cpp_ae27e850a5ebb21f46faa1e13c2dcc447}} 
+string {\bfseries program} = \char`\"{}aacc\char`\"{}
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a4b730861b8c2165bfeabd34968e25e37}\label{programs_2claac_2main_8cpp_a4b730861b8c2165bfeabd34968e25e37}} 
+string {\bfseries host} = \char`\"{}localhost\char`\"{}
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a83a04ad582de2b7d36b96f9db429c2c6}\label{programs_2claac_2main_8cpp_a83a04ad582de2b7d36b96f9db429c2c6}} 
+uint32\+\_\+t {\bfseries port} = 8888
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a3a7be4e253fb5f504d30948b629abbed}\label{programs_2claac_2main_8cpp_a3a7be4e253fb5f504d30948b629abbed}} 
+string {\bfseries wallet\+\_\+host} = \char`\"{}localhost\char`\"{}
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_aded82e0d7aef545019075c8acb011215}\label{programs_2claac_2main_8cpp_aded82e0d7aef545019075c8acb011215}} 
+uint32\+\_\+t {\bfseries wallet\+\_\+port} = 8888
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a4d1c0c47010f0d50602ca093f0cac2f0}\label{programs_2claac_2main_8cpp_a4d1c0c47010f0d50602ca093f0cac2f0}} 
+auto {\bfseries tx\+\_\+expiration} = fc\+::seconds(30)
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ac62dd9bf3289ea8a0b6cbe537735852e}\label{programs_2claac_2main_8cpp_ac62dd9bf3289ea8a0b6cbe537735852e}} 
+bool {\bfseries tx\+\_\+force\+\_\+unique} = false
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a5be4e2bde9ff762042919cf12d558884}\label{programs_2claac_2main_8cpp_a5be4e2bde9ff762042919cf12d558884}} 
+bool {\bfseries tx\+\_\+dont\+\_\+broadcast} = false
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a71e203b025d48b8a570baaf87eb9936a}\label{programs_2claac_2main_8cpp_a71e203b025d48b8a570baaf87eb9936a}} 
+bool {\bfseries tx\+\_\+skip\+\_\+sign} = false
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a5bf59e0d0bf7260266f2d7c7617a998f}\label{programs_2claac_2main_8cpp_a5bf59e0d0bf7260266f2d7c7617a998f}} 
+bool {\bfseries tx\+\_\+print\+\_\+json} = false
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a6b8c2a51cb31464974aa99161a55395b}\label{programs_2claac_2main_8cpp_a6b8c2a51cb31464974aa99161a55395b}} 
+uint32\+\_\+t {\bfseries tx\+\_\+max\+\_\+cpu\+\_\+usage} = 0
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_a2ea9a7c19974e3ba245ccfbda7fbdcbe}\label{programs_2claac_2main_8cpp_a2ea9a7c19974e3ba245ccfbda7fbdcbe}} 
+uint32\+\_\+t {\bfseries tx\+\_\+max\+\_\+net\+\_\+usage} = 0
+\item 
+\mbox{\Hypertarget{programs_2claac_2main_8cpp_ad552924cb151dcd5b60c73856d1ff706}\label{programs_2claac_2main_8cpp_ad552924cb151dcd5b60c73856d1ff706}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ string $>$ {\bfseries tx\+\_\+permission}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

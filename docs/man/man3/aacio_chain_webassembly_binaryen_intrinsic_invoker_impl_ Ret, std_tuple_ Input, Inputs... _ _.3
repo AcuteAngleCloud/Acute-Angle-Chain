@@ -1,0 +1,52 @@
+.TH "aacio::chain::webassembly::binaryen::intrinsic_invoker_impl< Ret, std::tuple< Input, Inputs... > >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::webassembly::binaryen::intrinsic_invoker_impl< Ret, std::tuple< Input, Inputs... > >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <binaryen\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBnext_step\fP = \fBintrinsic_invoker_impl\fP< Ret, std::tuple< Inputs\&.\&.\&. > >"
+.br
+.ti -1c
+.RI "using \fBthen_type\fP = Ret(*)(\fBinterpreter_interface\fP *, Input, Inputs\&.\&.\&., \fBLiteralList\fP &, int)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<then_type Then> static Ret \fBtranslate_one\fP (\fBinterpreter_interface\fP *interface, Inputs\&.\&.\&. rest, \fBLiteralList\fP &args, int offset)"
+.br
+.ti -1c
+.RI "template<then_type Then> static const auto \fBfn\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Ret, typename Input, typename\&.\&.\&. Inputs>
+.br
+struct aacio::chain::webassembly::binaryen::intrinsic_invoker_impl< Ret, std::tuple< Input, Inputs\&.\&.\&. > >"
+Sepcialization for transcribing a simple type in the native method signature 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIRet\fP - the return type of the native method 
+.br
+\fIInput\fP - the type of the native parameter to transcribe 
+.br
+\fIInputs\fP - the remaining native parameters to transcribe 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

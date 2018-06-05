@@ -1,0 +1,100 @@
+\hypertarget{test__api_8hpp}{}\section{contracts/test\+\_\+api/test\+\_\+api.hpp File Reference}
+\label{test__api_8hpp}\index{contracts/test\+\_\+api/test\+\_\+api.\+hpp@{contracts/test\+\_\+api/test\+\_\+api.\+hpp}}
+{\ttfamily \#include \char`\"{}test\+\_\+api\+\_\+common.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for test\+\_\+api.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtest__types}{test\+\_\+types}}
+\item 
+struct \mbox{\hyperlink{structtest__print}{test\+\_\+print}}
+\item 
+struct \mbox{\hyperlink{structtest__action}{test\+\_\+action}}
+\item 
+struct \mbox{\hyperlink{structtest__math}{test\+\_\+math}}
+\item 
+struct \mbox{\hyperlink{structtest__db}{test\+\_\+db}}
+\item 
+struct \mbox{\hyperlink{structtest__multi__index}{test\+\_\+multi\+\_\+index}}
+\item 
+struct \mbox{\hyperlink{structtest__crypto}{test\+\_\+crypto}}
+\item 
+struct \mbox{\hyperlink{structtest__transaction}{test\+\_\+transaction}}
+\item 
+struct \mbox{\hyperlink{structtest__chain}{test\+\_\+chain}}
+\item 
+struct \mbox{\hyperlink{structtest__fixedpoint}{test\+\_\+fixedpoint}}
+\item 
+struct \mbox{\hyperlink{structtest__real}{test\+\_\+real}}
+\item 
+struct \mbox{\hyperlink{structtest__compiler__builtins}{test\+\_\+compiler\+\_\+builtins}}
+\item 
+struct \mbox{\hyperlink{structtest__extended__memory}{test\+\_\+extended\+\_\+memory}}
+\item 
+struct \mbox{\hyperlink{structtest__memory}{test\+\_\+memory}}
+\item 
+struct \mbox{\hyperlink{structtest__checktime}{test\+\_\+checktime}}
+\item 
+struct \mbox{\hyperlink{structtest__permission}{test\+\_\+permission}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER}(C\+L\+A\+SS,  M\+E\+T\+H\+OD)
+\item 
+\#define {\bfseries W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX}(C\+L\+A\+SS,  M\+E\+T\+H\+OD)
+\item 
+\#define {\bfseries W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER}(C\+A\+L\+L\+E\+D\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+TR,  C\+A\+L\+L\+E\+D\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+TR,  H\+A\+N\+D\+L\+E\+R\+\_\+\+C\+L\+A\+SS,  H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+E\+T\+H\+OD)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{test__api_8hpp_aa992d93a7e922952db76abcbe45d3f1a}\label{test__api_8hpp_aa992d93a7e922952db76abcbe45d3f1a}} 
+\index{test\+\_\+api.\+hpp@{test\+\_\+api.\+hpp}!W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER@{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER}}
+\index{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER@{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER}!test\+\_\+api.\+hpp@{test\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER}{WASM\_TEST\_ERROR\_HANDLER}}
+{\footnotesize\ttfamily \#define W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+H\+A\+N\+D\+L\+ER(\begin{DoxyParamCaption}\item[{}]{C\+A\+L\+L\+E\+D\+\_\+\+C\+L\+A\+S\+S\+\_\+\+S\+TR,  }\item[{}]{C\+A\+L\+L\+E\+D\+\_\+\+M\+E\+T\+H\+O\+D\+\_\+\+S\+TR,  }\item[{}]{H\+A\+N\+D\+L\+E\+R\+\_\+\+C\+L\+A\+SS,  }\item[{}]{H\+A\+N\+D\+L\+E\+R\+\_\+\+M\+E\+T\+H\+OD }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( error\_action == WASM\_TEST\_ACTION(CALLED\_CLASS\_STR, CALLED\_METHOD\_STR) ) \{ \(\backslash\)
+   HANDLER\_CLASS::HANDLER\_METHOD(error\_dtrx); \(\backslash\)
+   return; \(\backslash\)
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{test__api_8hpp_ac8741fa467f356e73d52f63521612abe}\label{test__api_8hpp_ac8741fa467f356e73d52f63521612abe}} 
+\index{test\+\_\+api.\+hpp@{test\+\_\+api.\+hpp}!W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER@{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER}}
+\index{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER@{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER}!test\+\_\+api.\+hpp@{test\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER}{WASM\_TEST\_HANDLER}}
+{\footnotesize\ttfamily \#define W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+ER(\begin{DoxyParamCaption}\item[{}]{C\+L\+A\+SS,  }\item[{}]{M\+E\+T\+H\+OD }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( \mbox{\hyperlink{structaction}{action}} == WASM\_TEST\_ACTION(#CLASS, #METHOD) ) \{ \(\backslash\)
+     CLASS::METHOD(); \(\backslash\)
+     return; \(\backslash\)
+  \}
+\end{DoxyCode}
+\mbox{\Hypertarget{test__api_8hpp_a6d9aeee4e8c7f3fa05a17fb27a1531a3}\label{test__api_8hpp_a6d9aeee4e8c7f3fa05a17fb27a1531a3}} 
+\index{test\+\_\+api.\+hpp@{test\+\_\+api.\+hpp}!W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX@{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX}}
+\index{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX@{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX}!test\+\_\+api.\+hpp@{test\+\_\+api.\+hpp}}
+\subsubsection{\texorpdfstring{W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX}{WASM\_TEST\_HANDLER\_EX}}
+{\footnotesize\ttfamily \#define W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+H\+A\+N\+D\+L\+E\+R\+\_\+\+EX(\begin{DoxyParamCaption}\item[{}]{C\+L\+A\+SS,  }\item[{}]{M\+E\+T\+H\+OD }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( \mbox{\hyperlink{structaction}{action}} == WASM\_TEST\_ACTION(#CLASS, #METHOD) ) \{ \(\backslash\)
+     CLASS::METHOD(receiver, code, \mbox{\hyperlink{structaction}{action}}); \(\backslash\)
+     return; \(\backslash\)
+  \}
+\end{DoxyCode}

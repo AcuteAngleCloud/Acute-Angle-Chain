@@ -1,0 +1,49 @@
+\hypertarget{account__history__plugin_8cpp}{}\section{plugins/account\+\_\+history\+\_\+plugin/account\+\_\+history\+\_\+plugin.cpp File Reference}
+\label{account__history__plugin_8cpp}\index{plugins/account\+\_\+history\+\_\+plugin/account\+\_\+history\+\_\+plugin.\+cpp@{plugins/account\+\_\+history\+\_\+plugin/account\+\_\+history\+\_\+plugin.\+cpp}}
+{\ttfamily \#include $<$aacio/account\+\_\+history\+\_\+plugin/account\+\_\+history\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/account\+\_\+history\+\_\+plugin/account\+\_\+control\+\_\+history\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/account\+\_\+history\+\_\+plugin/account\+\_\+transaction\+\_\+history\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/account\+\_\+history\+\_\+plugin/public\+\_\+key\+\_\+history\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/account\+\_\+history\+\_\+plugin/transaction\+\_\+history\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/account\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/chain\+\_\+controller.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/config.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/transaction.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/crypto/sha256.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/hashed\+\_\+index.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/mem\+\_\+fun.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/multi\+\_\+index\+\_\+includes.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/adaptors.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/algorithm.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/algorithm\+\_\+ext.\+hpp$>$}\newline
+Include dependency graph for account\+\_\+history\+\_\+plugin.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1account__history__plugin__impl}{aacio\+::account\+\_\+history\+\_\+plugin\+\_\+impl}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacefc}{fc}}
+\begin{DoxyCompactList}\small\item\em aacio\+::chain \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{account__history__plugin_8cpp_ace95bc759201a196eaa9a67979092c21}\label{account__history__plugin_8cpp_ace95bc759201a196eaa9a67979092c21}} 
+using {\bfseries aacio\+::ordered\+\_\+transaction\+\_\+results} = account\+\_\+history\+\_\+apis\+::read\+\_\+only\+::ordered\+\_\+transaction\+\_\+results
+\item 
+\mbox{\Hypertarget{account__history__plugin_8cpp_a1a0beb730c5da70eca5bfdc5479fea0c}\label{account__history__plugin_8cpp_a1a0beb730c5da70eca5bfdc5479fea0c}} 
+using {\bfseries aacio\+::get\+\_\+transactions\+\_\+results} = account\+\_\+history\+\_\+apis\+::read\+\_\+only\+::get\+\_\+transactions\+\_\+results
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

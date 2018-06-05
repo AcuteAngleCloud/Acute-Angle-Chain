@@ -1,0 +1,71 @@
+.TH "websocketpp::utility::my_equal< charT >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::utility::my_equal< charT > \- Helper functor for case insensitive find\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <utilities\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmy_equal\fP (std::locale const &loc)"
+.br
+.RI "Construct the functor with the given locale\&. "
+.ti -1c
+.RI "bool \fBoperator()\fP (charT ch1, charT ch2)"
+.br
+.RI "Perform a case insensitive comparison\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename charT>
+.br
+struct websocketpp::utility::my_equal< charT >"
+Helper functor for case insensitive find\&. 
+
+Based on code from http://stackoverflow.com/questions/3152241/case-insensitive-stdstring-find
+.PP
+templated version of \fBmy_equal\fP so it could work with both char and wchar_t 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename charT > \fBwebsocketpp::utility::my_equal\fP< charT >::\fBmy_equal\fP (std::locale const & loc)\fC [inline]\fP"
+
+.PP
+Construct the functor with the given locale\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloc\fP The locale to use for determining the case of values 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename charT > bool \fBwebsocketpp::utility::my_equal\fP< charT >::operator() (charT ch1, charT ch2)\fC [inline]\fP"
+
+.PP
+Perform a case insensitive comparison\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIch1\fP The first value to compare 
+.br
+\fIch2\fP The second value to compare 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the two values are equal when both are converted to uppercase using the given locale\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

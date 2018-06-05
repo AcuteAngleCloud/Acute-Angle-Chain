@@ -1,0 +1,46 @@
+\hypertarget{classtelemetry__server}{}\section{telemetry\+\_\+server Class Reference}
+\label{classtelemetry__server}\index{telemetry\+\_\+server@{telemetry\+\_\+server}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtelemetry__server_af7e7b04e711629c5af1cd03ccfdb0bee}\label{classtelemetry__server_af7e7b04e711629c5af1cd03ccfdb0bee}} 
+typedef \mbox{\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{websocketpp\+::connection\+\_\+hdl}} {\bfseries connection\+\_\+hdl}
+\item 
+\mbox{\Hypertarget{classtelemetry__server_a1663d7273586e751600999fd3af69d44}\label{classtelemetry__server_a1663d7273586e751600999fd3af69d44}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1server}{websocketpp\+::server}}$<$ \mbox{\hyperlink{structwebsocketpp_1_1config_1_1asio}{websocketpp\+::config\+::asio}} $>$ {\bfseries server}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtelemetry__server_a8c09eba40e8993079859e9f1974254ab}\label{classtelemetry__server_a8c09eba40e8993079859e9f1974254ab}} 
+void {\bfseries run} (std\+::string docroot, uint16\+\_\+t port)
+\item 
+\mbox{\Hypertarget{classtelemetry__server_a2a510e3a3c91c123f37d95d7b7d140ea}\label{classtelemetry__server_a2a510e3a3c91c123f37d95d7b7d140ea}} 
+void {\bfseries set\+\_\+timer} ()
+\item 
+\mbox{\Hypertarget{classtelemetry__server_acc29e40bd4262e42b3d16e4fcd79ec22}\label{classtelemetry__server_acc29e40bd4262e42b3d16e4fcd79ec22}} 
+void {\bfseries on\+\_\+timer} (websocketpp\+::lib\+::error\+\_\+code const \&ec)
+\item 
+\mbox{\Hypertarget{classtelemetry__server_abab5c8572db5f87e745b862e59867bc8}\label{classtelemetry__server_abab5c8572db5f87e745b862e59867bc8}} 
+void {\bfseries on\+\_\+http} (connection\+\_\+hdl hdl)
+\item 
+\mbox{\Hypertarget{classtelemetry__server_a3f0a1ba79c9d32843a4acca8a187bf17}\label{classtelemetry__server_a3f0a1ba79c9d32843a4acca8a187bf17}} 
+void {\bfseries on\+\_\+open} (connection\+\_\+hdl hdl)
+\item 
+\mbox{\Hypertarget{classtelemetry__server_aab83aa8df38767bd2271dd775e6c3f0e}\label{classtelemetry__server_aab83aa8df38767bd2271dd775e6c3f0e}} 
+void {\bfseries on\+\_\+close} (connection\+\_\+hdl hdl)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The telemetry server accepts connections and sends a message every second to each client containing an integer count. This example can be used as the basis for programs that expose a stream of telemetry data for logging, dashboards, etc.
+
+This example uses the timer based concurrency method and is self contained and singled threaded. Refer to telemetry client for an example of a similar telemetry setup using threads rather than timers.
+
+This example also includes an example simple H\+T\+TP server that serves a web dashboard displaying the count. This simple design is suitable for use delivering a small number of files to a small number of clients. It is ideal for cases like embedded dashboards that don\textquotesingle{}t want the complexity of an extra H\+T\+TP server to serve static files.
+
+This design {\itshape will} fall over under high traffic or DoS conditions. In such cases you are much better off proxying to a real H\+T\+TP server for the http requests. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/examples/telemetry\+\_\+server/telemetry\+\_\+server.\+cpp\end{DoxyCompactItemize}

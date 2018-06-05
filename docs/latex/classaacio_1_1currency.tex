@@ -1,0 +1,87 @@
+\hypertarget{classaacio_1_1currency}{}\section{aacio\+:\+:currency Class Reference}
+\label{classaacio_1_1currency}\index{aacio\+::currency@{aacio\+::currency}}
+
+
+{\ttfamily \#include $<$currency.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1currency_1_1account}{account}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1currency_1_1create}{create}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1currency_1_1currency__stats}{currency\+\_\+stats}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1currency_1_1fee__schedule}{fee\+\_\+schedule}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1currency_1_1issue}{issue}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1currency_1_1transfer}{transfer}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a04a5fea44e840544e28aace59ffa3df7}\label{classaacio_1_1currency_a04a5fea44e840544e28aace59ffa3df7}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(\mbox{\hyperlink{classaacio_1_1multi__index}{accounts}}), \mbox{\hyperlink{structaacio_1_1currency_1_1account}{account}} $>$ {\bfseries accounts}
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a1f70ce92dbc27abac230b621782ffdf4}\label{classaacio_1_1currency_a1f70ce92dbc27abac230b621782ffdf4}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(stat), \mbox{\hyperlink{structaacio_1_1currency_1_1currency__stats}{currency\+\_\+stats}} $>$ {\bfseries stats}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_aa76d68492d4362cdaea4acef90927b12}\label{classaacio_1_1currency_aa76d68492d4362cdaea4acef90927b12}} 
+{\bfseries currency} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}})
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_aa189880aadb94527c21af0786a123b78}\label{classaacio_1_1currency_aa189880aadb94527c21af0786a123b78}} 
+\mbox{\hyperlink{structaacio_1_1asset}{asset}} {\bfseries get\+\_\+balance} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} owner, symbol\+\_\+name \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}}) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_ac8cba3f27e5022f5bf96f68636497e38}\label{classaacio_1_1currency_ac8cba3f27e5022f5bf96f68636497e38}} 
+\mbox{\hyperlink{structaacio_1_1asset}{asset}} {\bfseries get\+\_\+supply} (symbol\+\_\+name \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}}) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a4282456a4c56e49f60e220272082106a}\label{classaacio_1_1currency_a4282456a4c56e49f60e220272082106a}} 
+void {\bfseries inline\+\_\+transfer} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, \mbox{\hyperlink{structaacio_1_1asset}{asset}} amount, string memo=string(), \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} perm=\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(active))
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_af1d738680c73bec5d2e7b7e2289b9fe3}\label{classaacio_1_1currency_af1d738680c73bec5d2e7b7e2289b9fe3}} 
+bool {\bfseries apply} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, action\+\_\+name act)
+\item 
+void \mbox{\hyperlink{classaacio_1_1currency_a7a7b9ea7a4124b4dc21bd57f383042a5}{create\+\_\+currency}} (const \mbox{\hyperlink{structaacio_1_1currency_1_1create}{create}} \&c)
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_ad4fe84cd9d9f590eb6ad5bc9d983372e}\label{classaacio_1_1currency_ad4fe84cd9d9f590eb6ad5bc9d983372e}} 
+void {\bfseries issue\+\_\+currency} (const \mbox{\hyperlink{structaacio_1_1currency_1_1issue}{issue}} \&i)
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a704b45a5d2f8fe7e42a9f99c06356ad7}\label{classaacio_1_1currency_a704b45a5d2f8fe7e42a9f99c06356ad7}} 
+void {\bfseries on} (const \mbox{\hyperlink{structaacio_1_1currency_1_1create}{create}} \&c)
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a98d7673c46255ce329f866c45fa67570}\label{classaacio_1_1currency_a98d7673c46255ce329f866c45fa67570}} 
+void {\bfseries on} (const \mbox{\hyperlink{structaacio_1_1currency_1_1issue}{issue}} \&i)
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a693d62ace69d867d63fe604a5360cb23}\label{classaacio_1_1currency_a693d62ace69d867d63fe604a5360cb23}} 
+void {\bfseries on} (const \mbox{\hyperlink{structaacio_1_1currency_1_1transfer}{transfer}} \&t)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1currency_a436e43fe6886a1cd455df14fb18a45bd}\label{classaacio_1_1currency_a436e43fe6886a1cd455df14fb18a45bd}} 
+static void {\bfseries inline\+\_\+transfer} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} from, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} to, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} amount, string memo=string(), \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} perm=\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(active))
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This contract enables the creation, issuance, and transfering of many different tokens. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1currency_a7a7b9ea7a4124b4dc21bd57f383042a5}\label{classaacio_1_1currency_a7a7b9ea7a4124b4dc21bd57f383042a5}} 
+\index{aacio\+::currency@{aacio\+::currency}!create\+\_\+currency@{create\+\_\+currency}}
+\index{create\+\_\+currency@{create\+\_\+currency}!aacio\+::currency@{aacio\+::currency}}
+\subsubsection{\texorpdfstring{create\+\_\+currency()}{create\_currency()}}
+{\footnotesize\ttfamily void aacio\+::currency\+::create\+\_\+currency (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1currency_1_1create}{create}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This is factored out so it can be used as a building block Here is the call graph for this function\+:
+% FIG 0
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aaciolib/currency.\+hpp\end{DoxyCompactItemize}

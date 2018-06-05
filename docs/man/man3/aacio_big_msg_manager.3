@@ -1,0 +1,60 @@
+.TH "aacio::big_msg_manager" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::big_msg_manager
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBbcast_block\fP (const \fBsigned_block_summary\fP &msg, connection_ptr skip=connection_ptr())"
+.br
+.ti -1c
+.RI "void \fBbcast_transaction\fP (const \fBtransaction_id_type\fP &id, \fBtime_point_sec\fP \fBexpiration\fP, const \fBpacked_transaction\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBbcast_rejected_transaction\fP (const \fBpacked_transaction\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBrecv_block\fP (connection_ptr conn, const \fBsigned_block_summary\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBrecv_transaction\fP (connection_ptr c)"
+.br
+.ti -1c
+.RI "void \fBrecv_notice\fP (connection_ptr conn, const \fBnotice_message\fP &msg)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBjust_send_it_max\fP"
+.br
+.ti -1c
+.RI "connection_ptr \fBpending_txn_source\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBblock_id_type\fP > \fBreq_blks\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBtransaction_id_type\fP > \fBreq_txn\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const fc::string \fBlogger_name\fP"
+.br
+.ti -1c
+.RI "static \fBfc::logger\fP \fBlogger\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

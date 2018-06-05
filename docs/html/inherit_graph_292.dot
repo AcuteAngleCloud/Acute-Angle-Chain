@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="aacio::chain::webassembly\l::wavm::intrinsic_invoker\l_impl\< void_type, std::tuple\l\<\>, std::tuple\< Translated... \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__invoker__impl_3_01void__type_00_01std_ca4856f3e4c245f4294d33861b24210b.html"];
+}

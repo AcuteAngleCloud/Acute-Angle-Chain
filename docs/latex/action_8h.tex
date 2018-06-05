@@ -1,0 +1,42 @@
+\hypertarget{action_8h}{}\section{contracts/aaciolib/action.h File Reference}
+\label{action_8h}\index{contracts/aaciolib/action.\+h@{contracts/aaciolib/action.\+h}}
+{\ttfamily \#include $<$aaciolib/system.\+h$>$}\newline
+Include dependency graph for action.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__actioncapi_ga4de6d1722b92b464ba2c999e0a636f84}{read\+\_\+action\+\_\+data}} (void $\ast$msg, uint32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Copy current action data to the specified location. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__actioncapi_ga9d5497faab78ecdc03052cf644d72a5e}{action\+\_\+data\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the length of current action\textquotesingle{}s data field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__actioncapi_gae232893c733f02b94dbb70fae39d19f7}{require\+\_\+recipient}} (account\+\_\+name name)
+\begin{DoxyCompactList}\small\item\em Add the specified account to set of accounts to be notified. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__actioncapi_gab1e668e93ac1f94421743ed79edffb26}{require\+\_\+auth}} (account\+\_\+name name)
+\begin{DoxyCompactList}\small\item\em Verify specified account exists in the set of provided auths. \end{DoxyCompactList}\item 
+bool {\bfseries has\+\_\+auth} (account\+\_\+name name)
+\item 
+void \mbox{\hyperlink{group__actioncapi_gace44cd21e660827634c0529077f9494c}{require\+\_\+auth2}} (account\+\_\+name name, permission\+\_\+name permission)
+\begin{DoxyCompactList}\small\item\em Verify specified account exists in the set of provided auths. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__actioncapi_gada68da99a95a5b25e9f5d43af255c63e}{send\+\_\+inline}} (char $\ast$serialized\+\_\+action, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{group__actioncapi_ga30b1cab2d60f843eb2d496e754e41705}{send\+\_\+context\+\_\+free\+\_\+inline}} (char $\ast$serialized\+\_\+action, size\+\_\+t size)
+\item 
+void \mbox{\hyperlink{group__actioncapi_ga9893f539cf6d56989eb6e0d4ce51a813}{require\+\_\+write\+\_\+lock}} (account\+\_\+name name)
+\begin{DoxyCompactList}\small\item\em Verifies that name exists in the set of write locks held. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__actioncapi_ga4b02a9d9adf71ae49e77e19fefc0cbf4}{require\+\_\+read\+\_\+lock}} (account\+\_\+name name)
+\begin{DoxyCompactList}\small\item\em Verifies that name exists in the set of read locks held. \end{DoxyCompactList}\item 
+time \mbox{\hyperlink{group__actioncapi_ga761ba259bec8bbdab79b31b716a5d4d6}{publication\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Get the publication time. \end{DoxyCompactList}\item 
+account\+\_\+name \mbox{\hyperlink{group__actioncapi_gaf531fda07a825ca8b0d90f21446e6a64}{current\+\_\+sender}} ()
+\begin{DoxyCompactList}\small\item\em Get the sender of the action. \end{DoxyCompactList}\item 
+account\+\_\+name \mbox{\hyperlink{group__actioncapi_ga5fcca014b53b0f15b9f9636325bae976}{current\+\_\+receiver}} ()
+\begin{DoxyCompactList}\small\item\em Get the current receiver of the action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

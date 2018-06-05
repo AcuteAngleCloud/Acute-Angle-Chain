@@ -1,0 +1,120 @@
+.TH "fc::variant_object" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::variant_object \- An order-perserving dictionary of variant's\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <variant_object\&.hpp>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBentry\fP"
+.br
+.RI "a key/value pair "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::vector\fP< \fBentry\fP >::const_iterator \fBiterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBvariant_object\fP (string key, \fBvariant\fP val)"
+.br
+.ti -1c
+.RI "template<typename T > \fBvariant_object\fP (string key, \fBT\fP &&val)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP (const \fBvariant_object\fP &)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP (\fBvariant_object\fP &&)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP (const \fBmutable_variant_object\fP &)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP (\fBmutable_variant_object\fP &&)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP & \fBoperator=\fP (\fBvariant_object\fP &&)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP & \fBoperator=\fP (const \fBvariant_object\fP &)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP & \fBoperator=\fP (\fBmutable_variant_object\fP &&)"
+.br
+.ti -1c
+.RI "\fBvariant_object\fP & \fBoperator=\fP (const \fBmutable_variant_object\fP &)"
+.br
+.in -1c
+.PP
+.RI "\fBImmutable Interface\fP"
+.br
+Calling these methods will not result in copies of the underlying type\&. 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "iterator \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBend\fP () const"
+.br
+.ti -1c
+.RI "iterator \fBfind\fP (const string &key) const"
+.br
+.ti -1c
+.RI "iterator \fBfind\fP (const char *key) const"
+.br
+.ti -1c
+.RI "const \fBvariant\fP & \fBoperator[]\fP (const string &key) const"
+.br
+.ti -1c
+.RI "const \fBvariant\fP & \fBoperator[]\fP (const char *key) const"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "bool \fBcontains\fP (const char *key) const"
+.br
+.in -1c
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBmutable_variant_object\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An order-perserving dictionary of variant's\&. 
+
+Keys are kept in the order they are inserted\&. This dictionary implements copy-on-write
+.PP
+\fBNote:\fP
+.RS 4
+This class is not optimized for random-access on large sets of key-value pairs\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "fc::variant_object::variant_object (string key, \fBvariant\fP val)"
+initializes the first key/value pair in the object 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

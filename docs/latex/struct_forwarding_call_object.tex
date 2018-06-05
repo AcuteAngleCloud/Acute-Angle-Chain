@@ -1,0 +1,66 @@
+\hypertarget{struct_forwarding_call_object}{}\section{Forwarding\+Call\+Object Struct Reference}
+\label{struct_forwarding_call_object}\index{Forwarding\+Call\+Object@{Forwarding\+Call\+Object}}
+
+
+Collaboration diagram for Forwarding\+Call\+Object\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_a5ba444a07ca4e0c2f7ae2a7a12698e0b}\label{struct_forwarding_call_object_a5ba444a07ca4e0c2f7ae2a7a12698e0b}} 
+{\footnotesize template$<$class ... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) \&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_ad126824bca01f72e82cceadd1744244c}\label{struct_forwarding_call_object_ad126824bca01f72e82cceadd1744244c}} 
+{\footnotesize template$<$class ... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) const \&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_ac4d7f1e653669ab822ffc365dc4a0d66}\label{struct_forwarding_call_object_ac4d7f1e653669ab822ffc365dc4a0d66}} 
+{\footnotesize template$<$class ... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) \&\&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_acc740392b5a8975461a889fe1562c402}\label{struct_forwarding_call_object_acc740392b5a8975461a889fe1562c402}} 
+{\footnotesize template$<$class ... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) const \&\&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_a5ba444a07ca4e0c2f7ae2a7a12698e0b}\label{struct_forwarding_call_object_a5ba444a07ca4e0c2f7ae2a7a12698e0b}} 
+{\footnotesize template$<$class... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) \&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_ad126824bca01f72e82cceadd1744244c}\label{struct_forwarding_call_object_ad126824bca01f72e82cceadd1744244c}} 
+{\footnotesize template$<$class... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) const \&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_ac4d7f1e653669ab822ffc365dc4a0d66}\label{struct_forwarding_call_object_ac4d7f1e653669ab822ffc365dc4a0d66}} 
+{\footnotesize template$<$class... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) \&\&
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_acc740392b5a8975461a889fe1562c402}\label{struct_forwarding_call_object_acc740392b5a8975461a889fe1562c402}} 
+{\footnotesize template$<$class... Args$>$ }\\bool {\bfseries operator()} (Args \&\&...) const \&\&
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_a407d319171ade5ec63770cf712ca0b83}\label{struct_forwarding_call_object_a407d319171ade5ec63770cf712ca0b83}} 
+{\footnotesize template$<$class ... Args$>$ }\\static void {\bfseries set\+\_\+call} (Call\+Type type)
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_ad27c88a0f3cdd323c29ffae5bfb4668c}\label{struct_forwarding_call_object_ad27c88a0f3cdd323c29ffae5bfb4668c}} 
+{\footnotesize template$<$class ... Args$>$ }\\static bool {\bfseries check\+\_\+call} (Call\+Type type)
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_a407d319171ade5ec63770cf712ca0b83}\label{struct_forwarding_call_object_a407d319171ade5ec63770cf712ca0b83}} 
+{\footnotesize template$<$class... Args$>$ }\\static void {\bfseries set\+\_\+call} (Call\+Type type)
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_ad27c88a0f3cdd323c29ffae5bfb4668c}\label{struct_forwarding_call_object_ad27c88a0f3cdd323c29ffae5bfb4668c}} 
+{\footnotesize template$<$class... Args$>$ }\\static bool {\bfseries check\+\_\+call} (Call\+Type type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_a044204aab704d73ee5fa1c2810b49531}\label{struct_forwarding_call_object_a044204aab704d73ee5fa1c2810b49531}} 
+static Call\+Type {\bfseries last\+\_\+call\+\_\+type} = C\+T\+\_\+\+None
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_aeb896b72ae8d495ecced4830725c059f}\label{struct_forwarding_call_object_aeb896b72ae8d495ecced4830725c059f}} 
+static \mbox{\hyperlink{struct_type_i_d}{Type\+ID}} const  $\ast$ {\bfseries last\+\_\+call\+\_\+args} = nullptr
+\item 
+\mbox{\Hypertarget{struct_forwarding_call_object_acee2119932a35f233576591c12573969}\label{struct_forwarding_call_object_acee2119932a35f233576591c12573969}} 
+static const \mbox{\hyperlink{struct_type_i_d}{Type\+ID}} $\ast$ {\bfseries last\+\_\+call\+\_\+args}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/std/utilities/function.\+objects/func.\+not\+\_\+fn/not\+\_\+fn.\+pass.\+cpp\item 
+contracts/libc++/upstream/test/std/utilities/variant/variant.\+visit/visit.\+pass.\+cpp\end{DoxyCompactItemize}

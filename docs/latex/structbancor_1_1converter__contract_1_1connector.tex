@@ -1,0 +1,38 @@
+\hypertarget{structbancor_1_1converter__contract_1_1connector}{}\section{bancor\+:\+:converter\+\_\+contract$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+:\+:connector$<$ Currency\+Type, Weight, Base $>$ Struct Template Reference}
+\label{structbancor_1_1converter__contract_1_1connector}\index{bancor\+::converter\+\_\+contract$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::connector$<$ Currency\+Type, Weight, Base $>$@{bancor\+::converter\+\_\+contract$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::connector$<$ Currency\+Type, Weight, Base $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structbancor_1_1converter__contract_1_1connector_a0ed25c1ccaf3a9f6d45f8960f55ec2df}\label{structbancor_1_1converter__contract_1_1connector_a0ed25c1ccaf3a9f6d45f8960f55ec2df}} 
+typedef Currency\+Type {\bfseries currency\+\_\+type}
+\item 
+\mbox{\Hypertarget{structbancor_1_1converter__contract_1_1connector_a69e701c71ae753f70771703badc0e9ae}\label{structbancor_1_1converter__contract_1_1connector_a69e701c71ae753f70771703badc0e9ae}} 
+typedef converter\+\_\+currency\+::token\+\_\+type {\bfseries converter\+\_\+token\+\_\+type}
+\item 
+\mbox{\Hypertarget{structbancor_1_1converter__contract_1_1connector_af66116d51aa7c41f03ee1abfc21cb51e}\label{structbancor_1_1converter__contract_1_1connector_af66116d51aa7c41f03ee1abfc21cb51e}} 
+typedef currency\+\_\+type\+::token\+\_\+type {\bfseries in\+\_\+token\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+converter\+\_\+token\+\_\+type \mbox{\hyperlink{structbancor_1_1converter__contract_1_1connector_a64f2755a7c9e6a66742af82ebf601421}{convert\+\_\+to\+\_\+converter}} (in\+\_\+token\+\_\+type in, \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&state)
+\item 
+\mbox{\Hypertarget{structbancor_1_1converter__contract_1_1connector_a33dd73e69a5ba381f7112f91ba5a047d}\label{structbancor_1_1converter__contract_1_1connector_a33dd73e69a5ba381f7112f91ba5a047d}} 
+in\+\_\+token\+\_\+type {\bfseries convert\+\_\+from\+\_\+converter} (converter\+\_\+token\+\_\+type converter\+\_\+in, \mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structbancor_1_1converter__contract_1_1connector_a64f2755a7c9e6a66742af82ebf601421}\label{structbancor_1_1converter__contract_1_1connector_a64f2755a7c9e6a66742af82ebf601421}} 
+\index{bancor\+::converter\+\_\+contract\+::connector@{bancor\+::converter\+\_\+contract\+::connector}!convert\+\_\+to\+\_\+converter@{convert\+\_\+to\+\_\+converter}}
+\index{convert\+\_\+to\+\_\+converter@{convert\+\_\+to\+\_\+converter}!bancor\+::converter\+\_\+contract\+::connector@{bancor\+::converter\+\_\+contract\+::connector}}
+\subsubsection{\texorpdfstring{convert\+\_\+to\+\_\+converter()}{convert\_to\_converter()}}
+{\footnotesize\ttfamily template$<$typename Converter\+Currency , typename First\+Currency , typename Second\+Currency $>$ \\
+template$<$typename Currency\+Type , uint32\+\_\+t Weight = 500000, uint32\+\_\+t Base = 1000000$>$ \\
+converter\+\_\+token\+\_\+type \mbox{\hyperlink{classbancor_1_1converter__contract}{bancor\+::converter\+\_\+contract}}$<$ Converter\+Currency, First\+Currency, Second\+Currency $>$\+::\mbox{\hyperlink{structbancor_1_1converter__contract_1_1connector}{connector}}$<$ Currency\+Type, Weight, \mbox{\hyperlink{struct_base}{Base}} $>$\+::convert\+\_\+to\+\_\+converter (\begin{DoxyParamCaption}\item[{in\+\_\+token\+\_\+type}]{in,  }\item[{\mbox{\hyperlink{structbancor_1_1converter__contract_1_1converter__state}{converter\+\_\+state}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+balance already changed when transfer executed, get pre-\/transfer balance 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/bancor/converter.\+hpp\end{DoxyCompactItemize}

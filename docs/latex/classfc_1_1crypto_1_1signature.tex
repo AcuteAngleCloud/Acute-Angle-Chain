@@ -1,0 +1,56 @@
+\hypertarget{classfc_1_1crypto_1_1signature}{}\section{fc\+:\+:crypto\+:\+:signature Class Reference}
+\label{classfc_1_1crypto_1_1signature}\index{fc\+::crypto\+::signature@{fc\+::crypto\+::signature}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a4598d0d8b98ed7a27b4ad78e77915c03}\label{classfc_1_1crypto_1_1signature_a4598d0d8b98ed7a27b4ad78e77915c03}} 
+using {\bfseries storage\+\_\+type} = \mbox{\hyperlink{classfc_1_1static__variant}{static\+\_\+variant}}$<$ \mbox{\hyperlink{structfc_1_1ecc_1_1signature__shim}{ecc\+::signature\+\_\+shim}}, \mbox{\hyperlink{structfc_1_1crypto_1_1r1_1_1signature__shim}{r1\+::signature\+\_\+shim}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a090abf4aadb475423381a20a127c8f74}\label{classfc_1_1crypto_1_1signature_a090abf4aadb475423381a20a127c8f74}} 
+{\bfseries signature} (\mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\&)=default
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_af8e291ae6b3aa77b38c838a7a793f6cf}\label{classfc_1_1crypto_1_1signature_af8e291ae6b3aa77b38c838a7a793f6cf}} 
+{\bfseries signature} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&)=default
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a449f3916ce4476a361b5d682ff0f9658}\label{classfc_1_1crypto_1_1signature_a449f3916ce4476a361b5d682ff0f9658}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&)=default
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_acdfbb133ca46a49439e0c524a9d08cfc}\label{classfc_1_1crypto_1_1signature_acdfbb133ca46a49439e0c524a9d08cfc}} 
+{\bfseries signature} (const string \&base58str)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a79633fec2eeba107461f951496986be7}\label{classfc_1_1crypto_1_1signature_a79633fec2eeba107461f951496986be7}} 
+{\bfseries operator string} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_af455309b47ab8c41e1dd36b91498fb47}\label{classfc_1_1crypto_1_1signature_af455309b47ab8c41e1dd36b91498fb47}} 
+struct {\bfseries reflector$<$ signature $>$}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_ae1389c6c19ec8630ce31970de2294915}\label{classfc_1_1crypto_1_1signature_ae1389c6c19ec8630ce31970de2294915}} 
+class {\bfseries private\+\_\+key}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a02ee1fa9fb75a71bb167b80862443a52}\label{classfc_1_1crypto_1_1signature_a02ee1fa9fb75a71bb167b80862443a52}} 
+class {\bfseries public\+\_\+key}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_ac2e519e4ae4118c9d1801c20f94c893b}\label{classfc_1_1crypto_1_1signature_ac2e519e4ae4118c9d1801c20f94c893b}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\mbox{\hyperlink{classp1}{p1}}, const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\mbox{\hyperlink{classp2}{p2}})
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a44b742772ed7aa3e516dd4625abfe1d8}\label{classfc_1_1crypto_1_1signature_a44b742772ed7aa3e516dd4625abfe1d8}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\mbox{\hyperlink{classp1}{p1}}, const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\mbox{\hyperlink{classp2}{p2}})
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_afb044052136e9b7515e3da14772089d1}\label{classfc_1_1crypto_1_1signature_afb044052136e9b7515e3da14772089d1}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\mbox{\hyperlink{classp1}{p1}}, const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&\mbox{\hyperlink{classp2}{p2}})
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1signature_a84a730a17bfc74f917830e31af1fc1a9}\label{classfc_1_1crypto_1_1signature_a84a730a17bfc74f917830e31af1fc1a9}} 
+std\+::size\+\_\+t {\bfseries hash\+\_\+value} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&b)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/crypto/signature.\+hpp\item 
+libraries/fc/src/crypto/signature.\+cpp\end{DoxyCompactItemize}

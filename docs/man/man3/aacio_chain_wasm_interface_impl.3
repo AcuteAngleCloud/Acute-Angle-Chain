@@ -1,0 +1,35 @@
+.TH "aacio::chain::wasm_interface_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::wasm_interface_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBwasm_interface_impl\fP (wasm_interface::vm_type vm)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< uint8_t > \fBparse_initial_memory\fP (const \fBModule\fP &module)"
+.br
+.ti -1c
+.RI "std::unique_ptr< \fBwasm_instantiated_module_interface\fP > & \fBget_instantiated_module\fP (const \fBdigest_type\fP &code_id, const shared_vector< char > &code)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::unique_ptr< \fBwasm_runtime_interface\fP > \fBruntime_interface\fP"
+.br
+.ti -1c
+.RI "\fBmap\fP< \fBdigest_type\fP, std::unique_ptr< \fBwasm_instantiated_module_interface\fP > > \fBinstantiation_cache\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

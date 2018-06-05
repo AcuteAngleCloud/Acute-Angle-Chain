@@ -1,0 +1,32 @@
+.TH "OutputMergeable" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+OutputMergeable
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::PostWalker< OutputMergeable, Visitor< OutputMergeable > >\fP, and \fBMergeable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOutputMergeable\fP (\fBModule\fP &wasm)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitGetGlobal\fP (\fBGetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitModule\fP (\fBModule\fP *curr)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

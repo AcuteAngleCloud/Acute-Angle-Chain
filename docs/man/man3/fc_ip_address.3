@@ -1,0 +1,65 @@
+.TH "fc::ip::address" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::ip::address
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaddress\fP (uint32_t _ip=0)"
+.br
+.ti -1c
+.RI "\fBaddress\fP (const fc::string &s)"
+.br
+.ti -1c
+.RI "\fBaddress\fP & \fBoperator=\fP (const fc::string &s)"
+.br
+.ti -1c
+.RI "\fBoperator fc::string\fP () const"
+.br
+.ti -1c
+.RI "\fBoperator uint32_t\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_private_address\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_multicast_address\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_public_address\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBaddress\fP &a, const \fBaddress\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBaddress\fP &a, const \fBaddress\fP &b)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "bool fc::ip::address::is_multicast_address () const"
+224\&.0\&.0\&.0 to 239\&.255\&.255\&.255 
+.SS "bool fc::ip::address::is_private_address () const"
+
+.PP
+\fBReturns:\fP
+.RS 4
+true if the ip is in the following ranges:
+.RE
+.PP
+10\&.0\&.0\&.0 to 10\&.255\&.255\&.255 172\&.16\&.0\&.0 to 172\&.31\&.255\&.255 192\&.168\&.0\&.0 to 192\&.168\&.255\&.255 169\&.254\&.0\&.0 to 169\&.254\&.255\&.255 
+.SS "bool fc::ip::address::is_public_address () const"
+!private & !multicast 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

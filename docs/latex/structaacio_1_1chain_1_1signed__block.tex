@@ -1,0 +1,40 @@
+\hypertarget{structaacio_1_1chain_1_1signed__block}{}\section{aacio\+:\+:chain\+:\+:signed\+\_\+block Struct Reference}
+\label{structaacio_1_1chain_1_1signed__block}\index{aacio\+::chain\+::signed\+\_\+block@{aacio\+::chain\+::signed\+\_\+block}}
+
+
+{\ttfamily \#include $<$block.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:signed\+\_\+block\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:signed\+\_\+block\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__block_a3c2fee495b7551b3a249785919bad1cc}\label{structaacio_1_1chain_1_1signed__block_a3c2fee495b7551b3a249785919bad1cc}} 
+{\bfseries signed\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)=default
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__block_adc460f08c1f0f6c4e825808180993a76}\label{structaacio_1_1chain_1_1signed__block_adc460f08c1f0f6c4e825808180993a76}} 
+{\bfseries signed\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block__summary}{signed\+\_\+block\+\_\+summary}} \&\mbox{\hyperlink{structbase}{base}})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1signed__block_a636b296682fdd040e360ac52959b143e}\label{structaacio_1_1chain_1_1signed__block_a636b296682fdd040e360ac52959b143e}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} $>$ \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block_a636b296682fdd040e360ac52959b143e}{input\+\_\+transactions}}
+\begin{DoxyCompactList}\small\item\em this is loaded and indexed into map$<$id,trx$>$ that is referenced by summary; order doesn\textquotesingle{}t matter \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This structure contains the set of signed transactions referenced by the block summary. This inherits from block\+\_\+summary/signed\+\_\+block\+\_\+header and is what would be logged to disk to enable the regeneration of blockchain state.
+
+The transactions are grouped to mirror the cycles in block\+\_\+summary, generated transactions are not included. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{block_8hpp}{block.\+hpp}}\end{DoxyCompactItemize}

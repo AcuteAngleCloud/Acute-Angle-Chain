@@ -1,0 +1,278 @@
+.TH "aacio::net_plugin_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::net_plugin_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBpossible_connections\fP : char { \fBNone\fP = 0, \fBProducers\fP = 1 << 0, \fBSpecified\fP = 1 << 1, \fBAny\fP = 1 << 2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "connection_ptr \fBfind_connection\fP (string host) const"
+.br
+.ti -1c
+.RI "void \fBconnect\fP (connection_ptr c)"
+.br
+.ti -1c
+.RI "void \fBconnect\fP (connection_ptr c, tcp::resolver::iterator endpoint_itr)"
+.br
+.ti -1c
+.RI "void \fBstart_session\fP (connection_ptr c)"
+.br
+.ti -1c
+.RI "void \fBstart_listen_loop\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart_read_message\fP (connection_ptr c)"
+.br
+.ti -1c
+.RI "void \fBclose\fP (connection_ptr c)"
+.br
+.ti -1c
+.RI "size_t \fBcount_open_sockets\fP () const"
+.br
+.ti -1c
+.RI "template<typename VerifierFunc > void \fBsend_all\fP (const \fBnet_message\fP &msg, VerifierFunc verify)"
+.br
+.ti -1c
+.RI "void \fBbroadcast_block_impl\fP (const \fBsigned_block\fP &sb)"
+.br
+.ti -1c
+.RI "bool \fBis_valid\fP (const \fBhandshake_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBhandshake_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBgo_away_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBnotice_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBrequest_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBsync_request_message\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBsigned_block_summary\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBsigned_block\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBpacked_transaction\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBsigned_transaction\fP &msg)"
+.br
+.ti -1c
+.RI "void \fBstart_conn_timer\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart_txn_timer\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart_monitors\fP ()"
+.br
+.ti -1c
+.RI "void \fBexpire_txns\fP ()"
+.br
+.ti -1c
+.RI "void \fBconnection_monitor\fP ()"
+.br
+.ti -1c
+.RI "bool \fBauthenticate_peer\fP (const \fBhandshake_message\fP &msg) const"
+.br
+.RI "Determine if a peer is allowed to connect\&. "
+.ti -1c
+.RI "\fBchain::public_key_type\fP \fBget_authentication_key\fP () const"
+.br
+.RI "Retrieve public key used to authenticate with peers\&. "
+.ti -1c
+.RI "\fBchain::signature_type\fP \fBsign_compact\fP (const \fBchain::public_key_type\fP &signer, const \fBfc::sha256\fP &digest) const"
+.br
+.RI "Returns a signature of the digest using the corresponding private key of the signer\&. "
+.in -1c
+.PP
+.RI "\fBPeer Timestamps\fP"
+.br
+Time message handling 
+.PP
+.in +1c
+.in +1c
+.ti -1c
+.RI "void \fBhandle_message\fP (connection_ptr c, const \fBtime_message\fP &msg)"
+.br
+.RI "Process \fBtime_message\fP\&. "
+.ti -1c
+.RI "void \fBticker\fP ()"
+.br
+.RI "Peer heartbeat ticker\&. "
+.in -1c
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBtransaction_ready\fP (const \fBtransaction_metadata\fP &, const \fBpacked_transaction\fP &txn)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBunique_ptr\fP< tcp::acceptor > \fBacceptor\fP"
+.br
+.ti -1c
+.RI "tcp::endpoint \fBlisten_endpoint\fP"
+.br
+.ti -1c
+.RI "string \fBp2p_address\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBmax_client_count\fP = 0"
+.br
+.ti -1c
+.RI "uint32_t \fBnum_clients\fP = 0"
+.br
+.ti -1c
+.RI "\fBvector\fP< string > \fBsupplied_peers\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBchain::public_key_type\fP > \fBallowed_peers\fP"
+.br
+.RI "peer keys allowed to connect "
+.ti -1c
+.RI "\fBstd::map\fP< \fBchain::public_key_type\fP, \fBchain::private_key_type\fP > \fBprivate_keys\fP"
+.br
+.RI "overlapping with producer keys, also authenticating non-producing nodes "
+.ti -1c
+.RI "possible_connections \fBallowed_connections\fP {None}"
+.br
+.ti -1c
+.RI "\fBstd::set\fP< connection_ptr > \fBconnections\fP"
+.br
+.ti -1c
+.RI "bool \fBdone\fP = false"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP< \fBsync_manager\fP > \fBsync_master\fP"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP< \fBbig_msg_manager\fP > \fBbig_msg_master\fP"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP< boost::asio::steady_timer > \fBconnector_check\fP"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP< boost::asio::steady_timer > \fBtransaction_check\fP"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP< boost::asio::steady_timer > \fBkeepalive_timer\fP"
+.br
+.ti -1c
+.RI "boost::asio::steady_timer::duration \fBconnector_period\fP"
+.br
+.ti -1c
+.RI "boost::asio::steady_timer::duration \fBtxn_exp_period\fP"
+.br
+.ti -1c
+.RI "boost::asio::steady_timer::duration \fBresp_expected_period\fP"
+.br
+.ti -1c
+.RI "boost::asio::steady_timer::duration \fBkeepalive_interval\fP {std::chrono::seconds{32}}"
+.br
+.ti -1c
+.RI "const std::chrono::system_clock::duration \fBpeer_authentication_interval\fP {std::chrono::seconds{1}}"
+.br
+.RI "Peer clock may be no more than 1 second skewed from our clock, including network latency\&. "
+.ti -1c
+.RI "int16_t \fBnetwork_version\fP = 0"
+.br
+.ti -1c
+.RI "bool \fBnetwork_version_match\fP = false"
+.br
+.ti -1c
+.RI "\fBchain_id_type\fP \fBchain_id\fP"
+.br
+.ti -1c
+.RI "\fBfc::sha256\fP \fBnode_id\fP"
+.br
+.ti -1c
+.RI "string \fBuser_agent_name\fP"
+.br
+.ti -1c
+.RI "\fBchain_plugin\fP * \fBchain_plug\fP"
+.br
+.ti -1c
+.RI "bool \fBsend_whole_blocks\fP = false"
+.br
+.ti -1c
+.RI "int \fBstarted_sessions\fP = 0"
+.br
+.ti -1c
+.RI "node_transaction_index \fBlocal_txns\fP"
+.br
+.ti -1c
+.RI "\fBshared_ptr\fP< tcp::resolver > \fBresolver\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const fc::string \fBlogger_name\fP"
+.br
+.ti -1c
+.RI "static \fBfc::logger\fP \fBlogger\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "bool aacio::net_plugin_impl::authenticate_peer (const \fBhandshake_message\fP & msg) const"
+
+.PP
+Determine if a peer is allowed to connect\&. Checks current connection mode and key authentication\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBFalse\fP if the peer should not connect, true otherwise\&. 
+.RE
+.PP
+
+.SS "\fBchain::public_key_type\fP aacio::net_plugin_impl::get_authentication_key () const"
+
+.PP
+Retrieve public key used to authenticate with peers\&. Finds a key to use for authentication\&. If this node is a producer, use the front of the producer key map\&. If the node is not a producer but has a configured private key, use it\&. If the node is neither a producer nor has a private key, returns an empty key\&.
+.PP
+\fBNote:\fP
+.RS 4
+On a node with multiple private keys configured, the key with the first numerically smaller byte will always be used\&. 
+.RE
+.PP
+
+.SS "void aacio::net_plugin_impl::handle_message (connection_ptr c, const \fBtime_message\fP & msg)"
+
+.PP
+Process \fBtime_message\fP\&. Calculate offset, delay and dispersion\&. Note carefully the implied processing\&. The first-order difference is done directly in 64-bit arithmetic, then the result is converted to floating double\&. All further processing is in floating-double arithmetic with rounding done by the hardware\&. This is necessary in order to avoid overflow and preserve precision\&. 
+.SS "\fBchain::signature_type\fP aacio::net_plugin_impl::sign_compact (const \fBchain::public_key_type\fP & signer, const \fBfc::sha256\fP & digest) const"
+
+.PP
+Returns a signature of the digest using the corresponding private key of the signer\&. If there are no configured private keys, returns an empty signature\&. 
+.SS "void aacio::net_plugin_impl::transaction_ready (const \fBtransaction_metadata\fP & md, const \fBpacked_transaction\fP & txn)\fC [static]\fP"
+This one is necessary to hook into the boost notifier api 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,112 @@
+\mbox{\hyperlink{struct_a}{A}} currency is designed to be a fungible and non-\/callable asset. \mbox{\hyperlink{struct_a}{A}} pegged Derivative currency, such as Bit\+U\+SD, is backed by a cryptocurrency held as collateral. The \char`\"{}issuer\char`\"{} is \char`\"{}short\char`\"{} the dollar and extra-\/long the cryptocurrency. The buyer is simply long the dollar. ~\newline
+
+
+\subsection*{Background }
+
+Bit\+Shares created the first working pegged asset system by allowing anyone to take out a short position by posting collateral and issuing Bit\+U\+SD at a minimum 1.\+5\+:1 collateral\+:debt ratio. The {\bfseries least collateralized position} was forced to provide liquidity for Bit\+U\+SD holders any time the market price fell more than a couple percent below the dollar (if the Bit\+U\+SD holder opted to use forced liquidation).
+
+To prevent abuse of the price feed, all forced liquidation was delayed.
+
+In the event of a \char`\"{}black swan\char`\"{} all shorts have their positions liquidated at the price feed and all holders of Bit\+U\+SD are only promised a fixed redemption rate.
+
+There are several problems with this design\+:
+
+
+\begin{DoxyEnumerate}
+\item There is very {\bfseries poor liquidity} in the Bit\+U\+SD / Bit\+Shares market creating {\bfseries large spreads}
+\item The shorts take all the risk and only profit when the price of Bit\+Shares rises
+\item Blackswans are perpetual and very disruptive.
+\item It is \char`\"{}every short for themselves\char`\"{}
+\item Due to the risk/reward ratio the supply can be limited
+\item The {\bfseries collateral requirements} limit opportunity for leverage.
+\end{DoxyEnumerate}
+
+\subsection*{New Approach }
+
+We present a new approach to pegged assets where the short-\/positions cooperate to provide the service of a pegged asset with {\bfseries high liquidity}. They make money by encouraging people to trade their pegged asset and earning income {\bfseries from the trading fees rather than seeking heavy leverage} in a speculative market. They also generate money by earning interest on personal short positions.
+
+\subsection*{The Setup Process }
+
+An initial user deposits a Collateral Currency (\mbox{\hyperlink{struct_c}{C}}) into an smart contract and provides the initial price feed. \mbox{\hyperlink{struct_a}{A}} new Debt token (\mbox{\hyperlink{struct_d}{D}}) is issued based upon the price feed and a 1.\+5\+:1 \mbox{\hyperlink{struct_c}{C}}\+:\mbox{\hyperlink{struct_d}{D}} ratio and the issued tokens are deposited into the {\bfseries Bancor market maker}. At this point in time there is 0 leverage by the market maker because no \mbox{\hyperlink{struct_d}{D}} have been sold. The initial user is also issued exchange tokens (\mbox{\hyperlink{struct_e}{E}}) in the market maker.
+
+At this point people can buy \mbox{\hyperlink{struct_e}{E}} or \mbox{\hyperlink{struct_d}{D}} and the Bancor algorithm will provide liquidity between \mbox{\hyperlink{struct_c}{C}}, \mbox{\hyperlink{struct_e}{E}}, and \mbox{\hyperlink{struct_d}{D}}. Due to the fees charged by the the market maker the value of \mbox{\hyperlink{struct_e}{E}} will increase in terms of \mbox{\hyperlink{struct_c}{C}}.
+
+\begin{quote}
+Collateral currency = Smart Token/reserve of parent currency
+
+Issued tokens = Bounty Tokens (distributed to early holders / community supporters)
+
+Collateral \mbox{\hyperlink{class_ratio}{Ratio}} (\mbox{\hyperlink{struct_c}{C}}\+:\mbox{\hyperlink{struct_d}{D}}) = reciprocal of Loan-\/to-\/\+Value \mbox{\hyperlink{class_ratio}{Ratio}} (L\+TV) \end{quote}
+
+
+\subsection*{Maintaining the Peg }
+
+To maximize the utility of the \mbox{\hyperlink{struct_d}{D}} token, the market maker needs to maintain a {\bfseries narrow trading range} of \mbox{\hyperlink{struct_d}{D}} vs the Dollar. The more {\bfseries consistant and reliable this trading range} is, the more people (arbitrageur) will be willing to hold and trade \mbox{\hyperlink{struct_d}{D}}. There are several situations that can occur\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{struct_d}{D}} is trading above a dollar +5\%
+
+a. Maker is fully collateralized {\ttfamily \mbox{\hyperlink{struct_c}{C}}\+:\mbox{\hyperlink{struct_d}{D}}$>$1.\+5} \begin{DoxyVerb}- issue new D and deposit into maker such that collateral ratio is 1.5:1
+\end{DoxyVerb}
+ b. Maker is not fully collateralized {\ttfamily \mbox{\hyperlink{struct_c}{C}}\+:\mbox{\hyperlink{struct_d}{D}}$<$1.\+5} \begin{DoxyVerb}- adjust the maker weights to lower the redemption prices (defending capital of maker), arbitrageur will probably prevent this reality.
+\end{DoxyVerb}
+
+\end{DoxyEnumerate}
+
+\begin{quote}
+Marker Weights = Connector Weights (in Bancor)
+
+Redemption Price\+: The price at which a bond may be repurchased by the issuer before maturity \end{quote}
+
+
+
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{struct_d}{D}} is selling for less than a dollar -\/5\%
+
+a. Maker is fully collateralized {\ttfamily \mbox{\hyperlink{struct_c}{C}}\+:\mbox{\hyperlink{struct_d}{D}}$>$1.\+5} \begin{DoxyVerb}- adjust the maker weights to increase redemption prices 
+\end{DoxyVerb}
+ b. Maker is under collateralized {\ttfamily \mbox{\hyperlink{struct_c}{C}}\+:\mbox{\hyperlink{struct_d}{D}}$<$1.\+5} 
+\begin{DoxyCode}
+- stop E -> C and E -> D trades.
+- offer bonus on C->E and D->E trades.
+- on D->E conversions take received D out of circulation rather than add to the market maker
+- on C<->D conversion continue as normal
+- stop attempting adjusting maker ratio to defend the price feed and let the price rise until above +1%
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+\mbox{\hyperlink{struct_value}{Value}} of \mbox{\hyperlink{struct_e}{E}} = \mbox{\hyperlink{struct_c}{C}} -\/ \mbox{\hyperlink{struct_d}{D}} where \mbox{\hyperlink{struct_d}{D}} == all in circulation, so E-\/$>$\mbox{\hyperlink{struct_c}{C}} conversions should always assume all outstanding \mbox{\hyperlink{struct_d}{D}} was {\bfseries settled at current maker price}. The result of such a conversion will {\bfseries raise the collateral ratio}, unless they are forced to buy and retire some \mbox{\hyperlink{struct_d}{D}} at the current ratio. The algorithm must ensure the individual selling \mbox{\hyperlink{struct_e}{E}} doesn\textquotesingle{}t leave those holding \mbox{\hyperlink{struct_e}{E}} worse-\/off from a D/E perspective (doesnot reduce \mbox{\hyperlink{struct_d}{D}} to a large extent). An individual buying \mbox{\hyperlink{struct_e}{E}} will create new \mbox{\hyperlink{struct_d}{D}} to maintain the same D/E ratio.
+
+This implies that when value of all outstanding \mbox{\hyperlink{struct_d}{D}} is greater than all \mbox{\hyperlink{struct_c}{C}} that \mbox{\hyperlink{struct_e}{E}} cannot be sold until the network generates {\bfseries enough in trading fees} to recaptialize the market. This is like a company with more debt than equity not allowing buybacks. In fact, {\bfseries \mbox{\hyperlink{struct_e}{E}} should not be sellable any time the collateral ratio falls below 1.\+5\+:1}.
+
+Bit\+Shares is typical {\bfseries margin call} territory, but holders of \mbox{\hyperlink{struct_e}{E}} have a chance at future liquidity if the situation improves. While \mbox{\hyperlink{struct_e}{E}} is not sellable, \mbox{\hyperlink{struct_e}{E}} can be purchased at a 10\% discount to its theoretical value, this will dilute existing holders of \mbox{\hyperlink{struct_e}{E}} but will raise capital and hopefully move \mbox{\hyperlink{struct_e}{E}} holders closer to eventual liquidity.
+
+\subsection*{Adjusting Bancor Ratios by Price Feed }
+
+The price feed informs the algorithm of significant deviations between the Bancor effective price and the target peg. The price feed is necessarily a lagging indicator and may also factor in natural spreads between different exchanges. Therefore, the price feed shall have no impact unless there is a significant deviation (5\%). When such a deviation occurs, the ratio is automatically adjusted to 4\%.
+
+In other words, the price feed keeps the maker in the \char`\"{}channel\char`\"{} but does not attempt to set the real-\/time prices. If there is a sudden change and the price feed differs from maker by 50\% then after the adjustment it will still differ by 4\%. ~\newline
+ \begin{quote}
+Effective Price = Connected Tokens exchanged / Smart Tokens exchanged \end{quote}
+
+
+\subsection*{Summary }
+
+Under this model holders of \mbox{\hyperlink{struct_e}{E}} are short the dollar and make money to recollateralize their positions via market activity. Anyone selling \mbox{\hyperlink{struct_e}{E}} must {\bfseries realize the losses as a result of being short}. ~\newline
+Anyone buying \mbox{\hyperlink{struct_e}{E}} can get in to take their place at the current collateral ratio.
+
+The value of \mbox{\hyperlink{struct_e}{E}} is equal to the value of a {\bfseries margin postion}. ~\newline
+Anyone can buy \mbox{\hyperlink{struct_e}{E}} for a combination \mbox{\hyperlink{struct_c}{C}} and \mbox{\hyperlink{struct_d}{D}} equal to the current collateral ratio.
+
+Anyone may sell \mbox{\hyperlink{struct_e}{E}} for a personal margin position with equal ratio of \mbox{\hyperlink{struct_c}{C}} and \mbox{\hyperlink{struct_d}{D}}. ~\newline
+Anyone may buy \mbox{\hyperlink{struct_e}{E}} with a personal margin position.
+
+If they only have \mbox{\hyperlink{struct_c}{C}}, then they must use some of \mbox{\hyperlink{struct_c}{C}} to buy \mbox{\hyperlink{struct_d}{D}} first (which will move the price). ~\newline
+If they only have \mbox{\hyperlink{struct_d}{D}}, then they must use some of \mbox{\hyperlink{struct_d}{D}} to buy \mbox{\hyperlink{struct_c}{C}} first (which will also move the price).
+
+Anyone can buy and sell \mbox{\hyperlink{struct_e}{E}} based upon Bancor balances of \mbox{\hyperlink{struct_c}{C}} and (all \mbox{\hyperlink{struct_d}{D}}), they must sell their \mbox{\hyperlink{struct_e}{E}} for a combination of \mbox{\hyperlink{struct_d}{D}} and \mbox{\hyperlink{struct_c}{C}} at current ratio, then sell the \mbox{\hyperlink{struct_c}{C}} or \mbox{\hyperlink{struct_d}{D}} for the other.
+
+Anytime collateral level falls below 1.\+5 selling \mbox{\hyperlink{struct_e}{E}} is blocked and buying of \mbox{\hyperlink{struct_e}{E}} is given a 10\% bonus. ~\newline
+Anyone can convert \mbox{\hyperlink{struct_d}{D}}$<$-\/$>$\mbox{\hyperlink{struct_c}{C}} using Bancor maker configured to maintain price within +/-\/ 5\% of the price feed. 

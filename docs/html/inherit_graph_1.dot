@@ -1,0 +1,15 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3518 [label="__do_message",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3518 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="__future_error_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class____future__error__category.html"];
+  Node3518 -> Node3520 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3520 [label="__generic_error_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class____generic__error__category.html"];
+  Node3518 -> Node3521 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3521 [label="__iostream_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class____iostream__category.html"];
+  Node3518 -> Node3522 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3522 [label="__system_error_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class____system__error__category.html"];
+}

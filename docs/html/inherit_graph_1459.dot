@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="is_error_code_enum\l\< websocketpp::transport\l::debug::error::value \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structis__error__code__enum_3_01websocketpp_1_1transport_1_1debug_1_1error_1_1value_01_4.html"];
+}

@@ -1,0 +1,35 @@
+\hypertarget{internal__exceptions_8hpp}{}\section{libraries/chain/include/aacio/chain/internal\+\_\+exceptions.hpp File Reference}
+\label{internal__exceptions_8hpp}\index{libraries/chain/include/aacio/chain/internal\+\_\+exceptions.\+hpp@{libraries/chain/include/aacio/chain/internal\+\_\+exceptions.\+hpp}}
+{\ttfamily \#include $<$fc/exception/exception.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+Include dependency graph for internal\+\_\+exceptions.\+hpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}(exc\+\_\+name,  seqnum,  msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{internal__exceptions_8hpp_a8ddbf962501d3066ec92d417f3730c8e}\label{internal__exceptions_8hpp_a8ddbf962501d3066ec92d417f3730c8e}} 
+\index{internal\+\_\+exceptions.\+hpp@{internal\+\_\+exceptions.\+hpp}!A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+\index{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}!internal\+\_\+exceptions.\+hpp@{internal\+\_\+exceptions.\+hpp}}
+\subsubsection{\texorpdfstring{A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}{AAC\_DECLARE\_INTERNAL\_EXCEPTION}}
+{\footnotesize\ttfamily \#define A\+A\+C\+\_\+\+D\+E\+C\+L\+A\+R\+E\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{exc\+\_\+name,  }\item[{}]{seqnum,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+FC\_DECLARE\_DERIVED\_EXCEPTION(                                      \(\backslash\)
+      internal\_ ## exc\_name,                                          \(\backslash\)
+      aacio::chain::internal\_exception,                            \(\backslash\)
+      3990000 + seqnum,                                               \(\backslash\)
+      msg                                                             \(\backslash\)
+      )
+\end{DoxyCode}

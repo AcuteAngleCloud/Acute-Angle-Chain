@@ -1,0 +1,127 @@
+.TH "gbench.report" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gbench.report
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBBenchmarkColor\fP"
+.br
+.ti -1c
+.RI "class \fBTestReportDifference\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fBcolor_format\fP (use_color, fmt_str, args, kwargs)"
+.br
+.ti -1c
+.RI "def \fBfind_longest_name\fP (benchmark_list)"
+.br
+.ti -1c
+.RI "def \fBcalculate_change\fP (old_val, new_val)"
+.br
+.ti -1c
+.RI "def \fBgenerate_difference_report\fP (json1, json2, use_color=\fBTrue\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBBC_NONE\fP = \fBBenchmarkColor\fP('NONE', '')"
+.br
+.ti -1c
+.RI "\fBBC_MAGENTA\fP = \fBBenchmarkColor\fP('MAGENTA', '\\033[95m')"
+.br
+.ti -1c
+.RI "\fBBC_CYAN\fP = \fBBenchmarkColor\fP('CYAN', '\\033[96m')"
+.br
+.ti -1c
+.RI "\fBBC_OKBLUE\fP = \fBBenchmarkColor\fP('OKBLUE', '\\033[94m')"
+.br
+.ti -1c
+.RI "\fBBC_HEADER\fP = \fBBenchmarkColor\fP('HEADER', '\\033[92m')"
+.br
+.ti -1c
+.RI "\fBBC_WARNING\fP = \fBBenchmarkColor\fP('WARNING', '\\033[93m')"
+.br
+.ti -1c
+.RI "\fBBC_WHITE\fP = \fBBenchmarkColor\fP('WHITE', '\\033[97m')"
+.br
+.ti -1c
+.RI "\fBBC_FAIL\fP = \fBBenchmarkColor\fP('FAIL', '\\033[91m')"
+.br
+.ti -1c
+.RI "\fBBC_ENDC\fP = \fBBenchmarkColor\fP('ENDC', '\\033[0m')"
+.br
+.ti -1c
+.RI "\fBBC_BOLD\fP = \fBBenchmarkColor\fP('BOLD', '\\033[1m')"
+.br
+.ti -1c
+.RI "\fBBC_UNDERLINE\fP = \fBBenchmarkColor\fP('UNDERLINE', '\\033[4m')"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+report.py - Utilities for reporting statistics about benchmark results
+
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "def gbench\&.report\&.calculate_change ( old_val,  new_val)"
+
+.PP
+.nf
+Return a float representing the decimal change between old_val and new_val.
+
+.fi
+.PP
+ 
+.SS "def gbench\&.report\&.color_format ( use_color,  fmt_str,  args,  kwargs)"
+
+.PP
+.nf
+Return the result of 'fmt_str.format(*args, **kwargs)' after transforming
+'args' and 'kwargs' according to the value of 'use_color'. If 'use_color'
+is False then all color codes in 'args' and 'kwargs' are replaced with
+the empty string.
+
+.fi
+.PP
+ 
+.SS "def gbench\&.report\&.find_longest_name ( benchmark_list)"
+
+.PP
+.nf
+Return the length of the longest benchmark name in a given list of
+benchmark JSON objects
+
+.fi
+.PP
+ 
+.SS "def gbench\&.report\&.generate_difference_report ( json1,  json2,  use_color = \fC\fBTrue\fP\fP)"
+
+.PP
+.nf
+Calculate and report the difference between each test of two benchmarks
+runs specified as 'json1' and 'json2'.
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

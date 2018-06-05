@@ -1,0 +1,69 @@
+.TH "contracts/aaciolib/action.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/action.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aaciolib/action\&.h>\fP
+.br
+\fC#include <aaciolib/datastream\&.hpp>\fP
+.br
+\fC#include <aaciolib/serialize\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::permission_level\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::action\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::action_meta< Account, Name >\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBACTION\fP(CODE,  NAME)   struct NAME : ::\fBaacio::action_meta\fP<CODE, ::aacio::string_to_name(#NAME) >"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBaacio::current_action_data\fP ()"
+.br
+.RI "Interpret the action body as type \fBT\fP\&. "
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBaacio::unpack_action_data\fP ()"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. accounts> void \fBaacio::require_recipient\fP (account_name name, accounts\&.\&.\&. remaining_accounts)"
+.br
+.RI "Verify specified accounts exist in the set of notified accounts\&. "
+.ti -1c
+.RI "void \fBaacio::require_auth\fP (const permission_level &level)"
+.br
+.ti -1c
+.RI "template<typename T , typename\&.\&.\&. Args> void \fBaacio::dispatch_inline\fP (permission_level perm, account_name code, action_name act, void(T::*)(Args\&.\&.\&.), std::tuple< Args\&.\&.\&. > args)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

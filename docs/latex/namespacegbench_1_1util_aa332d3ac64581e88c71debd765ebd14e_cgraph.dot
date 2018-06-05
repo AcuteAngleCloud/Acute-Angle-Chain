@@ -1,0 +1,13 @@
+digraph "gbench.util.check_input_file"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="gbench.util.check_input_file",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="gbench.util.classify\l_input_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacegbench_1_1util.html#a25ee5a7452eb3618b88659be49dc48d8"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="gbench.util.is_executable_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacegbench_1_1util.html#ab892754dc0be3bbe4785bf4610a8cc76"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="gbench.util.is_json_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacegbench_1_1util.html#a2b5de1b1f7c12819da516c50fc1f433b"];
+}

@@ -1,0 +1,45 @@
+.TH "wasm::ReorderLocals" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ReorderLocals
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< PostWalker< ReorderLocals > >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "void \fBvisitFunction\fP (\fBFunction\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitGetLocal\fP (\fBGetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSetLocal\fP (\fBSetLocal\fP *curr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::map\fP< Index, Index > \fBcounts\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< Index, Index > \fBfirstUses\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,54 @@
+.TH "WAST::Reference" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WAST::Reference
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBType\fP { \fBinvalid\fP, \fBname\fP, \fBindex\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBReference\fP (const \fBName\fP &inName)"
+.br
+.ti -1c
+.RI "\fBReference\fP (U32 inIndex)"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   \fBName\fP \fBname\fP"
+.br
+.ti -1c
+.RI "   U32 \fBindex\fP"
+.br
+.ti -1c
+.RI "}; "
+.br
+.ti -1c
+.RI "const Token * \fBtoken\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

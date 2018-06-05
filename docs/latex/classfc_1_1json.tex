@@ -1,0 +1,83 @@
+\hypertarget{classfc_1_1json}{}\section{fc\+:\+:json Class Reference}
+\label{classfc_1_1json}\index{fc\+::json@{fc\+::json}}
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a8554b1c7b658a170d4bc81d4bac798b1}\label{classfc_1_1json_a8554b1c7b658a170d4bc81d4bac798b1}} 
+enum {\bfseries parse\+\_\+type} \{ {\bfseries legacy\+\_\+parser} = 0, 
+{\bfseries strict\+\_\+parser} = 1, 
+{\bfseries relaxed\+\_\+parser} = 2, 
+{\bfseries legacy\+\_\+parser\+\_\+with\+\_\+string\+\_\+doubles} = 3
+ \}
+\item 
+\mbox{\Hypertarget{classfc_1_1json_afbd7971f1c3f78682333330895f02e5d}\label{classfc_1_1json_afbd7971f1c3f78682333330895f02e5d}} 
+enum {\bfseries output\+\_\+formatting} \{ {\bfseries stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles} = 0, 
+{\bfseries legacy\+\_\+generator} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1json_aa1d154cb91a84d420062e5d843e6cec8}\label{classfc_1_1json_aa1d154cb91a84d420062e5d843e6cec8}} 
+static ostream \& {\bfseries to\+\_\+stream} (ostream \&out, const fc\+::string \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_aa4e816a0d095732a787745b879d2f570}\label{classfc_1_1json_aa4e816a0d095732a787745b879d2f570}} 
+static ostream \& {\bfseries to\+\_\+stream} (ostream \&out, const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a09872a21e6aa15d1884ef5c027c69b99}\label{classfc_1_1json_a09872a21e6aa15d1884ef5c027c69b99}} 
+static ostream \& {\bfseries to\+\_\+stream} (ostream \&out, const \mbox{\hyperlink{classstd_1_1vector}{variants}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a31c9582c71579a9531c16c832830d4f4}\label{classfc_1_1json_a31c9582c71579a9531c16c832830d4f4}} 
+static ostream \& {\bfseries to\+\_\+stream} (ostream \&out, const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a901005a3b44077cb8deee9a0a579c5c3}\label{classfc_1_1json_a901005a3b44077cb8deee9a0a579c5c3}} 
+static \mbox{\hyperlink{classfc_1_1variant}{variant}} {\bfseries from\+\_\+string} (const string \&utf8\+\_\+str, parse\+\_\+type ptype=legacy\+\_\+parser)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a2377300f058fba17410e45b98b5c329a}\label{classfc_1_1json_a2377300f058fba17410e45b98b5c329a}} 
+static \mbox{\hyperlink{classstd_1_1vector}{variants}} {\bfseries variants\+\_\+from\+\_\+string} (const string \&utf8\+\_\+str, parse\+\_\+type ptype=legacy\+\_\+parser)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a1fcafc2c5ff61d8d07515610efe2d374}\label{classfc_1_1json_a1fcafc2c5ff61d8d07515610efe2d374}} 
+static string {\bfseries to\+\_\+string} (const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a7a25d70146c0f0edad4171fc19b8964c}\label{classfc_1_1json_a7a25d70146c0f0edad4171fc19b8964c}} 
+static string {\bfseries to\+\_\+pretty\+\_\+string} (const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a5960eb598e76bf89b2ebef163ed2920a}\label{classfc_1_1json_a5960eb598e76bf89b2ebef163ed2920a}} 
+static bool {\bfseries is\+\_\+valid} (const std\+::string \&json\+\_\+str, parse\+\_\+type ptype=legacy\+\_\+parser)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_afcee2fd2c439adb9434ba1c9c9c64f2a}\label{classfc_1_1json_afcee2fd2c439adb9434ba1c9c9c64f2a}} 
+{\footnotesize template$<$typename T $>$ }\\static void {\bfseries save\+\_\+to\+\_\+file} (const \mbox{\hyperlink{struct_t}{T}} \&v, const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&fi, bool pretty=true, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a0ea67bfff912ff1ecb2f1ffe3666fd3d}\label{classfc_1_1json_a0ea67bfff912ff1ecb2f1ffe3666fd3d}} 
+static void {\bfseries save\+\_\+to\+\_\+file} (const \mbox{\hyperlink{classfc_1_1variant}{variant}} \&v, const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&fi, bool pretty=true, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a854731f3eea8b04d279e18a5f7f837c0}\label{classfc_1_1json_a854731f3eea8b04d279e18a5f7f837c0}} 
+static \mbox{\hyperlink{classfc_1_1variant}{variant}} {\bfseries from\+\_\+file} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&p, parse\+\_\+type ptype=legacy\+\_\+parser)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_ae08055e237b498627945d28003a48619}\label{classfc_1_1json_ae08055e237b498627945d28003a48619}} 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{struct_t}{T}} {\bfseries from\+\_\+file} (const \mbox{\hyperlink{classfc_1_1path}{fc\+::path}} \&p, parse\+\_\+type ptype=legacy\+\_\+parser)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_a8d663f952ce9578b85083adbdf78966a}\label{classfc_1_1json_a8d663f952ce9578b85083adbdf78966a}} 
+{\footnotesize template$<$typename T $>$ }\\static string {\bfseries to\+\_\+string} (const \mbox{\hyperlink{struct_t}{T}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_af754342dcb376bf7a4957807b5e1d3da}\label{classfc_1_1json_af754342dcb376bf7a4957807b5e1d3da}} 
+{\footnotesize template$<$typename T $>$ }\\static string {\bfseries to\+\_\+pretty\+\_\+string} (const \mbox{\hyperlink{struct_t}{T}} \&v, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\item 
+\mbox{\Hypertarget{classfc_1_1json_abb0829da2d2b85518510f758e8004301}\label{classfc_1_1json_abb0829da2d2b85518510f758e8004301}} 
+{\footnotesize template$<$typename T $>$ }\\static void {\bfseries save\+\_\+to\+\_\+file} (const \mbox{\hyperlink{struct_t}{T}} \&v, const std\+::string \&p, bool pretty=true, output\+\_\+formatting format=stringify\+\_\+large\+\_\+ints\+\_\+and\+\_\+doubles)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides interface for json serialization.
+
+json strings are always U\+T\+F8 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/io/json.\+hpp\item 
+libraries/fc/src/io/json.\+cpp\end{DoxyCompactItemize}

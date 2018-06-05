@@ -1,0 +1,42 @@
+.TH "aacio::mongo_db_plugin" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::mongo_db_plugin
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mongo_db_plugin\&.hpp>\fP
+.PP
+Inherits \fBappbase::plugin< mongo_db_plugin >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBset_program_options\fP (options_description &cli, options_description &cfg) override"
+.br
+.ti -1c
+.RI "void \fBplugin_initialize\fP (const variables_map &options)"
+.br
+.ti -1c
+.RI "void \fBplugin_startup\fP ()"
+.br
+.ti -1c
+.RI "void \fBplugin_shutdown\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Provides persistence to MongoDB for: Blocks Transactions Actions Accounts
+.PP
+See data dictionary (DB Schema Definition - AAC API) for description of MongoDB schema\&.
+.PP
+The goal ultimately is for all chainbase data to be mirrored in MongoDB via a delayed node processing irreversible blocks\&. Currently, only Blocks, Transactions, Messages, and Account balance it mirrored\&. Chainbase is being rewritten to be multi-threaded\&. Once chainbase is stable, integration directly with a mirror database approach can be followed removing the need for the direct processing of Blocks employed with this implementation\&.
+.PP
+If MongoDB env not available (#ifndef MONGODB) this plugin is a no-op\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

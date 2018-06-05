@@ -1,0 +1,641 @@
+.TH "X< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+X< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::function< void(\fBX\fP &)> \fBcallback_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &x)"
+.br
+.ti -1c
+.RI "\fBX\fP (char \fBarg\fP)"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (const \fBX\fP &x)"
+.br
+.ti -1c
+.RI "void \fBInit\fP (char \fBarg\fP)"
+.br
+.ti -1c
+.RI "char \fBget\fP () const"
+.br
+.ti -1c
+.RI "void \fBset\fP (char \fBarg\fP)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i, int j)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (std::initializer_list< int > il)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&)"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&) noexcept"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &x)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i, int j)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i, int j)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest\fP ()"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest\fP ()"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest\fP ()"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest\fP ()"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBY\fP &y)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBY\fP &&y)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (const \fBY\fP &y)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (\fBY\fP &&y)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)=default"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&)=default"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)=default"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBT\fP const &)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i, int j)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (std::initializer_list< int > il)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&)"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&)"
+.br
+.ti -1c
+.RI "\fBX\fP (int &&)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &x)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &x)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i, int j)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i, int j)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () noexcept"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const"
+.br
+.ti -1c
+.RI "int \fBtest\fP ()"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (\fBX\fP &&x)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (const \fBY\fP &y)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (\fBY\fP &&y)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (const \fBY\fP &y)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (\fBY\fP &&y)"
+.br
+.ti -1c
+.RI "\fBX\fP (const \fBX\fP &)=delete"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &"
+.br
+.ti -1c
+.RI "constexpr int \fBtest\fP () const &&"
+.br
+.ti -1c
+.RI "int \fBtest\fP () &&"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)=default"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&)=default"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&x)=default"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&)=default"
+.br
+.ti -1c
+.RI "constexpr const int & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "constexpr int & \fBoperator*\fP ()"
+.br
+.ti -1c
+.RI "constexpr const int * \fBget\fP () const"
+.br
+.ti -1c
+.RI "constexpr int * \fBget\fP ()"
+.br
+.ti -1c
+.RI "constexpr const int * \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "constexpr int * \fBoperator\->\fP ()"
+.br
+.ti -1c
+.RI "constexpr \fBX\fP (int i)"
+.br
+.ti -1c
+.RI "\fBX\fP (int)"
+.br
+.ti -1c
+.RI "\fBX\fP (\fBX\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBX\fP & \fBoperator=\fP (\fBX\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBX\fP (int)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::map\fP< int, \fBX\fP > \fBm\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< int, \fBX\fP >::iterator \fBi\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< int, \fBX\fP >::const_iterator \fBci\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< int, \fBX\fP >::reverse_iterator \fBri\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< int, \fBX\fP >::const_reverse_iterator \fBcri\fP"
+.br
+.ti -1c
+.RI "\fBstd::multimap\fP< int, \fBX\fP > \fBm\fP"
+.br
+.ti -1c
+.RI "\fBstd::multimap\fP< int, \fBX\fP >::iterator \fBi\fP"
+.br
+.ti -1c
+.RI "\fBstd::multimap\fP< int, \fBX\fP >::const_iterator \fBci\fP"
+.br
+.ti -1c
+.RI "\fBstd::multimap\fP< int, \fBX\fP >::reverse_iterator \fBri\fP"
+.br
+.ti -1c
+.RI "\fBstd::multimap\fP< int, \fBX\fP >::const_reverse_iterator \fBcri\fP"
+.br
+.ti -1c
+.RI "std::forward_list< \fBX\fP > \fBq\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBX\fP > \fBq\fP"
+.br
+.ti -1c
+.RI "int \fBi_\fP"
+.br
+.ti -1c
+.RI "\fBT\fP \fBt\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBthrow_now\fP = false"
+.br
+.ti -1c
+.RI "static bool \fBdtor_called\fP = false"
+.br
+.ti -1c
+.RI "static unsigned \fBdtor_called\fP"
+.br
+.ti -1c
+.RI "static int \fBalive\fP = 0"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "constexpr bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "constexpr bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "constexpr bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "constexpr bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "constexpr bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "constexpr bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBX\fP &x, const \fBX\fP &y)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

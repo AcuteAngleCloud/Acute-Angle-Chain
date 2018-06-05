@@ -1,0 +1,534 @@
+.TH "aacio::chain::wasm_validations::op_constrainers" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::wasm_validations::op_constrainers
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::wasm_ops::op_types< blacklist_validator >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBblock_t\fP = wasm_ops::block< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBloop_t\fP = wasm_ops::loop< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBif__t\fP = wasm_ops::if_< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBelse__t\fP = wasm_ops::else_< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBend_t\fP = wasm_ops::end< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBunreachable_t\fP = wasm_ops::unreachable< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBbr_t\fP = wasm_ops::br< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBbr_if_t\fP = wasm_ops::br_if< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBbr_table_t\fP = wasm_ops::br_table< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBreturn__t\fP = wasm_ops::return_< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBcall_t\fP = wasm_ops::call< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBcall_indirect_t\fP = wasm_ops::call_indirect< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBdrop_t\fP = wasm_ops::drop< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBselect_t\fP = wasm_ops::select< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBget_local_t\fP = wasm_ops::get_local< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBset_local_t\fP = wasm_ops::set_local< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBtee_local_t\fP = wasm_ops::tee_local< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBget_global_t\fP = wasm_ops::get_global< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBset_global_t\fP = wasm_ops::set_global< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBgrow_memory_t\fP = wasm_ops::grow_memory< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBcurrent_memory_t\fP = wasm_ops::current_memory< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBnop_t\fP = wasm_ops::nop< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load_t\fP = wasm_ops::i32_load< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load_t\fP = wasm_ops::i64_load< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_load_t\fP = wasm_ops::f32_load< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_load_t\fP = wasm_ops::f64_load< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load8_s_t\fP = wasm_ops::i32_load8_s< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load8_u_t\fP = wasm_ops::i32_load8_u< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load16_s_t\fP = wasm_ops::i32_load16_s< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load16_u_t\fP = wasm_ops::i32_load16_u< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load8_s_t\fP = wasm_ops::i64_load8_s< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load8_u_t\fP = wasm_ops::i64_load8_u< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load16_s_t\fP = wasm_ops::i64_load16_s< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load16_u_t\fP = wasm_ops::i64_load16_u< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load32_s_t\fP = wasm_ops::i64_load32_s< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load32_u_t\fP = wasm_ops::i64_load32_u< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_store_t\fP = wasm_ops::i32_store< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store_t\fP = wasm_ops::i64_store< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_store_t\fP = wasm_ops::f32_store< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_store_t\fP = wasm_ops::f64_store< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_store8_t\fP = wasm_ops::i32_store8< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_store16_t\fP = wasm_ops::i32_store16< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store8_t\fP = wasm_ops::i64_store8< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store16_t\fP = wasm_ops::i64_store16< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store32_t\fP = wasm_ops::i64_store32< \fBlarge_offset_validator\fP, \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_const_t\fP = wasm_ops::i32_const< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_const_t\fP = wasm_ops::i64_const< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_const_t\fP = wasm_ops::f32_const< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_const_t\fP = wasm_ops::f64_const< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_eqz_t\fP = wasm_ops::i32_eqz< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_eq_t\fP = wasm_ops::i32_eq< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ne_t\fP = wasm_ops::i32_ne< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_lt_s_t\fP = wasm_ops::i32_lt_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_lt_u_t\fP = wasm_ops::i32_lt_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_gt_s_t\fP = wasm_ops::i32_gt_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_gt_u_t\fP = wasm_ops::i32_gt_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_le_s_t\fP = wasm_ops::i32_le_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_le_u_t\fP = wasm_ops::i32_le_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ge_s_t\fP = wasm_ops::i32_ge_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ge_u_t\fP = wasm_ops::i32_ge_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_clz_t\fP = wasm_ops::i32_clz< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ctz_t\fP = wasm_ops::i32_ctz< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_popcnt_t\fP = wasm_ops::i32_popcnt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_add_t\fP = wasm_ops::i32_add< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_sub_t\fP = wasm_ops::i32_sub< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_mul_t\fP = wasm_ops::i32_mul< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_div_s_t\fP = wasm_ops::i32_div_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_div_u_t\fP = wasm_ops::i32_div_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rem_s_t\fP = wasm_ops::i32_rem_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rem_u_t\fP = wasm_ops::i32_rem_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_and_t\fP = wasm_ops::i32_and< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_or_t\fP = wasm_ops::i32_or< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_xor_t\fP = wasm_ops::i32_xor< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_shl_t\fP = wasm_ops::i32_shl< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_shr_s_t\fP = wasm_ops::i32_shr_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_shr_u_t\fP = wasm_ops::i32_shr_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rotl_t\fP = wasm_ops::i32_rotl< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rotr_t\fP = wasm_ops::i32_rotr< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_eqz_t\fP = wasm_ops::i64_eqz< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_eq_t\fP = wasm_ops::i64_eq< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ne_t\fP = wasm_ops::i64_ne< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_lt_s_t\fP = wasm_ops::i64_lt_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_lt_u_t\fP = wasm_ops::i64_lt_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_gt_s_t\fP = wasm_ops::i64_gt_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_gt_u_t\fP = wasm_ops::i64_gt_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_le_s_t\fP = wasm_ops::i64_le_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_le_u_t\fP = wasm_ops::i64_le_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ge_s_t\fP = wasm_ops::i64_ge_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ge_u_t\fP = wasm_ops::i64_ge_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_clz_t\fP = wasm_ops::i64_clz< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ctz_t\fP = wasm_ops::i64_ctz< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_popcnt_t\fP = wasm_ops::i64_popcnt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_add_t\fP = wasm_ops::i64_add< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_sub_t\fP = wasm_ops::i64_sub< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_mul_t\fP = wasm_ops::i64_mul< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_div_s_t\fP = wasm_ops::i64_div_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_div_u_t\fP = wasm_ops::i64_div_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rem_s_t\fP = wasm_ops::i64_rem_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rem_u_t\fP = wasm_ops::i64_rem_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_and_t\fP = wasm_ops::i64_and< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_or_t\fP = wasm_ops::i64_or< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_xor_t\fP = wasm_ops::i64_xor< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_shl_t\fP = wasm_ops::i64_shl< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_shr_s_t\fP = wasm_ops::i64_shr_s< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_shr_u_t\fP = wasm_ops::i64_shr_u< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rotl_t\fP = wasm_ops::i64_rotl< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rotr_t\fP = wasm_ops::i64_rotr< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_eq_t\fP = wasm_ops::f32_eq< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_ne_t\fP = wasm_ops::f32_ne< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_lt_t\fP = wasm_ops::f32_lt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_gt_t\fP = wasm_ops::f32_gt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_le_t\fP = wasm_ops::f32_le< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_ge_t\fP = wasm_ops::f32_ge< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_eq_t\fP = wasm_ops::f64_eq< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_ne_t\fP = wasm_ops::f64_ne< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_lt_t\fP = wasm_ops::f64_lt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_gt_t\fP = wasm_ops::f64_gt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_le_t\fP = wasm_ops::f64_le< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_ge_t\fP = wasm_ops::f64_ge< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_abs_t\fP = wasm_ops::f32_abs< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_neg_t\fP = wasm_ops::f32_neg< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_ceil_t\fP = wasm_ops::f32_ceil< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_floor_t\fP = wasm_ops::f32_floor< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_trunc_t\fP = wasm_ops::f32_trunc< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_nearest_t\fP = wasm_ops::f32_nearest< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_sqrt_t\fP = wasm_ops::f32_sqrt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_add_t\fP = wasm_ops::f32_add< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_sub_t\fP = wasm_ops::f32_sub< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_mul_t\fP = wasm_ops::f32_mul< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_div_t\fP = wasm_ops::f32_div< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_min_t\fP = wasm_ops::f32_min< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_max_t\fP = wasm_ops::f32_max< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_copysign_t\fP = wasm_ops::f32_copysign< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_abs_t\fP = wasm_ops::f64_abs< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_neg_t\fP = wasm_ops::f64_neg< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_ceil_t\fP = wasm_ops::f64_ceil< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_floor_t\fP = wasm_ops::f64_floor< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_trunc_t\fP = wasm_ops::f64_trunc< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_nearest_t\fP = wasm_ops::f64_nearest< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_sqrt_t\fP = wasm_ops::f64_sqrt< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_add_t\fP = wasm_ops::f64_add< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_sub_t\fP = wasm_ops::f64_sub< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_mul_t\fP = wasm_ops::f64_mul< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_div_t\fP = wasm_ops::f64_div< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_min_t\fP = wasm_ops::f64_min< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_max_t\fP = wasm_ops::f64_max< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_copysign_t\fP = wasm_ops::f64_copysign< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_s_f32_t\fP = wasm_ops::i32_trunc_s_f32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_u_f32_t\fP = wasm_ops::i32_trunc_u_f32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_s_f64_t\fP = wasm_ops::i32_trunc_s_f64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_u_f64_t\fP = wasm_ops::i32_trunc_u_f64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_s_f32_t\fP = wasm_ops::i64_trunc_s_f32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_u_f32_t\fP = wasm_ops::i64_trunc_u_f32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_s_f64_t\fP = wasm_ops::i64_trunc_s_f64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_u_f64_t\fP = wasm_ops::i64_trunc_u_f64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_s_i32_t\fP = wasm_ops::f32_convert_s_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_u_i32_t\fP = wasm_ops::f32_convert_u_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_s_i64_t\fP = wasm_ops::f32_convert_s_i64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_u_i64_t\fP = wasm_ops::f32_convert_u_i64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_demote_f64_t\fP = wasm_ops::f32_demote_f64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_s_i32_t\fP = wasm_ops::f64_convert_s_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_u_i32_t\fP = wasm_ops::f64_convert_u_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_s_i64_t\fP = wasm_ops::f64_convert_s_i64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_u_i64_t\fP = wasm_ops::f64_convert_u_i64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_promote_f32_t\fP = wasm_ops::f64_promote_f32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_wrap_i64_t\fP = wasm_ops::i32_wrap_i64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_extend_s_i32_t\fP = wasm_ops::i64_extend_s_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_extend_u_i32_t\fP = wasm_ops::i64_extend_u_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_reinterpret_f32_t\fP = wasm_ops::i32_reinterpret_f32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_reinterpret_i32_t\fP = wasm_ops::f32_reinterpret_i32< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_reinterpret_f64_t\fP = wasm_ops::i64_reinterpret_f64< \fBwhitelist_validator\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_reinterpret_i64_t\fP = wasm_ops::f64_reinterpret_i64< \fBwhitelist_validator\fP >"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

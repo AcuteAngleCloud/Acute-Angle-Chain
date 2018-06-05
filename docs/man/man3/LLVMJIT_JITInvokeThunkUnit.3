@@ -1,0 +1,34 @@
+.TH "LLVMJIT::JITInvokeThunkUnit" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LLVMJIT::JITInvokeThunkUnit
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBLLVMJIT::JITUnit\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBJITInvokeThunkUnit\fP (const \fBFunctionType\fP *inFunctionType)"
+.br
+.ti -1c
+.RI "void \fBnotifySymbolLoaded\fP (const char *name, Uptr baseAddress, Uptr numBytes, \fBstd::map\fP< U32, U32 > &&offsetToOpIndexMap) override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBFunctionType\fP * \fBfunctionType\fP"
+.br
+.ti -1c
+.RI "\fBJITSymbol\fP * \fBsymbol\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

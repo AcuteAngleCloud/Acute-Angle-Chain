@@ -1,0 +1,11 @@
+digraph "websocketpp::frame::byte_mask_circ"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node12 [label="websocketpp::frame\l::byte_mask_circ",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="websocketpp::frame\l::byte_mask_circ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a3e0ba89b475df758d84dab352a76c3b3",tooltip="Circular byte aligned mask/unmask. "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="websocketpp::frame\l::circshift_prepared_key",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1frame.html#a76bf120d54d47d760eb8bd803572b004",tooltip="circularly shifts the supplied prepared masking key by offset bytes "];
+}

@@ -1,0 +1,49 @@
+\hypertarget{structwasm_1_1_relooper_jump_threading}{}\section{wasm\+:\+:Relooper\+Jump\+Threading Struct Reference}
+\label{structwasm_1_1_relooper_jump_threading}\index{wasm\+::\+Relooper\+Jump\+Threading@{wasm\+::\+Relooper\+Jump\+Threading}}
+
+
+Inheritance diagram for wasm\+:\+:Relooper\+Jump\+Threading\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Relooper\+Jump\+Threading\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_a435d1afc8add9892954c887dc65f720d}\label{structwasm_1_1_relooper_jump_threading_a435d1afc8add9892954c887dc65f720d}} 
+bool {\bfseries is\+Function\+Parallel} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_aa48a11721d32cea495dbb6c2e072c7f3}\label{structwasm_1_1_relooper_jump_threading_aa48a11721d32cea495dbb6c2e072c7f3}} 
+\mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$ {\bfseries create} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_aaba94949b685634b4fa9acb67662cd16}\label{structwasm_1_1_relooper_jump_threading_aaba94949b685634b4fa9acb67662cd16}} 
+void {\bfseries visit\+Block} (\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_adf21005bb1dd1166d69dfa58b4036152}\label{structwasm_1_1_relooper_jump_threading_adf21005bb1dd1166d69dfa58b4036152}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_af767c09918175c7467db56b0f9f5ebed}\label{structwasm_1_1_relooper_jump_threading_af767c09918175c7467db56b0f9f5ebed}} 
+void {\bfseries visit\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$curr)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_a9c6ed87fb73e85da4538a4b8748ccc40}\label{structwasm_1_1_relooper_jump_threading_a9c6ed87fb73e85da4538a4b8748ccc40}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ Index, Index $>$ {\bfseries label\+Checks}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_a3db187454edacd764fcbe0fe69b3dc7e}\label{structwasm_1_1_relooper_jump_threading_a3db187454edacd764fcbe0fe69b3dc7e}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ Index, Index $>$ {\bfseries label\+Sets}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_a4b69d6cbc6835f78f8525acd1885aff3}\label{structwasm_1_1_relooper_jump_threading_a4b69d6cbc6835f78f8525acd1885aff3}} 
+Index {\bfseries label\+Index}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_relooper_jump_threading_a62d88e97c1c22277838851b9b6f7326e}\label{structwasm_1_1_relooper_jump_threading_a62d88e97c1c22277838851b9b6f7326e}} 
+Index {\bfseries new\+Name\+Counter} = 0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/passes/Relooper\+Jump\+Threading.\+cpp\end{DoxyCompactItemize}

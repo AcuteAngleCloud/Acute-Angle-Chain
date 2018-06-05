@@ -1,0 +1,9 @@
+digraph "aacio::diveq"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="aacio::diveq",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="diveq_i128",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__mathcapi.html#gad70a23703654281749410aef05c85c74",tooltip="Divide two 128 unsigned bit integers and throws an exception in case of invalid pointers. "];
+}

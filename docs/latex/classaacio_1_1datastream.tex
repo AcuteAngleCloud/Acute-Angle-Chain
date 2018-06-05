@@ -1,0 +1,203 @@
+\hypertarget{classaacio_1_1datastream}{}\section{aacio\+:\+:datastream$<$ T $>$ Class Template Reference}
+\label{classaacio_1_1datastream}\index{aacio\+::datastream$<$ T $>$@{aacio\+::datastream$<$ T $>$}}
+
+
+\mbox{\hyperlink{struct_a}{A}} data stream for reading and writing data in the form of bytes.  
+
+
+
+
+{\ttfamily \#include $<$datastream.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1datastream_af8d0d24cd68febccc51c7f447efead4e}\label{classaacio_1_1datastream_af8d0d24cd68febccc51c7f447efead4e}} 
+{\bfseries datastream} (\mbox{\hyperlink{struct_t}{T}} start, size\+\_\+t s)
+\item 
+void \mbox{\hyperlink{classaacio_1_1datastream_a61b35e6cf749800d83fb8623ae59572d}{skip}} (size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Skips a specific number of bytes from this stream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaacio_1_1datastream_a5dd353d48ab5fd7953182198b4cfb849}{read}} (char $\ast$d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Reads a specified number of bytes from this stream into a buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaacio_1_1datastream_a18871fe58368deca0fd61d0fd7616755}{write}} (const char $\ast$d, size\+\_\+t s)
+\begin{DoxyCompactList}\small\item\em Writes a specified number of bytes into the stream from a buffer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaacio_1_1datastream_aae43a09979f5e484a02d86b8a17a2587}{put}} (char c)
+\begin{DoxyCompactList}\small\item\em Writes a byte into the stream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaacio_1_1datastream_a57d58fd66643f7ba9f1058a01e36fa38}{get}} (unsigned char \&c)
+\begin{DoxyCompactList}\small\item\em Reads a byte from the stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaacio_1_1datastream_ad2a71d3f68235efe1c5ff9998f5ed249}\label{classaacio_1_1datastream_ad2a71d3f68235efe1c5ff9998f5ed249}} 
+bool {\bfseries get} (char \&c)
+\item 
+\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{classaacio_1_1datastream_a8870b1737d81ad372b45f1a2f097d119}{pos}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the current position of the stream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaacio_1_1datastream_aa5bd3e0ccdbd2cc81fe0e7e906a05832}\label{classaacio_1_1datastream_aa5bd3e0ccdbd2cc81fe0e7e906a05832}} 
+bool {\bfseries valid} () const
+\item 
+bool \mbox{\hyperlink{classaacio_1_1datastream_af1b27cb7b6b4fbf6d13b2512d1f7f55b}{seekp}} (size\+\_\+t p)
+\begin{DoxyCompactList}\small\item\em Sets the position within the current stream. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classaacio_1_1datastream_a8cfb6fd8d13e7fa5e146007b77b16ac3}{tellp}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position within the current stream. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classaacio_1_1datastream_a2d12bc92e24b2621cba916b188428aff}{remaining}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of remaining bytes that can be read/skipped. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class aacio\+::datastream$<$ T $>$}
+
+\mbox{\hyperlink{struct_a}{A}} data stream for reading and writing data in the form of bytes. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1datastream_a57d58fd66643f7ba9f1058a01e36fa38}\label{classaacio_1_1datastream_a57d58fd66643f7ba9f1058a01e36fa38}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!get@{get}}
+\index{get@{get}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::get (\begin{DoxyParamCaption}\item[{unsigned char \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads a byte from the stream. 
+
+Reads a byte from the stream 
+\begin{DoxyParams}{Parameters}
+{\em c} & reference to destination byte \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1datastream_a8870b1737d81ad372b45f1a2f097d119}\label{classaacio_1_1datastream_a8870b1737d81ad372b45f1a2f097d119}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!pos@{pos}}
+\index{pos@{pos}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{pos()}{pos()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the current position of the stream. 
+
+Retrieves the current position of the stream \begin{DoxyReturn}{Returns}
+the current position of the stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1datastream_aae43a09979f5e484a02d86b8a17a2587}\label{classaacio_1_1datastream_aae43a09979f5e484a02d86b8a17a2587}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!put@{put}}
+\index{put@{put}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::put (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a byte into the stream. 
+
+Writes a byte into the stream 
+\begin{DoxyParams}{Parameters}
+{\em c} & byte to write \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classaacio_1_1datastream_a5dd353d48ab5fd7953182198b4cfb849}\label{classaacio_1_1datastream_a5dd353d48ab5fd7953182198b4cfb849}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!read@{read}}
+\index{read@{read}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::read (\begin{DoxyParamCaption}\item[{char $\ast$}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads a specified number of bytes from this stream into a buffer. 
+
+Reads a specified number of bytes from the stream into a buffer 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the destination buffer \\
+\hline
+{\em s} & the number of bytes to read \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classaacio_1_1datastream_a2d12bc92e24b2621cba916b188428aff}\label{classaacio_1_1datastream_a2d12bc92e24b2621cba916b188428aff}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!remaining@{remaining}}
+\index{remaining@{remaining}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{remaining()}{remaining()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+size\+\_\+t \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::remaining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of remaining bytes that can be read/skipped. 
+
+Returns the number of remaining bytes that can be read/skipped \begin{DoxyReturn}{Returns}
+number of remaining bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1datastream_af1b27cb7b6b4fbf6d13b2512d1f7f55b}\label{classaacio_1_1datastream_af1b27cb7b6b4fbf6d13b2512d1f7f55b}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!seekp@{seekp}}
+\index{seekp@{seekp}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{seekp()}{seekp()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::seekp (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the position within the current stream. 
+
+Sets the position within the current stream 
+\begin{DoxyParams}{Parameters}
+{\em p} & offset relative to the origin \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1datastream_a61b35e6cf749800d83fb8623ae59572d}\label{classaacio_1_1datastream_a61b35e6cf749800d83fb8623ae59572d}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!skip@{skip}}
+\index{skip@{skip}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{skip()}{skip()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+void \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::skip (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Skips a specific number of bytes from this stream. 
+
+Skips a specified number of bytes from this stream 
+\begin{DoxyParams}{Parameters}
+{\em s} & The number of bytes to skip \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1datastream_a8cfb6fd8d13e7fa5e146007b77b16ac3}\label{classaacio_1_1datastream_a8cfb6fd8d13e7fa5e146007b77b16ac3}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!tellp@{tellp}}
+\index{tellp@{tellp}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{tellp()}{tellp()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+size\+\_\+t \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::tellp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the position within the current stream. 
+
+Gets the position within the current stream \begin{DoxyReturn}{Returns}
+p the position within the current stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1datastream_a18871fe58368deca0fd61d0fd7616755}\label{classaacio_1_1datastream_a18871fe58368deca0fd61d0fd7616755}} 
+\index{aacio\+::datastream@{aacio\+::datastream}!write@{write}}
+\index{write@{write}!aacio\+::datastream@{aacio\+::datastream}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classaacio_1_1datastream}{aacio\+::datastream}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{d,  }\item[{size\+\_\+t}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a specified number of bytes into the stream from a buffer. 
+
+Writes a specified number of bytes into the stream from a buffer 
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the source buffer \\
+\hline
+{\em s} & The number of bytes to write \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aaciolib/datastream.\+hpp\end{DoxyCompactItemize}

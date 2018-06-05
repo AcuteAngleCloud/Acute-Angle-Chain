@@ -1,0 +1,12 @@
+digraph "plugins/account_history_plugin/include/aacio/account_history_plugin/account_history_plugin.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node190 [label="plugins/account_history\l_plugin/include/aacio\l/account_history_plugin\l/account_history_plugin.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node190 -> Node191 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node191 [label="plugins/account_history\l_api_plugin/include/aacio\l/account_history_api_plugin\l/account_history_api_plugin.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$account__history__api__plugin_8hpp.html"];
+  Node191 -> Node192 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node192 [label="plugins/account_history\l_api_plugin/account_history\l_api_plugin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$account__history__api__plugin_8cpp.html"];
+  Node190 -> Node193 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node193 [label="plugins/account_history\l_plugin/account_history\l_plugin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$account__history__plugin_8cpp.html"];
+}

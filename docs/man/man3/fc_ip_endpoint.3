@@ -1,0 +1,57 @@
+.TH "fc::ip::endpoint" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::ip::endpoint
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBendpoint\fP (const \fBaddress\fP &i, uint16_t p=0)"
+.br
+.ti -1c
+.RI "\fBoperator string\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_port\fP (uint16_t p)"
+.br
+.ti -1c
+.RI "uint16_t \fBport\fP () const"
+.br
+.ti -1c
+.RI "const \fBaddress\fP & \fBget_address\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBendpoint\fP \fBfrom_string\fP (const string &s)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBendpoint\fP &a, const \fBendpoint\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBendpoint\fP &a, const \fBendpoint\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBendpoint\fP &a, const \fBendpoint\fP &b)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBendpoint\fP fc::ip::endpoint::from_string (const string & s)\fC [static]\fP"
+Converts 'IP:PORT' to an endpoint 
+.SS "fc::ip::endpoint::operator string () const"
+returns 'IP:PORT' 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

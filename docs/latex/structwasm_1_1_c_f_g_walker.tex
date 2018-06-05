@@ -1,0 +1,111 @@
+\hypertarget{structwasm_1_1_c_f_g_walker}{}\section{wasm\+:\+:C\+F\+G\+Walker$<$ Sub\+Type, Visitor\+Type, Contents $>$ Struct Template Reference}
+\label{structwasm_1_1_c_f_g_walker}\index{wasm\+::\+C\+F\+G\+Walker$<$ Sub\+Type, Visitor\+Type, Contents $>$@{wasm\+::\+C\+F\+G\+Walker$<$ Sub\+Type, Visitor\+Type, Contents $>$}}
+
+
+Inheritance diagram for wasm\+:\+:C\+F\+G\+Walker$<$ Sub\+Type, Visitor\+Type, Contents $>$\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:C\+F\+G\+Walker$<$ Sub\+Type, Visitor\+Type, Contents $>$\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a175ad17e1d5e4fa40bf245d332487935}\label{structwasm_1_1_c_f_g_walker_a175ad17e1d5e4fa40bf245d332487935}} 
+\mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ {\bfseries make\+Basic\+Block} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a71df4a1bfa7264d74d49d682f9b35b8b}\label{structwasm_1_1_c_f_g_walker_a71df4a1bfa7264d74d49d682f9b35b8b}} 
+void {\bfseries start\+Basic\+Block} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_af3f898139059e0721c01e996f01ff16d}\label{structwasm_1_1_c_f_g_walker_af3f898139059e0721c01e996f01ff16d}} 
+void {\bfseries start\+Unreachable\+Block} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a98df4b2df06334d30b0f848f04faebf3}\label{structwasm_1_1_c_f_g_walker_a98df4b2df06334d30b0f848f04faebf3}} 
+void {\bfseries link} (\mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$from, \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$to)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a1331a1b36457fd888c88e0997115b0d8}\label{structwasm_1_1_c_f_g_walker_a1331a1b36457fd888c88e0997115b0d8}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_ac82d95e490350924c50ca67dbadbb120}\label{structwasm_1_1_c_f_g_walker_ac82d95e490350924c50ca67dbadbb120}} 
+\mbox{\hyperlink{classstd_1_1unordered__set}{std\+::unordered\+\_\+set}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ $>$ {\bfseries find\+Live\+Blocks} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a71140cde5c2af8144f297c944a128365}\label{structwasm_1_1_c_f_g_walker_a71140cde5c2af8144f297c944a128365}} 
+void {\bfseries unlink\+Dead\+Blocks} (\mbox{\hyperlink{classstd_1_1unordered__set}{std\+::unordered\+\_\+set}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$$>$ alive)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_afe556c459d0666f0be8649ca8b5ffc30}\label{structwasm_1_1_c_f_g_walker_afe556c459d0666f0be8649ca8b5ffc30}} 
+void {\bfseries generate\+Debug\+Ids} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_aef223af69f6c58311bac02f8af1b96ce}\label{structwasm_1_1_c_f_g_walker_aef223af69f6c58311bac02f8af1b96ce}} 
+void {\bfseries dump\+C\+FG} (std\+::string message)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a3d2003c198e75964e8fbb3f585d70bf1}\label{structwasm_1_1_c_f_g_walker_a3d2003c198e75964e8fbb3f585d70bf1}} 
+static void {\bfseries do\+Start\+Unreachable\+Block} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_ab2394c8d592cf03600e21590bd4507f0}\label{structwasm_1_1_c_f_g_walker_ab2394c8d592cf03600e21590bd4507f0}} 
+static void {\bfseries do\+End\+Block} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a1d3a00fe862cb0d2081f59fb4c55ad21}\label{structwasm_1_1_c_f_g_walker_a1d3a00fe862cb0d2081f59fb4c55ad21}} 
+static void {\bfseries do\+Start\+If\+True} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_afceb8f90cf826f2dc3ffbfa0d9cb8d17}\label{structwasm_1_1_c_f_g_walker_afceb8f90cf826f2dc3ffbfa0d9cb8d17}} 
+static void {\bfseries do\+Start\+If\+False} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_ac094d3378fecf7af046c0c150ed289ca}\label{structwasm_1_1_c_f_g_walker_ac094d3378fecf7af046c0c150ed289ca}} 
+static void {\bfseries do\+End\+If} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_ab4e973e3d6ce62cab99ada32aff57d6d}\label{structwasm_1_1_c_f_g_walker_ab4e973e3d6ce62cab99ada32aff57d6d}} 
+static void {\bfseries do\+Start\+Loop} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a7f0b67cb44759626069b58aab061e9eb}\label{structwasm_1_1_c_f_g_walker_a7f0b67cb44759626069b58aab061e9eb}} 
+static void {\bfseries do\+End\+Loop} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_afd77f6d4ff56f05c0a7a76fce9b7045b}\label{structwasm_1_1_c_f_g_walker_afd77f6d4ff56f05c0a7a76fce9b7045b}} 
+static void {\bfseries do\+End\+Break} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a903506016e652f313931dc50a0bfeea5}\label{structwasm_1_1_c_f_g_walker_a903506016e652f313931dc50a0bfeea5}} 
+static void {\bfseries do\+End\+Switch} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_aa7bb04730fae6ce768e5fd0169841ce7}\label{structwasm_1_1_c_f_g_walker_aa7bb04730fae6ce768e5fd0169841ce7}} 
+static void {\bfseries scan} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a78d7db57b19465cde51de1a4e5d7cb71}\label{structwasm_1_1_c_f_g_walker_a78d7db57b19465cde51de1a4e5d7cb71}} 
+\mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ {\bfseries entry}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a80f12f52acc3743c813bf8765e96099c}\label{structwasm_1_1_c_f_g_walker_a80f12f52acc3743c813bf8765e96099c}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $>$ $>$ {\bfseries basic\+Blocks}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a2123191833d65ffa66e45d007f1f2f41}\label{structwasm_1_1_c_f_g_walker_a2123191833d65ffa66e45d007f1f2f41}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ $>$ {\bfseries loop\+Tops}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_ab9c6cf1f91a02ab17a5f2b1085b1c7be}\label{structwasm_1_1_c_f_g_walker_ab9c6cf1f91a02ab17a5f2b1085b1c7be}} 
+\mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ {\bfseries curr\+Basic\+Block}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a304ad5e5a58d935a92b74a7e32b46450}\label{structwasm_1_1_c_f_g_walker_a304ad5e5a58d935a92b74a7e32b46450}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ $>$ $>$ {\bfseries branches}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a0aba244d605dd7d35c9427812659b2dd}\label{structwasm_1_1_c_f_g_walker_a0aba244d605dd7d35c9427812659b2dd}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ $>$ {\bfseries if\+Stack}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_a1a35ae1b91925912395ea7d7ee3a77b3}\label{structwasm_1_1_c_f_g_walker_a1a35ae1b91925912395ea7d7ee3a77b3}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$ $>$ {\bfseries loop\+Stack}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_c_f_g_walker_aad19dda9a6d9ec3fb0955d6f9dc4e62f}\label{structwasm_1_1_c_f_g_walker_aad19dda9a6d9ec3fb0955d6f9dc4e62f}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_c_f_g_walker_1_1_basic_block}{Basic\+Block}} $\ast$, size\+\_\+t $>$ {\bfseries debug\+Ids}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/cfg/cfg-\/traversal.\+h\end{DoxyCompactItemize}

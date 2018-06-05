@@ -1,0 +1,56 @@
+.TH "benchmark::ConsoleReporter" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+benchmark::ConsoleReporter
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBbenchmark::BenchmarkReporter\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBOutputOptions\fP { \fBOO_None\fP, \fBOO_Color\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConsoleReporter\fP (OutputOptions color_output=OO_Color)"
+.br
+.ti -1c
+.RI "virtual bool \fBReportContext\fP (const \fBContext\fP &context)"
+.br
+.ti -1c
+.RI "virtual void \fBReportRuns\fP (const \fBstd::vector\fP< \fBRun\fP > &reports)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBPrintRunData\fP (const \fBRun\fP &report)"
+.br
+.ti -1c
+.RI "virtual void \fBPrintHeader\fP (const \fBRun\fP &report)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBname_field_width_\fP"
+.br
+.ti -1c
+.RI "bool \fBprinted_header_\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

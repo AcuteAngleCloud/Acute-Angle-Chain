@@ -1,0 +1,41 @@
+.TH "fc::blowfish" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::blowfish
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBECB\fP =0, \fBCBC\fP =1, \fBCFB\fP =2 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart\fP (unsigned char *ucKey, uint64_t n, const \fBsblock\fP &roChain=\fBsblock\fP(0UL, 0UL))"
+.br
+.ti -1c
+.RI "void \fBreset_chain\fP ()"
+.br
+.ti -1c
+.RI "void \fBencrypt\fP (unsigned char *buf, uint64_t n, int iMode=CFB)"
+.br
+.ti -1c
+.RI "void \fBdecrypt\fP (unsigned char *buf, uint64_t n, int iMode=CFB)"
+.br
+.ti -1c
+.RI "void \fBencrypt\fP (const unsigned char *in, unsigned char *out, uint64_t n, int iMode=CFB)"
+.br
+.ti -1c
+.RI "void \fBdecrypt\fP (const unsigned char *in, unsigned char *out, uint64_t n, int iMode=CFB)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

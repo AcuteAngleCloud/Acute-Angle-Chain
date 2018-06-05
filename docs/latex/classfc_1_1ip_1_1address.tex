@@ -1,0 +1,65 @@
+\hypertarget{classfc_1_1ip_1_1address}{}\section{fc\+:\+:ip\+:\+:address Class Reference}
+\label{classfc_1_1ip_1_1address}\index{fc\+::ip\+::address@{fc\+::ip\+::address}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_aebc2d2f9bc831e6ad04399c9bd8406db}\label{classfc_1_1ip_1_1address_aebc2d2f9bc831e6ad04399c9bd8406db}} 
+{\bfseries address} (uint32\+\_\+t \+\_\+ip=0)
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_a0992b23a0e958965171d03bccccedd3b}\label{classfc_1_1ip_1_1address_a0992b23a0e958965171d03bccccedd3b}} 
+{\bfseries address} (const fc\+::string \&s)
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_a0560e2011b284ee0ae6d3f8b3b98cba8}\label{classfc_1_1ip_1_1address_a0560e2011b284ee0ae6d3f8b3b98cba8}} 
+\mbox{\hyperlink{classfc_1_1ip_1_1address}{address}} \& {\bfseries operator=} (const fc\+::string \&s)
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_a5f8c78759a8f7ce9a02215ebeb71d24c}\label{classfc_1_1ip_1_1address_a5f8c78759a8f7ce9a02215ebeb71d24c}} 
+{\bfseries operator fc\+::string} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_a705d307a09a6f079579933fa1cf54cdb}\label{classfc_1_1ip_1_1address_a705d307a09a6f079579933fa1cf54cdb}} 
+{\bfseries operator uint32\+\_\+t} () const
+\item 
+bool \mbox{\hyperlink{classfc_1_1ip_1_1address_a0fd7da64e9de2fc54b5dc537dad7aee2}{is\+\_\+private\+\_\+address}} () const
+\item 
+bool \mbox{\hyperlink{classfc_1_1ip_1_1address_a7365faef59d2df42310b3d68f62f61e4}{is\+\_\+multicast\+\_\+address}} () const
+\item 
+bool \mbox{\hyperlink{classfc_1_1ip_1_1address_a1481a21df38961dfc3c7eea41b1f79a7}{is\+\_\+public\+\_\+address}} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_aa0feacee1993c1338d13ea41f236d660}\label{classfc_1_1ip_1_1address_aa0feacee1993c1338d13ea41f236d660}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classfc_1_1ip_1_1address}{address}} \&a, const \mbox{\hyperlink{classfc_1_1ip_1_1address}{address}} \&b)
+\item 
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_a259e8078e0b2dc8015bf497b96c2a1a2}\label{classfc_1_1ip_1_1address_a259e8078e0b2dc8015bf497b96c2a1a2}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classfc_1_1ip_1_1address}{address}} \&a, const \mbox{\hyperlink{classfc_1_1ip_1_1address}{address}} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1ip_1_1address_a7365faef59d2df42310b3d68f62f61e4}\label{classfc_1_1ip_1_1address_a7365faef59d2df42310b3d68f62f61e4}} 
+\index{fc\+::ip\+::address@{fc\+::ip\+::address}!is\+\_\+multicast\+\_\+address@{is\+\_\+multicast\+\_\+address}}
+\index{is\+\_\+multicast\+\_\+address@{is\+\_\+multicast\+\_\+address}!fc\+::ip\+::address@{fc\+::ip\+::address}}
+\subsubsection{\texorpdfstring{is\+\_\+multicast\+\_\+address()}{is\_multicast\_address()}}
+{\footnotesize\ttfamily bool fc\+::ip\+::address\+::is\+\_\+multicast\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+224.\+0.\+0.\+0 to 239.\+255.\+255.\+255 \mbox{\Hypertarget{classfc_1_1ip_1_1address_a0fd7da64e9de2fc54b5dc537dad7aee2}\label{classfc_1_1ip_1_1address_a0fd7da64e9de2fc54b5dc537dad7aee2}} 
+\index{fc\+::ip\+::address@{fc\+::ip\+::address}!is\+\_\+private\+\_\+address@{is\+\_\+private\+\_\+address}}
+\index{is\+\_\+private\+\_\+address@{is\+\_\+private\+\_\+address}!fc\+::ip\+::address@{fc\+::ip\+::address}}
+\subsubsection{\texorpdfstring{is\+\_\+private\+\_\+address()}{is\_private\_address()}}
+{\footnotesize\ttfamily bool fc\+::ip\+::address\+::is\+\_\+private\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true if the ip is in the following ranges\+:
+\end{DoxyReturn}
+10.\+0.\+0.\+0 to 10.\+255.\+255.\+255 172.\+16.\+0.\+0 to 172.\+31.\+255.\+255 192.\+168.\+0.\+0 to 192.\+168.\+255.\+255 169.\+254.\+0.\+0 to 169.\+254.\+255.\+255 \mbox{\Hypertarget{classfc_1_1ip_1_1address_a1481a21df38961dfc3c7eea41b1f79a7}\label{classfc_1_1ip_1_1address_a1481a21df38961dfc3c7eea41b1f79a7}} 
+\index{fc\+::ip\+::address@{fc\+::ip\+::address}!is\+\_\+public\+\_\+address@{is\+\_\+public\+\_\+address}}
+\index{is\+\_\+public\+\_\+address@{is\+\_\+public\+\_\+address}!fc\+::ip\+::address@{fc\+::ip\+::address}}
+\subsubsection{\texorpdfstring{is\+\_\+public\+\_\+address()}{is\_public\_address()}}
+{\footnotesize\ttfamily bool fc\+::ip\+::address\+::is\+\_\+public\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+!private \& !multicast 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/network/ip.\+hpp\item 
+libraries/fc/src/network/ip.\+cpp\end{DoxyCompactItemize}

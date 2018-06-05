@@ -1,0 +1,11 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3117 [label="aacio::chain::test\l::chainbase_fixture\l\< 512 *1024 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1test_1_1chainbase__fixture.html"];
+  Node3117 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="resource_limits_fixture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classresource__limits__fixture.html"];
+  Node0 [label="aacio::chain::resource\l_limits::resource_limits\l_manager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1resource__limits_1_1resource__limits__manager.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

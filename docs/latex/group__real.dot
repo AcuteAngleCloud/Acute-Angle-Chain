@@ -1,0 +1,9 @@
+digraph "Real number"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="Real number",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="Math C++ API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__mathcppapi.html",tooltip="Defines common math functions and helper types. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

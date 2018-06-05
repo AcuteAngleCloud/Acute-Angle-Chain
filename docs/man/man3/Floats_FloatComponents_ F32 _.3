@@ -1,0 +1,50 @@
+.TH "Floats::FloatComponents< F32 >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Floats::FloatComponents< F32 >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBConstants\fP : I32 { \fBmaxSignificand\fP = 0x7fffff, \fBnumSignificandBits\fP = 23, \fBnumSignificandHexits\fP = 6, \fBcanonicalSignificand\fP = 0x400000, \fBdenormalExponent\fP = -127, \fBminNormalExponent\fP = -126, \fBmaxNormalExponent\fP = 127, \fBexponentBias\fP = 127, \fBmaxExponentBits\fP = 0xff }"
+.br
+.ti -1c
+.RI "typedef U32 \fBBits\fP"
+.br
+.ti -1c
+.RI "typedef F32 \fBFloat\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union \fBFloats::FloatComponents\fP< F32 >:: { \&.\&.\&. }  "
+.br
+.ti -1c
+.RI "U32 \fBsignificand\fP: 23"
+.br
+.ti -1c
+.RI "U32 \fBexponent\fP: 8"
+.br
+.ti -1c
+.RI "U32 \fBsign\fP: 1"
+.br
+.ti -1c
+.RI "struct \fBFloats::FloatComponents\fP< F32 >:: { \&.\&.\&. }  \fBbits\fP"
+.br
+.ti -1c
+.RI "Float \fBvalue\fP"
+.br
+.ti -1c
+.RI "Bits \fBbitcastInt\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

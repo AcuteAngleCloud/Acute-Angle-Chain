@@ -1,0 +1,30 @@
+.TH "fc::api_base" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::api_base
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBfc::api< Interface, detail::actor_member >\fP, \fBfc::api< Interface, Transform >\fP, \fBfc::detail::any_api\fP, and \fBfc::detail::any_api\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual uint64_t \fBget_handle\fP () const =0"
+.br
+.ti -1c
+.RI "virtual api_id_type \fBregister_api\fP (\fBapi_connection\fP &conn) const =0"
+.br
+.ti -1c
+.RI "template<typename T > \fBapi\fP< \fBT\fP, \fBidentity_member\fP > \fBas\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > \fBapi\fP< \fBT\fP > \fBas\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

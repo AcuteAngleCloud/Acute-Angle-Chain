@@ -1,0 +1,66 @@
+.TH "IR::InitializerExpression" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IR::InitializerExpression
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBType\fP : U8 { \fBi32_const\fP = 0x41, \fBi64_const\fP = 0x42, \fBf32_const\fP = 0x43, \fBf64_const\fP = 0x44, \fBget_global\fP = 0x23, \fBerror\fP = 0xff }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInitializerExpression\fP (I32 inI32)"
+.br
+.ti -1c
+.RI "\fBInitializerExpression\fP (I64 inI64)"
+.br
+.ti -1c
+.RI "\fBInitializerExpression\fP (F32 inF32)"
+.br
+.ti -1c
+.RI "\fBInitializerExpression\fP (F64 inF64)"
+.br
+.ti -1c
+.RI "\fBInitializerExpression\fP (\fBType\fP inType, Uptr inGlobalIndex)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBType\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   I32 \fBi32\fP"
+.br
+.ti -1c
+.RI "   I64 \fBi64\fP"
+.br
+.ti -1c
+.RI "   F32 \fBf32\fP"
+.br
+.ti -1c
+.RI "   F64 \fBf64\fP"
+.br
+.ti -1c
+.RI "   Uptr \fBglobalIndex\fP"
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

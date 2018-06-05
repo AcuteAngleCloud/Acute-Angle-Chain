@@ -1,0 +1,45 @@
+\hypertarget{structaacio_1_1margin__state}{}\section{aacio\+:\+:margin\+\_\+state Struct Reference}
+\label{structaacio_1_1margin__state}\index{aacio\+::margin\+\_\+state@{aacio\+::margin\+\_\+state}}
+
+
+Collaboration diagram for aacio\+:\+:margin\+\_\+state\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1margin__state_a915ffc3b950e377eb4ccfac4de870b9f}\label{structaacio_1_1margin__state_a915ffc3b950e377eb4ccfac4de870b9f}} 
+real\+\_\+type {\bfseries lend} (int64\+\_\+t new\+\_\+lendable)
+\item 
+\mbox{\Hypertarget{structaacio_1_1margin__state_a4d4d99487bc4c8d1941ee78c34cd1284}\label{structaacio_1_1margin__state_a4d4d99487bc4c8d1941ee78c34cd1284}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries unlend} (double ishares)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1margin__state_a381ddfb8f12719dc5a5c0499529d1624}\label{structaacio_1_1margin__state_a381ddfb8f12719dc5a5c0499529d1624}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries total\+\_\+lendable}
+\item 
+\mbox{\Hypertarget{structaacio_1_1margin__state_ab6eb83b8753c65272fc10a7a2e475ea3}\label{structaacio_1_1margin__state_ab6eb83b8753c65272fc10a7a2e475ea3}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries total\+\_\+lent}
+\item 
+\mbox{\Hypertarget{structaacio_1_1margin__state_aaa9bba196c9dcd5a84e973275465dce7}\label{structaacio_1_1margin__state_aaa9bba196c9dcd5a84e973275465dce7}} 
+real\+\_\+type {\bfseries least\+\_\+collateralized} = std\+::numeric\+\_\+limits$<$double$>$\+::max()
+\item 
+real\+\_\+type \mbox{\hyperlink{structaacio_1_1margin__state_ac4e28861b6e34e7845742965ba824771}{interest\+\_\+shares}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structaacio_1_1margin__state_ac4e28861b6e34e7845742965ba824771}\label{structaacio_1_1margin__state_ac4e28861b6e34e7845742965ba824771}} 
+\index{aacio\+::margin\+\_\+state@{aacio\+::margin\+\_\+state}!interest\+\_\+shares@{interest\+\_\+shares}}
+\index{interest\+\_\+shares@{interest\+\_\+shares}!aacio\+::margin\+\_\+state@{aacio\+::margin\+\_\+state}}
+\subsubsection{\texorpdfstring{interest\+\_\+shares}{interest\_shares}}
+{\footnotesize\ttfamily real\+\_\+type aacio\+::margin\+\_\+state\+::interest\+\_\+shares = 0}
+
+Total shares allocated to those who have lent, when someone unlends they get total\+\_\+lendable $\ast$ user\+\_\+interest\+\_\+shares / interest\+\_\+shares and total\+\_\+lendable is reduced.
+
+When interest is paid, it shows up in total\+\_\+lendable 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/exchange/exchange\+\_\+state.\+hpp\end{DoxyCompactItemize}

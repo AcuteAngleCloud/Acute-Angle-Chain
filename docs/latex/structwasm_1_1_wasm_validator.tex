@@ -1,0 +1,177 @@
+\hypertarget{structwasm_1_1_wasm_validator}{}\section{wasm\+:\+:Wasm\+Validator Struct Reference}
+\label{structwasm_1_1_wasm_validator}\index{wasm\+::\+Wasm\+Validator@{wasm\+::\+Wasm\+Validator}}
+
+
+Inheritance diagram for wasm\+:\+:Wasm\+Validator\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Wasm\+Validator\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_wasm_validator_1_1_break_info}{Break\+Info}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_aef5afbff45ff576038d3713fe457d9d2}\label{structwasm_1_1_wasm_validator_aef5afbff45ff576038d3713fe457d9d2}} 
+void {\bfseries note\+Label\+Name} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ac92862482b77470cccfb587f190ec425}\label{structwasm_1_1_wasm_validator_ac92862482b77470cccfb587f190ec425}} 
+bool {\bfseries validate} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&module, bool validate\+Web\+\_\+=false, bool validate\+Globally\+\_\+=true)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_aa20c801a2ac3f5392e76f73b136356b2}\label{structwasm_1_1_wasm_validator_aa20c801a2ac3f5392e76f73b136356b2}} 
+void {\bfseries visit\+Block} (\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_afa1b43abd9b777f78b607b0d63455c52}\label{structwasm_1_1_wasm_validator_afa1b43abd9b777f78b607b0d63455c52}} 
+void {\bfseries visit\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a1db3372d8b238e5be400634a85314ed1}\label{structwasm_1_1_wasm_validator_a1db3372d8b238e5be400634a85314ed1}} 
+void {\bfseries visit\+If} (\mbox{\hyperlink{classwasm_1_1_if}{If}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_aaa3fbc211a03c7a248de1bfdeb303848}\label{structwasm_1_1_wasm_validator_aaa3fbc211a03c7a248de1bfdeb303848}} 
+void {\bfseries note\+Break} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$value, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_acc99f06d1cfd090512ccf346a378c96c}\label{structwasm_1_1_wasm_validator_acc99f06d1cfd090512ccf346a378c96c}} 
+void {\bfseries visit\+Break} (\mbox{\hyperlink{classwasm_1_1_break}{Break}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a724647e45425e4f6bf0928c6dcbd8a28}\label{structwasm_1_1_wasm_validator_a724647e45425e4f6bf0928c6dcbd8a28}} 
+void {\bfseries visit\+Switch} (\mbox{\hyperlink{classwasm_1_1_switch}{Switch}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ad4bf10b847f852a8358aabdc92a0a25f}\label{structwasm_1_1_wasm_validator_ad4bf10b847f852a8358aabdc92a0a25f}} 
+void {\bfseries visit\+Call} (\mbox{\hyperlink{classwasm_1_1_call}{Call}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a2458c54dfca5ed08500921a26760883e}\label{structwasm_1_1_wasm_validator_a2458c54dfca5ed08500921a26760883e}} 
+void {\bfseries visit\+Call\+Import} (\mbox{\hyperlink{classwasm_1_1_call_import}{Call\+Import}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ae161542cc075b4762bc90e16b2748cce}\label{structwasm_1_1_wasm_validator_ae161542cc075b4762bc90e16b2748cce}} 
+void {\bfseries visit\+Call\+Indirect} (\mbox{\hyperlink{classwasm_1_1_call_indirect}{Call\+Indirect}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ae85ca53b05a2feca60147338cd36c21c}\label{structwasm_1_1_wasm_validator_ae85ca53b05a2feca60147338cd36c21c}} 
+void {\bfseries visit\+Get\+Local} (\mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_aebfc1a760e702c7320bc7c8d1153b714}\label{structwasm_1_1_wasm_validator_aebfc1a760e702c7320bc7c8d1153b714}} 
+void {\bfseries visit\+Set\+Local} (\mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a9d7aea5e6663d3ac53a35841b6f649ee}\label{structwasm_1_1_wasm_validator_a9d7aea5e6663d3ac53a35841b6f649ee}} 
+void {\bfseries visit\+Load} (\mbox{\hyperlink{classwasm_1_1_load}{Load}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a78d79acc8bffe577d693f34d635075ed}\label{structwasm_1_1_wasm_validator_a78d79acc8bffe577d693f34d635075ed}} 
+void {\bfseries visit\+Store} (\mbox{\hyperlink{classwasm_1_1_store}{Store}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_adad6a256cfbfac1f2ea7461502e1314a}\label{structwasm_1_1_wasm_validator_adad6a256cfbfac1f2ea7461502e1314a}} 
+void {\bfseries visit\+Binary} (\mbox{\hyperlink{classwasm_1_1_binary}{Binary}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a8f53dbc1b783284ac9d394ddff83c712}\label{structwasm_1_1_wasm_validator_a8f53dbc1b783284ac9d394ddff83c712}} 
+void {\bfseries visit\+Unary} (\mbox{\hyperlink{classwasm_1_1_unary}{Unary}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_abbdaab78aea28a13dc070566219b6ff2}\label{structwasm_1_1_wasm_validator_abbdaab78aea28a13dc070566219b6ff2}} 
+void {\bfseries visit\+Select} (\mbox{\hyperlink{classwasm_1_1_select}{Select}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_afb362cd23b252a021547fd91783b259a}\label{structwasm_1_1_wasm_validator_afb362cd23b252a021547fd91783b259a}} 
+void {\bfseries visit\+Drop} (\mbox{\hyperlink{classwasm_1_1_drop}{Drop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ad4db07f67b2e7c98f4d86a92af6c5c24}\label{structwasm_1_1_wasm_validator_ad4db07f67b2e7c98f4d86a92af6c5c24}} 
+void {\bfseries visit\+Return} (\mbox{\hyperlink{classwasm_1_1_return}{Return}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a7c711b62b4b5703c6e1f2326750e4171}\label{structwasm_1_1_wasm_validator_a7c711b62b4b5703c6e1f2326750e4171}} 
+void {\bfseries visit\+Host} (\mbox{\hyperlink{classwasm_1_1_host}{Host}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a6dc480b3d4cb22afbac590e137a1eef7}\label{structwasm_1_1_wasm_validator_a6dc480b3d4cb22afbac590e137a1eef7}} 
+void {\bfseries visit\+Import} (\mbox{\hyperlink{classwasm_1_1_import}{Import}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ae4323303c03c7a0889738df9b6f10030}\label{structwasm_1_1_wasm_validator_ae4323303c03c7a0889738df9b6f10030}} 
+void {\bfseries visit\+Export} (\mbox{\hyperlink{classwasm_1_1_export}{Export}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a6619e8b9d84a91635945920241832601}\label{structwasm_1_1_wasm_validator_a6619e8b9d84a91635945920241832601}} 
+void {\bfseries visit\+Global} (\mbox{\hyperlink{classwasm_1_1_global}{Global}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_accf593697d9889922e22019b7be5b780}\label{structwasm_1_1_wasm_validator_accf593697d9889922e22019b7be5b780}} 
+void {\bfseries visit\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a290106d2ce09d51904e36b92eb61a1cb}\label{structwasm_1_1_wasm_validator_a290106d2ce09d51904e36b92eb61a1cb}} 
+bool {\bfseries check\+Offset} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr, \mbox{\hyperlink{structwasm_1_1_address}{Address}} add, \mbox{\hyperlink{structwasm_1_1_address}{Address}} max)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ad592fc11f9185a778cc3e4669a79c6ba}\label{structwasm_1_1_wasm_validator_ad592fc11f9185a778cc3e4669a79c6ba}} 
+void {\bfseries visit\+Memory} (\mbox{\hyperlink{classwasm_1_1_memory}{Memory}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a6ac7b5be3c3f8c4b89a7da2552dfff6c}\label{structwasm_1_1_wasm_validator_a6ac7b5be3c3f8c4b89a7da2552dfff6c}} 
+void {\bfseries visit\+Table} (\mbox{\hyperlink{classwasm_1_1_table}{Table}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ac46b7435162c8439283952a836324d3a}\label{structwasm_1_1_wasm_validator_ac46b7435162c8439283952a836324d3a}} 
+void {\bfseries visit\+Module} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a5b837a19a50c194a289758d43770be74}\label{structwasm_1_1_wasm_validator_a5b837a19a50c194a289758d43770be74}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_afa4578f301acaa5233b13b2de5446d8b}\label{structwasm_1_1_wasm_validator_afa4578f301acaa5233b13b2de5446d8b}} 
+std\+::ostream \& {\bfseries fail} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a96a3ff3f2a8dc2117405a6f85acd3434}\label{structwasm_1_1_wasm_validator_a96a3ff3f2a8dc2117405a6f85acd3434}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries should\+Be\+True} (bool result, \mbox{\hyperlink{struct_t}{T}} curr, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_abf2954ae84382c7418629bdddf392363}\label{structwasm_1_1_wasm_validator_abf2954ae84382c7418629bdddf392363}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries should\+Be\+False} (bool result, \mbox{\hyperlink{struct_t}{T}} curr, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_afb80f4a5fe8237eb9607745d89933fd4}\label{structwasm_1_1_wasm_validator_afb80f4a5fe8237eb9607745d89933fd4}} 
+{\footnotesize template$<$typename T , typename S $>$ }\\bool {\bfseries should\+Be\+Equal} (\mbox{\hyperlink{struct_s}{S}} left, \mbox{\hyperlink{struct_s}{S}} right, \mbox{\hyperlink{struct_t}{T}} curr, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ac8acc90bcb21297b8d666f5517edb07b}\label{structwasm_1_1_wasm_validator_ac8acc90bcb21297b8d666f5517edb07b}} 
+{\footnotesize template$<$typename T , typename S , typename U $>$ }\\bool {\bfseries should\+Be\+Equal} (\mbox{\hyperlink{struct_s}{S}} left, \mbox{\hyperlink{struct_s}{S}} right, \mbox{\hyperlink{struct_t}{T}} curr, \mbox{\hyperlink{union_u}{U}} \mbox{\hyperlink{structother}{other}}, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_ab09212e6a8b17adea7d4be8973a43902}\label{structwasm_1_1_wasm_validator_ab09212e6a8b17adea7d4be8973a43902}} 
+{\footnotesize template$<$typename T , typename S $>$ }\\bool {\bfseries should\+Be\+Equal\+Or\+First\+Is\+Unreachable} (\mbox{\hyperlink{struct_s}{S}} left, \mbox{\hyperlink{struct_s}{S}} right, \mbox{\hyperlink{struct_t}{T}} curr, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a000feb561b965d86ed4c7de936ed9bd7}\label{structwasm_1_1_wasm_validator_a000feb561b965d86ed4c7de936ed9bd7}} 
+{\footnotesize template$<$typename T , typename S $>$ }\\bool {\bfseries should\+Be\+Unequal} (\mbox{\hyperlink{struct_s}{S}} left, \mbox{\hyperlink{struct_s}{S}} right, \mbox{\hyperlink{struct_t}{T}} curr, const char $\ast$text)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a6de7ba395c9e83e7bb7f28024ff7eb8a}\label{structwasm_1_1_wasm_validator_a6de7ba395c9e83e7bb7f28024ff7eb8a}} 
+void {\bfseries validate\+Alignment} (size\+\_\+t align, Wasm\+Type type, Index bytes)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_add8564825d00c29c39660d1a7e3c6ed3}\label{structwasm_1_1_wasm_validator_add8564825d00c29c39660d1a7e3c6ed3}} 
+void {\bfseries validate\+Binaryen\+IR} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&wasm)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a6df8a0d52c6fed3cb8f370b87fd96626}\label{structwasm_1_1_wasm_validator_a6df8a0d52c6fed3cb8f370b87fd96626}} 
+static void {\bfseries visit\+Pre\+Block} (\mbox{\hyperlink{structwasm_1_1_wasm_validator}{Wasm\+Validator}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_af596d68c1d191fa9e879eec89c5d05ca}\label{structwasm_1_1_wasm_validator_af596d68c1d191fa9e879eec89c5d05ca}} 
+static void {\bfseries visit\+Pre\+Loop} (\mbox{\hyperlink{structwasm_1_1_wasm_validator}{Wasm\+Validator}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a5a9afcb23ac3de8328929f7f270a050e}\label{structwasm_1_1_wasm_validator_a5a9afcb23ac3de8328929f7f270a050e}} 
+static void {\bfseries scan} (\mbox{\hyperlink{structwasm_1_1_wasm_validator}{Wasm\+Validator}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a15bc2ec3a17c0a024309dbecf6679570}\label{structwasm_1_1_wasm_validator_a15bc2ec3a17c0a024309dbecf6679570}} 
+bool {\bfseries valid} = true
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a50d35c66aba8f17e11ab6521ce892936}\label{structwasm_1_1_wasm_validator_a50d35c66aba8f17e11ab6521ce892936}} 
+bool {\bfseries validate\+Web} = false
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a30ce83d868057302ebb7e59c82b34ccf}\label{structwasm_1_1_wasm_validator_a30ce83d868057302ebb7e59c82b34ccf}} 
+bool {\bfseries validate\+Globally} = true
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a8fc7a9d90160e96898069967d6653eac}\label{structwasm_1_1_wasm_validator_a8fc7a9d90160e96898069967d6653eac}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ $>$ $>$ {\bfseries break\+Targets}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_add22ecd00ea5b360461a11adeffe3261}\label{structwasm_1_1_wasm_validator_add22ecd00ea5b360461a11adeffe3261}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$, \mbox{\hyperlink{structwasm_1_1_wasm_validator_1_1_break_info}{Break\+Info}} $>$ {\bfseries break\+Infos}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_a7306d8eb422f23e567b0c1a0012bb3bd}\label{structwasm_1_1_wasm_validator_a7306d8eb422f23e567b0c1a0012bb3bd}} 
+Wasm\+Type {\bfseries return\+Type} = unreachable
+\item 
+\mbox{\Hypertarget{structwasm_1_1_wasm_validator_aa7d07ba731bb5124d5a3c5a247c3799a}\label{structwasm_1_1_wasm_validator_aa7d07ba731bb5124d5a3c5a247c3799a}} 
+\mbox{\hyperlink{classstd_1_1set}{std\+::set}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries label\+Names}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm-\/validator.\+h\end{DoxyCompactItemize}

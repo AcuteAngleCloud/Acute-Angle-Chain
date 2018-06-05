@@ -1,0 +1,11 @@
+digraph "websocketpp::processor::hybi08::client_handshake_request"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="websocketpp::processor\l::hybi08::client_handshake\l_request",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="websocketpp::processor\l::error::make_error_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1processor_1_1error.html#afc5fc4548656f87cfee89994c95bec9c",tooltip="Create an error code with the given value and the processor category. "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="websocketpp::processor\l::error::get_processor\l_category",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1processor_1_1error.html#ae06f6461fb27d8c8e0358c413e1d32b4",tooltip="Get a reference to a static copy of the processor error category. "];
+}

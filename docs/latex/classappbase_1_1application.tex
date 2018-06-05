@@ -1,0 +1,224 @@
+\hypertarget{classappbase_1_1application}{}\section{appbase\+:\+:application Class Reference}
+\label{classappbase_1_1application}\index{appbase\+::application@{appbase\+::application}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classappbase_1_1application_a2794807d31e9f29f1327811dda40820d}{set\+\_\+version}} (uint64\+\_\+t \mbox{\hyperlink{classappbase_1_1application_ae4ec67aea2aa3bab8800c875590245b2}{version}})
+\begin{DoxyCompactList}\small\item\em Set version. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{classappbase_1_1application_ae4ec67aea2aa3bab8800c875590245b2}{version}} () const
+\begin{DoxyCompactList}\small\item\em Get version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classappbase_1_1application_af81fa07af200b5b24049ed5d197a864f}{set\+\_\+default\+\_\+data\+\_\+dir}} (const bfs\+::path \&\mbox{\hyperlink{classappbase_1_1application_a5dfd3cfb1124c57963fa17b3f4aabbe1}{data\+\_\+dir}}=\char`\"{}data-\/dir\char`\"{})
+\begin{DoxyCompactList}\small\item\em Set default data directory. \end{DoxyCompactList}\item 
+bfs\+::path \mbox{\hyperlink{classappbase_1_1application_a5dfd3cfb1124c57963fa17b3f4aabbe1}{data\+\_\+dir}} () const
+\begin{DoxyCompactList}\small\item\em Get data directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classappbase_1_1application_a49901c76b365337c933e6485649a50b6}{set\+\_\+default\+\_\+config\+\_\+dir}} (const bfs\+::path \&\mbox{\hyperlink{classappbase_1_1application_a9b2c99749c7209e218a3dbbe51cfdeac}{config\+\_\+dir}}=\char`\"{}etc\char`\"{})
+\begin{DoxyCompactList}\small\item\em Set default config directory. \end{DoxyCompactList}\item 
+bfs\+::path \mbox{\hyperlink{classappbase_1_1application_a9b2c99749c7209e218a3dbbe51cfdeac}{config\+\_\+dir}} () const
+\begin{DoxyCompactList}\small\item\em Get config directory. \end{DoxyCompactList}\item 
+bfs\+::path \mbox{\hyperlink{classappbase_1_1application_a9abb5f5858e4dc6ba3ba45071ffdaed5}{get\+\_\+logging\+\_\+conf}} () const
+\begin{DoxyCompactList}\small\item\em Get logging configuration path. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Plugin$>$ }\\bool \mbox{\hyperlink{classappbase_1_1application_a29ed51314f78ebe6795930a4ca910fd6}{initialize}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Looks for the --plugin commandline / config option and calls initialize on those plugins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classappbase_1_1application_a3b77bd811744da79c9d8ba0d078e7668}\label{classappbase_1_1application_a3b77bd811744da79c9d8ba0d078e7668}} 
+void {\bfseries startup} ()
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_a116e20109f980460cf8c38e349766bcc}\label{classappbase_1_1application_a116e20109f980460cf8c38e349766bcc}} 
+void {\bfseries shutdown} ()
+\item 
+void \mbox{\hyperlink{classappbase_1_1application_a39286b0b034b97f6940568a00f44edaf}{exec}} ()
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_a81aa58d3f94570b7976145039155fc46}\label{classappbase_1_1application_a81aa58d3f94570b7976145039155fc46}} 
+void {\bfseries quit} ()
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_a1d2c585f90007be342c9c64ee9cc0f7c}\label{classappbase_1_1application_a1d2c585f90007be342c9c64ee9cc0f7c}} 
+\mbox{\hyperlink{classappbase_1_1abstract__plugin}{abstract\+\_\+plugin}} $\ast$ {\bfseries find\+\_\+plugin} (const string \&name) const
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_a3c4b68a0667942b58f1369f454ce0ce3}\label{classappbase_1_1application_a3c4b68a0667942b58f1369f454ce0ce3}} 
+\mbox{\hyperlink{classappbase_1_1abstract__plugin}{abstract\+\_\+plugin}} \& {\bfseries get\+\_\+plugin} (const string \&name) const
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_ae66541a828623817475e7c29bb9cb4f0}\label{classappbase_1_1application_ae66541a828623817475e7c29bb9cb4f0}} 
+{\footnotesize template$<$typename Plugin $>$ }\\auto \& {\bfseries register\+\_\+plugin} ()
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_aaa38ebf9b4c1ac7a160c471d37fba389}\label{classappbase_1_1application_aaa38ebf9b4c1ac7a160c471d37fba389}} 
+{\footnotesize template$<$typename Plugin $>$ }\\Plugin $\ast$ {\bfseries find\+\_\+plugin} () const
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_a64d68e7cce04913b0c521c185e6b2621}\label{classappbase_1_1application_a64d68e7cce04913b0c521c185e6b2621}} 
+{\footnotesize template$<$typename Plugin $>$ }\\Plugin \& {\bfseries get\+\_\+plugin} () const
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_a986812b92a91a8fafa3706ba3127eb9e}\label{classappbase_1_1application_a986812b92a91a8fafa3706ba3127eb9e}} 
+boost\+::asio\+::io\+\_\+service \& {\bfseries get\+\_\+io\+\_\+service} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_ac874b2659b400fe254f1ae4260d06ecf}\label{classappbase_1_1application_ac874b2659b400fe254f1ae4260d06ecf}} 
+static \mbox{\hyperlink{classappbase_1_1application}{application}} \& {\bfseries instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_ab4a686729750000cd3611770fe107e11}\label{classappbase_1_1application_ab4a686729750000cd3611770fe107e11}} 
+bool {\bfseries initialize\+\_\+impl} (int argc, char $\ast$$\ast$argv, \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classappbase_1_1abstract__plugin}{abstract\+\_\+plugin}} $\ast$$>$ autostart\+\_\+plugins)
+\end{DoxyCompactItemize}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classappbase_1_1application_a110137cd2c59d1d998750eeb28443b5d}{plugin\+\_\+initialized}} (\mbox{\hyperlink{classappbase_1_1abstract__plugin}{abstract\+\_\+plugin}} \&plug)
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_ad5635d30c2f520340d58665ed99f8a4d}\label{classappbase_1_1application_ad5635d30c2f520340d58665ed99f8a4d}} 
+void {\bfseries plugin\+\_\+started} (\mbox{\hyperlink{classappbase_1_1abstract__plugin}{abstract\+\_\+plugin}} \&plug)
+\end{DoxyCompactItemize}
+
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classappbase_1_1application_ad76f20d019c93aec51c49c7b9c8cda18}\label{classappbase_1_1application_ad76f20d019c93aec51c49c7b9c8cda18}} 
+{\footnotesize template$<$typename Impl $>$ }\\class {\bfseries plugin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classappbase_1_1application_a9b2c99749c7209e218a3dbbe51cfdeac}\label{classappbase_1_1application_a9b2c99749c7209e218a3dbbe51cfdeac}} 
+\index{appbase\+::application@{appbase\+::application}!config\+\_\+dir@{config\+\_\+dir}}
+\index{config\+\_\+dir@{config\+\_\+dir}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{config\+\_\+dir()}{config\_dir()}}
+{\footnotesize\ttfamily bfs\+::path appbase\+::application\+::config\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get config directory. 
+
+\begin{DoxyReturn}{Returns}
+Config directory, possibly from command line 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classappbase_1_1application_a5dfd3cfb1124c57963fa17b3f4aabbe1}\label{classappbase_1_1application_a5dfd3cfb1124c57963fa17b3f4aabbe1}} 
+\index{appbase\+::application@{appbase\+::application}!data\+\_\+dir@{data\+\_\+dir}}
+\index{data\+\_\+dir@{data\+\_\+dir}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{data\+\_\+dir()}{data\_dir()}}
+{\footnotesize\ttfamily bfs\+::path appbase\+::application\+::data\+\_\+dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get data directory. 
+
+\begin{DoxyReturn}{Returns}
+Data directory, possibly from command line 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classappbase_1_1application_a39286b0b034b97f6940568a00f44edaf}\label{classappbase_1_1application_a39286b0b034b97f6940568a00f44edaf}} 
+\index{appbase\+::application@{appbase\+::application}!exec@{exec}}
+\index{exec@{exec}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily void appbase\+::application\+::exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait until quit(), S\+I\+G\+I\+NT or S\+I\+G\+T\+E\+RM and then shutdown perform synchronous shutdown \mbox{\Hypertarget{classappbase_1_1application_a9abb5f5858e4dc6ba3ba45071ffdaed5}\label{classappbase_1_1application_a9abb5f5858e4dc6ba3ba45071ffdaed5}} 
+\index{appbase\+::application@{appbase\+::application}!get\+\_\+logging\+\_\+conf@{get\+\_\+logging\+\_\+conf}}
+\index{get\+\_\+logging\+\_\+conf@{get\+\_\+logging\+\_\+conf}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{get\+\_\+logging\+\_\+conf()}{get\_logging\_conf()}}
+{\footnotesize\ttfamily bfs\+::path appbase\+::application\+::get\+\_\+logging\+\_\+conf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get logging configuration path. 
+
+\begin{DoxyReturn}{Returns}
+Logging configuration location from command line 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classappbase_1_1application_a29ed51314f78ebe6795930a4ca910fd6}\label{classappbase_1_1application_a29ed51314f78ebe6795930a4ca910fd6}} 
+\index{appbase\+::application@{appbase\+::application}!initialize@{initialize}}
+\index{initialize@{initialize}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily template$<$typename... Plugin$>$ \\
+bool appbase\+::application\+::initialize (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Looks for the --plugin commandline / config option and calls initialize on those plugins. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Plugin} & List of plugins to initalize even if not mentioned by configuration. For plugins started by configuration settings or dependency resolution, this template has no effect. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+true if the application and plugins were initialized, false or exception on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classappbase_1_1application_a110137cd2c59d1d998750eeb28443b5d}\label{classappbase_1_1application_a110137cd2c59d1d998750eeb28443b5d}} 
+\index{appbase\+::application@{appbase\+::application}!plugin\+\_\+initialized@{plugin\+\_\+initialized}}
+\index{plugin\+\_\+initialized@{plugin\+\_\+initialized}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{plugin\+\_\+initialized()}{plugin\_initialized()}}
+{\footnotesize\ttfamily void appbase\+::application\+::plugin\+\_\+initialized (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classappbase_1_1abstract__plugin}{abstract\+\_\+plugin}} \&}]{plug }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+these notifications get called from the plugin when their state changes so that the application can call shutdown in the reverse order. Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classappbase_1_1application_a49901c76b365337c933e6485649a50b6}\label{classappbase_1_1application_a49901c76b365337c933e6485649a50b6}} 
+\index{appbase\+::application@{appbase\+::application}!set\+\_\+default\+\_\+config\+\_\+dir@{set\+\_\+default\+\_\+config\+\_\+dir}}
+\index{set\+\_\+default\+\_\+config\+\_\+dir@{set\+\_\+default\+\_\+config\+\_\+dir}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{set\+\_\+default\+\_\+config\+\_\+dir()}{set\_default\_config\_dir()}}
+{\footnotesize\ttfamily void appbase\+::application\+::set\+\_\+default\+\_\+config\+\_\+dir (\begin{DoxyParamCaption}\item[{const bfs\+::path \&}]{config\+\_\+dir = {\ttfamily \char`\"{}etc\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Set default config directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config\+\_\+dir} & Default configuration directory to use if not specified on the command line. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classappbase_1_1application_af81fa07af200b5b24049ed5d197a864f}\label{classappbase_1_1application_af81fa07af200b5b24049ed5d197a864f}} 
+\index{appbase\+::application@{appbase\+::application}!set\+\_\+default\+\_\+data\+\_\+dir@{set\+\_\+default\+\_\+data\+\_\+dir}}
+\index{set\+\_\+default\+\_\+data\+\_\+dir@{set\+\_\+default\+\_\+data\+\_\+dir}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{set\+\_\+default\+\_\+data\+\_\+dir()}{set\_default\_data\_dir()}}
+{\footnotesize\ttfamily void appbase\+::application\+::set\+\_\+default\+\_\+data\+\_\+dir (\begin{DoxyParamCaption}\item[{const bfs\+::path \&}]{data\+\_\+dir = {\ttfamily \char`\"{}data-\/dir\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Set default data directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+dir} & Default data directory to use if not specified on the command line. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classappbase_1_1application_a2794807d31e9f29f1327811dda40820d}\label{classappbase_1_1application_a2794807d31e9f29f1327811dda40820d}} 
+\index{appbase\+::application@{appbase\+::application}!set\+\_\+version@{set\+\_\+version}}
+\index{set\+\_\+version@{set\+\_\+version}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{set\+\_\+version()}{set\_version()}}
+{\footnotesize\ttfamily void appbase\+::application\+::set\+\_\+version (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{version }\end{DoxyParamCaption})}
+
+
+
+Set version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Version output with -\/v/--version \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classappbase_1_1application_ae4ec67aea2aa3bab8800c875590245b2}\label{classappbase_1_1application_ae4ec67aea2aa3bab8800c875590245b2}} 
+\index{appbase\+::application@{appbase\+::application}!version@{version}}
+\index{version@{version}!appbase\+::application@{appbase\+::application}}
+\subsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily uint64\+\_\+t appbase\+::application\+::version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get version. 
+
+\begin{DoxyReturn}{Returns}
+Version output with -\/v/--version 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/appbase/include/appbase/application.\+hpp\item 
+libraries/appbase/application.\+cpp\end{DoxyCompactItemize}

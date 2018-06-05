@@ -1,0 +1,48 @@
+.TH "aacio::chain::data_access_info" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::data_access_info
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBaccess_type\fP { \fBread\fP = 0, \fBwrite\fP = 1 }"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBaccess_type\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "\fBaccount_name\fP \fBcode\fP"
+.br
+.ti -1c
+.RI "\fBscope_name\fP \fBscope\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBsequence\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBaacio::chain::data_access_info::access_type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIread \fP\fP
+scope was read by this action 
+.TP
+\fB\fIwrite \fP\fP
+scope was (potentially) written to by this action 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,45 @@
+digraph "libraries/fc/vendor/websocketpp/websocketpp/close.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node14 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/close.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/connection.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$connection_8hpp_source.html"];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/endpoint.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$endpoint_8hpp_source.html"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/roles/client_endpoint.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$client__endpoint_8hpp_source.html"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/client.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$client_8hpp_source.html"];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="libraries/fc/vendor\l/websocketpp/test/connection\l/connection_tu2.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$connection__tu2_8hpp_source.html"];
+  Node18 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="plugins/http_plugin\l/http_plugin.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$http__plugin_8cpp.html"];
+  Node16 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/roles/server_endpoint.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$server__endpoint_8hpp_source.html"];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/server.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$server_8hpp_source.html"];
+  Node22 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/processors/base.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fc_2vendor_2websocketpp_2websocketpp_2processors_2base_8hpp_source.html"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/processors/processor.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$processor_8hpp_source.html"];
+  Node24 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node25 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/impl/connection_impl.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$connection__impl_8hpp_source.html"];
+  Node25 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 -> Node26 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node26 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/processors/hybi00.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hybi00_8hpp_source.html"];
+  Node26 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 -> Node27 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node27 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/processors/hybi13.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hybi13_8hpp_source.html"];
+  Node27 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node27 -> Node28 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/processors/hybi08.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hybi08_8hpp_source.html"];
+  Node28 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node28 -> Node29 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node29 [label="libraries/fc/vendor\l/websocketpp/websocketpp\l/processors/hybi07.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$hybi07_8hpp_source.html"];
+  Node29 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

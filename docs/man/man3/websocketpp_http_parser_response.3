@@ -1,0 +1,168 @@
+.TH "websocketpp::http::parser::response" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::http::parser::response \- Stores, parses, and manipulates HTTP responses\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <response\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::http::parser::parser\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBresponse\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBtype\fP > \fBptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "size_t \fBconsume\fP (char const *buf, size_t len)"
+.br
+.RI "Process bytes in the input buffer\&. "
+.ti -1c
+.RI "size_t \fBconsume\fP (std::istream &s)"
+.br
+.RI "Process bytes in the input buffer (istream version) "
+.ti -1c
+.RI "bool \fBready\fP () const"
+.br
+.RI "Returns true if the response is ready\&. "
+.ti -1c
+.RI "bool \fBheaders_ready\fP () const"
+.br
+.RI "Returns true if the response headers are fully parsed\&. "
+.ti -1c
+.RI "std::string \fBraw\fP () const"
+.br
+.RI "Returns the full raw response\&. "
+.ti -1c
+.RI "void \fBset_status\fP (status_code::value code)"
+.br
+.RI "Set response status code and message\&. "
+.ti -1c
+.RI "void \fBset_status\fP (status_code::value code, std::string const &msg)"
+.br
+.RI "Set response status code and message\&. "
+.ti -1c
+.RI "status_code::value \fBget_status_code\fP () const"
+.br
+.RI "Return the response status code\&. "
+.ti -1c
+.RI "const std::string & \fBget_status_msg\fP () const"
+.br
+.RI "Return the response status message\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Stores, parses, and manipulates HTTP responses\&. 
+
+http::response provides the following functionality for working with HTTP responses\&.
+.PP
+.IP "\(bu" 2
+Initialize response via manually setting each element
+.IP "\(bu" 2
+Initialize response via reading raw bytes and parsing
+.IP "\(bu" 2
+Once initialized, access individual parsed elements
+.IP "\(bu" 2
+Once initialized, read entire response as raw bytes
+.PP
+.PP
+http::response checks for header completeness separately from the full response\&. Once the header is complete, the Content-Length header is read to determine when to stop reading body bytes\&. If no Content-Length is present \fBready()\fP will never return true\&. It is the responsibility of the caller to consume to determine when the response is complete (ie when the connection terminates, or some other metric)\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "size_t websocketpp::http::parser::response::consume (char const * buf, size_t len)\fC [inline]\fP"
+
+.PP
+Process bytes in the input buffer\&. Process up to len bytes from input buffer buf\&. Returns the number of bytes processed\&. Bytes left unprocessed means bytes left over after the final header delimiters\&.
+.PP
+Consume is a streaming processor\&. It may be called multiple times on one response and the full headers need not be available before processing can begin\&. If the end of the response was reached during this call to consume the ready flag will be set\&. Further calls to consume once ready will be ignored\&.
+.PP
+Consume will throw an http::exception in the case of an error\&. Typical error reasons include malformed responses, incomplete responses, and max header size being reached\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP \fBPointer\fP to byte buffer 
+.br
+\fIlen\fP Size of byte buffer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Number of bytes processed\&. 
+.RE
+.PP
+
+.SS "size_t websocketpp::http::parser::response::consume (std::istream & s)\fC [inline]\fP"
+
+.PP
+Process bytes in the input buffer (istream version) Process bytes from istream s\&. Returns the number of bytes processed\&. Bytes left unprocessed means bytes left over after the final header delimiters\&.
+.PP
+Consume is a streaming processor\&. It may be called multiple times on one response and the full headers need not be available before processing can begin\&. If the end of the response was reached during this call to consume the ready flag will be set\&. Further calls to consume once ready will be ignored\&.
+.PP
+Consume will throw an http::exception in the case of an error\&. Typical error reasons include malformed responses, incomplete responses, and max header size being reached\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP \fBPointer\fP to byte buffer 
+.br
+\fIlen\fP Size of byte buffer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Number of bytes processed\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::http::parser::response::ready () const\fC [inline]\fP"
+
+.PP
+Returns true if the response is ready\&. 
+.PP
+\fBNote:\fP
+.RS 4
+will never return true if the content length header is not present 
+.RE
+.PP
+
+.SS "void websocketpp::http::parser::response::set_status (status_code::value code)\fC [inline]\fP"
+
+.PP
+Set response status code and message\&. Sets the response status code to \fCcode\fP and looks up the corresponding message for standard codes\&. Non-standard codes will be entered as Unknown use set_status(status_code::value,std::string) overload to set both values explicitly\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcode\fP Code to set 
+.br
+\fImsg\fP Message to set 
+.RE
+.PP
+
+.SS "void websocketpp::http::parser::response::set_status (status_code::value code, std::string const & msg)\fC [inline]\fP"
+
+.PP
+Set response status code and message\&. Sets the response status code and message to independent custom values\&. use \fBset_status(status_code::value)\fP to set the code and have the standard message be automatically set\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcode\fP Code to set 
+.br
+\fImsg\fP Message to set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

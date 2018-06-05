@@ -1,0 +1,230 @@
+\hypertarget{classaacio_1_1wallet_1_1wallet__api}{}\section{aacio\+:\+:wallet\+:\+:wallet\+\_\+api Class Reference}
+\label{classaacio_1_1wallet_1_1wallet__api}\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+
+
+{\ttfamily \#include $<$wallet.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_aa401c5b296b3cecff815bbe138a8f06e}\label{classaacio_1_1wallet_1_1wallet__api_aa401c5b296b3cecff815bbe138a8f06e}} 
+{\bfseries wallet\+\_\+api} (const \mbox{\hyperlink{structaacio_1_1wallet_1_1wallet__data}{wallet\+\_\+data}} \&initial\+\_\+data)
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_ac9339543008c61275bf9d50648f38111}\label{classaacio_1_1wallet_1_1wallet__api_ac9339543008c61275bf9d50648f38111}} 
+bool {\bfseries copy\+\_\+wallet\+\_\+file} (string destination\+\_\+filename)
+\item 
+string \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a19392c5f842b71fb212e1ab126506876}{get\+\_\+wallet\+\_\+filename}} () const
+\item 
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_ad9da1f4d4f7af4b2c5e153b89328f5f0}{get\+\_\+private\+\_\+key}} (\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} pubkey) const
+\item 
+\mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a96aa8527eb1219e885c8d0371a6ccf1f}{try\+\_\+get\+\_\+private\+\_\+key}} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} \&id) const
+\item 
+\mbox{\hyperlink{structpair}{pair}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a5d8d935bdae2e2d77073899f6c0f51e7}{get\+\_\+private\+\_\+key\+\_\+from\+\_\+password}} (string \mbox{\hyperlink{structaccount}{account}}, string role, string password) const
+\item 
+bool \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a1e1cc3ffe35685070738d34d3a8778d9}{is\+\_\+new}} () const
+\item 
+bool \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_aae6a962628df3f49cacaf2239ef0f11c}{is\+\_\+locked}} () const
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a12f7c1fefda15e09c58c6622d9f1a32c}{lock}} ()
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a80992e6f10f3172bd514d10287a69420}{unlock}} (string password)
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a9b9c6db62baab3c4f2476823573d57ce}{set\+\_\+password}} (string password)
+\item 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_ac6a84d9a87666891359fc655e0fc7bfc}{list\+\_\+keys}} ()
+\item 
+bool \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a0310fe9e8bf96ab696b6c2919516ba1f}{load\+\_\+wallet\+\_\+file}} (string wallet\+\_\+filename=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a8fc5732ef94628ef71d52bf244e70172}{save\+\_\+wallet\+\_\+file}} (string wallet\+\_\+filename=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a208875f33af3cb0ec88e316c813f0ec8}{set\+\_\+wallet\+\_\+filename}} (string wallet\+\_\+filename)
+\item 
+bool \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_aa59ff70f12bd8dd9fa1d63cb3be09089}{import\+\_\+key}} (string wif\+\_\+key)
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a31b2ff23dbaedcc6035d0543eade3ed8}\label{classaacio_1_1wallet_1_1wallet__api_a31b2ff23dbaedcc6035d0543eade3ed8}} 
+void {\bfseries encrypt\+\_\+keys} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a34500619638bb333095fdf2b5f8b10de}\label{classaacio_1_1wallet_1_1wallet__api_a34500619638bb333095fdf2b5f8b10de}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl}{detail\+::wallet\+\_\+api\+\_\+impl}} $>$ {\bfseries my}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This wallet assumes it is connected to the database server with a high-\/bandwidth, low-\/latency connection and performs minimal caching. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_ad9da1f4d4f7af4b2c5e153b89328f5f0}\label{classaacio_1_1wallet_1_1wallet__api_ad9da1f4d4f7af4b2c5e153b89328f5f0}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!get\+\_\+private\+\_\+key@{get\+\_\+private\+\_\+key}}
+\index{get\+\_\+private\+\_\+key@{get\+\_\+private\+\_\+key}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{get\+\_\+private\+\_\+key()}{get\_private\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} aacio\+::wallet\+::wallet\+\_\+api\+::get\+\_\+private\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}}]{pubkey }\end{DoxyParamCaption}) const}
+
+Get the W\+IF private key corresponding to a public key. The private key must already be in the wallet. \mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a5d8d935bdae2e2d77073899f6c0f51e7}\label{classaacio_1_1wallet_1_1wallet__api_a5d8d935bdae2e2d77073899f6c0f51e7}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!get\+\_\+private\+\_\+key\+\_\+from\+\_\+password@{get\+\_\+private\+\_\+key\+\_\+from\+\_\+password}}
+\index{get\+\_\+private\+\_\+key\+\_\+from\+\_\+password@{get\+\_\+private\+\_\+key\+\_\+from\+\_\+password}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{get\+\_\+private\+\_\+key\+\_\+from\+\_\+password()}{get\_private\_key\_from\_password()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structpair}{pair}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ aacio\+::wallet\+::wallet\+\_\+api\+::get\+\_\+private\+\_\+key\+\_\+from\+\_\+password (\begin{DoxyParamCaption}\item[{string}]{account,  }\item[{string}]{role,  }\item[{string}]{password }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em role} & -\/ active $\vert$ owner $\vert$ posting $\vert$ memo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a19392c5f842b71fb212e1ab126506876}\label{classaacio_1_1wallet_1_1wallet__api_a19392c5f842b71fb212e1ab126506876}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!get\+\_\+wallet\+\_\+filename@{get\+\_\+wallet\+\_\+filename}}
+\index{get\+\_\+wallet\+\_\+filename@{get\+\_\+wallet\+\_\+filename}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{get\+\_\+wallet\+\_\+filename()}{get\_wallet\_filename()}}
+{\footnotesize\ttfamily string aacio\+::wallet\+::wallet\+\_\+api\+::get\+\_\+wallet\+\_\+filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current wallet filename.
+
+This is the filename that will be used when automatically saving the wallet.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a208875f33af3cb0ec88e316c813f0ec8}{set\+\_\+wallet\+\_\+filename()}} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Returns}
+the wallet filename 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_aa59ff70f12bd8dd9fa1d63cb3be09089}\label{classaacio_1_1wallet_1_1wallet__api_aa59ff70f12bd8dd9fa1d63cb3be09089}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!import\+\_\+key@{import\+\_\+key}}
+\index{import\+\_\+key@{import\+\_\+key}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{import\+\_\+key()}{import\_key()}}
+{\footnotesize\ttfamily bool aacio\+::wallet\+::wallet\+\_\+api\+::import\+\_\+key (\begin{DoxyParamCaption}\item[{string}]{wif\+\_\+key }\end{DoxyParamCaption})}
+
+Imports a W\+IF Private \mbox{\hyperlink{struct_key}{Key}} into the wallet to be used to sign transactions by an account.
+
+example\+: import\+\_\+key 5\+Jgm1\+N6jp3i\+Nb\+F\+M45k\+Ptj66xmbq\+T9f\+Su\+V\+Jg\+P\+Wfn\+C\+S\+Pg\+Qanv\+W6mJ
+
+
+\begin{DoxyParams}{Parameters}
+{\em wif\+\_\+key} & the W\+IF Private \mbox{\hyperlink{struct_key}{Key}} to import \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_aae6a962628df3f49cacaf2239ef0f11c}\label{classaacio_1_1wallet_1_1wallet__api_aae6a962628df3f49cacaf2239ef0f11c}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!is\+\_\+locked@{is\+\_\+locked}}
+\index{is\+\_\+locked@{is\+\_\+locked}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{is\+\_\+locked()}{is\_locked()}}
+{\footnotesize\ttfamily bool aacio\+::wallet\+::wallet\+\_\+api\+::is\+\_\+locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks whether the wallet is locked (is unable to use its private keys).
+
+This state can be changed by calling {\ttfamily \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a12f7c1fefda15e09c58c6622d9f1a32c}{lock()}}} or {\ttfamily \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a80992e6f10f3172bd514d10287a69420}{unlock()}}}. \begin{DoxyReturn}{Returns}
+true if the wallet is locked 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a1e1cc3ffe35685070738d34d3a8778d9}\label{classaacio_1_1wallet_1_1wallet__api_a1e1cc3ffe35685070738d34d3a8778d9}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!is\+\_\+new@{is\+\_\+new}}
+\index{is\+\_\+new@{is\+\_\+new}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{is\+\_\+new()}{is\_new()}}
+{\footnotesize\ttfamily bool aacio\+::wallet\+::wallet\+\_\+api\+::is\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks whether the wallet has just been created and has not yet had a password set.
+
+Calling {\ttfamily set\+\_\+password} will transition the wallet to the locked state. \begin{DoxyReturn}{Returns}
+true if the wallet is new 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_ac6a84d9a87666891359fc655e0fc7bfc}\label{classaacio_1_1wallet_1_1wallet__api_ac6a84d9a87666891359fc655e0fc7bfc}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!list\+\_\+keys@{list\+\_\+keys}}
+\index{list\+\_\+keys@{list\+\_\+keys}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{list\+\_\+keys()}{list\_keys()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ aacio\+::wallet\+::wallet\+\_\+api\+::list\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Dumps all private keys owned by the wallet.
+
+The keys are printed in W\+IF format. You can import these keys into another wallet using {\ttfamily \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_aa59ff70f12bd8dd9fa1d63cb3be09089}{import\+\_\+key()}}} \begin{DoxyReturn}{Returns}
+a map containing the private keys, indexed by their public key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a0310fe9e8bf96ab696b6c2919516ba1f}\label{classaacio_1_1wallet_1_1wallet__api_a0310fe9e8bf96ab696b6c2919516ba1f}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!load\+\_\+wallet\+\_\+file@{load\+\_\+wallet\+\_\+file}}
+\index{load\+\_\+wallet\+\_\+file@{load\+\_\+wallet\+\_\+file}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{load\+\_\+wallet\+\_\+file()}{load\_wallet\_file()}}
+{\footnotesize\ttfamily bool aacio\+::wallet\+::wallet\+\_\+api\+::load\+\_\+wallet\+\_\+file (\begin{DoxyParamCaption}\item[{string}]{wallet\+\_\+filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Loads a specified Graphene wallet.
+
+The current wallet is closed before the new wallet is loaded.
+
+\begin{DoxyWarning}{Warning}
+This does not change the filename that will be used for future wallet writes, so this may cause you to overwrite your original wallet unless you also call {\ttfamily \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a208875f33af3cb0ec88e316c813f0ec8}{set\+\_\+wallet\+\_\+filename()}}} 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em wallet\+\_\+filename} & the filename of the wallet J\+S\+ON file to load. If {\ttfamily wallet\+\_\+filename} is empty, it reloads the existing wallet file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the specified wallet is loaded 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a12f7c1fefda15e09c58c6622d9f1a32c}\label{classaacio_1_1wallet_1_1wallet__api_a12f7c1fefda15e09c58c6622d9f1a32c}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!lock@{lock}}
+\index{lock@{lock}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+api\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Locks the wallet immediately. \mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a8fc5732ef94628ef71d52bf244e70172}\label{classaacio_1_1wallet_1_1wallet__api_a8fc5732ef94628ef71d52bf244e70172}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!save\+\_\+wallet\+\_\+file@{save\+\_\+wallet\+\_\+file}}
+\index{save\+\_\+wallet\+\_\+file@{save\+\_\+wallet\+\_\+file}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{save\+\_\+wallet\+\_\+file()}{save\_wallet\_file()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+api\+::save\+\_\+wallet\+\_\+file (\begin{DoxyParamCaption}\item[{string}]{wallet\+\_\+filename = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Saves the current wallet to the given filename.
+
+\begin{DoxyWarning}{Warning}
+This does not change the wallet filename that will be used for future writes, so think of this function as \textquotesingle{}Save a Copy As...\textquotesingle{} instead of \textquotesingle{}Save As...\textquotesingle{}. Use {\ttfamily \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a208875f33af3cb0ec88e316c813f0ec8}{set\+\_\+wallet\+\_\+filename()}}} to make the filename persist. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em wallet\+\_\+filename} & the filename of the new wallet J\+S\+ON file to create or overwrite. If {\ttfamily wallet\+\_\+filename} is empty, save to the current filename. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a9b9c6db62baab3c4f2476823573d57ce}\label{classaacio_1_1wallet_1_1wallet__api_a9b9c6db62baab3c4f2476823573d57ce}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!set\+\_\+password@{set\+\_\+password}}
+\index{set\+\_\+password@{set\+\_\+password}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{set\+\_\+password()}{set\_password()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+api\+::set\+\_\+password (\begin{DoxyParamCaption}\item[{string}]{password }\end{DoxyParamCaption})}
+
+Sets a new password on the wallet.
+
+The wallet must be either \textquotesingle{}new\textquotesingle{} or \textquotesingle{}unlocked\textquotesingle{} to execute this command. \mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a208875f33af3cb0ec88e316c813f0ec8}\label{classaacio_1_1wallet_1_1wallet__api_a208875f33af3cb0ec88e316c813f0ec8}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!set\+\_\+wallet\+\_\+filename@{set\+\_\+wallet\+\_\+filename}}
+\index{set\+\_\+wallet\+\_\+filename@{set\+\_\+wallet\+\_\+filename}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{set\+\_\+wallet\+\_\+filename()}{set\_wallet\_filename()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+api\+::set\+\_\+wallet\+\_\+filename (\begin{DoxyParamCaption}\item[{string}]{wallet\+\_\+filename }\end{DoxyParamCaption})}
+
+Sets the wallet filename used for future writes.
+
+This does not trigger a save, it only changes the default filename that will be used the next time a save is triggered.
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet\+\_\+filename} & the new filename to use for future saves \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a96aa8527eb1219e885c8d0371a6ccf1f}\label{classaacio_1_1wallet_1_1wallet__api_a96aa8527eb1219e885c8d0371a6ccf1f}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!try\+\_\+get\+\_\+private\+\_\+key@{try\+\_\+get\+\_\+private\+\_\+key}}
+\index{try\+\_\+get\+\_\+private\+\_\+key@{try\+\_\+get\+\_\+private\+\_\+key}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{try\+\_\+get\+\_\+private\+\_\+key()}{try\_get\_private\_key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ aacio\+::wallet\+::wallet\+\_\+api\+::try\+\_\+get\+\_\+private\+\_\+key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} \&}]{id }\end{DoxyParamCaption}) const}
+
+Get the private key corresponding to a public key or nothing. \mbox{\Hypertarget{classaacio_1_1wallet_1_1wallet__api_a80992e6f10f3172bd514d10287a69420}\label{classaacio_1_1wallet_1_1wallet__api_a80992e6f10f3172bd514d10287a69420}} 
+\index{aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}!unlock@{unlock}}
+\index{unlock@{unlock}!aacio\+::wallet\+::wallet\+\_\+api@{aacio\+::wallet\+::wallet\+\_\+api}}
+\subsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void aacio\+::wallet\+::wallet\+\_\+api\+::unlock (\begin{DoxyParamCaption}\item[{string}]{password }\end{DoxyParamCaption})}
+
+Unlocks the wallet.
+
+The wallet remain unlocked until the {\ttfamily lock} is called or the program exits. 
+\begin{DoxyParams}{Parameters}
+{\em password} & the password previously set with {\ttfamily \mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api_a9b9c6db62baab3c4f2476823573d57ce}{set\+\_\+password()}}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+plugins/wallet\+\_\+plugin/include/aacio/wallet\+\_\+plugin/\mbox{\hyperlink{wallet_8hpp}{wallet.\+hpp}}\item 
+plugins/wallet\+\_\+plugin/\mbox{\hyperlink{wallet_8cpp}{wallet.\+cpp}}\end{DoxyCompactItemize}

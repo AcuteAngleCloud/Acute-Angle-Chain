@@ -1,0 +1,49 @@
+\hypertarget{classfc_1_1rpc_1_1http__api__connection}{}\section{fc\+:\+:rpc\+:\+:http\+\_\+api\+\_\+connection Class Reference}
+\label{classfc_1_1rpc_1_1http__api__connection}\index{fc\+::rpc\+::http\+\_\+api\+\_\+connection@{fc\+::rpc\+::http\+\_\+api\+\_\+connection}}
+
+
+Inheritance diagram for fc\+:\+:rpc\+:\+:http\+\_\+api\+\_\+connection\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:rpc\+:\+:http\+\_\+api\+\_\+connection\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classfc_1_1variant}{variant}} \mbox{\hyperlink{classfc_1_1rpc_1_1http__api__connection_a3f613b413f6792e3aa631d8e20f4f2c9}{send\+\_\+call}} (api\+\_\+id\+\_\+type api\+\_\+id, string method\+\_\+name, \mbox{\hyperlink{classstd_1_1vector}{variants}} args=\mbox{\hyperlink{classstd_1_1vector}{variants}}()) override
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1http__api__connection_a14fc66782552d9a76279a5c2f6fc3f14}\label{classfc_1_1rpc_1_1http__api__connection_a14fc66782552d9a76279a5c2f6fc3f14}} 
+virtual \mbox{\hyperlink{classfc_1_1variant}{variant}} {\bfseries send\+\_\+callback} (uint64\+\_\+t callback\+\_\+id, \mbox{\hyperlink{classstd_1_1vector}{variants}} args=\mbox{\hyperlink{classstd_1_1vector}{variants}}()) override
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1http__api__connection_a95fd35a8597ba6beefd424ccafff04f0}\label{classfc_1_1rpc_1_1http__api__connection_a95fd35a8597ba6beefd424ccafff04f0}} 
+virtual void {\bfseries send\+\_\+notice} (uint64\+\_\+t callback\+\_\+id, \mbox{\hyperlink{classstd_1_1vector}{variants}} args=\mbox{\hyperlink{classstd_1_1vector}{variants}}()) override
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1http__api__connection_a188a41e7a1bdda4cd09b6fb9fbd7e30b}\label{classfc_1_1rpc_1_1http__api__connection_a188a41e7a1bdda4cd09b6fb9fbd7e30b}} 
+void {\bfseries on\+\_\+request} (const fc\+::http\+::request \&req, const fc\+::http\+::server\+::response \&resp)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1rpc_1_1http__api__connection_a56b36afdcec3344f78d344b4636ca96c}\label{classfc_1_1rpc_1_1http__api__connection_a56b36afdcec3344f78d344b4636ca96c}} 
+fc\+::rpc\+::state {\bfseries \+\_\+rpc\+\_\+state}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1rpc_1_1http__api__connection_a3f613b413f6792e3aa631d8e20f4f2c9}\label{classfc_1_1rpc_1_1http__api__connection_a3f613b413f6792e3aa631d8e20f4f2c9}} 
+\index{fc\+::rpc\+::http\+\_\+api\+\_\+connection@{fc\+::rpc\+::http\+\_\+api\+\_\+connection}!send\+\_\+call@{send\+\_\+call}}
+\index{send\+\_\+call@{send\+\_\+call}!fc\+::rpc\+::http\+\_\+api\+\_\+connection@{fc\+::rpc\+::http\+\_\+api\+\_\+connection}}
+\subsubsection{\texorpdfstring{send\+\_\+call()}{send\_call()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1variant}{variant}} fc\+::rpc\+::http\+\_\+api\+\_\+connection\+::send\+\_\+call (\begin{DoxyParamCaption}\item[{api\+\_\+id\+\_\+type}]{api\+\_\+id,  }\item[{string}]{method\+\_\+name,  }\item[{\mbox{\hyperlink{classstd_1_1vector}{variants}}}]{args = {\ttfamily \mbox{\hyperlink{classstd_1_1vector}{variants}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+makes calls to the remote server 
+
+Implements \mbox{\hyperlink{classfc_1_1api__connection_a38d046b1803e1242ce10f36c694b9dea}{fc\+::api\+\_\+connection}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/rpc/http\+\_\+api.\+hpp\item 
+libraries/fc/src/rpc/http\+\_\+api.\+cpp\end{DoxyCompactItemize}

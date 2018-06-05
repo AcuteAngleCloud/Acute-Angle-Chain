@@ -1,0 +1,103 @@
+.TH "test_transaction" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+test_transaction
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBtest_tapos_block_num\fP ()"
+.br
+.ti -1c
+.RI "static void \fBtest_tapos_block_prefix\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_action\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_action_empty\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_action_max\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_action_large\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_action_recurse\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_action_inline_fail\fP ()"
+.br
+.ti -1c
+.RI "static void \fBtest_read_transaction\fP ()"
+.br
+.ti -1c
+.RI "static void \fBtest_transaction_size\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_transaction\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBsend_transaction_empty\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBsend_transaction_trigger_error_handler\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBassert_false_error_handler\fP (const \fBaacio::deferred_transaction\fP &)"
+.br
+.ti -1c
+.RI "static void \fBsend_transaction_max\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_transaction_large\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBsend_transaction_expiring_late\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBsend_action_sender\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBdeferred_print\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_deferred_transaction\fP (uint64_t receiver, uint64_t code, uint64_t \fBaction\fP)"
+.br
+.ti -1c
+.RI "static void \fBcancel_deferred_transaction\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_cf_action\fP ()"
+.br
+.ti -1c
+.RI "static void \fBsend_cf_action_fail\fP ()"
+.br
+.ti -1c
+.RI "static void \fBread_inline_action\fP ()"
+.br
+.ti -1c
+.RI "static void \fBread_inline_cf_action\fP ()"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void test_transaction::deferred_print ()\fC [static]\fP"
+deferred transaction 
+.SS "void test_transaction::send_action_inline_fail ()\fC [static]\fP"
+cause failure due to inline TX failure 
+.SS "void test_transaction::send_action_large ()\fC [static]\fP"
+cause failure due to a large action payload 
+.SS "void test_transaction::send_action_recurse ()\fC [static]\fP"
+cause failure due recursive loop 
+.SS "void test_transaction::send_transaction_large (uint64_t receiver, uint64_t code, uint64_t action)\fC [static]\fP"
+cause failure due to a large transaction size 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

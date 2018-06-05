@@ -1,0 +1,9 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2264 [label="input_iterator_tag",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2264 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="my_input_iterator_tag",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmy__input__iterator__tag.html"];
+}

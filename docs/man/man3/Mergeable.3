@@ -1,0 +1,64 @@
+.TH "Mergeable" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Mergeable
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBInputMergeable\fP, and \fBOutputMergeable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMergeable\fP (\fBModule\fP &wasm)"
+.br
+.ti -1c
+.RI "void \fBfindSizes\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindImports\fP ()"
+.br
+.ti -1c
+.RI "void \fBstandardizeSegments\fP ()"
+.br
+.ti -1c
+.RI "\fBName\fP \fBgetNonColliding\fP (\fBName\fP initial, std::function< bool(\fBName\fP)> checkIfCollides)"
+.br
+.ti -1c
+.RI "template<typename T , typename U , typename Segment > void \fBstandardizeSegment\fP (\fBModule\fP &wasm, \fBT\fP &what, Index size, \fBU\fP zero, \fBName\fP globalName)"
+.br
+.ti -1c
+.RI "template<typename T , typename V > void \fBcopySegment\fP (\fBT\fP &output, \fBT\fP &input, \fBV\fP updater)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBModule\fP & \fBwasm\fP"
+.br
+.ti -1c
+.RI "Index \fBtotalMemorySize\fP"
+.br
+.ti -1c
+.RI "Index \fBtotalTableSize\fP"
+.br
+.ti -1c
+.RI "\fBstd::set\fP< \fBName\fP > \fBmemoryBaseGlobals\fP"
+.br
+.ti -1c
+.RI "\fBstd::set\fP< \fBName\fP > \fBtableBaseGlobals\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBName\fP > \fBimplementedFunctionImports\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< \fBName\fP, \fBName\fP > \fBimplementedGlobalImports\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

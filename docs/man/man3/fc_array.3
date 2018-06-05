@@ -1,0 +1,71 @@
+.TH "fc::array< T, N >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::array< T, N >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <array\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBT\fP & \fBoperator[]\fP (size_t pos)"
+.br
+.ti -1c
+.RI "const \fBT\fP & \fBoperator[]\fP (size_t pos) const"
+.br
+.ti -1c
+.RI "const \fBT\fP * \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "const \fBT\fP * \fBend\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBbegin\fP ()"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBend\fP ()"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "\fBT\fP & \fBat\fP (size_t pos)"
+.br
+.ti -1c
+.RI "const \fBT\fP & \fBat\fP (size_t pos) const"
+.br
+.in -1c
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBT\fP \fBdata\fP [\fBN\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T, size_t N>
+.br
+class fc::array< T, N >"
+Provides a fixed size array that is easier for templates to specialize against or overload than \fBT\fP[N]\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T, size_t N> \fBT\fP& \fBfc::array\fP< \fBT\fP, \fBN\fP >::at (size_t pos)\fC [inline]\fP"
+Checked indexing (when in debug build) that also simplifies dereferencing when you have an array<T,N>*\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

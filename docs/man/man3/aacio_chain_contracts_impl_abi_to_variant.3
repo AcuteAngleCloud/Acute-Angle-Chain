@@ -1,0 +1,82 @@
+.TH "aacio::chain::contracts::impl::abi_to_variant" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::contracts::impl::abi_to_variant
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename M , typename Resolver , not_require_abi_t< M >  = 1> static void \fBadd\fP (\fBmutable_variant_object\fP &\fBmvo\fP, const char *\fBname\fP, const M &v, Resolver)"
+.br
+.ti -1c
+.RI "template<typename M , typename Resolver , require_abi_t< M >  = 1> static void \fBadd\fP (\fBmutable_variant_object\fP &\fBmvo\fP, const char *\fBname\fP, const M &v, Resolver resolver)"
+.br
+.ti -1c
+.RI "template<typename M , typename Resolver , require_abi_t< M >  = 1> static void \fBadd\fP (\fBmutable_variant_object\fP &\fBmvo\fP, const char *\fBname\fP, const \fBvector\fP< M > &v, Resolver resolver)"
+.br
+.ti -1c
+.RI "template<typename Resolver , typename\&.\&.\&. Args> static void \fBadd\fP (\fBmutable_variant_object\fP &\fBmvo\fP, const char *\fBname\fP, const \fBfc::static_variant\fP< Args\&.\&.\&. > &v, Resolver resolver)"
+.br
+.ti -1c
+.RI "template<typename Resolver > static void \fBadd\fP (\fBmutable_variant_object\fP &out, const char *\fBname\fP, const \fBaction\fP &act, Resolver resolver)"
+.br
+.ti -1c
+.RI "template<typename Resolver > static void \fBadd\fP (\fBmutable_variant_object\fP &out, const char *\fBname\fP, const \fBpacked_transaction\fP &ptrx, Resolver resolver)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename M , typename Resolver , require_abi_t< M > > void aacio::chain::contracts::impl::abi_to_variant::add (\fBmutable_variant_object\fP & mvo, const char * name, const M & v, Resolver resolver)\fC [inline]\fP, \fC [static]\fP"
+template which overloads add for types which are not relvant to ABI information and can be degraded to the normal ::to_variant(\&.\&.\&.) processing 
+.SS "template<typename M , typename Resolver , require_abi_t< M >  = 1> static void aacio::chain::contracts::impl::abi_to_variant::add (\fBmutable_variant_object\fP & mvo, const char * name, const M & v, Resolver resolver)\fC [static]\fP"
+template which overloads add for types which contain ABI information in their trees for these types we create new ABI aware visitors 
+.SS "template<typename M , typename Resolver , require_abi_t< M >  = 1> static void aacio::chain::contracts::impl::abi_to_variant::add (\fBmutable_variant_object\fP & mvo, const char * name, const \fBvector\fP< M > & v, Resolver resolver)\fC [inline]\fP, \fC [static]\fP"
+template which overloads add for vectors of types which contain ABI information in their trees for these members we call ::add in order to trigger further processing 
+.SS "template<typename Resolver > static void aacio::chain::contracts::impl::abi_to_variant::add (\fBmutable_variant_object\fP & out, const char * name, const \fBaction\fP & act, Resolver resolver)\fC [inline]\fP, \fC [static]\fP"
+overload of to_variant_object for actions 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIResolver\fP 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIact\fP 
+.br
+\fIresolver\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SS "template<typename Resolver > static void aacio::chain::contracts::impl::abi_to_variant::add (\fBmutable_variant_object\fP & out, const char * name, const \fBpacked_transaction\fP & ptrx, Resolver resolver)\fC [inline]\fP, \fC [static]\fP"
+overload of to_variant_object for \fBpacked_transaction\fP 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIResolver\fP 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIact\fP 
+.br
+\fIresolver\fP 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

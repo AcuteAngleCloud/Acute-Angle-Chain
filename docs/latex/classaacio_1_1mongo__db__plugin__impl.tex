@@ -1,0 +1,131 @@
+\hypertarget{classaacio_1_1mongo__db__plugin__impl}{}\section{aacio\+:\+:mongo\+\_\+db\+\_\+plugin\+\_\+impl Class Reference}
+\label{classaacio_1_1mongo__db__plugin__impl}\index{aacio\+::mongo\+\_\+db\+\_\+plugin\+\_\+impl@{aacio\+::mongo\+\_\+db\+\_\+plugin\+\_\+impl}}
+
+
+Collaboration diagram for aacio\+:\+:mongo\+\_\+db\+\_\+plugin\+\_\+impl\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a9fdf45ed19fc31c0c6c5b1d55e9a9f2f}\label{classaacio_1_1mongo__db__plugin__impl_a9fdf45ed19fc31c0c6c5b1d55e9a9f2f}} 
+void {\bfseries applied\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}} \&)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a1d9076dbecfd18b52bbedf8028b81275}\label{classaacio_1_1mongo__db__plugin__impl_a1d9076dbecfd18b52bbedf8028b81275}} 
+void {\bfseries applied\+\_\+irreversible\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a52b7e7ccf0d26366872ae73a27eaf4f9}\label{classaacio_1_1mongo__db__plugin__impl_a52b7e7ccf0d26366872ae73a27eaf4f9}} 
+void {\bfseries process\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}} \&, const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a09df4b18705f0c664b6d9abcc57176eb}\label{classaacio_1_1mongo__db__plugin__impl_a09df4b18705f0c664b6d9abcc57176eb}} 
+void {\bfseries \+\_\+process\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}} \&, const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a0989bb164cfd4c8e2469d3bf5b15146d}\label{classaacio_1_1mongo__db__plugin__impl_a0989bb164cfd4c8e2469d3bf5b15146d}} 
+void {\bfseries process\+\_\+irreversible\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_adec93cd5312c66b07603d5080cb1f011}\label{classaacio_1_1mongo__db__plugin__impl_adec93cd5312c66b07603d5080cb1f011}} 
+void {\bfseries \+\_\+process\+\_\+irreversible\+\_\+block} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_acb6c23f27d420bdaf76ed713236a7af9}\label{classaacio_1_1mongo__db__plugin__impl_acb6c23f27d420bdaf76ed713236a7af9}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_ac8e02715497cba957c7a1c313826da80}\label{classaacio_1_1mongo__db__plugin__impl_ac8e02715497cba957c7a1c313826da80}} 
+void {\bfseries wipe\+\_\+database} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_aef112047c8e5d5acc9aa9005e05a82a7}\label{classaacio_1_1mongo__db__plugin__impl_aef112047c8e5d5acc9aa9005e05a82a7}} 
+void {\bfseries consume\+\_\+blocks} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a91f72ee89efef0f807968080f9ef6008}\label{classaacio_1_1mongo__db__plugin__impl_a91f72ee89efef0f807968080f9ef6008}} 
+void {\bfseries update\+\_\+account} (const \mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_ac7472d1557c6c63a1ad3fe4aefb47830}\label{classaacio_1_1mongo__db__plugin__impl_ac7472d1557c6c63a1ad3fe4aefb47830}} 
+bool {\bfseries configured} \{false\}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a91145ea1ad118948c2f185b0d7c2fadd}\label{classaacio_1_1mongo__db__plugin__impl_a91145ea1ad118948c2f185b0d7c2fadd}} 
+bool {\bfseries wipe\+\_\+database\+\_\+on\+\_\+startup} \{false\}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a4582559b99d455afe502f81b20c8e3cb}\label{classaacio_1_1mongo__db__plugin__impl_a4582559b99d455afe502f81b20c8e3cb}} 
+std\+::string {\bfseries db\+\_\+name}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a593e7a5666a3b1e91f2ce6155756a36f}\label{classaacio_1_1mongo__db__plugin__impl_a593e7a5666a3b1e91f2ce6155756a36f}} 
+mongocxx\+::instance {\bfseries mongo\+\_\+inst}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_ae4b86d1ff0a54d80cfb356cac8111521}\label{classaacio_1_1mongo__db__plugin__impl_ae4b86d1ff0a54d80cfb356cac8111521}} 
+mongocxx\+::client {\bfseries mongo\+\_\+conn}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a6a200a62c714bc11a45bc43ef4eb9f83}\label{classaacio_1_1mongo__db__plugin__impl_a6a200a62c714bc11a45bc43ef4eb9f83}} 
+mongocxx\+::collection {\bfseries accounts}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a4b58694c7fb7b6b6b8761b3c31513666}\label{classaacio_1_1mongo__db__plugin__impl_a4b58694c7fb7b6b6b8761b3c31513666}} 
+size\+\_\+t {\bfseries queue\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_aa88c25db5be25b75ab5075088a1dd2b4}\label{classaacio_1_1mongo__db__plugin__impl_aa88c25db5be25b75ab5075088a1dd2b4}} 
+size\+\_\+t {\bfseries processed} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a67892e78b53d4ad8bcd599bbe91a5034}\label{classaacio_1_1mongo__db__plugin__impl_a67892e78b53d4ad8bcd599bbe91a5034}} 
+\mbox{\hyperlink{classstd_1_1deque}{std\+::deque}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} $>$ {\bfseries signed\+\_\+block\+\_\+queue}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_ae3703996f7d4504894118bda7cf702d0}\label{classaacio_1_1mongo__db__plugin__impl_ae3703996f7d4504894118bda7cf702d0}} 
+\mbox{\hyperlink{classstd_1_1deque}{std\+::deque}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} $>$ {\bfseries signed\+\_\+block\+\_\+process\+\_\+queue}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_ac83b31b69463cb1adb821458ac8bf037}\label{classaacio_1_1mongo__db__plugin__impl_ac83b31b69463cb1adb821458ac8bf037}} 
+\mbox{\hyperlink{classstd_1_1deque}{std\+::deque}}$<$ std\+::pair$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}}, \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} $>$ $>$ {\bfseries block\+\_\+trace\+\_\+queue}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a5a5afa9eea4feca3a6dbdeca7e857075}\label{classaacio_1_1mongo__db__plugin__impl_a5a5afa9eea4feca3a6dbdeca7e857075}} 
+\mbox{\hyperlink{classstd_1_1deque}{std\+::deque}}$<$ std\+::pair$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}}, \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} $>$ $>$ {\bfseries block\+\_\+trace\+\_\+process\+\_\+queue}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a3513997238082b9e72824402f083805c}\label{classaacio_1_1mongo__db__plugin__impl_a3513997238082b9e72824402f083805c}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ std\+::string, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1action}{chain\+::action}} $>$ $>$ {\bfseries reversible\+\_\+actions}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a1d2a0849c94d49679a5d0af4cb87f2c0}\label{classaacio_1_1mongo__db__plugin__impl_a1d2a0849c94d49679a5d0af4cb87f2c0}} 
+boost\+::mutex {\bfseries mtx}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a859f2a40aac19ec0c72c2aa2a27c4492}\label{classaacio_1_1mongo__db__plugin__impl_a859f2a40aac19ec0c72c2aa2a27c4492}} 
+boost\+::condition\+\_\+variable {\bfseries condtion}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a08ade864eb5b969a550229a0863e13e8}\label{classaacio_1_1mongo__db__plugin__impl_a08ade864eb5b969a550229a0863e13e8}} 
+boost\+::thread {\bfseries consume\+\_\+thread}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_acfbd27ccadca788e0892832f6b4a7cb6}\label{classaacio_1_1mongo__db__plugin__impl_acfbd27ccadca788e0892832f6b4a7cb6}} 
+boost\+::atomic$<$ bool $>$ {\bfseries done} \{false\}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a9f9df226ec8a8c956057eac8cfb780db}\label{classaacio_1_1mongo__db__plugin__impl_a9f9df226ec8a8c956057eac8cfb780db}} 
+boost\+::atomic$<$ bool $>$ {\bfseries startup} \{true\}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a2c893353a25d846e5cb1d8f8dc5b2ff6}\label{classaacio_1_1mongo__db__plugin__impl_a2c893353a25d846e5cb1d8f8dc5b2ff6}} 
+static \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} {\bfseries aac\+\_\+abi}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a6da091efc5bfb8c88cb110e80b837dbc}\label{classaacio_1_1mongo__db__plugin__impl_a6da091efc5bfb8c88cb110e80b837dbc}} 
+static const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries newaccount} = \char`\"{}newaccount\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a5b30b3346ec33af1dc819774e440c575}\label{classaacio_1_1mongo__db__plugin__impl_a5b30b3346ec33af1dc819774e440c575}} 
+static const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries transfer} = \char`\"{}transfer\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a066e66d9b1c371cae0f0840355864e2f}\label{classaacio_1_1mongo__db__plugin__impl_a066e66d9b1c371cae0f0840355864e2f}} 
+static const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries setabi} = \char`\"{}setabi\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a83f3acc0dd305c23a49bcedd94d11727}\label{classaacio_1_1mongo__db__plugin__impl_a83f3acc0dd305c23a49bcedd94d11727}} 
+static const std\+::string {\bfseries blocks\+\_\+col} = \char`\"{}Blocks\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a2c26e294583fe98d1307cc292628cd7c}\label{classaacio_1_1mongo__db__plugin__impl_a2c26e294583fe98d1307cc292628cd7c}} 
+static const std\+::string {\bfseries trans\+\_\+col} = \char`\"{}Transactions\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_af6fbc8a5a3c51ca105397ec1c0500730}\label{classaacio_1_1mongo__db__plugin__impl_af6fbc8a5a3c51ca105397ec1c0500730}} 
+static const std\+::string {\bfseries actions\+\_\+col} = \char`\"{}Actions\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_ac8b764d18690e30e122923d766957ce4}\label{classaacio_1_1mongo__db__plugin__impl_ac8b764d18690e30e122923d766957ce4}} 
+static const std\+::string {\bfseries action\+\_\+traces\+\_\+col} = \char`\"{}Action\+Traces\char`\"{}
+\item 
+\mbox{\Hypertarget{classaacio_1_1mongo__db__plugin__impl_a6e314e6d5cadfd7e203d7ddfc7cc3e68}\label{classaacio_1_1mongo__db__plugin__impl_a6e314e6d5cadfd7e203d7ddfc7cc3e68}} 
+static const std\+::string {\bfseries accounts\+\_\+col} = \char`\"{}Accounts\char`\"{}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/mongo\+\_\+db\+\_\+plugin/\mbox{\hyperlink{mongo__db__plugin_8cpp}{mongo\+\_\+db\+\_\+plugin.\+cpp}}\end{DoxyCompactItemize}

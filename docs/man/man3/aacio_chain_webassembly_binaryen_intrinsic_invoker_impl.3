@@ -1,0 +1,32 @@
+.TH "aacio::chain::webassembly::binaryen::intrinsic_invoker_impl< Ret, NativeParameters >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::webassembly::binaryen::intrinsic_invoker_impl< Ret, NativeParameters >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <binaryen\&.hpp>\fP
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename Ret, typename NativeParameters>
+.br
+struct aacio::chain::webassembly::binaryen::intrinsic_invoker_impl< Ret, NativeParameters >"
+Forward declaration of the invoker type which transcribes arguments to/from a native method and injects the appropriate checks
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIRet\fP - the return type of the native function 
+.br
+\fINativeParameters\fP - a std::tuple of the remaining native parameters to transcribe 
+.br
+\fIWasmParameters\fP - a std::tuple of the transribed parameters 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

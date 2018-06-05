@@ -1,0 +1,35 @@
+\hypertarget{structwasm_1_1_pass_registry}{}\section{wasm\+:\+:Pass\+Registry Struct Reference}
+\label{structwasm_1_1_pass_registry}\index{wasm\+::\+Pass\+Registry@{wasm\+::\+Pass\+Registry}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_pass_registry_a8a991934bcd9fbf1264d96b6747039df}\label{structwasm_1_1_pass_registry_a8a991934bcd9fbf1264d96b6747039df}} 
+typedef std\+::function$<$ \mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$()$>$ {\bfseries Creator}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_pass_registry_a13ccf6ec13a7991e03e8c954f8730846}\label{structwasm_1_1_pass_registry_a13ccf6ec13a7991e03e8c954f8730846}} 
+void {\bfseries register\+Pass} (const char $\ast$name, const char $\ast$description, \mbox{\hyperlink{struct_creator}{Creator}} create)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_pass_registry_af69f8a12b6c86e93173d0fdab6ace694}\label{structwasm_1_1_pass_registry_af69f8a12b6c86e93173d0fdab6ace694}} 
+\mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$ {\bfseries create\+Pass} (std\+::string name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_pass_registry_a60ce1410defd82d7c221d7f49ec54536}\label{structwasm_1_1_pass_registry_a60ce1410defd82d7c221d7f49ec54536}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ {\bfseries get\+Registered\+Names} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_pass_registry_aa167b4a8bec90a34d45520c69ee47115}\label{structwasm_1_1_pass_registry_aa167b4a8bec90a34d45520c69ee47115}} 
+std\+::string {\bfseries get\+Pass\+Description} (std\+::string name)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_pass_registry_a4b54bdae371e7f42fc2346f898ae36a0}\label{structwasm_1_1_pass_registry_a4b54bdae371e7f42fc2346f898ae36a0}} 
+static \mbox{\hyperlink{structwasm_1_1_pass_registry}{Pass\+Registry}} $\ast$ {\bfseries get} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/pass.\+h\item 
+externals/binaryen/src/passes/pass.\+cpp\end{DoxyCompactItemize}

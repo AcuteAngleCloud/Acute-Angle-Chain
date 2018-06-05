@@ -1,0 +1,67 @@
+\hypertarget{classwasm_1_1_module_instance_base}{}\section{wasm\+:\+:Module\+Instance\+Base$<$ Global\+Manager, Sub\+Type $>$ Class Template Reference}
+\label{classwasm_1_1_module_instance_base}\index{wasm\+::\+Module\+Instance\+Base$<$ Global\+Manager, Sub\+Type $>$@{wasm\+::\+Module\+Instance\+Base$<$ Global\+Manager, Sub\+Type $>$}}
+
+
+Collaboration diagram for wasm\+:\+:Module\+Instance\+Base$<$ Global\+Manager, Sub\+Type $>$\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_module_instance_base_1_1_external_interface}{External\+Interface}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a42e236ba33980d2e7325f1d15795a8e1}\label{classwasm_1_1_module_instance_base_a42e236ba33980d2e7325f1d15795a8e1}} 
+Sub\+Type $\ast$ {\bfseries self} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_af3a5f758af7673d05e09cc94e7a736ee}\label{classwasm_1_1_module_instance_base_af3a5f758af7673d05e09cc94e7a736ee}} 
+{\bfseries Module\+Instance\+Base} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&wasm, \mbox{\hyperlink{structwasm_1_1_module_instance_base_1_1_external_interface}{External\+Interface}} $\ast$external\+Interface)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_ac4f4911ef3de41dc800961d662c3a466}\label{classwasm_1_1_module_instance_base_ac4f4911ef3de41dc800961d662c3a466}} 
+\mbox{\hyperlink{classwasm_1_1_literal}{Literal}} {\bfseries call\+Export} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&arguments)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_ac81667231f6d83257b44de4743ab0dd0}\label{classwasm_1_1_module_instance_base_ac81667231f6d83257b44de4743ab0dd0}} 
+\mbox{\hyperlink{classwasm_1_1_literal}{Literal}} {\bfseries call\+Export} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a9cda22ae6b060049d1cd266aae515717}\label{classwasm_1_1_module_instance_base_a9cda22ae6b060049d1cd266aae515717}} 
+\mbox{\hyperlink{classwasm_1_1_literal}{Literal}} {\bfseries get\+Export} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a6a2757f26b8c71180ea78809c74605f5}\label{classwasm_1_1_module_instance_base_a6a2757f26b8c71180ea78809c74605f5}} 
+std\+::string {\bfseries print\+Function\+Stack} ()
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_af2090d0209fb093bb9323a59b8940a40}\label{classwasm_1_1_module_instance_base_af2090d0209fb093bb9323a59b8940a40}} 
+\mbox{\hyperlink{classwasm_1_1_literal}{Literal}} {\bfseries call\+Function} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&arguments)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_aa1504ccb05636a927cb56d46570bd1ea}\label{classwasm_1_1_module_instance_base_aa1504ccb05636a927cb56d46570bd1ea}} 
+\mbox{\hyperlink{classwasm_1_1_literal}{Literal}} {\bfseries call\+Function\+Internal} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name, \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&arguments)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a3fa58090eb1b3083ad65c14e4c1dc2ae}\label{classwasm_1_1_module_instance_base_a3fa58090eb1b3083ad65c14e4c1dc2ae}} 
+\mbox{\hyperlink{classwasm_1_1_module}{Module}} \& {\bfseries wasm}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a40a40e10ad9f148f7ac7f4c902adec9e}\label{classwasm_1_1_module_instance_base_a40a40e10ad9f148f7ac7f4c902adec9e}} 
+Global\+Manager {\bfseries globals}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a5778c68e67f16b456f13dec67bcfaa56}\label{classwasm_1_1_module_instance_base_a5778c68e67f16b456f13dec67bcfaa56}} 
+{\footnotesize template$<$class LS $>$ }\\\mbox{\hyperlink{structwasm_1_1_address}{Address}} {\bfseries get\+Final\+Address} (LS $\ast$curr, \mbox{\hyperlink{classwasm_1_1_literal}{Literal}} ptr)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a5bf510f5fda5341dd12acdb6e83841e4}\label{classwasm_1_1_module_instance_base_a5bf510f5fda5341dd12acdb6e83841e4}} 
+\mbox{\hyperlink{structwasm_1_1_address}{Address}} {\bfseries memory\+Size}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_module_instance_base_a7d2909a2aa7068614ac1f3fc8e24ca80}\label{classwasm_1_1_module_instance_base_a7d2909a2aa7068614ac1f3fc8e24ca80}} 
+\mbox{\hyperlink{structwasm_1_1_module_instance_base_1_1_external_interface}{External\+Interface}} $\ast$ {\bfseries external\+Interface}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm-\/interpreter.\+h\end{DoxyCompactItemize}

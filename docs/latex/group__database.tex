@@ -1,0 +1,51 @@
+\hypertarget{group__database}{}\section{Database A\+PI}
+\label{group__database}\index{Database A\+PI@{Database A\+PI}}
+
+
+A\+P\+Is that store and retreive data on the blockchain
+
+A\+A\+C.\+IO organizes data according to the following broad structure\+:  
+
+
+Collaboration diagram for Database A\+PI\+:
+% FIG 0
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__database_c}{Database C A\+PI}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_c}{C}} A\+P\+Is for interfacing with the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\+P\+Is that store and retreive data on the blockchain
+
+A\+A\+C.\+IO organizes data according to the following broad structure\+: 
+
+
+\begin{DoxyItemize}
+\item {\bfseries code} -\/ the account name which has write permission
+\begin{DoxyItemize}
+\item {\bfseries scope} -\/ an account where the data is stored
+\begin{DoxyItemize}
+\item {\bfseries table} -\/ a name for the table that is being stored
+\begin{DoxyItemize}
+\item {\bfseries record} -\/ a row in the table
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Every transaction specifies the set of valid scopes that may be read and/or written to. The code that is running determines what can be written to; therefore, write operations do not allow you to specify/configure the code.
+
+\begin{DoxyNote}{Note}
+Attempts to read and/or write outside the valid scope and/or code sections will cause your transaction to fail.
+\end{DoxyNote}
+\hypertarget{group__database_tabletypes}{}\subsection{table Types}\label{group__database_tabletypes}
+These are the supported table types identified by the number and size of the index\+:
+
+
+\begin{DoxyEnumerate}
+\item dbi64
+\end{DoxyEnumerate}
+
+The database\+Cpp provides a simple interface for storing any fixed-\/size struct as a database row. 

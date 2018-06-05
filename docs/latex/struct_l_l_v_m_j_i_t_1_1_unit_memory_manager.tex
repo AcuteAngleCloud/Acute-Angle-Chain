@@ -1,0 +1,45 @@
+\hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager}{}\section{L\+L\+V\+M\+J\+IT\+:\+:Unit\+Memory\+Manager Struct Reference}
+\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager}\index{L\+L\+V\+M\+J\+I\+T\+::\+Unit\+Memory\+Manager@{L\+L\+V\+M\+J\+I\+T\+::\+Unit\+Memory\+Manager}}
+
+
+Inheritance diagram for L\+L\+V\+M\+J\+IT\+:\+:Unit\+Memory\+Manager\+:
+% FIG 0
+
+
+Collaboration diagram for L\+L\+V\+M\+J\+IT\+:\+:Unit\+Memory\+Manager\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a6c3d2f63cbc13c4043de3896e5c919d6}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a6c3d2f63cbc13c4043de3896e5c919d6}} 
+void {\bfseries register\+E\+H\+Frames} (U8 $\ast$addr, U64 load\+Addr, uintptr\+\_\+t num\+Bytes) override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a44a8e9be2fa62ba4fcd41369f1a45f4f}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a44a8e9be2fa62ba4fcd41369f1a45f4f}} 
+void {\bfseries deregister\+E\+H\+Frames} (U8 $\ast$addr, U64 load\+Addr, uintptr\+\_\+t num\+Bytes) override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_aaab997bb02fc83b984ad19a02b69eacb}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_aaab997bb02fc83b984ad19a02b69eacb}} 
+virtual bool {\bfseries needs\+To\+Reserve\+Allocation\+Space} () override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a365b4465df713d3e1052c8f0a5cc89d9}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a365b4465df713d3e1052c8f0a5cc89d9}} 
+virtual void {\bfseries reserve\+Allocation\+Space} (uintptr\+\_\+t num\+Code\+Bytes, U32 code\+Alignment, uintptr\+\_\+t num\+Read\+Only\+Bytes, U32 read\+Only\+Alignment, uintptr\+\_\+t num\+Read\+Write\+Bytes, U32 read\+Write\+Alignment) override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a7aa6ed100fb7a7e93b1740cc8110fd43}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a7aa6ed100fb7a7e93b1740cc8110fd43}} 
+virtual U8 $\ast$ {\bfseries allocate\+Code\+Section} (uintptr\+\_\+t num\+Bytes, U32 alignment, U32 section\+ID, llvm\+::\+String\+Ref section\+Name) override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_ab2d8be9136eb4cccec37a0a6e022db62}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_ab2d8be9136eb4cccec37a0a6e022db62}} 
+virtual U8 $\ast$ {\bfseries allocate\+Data\+Section} (uintptr\+\_\+t num\+Bytes, U32 alignment, U32 section\+ID, llvm\+::\+String\+Ref Section\+Name, bool is\+Read\+Only) override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a021ca70d100b6c236b3e7d6cdf3a6d29}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_a021ca70d100b6c236b3e7d6cdf3a6d29}} 
+virtual bool {\bfseries finalize\+Memory} (std\+::string $\ast$Err\+Msg=nullptr) override
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_aaef1ea4d67e3d8f14941b9792a5a1a88}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_aaef1ea4d67e3d8f14941b9792a5a1a88}} 
+virtual void {\bfseries invalidate\+Instruction\+Cache} ()
+\item 
+\mbox{\Hypertarget{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_ac4185712e0239076527db555c354f9b1}\label{struct_l_l_v_m_j_i_t_1_1_unit_memory_manager_ac4185712e0239076527db555c354f9b1}} 
+U8 $\ast$ {\bfseries get\+Image\+Base\+Address} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/wasm-\/jit/\+Source/\+Runtime/L\+L\+V\+M\+J\+I\+T.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+.TH "fc::log_level" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::log_level
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <log_message\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBvalues\fP { \fBall\fP, \fBdebug\fP, \fBinfo\fP, \fBwarn\fP, \fBerror\fP, \fBoff\fP }"
+.br
+.RI "Define's the various log levels for reporting\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlog_level\fP (\fBvalues\fP v=off)"
+.br
+.ti -1c
+.RI "\fBlog_level\fP (int v)"
+.br
+.ti -1c
+.RI "\fBoperator int\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBvalues\fP \fBvalue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Named scope for \fBlog_level\fP enumeration\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBfc::log_level::values\fP"
+
+.PP
+Define's the various log levels for reporting\&. Each log level includes all higher levels such that Debug includes Error, but Error does not include Debug\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

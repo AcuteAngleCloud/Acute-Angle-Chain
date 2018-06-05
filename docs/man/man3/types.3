@@ -1,0 +1,116 @@
+.TH "types" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+types \- Specifies typedefs and aliases\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBfixed size key sorted lexicographically\fP"
+.br
+.ti -1c
+.RI "\fBVariable Length Integer\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBpublic_key\fP"
+.br
+.ti -1c
+.RI "struct \fBsignature\fP"
+.br
+.ti -1c
+.RI "struct \fBchecksum256\fP"
+.br
+.ti -1c
+.RI "struct \fBchecksum160\fP"
+.br
+.ti -1c
+.RI "struct \fBchecksum512\fP"
+.br
+.ti -1c
+.RI "struct \fBfixed_string16\fP"
+.br
+.ti -1c
+.RI "struct \fBfixed_string32\fP"
+.br
+.ti -1c
+.RI "struct \fBaccount_permission\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::name\fP"
+.br
+.RI "wraps a uint64_t to ensure it is only passed to methods that expect a Name "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPACKED\fP(\fBX\fP)   __attribute((packed)) \fBX\fP"
+.br
+.ti -1c
+.RI "#define \fBN\fP(\fBX\fP)   ::aacio::string_to_name(#\fBX\fP)"
+.br
+.RI "used to generate a compile time uint64_t from the base32 encoded string interpretation of \fBX\fP "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef uint64_t \fBaccount_name\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBpermission_name\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBtoken_name\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBtable_name\fP"
+.br
+.ti -1c
+.RI "typedef uint32_t \fBtime\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBscope_name\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBaction_name\fP"
+.br
+.ti -1c
+.RI "typedef uint16_t \fBregion_id\fP"
+.br
+.ti -1c
+.RI "typedef uint64_t \fBasset_symbol\fP"
+.br
+.ti -1c
+.RI "typedef int64_t \fBshare_type\fP"
+.br
+.ti -1c
+.RI "typedef uint16_t \fBweight_type\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBchecksum256\fP \fBtransaction_id_type\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBfixed_string16\fP \fBfield_name\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBfixed_string32\fP \fBtype_name\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Specifies typedefs and aliases\&. 
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

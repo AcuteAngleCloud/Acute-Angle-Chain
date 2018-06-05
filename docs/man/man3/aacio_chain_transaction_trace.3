@@ -1,0 +1,66 @@
+.TH "aacio::chain::transaction_trace" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::transaction_trace
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::transaction_receipt\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtransaction_receipt\fP ()"
+.br
+.ti -1c
+.RI "\fBtransaction_receipt\fP (\fBtransaction_id_type\fP tid)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBvector\fP< \fBaction_trace\fP > \fBaction_traces\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBfc::static_variant\fP< \fBdeferred_transaction\fP, \fBdeferred_reference\fP > > \fBdeferred_transaction_requests\fP"
+.br
+.ti -1c
+.RI "flat_set< \fBshard_lock\fP > \fBread_locks\fP"
+.br
+.ti -1c
+.RI "flat_set< \fBshard_lock\fP > \fBwrite_locks\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBcpu_usage\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBnet_usage\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBdigest_type\fP > \fBpacked_trx_digest\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBregion_id\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBcycle_index\fP"
+.br
+.ti -1c
+.RI "uint64_t \fBshard_index\fP"
+.br
+.ti -1c
+.RI "\fBfc::microseconds\fP \fB_profiling_us\fP = \fBfc::microseconds\fP(0)"
+.br
+.ti -1c
+.RI "\fBfc::microseconds\fP \fB_setup_profiling_us\fP = \fBfc::microseconds\fP(0)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

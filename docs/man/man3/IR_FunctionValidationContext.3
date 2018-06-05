@@ -1,0 +1,97 @@
+.TH "IR::FunctionValidationContext" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IR::FunctionValidationContext
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFunctionValidationContext\fP (const \fBModule\fP &inModule, const \fBFunctionDef\fP &inFunctionDef)"
+.br
+.ti -1c
+.RI "Uptr \fBgetControlStackSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBlogOperator\fP (const std::string &operatorDescription)"
+.br
+.ti -1c
+.RI "void \fBunknown\fP (Opcode opcode)"
+.br
+.ti -1c
+.RI "void \fBblock\fP (\fBControlStructureImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBloop\fP (\fBControlStructureImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBif_\fP (\fBControlStructureImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBelse_\fP (\fBNoImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBend\fP (\fBNoImm\fP)"
+.br
+.ti -1c
+.RI "void \fBreturn_\fP (\fBNoImm\fP)"
+.br
+.ti -1c
+.RI "void \fBbr\fP (\fBBranchImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBbr_table\fP (\fBBranchTableImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBbr_if\fP (\fBBranchImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBunreachable\fP (\fBNoImm\fP)"
+.br
+.ti -1c
+.RI "void \fBdrop\fP (\fBNoImm\fP)"
+.br
+.ti -1c
+.RI "void \fBselect\fP (\fBNoImm\fP)"
+.br
+.ti -1c
+.RI "void \fBget_local\fP (\fBGetOrSetVariableImm\fP< false > imm)"
+.br
+.ti -1c
+.RI "void \fBset_local\fP (\fBGetOrSetVariableImm\fP< false > imm)"
+.br
+.ti -1c
+.RI "void \fBtee_local\fP (\fBGetOrSetVariableImm\fP< false > imm)"
+.br
+.ti -1c
+.RI "void \fBget_global\fP (\fBGetOrSetVariableImm\fP< true > imm)"
+.br
+.ti -1c
+.RI "void \fBset_global\fP (\fBGetOrSetVariableImm\fP< true > imm)"
+.br
+.ti -1c
+.RI "void \fBcall\fP (\fBCallImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBcall_indirect\fP (\fBCallIndirectImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBvalidateImm\fP (\fBNoImm\fP)"
+.br
+.ti -1c
+.RI "template<typename nativeType > void \fBvalidateImm\fP (\fBLiteralImm\fP< nativeType > imm)"
+.br
+.ti -1c
+.RI "template<Uptr naturalAlignmentLog2> void \fBvalidateImm\fP (\fBLoadOrStoreImm\fP< naturalAlignmentLog2 > imm)"
+.br
+.ti -1c
+.RI "void \fBvalidateImm\fP (\fBMemoryImm\fP)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,69 @@
+.TH "ForwardingCallObject" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ForwardingCallObject
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class \&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) &"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) const &"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) &&"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) const &&"
+.br
+.ti -1c
+.RI "template<class\&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) &"
+.br
+.ti -1c
+.RI "template<class\&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) const &"
+.br
+.ti -1c
+.RI "template<class\&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) &&"
+.br
+.ti -1c
+.RI "template<class\&.\&.\&. Args> bool \fBoperator()\fP (Args &&\&.\&.\&.) const &&"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class \&.\&.\&. Args> static void \fBset_call\fP (CallType type)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> static bool \fBcheck_call\fP (CallType type)"
+.br
+.ti -1c
+.RI "template<class\&.\&.\&. Args> static void \fBset_call\fP (CallType type)"
+.br
+.ti -1c
+.RI "template<class\&.\&.\&. Args> static bool \fBcheck_call\fP (CallType type)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static CallType \fBlast_call_type\fP = CT_None"
+.br
+.ti -1c
+.RI "static \fBTypeID\fP const  * \fBlast_call_args\fP = nullptr"
+.br
+.ti -1c
+.RI "static const \fBTypeID\fP * \fBlast_call_args\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

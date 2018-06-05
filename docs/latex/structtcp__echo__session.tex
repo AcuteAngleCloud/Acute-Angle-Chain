@@ -1,0 +1,45 @@
+\hypertarget{structtcp__echo__session}{}\section{tcp\+\_\+echo\+\_\+session Struct Reference}
+\label{structtcp__echo__session}\index{tcp\+\_\+echo\+\_\+session@{tcp\+\_\+echo\+\_\+session}}
+
+
+Inheritance diagram for tcp\+\_\+echo\+\_\+session\+:
+% FIG 0
+
+
+Collaboration diagram for tcp\+\_\+echo\+\_\+session\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_a18cf3be69accd1d3488c41097866653f}\label{structtcp__echo__session_a18cf3be69accd1d3488c41097866653f}} 
+typedef websocketpp\+::lib\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structtcp__echo__session}{tcp\+\_\+echo\+\_\+session}} $>$ {\bfseries ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_aa4f976b3a616f492ff0ed3c8e274624a}\label{structtcp__echo__session_aa4f976b3a616f492ff0ed3c8e274624a}} 
+{\bfseries tcp\+\_\+echo\+\_\+session} (asio\+::io\+\_\+service \&service)
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_a003e24fe3bb0eba2f4357ee3d93d5e9e}\label{structtcp__echo__session_a003e24fe3bb0eba2f4357ee3d93d5e9e}} 
+void {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_a8ea4e13c24ec64401992c92576b1c731}\label{structtcp__echo__session_a8ea4e13c24ec64401992c92576b1c731}} 
+void {\bfseries handle\+\_\+read} (const asio\+::error\+\_\+code \&ec, size\+\_\+t transferred)
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_a4e50f9b7b4554949093174c62cabc367}\label{structtcp__echo__session_a4e50f9b7b4554949093174c62cabc367}} 
+void {\bfseries handle\+\_\+write} (const asio\+::error\+\_\+code \&ec)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_a65bed2b4cd943959b667b9b9af0b3507}\label{structtcp__echo__session_a65bed2b4cd943959b667b9b9af0b3507}} 
+asio\+::ip\+::tcp\+::socket {\bfseries m\+\_\+socket}
+\item 
+\mbox{\Hypertarget{structtcp__echo__session_a380df0af06dbee258b86c3adb979bf8f}\label{structtcp__echo__session_a380df0af06dbee258b86c3adb979bf8f}} 
+char {\bfseries m\+\_\+buffer} \mbox{[}1024\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/examples/external\+\_\+io\+\_\+service/tcp\+\_\+echo\+\_\+server.\+hpp\end{DoxyCompactItemize}

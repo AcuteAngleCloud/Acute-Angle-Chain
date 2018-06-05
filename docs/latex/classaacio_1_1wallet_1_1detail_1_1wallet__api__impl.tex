@@ -1,0 +1,65 @@
+\hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl}{}\section{aacio\+:\+:wallet\+:\+:detail\+:\+:wallet\+\_\+api\+\_\+impl Class Reference}
+\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl}\index{aacio\+::wallet\+::detail\+::wallet\+\_\+api\+\_\+impl@{aacio\+::wallet\+::detail\+::wallet\+\_\+api\+\_\+impl}}
+
+
+Collaboration diagram for aacio\+:\+:wallet\+:\+:detail\+:\+:wallet\+\_\+api\+\_\+impl\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a62f7126b9e373461afabf06fc6853434}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a62f7126b9e373461afabf06fc6853434}} 
+{\bfseries wallet\+\_\+api\+\_\+impl} (\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api}{wallet\+\_\+api}} \&s, const \mbox{\hyperlink{structaacio_1_1wallet_1_1wallet__data}{wallet\+\_\+data}} \&initial\+\_\+data)
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_acda93a8b70c7a852b0c5bca60bd74c0f}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_acda93a8b70c7a852b0c5bca60bd74c0f}} 
+void {\bfseries encrypt\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a16e7cbf6cd162395a30bd2e43749c8ca}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a16e7cbf6cd162395a30bd2e43749c8ca}} 
+bool {\bfseries copy\+\_\+wallet\+\_\+file} (string destination\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a6eb0b9c070f83e8eba85ec7db7c1aed0}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a6eb0b9c070f83e8eba85ec7db7c1aed0}} 
+bool {\bfseries is\+\_\+locked} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a309b20b1d6ad4d86f008d6977e4f6a23}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a309b20b1d6ad4d86f008d6977e4f6a23}} 
+string {\bfseries get\+\_\+wallet\+\_\+filename} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a555d1b03174f0ccae7cbe785100e3468}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a555d1b03174f0ccae7cbe785100e3468}} 
+\mbox{\hyperlink{classaacio_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ {\bfseries try\+\_\+get\+\_\+private\+\_\+key} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} \&id) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a06d8b5960ded0702daab625c441c20a4}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a06d8b5960ded0702daab625c441c20a4}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} {\bfseries get\+\_\+private\+\_\+key} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} \&id) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a88bd7f66f332a688a639a46baec0c2b3}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a88bd7f66f332a688a639a46baec0c2b3}} 
+bool {\bfseries import\+\_\+key} (string wif\+\_\+key)
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a4a0a79ed8ca6928039c5b2861e925ea8}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a4a0a79ed8ca6928039c5b2861e925ea8}} 
+bool {\bfseries load\+\_\+wallet\+\_\+file} (string wallet\+\_\+filename=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_af16d5828a3ad70b4d4e58e0870b2bc54}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_af16d5828a3ad70b4d4e58e0870b2bc54}} 
+void {\bfseries save\+\_\+wallet\+\_\+file} (string wallet\+\_\+filename=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a94ea26963734f8940a1560ec1fd048fc}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a94ea26963734f8940a1560ec1fd048fc}} 
+\mbox{\hyperlink{classaacio_1_1wallet_1_1wallet__api}{wallet\+\_\+api}} \& {\bfseries self}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_ada1d4a44ee8406cf360621ae23eb87f1}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_ada1d4a44ee8406cf360621ae23eb87f1}} 
+string {\bfseries \+\_\+wallet\+\_\+filename}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_ac831d5c98cf6a9f64f536b07ddeed264}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_ac831d5c98cf6a9f64f536b07ddeed264}} 
+\mbox{\hyperlink{structaacio_1_1wallet_1_1wallet__data}{wallet\+\_\+data}} {\bfseries \+\_\+wallet}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a6fc339ca738fcbd1ed53141300ea344e}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a6fc339ca738fcbd1ed53141300ea344e}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}}, \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} $>$ {\bfseries \+\_\+keys}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a1c1adba13ee18191fce65b6412b0f6f7}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_a1c1adba13ee18191fce65b6412b0f6f7}} 
+\mbox{\hyperlink{classfc_1_1sha512}{fc\+::sha512}} {\bfseries \+\_\+checksum}
+\item 
+\mbox{\Hypertarget{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_afdfc6f74ac02f44a7fd40dedecb45410}\label{classaacio_1_1wallet_1_1detail_1_1wallet__api__impl_afdfc6f74ac02f44a7fd40dedecb45410}} 
+const string {\bfseries \+\_\+wallet\+\_\+filename\+\_\+extension} = \char`\"{}.wallet\char`\"{}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plugins/wallet\+\_\+plugin/\mbox{\hyperlink{wallet_8cpp}{wallet.\+cpp}}\end{DoxyCompactItemize}

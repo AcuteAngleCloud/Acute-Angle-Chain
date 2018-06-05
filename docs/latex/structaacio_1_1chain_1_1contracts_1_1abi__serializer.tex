@@ -1,0 +1,148 @@
+\hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer}{}\section{aacio\+:\+:chain\+:\+:contracts\+:\+:abi\+\_\+serializer Struct Reference}
+\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer}\index{aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}}
+
+
+{\ttfamily \#include $<$abi\+\_\+serializer.\+hpp$>$}
+
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:contracts\+:\+:abi\+\_\+serializer\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aa4990708ed3471d925d31d4fcf00b9b1}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aa4990708ed3471d925d31d4fcf00b9b1}} 
+typedef std\+::function$<$ \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}}(\mbox{\hyperlink{classfc_1_1datastream}{fc\+::datastream}}$<$ const char $\ast$ $>$ \&, bool, bool)$>$ {\bfseries unpack\+\_\+function}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aadf77d0439acfd9d62ef214e7813d92c}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aadf77d0439acfd9d62ef214e7813d92c}} 
+typedef std\+::function$<$ void(const \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&, \mbox{\hyperlink{classfc_1_1datastream}{fc\+::datastream}}$<$ char $\ast$ $>$ \&, bool, bool)$>$ {\bfseries pack\+\_\+function}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aee2fe07869944499d620c442ac0e6e03}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aee2fe07869944499d620c442ac0e6e03}} 
+{\bfseries abi\+\_\+serializer} (const \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&abi)
+\item 
+void \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a3e71b20253e6ac8f1c1eebb5584d99ed}{set\+\_\+abi}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&abi)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a47e6a166cdc6ec0bb6f7cae67b21f590}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a47e6a166cdc6ec0bb6f7cae67b21f590}} 
+void {\bfseries configure\+\_\+built\+\_\+in\+\_\+types} ()
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a243e61362203e12886f7545a8eec2570}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a243e61362203e12886f7545a8eec2570}} 
+bool {\bfseries has\+\_\+cycle} (const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structpair}{pair}}$<$ string, string $>$$>$ \&sedges) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a7419b8530144bf8e0de196862523b4c9}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a7419b8530144bf8e0de196862523b4c9}} 
+void {\bfseries validate} () const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ab2e84bac5f24f7445ab664e69edf252e}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ab2e84bac5f24f7445ab664e69edf252e}} 
+type\+\_\+name {\bfseries resolve\+\_\+type} (const type\+\_\+name \&t) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ab976e12d7a3a54474e32a22ff2835675}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ab976e12d7a3a54474e32a22ff2835675}} 
+bool {\bfseries is\+\_\+array} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a20f3e9ccc6a6d68a4c2d019f38f1e9ae}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a20f3e9ccc6a6d68a4c2d019f38f1e9ae}} 
+bool {\bfseries is\+\_\+optional} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a48bed65c4f4e4ae2bd2338b97d928a9f}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a48bed65c4f4e4ae2bd2338b97d928a9f}} 
+bool {\bfseries is\+\_\+type} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aecda24b1ee0f5c3aeb2dfcbfa55fccd2}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aecda24b1ee0f5c3aeb2dfcbfa55fccd2}} 
+bool {\bfseries is\+\_\+builtin\+\_\+type} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a7a7c53c31ac567adfe7eacc7be33bf61}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a7a7c53c31ac567adfe7eacc7be33bf61}} 
+bool {\bfseries is\+\_\+integer} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a06e9f934189d81ea0c7baadbacb5fc9a}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a06e9f934189d81ea0c7baadbacb5fc9a}} 
+int {\bfseries get\+\_\+integer\+\_\+size} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a6a0e3f4265d3d5d189ca6d42e4c42f69}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a6a0e3f4265d3d5d189ca6d42e4c42f69}} 
+bool {\bfseries is\+\_\+struct} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a83ebaeced4b042c4b79a26e12d8fa645}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a83ebaeced4b042c4b79a26e12d8fa645}} 
+type\+\_\+name {\bfseries fundamental\+\_\+type} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a937d78f4eb448e8c2fceb7272368ff43}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a937d78f4eb448e8c2fceb7272368ff43}} 
+const \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1struct__def}{struct\+\_\+def}} \& {\bfseries get\+\_\+struct} (const type\+\_\+name \&type) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aa3523f695ec8788cfe3f4dd4e01b9464}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aa3523f695ec8788cfe3f4dd4e01b9464}} 
+type\+\_\+name {\bfseries get\+\_\+action\+\_\+type} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1chain_1_1action}{action}}) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ae3e82eaa4b71443f06abe73954bc8ca8}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ae3e82eaa4b71443f06abe73954bc8ca8}} 
+type\+\_\+name {\bfseries get\+\_\+table\+\_\+type} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1chain_1_1action}{action}}) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aadbd2bd5badd74d4d18d1adcb47c70a2}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aadbd2bd5badd74d4d18d1adcb47c70a2}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries binary\+\_\+to\+\_\+variant} (const type\+\_\+name \&type, const \mbox{\hyperlink{classstd_1_1vector}{bytes}} \&binary) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_af21784cc900a13140f2c624ef575f71b}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_af21784cc900a13140f2c624ef575f71b}} 
+\mbox{\hyperlink{classstd_1_1vector}{bytes}} {\bfseries variant\+\_\+to\+\_\+binary} (const type\+\_\+name \&type, const \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&var) const
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aa35992db59dc7bdcf986e263300cee21}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aa35992db59dc7bdcf986e263300cee21}} 
+\mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} {\bfseries binary\+\_\+to\+\_\+variant} (const type\+\_\+name \&type, \mbox{\hyperlink{classfc_1_1datastream}{fc\+::datastream}}$<$ const char $\ast$$>$ \&binary) const
+\item 
+void \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ac10d0962d2f4e062905e47d7b0946e5a}{variant\+\_\+to\+\_\+binary}} (const type\+\_\+name \&type, const \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&var, \mbox{\hyperlink{classfc_1_1datastream}{fc\+::datastream}}$<$ char $\ast$$>$ \&ds) const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a14d77c9f2f898bc5ecae58611316a849}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a14d77c9f2f898bc5ecae58611316a849}} 
+{\footnotesize template$<$typename T , typename Resolver $>$ }\\static void {\bfseries to\+\_\+variant} (const \mbox{\hyperlink{struct_t}{T}} \&o, \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&vo, Resolver resolver)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a0ab9e98dbdbce4d24fc5f0199fbe903d}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a0ab9e98dbdbce4d24fc5f0199fbe903d}} 
+{\footnotesize template$<$typename T , typename Resolver $>$ }\\static void {\bfseries from\+\_\+variant} (const \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&v, \mbox{\hyperlink{struct_t}{T}} \&o, Resolver resolver)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a3872efb2a0ee4ad4c0e393cb3fd06a48}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a3872efb2a0ee4ad4c0e393cb3fd06a48}} 
+{\footnotesize template$<$typename Vec $>$ }\\static bool {\bfseries is\+\_\+empty\+\_\+abi} (const Vec \&abi\+\_\+vec)
+\item 
+{\footnotesize template$<$typename Vec $>$ }\\static bool \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aaf369a687091d721f89734874053838c}{to\+\_\+abi}} (const Vec \&abi\+\_\+vec, \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&abi)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ab80044dbbe38146684ad3e5f5361a933}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ab80044dbbe38146684ad3e5f5361a933}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ type\+\_\+name, type\+\_\+name $>$ {\bfseries typedefs}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a4b63f47dd4d4ddd11d3f8d2bfc98748e}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a4b63f47dd4d4ddd11d3f8d2bfc98748e}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ type\+\_\+name, \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1struct__def}{struct\+\_\+def}} $>$ {\bfseries structs}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a09af4164b37baf88ba909c50c7442e31}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a09af4164b37baf88ba909c50c7442e31}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, type\+\_\+name $>$ {\bfseries actions}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ada7d848856cb16f6207d307af5bf6be8}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ada7d848856cb16f6207d307af5bf6be8}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{name}}, type\+\_\+name $>$ {\bfseries tables}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a50743c056846c04188174c82e5407fa8}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a50743c056846c04188174c82e5407fa8}} 
+\mbox{\hyperlink{classstd_1_1map}{map}}$<$ type\+\_\+name, \mbox{\hyperlink{structpair}{pair}}$<$ unpack\+\_\+function, pack\+\_\+function $>$ $>$ {\bfseries built\+\_\+in\+\_\+types}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes the binary representation message and table contents so that it can be converted to and from J\+S\+ON. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a3e71b20253e6ac8f1c1eebb5584d99ed}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_a3e71b20253e6ac8f1c1eebb5584d99ed}} 
+\index{aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}!set\+\_\+abi@{set\+\_\+abi}}
+\index{set\+\_\+abi@{set\+\_\+abi}!aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}}
+\subsubsection{\texorpdfstring{set\+\_\+abi()}{set\_abi()}}
+{\footnotesize\ttfamily void aacio\+::chain\+::contracts\+::abi\+\_\+serializer\+::set\+\_\+abi (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&}]{abi }\end{DoxyParamCaption})}
+
+The A\+BI vector may contain duplicates which would make it an invalid A\+BI\mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aaf369a687091d721f89734874053838c}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_aaf369a687091d721f89734874053838c}} 
+\index{aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}!to\+\_\+abi@{to\+\_\+abi}}
+\index{to\+\_\+abi@{to\+\_\+abi}!aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}}
+\subsubsection{\texorpdfstring{to\+\_\+abi()}{to\_abi()}}
+{\footnotesize\ttfamily template$<$typename Vec $>$ \\
+static bool aacio\+::chain\+::contracts\+::abi\+\_\+serializer\+::to\+\_\+abi (\begin{DoxyParamCaption}\item[{const Vec \&}]{abi\+\_\+vec,  }\item[{\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&}]{abi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+4 == packsize of empty Abi \mbox{\Hypertarget{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ac10d0962d2f4e062905e47d7b0946e5a}\label{structaacio_1_1chain_1_1contracts_1_1abi__serializer_ac10d0962d2f4e062905e47d7b0946e5a}} 
+\index{aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}!variant\+\_\+to\+\_\+binary@{variant\+\_\+to\+\_\+binary}}
+\index{variant\+\_\+to\+\_\+binary@{variant\+\_\+to\+\_\+binary}!aacio\+::chain\+::contracts\+::abi\+\_\+serializer@{aacio\+::chain\+::contracts\+::abi\+\_\+serializer}}
+\subsubsection{\texorpdfstring{variant\+\_\+to\+\_\+binary()}{variant\_to\_binary()}}
+{\footnotesize\ttfamily void aacio\+::chain\+::contracts\+::abi\+\_\+serializer\+::variant\+\_\+to\+\_\+binary (\begin{DoxyParamCaption}\item[{const type\+\_\+name \&}]{type,  }\item[{const \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} \&}]{var,  }\item[{\mbox{\hyperlink{classfc_1_1datastream}{fc\+::datastream}}$<$ char $\ast$$>$ \&}]{ds }\end{DoxyParamCaption}) const}
+
+T\+O\+DO\+: default construct field and write it out 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/contracts/\mbox{\hyperlink{abi__serializer_8hpp}{abi\+\_\+serializer.\+hpp}}\item 
+libraries/chain/contracts/\mbox{\hyperlink{abi__serializer_8cpp}{abi\+\_\+serializer.\+cpp}}\item 
+tests/wasm\+\_\+tests/multisig\+\_\+tests.\+cpp\item 
+tests/wasm\+\_\+tests/wasm\+\_\+tests.\+cpp\end{DoxyCompactItemize}

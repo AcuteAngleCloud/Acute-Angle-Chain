@@ -1,0 +1,17 @@
+digraph "fc::gelf_appender::impl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="fc::gelf_appender::impl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="fc::retainable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1retainable.html",tooltip="used to create reference counted types. "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gelf_socket" ];
+  Node4 [label="fc::udp_socket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1udp__socket.html"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cfg" ];
+  Node5 [label="fc::gelf_appender::\lconfig",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfc_1_1gelf__appender_1_1config.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" endpoint\nhost" ];
+  Node6 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gelf_endpoint" ];
+  Node7 [label="fc::optional\< boost\l::asio::ip::udp::endpoint \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1optional.html"];
+}

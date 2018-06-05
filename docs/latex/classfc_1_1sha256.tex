@@ -1,0 +1,128 @@
+\hypertarget{classfc_1_1sha256}{}\section{fc\+:\+:sha256 Class Reference}
+\label{classfc_1_1sha256}\index{fc\+::sha256@{fc\+::sha256}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfc_1_1sha256_1_1encoder}{encoder}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a2a1d39cf9b7689a82028025e289b0dc8}\label{classfc_1_1sha256_a2a1d39cf9b7689a82028025e289b0dc8}} 
+{\bfseries sha256} (const string \&hex\+\_\+str)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a9aead627c02ee18a90641474e20a07ae}\label{classfc_1_1sha256_a9aead627c02ee18a90641474e20a07ae}} 
+{\bfseries sha256} (const char $\ast$data, size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_adeb506911c181a91aefbb2623b92fced}\label{classfc_1_1sha256_adeb506911c181a91aefbb2623b92fced}} 
+string {\bfseries str} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_adca0f6cfdec275d1c4bab58221643fdf}\label{classfc_1_1sha256_adca0f6cfdec275d1c4bab58221643fdf}} 
+{\bfseries operator string} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_aac0fd4604e9a085b73d81651363e87ef}\label{classfc_1_1sha256_aac0fd4604e9a085b73d81651363e87ef}} 
+char $\ast$ {\bfseries data} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_ac7722b7428b1db345f1b7fab7f4d5774}\label{classfc_1_1sha256_ac7722b7428b1db345f1b7fab7f4d5774}} 
+size\+\_\+t {\bfseries data\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a460958d9d4b8a64517c86f64a0028096}\label{classfc_1_1sha256_a460958d9d4b8a64517c86f64a0028096}} 
+uint32\+\_\+t {\bfseries pop\+\_\+count} () const
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classfc_1_1sha256_a3216a8dc2e6f346a2d892b3e8f8fcf1e}{clz}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classfc_1_1sha256_a6969c0815acf46aebe70253fb9356078}{approx\+\_\+log\+\_\+32}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_af6069761a6e19b377c022ec25e99a12d}\label{classfc_1_1sha256_af6069761a6e19b377c022ec25e99a12d}} 
+void {\bfseries set\+\_\+to\+\_\+inverse\+\_\+approx\+\_\+log\+\_\+32} (uint32\+\_\+t x)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_aef7756d6110f804309255e757af07134}\label{classfc_1_1sha256_aef7756d6110f804309255e757af07134}} 
+static \mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries hash} (const char $\ast$d, uint32\+\_\+t dlen)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a6bbfcc4186190652df222355a47fbf0e}\label{classfc_1_1sha256_a6bbfcc4186190652df222355a47fbf0e}} 
+static \mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries hash} (const string \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_aef21a212a2ed981147e0f645ee9297eb}\label{classfc_1_1sha256_aef21a212a2ed981147e0f645ee9297eb}} 
+static \mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries hash} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_acef8280edbea7c27db491f4c90ceee5a}\label{classfc_1_1sha256_acef8280edbea7c27db491f4c90ceee5a}} 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries hash} (const \mbox{\hyperlink{struct_t}{T}} \&t)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_ac8c2c174f7a81842571a4e17b7497fa6}\label{classfc_1_1sha256_ac8c2c174f7a81842571a4e17b7497fa6}} 
+static double {\bfseries inverse\+\_\+approx\+\_\+log\+\_\+32\+\_\+double} (uint32\+\_\+t x)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_ac933820516182c134a6473227db0e7da}\label{classfc_1_1sha256_ac933820516182c134a6473227db0e7da}} 
+uint64\+\_\+t {\bfseries \+\_\+hash} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a7307d901ab9d4c4c7f007dace95a786a}\label{classfc_1_1sha256_a7307d901ab9d4c4c7f007dace95a786a}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator$<$$<$} (\mbox{\hyperlink{struct_t}{T}} \&ds, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&ep)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a7410948fd19219cd8537f10abc29cbdc}\label{classfc_1_1sha256_a7410948fd19219cd8537f10abc29cbdc}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \& {\bfseries operator$>$$>$} (\mbox{\hyperlink{struct_t}{T}} \&ds, \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&ep)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a34b52173b29cfa9fd29d6ed985800edc}\label{classfc_1_1sha256_a34b52173b29cfa9fd29d6ed985800edc}} 
+\mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries operator$<$$<$} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, uint32\+\_\+t i)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a5eda7dfcacbe16a0212c64ea1ab4589e}\label{classfc_1_1sha256_a5eda7dfcacbe16a0212c64ea1ab4589e}} 
+\mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries operator$>$$>$} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, uint32\+\_\+t i)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_ae738960f49248fd220cd37e46bb2bf48}\label{classfc_1_1sha256_ae738960f49248fd220cd37e46bb2bf48}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h2)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a54d8cde874899fec40491c31cb4ec9f4}\label{classfc_1_1sha256_a54d8cde874899fec40491c31cb4ec9f4}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h2)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_a230a1674fe53c0e967b2b7e3236639f0}\label{classfc_1_1sha256_a230a1674fe53c0e967b2b7e3236639f0}} 
+\mbox{\hyperlink{classfc_1_1sha256}{sha256}} {\bfseries operator$^\wedge$} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h2)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_afe5fc8b461023cdf6b2910887a40e4a9}\label{classfc_1_1sha256_afe5fc8b461023cdf6b2910887a40e4a9}} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h2)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_aebda3e73d07ef82c0e645483d7053a00}\label{classfc_1_1sha256_aebda3e73d07ef82c0e645483d7053a00}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h2)
+\item 
+\mbox{\Hypertarget{classfc_1_1sha256_af7015e3408496f37408ec75905f766b1}\label{classfc_1_1sha256_af7015e3408496f37408ec75905f766b1}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h1, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&h2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1sha256_a6969c0815acf46aebe70253fb9356078}\label{classfc_1_1sha256_a6969c0815acf46aebe70253fb9356078}} 
+\index{fc\+::sha256@{fc\+::sha256}!approx\+\_\+log\+\_\+32@{approx\+\_\+log\+\_\+32}}
+\index{approx\+\_\+log\+\_\+32@{approx\+\_\+log\+\_\+32}!fc\+::sha256@{fc\+::sha256}}
+\subsubsection{\texorpdfstring{approx\+\_\+log\+\_\+32()}{approx\_log\_32()}}
+{\footnotesize\ttfamily uint32\+\_\+t sha256\+::approx\+\_\+log\+\_\+32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Approximate (log\+\_\+2(x) + 1) $\ast$ 2$\ast$$\ast$24.
+
+Detailed specs\+:
+\begin{DoxyItemize}
+\item Return 0 when x == 0.
+\item High 8 bits of result simply counts nonzero bits.
+\item Low 24 bits of result are the 24 bits of input immediately after the most significant 1 in the input.
+\item If above would require reading beyond the end of the input, zeros are used instead. 
+\end{DoxyItemize}Here is the call graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{classfc_1_1sha256_a3216a8dc2e6f346a2d892b3e8f8fcf1e}\label{classfc_1_1sha256_a3216a8dc2e6f346a2d892b3e8f8fcf1e}} 
+\index{fc\+::sha256@{fc\+::sha256}!clz@{clz}}
+\index{clz@{clz}!fc\+::sha256@{fc\+::sha256}}
+\subsubsection{\texorpdfstring{clz()}{clz()}}
+{\footnotesize\ttfamily uint16\+\_\+t sha256\+::clz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Count leading zero bits Here is the caller graph for this function\+:
+% FIG 1
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/crypto/sha256.\+hpp\item 
+libraries/fc/src/crypto/sha256.\+cpp\end{DoxyCompactItemize}

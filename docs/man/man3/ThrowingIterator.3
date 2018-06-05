@@ -1,0 +1,65 @@
+.TH "ThrowingIterator< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ThrowingIterator< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBThrowingAction\fP { \fBTAIncrement\fP, \fBTADecrement\fP, \fBTADereference\fP, \fBTAAssignment\fP, \fBTAComparison\fP }"
+.br
+.ti -1c
+.RI "typedef std::bidirectional_iterator_tag \fBiterator_category\fP"
+.br
+.ti -1c
+.RI "typedef ptrdiff_t \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef const \fBT\fP \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef const \fBT\fP * \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef const \fBT\fP & \fBreference\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBThrowingIterator\fP (const \fBT\fP *first, const \fBT\fP *last, size_t index=0, ThrowingAction \fBaction\fP=TADereference)"
+.br
+.ti -1c
+.RI "\fBThrowingIterator\fP (const \fBThrowingIterator\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBThrowingIterator\fP & \fBoperator=\fP (const \fBThrowingIterator\fP &rhs)"
+.br
+.ti -1c
+.RI "\fBreference\fP \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "\fBThrowingIterator\fP & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "\fBThrowingIterator\fP \fBoperator++\fP (int)"
+.br
+.ti -1c
+.RI "\fBThrowingIterator\fP & \fBoperator\-\-\fP ()"
+.br
+.ti -1c
+.RI "\fBThrowingIterator\fP \fBoperator\-\-\fP (int)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBThrowingIterator\fP &rhs) const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,41 @@
+digraph "wasm::ReReloop"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2 [label="wasm::ReReloop",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="wasm::Pass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_pass.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" relooper" ];
+  Node5 [label="CFG::Relooper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_f_g_1_1_relooper.html"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Shapes" ];
+  Node6 [label="std::deque\< CFG::Shape *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1deque.html"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Blocks" ];
+  Node7 [label="std::deque\< CFG::Block *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1deque.html"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Root" ];
+  Node8 [label="CFG::Shape",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_f_g_1_1_shape.html"];
+  Node8 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Next\nNatural" ];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stack" ];
+  Node9 [label="std::vector\< TaskPtr \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currCFGBlock" ];
+  Node10 [label="CFG::Block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_f_g_1_1_block.html"];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" SwitchCondition\nCode" ];
+  Node11 [label="wasm::Expression",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_expression.html"];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ProcessedBranchesOut\nBranchesOut" ];
+  Node12 [label="CFG::InsertOrderedMap\l\< Block *, Branch * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_f_g_1_1_insert_ordered_map.html"];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Map" ];
+  Node13 [label="std::map\< Block *,\l typename std::list\l\< std::pair\< Block *,\l Branch *\> \>::iterator \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" List" ];
+  Node14 [label="std::list\< std::pair\l\< Block *, Branch *\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1list.html"];
+  Node15 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ProcessedBranchesIn\nBranchesIn" ];
+  Node15 [label="CFG::InsertOrderedSet\l\< Block * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_f_g_1_1_insert_ordered_set.html"];
+  Node16 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Map" ];
+  Node16 [label="std::map\< Block *,\l typename std::list\l\< Block *\>::iterator \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+  Node17 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" List" ];
+  Node17 [label="std::list\< Block *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1list.html"];
+  Node8 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Parent" ];
+  Node18 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" breakTargets" ];
+  Node18 [label="std::map\< wasm::Name,\l CFG::Block *\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1map.html"];
+}

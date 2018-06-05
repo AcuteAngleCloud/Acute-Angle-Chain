@@ -1,0 +1,146 @@
+.TH "plugins/chain_plugin/include/aacio/chain_plugin/chain_plugin.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/chain_plugin/include/aacio/chain_plugin/chain_plugin.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <appbase/application\&.hpp>\fP
+.br
+\fC#include <aacio/chain/asset\&.hpp>\fP
+.br
+\fC#include <aacio/chain/authority\&.hpp>\fP
+.br
+\fC#include <aacio/chain/account_object\&.hpp>\fP
+.br
+\fC#include <aacio/chain/block\&.hpp>\fP
+.br
+\fC#include <aacio/chain/chain_controller\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/contract_table_objects\&.hpp>\fP
+.br
+\fC#include <aacio/chain/transaction\&.hpp>\fP
+.br
+\fC#include <aacio/chain/contracts/abi_serializer\&.hpp>\fP
+.br
+\fC#include <boost/container/flat_set\&.hpp>\fP
+.br
+\fC#include <boost/algorithm/string\&.hpp>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::chain_apis::empty\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::permission\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::resolver_factory< Api >\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::chain_apis::read_only\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_info_results\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::producer_info\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_account_results\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_account_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_code_results\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_code_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::abi_json_to_bin_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::abi_json_to_bin_result\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::abi_bin_to_json_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::abi_bin_to_json_result\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_required_keys_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_required_keys_result\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_block_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_table_rows_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_table_rows_result\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_currency_balance_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_currency_stats_params\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_only::get_currency_stats_result\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::chain_apis::read_write\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain_apis::read_write::push_transaction_results\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::chain_plugin\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBfc\fP"
+.br
+.RI "aacio::chain "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "FC_REFLECT(\fBaacio::chain_apis::permission\fP,(perm_name)(parent)(required_auth)) FC_REFLECT(aacio \fBFC_REFLECT\fP (\fBaacio::chain_apis::read_only::get_currency_balance_params\fP,(code)(\fBaccount\fP)(symbol))"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::chain_apis::read_only::get_currency_stats_params\fP,(code)(symbol))"
+.br
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::chain_apis::read_only::get_currency_stats_result\fP,(supply))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

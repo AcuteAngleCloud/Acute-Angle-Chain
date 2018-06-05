@@ -1,0 +1,32 @@
+\hypertarget{transaction__object_8hpp}{}\section{libraries/chain/include/aacio/chain/transaction\+\_\+object.hpp File Reference}
+\label{transaction__object_8hpp}\index{libraries/chain/include/aacio/chain/transaction\+\_\+object.\+hpp@{libraries/chain/include/aacio/chain/transaction\+\_\+object.\+hpp}}
+{\ttfamily \#include $<$fc/io/raw.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/transaction.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/uint128.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/hashed\+\_\+index.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/multi\+\_\+index/mem\+\_\+fun.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+index\+\_\+includes.\+hpp\char`\"{}}\newline
+Include dependency graph for transaction\+\_\+object.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1transaction__object}{aacio\+::chain\+::transaction\+\_\+object}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{transaction__object_8hpp_a62b90af70c512c4b92518096e1e02277}\label{transaction__object_8hpp_a62b90af70c512c4b92518096e1e02277}} 
+using {\bfseries aacio\+::chain\+::transaction\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ transaction\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(transaction\+\_\+object, transaction\+\_\+object\+::id\+\_\+type, id)$>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+trx\+\_\+id $>$, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(transaction\+\_\+object, \mbox{\hyperlink{structchecksum256}{transaction\+\_\+id\+\_\+type}}, trx\+\_\+id)$>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+expiration $>$, composite\+\_\+key$<$ transaction\+\_\+object, B\+O\+O\+S\+T\+\_\+\+M\+U\+L\+T\+I\+\_\+\+I\+N\+D\+E\+X\+\_\+\+M\+E\+M\+B\+ER(transaction\+\_\+object, time\+\_\+point\+\_\+sec, \mbox{\hyperlink{group__transactioncapi_ga284f37e545cbb7f847f3ab86f50feb1d}{expiration}}), $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{transaction__object_8hpp_a2ace99dcceeb320c16a71a776ac8f715}\label{transaction__object_8hpp_a2ace99dcceeb320c16a71a776ac8f715}} 
+typedef \mbox{\hyperlink{classchainbase_1_1generic__index}{chainbase\+::generic\+\_\+index}}$<$ transaction\+\_\+multi\+\_\+index $>$ {\bfseries aacio\+::chain\+::transaction\+\_\+index}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

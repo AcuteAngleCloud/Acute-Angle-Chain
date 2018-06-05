@@ -1,0 +1,150 @@
+\hypertarget{group__mathcppapi}{}\section{Math C++ A\+PI}
+\label{group__mathcppapi}\index{Math C++ A\+PI@{Math C++ A\+PI}}
+
+
+Defines common math functions and helper types.  
+
+
+Collaboration diagram for Math C++ A\+PI\+:
+% FIG 0
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__fixedpoint}{Fixed Point}}
+\begin{DoxyCompactList}\small\item\em 32,64,128,256 bits version of Fixed Point variables \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__real}{Real number}}
+\begin{DoxyCompactList}\small\item\em Real number data type with basic operators. Wrap double class of Math \mbox{\hyperlink{struct_c}{C}} A\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1uint128}{aacio\+::uint128}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_a}{A}} struct that wraps \mbox{\hyperlink{structaacio_1_1uint128}{uint128}} integer and defines common operator overloads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__mathcppapi_gac2619557a323e4fdb5f2b69a345573e2}{aacio\+::multeq}} (uint128\+\_\+t \&self, const uint128\+\_\+t \&\mbox{\hyperlink{structother}{other}})
+\begin{DoxyCompactList}\small\item\em wraps multeq\+\_\+i128 from \mbox{\hyperlink{group__mathcapi}{Math C A\+PI}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mathcppapi_ga2a55d75a1be6cd50803e1e2905dea277}{aacio\+::diveq}} (uint128\+\_\+t \&self, const uint128\+\_\+t \&\mbox{\hyperlink{structother}{other}})
+\begin{DoxyCompactList}\small\item\em wraps diveq\+\_\+i128 from \mbox{\hyperlink{group__mathcapi}{Math C A\+PI}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{group__mathcppapi_gab64c39815d220956e9d2d3c01436e7bc}{aacio\+::min}} (const \mbox{\hyperlink{struct_t}{T}} \&a, const \mbox{\hyperlink{struct_t}{T}} \&b)
+\begin{DoxyCompactList}\small\item\em Defined similar to \mbox{\hyperlink{group__mathcppapi_gab64c39815d220956e9d2d3c01436e7bc}{std\+::min()}} \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} \mbox{\hyperlink{group__mathcppapi_ga1cdad1dcbc2a3d9e6c440342c9bf5769}{aacio\+::max}} (const \mbox{\hyperlink{struct_t}{T}} \&a, const \mbox{\hyperlink{struct_t}{T}} \&b)
+\begin{DoxyCompactList}\small\item\em Define similar to \mbox{\hyperlink{group__mathcppapi_ga1cdad1dcbc2a3d9e6c440342c9bf5769}{std\+::max()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines common math functions and helper types. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__mathcppapi_ga2a55d75a1be6cd50803e1e2905dea277}\label{group__mathcppapi_ga2a55d75a1be6cd50803e1e2905dea277}} 
+\index{Math C++ A\+PI@{Math C++ A\+PI}!diveq@{diveq}}
+\index{diveq@{diveq}!Math C++ A\+PI@{Math C++ A\+PI}}
+\subsubsection{\texorpdfstring{diveq()}{diveq()}}
+{\footnotesize\ttfamily void aacio\+::diveq (\begin{DoxyParamCaption}\item[{uint128\+\_\+t \&}]{self,  }\item[{const uint128\+\_\+t \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+wraps diveq\+\_\+i128 from \mbox{\hyperlink{group__mathcapi}{Math C A\+PI}} 
+
+Divide two 128 bit unsigned integers and assign the value to the first parameter. It will throw an exception if other is zero. This wraps diveq\+\_\+i128 from \mbox{\hyperlink{group__mathcapi}{Math C A\+PI}} 
+\begin{DoxyParams}{Parameters}
+{\em self} & Numerator. It will be replaced with the result \\
+\hline
+{\em other} & Denominator\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+uint128\_t \textcolor{keyword}{self}(100);
+uint128\_t \mbox{\hyperlink{structother}{other}}(100);
+\mbox{\hyperlink{group__mathcppapi_ga2a55d75a1be6cd50803e1e2905dea277}{diveq}}(\textcolor{keyword}{self}, \mbox{\hyperlink{structother}{other}});
+std::cout << \textcolor{keyword}{self}; \textcolor{comment}{// Output: 1}
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__mathcppapi_ga1cdad1dcbc2a3d9e6c440342c9bf5769}\label{group__mathcppapi_ga1cdad1dcbc2a3d9e6c440342c9bf5769}} 
+\index{Math C++ A\+PI@{Math C++ A\+PI}!max@{max}}
+\index{max@{max}!Math C++ A\+PI@{Math C++ A\+PI}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_t}{T}} aacio\+::max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_t}{T}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_t}{T}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Define similar to \mbox{\hyperlink{group__mathcppapi_ga1cdad1dcbc2a3d9e6c440342c9bf5769}{std\+::max()}} 
+
+Get the greater of the given values. 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} to compare \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The greater of a and b. If they are equivalent, returns a
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint128\_t a(1);
+uint128\_t b(2);
+std::cout << \mbox{\hyperlink{group__mathcppapi_ga1cdad1dcbc2a3d9e6c440342c9bf5769}{max}}(a, b); \textcolor{comment}{// Output: 2}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__mathcppapi_gab64c39815d220956e9d2d3c01436e7bc}\label{group__mathcppapi_gab64c39815d220956e9d2d3c01436e7bc}} 
+\index{Math C++ A\+PI@{Math C++ A\+PI}!min@{min}}
+\index{min@{min}!Math C++ A\+PI@{Math C++ A\+PI}}
+\subsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_t}{T}} aacio\+::min (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_t}{T}} \&}]{a,  }\item[{const \mbox{\hyperlink{struct_t}{T}} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Defined similar to \mbox{\hyperlink{group__mathcppapi_gab64c39815d220956e9d2d3c01436e7bc}{std\+::min()}} 
+
+Get the smaller of the given values 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} to compare \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The smaller of a and b. If they are equivalent, returns a
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint128\_t a(1);
+uint128\_t b(2);
+std::cout << \mbox{\hyperlink{group__mathcppapi_gab64c39815d220956e9d2d3c01436e7bc}{min}}(a, b); \textcolor{comment}{// Output: 1}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{group__mathcppapi_gac2619557a323e4fdb5f2b69a345573e2}\label{group__mathcppapi_gac2619557a323e4fdb5f2b69a345573e2}} 
+\index{Math C++ A\+PI@{Math C++ A\+PI}!multeq@{multeq}}
+\index{multeq@{multeq}!Math C++ A\+PI@{Math C++ A\+PI}}
+\subsubsection{\texorpdfstring{multeq()}{multeq()}}
+{\footnotesize\ttfamily void aacio\+::multeq (\begin{DoxyParamCaption}\item[{uint128\+\_\+t \&}]{self,  }\item[{const uint128\+\_\+t \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+wraps multeq\+\_\+i128 from \mbox{\hyperlink{group__mathcapi}{Math C A\+PI}} 
+
+Multiply two 128 bit unsigned integers and assign the value to the first parameter. This wraps multeq\+\_\+i128 from \mbox{\hyperlink{group__mathcapi}{Math C A\+PI}}. 
+\begin{DoxyParams}{Parameters}
+{\em self} & \mbox{\hyperlink{struct_value}{Value}} to be multiplied. It will be replaced with the result \\
+\hline
+{\em other} & \mbox{\hyperlink{struct_value}{Value}} integer to be multiplied.\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+uint128\_t \textcolor{keyword}{self}(100);
+uint128\_t \mbox{\hyperlink{structother}{other}}(100);
+\mbox{\hyperlink{group__mathcppapi_gac2619557a323e4fdb5f2b69a345573e2}{multeq}}(\textcolor{keyword}{self}, \mbox{\hyperlink{structother}{other}});
+std::cout << \textcolor{keyword}{self}; \textcolor{comment}{// Output: 10000}
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 4

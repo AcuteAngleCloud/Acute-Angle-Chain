@@ -1,0 +1,84 @@
+\hypertarget{classaacio_1_1chain_1_1privileged__api}{}\section{aacio\+:\+:chain\+:\+:privileged\+\_\+api Class Reference}
+\label{classaacio_1_1chain_1_1privileged__api}\index{aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}}
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:privileged\+\_\+api\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:privileged\+\_\+api\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a54f9fefb523a417e323e5c99c10b3c05}\label{classaacio_1_1chain_1_1privileged__api_a54f9fefb523a417e323e5c99c10b3c05}} 
+{\bfseries privileged\+\_\+api} (\mbox{\hyperlink{classaacio_1_1chain_1_1apply__context}{apply\+\_\+context}} \&ctx)
+\item 
+int \mbox{\hyperlink{classaacio_1_1chain_1_1privileged__api_a25c4f854dca2c0574eddc099ad2c9a47}{is\+\_\+feature\+\_\+active}} (int64\+\_\+t feature\+\_\+name)
+\item 
+void \mbox{\hyperlink{classaacio_1_1chain_1_1privileged__api_adcddc159760da8de23a3223d5cecd47c}{activate\+\_\+feature}} (int64\+\_\+t feature\+\_\+name)
+\item 
+void \mbox{\hyperlink{classaacio_1_1chain_1_1privileged__api_a80eb3cec42c4f385256580ccb5c473eb}{set\+\_\+resource\+\_\+limits}} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, int64\+\_\+t ram\+\_\+bytes, int64\+\_\+t net\+\_\+weight, int64\+\_\+t cpu\+\_\+weight)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a3539c43200d50fd142098b798167572e}\label{classaacio_1_1chain_1_1privileged__api_a3539c43200d50fd142098b798167572e}} 
+void {\bfseries get\+\_\+resource\+\_\+limits} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, int64\+\_\+t \&ram\+\_\+bytes, int64\+\_\+t \&net\+\_\+weight, int64\+\_\+t \&cpu\+\_\+weight)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a622dd23df60aabe2649846acbe390f99}\label{classaacio_1_1chain_1_1privileged__api_a622dd23df60aabe2649846acbe390f99}} 
+void {\bfseries set\+\_\+active\+\_\+producers} (\mbox{\hyperlink{structaacio_1_1chain_1_1array__ptr}{array\+\_\+ptr}}$<$ char $>$ packed\+\_\+producer\+\_\+schedule, size\+\_\+t datalen)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_ae1ab0edc450c649c93d4f24c1ed7743b}\label{classaacio_1_1chain_1_1privileged__api_ae1ab0edc450c649c93d4f24c1ed7743b}} 
+uint32\+\_\+t {\bfseries get\+\_\+blockchain\+\_\+parameters\+\_\+packed} (\mbox{\hyperlink{structaacio_1_1chain_1_1array__ptr}{array\+\_\+ptr}}$<$ char $>$ packed\+\_\+blockchain\+\_\+parameters, size\+\_\+t datalen)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a5a34e45bca9e66ce5f1f4270624fca12}\label{classaacio_1_1chain_1_1privileged__api_a5a34e45bca9e66ce5f1f4270624fca12}} 
+void {\bfseries set\+\_\+blockchain\+\_\+parameters\+\_\+packed} (\mbox{\hyperlink{structaacio_1_1chain_1_1array__ptr}{array\+\_\+ptr}}$<$ char $>$ packed\+\_\+blockchain\+\_\+parameters, size\+\_\+t datalen)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a4a1bfe306e1c658b98b9813485b4d939}\label{classaacio_1_1chain_1_1privileged__api_a4a1bfe306e1c658b98b9813485b4d939}} 
+bool {\bfseries is\+\_\+privileged} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} n) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_ace355fbaf5d9e152fde6e6ad004780e3}\label{classaacio_1_1chain_1_1privileged__api_ace355fbaf5d9e152fde6e6ad004780e3}} 
+void {\bfseries set\+\_\+privileged} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} n, bool is\+\_\+priv)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_adcddc159760da8de23a3223d5cecd47c}\label{classaacio_1_1chain_1_1privileged__api_adcddc159760da8de23a3223d5cecd47c}} 
+\index{aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}!activate\+\_\+feature@{activate\+\_\+feature}}
+\index{activate\+\_\+feature@{activate\+\_\+feature}!aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}}
+\subsubsection{\texorpdfstring{activate\+\_\+feature()}{activate\_feature()}}
+{\footnotesize\ttfamily void aacio\+::chain\+::privileged\+\_\+api\+::activate\+\_\+feature (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{feature\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This should schedule the feature to be activated once the block that includes this call is irreversible. It should fail if the feature is already pending.
+
+Feature name should be base32 encoded name. \mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a25c4f854dca2c0574eddc099ad2c9a47}\label{classaacio_1_1chain_1_1privileged__api_a25c4f854dca2c0574eddc099ad2c9a47}} 
+\index{aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}!is\+\_\+feature\+\_\+active@{is\+\_\+feature\+\_\+active}}
+\index{is\+\_\+feature\+\_\+active@{is\+\_\+feature\+\_\+active}!aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}}
+\subsubsection{\texorpdfstring{is\+\_\+feature\+\_\+active()}{is\_feature\_active()}}
+{\footnotesize\ttfamily int aacio\+::chain\+::privileged\+\_\+api\+::is\+\_\+feature\+\_\+active (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{feature\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This should return true if a feature is active and irreversible, false if not.
+
+Irreversiblity by fork-\/database is not consensus safe, therefore, this defines irreversiblity only by block headers not by B\+FT short-\/cut. \mbox{\Hypertarget{classaacio_1_1chain_1_1privileged__api_a80eb3cec42c4f385256580ccb5c473eb}\label{classaacio_1_1chain_1_1privileged__api_a80eb3cec42c4f385256580ccb5c473eb}} 
+\index{aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}!set\+\_\+resource\+\_\+limits@{set\+\_\+resource\+\_\+limits}}
+\index{set\+\_\+resource\+\_\+limits@{set\+\_\+resource\+\_\+limits}!aacio\+::chain\+::privileged\+\_\+api@{aacio\+::chain\+::privileged\+\_\+api}}
+\subsubsection{\texorpdfstring{set\+\_\+resource\+\_\+limits()}{set\_resource\_limits()}}
+{\footnotesize\ttfamily void aacio\+::chain\+::privileged\+\_\+api\+::set\+\_\+resource\+\_\+limits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}}}]{account,  }\item[{int64\+\_\+t}]{ram\+\_\+bytes,  }\item[{int64\+\_\+t}]{net\+\_\+weight,  }\item[{int64\+\_\+t}]{cpu\+\_\+weight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+update the resource limits associated with an account. Note these new values will not take effect until the next resource \char`\"{}tick\char`\"{} which is currently defined as a cycle boundary inside a block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em account} & -\/ the account whose limits are being modified \\
+\hline
+{\em ram\+\_\+bytes} & -\/ the limit for ram bytes \\
+\hline
+{\em net\+\_\+weight} & -\/ the weight for determining share of network capacity \\
+\hline
+{\em cpu\+\_\+weight} & -\/ the weight for determining share of compute capacity \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/wasm\+\_\+interface.\+cpp\end{DoxyCompactItemize}

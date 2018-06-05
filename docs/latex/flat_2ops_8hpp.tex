@@ -1,0 +1,67 @@
+\hypertarget{flat_2ops_8hpp}{}\section{externals/magic\+\_\+get/include/boost/pfr/flat/ops.hpp File Reference}
+\label{flat_2ops_8hpp}\index{externals/magic\+\_\+get/include/boost/pfr/flat/ops.\+hpp@{externals/magic\+\_\+get/include/boost/pfr/flat/ops.\+hpp}}
+{\ttfamily \#include $<$boost/pfr/detail/config.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/detail/detectors.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/flat/functors.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/pfr/flat/io.\+hpp$>$}\newline
+Include dependency graph for ops.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_a52624a0c5c6927117bf0d195c1946568}\label{flat_2ops_8hpp_a52624a0c5c6927117bf0d195c1946568}} 
+{\footnotesize template$<$template$<$ class, class $>$ class Detector, class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t} = typename std\+::enable\+\_\+if$<$ not\+\_\+appliable$<$ Detector, \mbox{\hyperlink{struct_t}{T}} const  \&, \mbox{\hyperlink{struct_t}{T}} const  \& $>$\+::value \&\&std\+::is\+\_\+pod$<$ \mbox{\hyperlink{struct_t}{T}} $>$\+::value, bool $>$\+::type
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_ad0eb67ad2ce6a2e0b4f9d830e6c623c5}\label{flat_2ops_8hpp_ad0eb67ad2ce6a2e0b4f9d830e6c623c5}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+eq\+\_\+comp\+\_\+t} = enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+eq\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_a05b336d96d166a18104538be97d40867}\label{flat_2ops_8hpp_a05b336d96d166a18104538be97d40867}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+ne\+\_\+comp\+\_\+t} = enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+ne\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_adffec45e225ef478b3718cd9517acb94}\label{flat_2ops_8hpp_adffec45e225ef478b3718cd9517acb94}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+lt\+\_\+comp\+\_\+t} = enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+lt\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_a6dc7d37e18b943359f81451298bd764c}\label{flat_2ops_8hpp_a6dc7d37e18b943359f81451298bd764c}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+le\+\_\+comp\+\_\+t} = enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+le\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_a1a3c648c45cf2956455e784ce7971d4b}\label{flat_2ops_8hpp_a1a3c648c45cf2956455e784ce7971d4b}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+gt\+\_\+comp\+\_\+t} = enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+gt\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_affe52bbe9055f0ecb352ffce27382f90}\label{flat_2ops_8hpp_affe52bbe9055f0ecb352ffce27382f90}} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+ge\+\_\+comp\+\_\+t} = enable\+\_\+flat\+\_\+not\+\_\+comp\+\_\+base\+\_\+t$<$ comp\+\_\+ge\+\_\+detector, \mbox{\hyperlink{struct_t}{T}} $>$
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_a39e1d81dee741e9b92bc37904aca0973}\label{flat_2ops_8hpp_a39e1d81dee741e9b92bc37904aca0973}} 
+{\footnotesize template$<$class Stream , class Type $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+ostreamable\+\_\+t} = typename std\+::enable\+\_\+if$<$ not\+\_\+appliable$<$ ostreamable\+\_\+detector, Stream \&, \mbox{\hyperlink{struct_type}{Type}} const  \& $>$\+::value \&\&std\+::is\+\_\+pod$<$ \mbox{\hyperlink{struct_type}{Type}} $>$\+::value, Stream \&$>$\+::type
+\item 
+\mbox{\Hypertarget{flat_2ops_8hpp_a37bcc739d77b5fc2765bd1f583619cca}\label{flat_2ops_8hpp_a37bcc739d77b5fc2765bd1f583619cca}} 
+{\footnotesize template$<$class Stream , class Type $>$ }\\using {\bfseries boost\+::pfr\+::detail\+::enable\+\_\+flat\+\_\+not\+\_\+istreamable\+\_\+t} = typename std\+::enable\+\_\+if$<$ not\+\_\+appliable$<$ istreamable\+\_\+detector, Stream \&, \mbox{\hyperlink{struct_type}{Type}} \& $>$\+::value \&\&std\+::is\+\_\+pod$<$ \mbox{\hyperlink{struct_type}{Type}} $>$\+::value, Stream \&$>$\+::type
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains comparison operators and stream operators for any P\+OD types that do not have their own operators. If P\+OD is comparable or streamable using it\textquotesingle{}s own operator or it\textquotesingle{}s conversion operator, then the original operator is used.
+
+Just write {\bfseries using} {\bfseries namespace} {\bfseries flat\+\_\+ops}; and operators will be available in scope.
+
+{\bfseries Example\+:} 
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <\mbox{\hyperlink{flat_2ops_8hpp}{boost/pfr/flat/ops.hpp}}>}
+\textcolor{keyword}{struct }\mbox{\hyperlink{structcomparable__struct}{comparable\_struct}} \{      \textcolor{comment}{// No operators defined for that structure}
+    \textcolor{keywordtype}{int} i; \textcolor{keywordtype}{short} s; \textcolor{keywordtype}{char} data[7]; \textcolor{keywordtype}{bool} bl; \textcolor{keywordtype}{int} a,b,c,d,e,f;
+\};
+\textcolor{comment}{// ...}
+
+\textcolor{keyword}{using namespace }flat\_ops;
+
+\mbox{\hyperlink{structcomparable__struct}{comparable\_struct}} s1 \{0, 1, \textcolor{stringliteral}{"Hello"}, \textcolor{keyword}{false}, 6,7,8,9,10,11\};
+\mbox{\hyperlink{structcomparable__struct}{comparable\_struct}} s2 \{0, 1, \textcolor{stringliteral}{"Hello"}, \textcolor{keyword}{false}, 6,7,8,9,10,11111\};
+assert(s1 < s2);
+std::cout << s1 << std::endl; \textcolor{comment}{// Outputs: \{0, 1, H, e, l, l, o, , , 0, 6, 7, 8, 9, 10, 11\}}
+\end{DoxyCode}
+
+
+for other ways to define operators and more details.
+
+{\bfseries This} {\bfseries header} {\bfseries contains\+:} 

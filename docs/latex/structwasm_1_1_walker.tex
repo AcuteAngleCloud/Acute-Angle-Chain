@@ -1,0 +1,161 @@
+\hypertarget{structwasm_1_1_walker}{}\section{wasm\+:\+:Walker$<$ Sub\+Type, Visitor\+Type $>$ Struct Template Reference}
+\label{structwasm_1_1_walker}\index{wasm\+::\+Walker$<$ Sub\+Type, Visitor\+Type $>$@{wasm\+::\+Walker$<$ Sub\+Type, Visitor\+Type $>$}}
+
+
+Inheritance diagram for wasm\+:\+:Walker$<$ Sub\+Type, Visitor\+Type $>$\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Walker$<$ Sub\+Type, Visitor\+Type $>$\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_walker_1_1_task}{Task}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_adfdfea4210a6022d03c6d551de965c11}\label{structwasm_1_1_walker_adfdfea4210a6022d03c6d551de965c11}} 
+typedef void($\ast$ {\bfseries Task\+Func}) (Sub\+Type $\ast$, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a943b52f1cc2bc554d0b19d94aaf16310}\label{structwasm_1_1_walker_a943b52f1cc2bc554d0b19d94aaf16310}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries replace\+Current} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$expression)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a9bc524c7dc324e0bbdf881519774e7da}\label{structwasm_1_1_walker_a9bc524c7dc324e0bbdf881519774e7da}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries get\+Current} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a18ffc1e2a9516df0679985bcb05a4e36}\label{structwasm_1_1_walker_a18ffc1e2a9516df0679985bcb05a4e36}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$ {\bfseries get\+Current\+Pointer} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a99e109997a47e56ae50e6b4da95263b3}\label{structwasm_1_1_walker_a99e109997a47e56ae50e6b4da95263b3}} 
+\mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$ {\bfseries get\+Module} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a7278ff6b658884f94624dcdb9c9d6a17}\label{structwasm_1_1_walker_a7278ff6b658884f94624dcdb9c9d6a17}} 
+\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$ {\bfseries get\+Function} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a236a2a64b72d7e94c68405f958adb0c6}\label{structwasm_1_1_walker_a236a2a64b72d7e94c68405f958adb0c6}} 
+void {\bfseries walk\+Global} (\mbox{\hyperlink{classwasm_1_1_global}{Global}} $\ast$global)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a92cd1632ee695bd2fa4e30c70e077c88}\label{structwasm_1_1_walker_a92cd1632ee695bd2fa4e30c70e077c88}} 
+void {\bfseries walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ace1cebdda8e52c12a9884427fd3a76fa}\label{structwasm_1_1_walker_ace1cebdda8e52c12a9884427fd3a76fa}} 
+void {\bfseries walk\+Function\+In\+Module} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}}, \mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$module)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a6bbf714fd6dfe134a53b97d8c5b1e019}\label{structwasm_1_1_walker_a6bbf714fd6dfe134a53b97d8c5b1e019}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a2f0baa26b1ac457d7094309032b2ca1e}\label{structwasm_1_1_walker_a2f0baa26b1ac457d7094309032b2ca1e}} 
+void {\bfseries walk\+Table} (\mbox{\hyperlink{classwasm_1_1_table}{Table}} $\ast$table)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aea45f31227808e5287931de587696a6b}\label{structwasm_1_1_walker_aea45f31227808e5287931de587696a6b}} 
+void {\bfseries walk\+Memory} (\mbox{\hyperlink{classwasm_1_1_memory}{Memory}} $\ast$memory)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ae5930fbe900a5b387e98acd4ba63a292}\label{structwasm_1_1_walker_ae5930fbe900a5b387e98acd4ba63a292}} 
+void {\bfseries walk\+Module} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$module)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a87acffabdf173022ea4fa31a46b5fd04}\label{structwasm_1_1_walker_a87acffabdf173022ea4fa31a46b5fd04}} 
+void {\bfseries do\+Walk\+Module} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$module)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a47ae88c3d11ffbeac2a8632073a75ca1}\label{structwasm_1_1_walker_a47ae88c3d11ffbeac2a8632073a75ca1}} 
+void {\bfseries push\+Task} (Task\+Func \mbox{\hyperlink{structfunc}{func}}, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ad0e58b26e85ef338e2c2379dced57020}\label{structwasm_1_1_walker_ad0e58b26e85ef338e2c2379dced57020}} 
+void {\bfseries maybe\+Push\+Task} (Task\+Func \mbox{\hyperlink{structfunc}{func}}, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a99373bc0f8780207843f2bb3ede18343}\label{structwasm_1_1_walker_a99373bc0f8780207843f2bb3ede18343}} 
+\mbox{\hyperlink{structwasm_1_1_walker_1_1_task}{Task}} {\bfseries pop\+Task} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ae29bf40c604142951dd467a791885684}\label{structwasm_1_1_walker_ae29bf40c604142951dd467a791885684}} 
+void {\bfseries walk} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$\&root)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aaf51f0624fabcdd6731870b53906ca98}\label{structwasm_1_1_walker_aaf51f0624fabcdd6731870b53906ca98}} 
+void {\bfseries set\+Module} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} $\ast$module)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aa8eca4fd23033a5042c7b4aace6cea7b}\label{structwasm_1_1_walker_aa8eca4fd23033a5042c7b4aace6cea7b}} 
+void {\bfseries set\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a3b6374f59fb1559e86905495cfd8af82}\label{structwasm_1_1_walker_a3b6374f59fb1559e86905495cfd8af82}} 
+static void {\bfseries scan} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ae941d315f80419441db1d6758bae664c}\label{structwasm_1_1_walker_ae941d315f80419441db1d6758bae664c}} 
+static void {\bfseries do\+Visit\+Block} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ae84da181bf441329cd33153fd0d42a7a}\label{structwasm_1_1_walker_ae84da181bf441329cd33153fd0d42a7a}} 
+static void {\bfseries do\+Visit\+If} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a266732306f1dcb90f72cf7fbadfdaccc}\label{structwasm_1_1_walker_a266732306f1dcb90f72cf7fbadfdaccc}} 
+static void {\bfseries do\+Visit\+Loop} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a0c4928b13bbff0b2184b06ed6c735f24}\label{structwasm_1_1_walker_a0c4928b13bbff0b2184b06ed6c735f24}} 
+static void {\bfseries do\+Visit\+Break} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aebc2fe9ee939698800416d1310057a02}\label{structwasm_1_1_walker_aebc2fe9ee939698800416d1310057a02}} 
+static void {\bfseries do\+Visit\+Switch} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a5223b2a3e0e561f80a10972970a2b7df}\label{structwasm_1_1_walker_a5223b2a3e0e561f80a10972970a2b7df}} 
+static void {\bfseries do\+Visit\+Call} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a77fe5974a58333a7a468e06ff392303f}\label{structwasm_1_1_walker_a77fe5974a58333a7a468e06ff392303f}} 
+static void {\bfseries do\+Visit\+Call\+Import} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a44a1b4edf78ab4c5000a4ef556c184d5}\label{structwasm_1_1_walker_a44a1b4edf78ab4c5000a4ef556c184d5}} 
+static void {\bfseries do\+Visit\+Call\+Indirect} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a5c4623049a7b089c247dcced34073fc8}\label{structwasm_1_1_walker_a5c4623049a7b089c247dcced34073fc8}} 
+static void {\bfseries do\+Visit\+Get\+Local} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aea480abf5259edc403c317d9a80f1231}\label{structwasm_1_1_walker_aea480abf5259edc403c317d9a80f1231}} 
+static void {\bfseries do\+Visit\+Set\+Local} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a69385b8fc25a38336921f665779c1d61}\label{structwasm_1_1_walker_a69385b8fc25a38336921f665779c1d61}} 
+static void {\bfseries do\+Visit\+Get\+Global} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a21b03b25c5da3a0f4e4c803bd229a6d9}\label{structwasm_1_1_walker_a21b03b25c5da3a0f4e4c803bd229a6d9}} 
+static void {\bfseries do\+Visit\+Set\+Global} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a4e2c7d03714bb95fbd85cd458c27281c}\label{structwasm_1_1_walker_a4e2c7d03714bb95fbd85cd458c27281c}} 
+static void {\bfseries do\+Visit\+Load} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a53235547358a576dfb675fc673bc9eeb}\label{structwasm_1_1_walker_a53235547358a576dfb675fc673bc9eeb}} 
+static void {\bfseries do\+Visit\+Store} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a685699834721d9b9df5561cbe6e71def}\label{structwasm_1_1_walker_a685699834721d9b9df5561cbe6e71def}} 
+static void {\bfseries do\+Visit\+Const} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a9a8ff08191b88faac6fc2dc38e67a28b}\label{structwasm_1_1_walker_a9a8ff08191b88faac6fc2dc38e67a28b}} 
+static void {\bfseries do\+Visit\+Unary} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a5f9b53dcf88bb22147b3518359896fd3}\label{structwasm_1_1_walker_a5f9b53dcf88bb22147b3518359896fd3}} 
+static void {\bfseries do\+Visit\+Binary} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_af54815a4e47db024cfa4114eabd2676c}\label{structwasm_1_1_walker_af54815a4e47db024cfa4114eabd2676c}} 
+static void {\bfseries do\+Visit\+Select} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_acd7a9d6956454930faf4495b0a6e49a6}\label{structwasm_1_1_walker_acd7a9d6956454930faf4495b0a6e49a6}} 
+static void {\bfseries do\+Visit\+Drop} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_ae557c079a7a8531253a611429ca5a523}\label{structwasm_1_1_walker_ae557c079a7a8531253a611429ca5a523}} 
+static void {\bfseries do\+Visit\+Return} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aa034d9bacc72c9c048c5e83429ce1aa4}\label{structwasm_1_1_walker_aa034d9bacc72c9c048c5e83429ce1aa4}} 
+static void {\bfseries do\+Visit\+Host} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_a2294b5c6b9791c5d75eb2810490b7277}\label{structwasm_1_1_walker_a2294b5c6b9791c5d75eb2810490b7277}} 
+static void {\bfseries do\+Visit\+Nop} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_walker_aee38c1f3f7d9b19b9a0898d26321fa56}\label{structwasm_1_1_walker_aee38c1f3f7d9b19b9a0898d26321fa56}} 
+static void {\bfseries do\+Visit\+Unreachable} (Sub\+Type $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/wasm-\/traversal.\+h\end{DoxyCompactItemize}

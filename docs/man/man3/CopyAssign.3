@@ -1,0 +1,64 @@
+.TH "CopyAssign" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CopyAssign
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCopyAssign\fP (int v)"
+.br
+.ti -1c
+.RI "\fBCopyAssign\fP (const \fBCopyAssign\fP &o)"
+.br
+.ti -1c
+.RI "\fBCopyAssign\fP (\fBCopyAssign\fP &&o) noexcept"
+.br
+.ti -1c
+.RI "\fBCopyAssign\fP & \fBoperator=\fP (const \fBCopyAssign\fP &o)"
+.br
+.ti -1c
+.RI "\fBCopyAssign\fP & \fBoperator=\fP (\fBCopyAssign\fP &&o) noexcept"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBvalue\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBalive\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBcopy_construct\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBcopy_assign\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBmove_construct\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBmove_assign\fP = 0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

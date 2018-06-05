@@ -1,0 +1,43 @@
+\hypertarget{message__buffer__tests_8cpp}{}\section{tests/tests/message\+\_\+buffer\+\_\+tests.cpp File Reference}
+\label{message__buffer__tests_8cpp}\index{tests/tests/message\+\_\+buffer\+\_\+tests.\+cpp@{tests/tests/message\+\_\+buffer\+\_\+tests.\+cpp}}
+{\ttfamily \#include $<$aacio/net\+\_\+plugin/message\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/test/unit\+\_\+test.\+hpp$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for message\+\_\+buffer\+\_\+tests.\+cpp\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_ab926b248c27c6007520ad2700d743019}\label{message__buffer__tests_8cpp_ab926b248c27c6007520ad2700d743019}} 
+size\+\_\+t {\bfseries aacio\+::mb\+\_\+size} (boost\+::asio\+::mutable\+\_\+buffer \&mb)
+\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_a78242e1879ee2d75f39e4844560b679c}\label{message__buffer__tests_8cpp_a78242e1879ee2d75f39e4844560b679c}} 
+void $\ast$ {\bfseries aacio\+::mb\+\_\+data} (boost\+::asio\+::mutable\+\_\+buffer \&mb)
+\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_aff407f46dc92520d4db95f8ac9641a6d}\label{message__buffer__tests_8cpp_aff407f46dc92520d4db95f8ac9641a6d}} 
+\mbox{\hyperlink{message__buffer__tests_8cpp_aff407f46dc92520d4db95f8ac9641a6d}{aacio\+::\+B\+O\+O\+S\+T\+\_\+\+A\+U\+T\+O\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE}} (message\+\_\+buffer\+\_\+construction)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_test}{Test}} default construction and buffer sequence generation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_a7c773b40775ac0cfc550cda14716dd5f}\label{message__buffer__tests_8cpp_a7c773b40775ac0cfc550cda14716dd5f}} 
+\mbox{\hyperlink{message__buffer__tests_8cpp_a7c773b40775ac0cfc550cda14716dd5f}{aacio\+::\+B\+O\+O\+S\+T\+\_\+\+A\+U\+T\+O\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE}} (message\+\_\+buffer\+\_\+growth)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_test}{Test}} buffer growth and shrinking. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_a5064a054c6f050c07fe28ad870ea8f57}\label{message__buffer__tests_8cpp_a5064a054c6f050c07fe28ad870ea8f57}} 
+\mbox{\hyperlink{message__buffer__tests_8cpp_a5064a054c6f050c07fe28ad870ea8f57}{aacio\+::\+B\+O\+O\+S\+T\+\_\+\+A\+U\+T\+O\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE}} (message\+\_\+buffer\+\_\+peek\+\_\+read)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_test}{Test}} peek and read across multiple buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_aaa33bac32331eee641b479f2fa4363f2}\label{message__buffer__tests_8cpp_aaa33bac32331eee641b479f2fa4363f2}} 
+\mbox{\hyperlink{message__buffer__tests_8cpp_aaa33bac32331eee641b479f2fa4363f2}{aacio\+::\+B\+O\+O\+S\+T\+\_\+\+A\+U\+T\+O\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE}} (message\+\_\+buffer\+\_\+write\+\_\+ptr\+\_\+to\+\_\+end)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_test}{Test}} automatic allocation when advancing the read\+\_\+ptr to the end. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_a03245346772f2109f6a37cd760365611}\label{message__buffer__tests_8cpp_a03245346772f2109f6a37cd760365611}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+buffer\+\_\+size\+\_\+mb} = 4
+\item 
+\mbox{\Hypertarget{message__buffer__tests_8cpp_a72b8c3f86d9e32f5aad63ea39e74fb11}\label{message__buffer__tests_8cpp_a72b8c3f86d9e32f5aad63ea39e74fb11}} 
+constexpr auto {\bfseries aacio\+::def\+\_\+buffer\+\_\+size} = 1024$\ast$1024$\ast$def\+\_\+buffer\+\_\+size\+\_\+mb
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

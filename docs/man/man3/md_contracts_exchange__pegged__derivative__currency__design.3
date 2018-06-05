@@ -1,0 +1,148 @@
+.TH "md_contracts_exchange__pegged__derivative__currency__design" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_contracts_exchange__pegged__derivative__currency__design \- Pegged Derivative Currency Design 
+\fBA\fP currency is designed to be a fungible and non-callable asset\&. \fBA\fP pegged Derivative currency, such as BitUSD, is backed by a cryptocurrency held as collateral\&. The 'issuer' is 'short' the dollar and extra-long the cryptocurrency\&. The buyer is simply long the dollar\&. 
+.br
+.PP
+.SS "Background "
+.PP
+BitShares created the first working pegged asset system by allowing anyone to take out a short position by posting collateral and issuing BitUSD at a minimum 1\&.5:1 collateral:debt ratio\&. The \fBleast collateralized position\fP was forced to provide liquidity for BitUSD holders any time the market price fell more than a couple percent below the dollar (if the BitUSD holder opted to use forced liquidation)\&.
+.PP
+To prevent abuse of the price feed, all forced liquidation was delayed\&.
+.PP
+In the event of a 'black swan' all shorts have their positions liquidated at the price feed and all holders of BitUSD are only promised a fixed redemption rate\&.
+.PP
+There are several problems with this design:
+.PP
+.IP "1." 4
+There is very \fBpoor liquidity\fP in the BitUSD / BitShares market creating \fBlarge spreads\fP
+.IP "2." 4
+The shorts take all the risk and only profit when the price of BitShares rises
+.IP "3." 4
+Blackswans are perpetual and very disruptive\&.
+.IP "4." 4
+It is 'every short for themselves'
+.IP "5." 4
+Due to the risk/reward ratio the supply can be limited
+.IP "6." 4
+The \fBcollateral requirements\fP limit opportunity for leverage\&.
+.PP
+.PP
+.SS "New Approach "
+.PP
+We present a new approach to pegged assets where the short-positions cooperate to provide the service of a pegged asset with \fBhigh liquidity\fP\&. They make money by encouraging people to trade their pegged asset and earning income \fBfrom the trading fees rather than seeking heavy leverage\fP in a speculative market\&. They also generate money by earning interest on personal short positions\&.
+.PP
+.SS "The Setup Process "
+.PP
+An initial user deposits a Collateral Currency (\fBC\fP) into an smart contract and provides the initial price feed\&. \fBA\fP new Debt token (\fBD\fP) is issued based upon the price feed and a 1\&.5:1 \fBC\fP:\fBD\fP ratio and the issued tokens are deposited into the \fBBancor market maker\fP\&. At this point in time there is 0 leverage by the market maker because no \fBD\fP have been sold\&. The initial user is also issued exchange tokens (\fBE\fP) in the market maker\&.
+.PP
+At this point people can buy \fBE\fP or \fBD\fP and the Bancor algorithm will provide liquidity between \fBC\fP, \fBE\fP, and \fBD\fP\&. Due to the fees charged by the the market maker the value of \fBE\fP will increase in terms of \fBC\fP\&.
+.PP
+.RS 4
+Collateral currency = Smart Token/reserve of parent currency
+.PP
+Issued tokens = Bounty Tokens (distributed to early holders / community supporters)
+.PP
+Collateral \fBRatio\fP (\fBC\fP:\fBD\fP) = reciprocal of Loan-to-Value \fBRatio\fP (LTV) 
+.RE
+.PP
+.PP
+.SS "Maintaining the Peg "
+.PP
+To maximize the utility of the \fBD\fP token, the market maker needs to maintain a \fBnarrow trading range\fP of \fBD\fP vs the Dollar\&. The more \fBconsistant and reliable this trading range\fP is, the more people (arbitrageur) will be willing to hold and trade \fBD\fP\&. There are several situations that can occur:
+.PP
+.IP "1." 4
+\fBD\fP is trading above a dollar +5%
+.PP
+a\&. Maker is fully collateralized \fC\fBC\fP:\fBD\fP>1\&.5\fP 
+.PP
+.nf
+- issue new D and deposit into maker such that collateral ratio is 1.5:1
+
+.fi
+.PP
+ b\&. Maker is not fully collateralized \fC\fBC\fP:\fBD\fP<1\&.5\fP 
+.PP
+.nf
+- adjust the maker weights to lower the redemption prices (defending capital of maker), arbitrageur will probably prevent this reality.
+
+.fi
+.PP
+
+.PP
+.PP
+.RS 4
+Marker Weights = Connector Weights (in Bancor)
+.PP
+Redemption Price: The price at which a bond may be repurchased by the issuer before maturity 
+.RE
+.PP
+.PP
+.IP "2." 4
+\fBD\fP is selling for less than a dollar -5%
+.PP
+a\&. Maker is fully collateralized \fC\fBC\fP:\fBD\fP>1\&.5\fP 
+.PP
+.nf
+- adjust the maker weights to increase redemption prices 
+
+.fi
+.PP
+ b\&. Maker is under collateralized \fC\fBC\fP:\fBD\fP<1\&.5\fP 
+.PP
+.nf
+- stop E -> C and E -> D trades\&.
+- offer bonus on C->E and D->E trades\&.
+- on D->E conversions take received D out of circulation rather than add to the market maker
+- on C<->D conversion continue as normal
+- stop attempting adjusting maker ratio to defend the price feed and let the price rise until above +1%
+
+.fi
+.PP
+
+.PP
+.PP
+\fBValue\fP of \fBE\fP = \fBC\fP - \fBD\fP where \fBD\fP == all in circulation, so E->\fBC\fP conversions should always assume all outstanding \fBD\fP was \fBsettled at current maker price\fP\&. The result of such a conversion will \fBraise the collateral ratio\fP, unless they are forced to buy and retire some \fBD\fP at the current ratio\&. The algorithm must ensure the individual selling \fBE\fP doesn't leave those holding \fBE\fP worse-off from a D/E perspective (doesnot reduce \fBD\fP to a large extent)\&. An individual buying \fBE\fP will create new \fBD\fP to maintain the same D/E ratio\&.
+.PP
+This implies that when value of all outstanding \fBD\fP is greater than all \fBC\fP that \fBE\fP cannot be sold until the network generates \fBenough in trading fees\fP to recaptialize the market\&. This is like a company with more debt than equity not allowing buybacks\&. In fact, \fB\fBE\fP should not be sellable any time the collateral ratio falls below 1\&.5:1\fP\&.
+.PP
+BitShares is typical \fBmargin call\fP territory, but holders of \fBE\fP have a chance at future liquidity if the situation improves\&. While \fBE\fP is not sellable, \fBE\fP can be purchased at a 10% discount to its theoretical value, this will dilute existing holders of \fBE\fP but will raise capital and hopefully move \fBE\fP holders closer to eventual liquidity\&.
+.PP
+.SS "Adjusting Bancor Ratios by Price Feed "
+.PP
+The price feed informs the algorithm of significant deviations between the Bancor effective price and the target peg\&. The price feed is necessarily a lagging indicator and may also factor in natural spreads between different exchanges\&. Therefore, the price feed shall have no impact unless there is a significant deviation (5%)\&. When such a deviation occurs, the ratio is automatically adjusted to 4%\&.
+.PP
+In other words, the price feed keeps the maker in the 'channel' but does not attempt to set the real-time prices\&. If there is a sudden change and the price feed differs from maker by 50% then after the adjustment it will still differ by 4%\&. 
+.br
+ 
+.PP
+.RS 4
+Effective Price = Connected Tokens exchanged / Smart Tokens exchanged 
+.RE
+.PP
+.PP
+.SS "Summary "
+.PP
+Under this model holders of \fBE\fP are short the dollar and make money to recollateralize their positions via market activity\&. Anyone selling \fBE\fP must \fBrealize the losses as a result of being short\fP\&. 
+.br
+Anyone buying \fBE\fP can get in to take their place at the current collateral ratio\&.
+.PP
+The value of \fBE\fP is equal to the value of a \fBmargin postion\fP\&. 
+.br
+Anyone can buy \fBE\fP for a combination \fBC\fP and \fBD\fP equal to the current collateral ratio\&.
+.PP
+Anyone may sell \fBE\fP for a personal margin position with equal ratio of \fBC\fP and \fBD\fP\&. 
+.br
+Anyone may buy \fBE\fP with a personal margin position\&.
+.PP
+If they only have \fBC\fP, then they must use some of \fBC\fP to buy \fBD\fP first (which will move the price)\&. 
+.br
+If they only have \fBD\fP, then they must use some of \fBD\fP to buy \fBC\fP first (which will also move the price)\&.
+.PP
+Anyone can buy and sell \fBE\fP based upon Bancor balances of \fBC\fP and (all \fBD\fP), they must sell their \fBE\fP for a combination of \fBD\fP and \fBC\fP at current ratio, then sell the \fBC\fP or \fBD\fP for the other\&.
+.PP
+Anytime collateral level falls below 1\&.5 selling \fBE\fP is blocked and buying of \fBE\fP is given a 10% bonus\&. 
+.br
+Anyone can convert \fBD\fP<->\fBC\fP using Bancor maker configured to maintain price within +/- 5% of the price feed\&. 

@@ -1,0 +1,280 @@
+.TH "websocketpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp \- Namespace for the WebSocket++ project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBclose\fP"
+.br
+.RI "\fBA\fP package of types and methods for manipulating WebSocket close codes\&. "
+.ti -1c
+.RI " \fBconcurrency\fP"
+.br
+.RI "Concurrency handling support\&. "
+.ti -1c
+.RI " \fBerror\fP"
+.br
+.RI "Library level error codes\&. "
+.ti -1c
+.RI " \fBextensions\fP"
+.br
+.ti -1c
+.RI " \fBframe\fP"
+.br
+.RI "Data structures and utility functions for manipulating WebSocket frames\&. "
+.ti -1c
+.RI " \fBhttp\fP"
+.br
+.RI "HTTP handling support\&. "
+.ti -1c
+.RI " \fBmd5\fP"
+.br
+.RI "Provides MD5 hashing functionality\&. "
+.ti -1c
+.RI " \fBprocessor\fP"
+.br
+.RI "Processors encapsulate the protocol rules specific to each WebSocket version\&. "
+.ti -1c
+.RI " \fBrandom\fP"
+.br
+.RI "Random number generation policies\&. "
+.ti -1c
+.RI " \fBtransport\fP"
+.br
+.RI "Transport policies provide network connectivity and timers\&. "
+.ti -1c
+.RI " \fButility\fP"
+.br
+.RI "Generic non-websocket specific utility functions and data structures\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBclient\fP"
+.br
+.RI "Client endpoint role based on the given config\&. "
+.ti -1c
+.RI "class \fBconnection\fP"
+.br
+.RI "Represents an individual WebSocket connection\&. "
+.ti -1c
+.RI "class \fBconnection_base\fP"
+.br
+.RI "Stub for user supplied base class\&. "
+.ti -1c
+.RI "class \fBendpoint\fP"
+.br
+.RI "Creates and manages connections associated with a WebSocket endpoint\&. "
+.ti -1c
+.RI "class \fBendpoint_base\fP"
+.br
+.RI "Stub for user supplied base class\&. "
+.ti -1c
+.RI "class \fBexception\fP"
+.br
+.ti -1c
+.RI "class \fBserver\fP"
+.br
+.RI "Server endpoint role based on the given config\&. "
+.ti -1c
+.RI "class \fBuri\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef lib::weak_ptr< void > \fBconnection_hdl\fP"
+.br
+.RI "\fBA\fP handle to uniquely identify a connection\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP)> \fBopen_handler\fP"
+.br
+.RI "The type and function signature of an open handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP)> \fBclose_handler\fP"
+.br
+.RI "The type and function signature of a close handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP)> \fBfail_handler\fP"
+.br
+.RI "The type and function signature of a fail handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP)> \fBinterrupt_handler\fP"
+.br
+.RI "The type and function signature of an interrupt handler\&. "
+.ti -1c
+.RI "typedef lib::function< bool(\fBconnection_hdl\fP, std::string)> \fBping_handler\fP"
+.br
+.RI "The type and function signature of a ping handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP, std::string)> \fBpong_handler\fP"
+.br
+.RI "The type and function signature of a pong handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP, std::string)> \fBpong_timeout_handler\fP"
+.br
+.RI "The type and function signature of a pong timeout handler\&. "
+.ti -1c
+.RI "typedef lib::function< bool(\fBconnection_hdl\fP)> \fBvalidate_handler\fP"
+.br
+.RI "The type and function signature of a validate handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(\fBconnection_hdl\fP)> \fBhttp_handler\fP"
+.br
+.RI "The type and function signature of a http handler\&. "
+.ti -1c
+.RI "typedef lib::function< void(lib::error_code const &ec, size_t bytes_transferred)> \fBread_handler\fP"
+.br
+.ti -1c
+.RI "typedef lib::function< void(lib::error_code const &ec)> \fBwrite_frame_handler\fP"
+.br
+.ti -1c
+.RI "typedef std::pair< lib::error_code, std::string > \fBerr_str_pair\fP"
+.br
+.RI "Combination error code / string type for returning two values\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBuri\fP > \fBuri_ptr\fP"
+.br
+.RI "\fBPointer\fP to a URI\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBbase64_encode\fP (unsigned char const *input, size_t len)"
+.br
+.RI "Encode a char buffer into a base64 string\&. "
+.ti -1c
+.RI "std::string \fBbase64_encode\fP (std::string const &input)"
+.br
+.RI "Encode a string into a base64 string\&. "
+.ti -1c
+.RI "std::string \fBbase64_decode\fP (std::string const &input)"
+.br
+.RI "Decode a base64 encoded string into a string of raw bytes\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Namespace for the WebSocket++ project\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP)> \fBwebsocketpp::close_handler\fP"
+
+.PP
+The type and function signature of a close handler\&. The close handler is called once for every successfully established connection after it is no longer capable of sending or receiving new messages
+.PP
+The close handler will be called exactly once for every connection for which the open handler was called\&. 
+.SS "typedef lib::weak_ptr<void> \fBwebsocketpp::connection_hdl\fP"
+
+.PP
+\fBA\fP handle to uniquely identify a connection\&. This type uniquely identifies a connection\&. It is implemented as a weak pointer to the connection in question\&. This provides uniqueness across multiple endpoints and ensures that IDs never conflict or run out\&.
+.PP
+It is safe to make copies of this handle, store those copies in containers, and use them from other threads\&.
+.PP
+This handle can be upgraded to a full shared_ptr using \fC\fBendpoint::get_con_from_hdl()\fP\fP from within a handler fired by the connection that owns the handler\&. 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP)> \fBwebsocketpp::fail_handler\fP"
+
+.PP
+The type and function signature of a fail handler\&. The fail handler is called once for every unsuccessful WebSocket connection attempt\&. Either the fail handler or the open handler will be called for each WebSocket connection attempt\&. HTTP Connections that did not attempt to upgrade the connection to the WebSocket protocol will trigger the http handler instead of fail/open\&. 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP)> \fBwebsocketpp::http_handler\fP"
+
+.PP
+The type and function signature of a http handler\&. The http handler is called when an HTTP connection is made that does not attempt to upgrade the connection to the WebSocket protocol\&. This allows WebSocket++ servers to respond to these requests with regular HTTP responses\&.
+.PP
+This can be used to deliver error pages & dashboards and to deliver static files such as the base HTML & JavaScript for an otherwise single page WebSocket application\&.
+.PP
+Note: WebSocket++ is designed to be a high performance WebSocket server\&. It is not tuned to provide a full featured, high performance, HTTP web server solution\&. The HTTP handler is appropriate only for low volume HTTP traffic\&. If you expect to serve high volumes of HTTP traffic a dedicated HTTP web server is strongly recommended\&.
+.PP
+The default HTTP handler will return a 426 Upgrade Required error\&. Custom handlers may override the response status code to deliver any type of response\&. 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP)> \fBwebsocketpp::interrupt_handler\fP"
+
+.PP
+The type and function signature of an interrupt handler\&. The interrupt handler is called when a connection receives an interrupt request from the application\&. Interrupts allow the application to trigger a handler to be run in the absense of a WebSocket level handler trigger (like a new message)\&.
+.PP
+This is typically used by another application thread to schedule some tasks that can only be run from within the handler chain for thread safety reasons\&. 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP)> \fBwebsocketpp::open_handler\fP"
+
+.PP
+The type and function signature of an open handler\&. The open handler is called once for every successful WebSocket connection attempt\&. Either the fail handler or the open handler will be called for each WebSocket connection attempt\&. HTTP Connections that did not attempt to upgrade the connection to the WebSocket protocol will trigger the http handler instead of fail/open\&. 
+.SS "typedef lib::function<bool(\fBconnection_hdl\fP,std::string)> \fBwebsocketpp::ping_handler\fP"
+
+.PP
+The type and function signature of a ping handler\&. The ping handler is called when the connection receives a WebSocket ping control frame\&. The string argument contains the ping payload\&. The payload is a binary string up to 126 bytes in length\&. The ping handler returns a bool, true if a pong response should be sent, false if the pong response should be suppressed\&. 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP,std::string)> \fBwebsocketpp::pong_handler\fP"
+
+.PP
+The type and function signature of a pong handler\&. The pong handler is called when the connection receives a WebSocket pong control frame\&. The string argument contains the pong payload\&. The payload is a binary string up to 126 bytes in length\&. 
+.SS "typedef lib::function<void(\fBconnection_hdl\fP,std::string)> \fBwebsocketpp::pong_timeout_handler\fP"
+
+.PP
+The type and function signature of a pong timeout handler\&. The pong timeout handler is called when a ping goes unanswered by a pong for longer than the locally specified timeout period\&. 
+.SS "typedef lib::function<bool(\fBconnection_hdl\fP)> \fBwebsocketpp::validate_handler\fP"
+
+.PP
+The type and function signature of a validate handler\&. The validate handler is called after a WebSocket handshake has been received and processed but before it has been accepted\&. This gives the application a chance to implement connection details specific policies for accepting connections and the ability to negotiate extensions and subprotocols\&.
+.PP
+The validate handler return value indicates whether or not the connection should be accepted\&. Additional methods may be called during the function to set response headers, set HTTP return/error codes, etc\&. 
+.SH "Function Documentation"
+.PP 
+.SS "std::string websocketpp::base64_decode (std::string const & input)\fC [inline]\fP"
+
+.PP
+Decode a base64 encoded string into a string of raw bytes\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinput\fP The base64 encoded input data 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP string representing the decoded raw bytes 
+.RE
+.PP
+
+.SS "std::string websocketpp::base64_encode (unsigned char const * input, size_t len)\fC [inline]\fP"
+
+.PP
+Encode a char buffer into a base64 string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinput\fP The input data 
+.br
+\fIlen\fP The length of input in bytes 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP base64 encoded string representing input 
+.RE
+.PP
+
+.SS "std::string websocketpp::base64_encode (std::string const & input)\fC [inline]\fP"
+
+.PP
+Encode a string into a base64 string\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinput\fP The input data 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP base64 encoded string representing input 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

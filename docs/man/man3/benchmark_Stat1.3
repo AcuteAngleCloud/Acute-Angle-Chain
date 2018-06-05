@@ -1,0 +1,76 @@
+.TH "benchmark::Stat1< VType, NumType >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+benchmark::Stat1< VType, NumType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBbenchmark::Stat1MinMax< VType, NumType >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBStat1\fP< VType, NumType > \fBSelf\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStat1\fP (const VType &dat)"
+.br
+.ti -1c
+.RI "\fBStat1\fP (const VType *begin, const VType *end)"
+.br
+.ti -1c
+.RI "\fBStat1\fP (const VType &dat, const NumType &w)"
+.br
+.ti -1c
+.RI "\fBStat1\fP (const \fBSelf\fP &stat)"
+.br
+.ti -1c
+.RI "void \fBClear\fP ()"
+.br
+.ti -1c
+.RI "\fBSelf\fP & \fBoperator=\fP (const \fBSelf\fP &stat)"
+.br
+.ti -1c
+.RI "\fBSelf\fP & \fBoperator+=\fP (const \fBSelf\fP &stat)"
+.br
+.ti -1c
+.RI "\fBSelf\fP & \fBoperator\-=\fP (const \fBSelf\fP &stat)"
+.br
+.ti -1c
+.RI "\fBSelf\fP & \fBoperator*=\fP (const VType &k)"
+.br
+.ti -1c
+.RI "\fBSelf\fP \fBoperator+\fP (const \fBSelf\fP &stat) const"
+.br
+.ti -1c
+.RI "\fBSelf\fP \fBoperator\-\fP (const \fBSelf\fP &stat) const"
+.br
+.ti -1c
+.RI "\fBSelf\fP \fBoperator*\fP (const VType &k) const"
+.br
+.ti -1c
+.RI "NumType \fBnumSamples\fP () const"
+.br
+.ti -1c
+.RI "VType \fBSum\fP () const"
+.br
+.ti -1c
+.RI "VType \fBMean\fP () const"
+.br
+.ti -1c
+.RI "VType \fBMean\fP (VType *stddev) const"
+.br
+.ti -1c
+.RI "VType \fBStdDev\fP () const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

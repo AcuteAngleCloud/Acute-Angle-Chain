@@ -1,0 +1,17 @@
+digraph "websocketpp::transport::asio::tls_socket::connection::get_raw_socket"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node10 [label="websocketpp::transport\l::asio::tls_socket::connection\l::get_raw_socket",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="websocketpp::transport\l::asio::tls_socket::connection\l::cancel_socket",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection.html#af1fb297f14e4d010ce4a7aa352509611",tooltip="Cancel all async operations on this socket. "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="websocketpp::transport\l::asio::connection::cancel\l_socket_checked",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1connection.html#ac4b63fadf2083ab4656ab7f1a47d3b5d",tooltip="Cancel the underlying socket and log any errors. "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="websocketpp::transport\l::asio::connection::handle\l_post_init_timeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1connection.html#a8c21e2814d440c6fe49a4514f6cf5ff1",tooltip="Post init timeout callback. "];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="websocketpp::transport\l::asio::connection::handle\l_async_shutdown_timeout",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1connection.html#a9386ad48e8b2137987205bc4e831edfb",tooltip="Async shutdown timeout handler. "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="websocketpp::transport\l::asio::connection::async\l_shutdown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1connection.html#a7a3767d922bb2cc97f71dd2fb2f0e903",tooltip="close and clean up the underlying socket "];
+}

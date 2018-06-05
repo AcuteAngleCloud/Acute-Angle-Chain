@@ -1,0 +1,8 @@
+digraph "benchmark::Stat1MinMax&lt; VType, NumType &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="benchmark::Stat1MinMax\l\< VType, NumType \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="benchmark::Stat1\< VType,\l NumType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbenchmark_1_1_stat1.html"];
+}

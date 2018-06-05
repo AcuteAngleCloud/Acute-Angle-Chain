@@ -1,0 +1,55 @@
+\hypertarget{account__history__api__plugin_8cpp}{}\section{plugins/account\+\_\+history\+\_\+api\+\_\+plugin/account\+\_\+history\+\_\+api\+\_\+plugin.cpp File Reference}
+\label{account__history__api__plugin_8cpp}\index{plugins/account\+\_\+history\+\_\+api\+\_\+plugin/account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp@{plugins/account\+\_\+history\+\_\+api\+\_\+plugin/account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp}}
+{\ttfamily \#include $<$aacio/account\+\_\+history\+\_\+api\+\_\+plugin/account\+\_\+history\+\_\+api\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/chain\+\_\+controller.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/json.\+hpp$>$}\newline
+Include dependency graph for account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries C\+A\+LL}(api\+\_\+name,  api\+\_\+handle,  api\+\_\+namespace,  call\+\_\+name)
+\item 
+\mbox{\Hypertarget{account__history__api__plugin_8cpp_a8c38dffb1118006aaad4df8ddb7a3248}\label{account__history__api__plugin_8cpp_a8c38dffb1118006aaad4df8ddb7a3248}} 
+\#define {\bfseries C\+H\+A\+I\+N\+\_\+\+R\+O\+\_\+\+C\+A\+LL}(call\+\_\+name)~C\+A\+LL(account\+\_\+history, ro\+\_\+api, \mbox{\hyperlink{classaacio_1_1account__history__apis_1_1read__only}{account\+\_\+history\+\_\+apis\+::read\+\_\+only}}, call\+\_\+name)
+\item 
+\mbox{\Hypertarget{account__history__api__plugin_8cpp_a1aece4d3d088b9d38fe4541746dae23a}\label{account__history__api__plugin_8cpp_a1aece4d3d088b9d38fe4541746dae23a}} 
+\#define {\bfseries C\+H\+A\+I\+N\+\_\+\+R\+W\+\_\+\+C\+A\+LL}(call\+\_\+name)~C\+A\+LL(account\+\_\+history, rw\+\_\+api, \mbox{\hyperlink{classaacio_1_1account__history__apis_1_1read__write}{account\+\_\+history\+\_\+apis\+::read\+\_\+write}}, call\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{account__history__api__plugin_8cpp_a5a6a0e16051056beb9f72a10459448db}\label{account__history__api__plugin_8cpp_a5a6a0e16051056beb9f72a10459448db}} 
+\index{account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp@{account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp}!C\+A\+LL@{C\+A\+LL}}
+\index{C\+A\+LL@{C\+A\+LL}!account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp@{account\+\_\+history\+\_\+api\+\_\+plugin.\+cpp}}
+\subsubsection{\texorpdfstring{C\+A\+LL}{CALL}}
+{\footnotesize\ttfamily \#define C\+A\+LL(\begin{DoxyParamCaption}\item[{}]{api\+\_\+name,  }\item[{}]{api\+\_\+handle,  }\item[{}]{api\+\_\+namespace,  }\item[{}]{call\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{std::string(\textcolor{stringliteral}{"/v1/"} #api\_name \textcolor{stringliteral}{"/"} #call\_name), \(\backslash\)
+   [\textcolor{keyword}{this}, api\_handle](string, \textcolor{keywordtype}{string} body, \mbox{\hyperlink{http__plugin_8hpp_ab73acbc9859e5861e07d38d682fea6ff}{url\_response\_callback}} cb) \textcolor{keyword}{mutable} \{ \(\backslash\)
+          try \{ \(\backslash\)
+             if (body.empty()) body = \textcolor{stringliteral}{"\{\}"}; \(\backslash\)
+             auto result = api\_handle.call\_name(fc::json::from\_string(body).as<api\_namespace::call\_name ##
+       \_params>()); \(\backslash\)
+             cb(200, fc::json::to\_string(result)); \(\backslash\)
+          \} \textcolor{keywordflow}{catch} (fc::eof\_exception& e) \{ \(\backslash\)
+             error\_results results\{400, \textcolor{stringliteral}{"Bad Request"}, e\}; \(\backslash\)
+             cb(400, fc::json::to\_string(results)); \(\backslash\)
+             elog(\textcolor{stringliteral}{"Unable to parse arguments: $\{args\}"}, (\textcolor{stringliteral}{"args"}, body)); \(\backslash\)
+          \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classfc_1_1exception}{fc::exception}}& e) \{ \(\backslash\)
+             error\_results results\{500, \textcolor{stringliteral}{"Internal Service Error"}, e\}; \(\backslash\)
+             cb(500, fc::json::to\_string(results)); \(\backslash\)
+             elog(\textcolor{stringliteral}{"Exception encountered while processing $\{call\}: $\{e\}"}, (\textcolor{stringliteral}{"call"}, #api\_name \textcolor{stringliteral}{"."} #call\_name
+      )(\textcolor{stringliteral}{"e"}, e)); \(\backslash\)
+          \} \(\backslash\)
+       \}\}
+\end{DoxyCode}

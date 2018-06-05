@@ -1,0 +1,66 @@
+\hypertarget{classfc_1_1detail_1_1any__api}{}\section{fc\+:\+:detail\+:\+:any\+\_\+api Class Reference}
+\label{classfc_1_1detail_1_1any__api}\index{fc\+::detail\+::any\+\_\+api@{fc\+::detail\+::any\+\_\+api}}
+
+
+{\ttfamily \#include $<$api\+\_\+connection.\+hpp$>$}
+
+
+
+Inheritance diagram for fc\+:\+:detail\+:\+:any\+\_\+api\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:detail\+:\+:any\+\_\+api\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a4ca3597c7722daa10cbe3e780d7a7d36}\label{classfc_1_1detail_1_1any__api_a4ca3597c7722daa10cbe3e780d7a7d36}} 
+{\bfseries any\+\_\+api} (api\+\_\+id\+\_\+type api\+\_\+id, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classfc_1_1api__connection}{fc\+::api\+\_\+connection}} $>$ \&con)
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a7b5ec2a4fdd53f29b311528c1576aa89}\label{classfc_1_1detail_1_1any__api_a7b5ec2a4fdd53f29b311528c1576aa89}} 
+virtual uint64\+\_\+t {\bfseries get\+\_\+handle} () const override
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a57544c4d7f1dbb7aba824f4a9f618dd4}\label{classfc_1_1detail_1_1any__api_a57544c4d7f1dbb7aba824f4a9f618dd4}} 
+virtual api\+\_\+id\+\_\+type {\bfseries register\+\_\+api} (\mbox{\hyperlink{classfc_1_1api__connection}{api\+\_\+connection}} \&conn) const override
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_abf5fa014c501ee0bd0447e939de0fd07}\label{classfc_1_1detail_1_1any__api_abf5fa014c501ee0bd0447e939de0fd07}} 
+{\bfseries any\+\_\+api} (api\+\_\+id\+\_\+type api\+\_\+id, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classfc_1_1binary__api__connection}{fc\+::binary\+\_\+api\+\_\+connection}} $>$ \&con)
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a7b5ec2a4fdd53f29b311528c1576aa89}\label{classfc_1_1detail_1_1any__api_a7b5ec2a4fdd53f29b311528c1576aa89}} 
+virtual uint64\+\_\+t {\bfseries get\+\_\+handle} () const override
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a06cabf40fd68e9983f28854d8a1df828}\label{classfc_1_1detail_1_1any__api_a06cabf40fd68e9983f28854d8a1df828}} 
+virtual api\+\_\+id\+\_\+type {\bfseries register\+\_\+api} (\mbox{\hyperlink{classfc_1_1binary__api__connection}{binary\+\_\+api\+\_\+connection}} \&conn) const override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a534d5a13911c242a2d49a21c9785760d}\label{classfc_1_1detail_1_1any__api_a534d5a13911c242a2d49a21c9785760d}} 
+api\+\_\+id\+\_\+type {\bfseries \+\_\+api\+\_\+id}
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_aae058b58c4a7d62908df6de21ad6a73a}\label{classfc_1_1detail_1_1any__api_aae058b58c4a7d62908df6de21ad6a73a}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classfc_1_1api__connection}{fc\+::api\+\_\+connection}} $>$ {\bfseries \+\_\+api\+\_\+connection}
+\item 
+\mbox{\Hypertarget{classfc_1_1detail_1_1any__api_a623cda476ceed1743d3e4b7b1bd86e61}\label{classfc_1_1detail_1_1any__api_a623cda476ceed1743d3e4b7b1bd86e61}} 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classfc_1_1binary__api__connection}{fc\+::binary\+\_\+api\+\_\+connection}} $>$ {\bfseries \+\_\+binary\+\_\+api\+\_\+connection}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+If api$<$\+T$>$ is returned from a remote method, the A\+PI is eagerly bound to api$<$\+T$>$ of the correct type in api\+\_\+visitor\+::from\+\_\+variant(). This binding \mbox{[}1\mbox{]} needs a reference to the \mbox{\hyperlink{classfc_1_1api__connection}{api\+\_\+connection}}, which is made available to from\+\_\+variant() as a parameter.
+
+However, in the case of a remote method which returns \mbox{\hyperlink{classfc_1_1api__base}{api\+\_\+base}} which can subsequently be cast by the caller with as$<$\+T$>$, we need to keep track of the connection because the binding is done later (when the client code actually calls as$<$\+T$>$).
+
+\mbox{[}1\mbox{]} The binding actually happens in get\+\_\+remote\+\_\+api().
+
+If api$<$\+T$>$ is returned from a remote method, the A\+PI is eagerly bound to api$<$\+T$>$ of the correct type in api\+\_\+visitor\+::from\+\_\+variant(). This binding \mbox{[}1\mbox{]} needs a reference to the \mbox{\hyperlink{classfc_1_1binary__api__connection}{binary\+\_\+api\+\_\+connection}}, which is made available to from\+\_\+variant() as a parameter.
+
+However, in the case of a remote method which returns \mbox{\hyperlink{classfc_1_1api__base}{api\+\_\+base}} which can subsequently be cast by the caller with as$<$\+T$>$, we need to keep track of the connection because the binding is done later (when the client code actually calls as$<$\+T$>$).
+
+\mbox{[}1\mbox{]} The binding actually happens in get\+\_\+remote\+\_\+api(). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/rpc/api\+\_\+connection.\+hpp\item 
+libraries/fc/include/fc/rpc/binary\+\_\+api\+\_\+connection.\+hpp\end{DoxyCompactItemize}

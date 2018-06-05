@@ -1,0 +1,154 @@
+\hypertarget{programs_2aacio-launcher_2main_8cpp}{}\section{programs/aacio-\/launcher/main.cpp File Reference}
+\label{programs_2aacio-launcher_2main_8cpp}\index{programs/aacio-\/launcher/main.\+cpp@{programs/aacio-\/launcher/main.\+cpp}}
+
+
+launch testnet nodes  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/tcp.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/ip/host\+\_\+name.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/process/child.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/process/system.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/process/io.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/lexical\+\_\+cast.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/filesystem/path.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/crypto/private\+\_\+key.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/crypto/public\+\_\+key.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/network/ip.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/reflect/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/log/logger\+\_\+config.\+hpp$>$}\newline
+{\ttfamily \#include $<$ifaddrs.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$net/if.\+h$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/genesis\+\_\+state.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}config.\+hpp\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlocal__identity}{local\+\_\+identity}}
+\item 
+class \mbox{\hyperlink{classhost__def}{host\+\_\+def}}
+\item 
+class \mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}}
+\item 
+class \mbox{\hyperlink{classtn__node__def}{tn\+\_\+node\+\_\+def}}
+\item 
+struct \mbox{\hyperlink{structremote__deploy}{remote\+\_\+deploy}}
+\item 
+struct \mbox{\hyperlink{structtestnet__def}{testnet\+\_\+def}}
+\item 
+struct \mbox{\hyperlink{structprodkey__def}{prodkey\+\_\+def}}
+\item 
+struct \mbox{\hyperlink{structproducer__set__def}{producer\+\_\+set\+\_\+def}}
+\item 
+struct \mbox{\hyperlink{structserver__name__def}{server\+\_\+name\+\_\+def}}
+\item 
+struct \mbox{\hyperlink{structserver__identities}{server\+\_\+identities}}
+\item 
+struct \mbox{\hyperlink{structnode__rt__info}{node\+\_\+rt\+\_\+info}}
+\item 
+struct \mbox{\hyperlink{structlast__run__def}{last\+\_\+run\+\_\+def}}
+\item 
+struct \mbox{\hyperlink{structlauncher__def}{launcher\+\_\+def}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a4309c3a6418e39931154cbfbe22318e3}\label{programs_2aacio-launcher_2main_8cpp_a4309c3a6418e39931154cbfbe22318e3}} 
+using {\bfseries public\+\_\+key\+\_\+type} = \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{fc\+::crypto\+::public\+\_\+key}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a4ccd0cf4c7952009cdf845ab8259b0a2}\label{programs_2aacio-launcher_2main_8cpp_a4ccd0cf4c7952009cdf845ab8259b0a2}} 
+using {\bfseries private\+\_\+key\+\_\+type} = \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{fc\+::crypto\+::private\+\_\+key}}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a759690ed22a7306147759efee4b4545c}\label{programs_2aacio-launcher_2main_8cpp_a759690ed22a7306147759efee4b4545c}} 
+enum {\bfseries launch\+\_\+modes} \{ \newline
+{\bfseries L\+M\+\_\+\+N\+O\+NE}, 
+{\bfseries L\+M\+\_\+\+L\+O\+C\+AL}, 
+{\bfseries L\+M\+\_\+\+R\+E\+M\+O\+TE}, 
+{\bfseries L\+M\+\_\+\+N\+A\+M\+ED}, 
+\newline
+{\bfseries L\+M\+\_\+\+A\+LL}, 
+{\bfseries L\+M\+\_\+\+V\+E\+R\+I\+FY}
+ \}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_ab01c8de587c7ad64f990fcfaf8c7d1f7}\label{programs_2aacio-launcher_2main_8cpp_ab01c8de587c7ad64f990fcfaf8c7d1f7}} 
+enum {\bfseries allowed\+\_\+connection} \+: char \{ {\bfseries P\+C\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries P\+C\+\_\+\+P\+R\+O\+D\+U\+C\+E\+RS} = 1 $<$$<$ 0, 
+{\bfseries P\+C\+\_\+\+S\+P\+E\+C\+I\+F\+I\+ED} = 1 $<$$<$ 1, 
+{\bfseries P\+C\+\_\+\+A\+NY} = 1 $<$$<$ 2
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a982fad593d2be1b5f6b11f8b30be4748}\label{programs_2aacio-launcher_2main_8cpp_a982fad593d2be1b5f6b11f8b30be4748}} 
+{\footnotesize template$<$class enum\+\_\+type , class  = typename std\+::enable\+\_\+if$<$std\+::is\+\_\+enum$<$enum\+\_\+type$>$\+::value$>$\+::type$>$ }\\enum\+\_\+type \& {\bfseries operator$\vert$=} (enum\+\_\+type \&lhs, const enum\+\_\+type \&rhs)
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_aae54f18181d7763de2b11b899440daeb}\label{programs_2aacio-launcher_2main_8cpp_aae54f18181d7763de2b11b899440daeb}} 
+void {\bfseries write\+\_\+default\+\_\+config} (const bfs\+::path \&cfg\+\_\+file, const options\+\_\+description \&cfg)
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{programs_2aacio-launcher_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a3b595e82066a2ece1bf6f8cda974aabf}\label{programs_2aacio-launcher_2main_8cpp_a3b595e82066a2ece1bf6f8cda974aabf}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+CT} (\mbox{\hyperlink{structremote__deploy}{remote\+\_\+deploy}},(ssh\+\_\+cmd)(scp\+\_\+cmd)(ssh\+\_\+identity)(ssh\+\_\+args)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{structprodkey__def}{prodkey\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_aa2805b0c6af8d000490056866b205146}\label{programs_2aacio-launcher_2main_8cpp_aa2805b0c6af8d000490056866b205146}} 
+() {\bfseries producer\+\_\+name} (block\+\_\+signing\+\_\+key)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{structproducer__set__def}{producer\+\_\+set\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_abfc341d484a10267ed71539e1ded4da3}\label{programs_2aacio-launcher_2main_8cpp_abfc341d484a10267ed71539e1ded4da3}} 
+()() {\bfseries version} (\mbox{\hyperlink{structproducers}{producers}})) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{classhost__def}{host\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a17ba6a40215766b4bb4311586e8a0ca1}\label{programs_2aacio-launcher_2main_8cpp_a17ba6a40215766b4bb4311586e8a0ca1}} 
+()()() genesis() ssh\+\_\+identity() ssh\+\_\+args() aacio\+\_\+home() host\+\_\+name() public\+\_\+name() base\+\_\+p2p\+\_\+port() base\+\_\+http\+\_\+port() {\bfseries def\+\_\+file\+\_\+size} (instances)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{classaacd__def}{aacd\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_aa4f1d95941a7e8ef6b64ed39cc97fba0}\label{programs_2aacio-launcher_2main_8cpp_aa4f1d95941a7e8ef6b64ed39cc97fba0}} 
+()()() genesis() ssh\+\_\+identity() ssh\+\_\+args() aacio\+\_\+home() host\+\_\+name() public\+\_\+name() base\+\_\+p2p\+\_\+port() base\+\_\+http\+\_\+port()() name() config\+\_\+dir\+\_\+name() data\+\_\+dir\+\_\+name() has\+\_\+db() p2p\+\_\+port() {\bfseries http\+\_\+port} (file\+\_\+size)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{classtn__node__def}{tn\+\_\+node\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_aa1ec8b3cbeaff1cf588c07f9812238c5}\label{programs_2aacio-launcher_2main_8cpp_aa1ec8b3cbeaff1cf588c07f9812238c5}} 
+()()() genesis() ssh\+\_\+identity() ssh\+\_\+args() aacio\+\_\+home() host\+\_\+name() public\+\_\+name() base\+\_\+p2p\+\_\+port() base\+\_\+http\+\_\+port()() name() config\+\_\+dir\+\_\+name() data\+\_\+dir\+\_\+name() has\+\_\+db() p2p\+\_\+port()() name() keys() {\bfseries peers} (\mbox{\hyperlink{structproducers}{producers}})) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{structtestnet__def}{testnet\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a4b5bc250babd1aa273428cb49873409e}\label{programs_2aacio-launcher_2main_8cpp_a4b5bc250babd1aa273428cb49873409e}} 
+()()() genesis() ssh\+\_\+identity() ssh\+\_\+args() aacio\+\_\+home() host\+\_\+name() public\+\_\+name() base\+\_\+p2p\+\_\+port() base\+\_\+http\+\_\+port()() name() config\+\_\+dir\+\_\+name() data\+\_\+dir\+\_\+name() has\+\_\+db() p2p\+\_\+port()() name() keys()() name() {\bfseries ssh\+\_\+helper} (nodes)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{structserver__name__def}{server\+\_\+name\+\_\+def}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_af172f9618b271f293125a142396f3f02}\label{programs_2aacio-launcher_2main_8cpp_af172f9618b271f293125a142396f3f02}} 
+()()() genesis() ssh\+\_\+identity() ssh\+\_\+args() aacio\+\_\+home() host\+\_\+name() public\+\_\+name() base\+\_\+p2p\+\_\+port() base\+\_\+http\+\_\+port()() name() config\+\_\+dir\+\_\+name() data\+\_\+dir\+\_\+name() has\+\_\+db() p2p\+\_\+port()() name() keys()() name()() ipaddr() name() has\+\_\+bios() {\bfseries aacio\+\_\+home} (instances)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{structserver__identities}{server\+\_\+identities}}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_ada979b90513f1c517828138f1f430212}\label{programs_2aacio-launcher_2main_8cpp_ada979b90513f1c517828138f1f430212}} 
+()()() genesis() ssh\+\_\+identity() ssh\+\_\+args() aacio\+\_\+home() host\+\_\+name() public\+\_\+name() base\+\_\+p2p\+\_\+port() base\+\_\+http\+\_\+port()() name() config\+\_\+dir\+\_\+name() data\+\_\+dir\+\_\+name() has\+\_\+db() p2p\+\_\+port()() name() keys()() name()() ipaddr() name() has\+\_\+bios()() producer() nonprod() db() {\bfseries default\+\_\+aacio\+\_\+home} (ssh)) F\+C\+\_\+\+R\+E\+F\+L\+E\+CT(\mbox{\hyperlink{structnode__rt__info}{node\+\_\+rt\+\_\+info}}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a3426d59b828f63d073d546fed967330e}\label{programs_2aacio-launcher_2main_8cpp_a3426d59b828f63d073d546fed967330e}} 
+const string {\bfseries block\+\_\+dir} = \char`\"{}blocks\char`\"{}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a0995d763aebc677936adecfcde571807}\label{programs_2aacio-launcher_2main_8cpp_a0995d763aebc677936adecfcde571807}} 
+const string {\bfseries shared\+\_\+mem\+\_\+dir} = \char`\"{}shared\+\_\+mem\char`\"{}
+\item 
+\mbox{\Hypertarget{programs_2aacio-launcher_2main_8cpp_a54777b040e000cc3ff116b93c6263977}\label{programs_2aacio-launcher_2main_8cpp_a54777b040e000cc3ff116b93c6263977}} 
+struct \mbox{\hyperlink{structlocal__identity}{local\+\_\+identity}} {\bfseries local\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+launch testnet nodes 
+
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

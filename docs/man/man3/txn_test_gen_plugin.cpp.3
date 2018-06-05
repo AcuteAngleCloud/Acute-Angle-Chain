@@ -1,0 +1,137 @@
+.TH "plugins/txn_test_gen_plugin/txn_test_gen_plugin.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+plugins/txn_test_gen_plugin/txn_test_gen_plugin.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/txn_test_gen_plugin/txn_test_gen_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/chain_plugin/chain_plugin\&.hpp>\fP
+.br
+\fC#include <aacio/chain/wast_to_wasm\&.hpp>\fP
+.br
+\fC#include <aacio/utilities/key_conversion\&.hpp>\fP
+.br
+\fC#include <fc/variant\&.hpp>\fP
+.br
+\fC#include <fc/io/json\&.hpp>\fP
+.br
+\fC#include <fc/exception/exception\&.hpp>\fP
+.br
+\fC#include <fc/reflect/variant\&.hpp>\fP
+.br
+\fC#include <boost/asio/high_resolution_timer\&.hpp>\fP
+.br
+\fC#include <boost/algorithm/clamp\&.hpp>\fP
+.br
+\fC#include <Inline/BasicTypes\&.h>\fP
+.br
+\fC#include <IR/Module\&.h>\fP
+.br
+\fC#include <IR/Validate\&.h>\fP
+.br
+\fC#include <WAST/WAST\&.h>\fP
+.br
+\fC#include <WASM/WASM\&.h>\fP
+.br
+\fC#include <Runtime/Runtime\&.h>\fP
+.br
+\fC#include <currency/currency\&.wast\&.hpp>\fP
+.br
+\fC#include <currency/currency\&.abi\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::detail::txn_test_gen_empty\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::txn_test_gen_plugin_impl\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCALL\fP(api_name,  api_handle,  call_name,  INVOKE,  http_response_code)"
+.br
+.ti -1c
+.RI "#define \fBINVOKE_V_R_R_R\fP(api_handle,  call_name,  in_param0,  in_param1,  in_param2)"
+.br
+.ti -1c
+.RI "#define \fBINVOKE_V_R_R\fP(api_handle,  call_name,  in_param0,  in_param1)"
+.br
+.ti -1c
+.RI "#define \fBINVOKE_V_V\fP(api_handle,  call_name)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFC_REFLECT\fP (\fBaacio::detail::txn_test_gen_empty\fP,)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CALL(api_name, api_handle, call_name, INVOKE, http_response_code)"
+\fBValue:\fP
+.PP
+.nf
+{std::string("/v1/" #api_name "/" #call_name), \
+   [this](string, string body, url_response_callback cb) mutable { \
+          try { \
+             if (body\&.empty()) body = "{}"; \
+             INVOKE \
+             cb(http_response_code, fc::json::to_string(result)); \
+          } catch (fc::eof_exception& e) { \
+             error_results results{400, "Bad Request", e}; \
+             cb(400, fc::json::to_string(results)); \
+             elog("Unable to parse arguments: ${args}", ("args", body)); \
+          } catch (fc::exception& e) { \
+             error_results results{500, "Internal Service Error", e}; \
+             cb(500, fc::json::to_string(results)); \
+             elog("Exception encountered while processing ${call}: ${e}", ("call", #api_name "\&." #call_name)("e", e)); \
+          } \
+       }}
+.fi
+.SS "#define INVOKE_V_R_R(api_handle, call_name, in_param0, in_param1)"
+\fBValue:\fP
+.PP
+.nf
+const auto& vs = fc::json::json::from_string(body)\&.as<fc::variants>(); \
+     api_handle->call_name(vs\&.at(0)\&.as<in_param0>(), vs\&.at(1)\&.as<in_param1>()); \
+     aacio::detail::txn_test_gen_empty result;
+.fi
+.SS "#define INVOKE_V_R_R_R(api_handle, call_name, in_param0, in_param1, in_param2)"
+\fBValue:\fP
+.PP
+.nf
+const auto& vs = fc::json::json::from_string(body)\&.as<fc::variants>(); \
+     api_handle->call_name(vs\&.at(0)\&.as<in_param0>(), vs\&.at(1)\&.as<in_param1>(), vs\&.at(2)\&.as<in_param2>()); \
+     aacio::detail::txn_test_gen_empty result;
+.fi
+.SS "#define INVOKE_V_V(api_handle, call_name)"
+\fBValue:\fP
+.PP
+.nf
+api_handle->call_name(); \
+     aacio::detail::txn_test_gen_empty result;
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

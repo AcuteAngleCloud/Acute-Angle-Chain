@@ -1,0 +1,44 @@
+.TH "aacio::node_transaction_state" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::node_transaction_state
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtransaction_id_type\fP \fBid\fP"
+.br
+.ti -1c
+.RI "\fBtime_point_sec\fP \fBexpires\fP"
+.br
+.ti -1c
+.RI "\fBpacked_transaction\fP \fBpacked_txn\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< char > \fBserialized_txn\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBblock_num\fP = 0"
+.br
+.RI "the received raw bundle "
+.ti -1c
+.RI "uint32_t \fBtrue_block\fP = 0"
+.br
+.RI "block transaction was included in "
+.ti -1c
+.RI "uint16_t \fBrequests\fP = 0"
+.br
+.RI "used to reset block_uum when request is 0 "
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBpacked_transaction\fP aacio::node_transaction_state::packed_txn"
+time after which this may be purged\&. Expires increased while the txn is 'in flight' to anoher peer 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

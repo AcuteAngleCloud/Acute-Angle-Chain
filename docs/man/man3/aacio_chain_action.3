@@ -1,0 +1,55 @@
+.TH "aacio::chain::action" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::action
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transaction\&.hpp>\fP
+.PP
+Inherited by \fBaacio::chain::action_notice\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , std::enable_if_t< std::is_base_of< bytes, T >::value, int >  = 1> \fBaction\fP (\fBvector\fP< \fBpermission_level\fP > auth, const \fBT\fP &value)"
+.br
+.ti -1c
+.RI "template<typename T , std::enable_if_t<!std::is_base_of< bytes, T >::value, int >  = 1> \fBaction\fP (\fBvector\fP< \fBpermission_level\fP > auth, const \fBT\fP &value)"
+.br
+.ti -1c
+.RI "\fBaction\fP (\fBvector\fP< \fBpermission_level\fP > auth, \fBaccount_name\fP \fBaccount\fP, action_name \fBname\fP, const \fBbytes\fP &data)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP \fBdata_as\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBaccount_name\fP \fBaccount\fP"
+.br
+.ti -1c
+.RI "action_name \fBname\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBpermission_level\fP > \fBauthorization\fP"
+.br
+.ti -1c
+.RI "\fBbytes\fP \fBdata\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+An action is performed by an actor, aka an account\&. It may be created explicitly and authorized by signatures or might be generated implicitly by executing application code\&.
+.PP
+This follows the design pattern of React Flux where actions are named and then dispatched to one or more action handlers (aka stores)\&. In the context of aacio, every action is dispatched to the handler defined by account 'scope' and function 'name', but the default handler may also forward the action to any number of additional handlers\&. Any application can write a handler for 'scope::name' that will get executed if and only if this action is forwarded to that application\&.
+.PP
+Each action may require the permission of specific actors\&. Actors can define any number of permission levels\&. The actors and their respective permission levels are declared on the action and validated independently of the executing application code\&. An application code will check to see if the required authorization were properly declared when it executes\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,20 @@
+Tools used to initialize a genesis block for the A\+AC Platform
+
+\subsection*{Tools}
+
+
+\begin{DoxyItemize}
+\item Snapshot Generator (\href{https://github.com/AACIO/genesis/tree/master/tools/snapshot}{\tt readme}) -\/ Generates a snapshot from the A\+AC Crowdsale and Token contracts (saves a snapshot.\+csv and snapshot.\+json \mbox{[}metadata\mbox{]} into root directory of project)
+\item \href{https://aacio.github.io/genesis/}{\tt Genesis Block Generator} (\href{https://github.com/AACIO/genesis/tree/master/tools/genesis}{\tt readme}) -\/ Enables configuration of a well-\/formed genesis.\+json file from a snapshot.\+csv.
+\item \href{https://aacio.github.io/genesis/tools/account-name/index.html}{\tt Account Name Lookup} Look up the generated account name that was included in the genesis block with either your E\+TH address or A\+AC key
+\item A\+AC Genesis \mbox{\hyperlink{struct_key}{Key}} Utility (\href{https://github.com/AACIO/genesis/tree/master/tools/keys}{\tt readme}) -\/ Offline A\+AC key gen and validator
+\item {\itshape Snapshot Frontend (planned)}
+\end{DoxyItemize}
+
+\subsection*{Useful Files}
+
+
+\begin{DoxyItemize}
+\item {\bfseries snapshot.\+csv} Comma-\/delimited distribution list
+\item {\bfseries snapshot.\+json} Meta data for the snapshot in the repo, describes the parameters of snapshot, some statistics and data for debugging 
+\end{DoxyItemize}

@@ -1,0 +1,50 @@
+\hypertarget{classfc_1_1udp__socket}{}\section{fc\+:\+:udp\+\_\+socket Class Reference}
+\label{classfc_1_1udp__socket}\index{fc\+::udp\+\_\+socket@{fc\+::udp\+\_\+socket}}
+
+
+{\ttfamily \#include $<$udp\+\_\+socket.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classfc_1_1udp__socket_1_1impl}{impl}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_a9ff80cf2ec65a3c887f8e00e79cf8f98}\label{classfc_1_1udp__socket_a9ff80cf2ec65a3c887f8e00e79cf8f98}} 
+{\bfseries udp\+\_\+socket} (const \mbox{\hyperlink{classfc_1_1udp__socket}{udp\+\_\+socket}} \&s)
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_ad9f0cf8cf36cf5948be0fc7f3664fd28}\label{classfc_1_1udp__socket_ad9f0cf8cf36cf5948be0fc7f3664fd28}} 
+void {\bfseries initialize} (boost\+::asio\+::io\+\_\+service \&)
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_ae38731361b74a2841f4691066ac31d86}\label{classfc_1_1udp__socket_ae38731361b74a2841f4691066ac31d86}} 
+void {\bfseries open} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_a99f7b46a3566de47d7977ce10b674fe1}\label{classfc_1_1udp__socket_a99f7b46a3566de47d7977ce10b674fe1}} 
+void {\bfseries send\+\_\+to} (const char $\ast$b, size\+\_\+t l, boost\+::asio\+::ip\+::udp\+::endpoint \&to)
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_a0f8d1dde4527e6e5c128601586160a53}\label{classfc_1_1udp__socket_a0f8d1dde4527e6e5c128601586160a53}} 
+void {\bfseries send\+\_\+to} (const std\+::shared\+\_\+ptr$<$ const char $>$ \&b, size\+\_\+t l, boost\+::asio\+::ip\+::udp\+::endpoint \&to)
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_a7be64e6fda2524b07192ca354559bbcd}\label{classfc_1_1udp__socket_a7be64e6fda2524b07192ca354559bbcd}} 
+void {\bfseries close} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_a65856d35d2beda8da40ab9f916705f21}\label{classfc_1_1udp__socket_a65856d35d2beda8da40ab9f916705f21}} 
+void {\bfseries set\+\_\+reuse\+\_\+address} (bool)
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_acd2fec7ae0595eb52ec1241998ac90ed}\label{classfc_1_1udp__socket_acd2fec7ae0595eb52ec1241998ac90ed}} 
+void {\bfseries connect} (const boost\+::asio\+::ip\+::udp\+::endpoint \&e)
+\item 
+\mbox{\Hypertarget{classfc_1_1udp__socket_a315ceb1d2edbec581dbffe676784ff05}\label{classfc_1_1udp__socket_a315ceb1d2edbec581dbffe676784ff05}} 
+const boost\+::asio\+::ip\+::udp\+::endpoint {\bfseries local\+\_\+endpoint} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classfc_1_1udp__socket}{udp\+\_\+socket}} class has reference semantics, all copies will refer to the same underlying socket. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/network/udp\+\_\+socket.\+hpp\item 
+libraries/fc/src/network/\mbox{\hyperlink{udp__socket_8cpp}{udp\+\_\+socket.\+cpp}}\end{DoxyCompactItemize}

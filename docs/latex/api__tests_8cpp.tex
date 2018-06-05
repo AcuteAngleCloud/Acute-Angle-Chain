@@ -1,0 +1,236 @@
+\hypertarget{api__tests_8cpp}{}\section{tests/api\+\_\+tests/api\+\_\+tests.cpp File Reference}
+\label{api__tests_8cpp}\index{tests/api\+\_\+tests/api\+\_\+tests.\+cpp@{tests/api\+\_\+tests/api\+\_\+tests.\+cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$boost/test/unit\+\_\+test.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/iostreams/concepts.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/iostreams/stream\+\_\+buffer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/string/predicate.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/testing/tester.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/chain\+\_\+controller.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/exceptions.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/account\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/contracts/contract\+\_\+table\+\_\+objects.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/block\+\_\+summary\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/wasm\+\_\+interface.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/crypto/digest.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/crypto/sha256.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/exception/exception.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/variant\+\_\+object.\+hpp$>$}\newline
+{\ttfamily \#include $<$Inline/\+Basic\+Types.\+h$>$}\newline
+{\ttfamily \#include $<$I\+R/\+Module.\+h$>$}\newline
+{\ttfamily \#include $<$I\+R/\+Validate.\+h$>$}\newline
+{\ttfamily \#include $<$W\+A\+S\+T/\+W\+A\+S\+T.\+h$>$}\newline
+{\ttfamily \#include $<$W\+A\+S\+M/\+W\+A\+S\+M.\+h$>$}\newline
+{\ttfamily \#include $<$Runtime/\+Runtime.\+h$>$}\newline
+{\ttfamily \#include $<$test\+\_\+api/test\+\_\+api.\+wast.\+hpp$>$}\newline
+{\ttfamily \#include $<$test\+\_\+api\+\_\+mem/test\+\_\+api\+\_\+mem.\+wast.\+hpp$>$}\newline
+{\ttfamily \#include $<$test\+\_\+api\+\_\+db/test\+\_\+api\+\_\+db.\+wast.\+hpp$>$}\newline
+{\ttfamily \#include $<$test\+\_\+api\+\_\+multi\+\_\+index/test\+\_\+api\+\_\+multi\+\_\+index.\+wast.\+hpp$>$}\newline
+{\ttfamily \#include $<$test\+\_\+api/test\+\_\+api\+\_\+common.\+hpp$>$}\newline
+Include dependency graph for api\+\_\+tests.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtest__api__action}{test\+\_\+api\+\_\+action$<$ N\+A\+M\+E $>$}}
+\item 
+struct \mbox{\hyperlink{structtest__chain__action}{test\+\_\+chain\+\_\+action$<$ N\+A\+M\+E $>$}}
+\item 
+struct \mbox{\hyperlink{structcheck__auth}{check\+\_\+auth}}
+\item 
+struct \mbox{\hyperlink{structassert__message__is}{assert\+\_\+message\+\_\+is}}
+\item 
+struct \mbox{\hyperlink{struct_my_sink}{My\+Sink}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aaeaf9af99fa96f4f033782755d6a3e63}\label{api__tests_8cpp_aaeaf9af99fa96f4f033782755d6a3e63}} 
+\#define {\bfseries D\+I\+S\+A\+B\+L\+E\+\_\+\+A\+A\+C\+L\+I\+B\+\_\+\+S\+E\+R\+I\+A\+L\+I\+ZE}
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aada0b9e3aa318087f731b01e9ae59f0d}\label{api__tests_8cpp_aada0b9e3aa318087f731b01e9ae59f0d}} 
+\#define {\bfseries T\+E\+S\+T\+ER}~\mbox{\hyperlink{classaacio_1_1testing_1_1validating__tester}{validating\+\_\+tester}}
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a4bf40073cedcbf362a95bb51615d75fd}\label{api__tests_8cpp_a4bf40073cedcbf362a95bb51615d75fd}} 
+\#define {\bfseries C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+ON}(\+\_\+\+T\+E\+S\+T\+ER,  C\+LS,  M\+TH,  D\+A\+TA)~Call\+Function(\+\_\+\+T\+E\+S\+T\+ER, \mbox{\hyperlink{structtest__api__action}{test\+\_\+api\+\_\+action}}$<$T\+E\+S\+T\+\_\+\+M\+E\+T\+H\+OD(C\+LS, M\+TH)$>$\{\}, D\+A\+TA)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a50e15ac9977c71f2af0f9f347a0b3ce3}\label{api__tests_8cpp_a50e15ac9977c71f2af0f9f347a0b3ce3}} 
+\#define {\bfseries C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+Y\+S\+T\+EM}(\+\_\+\+T\+E\+S\+T\+ER,  C\+LS,  M\+TH,  D\+A\+TA)~Call\+Function(\+\_\+\+T\+E\+S\+T\+ER, \mbox{\hyperlink{structtest__chain__action}{test\+\_\+chain\+\_\+action}}$<$T\+E\+S\+T\+\_\+\+M\+E\+T\+H\+OD(C\+LS, M\+TH)$>$\{\}, D\+A\+TA, \{\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(aacio)\} )
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a9bdc725bfc86832ae7fe00f358375fae}\label{api__tests_8cpp_a9bdc725bfc86832ae7fe00f358375fae}} 
+\#define {\bfseries C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+S\+C\+O\+PE}(\+\_\+\+T\+E\+S\+T\+ER,  C\+LS,  M\+TH,  D\+A\+TA,  A\+C\+C\+O\+U\+NT)~Call\+Function(\+\_\+\+T\+E\+S\+T\+ER, \mbox{\hyperlink{structtest__api__action}{test\+\_\+api\+\_\+action}}$<$T\+E\+S\+T\+\_\+\+M\+E\+T\+H\+OD(C\+LS, M\+TH)$>$\{\}, D\+A\+TA, A\+C\+C\+O\+U\+NT)
+\item 
+\#define {\bfseries C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}(\+\_\+\+T\+E\+S\+T\+ER,  C\+LS,  M\+TH,  D\+A\+TA,  E\+XC,  E\+X\+C\+\_\+\+M\+E\+S\+S\+A\+GE)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a4d571b61cdbce18b4a91605667f82e3a}\label{api__tests_8cpp_a4d571b61cdbce18b4a91605667f82e3a}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+CT} (\mbox{\hyperlink{structdummy__action}{dummy\+\_\+action}},(a)(b)(c))
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aa91dd2aa2279f9458ae2636206c5e98e}\label{api__tests_8cpp_aa91dd2aa2279f9458ae2636206c5e98e}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+CT} (\mbox{\hyperlink{structu128__action}{u128\+\_\+action}},(values))
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_acd252240707b2bb6e960b13597b90044}\label{api__tests_8cpp_acd252240707b2bb6e960b13597b90044}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+CT} (\mbox{\hyperlink{structcf__action}{cf\+\_\+action}},(payload)(cfd\+\_\+idx))
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a9b048e4f7cb510a0158366a34b5ab578}\label{api__tests_8cpp_a9b048e4f7cb510a0158366a34b5ab578}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+\+T\+E\+M\+P\+L\+A\+TE} ((uint64\+\_\+t \mbox{\hyperlink{struct_t}{T}}), \mbox{\hyperlink{structtest__api__action}{test\+\_\+api\+\_\+action}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$, B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+S\+E\+Q\+\_\+\+N\+IL)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a67958b7601c49c1b58519c242e4b7f0d}\label{api__tests_8cpp_a67958b7601c49c1b58519c242e4b7f0d}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+C\+T\+\_\+\+T\+E\+M\+P\+L\+A\+TE} ((uint64\+\_\+t \mbox{\hyperlink{struct_t}{T}}), \mbox{\hyperlink{structtest__chain__action}{test\+\_\+chain\+\_\+action}}$<$ \mbox{\hyperlink{struct_t}{T}} $>$, B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+S\+E\+Q\+\_\+\+N\+IL)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aaca30c439b0d5db8cee66d7d70e8e16b}\label{api__tests_8cpp_aaca30c439b0d5db8cee66d7d70e8e16b}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+CT} (\mbox{\hyperlink{structcheck__auth}{check\+\_\+auth}},(\mbox{\hyperlink{structaccount}{account}})(permission)(pubkeys))
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a0beeabb7575bba4465f5788abbd0af20}\label{api__tests_8cpp_a0beeabb7575bba4465f5788abbd0af20}} 
+bool {\bfseries expect\+\_\+assert\+\_\+message} (const \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}} \&ex, string \mbox{\hyperlink{structexpected}{expected}})
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a524fbc8b4e55e25620a8d4acd3ad42e3}\label{api__tests_8cpp_a524fbc8b4e55e25620a8d4acd3ad42e3}} 
+constexpr uint64\+\_\+t {\bfseries T\+E\+S\+T\+\_\+\+M\+E\+T\+H\+OD} (const char $\ast$C\+L\+A\+SS, const char $\ast$M\+E\+T\+H\+OD)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a7296f015646dae74587f6a73fae7476e}\label{api__tests_8cpp_a7296f015646dae74587f6a73fae7476e}} 
+string {\bfseries I64\+Str} (int64\+\_\+t i)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_ac7acc48f7de363110915e427b18fdbba}\label{api__tests_8cpp_ac7acc48f7de363110915e427b18fdbba}} 
+string {\bfseries U64\+Str} (uint64\+\_\+t i)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a8d6c6ebc1d0a6f8e66286f45111518f7}\label{api__tests_8cpp_a8d6c6ebc1d0a6f8e66286f45111518f7}} 
+string {\bfseries U128\+Str} (unsigned \+\_\+\+\_\+int128 i)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a457ad4298dff578aa1250296d0f48576}\label{api__tests_8cpp_a457ad4298dff578aa1250296d0f48576}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries Call\+Action} (T\+E\+S\+T\+ER \&\mbox{\hyperlink{structtest}{test}}, \mbox{\hyperlink{struct_t}{T}} ac, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ account\+\_\+name $>$ \&scope=\{\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(testapi)\})
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a8aa0094138dbd01039ce52a3dbb2158c}\label{api__tests_8cpp_a8aa0094138dbd01039ce52a3dbb2158c}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} {\bfseries Call\+Function} (T\+E\+S\+T\+ER \&\mbox{\hyperlink{structtest}{test}}, \mbox{\hyperlink{struct_t}{T}} ac, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ char $>$ \&data, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ account\+\_\+name $>$ \&scope=\{\mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(testapi)\})
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a9c2070055b807fbc8273ad2e85961eef}\label{api__tests_8cpp_a9c2070055b807fbc8273ad2e85961eef}} 
+bool {\bfseries is\+\_\+access\+\_\+violation} (\mbox{\hyperlink{classfc_1_1unhandled__exception}{fc\+::unhandled\+\_\+exception}} const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a818dc39f681886eeb9b1b989de0f9471}\label{api__tests_8cpp_a818dc39f681886eeb9b1b989de0f9471}} 
+bool {\bfseries is\+\_\+access\+\_\+violation} (const \mbox{\hyperlink{struct_runtime_1_1_exception}{Runtime\+::\+Exception}} \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a46252ce6b0d5f77c2417b33b9f4d704c}\label{api__tests_8cpp_a46252ce6b0d5f77c2417b33b9f4d704c}} 
+bool {\bfseries is\+\_\+assert\+\_\+exception} (fc\+::assert\+\_\+exception const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a04854ed9a67034c190e76a810fde3b20}\label{api__tests_8cpp_a04854ed9a67034c190e76a810fde3b20}} 
+bool {\bfseries is\+\_\+page\+\_\+memory\+\_\+error} (page\+\_\+memory\+\_\+error const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_ab20d421f3fdb0b5949fa54f1626669ad}\label{api__tests_8cpp_ab20d421f3fdb0b5949fa54f1626669ad}} 
+bool {\bfseries is\+\_\+tx\+\_\+missing\+\_\+auth} (tx\+\_\+missing\+\_\+auth const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aece7eb8f7465729636d743198c7315a5}\label{api__tests_8cpp_aece7eb8f7465729636d743198c7315a5}} 
+bool {\bfseries is\+\_\+tx\+\_\+missing\+\_\+recipient} (tx\+\_\+missing\+\_\+recipient const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a84157385bd708bccc6b87b549c2d04a8}\label{api__tests_8cpp_a84157385bd708bccc6b87b549c2d04a8}} 
+bool {\bfseries is\+\_\+tx\+\_\+missing\+\_\+sigs} (tx\+\_\+missing\+\_\+sigs const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a26f0d85ff20c61b12447a72ae904baba}\label{api__tests_8cpp_a26f0d85ff20c61b12447a72ae904baba}} 
+bool {\bfseries is\+\_\+wasm\+\_\+execution\+\_\+error} (aacio\+::chain\+::wasm\+\_\+execution\+\_\+error const \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a0e13b783cb47302bd49367a4bea24aa2}\label{api__tests_8cpp_a0e13b783cb47302bd49367a4bea24aa2}} 
+bool {\bfseries is\+\_\+tx\+\_\+resource\+\_\+exhausted} (const tx\+\_\+resource\+\_\+exhausted \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_afca79da5e6fc9cb9917557301b11d1e2}\label{api__tests_8cpp_afca79da5e6fc9cb9917557301b11d1e2}} 
+bool {\bfseries is\+\_\+checktime\+\_\+exceeded} (const checktime\+\_\+exceeded \&e)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_add1364a9035423a67e8af582945c6fe9}\label{api__tests_8cpp_add1364a9035423a67e8af582945c6fe9}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (action\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aad64ea7f88f8f84a2f40de73c60eaf3a}\label{api__tests_8cpp_aad64ea7f88f8f84a2f40de73c60eaf3a}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (cf\+\_\+action\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a08b1591c7b726c4dc869d9ecf2d14531}\label{api__tests_8cpp_a08b1591c7b726c4dc869d9ecf2d14531}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (cfa\+\_\+tx\+\_\+signature, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a676770608cf3b093190f039cbc8400c2}\label{api__tests_8cpp_a676770608cf3b093190f039cbc8400c2}} 
+{\bfseries F\+C\+\_\+\+L\+O\+G\+\_\+\+A\+N\+D\+\_\+\+R\+E\+T\+H\+R\+OW} () B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE(checktime\+\_\+pass\+\_\+tests
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a1f8db396f3e86cd0b69e02efbb29fa9e}\label{api__tests_8cpp_a1f8db396f3e86cd0b69e02efbb29fa9e}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (chain\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aa8ae16aebfc98a135a173f6aa146b19a}\label{api__tests_8cpp_aa8ae16aebfc98a135a173f6aa146b19a}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (db\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a4cb657cf7e0956f5729759e9df39a5d1}\label{api__tests_8cpp_a4cb657cf7e0956f5729759e9df39a5d1}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (multi\+\_\+index\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a827e6ba00b70b5a154d0fb11d7f018e7}\label{api__tests_8cpp_a827e6ba00b70b5a154d0fb11d7f018e7}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (fixedpoint\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_aa4040f841f0fcfa4cfd4973e2e799bf2}\label{api__tests_8cpp_aa4040f841f0fcfa4cfd4973e2e799bf2}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (real\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a066301cca80ac529d24505dcebc8ab93}\label{api__tests_8cpp_a066301cca80ac529d24505dcebc8ab93}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (crypto\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a3c04f77a0a57b4ec9a0fb51616ba72f0}\label{api__tests_8cpp_a3c04f77a0a57b4ec9a0fb51616ba72f0}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (memory\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a4e37667020b87bbacfb844d15fb1ca2d}\label{api__tests_8cpp_a4e37667020b87bbacfb844d15fb1ca2d}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (extended\+\_\+memory\+\_\+test\+\_\+initial\+\_\+memory, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_ace337abe59f447e154c64392e989cc19}\label{api__tests_8cpp_ace337abe59f447e154c64392e989cc19}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (extended\+\_\+memory\+\_\+test\+\_\+page\+\_\+memory, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a888dcc6d18c33970d72290b58f8bc927}\label{api__tests_8cpp_a888dcc6d18c33970d72290b58f8bc927}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (extended\+\_\+memory\+\_\+test\+\_\+page\+\_\+memory\+\_\+exceeded, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_ab59a8b7f263cb3da72b58f4794615d35}\label{api__tests_8cpp_ab59a8b7f263cb3da72b58f4794615d35}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (extended\+\_\+memory\+\_\+test\+\_\+page\+\_\+memory\+\_\+negative\+\_\+bytes, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_ad30380e77233bd5a338de187596d9c42}\label{api__tests_8cpp_ad30380e77233bd5a338de187596d9c42}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (print\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a9d11f957f1dc678373019fca85a7590f}\label{api__tests_8cpp_a9d11f957f1dc678373019fca85a7590f}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (math\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_af9f829bbd851154906bf5275d588cd41}\label{api__tests_8cpp_af9f829bbd851154906bf5275d588cd41}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (types\+\_\+tests, T\+E\+S\+T\+ER)
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a42e95a68a900c8b58dc9157d88c961d2}\label{api__tests_8cpp_a42e95a68a900c8b58dc9157d88c961d2}} 
+{\bfseries B\+O\+O\+S\+T\+\_\+\+F\+I\+X\+T\+U\+R\+E\+\_\+\+T\+E\+S\+T\+\_\+\+C\+A\+SE} (permission\+\_\+tests, T\+E\+S\+T\+ER)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_ae048236b95bd2f2bcabe5c417fea8686}\label{api__tests_8cpp_ae048236b95bd2f2bcabe5c417fea8686}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ {\bfseries capture}
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a6f79befbf5f9aaf7eb45866116bf32f4}\label{api__tests_8cpp_a6f79befbf5f9aaf7eb45866116bf32f4}} 
+uint32\+\_\+t {\bfseries last\+\_\+fnc\+\_\+err} = 0
+\item 
+\mbox{\Hypertarget{api__tests_8cpp_a6626271edd7d3fc48537bbec59d8f056}\label{api__tests_8cpp_a6626271edd7d3fc48537bbec59d8f056}} 
+{\bfseries T\+E\+S\+T\+ER}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{api__tests_8cpp_abe50d3c8bc8e99e338a502af8747277f}\label{api__tests_8cpp_abe50d3c8bc8e99e338a502af8747277f}} 
+\index{api\+\_\+tests.\+cpp@{api\+\_\+tests.\+cpp}!C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}}
+\index{C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON@{C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}!api\+\_\+tests.\+cpp@{api\+\_\+tests.\+cpp}}
+\subsubsection{\texorpdfstring{C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON}{CALL\_TEST\_FUNCTION\_AND\_CHECK\_EXCEPTION}}
+{\footnotesize\ttfamily \#define C\+A\+L\+L\+\_\+\+T\+E\+S\+T\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+A\+N\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+X\+C\+E\+P\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+T\+E\+S\+T\+ER,  }\item[{}]{C\+LS,  }\item[{}]{M\+TH,  }\item[{}]{D\+A\+TA,  }\item[{}]{E\+XC,  }\item[{}]{E\+X\+C\+\_\+\+M\+E\+S\+S\+A\+GE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+BOOST\_CHECK\_EXCEPTION( \(\backslash\)
+   CALL\_TEST\_FUNCTION( \_TESTER, CLS, MTH, DATA), \(\backslash\)
+                       EXC, \(\backslash\)
+                       [](\textcolor{keyword}{const} EXC& e) \{ \(\backslash\)
+                          return expect\_assert\_message(e, EXC\_MESSAGE); \(\backslash\)
+                     \} \(\backslash\)
+);
+\end{DoxyCode}

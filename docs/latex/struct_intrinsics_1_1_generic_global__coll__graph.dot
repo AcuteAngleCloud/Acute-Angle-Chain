@@ -1,0 +1,18 @@
+digraph "Intrinsics::GenericGlobal&lt; type, isMutable &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node2 [label="Intrinsics::GenericGlobal\l\< type, isMutable \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Intrinsics::Global",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_intrinsics_1_1_global.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" global" ];
+  Node4 [label="Runtime::GlobalInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_runtime_1_1_global_instance.html"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Runtime::GCObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_runtime_1_1_g_c_object.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Runtime::ObjectInstance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_runtime_1_1_object_instance.html"];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" initialValue\nvalue" ];
+  Node7 [label="Runtime::UntaggedValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_runtime_1_1_untagged_value.html"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" type" ];
+  Node8 [label="IR::GlobalType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_i_r_1_1_global_type.html"];
+}

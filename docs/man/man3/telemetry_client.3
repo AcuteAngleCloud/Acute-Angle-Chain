@@ -1,0 +1,44 @@
+.TH "telemetry_client" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+telemetry_client
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBwebsocketpp::client\fP< \fBwebsocketpp::config::asio_client\fP > \fBclient\fP"
+.br
+.ti -1c
+.RI "typedef websocketpp::lib::lock_guard< websocketpp::lib::mutex > \fBscoped_lock\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBrun\fP (const std::string &uri)"
+.br
+.ti -1c
+.RI "void \fBon_open\fP (\fBwebsocketpp::connection_hdl\fP)"
+.br
+.ti -1c
+.RI "void \fBon_close\fP (\fBwebsocketpp::connection_hdl\fP)"
+.br
+.ti -1c
+.RI "void \fBon_fail\fP (\fBwebsocketpp::connection_hdl\fP)"
+.br
+.ti -1c
+.RI "void \fBtelemetry_loop\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The telemetry client connects to a WebSocket server and sends a message every second containing an integer count\&. This example can be used as the basis for programs where a client connects and pushes data for logging, stress/load testing, etc\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

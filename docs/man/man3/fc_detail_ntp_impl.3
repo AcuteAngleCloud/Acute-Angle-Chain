@@ -1,0 +1,78 @@
+.TH "fc::detail::ntp_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::detail::ntp_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfc::time_point\fP \fBntp_timestamp_to_fc_time_point\fP (uint64_t ntp_timestamp_net_order)"
+.br
+.ti -1c
+.RI "uint64_t \fBfc_time_point_to_ntp_timestamp\fP (const \fBfc::time_point\fP &fc_timestamp)"
+.br
+.ti -1c
+.RI "void \fBrequest_now\fP ()"
+.br
+.ti -1c
+.RI "void \fBrequest_time_task\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart_read_loop\fP ()"
+.br
+.ti -1c
+.RI "void \fBread_loop\fP ()"
+.br
+.ti -1c
+.RI "void \fBreschedule\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "fc::thread \fB_ntp_thread\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::pair< std::string, uint16_t > > \fB_ntp_hosts\fP"
+.br
+.ti -1c
+.RI "future< void > \fB_read_loop_done\fP"
+.br
+.ti -1c
+.RI "\fBudp_socket\fP \fB_sock\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_request_interval_sec\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_retry_failed_request_interval_sec\fP"
+.br
+.ti -1c
+.RI "\fBfc::time_point\fP \fB_last_valid_ntp_reply_received_time\fP"
+.br
+.ti -1c
+.RI "std::atomic_bool \fB_last_ntp_delta_initialized\fP"
+.br
+.ti -1c
+.RI "std::atomic< int64_t > \fB_last_ntp_delta_microseconds\fP"
+.br
+.ti -1c
+.RI "future< void > \fB_request_time_task_done\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< scheduled_task_impl< void > > \fB_scheduled_request_time\fP"
+.br
+.in -1c
+.SH "Member Data Documentation"
+.PP 
+.SS "fc::thread fc::detail::ntp_impl::_ntp_thread"
+vector < host, port > 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

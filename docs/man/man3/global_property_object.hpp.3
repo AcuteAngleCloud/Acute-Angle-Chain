@@ -1,0 +1,69 @@
+.TH "libraries/chain/include/aacio/chain/global_property_object.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/global_property_object.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fc/uint128\&.hpp>\fP
+.br
+\fC#include <fc/array\&.hpp>\fP
+.br
+\fC#include <aacio/chain/types\&.hpp>\fP
+.br
+\fC#include <aacio/chain/block_timestamp\&.hpp>\fP
+.br
+\fC#include <aacio/chain/chain_config\&.hpp>\fP
+.br
+\fC#include <aacio/chain/producer_schedule\&.hpp>\fP
+.br
+\fC#include <aacio/chain/incremental_merkle\&.hpp>\fP
+.br
+\fC#include <chainbase/chainbase\&.hpp>\fP
+.br
+\fC#include 'multi_index_includes\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::chain::blocknum_producer_schedule\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::chain::global_property_object\fP"
+.br
+.RI "Maintains global state information (committee_member list, current fees)
+.PP
+This is an implementation detail\&. The values here are set by committee_members to tune the blockchain parameters\&. "
+.ti -1c
+.RI "class \fBaacio::chain::dynamic_global_property_object\fP"
+.br
+.RI "Maintains global state information (committee_member list, current fees)
+.PP
+This is an implementation detail\&. The values here are calculated during normal chain operations and reflect the current values of global blockchain properties\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::global_property_multi_index\fP = chainbase::shared_multi_index_container< global_property_object, indexed_by< ordered_unique< tag< by_id >, > > >"
+.br
+.ti -1c
+.RI "using \fBaacio::chain::dynamic_global_property_multi_index\fP = chainbase::shared_multi_index_container< dynamic_global_property_object, indexed_by< ordered_unique< tag< by_id >, > > >"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

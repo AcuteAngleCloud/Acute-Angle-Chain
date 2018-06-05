@@ -1,0 +1,100 @@
+.TH "wasm::CostAnalyzer" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::CostAnalyzer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::Visitor< CostAnalyzer, Index >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCostAnalyzer\fP (\fBExpression\fP *ast)"
+.br
+.ti -1c
+.RI "Index \fBmaybeVisit\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitBlock\fP (\fBBlock\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitIf\fP (\fBIf\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitLoop\fP (\fBLoop\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitCall\fP (\fBCall\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitGetLocal\fP (\fBGetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitSetLocal\fP (\fBSetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitGetGlobal\fP (\fBGetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitSetGlobal\fP (\fBSetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitLoad\fP (\fBLoad\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitStore\fP (\fBStore\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitConst\fP (\fBConst\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitUnary\fP (\fBUnary\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitBinary\fP (\fBBinary\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitSelect\fP (\fBSelect\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitDrop\fP (\fBDrop\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitReturn\fP (\fBReturn\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitHost\fP (\fBHost\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitNop\fP (\fBNop\fP *curr)"
+.br
+.ti -1c
+.RI "Index \fBvisitUnreachable\fP (\fBUnreachable\fP *curr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Index \fBcost\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

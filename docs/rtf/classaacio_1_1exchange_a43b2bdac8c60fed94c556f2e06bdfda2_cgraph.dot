@@ -1,0 +1,15 @@
+digraph "aacio::exchange::on"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="aacio::exchange::on",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="require_auth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__actioncapi.html#gab1e668e93ac1f94421743ed79edffb26",tooltip="Verify specified account exists in the set of provided auths. "];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="aacio_assert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__systemcapi.html#gaf5c36ddbe4ddd977456ac9aefcdb923f",tooltip="Aborts processing of this action and unwinds all pending changes. "];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="aacio::print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$print_8hpp.html#a291145c6469a570728575802ed6ad965",tooltip="Prints string. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="prints",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__consolecapi.html#gaa99be0cc1b9e5cbbc2b12a43537e7ed3",tooltip="Prints string. "];
+}

@@ -1,0 +1,99 @@
+\hypertarget{classaacio_1_1chain_1_1transaction__metadata}{}\section{aacio\+:\+:chain\+:\+:transaction\+\_\+metadata Class Reference}
+\label{classaacio_1_1chain_1_1transaction__metadata}\index{aacio\+::chain\+::transaction\+\_\+metadata@{aacio\+::chain\+::transaction\+\_\+metadata}}
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:transaction\+\_\+metadata\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a0fc173ba718bc6195e2ecc8894f46cfe}\label{classaacio_1_1chain_1_1transaction__metadata_a0fc173ba718bc6195e2ecc8894f46cfe}} 
+{\bfseries transaction\+\_\+metadata} (const \mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} \&t, const \mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} \&published, const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&sender, uint128\+\_\+t sender\+\_\+id, const char $\ast$raw\+\_\+data, size\+\_\+t raw\+\_\+size, const \mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} $>$ \&processing\+\_\+deadline)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_ad381f455d6f59a160445cfab1255dfdc}\label{classaacio_1_1chain_1_1transaction__metadata_ad381f455d6f59a160445cfab1255dfdc}} 
+{\bfseries transaction\+\_\+metadata} (const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&t, \mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} chainid, const \mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} \&published, const \mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} $>$ \&processing\+\_\+deadline=\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} $>$(), bool implicit=false)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a8c73b0372954614962107eaa88024ff4}\label{classaacio_1_1chain_1_1transaction__metadata_a8c73b0372954614962107eaa88024ff4}} 
+{\bfseries transaction\+\_\+metadata} (\mbox{\hyperlink{classaacio_1_1chain_1_1transaction__metadata}{transaction\+\_\+metadata}} \&\&)=default
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_aa4b2826f45741390e8034804e4f009ff}\label{classaacio_1_1chain_1_1transaction__metadata_aa4b2826f45741390e8034804e4f009ff}} 
+\mbox{\hyperlink{classaacio_1_1chain_1_1transaction__metadata}{transaction\+\_\+metadata}} \& {\bfseries operator=} (\mbox{\hyperlink{classaacio_1_1chain_1_1transaction__metadata}{transaction\+\_\+metadata}} \&\&)=default
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a8b7591a64eb26b02163cecabb88db576}\label{classaacio_1_1chain_1_1transaction__metadata_a8b7591a64eb26b02163cecabb88db576}} 
+const \mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} \& {\bfseries trx} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a19b3ad96a6329bf4eb60ed66872cdf3a}\label{classaacio_1_1chain_1_1transaction__metadata_a19b3ad96a6329bf4eb60ed66872cdf3a}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{classstd_1_1vector}{bytes}} $>$ {\bfseries raw\+\_\+trx}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_afad3c1a6bee3218feb74580bf6233098}\label{classaacio_1_1chain_1_1transaction__metadata_afad3c1a6bee3218feb74580bf6233098}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} $>$ {\bfseries decompressed\+\_\+trx}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a57bc867e8cb6058c039cd3214d0f70cf}\label{classaacio_1_1chain_1_1transaction__metadata_a57bc867e8cb6058c039cd3214d0f70cf}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{bytes}} $>$ {\bfseries context\+\_\+free\+\_\+data}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a989ee60664fc2edf66ca7e173ed312b2}\label{classaacio_1_1chain_1_1transaction__metadata_a989ee60664fc2edf66ca7e173ed312b2}} 
+\mbox{\hyperlink{classfc_1_1sha256}{digest\+\_\+type}} {\bfseries packed\+\_\+digest}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_aaca34e10d8114c538c4d36eef2a091c0}\label{classaacio_1_1chain_1_1transaction__metadata_aaca34e10d8114c538c4d36eef2a091c0}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ $>$ {\bfseries signing\+\_\+keys}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a7816b48d979866022c015bcebf7e00c1}\label{classaacio_1_1chain_1_1transaction__metadata_a7816b48d979866022c015bcebf7e00c1}} 
+\mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} {\bfseries id}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a1946ce8ad3fa12ebf1d33973eccc6372}\label{classaacio_1_1chain_1_1transaction__metadata_a1946ce8ad3fa12ebf1d33973eccc6372}} 
+uint32\+\_\+t {\bfseries region\+\_\+id} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a9fb97a3b4641b269ebc4ea1fd9f98dc4}\label{classaacio_1_1chain_1_1transaction__metadata_a9fb97a3b4641b269ebc4ea1fd9f98dc4}} 
+uint32\+\_\+t {\bfseries cycle\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a35aada6b83576ec9ce685365539efb42}\label{classaacio_1_1chain_1_1transaction__metadata_a35aada6b83576ec9ce685365539efb42}} 
+uint32\+\_\+t {\bfseries shard\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a409c81dc58da6d149a83b774f7de3615}\label{classaacio_1_1chain_1_1transaction__metadata_a409c81dc58da6d149a83b774f7de3615}} 
+uint32\+\_\+t {\bfseries billable\+\_\+packed\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_ae18bedc49f4d9a6192744352dcf5919f}\label{classaacio_1_1chain_1_1transaction__metadata_ae18bedc49f4d9a6192744352dcf5919f}} 
+uint32\+\_\+t {\bfseries signature\+\_\+count} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a0d8f3053a999922ab9c94cdcd69878fb}\label{classaacio_1_1chain_1_1transaction__metadata_a0d8f3053a999922ab9c94cdcd69878fb}} 
+\mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} {\bfseries published}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a8c48b8ac18dd8b1c2caae22f57a27dfe}\label{classaacio_1_1chain_1_1transaction__metadata_a8c48b8ac18dd8b1c2caae22f57a27dfe}} 
+\mbox{\hyperlink{classfc_1_1microseconds}{fc\+::microseconds}} {\bfseries delay}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a304d47be914be428a68f422ad23a2f47}\label{classaacio_1_1chain_1_1transaction__metadata_a304d47be914be428a68f422ad23a2f47}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$ {\bfseries sender}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_ab22776e69701b7e7c65cd90c2c22396b}\label{classaacio_1_1chain_1_1transaction__metadata_ab22776e69701b7e7c65cd90c2c22396b}} 
+uint128\+\_\+t {\bfseries sender\+\_\+id} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_ae85c3ab0f43648ae8573366659fe19fa}\label{classaacio_1_1chain_1_1transaction__metadata_ae85c3ab0f43648ae8573366659fe19fa}} 
+const char $\ast$ {\bfseries raw\+\_\+data} = nullptr
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a6cb9fee5c517464b981a4edef50c93be}\label{classaacio_1_1chain_1_1transaction__metadata_a6cb9fee5c517464b981a4edef50c93be}} 
+size\+\_\+t {\bfseries raw\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a115fa4fd227e7172759c1c612b4fe0af}\label{classaacio_1_1chain_1_1transaction__metadata_a115fa4fd227e7172759c1c612b4fe0af}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ char $>$ {\bfseries packed\+\_\+trx}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a1a34ff3c73b2740bf7ceb077b4418e35}\label{classaacio_1_1chain_1_1transaction__metadata_a1a34ff3c73b2740bf7ceb077b4418e35}} 
+bool {\bfseries is\+\_\+implicit} = false
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a41e662bd81a1861b2c332e345e8e086f}\label{classaacio_1_1chain_1_1transaction__metadata_a41e662bd81a1861b2c332e345e8e086f}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1shard__lock}{shard\+\_\+lock}} $>$ $\ast$ $>$ {\bfseries allowed\+\_\+read\+\_\+locks}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_ae38d363d68abd76b2bca985ada4dcd2f}\label{classaacio_1_1chain_1_1transaction__metadata_ae38d363d68abd76b2bca985ada4dcd2f}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1shard__lock}{shard\+\_\+lock}} $>$ $\ast$ $>$ {\bfseries allowed\+\_\+write\+\_\+locks}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1transaction__metadata_a641bb1e3fd6c47047901b83e3507c80f}\label{classaacio_1_1chain_1_1transaction__metadata_a641bb1e3fd6c47047901b83e3507c80f}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} $>$ {\bfseries processing\+\_\+deadline}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{transaction__metadata_8hpp}{transaction\+\_\+metadata.\+hpp}}\item 
+libraries/chain/transaction\+\_\+metadata.\+cpp\end{DoxyCompactItemize}

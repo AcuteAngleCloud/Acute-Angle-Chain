@@ -1,0 +1,100 @@
+.TH "fc::mutable_url" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::mutable_url
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <url\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmutable_url\fP (const string &\fBmutable_url\fP)"
+.br
+.ti -1c
+.RI "\fBmutable_url\fP (const \fBmutable_url\fP &c)"
+.br
+.ti -1c
+.RI "\fBmutable_url\fP (const \fBurl\fP &c)"
+.br
+.ti -1c
+.RI "\fBmutable_url\fP (\fBmutable_url\fP &&c)"
+.br
+.ti -1c
+.RI "\fBmutable_url\fP & \fBoperator=\fP (const \fBurl\fP &c)"
+.br
+.ti -1c
+.RI "\fBmutable_url\fP & \fBoperator=\fP (const \fBmutable_url\fP &c)"
+.br
+.ti -1c
+.RI "\fBmutable_url\fP & \fBoperator=\fP (\fBmutable_url\fP &&c)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBmutable_url\fP &cmp) const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBurl\fP &cmp) const"
+.br
+.ti -1c
+.RI "\fBoperator string\fP () const"
+.br
+.ti -1c
+.RI "string \fBproto\fP () const"
+.br
+.ti -1c
+.RI "\fBostring\fP \fBhost\fP () const"
+.br
+.ti -1c
+.RI "\fBostring\fP \fBuser\fP () const"
+.br
+.ti -1c
+.RI "\fBostring\fP \fBpass\fP () const"
+.br
+.ti -1c
+.RI "\fBopath\fP \fBpath\fP () const"
+.br
+.ti -1c
+.RI "\fBovariant_object\fP \fBargs\fP () const"
+.br
+.ti -1c
+.RI "\fBfc::optional\fP< uint16_t > \fBport\fP () const"
+.br
+.ti -1c
+.RI "void \fBset_proto\fP (string)"
+.br
+.ti -1c
+.RI "void \fBset_host\fP (string)"
+.br
+.ti -1c
+.RI "void \fBset_user\fP (string)"
+.br
+.ti -1c
+.RI "void \fBset_pass\fP (string)"
+.br
+.ti -1c
+.RI "void \fBset_path\fP (\fBfc::path\fP p)"
+.br
+.ti -1c
+.RI "void \fBset_args\fP (\fBvariant_object\fP)"
+.br
+.ti -1c
+.RI "void \fBset_port\fP (uint16_t)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBurl\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Used to create / manipulate a URL 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

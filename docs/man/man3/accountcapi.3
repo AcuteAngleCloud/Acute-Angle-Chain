@@ -1,0 +1,63 @@
+.TH "accountcapi" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+accountcapi \- \fBC\fP API for querying account data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBaccount_balance_get\fP (void *balance, uint32_t len)"
+.br
+.RI "Retrieve the balance for the provided account\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBC\fP API for querying account data\&. 
+
+
+.SH "Function Documentation"
+.PP 
+.SS "bool account_balance_get (void * balance, uint32_t len)"
+
+.PP
+Retrieve the balance for the provided account\&. Retrieve the balance for the provided account
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbalance\fP - a pointer to a range of memory to store balance data 
+.br
+\fIlen\fP - length of the range of memory to store balance data 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if account information is retrieved
+.RE
+.PP
+\fBPrecondition:\fP
+.RS 4
+data is a valid pointer to a range of memory at least datalen bytes long 
+.PP
+data is a pointer to a balance object 
+.PP
+*((uint64_t*)data) stores the primary key
+.RE
+.PP
+Example: 
+.PP
+.nf
+balance b;
+b\&.account = N(myaccount);
+balance(b, sizeof(balance));
+
+.fi
+.PP
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

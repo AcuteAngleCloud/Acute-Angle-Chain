@@ -1,0 +1,63 @@
+\hypertarget{struct_mergeable}{}\section{Mergeable Struct Reference}
+\label{struct_mergeable}\index{Mergeable@{Mergeable}}
+
+
+Inheritance diagram for Mergeable\+:
+% FIG 0
+
+
+Collaboration diagram for Mergeable\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a93dd8223ea551d88af9ac124c7d89a9b}\label{struct_mergeable_a93dd8223ea551d88af9ac124c7d89a9b}} 
+{\bfseries Mergeable} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&wasm)
+\item 
+\mbox{\Hypertarget{struct_mergeable_ac9bf6f4a19911b0176e2ea178e502ad0}\label{struct_mergeable_ac9bf6f4a19911b0176e2ea178e502ad0}} 
+void {\bfseries find\+Sizes} ()
+\item 
+\mbox{\Hypertarget{struct_mergeable_a9f6a1aefe038d485c9c8e52af411ea0f}\label{struct_mergeable_a9f6a1aefe038d485c9c8e52af411ea0f}} 
+void {\bfseries find\+Imports} ()
+\item 
+\mbox{\Hypertarget{struct_mergeable_aec5901ac708793e05ae967de87328e46}\label{struct_mergeable_aec5901ac708793e05ae967de87328e46}} 
+void {\bfseries standardize\+Segments} ()
+\item 
+\mbox{\Hypertarget{struct_mergeable_a920742152438f17006b4ca05258297c1}\label{struct_mergeable_a920742152438f17006b4ca05258297c1}} 
+\mbox{\hyperlink{structwasm_1_1_name}{Name}} {\bfseries get\+Non\+Colliding} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} initial, std\+::function$<$ bool(\mbox{\hyperlink{structwasm_1_1_name}{Name}})$>$ check\+If\+Collides)
+\item 
+\mbox{\Hypertarget{struct_mergeable_a8657651fa683a6d075909c0bb9e89aaf}\label{struct_mergeable_a8657651fa683a6d075909c0bb9e89aaf}} 
+{\footnotesize template$<$typename T , typename U , typename Segment $>$ }\\void {\bfseries standardize\+Segment} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&wasm, \mbox{\hyperlink{struct_t}{T}} \&what, Index size, \mbox{\hyperlink{union_u}{U}} zero, \mbox{\hyperlink{structwasm_1_1_name}{Name}} global\+Name)
+\item 
+\mbox{\Hypertarget{struct_mergeable_a13285620333569a0fb2b450d544abfa5}\label{struct_mergeable_a13285620333569a0fb2b450d544abfa5}} 
+{\footnotesize template$<$typename T , typename V $>$ }\\void {\bfseries copy\+Segment} (\mbox{\hyperlink{struct_t}{T}} \&output, \mbox{\hyperlink{struct_t}{T}} \&input, \mbox{\hyperlink{struct_v}{V}} updater)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a0e293a0156d470fe490801e710b693ca}\label{struct_mergeable_a0e293a0156d470fe490801e710b693ca}} 
+\mbox{\hyperlink{classwasm_1_1_module}{Module}} \& {\bfseries wasm}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a6a8c40422d102295c980e5fb1a1a0bd5}\label{struct_mergeable_a6a8c40422d102295c980e5fb1a1a0bd5}} 
+Index {\bfseries total\+Memory\+Size}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a9d8ff186914595503864eeb3eb2b3479}\label{struct_mergeable_a9d8ff186914595503864eeb3eb2b3479}} 
+Index {\bfseries total\+Table\+Size}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a398fa2032641cdbdbc9395f1e939d0fc}\label{struct_mergeable_a398fa2032641cdbdbc9395f1e939d0fc}} 
+\mbox{\hyperlink{classstd_1_1set}{std\+::set}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries memory\+Base\+Globals}
+\item 
+\mbox{\Hypertarget{struct_mergeable_aef20fdaa9da71bbca9deca4417c2aac9}\label{struct_mergeable_aef20fdaa9da71bbca9deca4417c2aac9}} 
+\mbox{\hyperlink{classstd_1_1set}{std\+::set}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries table\+Base\+Globals}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a0508d1bb057610fa839543bf208bfe95}\label{struct_mergeable_a0508d1bb057610fa839543bf208bfe95}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries implemented\+Function\+Imports}
+\item 
+\mbox{\Hypertarget{struct_mergeable_a1b5f4c830c25725724879c353f423733}\label{struct_mergeable_a1b5f4c830c25725724879c353f423733}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries implemented\+Global\+Imports}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/tools/wasm-\/merge.\+cpp\end{DoxyCompactItemize}

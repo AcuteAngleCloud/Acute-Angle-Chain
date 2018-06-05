@@ -1,0 +1,53 @@
+\hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl}{}\section{fc\+:\+:http\+:\+:detail\+:\+:websocket\+\_\+tls\+\_\+client\+\_\+impl Class Reference}
+\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl}\index{fc\+::http\+::detail\+::websocket\+\_\+tls\+\_\+client\+\_\+impl@{fc\+::http\+::detail\+::websocket\+\_\+tls\+\_\+client\+\_\+impl}}
+
+
+Collaboration diagram for fc\+:\+:http\+:\+:detail\+:\+:websocket\+\_\+tls\+\_\+client\+\_\+impl\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a92cd9944cd061141200d108b6020ab8e}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a92cd9944cd061141200d108b6020ab8e}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1endpoint_a585ecbbfd9689d4e4229e4c8378bd672}{websocket\+\_\+tls\+\_\+client\+\_\+type\+::message\+\_\+ptr}} {\bfseries message\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_aed4c72d05f0dfd750f76516211579ba6}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_aed4c72d05f0dfd750f76516211579ba6}} 
+{\bfseries websocket\+\_\+tls\+\_\+client\+\_\+impl} (const std\+::string \&ca\+\_\+filename)
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_ad396019c14bb8d6882fb30c72bdf9112}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_ad396019c14bb8d6882fb30c72bdf9112}} 
+std\+::string {\bfseries get\+\_\+host} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a9806cd2fbdbab221a844eab524c533a5}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a9806cd2fbdbab221a844eab524c533a5}} 
+void {\bfseries setup\+\_\+peer\+\_\+verify} (context\+\_\+ptr \&ctx, const std\+::string \&ca\+\_\+filename)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_ae2c0d2e4ffd3d5b64449a8f8d5cc35d0}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_ae2c0d2e4ffd3d5b64449a8f8d5cc35d0}} 
+bool {\bfseries \+\_\+shutting\+\_\+down} = false
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_ae7815208d5f22fd4494f9cfbd8705bbd}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_ae7815208d5f22fd4494f9cfbd8705bbd}} 
+void\+\_\+promise\+\_\+ptr {\bfseries \+\_\+connected}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a4cd42c4020f2d7bd87e3ac9caf2e405d}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a4cd42c4020f2d7bd87e3ac9caf2e405d}} 
+void\+\_\+promise\+\_\+ptr {\bfseries \+\_\+closed}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a60a3b8de912b561f798d3abe4c752c24}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a60a3b8de912b561f798d3abe4c752c24}} 
+fc\+::thread \& {\bfseries \+\_\+client\+\_\+thread}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a14fc7368d5de4b3f477ab65a1b0ab59b}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a14fc7368d5de4b3f477ab65a1b0ab59b}} 
+\mbox{\hyperlink{classwebsocketpp_1_1client}{websocket\+\_\+tls\+\_\+client\+\_\+type}} {\bfseries \+\_\+client}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_accd4597b62c76e49820585d387160a74}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_accd4597b62c76e49820585d387160a74}} 
+websocket\+\_\+connection\+\_\+ptr {\bfseries \+\_\+connection}
+\item 
+\mbox{\Hypertarget{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a94a10ebf9d1d8cda04c6ae4b2e687991}\label{classfc_1_1http_1_1detail_1_1websocket__tls__client__impl_a94a10ebf9d1d8cda04c6ae4b2e687991}} 
+std\+::string {\bfseries \+\_\+uri}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/src/network/http/websocket.\+cpp\end{DoxyCompactItemize}

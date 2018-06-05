@@ -1,0 +1,56 @@
+\hypertarget{classfc_1_1crypto_1_1public__key}{}\section{fc\+:\+:crypto\+:\+:public\+\_\+key Class Reference}
+\label{classfc_1_1crypto_1_1public__key}\index{fc\+::crypto\+::public\+\_\+key@{fc\+::crypto\+::public\+\_\+key}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a45196ba402e70048f9e805a519038b6f}\label{classfc_1_1crypto_1_1public__key_a45196ba402e70048f9e805a519038b6f}} 
+using {\bfseries storage\+\_\+type} = \mbox{\hyperlink{classfc_1_1static__variant}{static\+\_\+variant}}$<$ \mbox{\hyperlink{structfc_1_1ecc_1_1public__key__shim}{ecc\+::public\+\_\+key\+\_\+shim}}, \mbox{\hyperlink{structfc_1_1crypto_1_1r1_1_1public__key__shim}{r1\+::public\+\_\+key\+\_\+shim}} $>$
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a5385137e6d97351a2ac617c39d2776ce}\label{classfc_1_1crypto_1_1public__key_a5385137e6d97351a2ac617c39d2776ce}} 
+{\bfseries public\+\_\+key} (\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\&)=default
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a2e7deb272ee68924b25fc8bd9beb84f5}\label{classfc_1_1crypto_1_1public__key_a2e7deb272ee68924b25fc8bd9beb84f5}} 
+{\bfseries public\+\_\+key} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&)=default
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a27607463501ce74e2c610cf7bf5b1537}\label{classfc_1_1crypto_1_1public__key_a27607463501ce74e2c610cf7bf5b1537}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&)=default
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a89204089b54b5e1a364250809b6325ee}\label{classfc_1_1crypto_1_1public__key_a89204089b54b5e1a364250809b6325ee}} 
+{\bfseries public\+\_\+key} (const \mbox{\hyperlink{classfc_1_1crypto_1_1signature}{signature}} \&c, const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&digest, bool check\+\_\+canonical=true)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_af79fc7adbc6d4df77b422baf5df600aa}\label{classfc_1_1crypto_1_1public__key_af79fc7adbc6d4df77b422baf5df600aa}} 
+{\bfseries public\+\_\+key} (const string \&base58str)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a17ffa06020981f2ea30e7548284803ff}\label{classfc_1_1crypto_1_1public__key_a17ffa06020981f2ea30e7548284803ff}} 
+{\bfseries operator string} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a73f52d17b21a2cceeaa795c6e3d66e30}\label{classfc_1_1crypto_1_1public__key_a73f52d17b21a2cceeaa795c6e3d66e30}} 
+struct {\bfseries reflector$<$ public\+\_\+key $>$}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_ae1389c6c19ec8630ce31970de2294915}\label{classfc_1_1crypto_1_1public__key_ae1389c6c19ec8630ce31970de2294915}} 
+class {\bfseries private\+\_\+key}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_afe8fd93cba1d82855efdfe2e1cc54715}\label{classfc_1_1crypto_1_1public__key_afe8fd93cba1d82855efdfe2e1cc54715}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&s, const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&k)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a9e3e72a0ad06ab3eebc34739777fbcde}\label{classfc_1_1crypto_1_1public__key_a9e3e72a0ad06ab3eebc34739777fbcde}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{classp1}{p1}}, const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{classp2}{p2}})
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a4f510cf56ab9b2e6806b266f5f08d606}\label{classfc_1_1crypto_1_1public__key_a4f510cf56ab9b2e6806b266f5f08d606}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{classp1}{p1}}, const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{classp2}{p2}})
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1public__key_a848bb1108ea177af5820d7ee3c1a71e3}\label{classfc_1_1crypto_1_1public__key_a848bb1108ea177af5820d7ee3c1a71e3}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{classp1}{p1}}, const \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key}} \&\mbox{\hyperlink{classp2}{p2}})
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/crypto/public\+\_\+key.\+hpp\item 
+libraries/fc/src/crypto/public\+\_\+key.\+cpp\end{DoxyCompactItemize}

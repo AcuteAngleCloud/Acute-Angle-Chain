@@ -1,0 +1,116 @@
+\hypertarget{txn__test__gen__plugin_8cpp}{}\section{plugins/txn\+\_\+test\+\_\+gen\+\_\+plugin/txn\+\_\+test\+\_\+gen\+\_\+plugin.cpp File Reference}
+\label{txn__test__gen__plugin_8cpp}\index{plugins/txn\+\_\+test\+\_\+gen\+\_\+plugin/txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{plugins/txn\+\_\+test\+\_\+gen\+\_\+plugin/txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}}
+{\ttfamily \#include $<$aacio/txn\+\_\+test\+\_\+gen\+\_\+plugin/txn\+\_\+test\+\_\+gen\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain\+\_\+plugin/chain\+\_\+plugin.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/wast\+\_\+to\+\_\+wasm.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/utilities/key\+\_\+conversion.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/io/json.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/exception/exception.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/reflect/variant.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/asio/high\+\_\+resolution\+\_\+timer.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/algorithm/clamp.\+hpp$>$}\newline
+{\ttfamily \#include $<$Inline/\+Basic\+Types.\+h$>$}\newline
+{\ttfamily \#include $<$I\+R/\+Module.\+h$>$}\newline
+{\ttfamily \#include $<$I\+R/\+Validate.\+h$>$}\newline
+{\ttfamily \#include $<$W\+A\+S\+T/\+W\+A\+S\+T.\+h$>$}\newline
+{\ttfamily \#include $<$W\+A\+S\+M/\+W\+A\+S\+M.\+h$>$}\newline
+{\ttfamily \#include $<$Runtime/\+Runtime.\+h$>$}\newline
+{\ttfamily \#include $<$currency/currency.\+wast.\+hpp$>$}\newline
+{\ttfamily \#include $<$currency/currency.\+abi.\+hpp$>$}\newline
+Include dependency graph for txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1detail_1_1txn__test__gen__empty}{aacio\+::detail\+::txn\+\_\+test\+\_\+gen\+\_\+empty}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1txn__test__gen__plugin__impl}{aacio\+::txn\+\_\+test\+\_\+gen\+\_\+plugin\+\_\+impl}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries C\+A\+LL}(api\+\_\+name,  api\+\_\+handle,  call\+\_\+name,  I\+N\+V\+O\+KE,  http\+\_\+response\+\_\+code)
+\item 
+\#define {\bfseries I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R}(api\+\_\+handle,  call\+\_\+name,  in\+\_\+param0,  in\+\_\+param1,  in\+\_\+param2)
+\item 
+\#define {\bfseries I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R}(api\+\_\+handle,  call\+\_\+name,  in\+\_\+param0,  in\+\_\+param1)
+\item 
+\#define {\bfseries I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V}(api\+\_\+handle,  call\+\_\+name)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{txn__test__gen__plugin_8cpp_ac808b26478d61435d6d2f41f6a7ea348}\label{txn__test__gen__plugin_8cpp_ac808b26478d61435d6d2f41f6a7ea348}} 
+{\bfseries F\+C\+\_\+\+R\+E\+F\+L\+E\+CT} (\mbox{\hyperlink{structaacio_1_1detail_1_1txn__test__gen__empty}{aacio\+::detail\+::txn\+\_\+test\+\_\+gen\+\_\+empty}},)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{txn__test__gen__plugin_8cpp_a7f59ca44c6b0f45ca526a8c86a477d4a}\label{txn__test__gen__plugin_8cpp_a7f59ca44c6b0f45ca526a8c86a477d4a}} 
+\index{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}!C\+A\+LL@{C\+A\+LL}}
+\index{C\+A\+LL@{C\+A\+LL}!txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}}
+\subsubsection{\texorpdfstring{C\+A\+LL}{CALL}}
+{\footnotesize\ttfamily \#define C\+A\+LL(\begin{DoxyParamCaption}\item[{}]{api\+\_\+name,  }\item[{}]{api\+\_\+handle,  }\item[{}]{call\+\_\+name,  }\item[{}]{I\+N\+V\+O\+KE,  }\item[{}]{http\+\_\+response\+\_\+code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{std::string(\textcolor{stringliteral}{"/v1/"} #api\_name \textcolor{stringliteral}{"/"} #call\_name), \(\backslash\)
+   [\textcolor{keyword}{this}](string, \textcolor{keywordtype}{string} body, \mbox{\hyperlink{http__plugin_8hpp_ab73acbc9859e5861e07d38d682fea6ff}{url\_response\_callback}} cb) \textcolor{keyword}{mutable} \{ \(\backslash\)
+          try \{ \(\backslash\)
+             if (body.empty()) body = \textcolor{stringliteral}{"\{\}"}; \(\backslash\)
+             INVOKE \(\backslash\)
+             cb(http\_response\_code, fc::json::to\_string(result)); \(\backslash\)
+          \} \textcolor{keywordflow}{catch} (fc::eof\_exception& e) \{ \(\backslash\)
+             error\_results results\{400, \textcolor{stringliteral}{"Bad Request"}, e\}; \(\backslash\)
+             cb(400, fc::json::to\_string(results)); \(\backslash\)
+             elog(\textcolor{stringliteral}{"Unable to parse arguments: $\{args\}"}, (\textcolor{stringliteral}{"args"}, body)); \(\backslash\)
+          \} \textcolor{keywordflow}{catch} (\mbox{\hyperlink{classfc_1_1exception}{fc::exception}}& e) \{ \(\backslash\)
+             error\_results results\{500, \textcolor{stringliteral}{"Internal Service Error"}, e\}; \(\backslash\)
+             cb(500, fc::json::to\_string(results)); \(\backslash\)
+             elog(\textcolor{stringliteral}{"Exception encountered while processing $\{call\}: $\{e\}"}, (\textcolor{stringliteral}{"call"}, #api\_name \textcolor{stringliteral}{"."} #call\_name
+      )(\textcolor{stringliteral}{"e"}, e)); \(\backslash\)
+          \} \(\backslash\)
+       \}\}
+\end{DoxyCode}
+\mbox{\Hypertarget{txn__test__gen__plugin_8cpp_a653b6a13b0cc13bed8565f0d19aa8e03}\label{txn__test__gen__plugin_8cpp_a653b6a13b0cc13bed8565f0d19aa8e03}} 
+\index{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}!I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R@{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R}}
+\index{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R@{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R}!txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R}{INVOKE\_V\_R\_R}}
+{\footnotesize\ttfamily \#define I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+R(\begin{DoxyParamCaption}\item[{}]{api\+\_\+handle,  }\item[{}]{call\+\_\+name,  }\item[{}]{in\+\_\+param0,  }\item[{}]{in\+\_\+param1 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{const} \textcolor{keyword}{auto}& vs = fc::json::json::from\_string(body).as<\mbox{\hyperlink{classstd_1_1vector}{fc::variants}}>(); \(\backslash\)
+     api\_handle->call\_name(vs.at(0).as<in\_param0>(), vs.at(1).as<in\_param1>()); \(\backslash\)
+     aacio::detail::txn\_test\_gen\_empty result;
+\end{DoxyCode}
+\mbox{\Hypertarget{txn__test__gen__plugin_8cpp_a0e00cd8085030cd38c1fd93a92ea8e7a}\label{txn__test__gen__plugin_8cpp_a0e00cd8085030cd38c1fd93a92ea8e7a}} 
+\index{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}!I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R@{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R}}
+\index{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R@{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R}!txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R}{INVOKE\_V\_R\_R\_R}}
+{\footnotesize\ttfamily \#define I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+\+R\+\_\+\+R\+\_\+R(\begin{DoxyParamCaption}\item[{}]{api\+\_\+handle,  }\item[{}]{call\+\_\+name,  }\item[{}]{in\+\_\+param0,  }\item[{}]{in\+\_\+param1,  }\item[{}]{in\+\_\+param2 }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{const} \textcolor{keyword}{auto}& vs = fc::json::json::from\_string(body).as<\mbox{\hyperlink{classstd_1_1vector}{fc::variants}}>(); \(\backslash\)
+     api\_handle->call\_name(vs.at(0).as<in\_param0>(), vs.at(1).as<in\_param1>(), vs.at(2).as<in\_param2>()); \(\backslash\)
+     aacio::detail::txn\_test\_gen\_empty result;
+\end{DoxyCode}
+\mbox{\Hypertarget{txn__test__gen__plugin_8cpp_a54f8b56aff9e470dbebbddd544256b8f}\label{txn__test__gen__plugin_8cpp_a54f8b56aff9e470dbebbddd544256b8f}} 
+\index{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}!I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V@{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V}}
+\index{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V@{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V}!txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp@{txn\+\_\+test\+\_\+gen\+\_\+plugin.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V}{INVOKE\_V\_V}}
+{\footnotesize\ttfamily \#define I\+N\+V\+O\+K\+E\+\_\+\+V\+\_\+V(\begin{DoxyParamCaption}\item[{}]{api\+\_\+handle,  }\item[{}]{call\+\_\+name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+api\_handle->call\_name(); \(\backslash\)
+     aacio::detail::txn\_test\_gen\_empty result;
+\end{DoxyCode}

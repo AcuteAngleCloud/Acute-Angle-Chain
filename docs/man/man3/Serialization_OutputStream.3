@@ -1,0 +1,48 @@
+.TH "Serialization::OutputStream" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Serialization::OutputStream
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBSerialization::ArrayOutputStream\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBisInput\fP = false }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Uptr \fBcapacity\fP () const"
+.br
+.ti -1c
+.RI "U8 * \fBadvance\fP (Uptr numBytes)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBextendBuffer\fP (Uptr numBytes)=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "U8 * \fBnext\fP"
+.br
+.ti -1c
+.RI "U8 * \fBend\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

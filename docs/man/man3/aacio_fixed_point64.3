@@ -1,0 +1,144 @@
+.TH "aacio::fixed_point64< Q >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::fixed_point64< Q > \- 64 bits representation of Fixed Point class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <fixedpoint\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBfixed_point64\fP (int64_t v=0)"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP (const \fBfixed_point64\fP< QR > &r)"
+.br
+.RI "Can create \fBfixed_point64\fP instance from int64_t, \fBfixed_point64\fP,32 instances\&. "
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP (const \fBfixed_point32\fP< QR > &r)"
+.br
+.ti -1c
+.RI "int64_t \fBint_part\fP () const"
+.br
+.RI "To get the integer part of the fixed number\&. "
+.ti -1c
+.RI "uint64_t \fBfrac_part\fP () const"
+.br
+.RI "To get the decimal part of the fixed number\&. "
+.ti -1c
+.RI "void \fBprint\fP () const"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP & \fBoperator=\fP (const \fBfixed_point32\fP< QR > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP & \fBoperator=\fP (const \fBfixed_point64\fP< QR > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP<(Q >QR)?Q:QR > \fBoperator+\fP (const \fBfixed_point64\fP< QR > &r) const"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP<(Q >QR)?Q:QR > \fBoperator\-\fP (const \fBfixed_point64\fP< QR > &r) const"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point128\fP< Q+QR > \fBoperator*\fP (const \fBfixed_point64\fP< QR > &r) const"
+.br
+.RI "Multiplication operator for \fBfixed_point64\fP\&. The result goes to \fBfixed_point64\fP\&. "
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point128\fP< Q+64\-QR > \fBoperator/\fP (const \fBfixed_point64\fP< QR > &r) const"
+.br
+.RI "Division of two \fBfixed_point64\fP result will be stored in \fBfixed_point128\fP\&. "
+.ti -1c
+.RI "template<uint8_t QR> bool \fBoperator==\fP (const \fBfixed_point64\fP< QR > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t QR> bool \fBoperator>\fP (const \fBfixed_point64\fP< QR > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t QR> bool \fBoperator<\fP (const \fBfixed_point64\fP< QR > &r)"
+.br
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP<(Q >QR)?Q:QR > \fBoperator+\fP (const \fBfixed_point64\fP< QR > &rhs) const"
+.br
+.RI "Addition between two \fBfixed_point64\fP variables and the result goes to \fBfixed_point64\fP\&. "
+.ti -1c
+.RI "template<uint8_t QR> \fBfixed_point64\fP<(Q >QR)?Q:QR > \fBoperator\-\fP (const \fBfixed_point64\fP< QR > &rhs) const"
+.br
+.RI "Subtraction between two \fBfixed_point64\fP variables and the result goes to \fBfixed_point64\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int64_t \fBval\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<uint8_t Q>
+.br
+struct aacio::fixed_point64< Q >"
+64 bits representation of Fixed Point class\&. 
+
+Example: 
+.PP
+.nf
+fixed_point64<6> a(123232\&.455667233)
+fixed_point64<0> a(123424)
+fixed_point64<18> c = a*b;
+fixed_point64<24> d = a+b+c;
+fixed_point64<24> e = b/a;
+
+.fi
+.PP
+ 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<uint8_t Q> uint64_t \fBaacio::fixed_point64\fP< Q >::frac_part () const\fC [inline]\fP"
+
+.PP
+To get the decimal part of the fixed number\&. Get the decimal part of the 64 bit fixed number 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns decimal part of the fixed number
+.RE
+.PP
+Example: 
+.PP
+.nf
+fixed64<3> a(1234\&.455667)
+std::cout << a\&.decimal_part(); // Output: 455
+
+.fi
+.PP
+ 
+.SS "template<uint8_t Q> int64_t \fBaacio::fixed_point64\fP< Q >::int_part () const\fC [inline]\fP"
+
+.PP
+To get the integer part of the fixed number\&. Get the integer part of the 64 bit fixed number 
+.PP
+\fBReturns:\fP
+.RS 4
+Returns integer part of the fixed number
+.RE
+.PP
+Example: 
+.PP
+.nf
+fixed_point64<18> a(1234\&.455667)
+std::cout << a\&.int_part(); // Output: 1234
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

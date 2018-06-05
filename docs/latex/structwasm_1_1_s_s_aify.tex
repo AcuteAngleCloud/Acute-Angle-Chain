@@ -1,0 +1,127 @@
+\hypertarget{structwasm_1_1_s_s_aify}{}\section{wasm\+:\+:S\+S\+Aify Struct Reference}
+\label{structwasm_1_1_s_s_aify}\index{wasm\+::\+S\+S\+Aify@{wasm\+::\+S\+S\+Aify}}
+
+
+Inheritance diagram for wasm\+:\+:S\+S\+Aify\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:S\+S\+Aify\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a5dacadd6423b1c3acc5c5d3a17b6ab1f}\label{structwasm_1_1_s_s_aify_a5dacadd6423b1c3acc5c5d3a17b6ab1f}} 
+typedef \mbox{\hyperlink{classstd_1_1set}{std\+::set}}$<$ \mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$ $>$ {\bfseries Sets}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a52295ebe47ecee438aceae57f6dbb3dd}\label{structwasm_1_1_s_s_aify_a52295ebe47ecee438aceae57f6dbb3dd}} 
+typedef \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classstd_1_1set}{Sets}} $>$ {\bfseries Mapping}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_abdb7c60089f8681803819f31cf24452a}\label{structwasm_1_1_s_s_aify_abdb7c60089f8681803819f31cf24452a}} 
+bool {\bfseries is\+Function\+Parallel} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a170445e7febda732769ef955a3aa59ac}\label{structwasm_1_1_s_s_aify_a170445e7febda732769ef955a3aa59ac}} 
+\mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$ {\bfseries create} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_ac724133bcc65827e99679474ec91b364}\label{structwasm_1_1_s_s_aify_ac724133bcc65827e99679474ec91b364}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_aee07b212557c3060c123bef301ee9f24}\label{structwasm_1_1_s_s_aify_aee07b212557c3060c123bef301ee9f24}} 
+void {\bfseries visit\+Block} (\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a9b112ef3762fedae85a0fab4fd399942}\label{structwasm_1_1_s_s_aify_a9b112ef3762fedae85a0fab4fd399942}} 
+void {\bfseries finish\+If} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a13f275b45dc208e0f77f8c45d0694968}\label{structwasm_1_1_s_s_aify_a13f275b45dc208e0f77f8c45d0694968}} 
+void {\bfseries visit\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a2d9c06fb6ce4faeaca9efff04bfed00f}\label{structwasm_1_1_s_s_aify_a2d9c06fb6ce4faeaca9efff04bfed00f}} 
+void {\bfseries visit\+Break} (\mbox{\hyperlink{classwasm_1_1_break}{Break}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a408fe937a8090445de0a828b7b6e441e}\label{structwasm_1_1_s_s_aify_a408fe937a8090445de0a828b7b6e441e}} 
+void {\bfseries visit\+Switch} (\mbox{\hyperlink{classwasm_1_1_switch}{Switch}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a1ae445236c51de007074fcaa61a17573}\label{structwasm_1_1_s_s_aify_a1ae445236c51de007074fcaa61a17573}} 
+void {\bfseries visit\+Return} (\mbox{\hyperlink{classwasm_1_1_return}{Return}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a284a35097a6bbeebb525e1c34542531f}\label{structwasm_1_1_s_s_aify_a284a35097a6bbeebb525e1c34542531f}} 
+void {\bfseries visit\+Unreachable} (\mbox{\hyperlink{classwasm_1_1_unreachable}{Unreachable}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_ac2409dad1ba05019b44c6e3b284bbc7c}\label{structwasm_1_1_s_s_aify_ac2409dad1ba05019b44c6e3b284bbc7c}} 
+void {\bfseries visit\+Get\+Local} (\mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a3a6d71e511472b4e9888f9fbb4150d88}\label{structwasm_1_1_s_s_aify_a3a6d71e511472b4e9888f9fbb4150d88}} 
+void {\bfseries visit\+Set\+Local} (\mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_ad8979065965253e49758b0642ea64be6}\label{structwasm_1_1_s_s_aify_ad8979065965253e49758b0642ea64be6}} 
+void {\bfseries set\+Unreachable} (\mbox{\hyperlink{classstd_1_1vector}{Mapping}} \&mapping)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_af834f52dce6138b3fdf3720dcc9e8f98}\label{structwasm_1_1_s_s_aify_af834f52dce6138b3fdf3720dcc9e8f98}} 
+bool {\bfseries is\+Unreachable} (\mbox{\hyperlink{classstd_1_1vector}{Mapping}} \&mapping)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a4ca5212d71d0d537a220905fc4089e97}\label{structwasm_1_1_s_s_aify_a4ca5212d71d0d537a220905fc4089e97}} 
+\mbox{\hyperlink{classstd_1_1vector}{Mapping}} \& {\bfseries merge} (\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{Mapping}} $>$ \&mappings)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_aa61f61f9d4e49d1b1a13faa21f8d75ca}\label{structwasm_1_1_s_s_aify_aa61f61f9d4e49d1b1a13faa21f8d75ca}} 
+void {\bfseries compute\+Gets\+And\+Phis} ()
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a5c3fcf7d50c3a22b903bb534f81adcf4}\label{structwasm_1_1_s_s_aify_a5c3fcf7d50c3a22b903bb534f81adcf4}} 
+Index {\bfseries add\+Local} (Wasm\+Type type)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a3f1369c6324dcaf9d56254b32e04a3ab}\label{structwasm_1_1_s_s_aify_a3f1369c6324dcaf9d56254b32e04a3ab}} 
+static void {\bfseries after\+If\+Condition} (\mbox{\hyperlink{structwasm_1_1_s_s_aify}{S\+S\+Aify}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a58898ead766568abb5106232ac398ca6}\label{structwasm_1_1_s_s_aify_a58898ead766568abb5106232ac398ca6}} 
+static void {\bfseries after\+If\+True} (\mbox{\hyperlink{structwasm_1_1_s_s_aify}{S\+S\+Aify}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a5403815ddfe27e730dd6c4bcadef59a2}\label{structwasm_1_1_s_s_aify_a5403815ddfe27e730dd6c4bcadef59a2}} 
+static void {\bfseries after\+If\+False} (\mbox{\hyperlink{structwasm_1_1_s_s_aify}{S\+S\+Aify}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_accce6b5c96578e2a8cb5cbb89ff9ddf3}\label{structwasm_1_1_s_s_aify_accce6b5c96578e2a8cb5cbb89ff9ddf3}} 
+static void {\bfseries before\+Loop} (\mbox{\hyperlink{structwasm_1_1_s_s_aify}{S\+S\+Aify}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_add251b4b8e5fcfa1519e522cbf88ffe1}\label{structwasm_1_1_s_s_aify_add251b4b8e5fcfa1519e522cbf88ffe1}} 
+static void {\bfseries scan} (\mbox{\hyperlink{structwasm_1_1_s_s_aify}{S\+S\+Aify}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_aa7a2e783c3a12463a9ae7de803f9b9d3}\label{structwasm_1_1_s_s_aify_aa7a2e783c3a12463a9ae7de803f9b9d3}} 
+Index {\bfseries num\+Locals}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a0069a9b280f31ab8df6bb39e45782e76}\label{structwasm_1_1_s_s_aify_a0069a9b280f31ab8df6bb39e45782e76}} 
+\mbox{\hyperlink{classstd_1_1vector}{Mapping}} {\bfseries curr\+Mapping}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a1c64d132fd5306b0bc610ea0817bdfbd}\label{structwasm_1_1_s_s_aify_a1c64d132fd5306b0bc610ea0817bdfbd}} 
+Index {\bfseries next\+Index}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a15b945f8b25c19f331d7cdedfa816721}\label{structwasm_1_1_s_s_aify_a15b945f8b25c19f331d7cdedfa816721}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{Mapping}} $>$ {\bfseries mapping\+Stack}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a461bf1d429340295c22e5775569e0522}\label{structwasm_1_1_s_s_aify_a461bf1d429340295c22e5775569e0522}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}}, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{Mapping}} $>$ $>$ {\bfseries break\+Mappings}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_af866100bc29a88acd6a872fabdd4d9ba}\label{structwasm_1_1_s_s_aify_af866100bc29a88acd6a872fabdd4d9ba}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$ $>$ $>$ {\bfseries loop\+Get\+Stack}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_aca39106decdbeeb8f36cc22819df48d2}\label{structwasm_1_1_s_s_aify_aca39106decdbeeb8f36cc22819df48d2}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ $>$ {\bfseries function\+Prepends}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a187f5b1a1f4cf9d2bc16a43c11e3c341}\label{structwasm_1_1_s_s_aify_a187f5b1a1f4cf9d2bc16a43c11e3c341}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$, \mbox{\hyperlink{classstd_1_1set}{Sets}} $>$ {\bfseries get\+Setses}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_s_s_aify_a730acdfd5d83c94c4336d4e3a3ef6f3a}\label{structwasm_1_1_s_s_aify_a730acdfd5d83c94c4336d4e3a3ef6f3a}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{classwasm_1_1_get_local}{Get\+Local}} $\ast$, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$ $>$ {\bfseries get\+Locations}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/passes/S\+S\+Aify.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,51 @@
+.TH "aacio::chain::array_ptr< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::array_ptr< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <common\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBarray_ptr\fP (\fBT\fP *value)"
+.br
+.ti -1c
+.RI "std::add_lvalue_reference< \fBT\fP >::type \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBoperator\->\fP () const noexcept"
+.br
+.ti -1c
+.RI "template<typename U > \fBoperator U*\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBT\fP * \fBvalue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+struct aacio::chain::array_ptr< T >"
+class to represent an in-wasm-memory array it is a hint to the transcriber that the next parameter will be a size (data bytes length) and that the pair are validated together This triggers the template specialization of intrinsic_invoker_impl 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fI\fBT\fP\fP 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,85 @@
+
+
+An offline A\+AC key utility built with nodejs and Electron. This utility does two things\+:
+
+
+\begin{DoxyItemize}
+\item Generate a valid A\+AC keypair
+\item Validate an existing A\+AC keypair
+\end{DoxyItemize}
+
+This tool is experimental and downloadable executables are not yet available.
+
+\subsection*{Status}
+
+
+\begin{DoxyItemize}
+\item Mac\+OS -\/ Tested, Functional
+\item Windows -\/ Untested
+\item Linux -\/ Untested
+\end{DoxyItemize}
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyItemize}
+\item Nodejs \& npm
+\end{DoxyItemize}
+
+\subsection*{Building Executables Yourself}
+
+Clone the repo
+
+
+\begin{DoxyCode}
+git clone https://github.com/AACIO/genesis.git
+\end{DoxyCode}
+
+
+Navigate to keys directory
+
+
+\begin{DoxyCode}
+cd genesis/tools/keys
+\end{DoxyCode}
+
+
+Install dependencies 
+\begin{DoxyCode}
+npm install
+\end{DoxyCode}
+
+
+{\bfseries Method one\+:} Launch project with Electron
+
+
+\begin{DoxyCode}
+npm install -g electron
+electron .
+\end{DoxyCode}
+
+
+{\bfseries Method \mbox{\hyperlink{struct_two}{Two}}\+:} Compile the project Electron package Manager
+
+
+\begin{DoxyCode}
+npm install -g electron-packager
+npm run compile
+\end{DoxyCode}
+
+
+You\textquotesingle{}ll now find a {\bfseries build} directory in the project root, where you can find an executable for your system.
+
+\subsection*{Compile for all Platforms}
+
+\subsubsection*{Building for All Platforms}
+
+{\bfseries Will only compile for all platforms on a mac}
+
+{\itshape If running on a mac, you\textquotesingle{}ll need to install xquartz and wine, easiest is through homebrew}
+
+
+\begin{DoxyCode}
+npm run compile-all
+\end{DoxyCode}
+ 

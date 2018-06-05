@@ -1,0 +1,165 @@
+\hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{}\section{websocketpp\+:\+:transport\+:\+:debug\+:\+:endpoint$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}\index{websocketpp\+::transport\+::debug\+::endpoint$<$ config $>$@{websocketpp\+::transport\+::debug\+::endpoint$<$ config $>$}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ad8bdfc73f0351c08dbe64143cd224ac0}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ad8bdfc73f0351c08dbe64143cd224ac0}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{endpoint}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ad8bdfc73f0351c08dbe64143cd224ac0}{type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of this endpoint transport component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a947f3252f16c34680638f0ed9ef95aa3}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a947f3252f16c34680638f0ed9ef95aa3}} 
+typedef lib\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ad8bdfc73f0351c08dbe64143cd224ac0}{type}} $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a947f3252f16c34680638f0ed9ef95aa3}{ptr}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of a pointer to this endpoint transport component. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_adbe41c60a84f148cbdce15a0535ac2e9}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_adbe41c60a84f148cbdce15a0535ac2e9}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1concurrency_1_1none}{config\+::concurrency\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_adbe41c60a84f148cbdce15a0535ac2e9}{concurrency\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of this endpoint\textquotesingle{}s concurrency policy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a3616bf82ba2a1026fad9de8145bd9375}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a3616bf82ba2a1026fad9de8145bd9375}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::elog\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a3616bf82ba2a1026fad9de8145bd9375}{elog\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of this endpoint\textquotesingle{}s error logging policy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab2b8a06c2ba2a9ae26def00aefcbc930}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab2b8a06c2ba2a9ae26def00aefcbc930}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1log_1_1stub}{config\+::alog\+\_\+type}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab2b8a06c2ba2a9ae26def00aefcbc930}{alog\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_type}{Type}} of this endpoint\textquotesingle{}s access logging policy. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection}{debug\+::connection}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a267bc670b0cecf80aa39ee266785e9ba}{transport\+\_\+con\+\_\+type}}
+\item 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a40631f93557c3308c2c8c7897e6a4825}{transport\+\_\+con\+\_\+type\+::ptr}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}{transport\+\_\+con\+\_\+ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_aa93a1b98a940de00aadd784b3c058aa6}{set\+\_\+secure}} (bool)
+\begin{DoxyCompactList}\small\item\em Set whether or not endpoint can create secure connections. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a5d9e2b3f36fda6cfbc7b2a8c514ccaa2}{is\+\_\+secure}} () const
+\begin{DoxyCompactList}\small\item\em Tests whether or not the underlying transport is secure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a548d0865fa00469d9ab78daa9ad25c3a}{init\+\_\+logging}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab2b8a06c2ba2a9ae26def00aefcbc930}{alog\+\_\+type}} $\ast$, \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a3616bf82ba2a1026fad9de8145bd9375}{elog\+\_\+type}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Initialize logging. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a8b5c3265ebf3bf68af57f2d770950edb}{async\+\_\+connect}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}{transport\+\_\+con\+\_\+ptr}}, \mbox{\hyperlink{namespacewebsocketpp_aae370ea5ac83a8ece7712cb39fc23f5b}{uri\+\_\+ptr}}, \mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}} cb)
+\begin{DoxyCompactList}\small\item\em Initiate a new connection. \end{DoxyCompactList}\item 
+lib\+::error\+\_\+code \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a23affe0618e70a665369fe273f2b534b}{init}} (\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}{transport\+\_\+con\+\_\+ptr}})
+\begin{DoxyCompactList}\small\item\em Initialize a connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!transport\+\_\+con\+\_\+ptr@{transport\+\_\+con\+\_\+ptr}}
+\index{transport\+\_\+con\+\_\+ptr@{transport\+\_\+con\+\_\+ptr}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{transport\+\_\+con\+\_\+ptr}{transport\_con\_ptr}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection_a40631f93557c3308c2c8c7897e6a4825}{transport\+\_\+con\+\_\+type\+::ptr}} \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}{transport\+\_\+con\+\_\+ptr}}}
+
+\mbox{\hyperlink{struct_type}{Type}} of a shared pointer to this endpoint transport component\textquotesingle{}s associated connection transport component \mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a267bc670b0cecf80aa39ee266785e9ba}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a267bc670b0cecf80aa39ee266785e9ba}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!transport\+\_\+con\+\_\+type@{transport\+\_\+con\+\_\+type}}
+\index{transport\+\_\+con\+\_\+type@{transport\+\_\+con\+\_\+type}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{transport\+\_\+con\+\_\+type}{transport\_con\_type}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+typedef \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1connection}{debug\+::connection}}$<$\mbox{\hyperlink{classconfig}{config}}$>$ \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a267bc670b0cecf80aa39ee266785e9ba}{transport\+\_\+con\+\_\+type}}}
+
+\mbox{\hyperlink{struct_type}{Type}} of this endpoint transport component\textquotesingle{}s associated connection transport component. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a8b5c3265ebf3bf68af57f2d770950edb}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a8b5c3265ebf3bf68af57f2d770950edb}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!async\+\_\+connect@{async\+\_\+connect}}
+\index{async\+\_\+connect@{async\+\_\+connect}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{async\+\_\+connect()}{async\_connect()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::async\+\_\+connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}{transport\+\_\+con\+\_\+ptr}}}]{,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_aae370ea5ac83a8ece7712cb39fc23f5b}{uri\+\_\+ptr}}}]{,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1transport_ac392fca34e946b48414278c0c3addfa5}{connect\+\_\+handler}}}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initiate a new connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcon} & \mbox{\hyperlink{struct_a}{A}} pointer to the transport connection component of the connection to connect. \\
+\hline
+{\em u} & \mbox{\hyperlink{struct_a}{A}} U\+RI pointer to the U\+RI to connect to. \\
+\hline
+{\em cb} & The function to call back with the results when complete. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a23affe0618e70a665369fe273f2b534b}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a23affe0618e70a665369fe273f2b534b}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!init@{init}}
+\index{init@{init}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+lib\+::error\+\_\+code \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab261a090fca072aea9b5dba04aba4c6d}{transport\+\_\+con\+\_\+ptr}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initialize a connection. 
+
+Init is called by an endpoint once for each newly created connection. It\textquotesingle{}s purpose is to give the transport policy the chance to perform any transport specific initialization that couldn\textquotesingle{}t be done via the default constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tcon} & \mbox{\hyperlink{struct_a}{A}} pointer to the transport portion of the connection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} status code indicating the success or failure of the operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a548d0865fa00469d9ab78daa9ad25c3a}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a548d0865fa00469d9ab78daa9ad25c3a}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!init\+\_\+logging@{init\+\_\+logging}}
+\index{init\+\_\+logging@{init\+\_\+logging}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{init\+\_\+logging()}{init\_logging()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::init\+\_\+logging (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_ab2b8a06c2ba2a9ae26def00aefcbc930}{alog\+\_\+type}} $\ast$}]{,  }\item[{\mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a3616bf82ba2a1026fad9de8145bd9375}{elog\+\_\+type}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Initialize logging. 
+
+The loggers are located in the main endpoint class. As such, the transport doesn\textquotesingle{}t have direct access to them. This method is called by the endpoint constructor to allow shared logging from the transport component. These are raw pointers to member variables of the endpoint. In particular, they cannot be used in the transport constructor as they haven\textquotesingle{}t been constructed yet, and cannot be used in the transport destructor as they will have been destroyed by then.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_a}{A}} pointer to the access logger to use. \\
+\hline
+{\em e} & \mbox{\hyperlink{struct_a}{A}} pointer to the error logger to use. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a5d9e2b3f36fda6cfbc7b2a8c514ccaa2}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_a5d9e2b3f36fda6cfbc7b2a8c514ccaa2}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!is\+\_\+secure@{is\+\_\+secure}}
+\index{is\+\_\+secure@{is\+\_\+secure}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{is\+\_\+secure()}{is\_secure()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+bool \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::is\+\_\+secure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Tests whether or not the underlying transport is secure. 
+
+T\+O\+DO\+: docs
+
+\begin{DoxyReturn}{Returns}
+Whether or not the underlying transport is secure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_aa93a1b98a940de00aadd784b3c058aa6}\label{classwebsocketpp_1_1transport_1_1debug_1_1endpoint_aa93a1b98a940de00aadd784b3c058aa6}} 
+\index{websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}!set\+\_\+secure@{set\+\_\+secure}}
+\index{set\+\_\+secure@{set\+\_\+secure}!websocketpp\+::transport\+::debug\+::endpoint@{websocketpp\+::transport\+::debug\+::endpoint}}
+\subsubsection{\texorpdfstring{set\+\_\+secure()}{set\_secure()}}
+{\footnotesize\ttfamily template$<$typename config $>$ \\
+void \mbox{\hyperlink{classwebsocketpp_1_1transport_1_1debug_1_1endpoint}{websocketpp\+::transport\+::debug\+::endpoint}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::set\+\_\+secure (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set whether or not endpoint can create secure connections. 
+
+T\+O\+DO\+: docs
+
+Setting this value only indicates whether or not the endpoint is capable of producing and managing secure connections. Connections produced by this endpoint must also be individually flagged as secure if they are.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0-\/alpha4
+\end{DoxySince}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Whether or not the endpoint can create secure connections. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/websocketpp/transport/debug/endpoint.\+hpp\end{DoxyCompactItemize}

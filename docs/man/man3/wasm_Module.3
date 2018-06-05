@@ -1,0 +1,110 @@
+.TH "wasm::Module" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Module
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFunctionType\fP * \fBgetFunctionType\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBImport\fP * \fBgetImport\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBExport\fP * \fBgetExport\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFunction\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBGlobal\fP * \fBgetGlobal\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBFunctionType\fP * \fBgetFunctionTypeOrNull\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBImport\fP * \fBgetImportOrNull\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBExport\fP * \fBgetExportOrNull\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFunctionOrNull\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBGlobal\fP * \fBgetGlobalOrNull\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "void \fBaddFunctionType\fP (\fBFunctionType\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBaddImport\fP (\fBImport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBaddExport\fP (\fBExport\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBaddFunction\fP (\fBFunction\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBaddGlobal\fP (\fBGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBaddStart\fP (const \fBName\fP &s)"
+.br
+.ti -1c
+.RI "void \fBremoveImport\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "void \fBremoveExport\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "void \fBupdateMaps\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::vector\fP< std::unique_ptr< \fBFunctionType\fP > > \fBfunctionTypes\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::unique_ptr< \fBImport\fP > > \fBimports\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::unique_ptr< \fBExport\fP > > \fBexports\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::unique_ptr< \fBFunction\fP > > \fBfunctions\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::unique_ptr< \fBGlobal\fP > > \fBglobals\fP"
+.br
+.ti -1c
+.RI "\fBTable\fP \fBtable\fP"
+.br
+.ti -1c
+.RI "\fBMemory\fP \fBmemory\fP"
+.br
+.ti -1c
+.RI "\fBName\fP \fBstart\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBUserSection\fP > \fBuserSections\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::string > \fBdebugInfoFileNames\fP"
+.br
+.ti -1c
+.RI "\fBMixedArena\fP \fBallocator\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,42 @@
+.TH "wasm::PassRegistry" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::PassRegistry
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::function< \fBPass\fP *()> \fBCreator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBregisterPass\fP (const char *name, const char *description, \fBCreator\fP create)"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreatePass\fP (std::string name)"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< std::string > \fBgetRegisteredNames\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBgetPassDescription\fP (std::string name)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBPassRegistry\fP * \fBget\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

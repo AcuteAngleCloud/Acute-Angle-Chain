@@ -1,0 +1,14 @@
+digraph "wasm::GetLocalCounter"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node4 [label="wasm::GetLocalCounter",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="wasm::PostWalker\< GetLocal\lCounter \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_post_walker.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="wasm::Walker\< GetLocalCounter,\l Visitor\< GetLocalCounter \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_walker.html"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="wasm::Visitor\< GetLocalCounter \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_visitor.html"];
+  Node8 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" num" ];
+  Node8 [label="std::vector\< Index \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+}

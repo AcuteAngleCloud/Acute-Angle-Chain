@@ -1,0 +1,49 @@
+.TH "libraries/chain/include/aacio/chain/permission_object.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/include/aacio/chain/permission_object.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/authority\&.hpp>\fP
+.br
+\fC#include 'multi_index_includes\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::chain::permission_object\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::chain::permission_usage_object\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::config::billable_size< permission_object >\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "using \fBaacio::chain::permission_index\fP = chainbase::shared_multi_index_container< permission_object, indexed_by< ordered_unique< tag< by_id >, member< permission_object, permission_object::id_type, &permission_object::id > >, ordered_unique< tag< by_parent >, composite_key< permission_object, member< permission_object, permission_object::id_type, &permission_object::parent >, member< permission_object, permission_object::id_type, &permission_object::id > > >, ordered_unique< tag< by_owner >, composite_key< permission_object, member< permission_object, account_name, &permission_object::owner >, member< permission_object, permission_name, &permission_object::name > > >, ordered_unique< tag< by_name >, composite_key< permission_object, member< permission_object, permission_name, &permission_object::name >, member< permission_object, permission_object::id_type, &permission_object::id > > > > >"
+.br
+.ti -1c
+.RI "using \fBaacio::chain::permission_usage_index\fP = chainbase::shared_multi_index_container< permission_usage_object, indexed_by< ordered_unique< tag< by_id >, member< permission_usage_object, permission_usage_object::id_type, &permission_usage_object::id > >, ordered_unique< tag< by_account_permission >, composite_key< permission_usage_object, member< permission_usage_object, account_name, &permission_usage_object::account >, member< permission_usage_object, permission_name, &permission_usage_object::permission >, member< permission_usage_object, permission_usage_object::id_type, &permission_usage_object::id > > > > >"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,151 @@
+.TH "wasm::Builder" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Builder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBCFG::RelooperBuilder\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBuilder\fP (\fBMixedArena\fP &allocator)"
+.br
+.ti -1c
+.RI "\fBBuilder\fP (\fBModule\fP &wasm)"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBmakeFunction\fP (\fBName\fP name, \fBstd::vector\fP< \fBNameType\fP > &&params, WasmType resultType, \fBstd::vector\fP< \fBNameType\fP > &&vars, \fBExpression\fP *body=nullptr)"
+.br
+.ti -1c
+.RI "\fBNop\fP * \fBmakeNop\fP ()"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBmakeBlock\fP (\fBExpression\fP *first=nullptr)"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBmakeBlock\fP (\fBName\fP name, \fBExpression\fP *first=nullptr)"
+.br
+.ti -1c
+.RI "\fBIf\fP * \fBmakeIf\fP (\fBExpression\fP *condition, \fBExpression\fP *ifTrue, \fBExpression\fP *ifFalse=nullptr)"
+.br
+.ti -1c
+.RI "\fBLoop\fP * \fBmakeLoop\fP (\fBName\fP name, \fBExpression\fP *body)"
+.br
+.ti -1c
+.RI "\fBBreak\fP * \fBmakeBreak\fP (\fBName\fP name, \fBExpression\fP *value=nullptr, \fBExpression\fP *condition=nullptr)"
+.br
+.ti -1c
+.RI "template<typename T > \fBSwitch\fP * \fBmakeSwitch\fP (\fBT\fP &\fBlist\fP, \fBName\fP default_, \fBExpression\fP *condition, \fBExpression\fP *value=nullptr)"
+.br
+.ti -1c
+.RI "\fBCall\fP * \fBmakeCall\fP (\fBName\fP target, const \fBstd::vector\fP< \fBExpression\fP *> &args, WasmType type)"
+.br
+.ti -1c
+.RI "\fBCallImport\fP * \fBmakeCallImport\fP (\fBName\fP target, const \fBstd::vector\fP< \fBExpression\fP *> &args, WasmType type)"
+.br
+.ti -1c
+.RI "template<typename T > \fBCall\fP * \fBmakeCall\fP (\fBName\fP target, const \fBT\fP &args, WasmType type)"
+.br
+.ti -1c
+.RI "template<typename T > \fBCallImport\fP * \fBmakeCallImport\fP (\fBName\fP target, const \fBT\fP &args, WasmType type)"
+.br
+.ti -1c
+.RI "\fBCallIndirect\fP * \fBmakeCallIndirect\fP (\fBFunctionType\fP *type, \fBExpression\fP *target, const \fBstd::vector\fP< \fBExpression\fP *> &args)"
+.br
+.ti -1c
+.RI "\fBCallIndirect\fP * \fBmakeCallIndirect\fP (\fBName\fP fullType, \fBExpression\fP *target, const \fBstd::vector\fP< \fBExpression\fP *> &args, WasmType type)"
+.br
+.ti -1c
+.RI "\fBGetLocal\fP * \fBmakeGetLocal\fP (Index index, WasmType type)"
+.br
+.ti -1c
+.RI "\fBSetLocal\fP * \fBmakeSetLocal\fP (Index index, \fBExpression\fP *value)"
+.br
+.ti -1c
+.RI "\fBSetLocal\fP * \fBmakeTeeLocal\fP (Index index, \fBExpression\fP *value)"
+.br
+.ti -1c
+.RI "\fBGetGlobal\fP * \fBmakeGetGlobal\fP (\fBName\fP name, WasmType type)"
+.br
+.ti -1c
+.RI "\fBSetGlobal\fP * \fBmakeSetGlobal\fP (\fBName\fP name, \fBExpression\fP *value)"
+.br
+.ti -1c
+.RI "\fBLoad\fP * \fBmakeLoad\fP (unsigned bytes, bool signed_, uint32_t offset, unsigned align, \fBExpression\fP *ptr, WasmType type)"
+.br
+.ti -1c
+.RI "\fBStore\fP * \fBmakeStore\fP (unsigned bytes, uint32_t offset, unsigned align, \fBExpression\fP *ptr, \fBExpression\fP *value, WasmType type)"
+.br
+.ti -1c
+.RI "\fBConst\fP * \fBmakeConst\fP (\fBLiteral\fP value)"
+.br
+.ti -1c
+.RI "\fBUnary\fP * \fBmakeUnary\fP (UnaryOp op, \fBExpression\fP *value)"
+.br
+.ti -1c
+.RI "\fBBinary\fP * \fBmakeBinary\fP (BinaryOp op, \fBExpression\fP *left, \fBExpression\fP *right)"
+.br
+.ti -1c
+.RI "\fBSelect\fP * \fBmakeSelect\fP (\fBExpression\fP *condition, \fBExpression\fP *ifTrue, \fBExpression\fP *ifFalse)"
+.br
+.ti -1c
+.RI "\fBReturn\fP * \fBmakeReturn\fP (\fBExpression\fP *value=nullptr)"
+.br
+.ti -1c
+.RI "\fBHost\fP * \fBmakeHost\fP (HostOp op, \fBName\fP nameOperand, \fBstd::vector\fP< \fBExpression\fP *> &&operands)"
+.br
+.ti -1c
+.RI "\fBUnreachable\fP * \fBmakeUnreachable\fP ()"
+.br
+.ti -1c
+.RI "\fBDrop\fP * \fBmakeDrop\fP (\fBExpression\fP *value)"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBblockify\fP (\fBExpression\fP *any, \fBExpression\fP *append=nullptr)"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBblockifyWithName\fP (\fBExpression\fP *any, \fBName\fP name, \fBExpression\fP *append=nullptr)"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBblockifyMerge\fP (\fBExpression\fP *any, \fBExpression\fP *append)"
+.br
+.ti -1c
+.RI "\fBBlock\fP * \fBmakeSequence\fP (\fBExpression\fP *left, \fBExpression\fP *right)"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fBstealSlice\fP (\fBBlock\fP *input, Index from, Index to)"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fBdropIfConcretelyTyped\fP (\fBExpression\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBflip\fP (\fBIf\fP *iff)"
+.br
+.ti -1c
+.RI "template<typename T > \fBExpression\fP * \fBreplaceWithIdenticalType\fP (\fBT\fP *curr)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static Index \fBaddParam\fP (\fBFunction\fP *\fBfunc\fP, \fBName\fP name, WasmType type)"
+.br
+.ti -1c
+.RI "static Index \fBaddVar\fP (\fBFunction\fP *\fBfunc\fP, \fBName\fP name, WasmType type)"
+.br
+.ti -1c
+.RI "static Index \fBaddVar\fP (\fBFunction\fP *\fBfunc\fP, WasmType type)"
+.br
+.ti -1c
+.RI "static void \fBclearLocals\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

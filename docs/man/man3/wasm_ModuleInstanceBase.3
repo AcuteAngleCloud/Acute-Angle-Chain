@@ -1,0 +1,74 @@
+.TH "wasm::ModuleInstanceBase< GlobalManager, SubType >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ModuleInstanceBase< GlobalManager, SubType >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBExternalInterface\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "SubType * \fBself\fP ()"
+.br
+.ti -1c
+.RI "\fBModuleInstanceBase\fP (\fBModule\fP &wasm, \fBExternalInterface\fP *externalInterface)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallExport\fP (\fBName\fP name, \fBLiteralList\fP &arguments)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallExport\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBgetExport\fP (\fBName\fP name)"
+.br
+.ti -1c
+.RI "std::string \fBprintFunctionStack\fP ()"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallFunction\fP (\fBName\fP name, \fBLiteralList\fP &arguments)"
+.br
+.ti -1c
+.RI "\fBLiteral\fP \fBcallFunctionInternal\fP (\fBName\fP name, \fBLiteralList\fP &arguments)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBModule\fP & \fBwasm\fP"
+.br
+.ti -1c
+.RI "GlobalManager \fBglobals\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<class LS > \fBAddress\fP \fBgetFinalAddress\fP (LS *curr, \fBLiteral\fP ptr)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBAddress\fP \fBmemorySize\fP"
+.br
+.ti -1c
+.RI "\fBExternalInterface\fP * \fBexternalInterface\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

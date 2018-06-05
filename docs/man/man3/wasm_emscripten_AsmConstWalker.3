@@ -1,0 +1,45 @@
+.TH "wasm::emscripten::AsmConstWalker" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::emscripten::AsmConstWalker
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::PostWalker< AsmConstWalker >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAsmConstWalker\fP (\fBModule\fP &_wasm, \fBstd::unordered_map\fP< \fBAddress\fP, \fBAddress\fP > _segmentsByAddress)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBModule\fP & \fBwasm\fP"
+.br
+.ti -1c
+.RI "\fBstd::unordered_map\fP< \fBAddress\fP, \fBAddress\fP > \fBsegmentsByAddress\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< std::string, \fBstd::set\fP< std::string > > \fBsigsForCode\fP"
+.br
+.ti -1c
+.RI "\fBstd::map\fP< std::string, \fBAddress\fP > \fBids\fP"
+.br
+.ti -1c
+.RI "\fBstd::set\fP< std::string > \fBallSigs\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

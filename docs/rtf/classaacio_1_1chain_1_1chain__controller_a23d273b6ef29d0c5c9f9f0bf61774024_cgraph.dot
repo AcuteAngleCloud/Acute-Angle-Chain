@@ -1,0 +1,23 @@
+digraph "aacio::chain::chain_controller::push_block"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node38 [label="aacio::chain::chain\l_controller::push_block",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node38 -> Node39 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node39 [label="aacio::chain::chain\l_controller::without\l_pending_transactions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1chain__controller.html#a442beb698ea61031638b7cbae7fca7c6"];
+  Node39 -> Node40 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node40 [label="aacio::chain::chain\l_controller::is_known\l_transaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1chain__controller.html#a5fe603a309127c8b195a55b0706d2235"];
+  Node38 -> Node41 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node41 [label="aacio::chain::chain\l_controller::_push_block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1chain__controller.html#a03b5b87487b63dba3295f4b802053380"];
+  Node41 -> Node42 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node42 [label="aacio::chain::fork\l_database::push_block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1fork__database.html#ae9ce87aac5b9f14e08fccff4e6e98fdb"];
+  Node41 -> Node43 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node43 [label="aacio::chain::fork\l_database::fetch_branch_from",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1fork__database.html#a309c5e2cb8d499551cc71356dfab46cc"];
+  Node41 -> Node44 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node44 [label="aacio::chain::chain\l_controller::pop_block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1chain__controller.html#a58bf5d32ed81ff6aa8024ec8fa1ee105"];
+  Node41 -> Node45 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node45 [label="fc::exception::to_detail\l_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1exception.html#a7611ea8fbe25dde56649b685c2298a37"];
+  Node45 -> Node46 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node46 [label="fc::variant::as_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1variant.html#acbd70a93184e4277631f2a261acb707c"];
+}

@@ -1,0 +1,386 @@
+.TH "websocketpp::transport::debug::connection< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::transport::debug::connection< config >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits enable_shared_from_this< connection< config > >\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBconnection\fP< \fBconfig\fP > \fBtype\fP"
+.br
+.RI "\fBType\fP of this connection transport component\&. "
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBtype\fP > \fBptr\fP"
+.br
+.RI "\fBType\fP of a shared pointer to this connection transport component\&. "
+.ti -1c
+.RI "typedef \fBconfig::concurrency_type\fP \fBconcurrency_type\fP"
+.br
+.RI "transport concurrency policy "
+.ti -1c
+.RI "typedef \fBconfig::alog_type\fP \fBalog_type\fP"
+.br
+.RI "\fBType\fP of this transport's access logging policy\&. "
+.ti -1c
+.RI "typedef \fBconfig::elog_type\fP \fBelog_type\fP"
+.br
+.RI "\fBType\fP of this transport's error logging policy\&. "
+.ti -1c
+.RI "typedef \fBconcurrency_type::scoped_lock_type\fP \fBscoped_lock_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBconcurrency_type::mutex_type\fP \fBmutex_type\fP"
+.br
+.ti -1c
+.RI "typedef lib::shared_ptr< \fBtimer\fP > \fBtimer_ptr\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBconnection\fP (bool is_server, \fBalog_type\fP &alog, \fBelog_type\fP &elog)"
+.br
+.ti -1c
+.RI "\fBptr\fP \fBget_shared\fP ()"
+.br
+.RI "Get a shared pointer to this component\&. "
+.ti -1c
+.RI "void \fBset_secure\fP (bool)"
+.br
+.RI "Set whether or not this connection is secure\&. "
+.ti -1c
+.RI "bool \fBis_secure\fP () const"
+.br
+.RI "Tests whether or not the underlying transport is secure\&. "
+.ti -1c
+.RI "void \fBset_uri\fP (\fBuri_ptr\fP)"
+.br
+.RI "Set uri hook\&. "
+.ti -1c
+.RI "void \fBset_remote_endpoint\fP (std::string)"
+.br
+.RI "Set human readable remote endpoint address\&. "
+.ti -1c
+.RI "std::string \fBget_remote_endpoint\fP () const"
+.br
+.RI "Get human readable remote endpoint address\&. "
+.ti -1c
+.RI "\fBconnection_hdl\fP \fBget_handle\fP () const"
+.br
+.RI "Get the connection handle\&. "
+.ti -1c
+.RI "timer_ptr \fBset_timer\fP (long, \fBtimer_handler\fP handler)"
+.br
+.RI "Call back a function after a period of time\&. "
+.ti -1c
+.RI "size_t \fBread_all\fP (char const *buf, size_t len)"
+.br
+.RI "Manual input supply (read all) "
+.ti -1c
+.RI "void \fBexpire_timer\fP (lib::error_code const &ec)"
+.br
+.ti -1c
+.RI "void \fBfullfil_write\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinit\fP (\fBinit_handler\fP handler)"
+.br
+.RI "Initialize the connection transport\&. "
+.ti -1c
+.RI "void \fBasync_read_at_least\fP (size_t num_bytes, char *buf, size_t len, \fBread_handler\fP handler)"
+.br
+.RI "Initiate an async_read for at least num_bytes bytes into buf\&. "
+.ti -1c
+.RI "void \fBasync_write\fP (char const *, size_t, \fBwrite_handler\fP handler)"
+.br
+.RI "Asyncronous Transport Write\&. "
+.ti -1c
+.RI "void \fBasync_write\fP (\fBstd::vector\fP< \fBbuffer\fP > const &, \fBwrite_handler\fP handler)"
+.br
+.RI "Asyncronous Transport Write (scatter-gather) "
+.ti -1c
+.RI "void \fBset_handle\fP (\fBconnection_hdl\fP)"
+.br
+.RI "Set Connection Handle\&. "
+.ti -1c
+.RI "lib::error_code \fBdispatch\fP (\fBdispatch_handler\fP handler)"
+.br
+.RI "Call given handler back within the transport's event system (if present) "
+.ti -1c
+.RI "void \fBasync_shutdown\fP (\fBshutdown_handler\fP handler)"
+.br
+.RI "Perform cleanup on socket shutdown_handler\&. "
+.ti -1c
+.RI "size_t \fBread_some_impl\fP (char const *buf, size_t len)"
+.br
+.ti -1c
+.RI "void \fBcomplete_read\fP (lib::error_code const &ec)"
+.br
+.RI "Signal that a requested read is complete\&. "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::async_read_at_least (size_t num_bytes, char * buf, size_t len, \fBread_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initiate an async_read for at least num_bytes bytes into buf\&. Initiates an async_read request for at least num_bytes bytes\&. The input will be read into buf\&. \fBA\fP maximum of len bytes will be input\&. When the operation is complete, handler will be called with the status and number of bytes read\&.
+.PP
+This method may or may not call handler from within the initial call\&. The application should be prepared to accept either\&.
+.PP
+The application should never call this method a second time before it has been called back for the first read\&. If this is done, the second read will be called back immediately with a double_read error\&.
+.PP
+If num_bytes or len are zero handler will be called back immediately indicating success\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fInum_bytes\fP Don't call handler until at least this many bytes have been read\&. 
+.br
+\fIbuf\fP The buffer to read bytes into 
+.br
+\fIlen\fP The size of buf\&. At maximum, this many bytes will be read\&. 
+.br
+\fIhandler\fP The callback to invoke when the operation is complete or ends in an error 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::async_shutdown (\fBshutdown_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Perform cleanup on socket shutdown_handler\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIh\fP The \fCshutdown_handler\fP to call back when complete 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::async_write (char const *, size_t, \fBwrite_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Asyncronous Transport Write\&. Write len bytes in buf to the output stream\&. Call handler to report success or failure\&. handler may or may not be called during async_write, but it must be safe for this to happen\&.
+.PP
+Will return 0 on success\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP buffer to read bytes from 
+.br
+\fIlen\fP number of bytes to write 
+.br
+\fIhandler\fP Callback to invoke with operation status\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::async_write (\fBstd::vector\fP< \fBbuffer\fP > const &, \fBwrite_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Asyncronous Transport Write (scatter-gather) Write a sequence of buffers to the output stream\&. Call handler to report success or failure\&. handler may or may not be called during async_write, but it must be safe for this to happen\&.
+.PP
+Will return 0 on success\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbufs\fP vector of buffers to write 
+.br
+\fIhandler\fP Callback to invoke with operation status\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::complete_read (lib::error_code const & ec)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Signal that a requested read is complete\&. Sets the reading flag to false and returns the handler that should be called back with the result of the read\&. The cursor position that is sent is whatever the value of m_cursor is\&.
+.PP
+It MUST NOT be called when m_reading is false\&. it MUST be called while holding the read lock
+.PP
+It is important to use this method rather than directly setting/calling m_read_handler back because this function makes sure to delete the locally stored handler which contains shared pointers that will otherwise cause circular reference based memory leaks\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIec\fP The error code to forward to the read handler 
+.RE
+.PP
+
+.SS "template<typename config > lib::error_code \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::dispatch (\fBdispatch_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Call given handler back within the transport's event system (if present) Invoke a callback within the transport's event system if it has one\&. If it doesn't, the handler will be invoked immediately before this function returns\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhandler\fP The callback to invoke
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the transport was able to register the handler for callback\&. 
+.RE
+.PP
+
+.SS "template<typename config > \fBconnection_hdl\fP \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::get_handle () const\fC [inline]\fP"
+
+.PP
+Get the connection handle\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The handle for this connection\&. 
+.RE
+.PP
+
+.SS "template<typename config > std::string \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::get_remote_endpoint () const\fC [inline]\fP"
+
+.PP
+Get human readable remote endpoint address\&. TODO: docs
+.PP
+This value is used in access and error logs and is available to the end application for including in user facing interfaces and messages\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP string identifying the address of the remote endpoint 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::init (\fBinit_handler\fP handler)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Initialize the connection transport\&. Initialize the connection's transport component\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhandler\fP The \fCinit_handler\fP to call when initialization is done 
+.RE
+.PP
+
+.SS "template<typename config > bool \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::is_secure () const\fC [inline]\fP"
+
+.PP
+Tests whether or not the underlying transport is secure\&. TODO: docs
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the underlying transport is secure 
+.RE
+.PP
+
+.SS "template<typename config > size_t \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::read_all (char const * buf, size_t len)\fC [inline]\fP"
+
+.PP
+Manual input supply (read all) Similar to read_some, but continues to read until all bytes in the supplied buffer have been read or the connection runs out of read requests\&.
+.PP
+This method still may not read all of the bytes in the input buffer\&. if it doesn't it indicates that the connection was most likely closed or is in an error state where it is no longer accepting new input\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbuf\fP Char buffer to read into the websocket 
+.br
+\fIlen\fP Length of buf 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The number of characters from buf actually read\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::set_handle (\fBconnection_hdl\fP)\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Set Connection Handle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIhdl\fP The new handle 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::set_remote_endpoint (std::string)\fC [inline]\fP"
+
+.PP
+Set human readable remote endpoint address\&. Sets the remote endpoint address returned by \fCget_remote_endpoint\fP\&. This value should be a human readable string that describes the remote endpoint\&. Typically an IP address or hostname, perhaps with a port\&. But may be something else depending on the nature of the underlying transport\&.
+.PP
+If none is set a default is returned\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0-alpha4
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP The remote endpoint address to set\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::set_secure (bool)\fC [inline]\fP"
+
+.PP
+Set whether or not this connection is secure\&. Todo: docs
+.PP
+\fBSince:\fP
+.RS 4
+0\&.3\&.0-alpha4
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvalue\fP Whether or not this connection is secure\&. 
+.RE
+.PP
+
+.SS "template<typename config > timer_ptr \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::set_timer (long, \fBtimer_handler\fP handler)\fC [inline]\fP"
+
+.PP
+Call back a function after a period of time\&. Timers are not implemented in this transport\&. The timer pointer will always be empty\&. The handler will never be called\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIduration\fP Length of time to wait in milliseconds 
+.br
+\fIcallback\fP The function to call back when the timer has expired 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBA\fP handle that can be used to cancel the timer if it is no longer needed\&. 
+.RE
+.PP
+
+.SS "template<typename config > void \fBwebsocketpp::transport::debug::connection\fP< \fBconfig\fP >::set_uri (\fBuri_ptr\fP)\fC [inline]\fP"
+
+.PP
+Set uri hook\&. Called by the endpoint as a connection is being established to provide the uri being connected to to the transport layer\&.
+.PP
+Implementation is optional and can be ignored if the transport has no need for this information\&.
+.PP
+\fBSince:\fP
+.RS 4
+0\&.6\&.0
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIu\fP The uri to set 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,59 @@
+.TH "md_contracts_dice__r_e_a_d_m_e" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_contracts_dice__r_e_a_d_m_e \- DICE 
+This contract implements a simple DICE game between two players with 50/50 odds of winning\&.
+.PP
+Before playing all players deposit funds into their  account just like the  contract
+.PP
+.IP "1." 4
+Player 1 proposes to bet 1 AAC and submits SHA256(secret1)
+.IP "2." 4
+Player 2 proposes to bet 1 AAC and submits SHA256(secret2)
+.PP
+.PP
+Because Player 1 and 2 bet equal amounts their orders are matched and the game begins\&.
+.PP
+.IP "3." 4
+\fBA\fP Player reveales their secret
+.IP "4." 4
+\fBA\fP 5 minute deadline starts whereby the first to reveal automatically wins unless the other player reveals
+.IP "5." 4
+The other player reveals and a winner is chosen and paid based upon the value of \fBsha256( cat(secret1,secret2) )\fP
+.IP "6." 4
+After the deadline anyone can trigger a default claim and the rewards
+.PP
+.PP
+.SS "Economic Incentive for Interface Developers "
+.PP
+\fBA\fP variation on this game would be to add an additional information on offer creation that will get paid a commission when the player wins\&. With this commission in place there is financial incentive for a service provider to continue to execute the game in a timely manner as well as provide quality and entertaining interfaces on top of this game\&.
+.PP
+.SS "Other Games "
+.PP
+This same basic model can be used to build more robust games\&.
+.PP
+.SS "Potential Vulnerabilities "
+.PP
+.IP "1." 4
+Block Producers may exclude reveal transaction
+.IP "2." 4
+Losers may force winner to wait 5 minutes to get rewards
+.IP "3." 4
+Service providers may fail to auto-reveal on your behalf
+.IP "4." 4
+You may lose internet connectivity mid-game
+.IP "5." 4
+\fBA\fP blockhain reorganization could cause some havock if secrets are revealed too quickly
+.IP "  \(bu" 4
+could protect users by rejecting reveals until a game creation is irreversible (about 45 seconds max)
+.IP "  \(bu" 4
+users could take risk themselves by deciding how many confirmations are required
+.IP "  \(bu" 4
+for small amounts it probably doesn't matter
+.IP "  \(bu" 4
+under normal operation of DPOS chains there are few if any chain reorganizations 
+.PP
+
+.PP
+

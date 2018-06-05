@@ -1,0 +1,40 @@
+.TH "aacio::chain::signed_block" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::signed_block
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <block\&.hpp>\fP
+.PP
+Inherits \fBaacio::chain::signed_block_summary\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsigned_block\fP (const \fBsigned_block\fP &)=default"
+.br
+.ti -1c
+.RI "\fBsigned_block\fP (const \fBsigned_block_summary\fP &\fBbase\fP)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBvector\fP< \fBpacked_transaction\fP > \fBinput_transactions\fP"
+.br
+.RI "this is loaded and indexed into map<id,trx> that is referenced by summary; order doesn't matter "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+This structure contains the set of signed transactions referenced by the block summary\&. This inherits from block_summary/signed_block_header and is what would be logged to disk to enable the regeneration of blockchain state\&.
+.PP
+The transactions are grouped to mirror the cycles in block_summary, generated transactions are not included\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,264 @@
+\subsection*{Overview }
+
+binaryen.\+js is a port of Binaryen to the Web, allowing you to generate Web\+Assembly using a Java\+Script A\+PI. To get a feel for the A\+PI, see the \char`\"{}hello world\char`\"{} test at {\ttfamily test/binaryen.\+js/hello-\/world.js}, and other tests in that directory for more examples.
+
+The A\+PI is documented in the rest of this document.
+
+\subsection*{Types }
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Binaryen.\+none}\+: The none type.
+\item {\ttfamily Binaryen.\+i32}\+: The i32 type.
+\item {\ttfamily Binaryen.\+i64}\+: The i64 type.
+\item {\ttfamily Binaryen.\+f32}\+: The f32 type.
+\item {\ttfamily Binaryen.\+f64}\+: The f64 type.
+\end{DoxyItemize}
+
+\subsection*{Modules }
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Binaryen.\+Module()}\+: Constructor for a Binaryen Web\+Assembly module. You need to create one of these first.
+\end{DoxyItemize}
+
+{\ttfamily Module} instances have the following properties.
+
+Module property operations\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily add\+Function\+Type(name, result\+Type, param\+Types)}\+: Add a function type to the module, with a specified name, result type, and param types.
+\item {\ttfamily add\+Function(name, function\+Type, var\+Types, body)}\+: Add a function, with a name, a function type, an array of local types, and a body.
+\item {\ttfamily add\+Import(internal\+Name, external\+Module\+Name, external\+Base\+Name, function\+Type)}\+: Add an import, with an internal name (used by other things in the module), an external module name (the module from which we import), an external base name (the name we import from that module), and a function type (for function imports).
+\item {\ttfamily add\+Export(internal\+Name, external\+Name)}\+: Add an export, with an internal name and an external name (the name the outside sees it exported as).
+\item {\ttfamily set\+Function\+Table(funcs)}\+: Sets the function table to a array of functions.
+\item {\ttfamily set\+Memory(initial, maximum, export\+Name, segments)}\+: Sets the memory to having an initial size, maximum size, optional export name, and array of data segments.
+\item {\ttfamily set\+Start(start)}\+: Sets the start function (called when the module is instantiated) to a specified function.
+\end{DoxyItemize}
+
+Module operations\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily emit\+Binary()}\+: Returns a binary for the module, which you can then compile and run in the browser.
+\item {\ttfamily emit\+Text()}\+: Returns a text representation of the module, in s-\/expression format.
+\item {\ttfamily \mbox{\hyperlink{authority_8hpp_a98696231ed7d6f1c166797053cebc5eb}{validate()}}}\+: Validates the module, checking it for correctness.
+\item {\ttfamily optimize()}\+: Optimize the module.
+\item {\ttfamily auto\+Drop()}\+: Automatically inserts {\ttfamily drop} operations. This lets you not worry about dropping when creating your code.
+\item {\ttfamily interpret()}\+: Run the module in the Binaryen interpreter (creates the module, and calls the start method). Useful for debugging.
+\item {\ttfamily dispose()}\+: Cleans up the module. If the Binaryen object can be garbage-\/collected anyhow, you don\textquotesingle{}t need to do this, but if it stays around -\/ e.\+g. if you create multiple {\ttfamily Module}s over time -\/ then you should call this once a {\ttfamily Module} is no longer needed. (As binaryen.\+js uses compiled C++ code, we can\textquotesingle{}t just rely on normal garbage collection to clean things up internally.)
+\end{DoxyItemize}
+
+Type-\/prefixed expressions\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily i32}\+:
+\begin{DoxyItemize}
+\item {\ttfamily i32.\+load(offset, align, ptr)}\+: Create a 32-\/bit load, with an offset, alignment, and pointer.
+\item {\ttfamily i32.\+load8\+\_\+s(offset, align, ptr)}\+: Create an 8-\/bit signed load, with an offset, alignment, and pointer.
+\item {\ttfamily i32.\+load8\+\_\+u(offset, align, ptr)}\+: Create an 8-\/bit unsigned load, with an offset, alignment, and pointer.
+\item {\ttfamily i32.\+load16\+\_\+s(offset, align, ptr)}\+: Create an 16-\/bit signed load, with an offset, alignment, and pointer.
+\item {\ttfamily i32.\+load16\+\_\+u(offset, align, ptr)}\+: Create an 16-\/bit unsigned load, with an offset, alignment, and pointer.
+\item {\ttfamily i32.\+store(offset, align, ptr, value)}\+: Create a 32-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i32.\+store8(offset, align, ptr, value)}\+: Create an 8-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i32.\+store16(offset, align, ptr, value)}\+: Create a 16-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i32.\+const(value)}\+: Create an {\ttfamily i32} constant of a specified value.
+\item {\ttfamily i32.\+clz(value)}\+: Create a count-\/leading-\/zeros of a specified value.
+\item {\ttfamily i32.\+ctz(value)}\+: Create a count-\/trailing-\/zeros of a specified value.
+\item {\ttfamily i32.\+popcnt(value)}\+: Create a population-\/count (number of bits set) of a specified value.
+\item {\ttfamily i32.\+eqz(value)}\+: Create an equal-\/zero of a specified value.
+\item {\ttfamily i32.\+trunc\+\_\+s.\+f32(value)}\+: Create a signed truncate of an {\ttfamily f32} to an {\ttfamily i32}.
+\item {\ttfamily i32.\+trunc\+\_\+s.\+f64(value)}\+: Create a signed truncate of an {\ttfamily f64} to an {\ttfamily i32}.
+\item {\ttfamily i32.\+trunc\+\_\+u.\+f32(value)}\+: Create an unsigned truncate of an {\ttfamily f32} to an {\ttfamily i32}.
+\item {\ttfamily i32.\+trunc\+\_\+u.\+f64(value)}\+: Create an unsigned truncate of an {\ttfamily f64} to an {\ttfamily i32}.
+\item {\ttfamily i32.\+reinterpret(value)}\+: Create a reinterpret of an {\ttfamily f32} to an {\ttfamily i32}.
+\item {\ttfamily i32.\+wrap(value)}\+: Create a wrap of an {\ttfamily i64} to an {\ttfamily i32}.
+\item {\ttfamily i32.\+add(left, right)}\+: Create an add of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+sub(left, right)}\+: Create a subtract of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+mul(left, right)}\+: Create a multiply of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+div\+\_\+s(left, right)}\+: Create a signed divide of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+div\+\_\+u(left, right)}\+: Create an unsigned divide of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+rem\+\_\+s(left, right)}\+: Create a signed remainder of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+rem\+\_\+u(left, right)}\+: Create an unsigned remainder of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+and(left, right)}\+: Create an and of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+or(left, right)}\+: Create an or of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+xor(left, right)}\+: Create a xor of two {\ttfamily i32}s.
+\item {\ttfamily i32.\+shl(left, right)}\+: Create a shift left on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+shr\+\_\+u(left, right)}\+: Create an unsigned (logical) shift right on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+shr\+\_\+s(left, right)}\+: Create a signed (arithmetic) shift right on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+rotl(left, right)}\+: Create a rotate-\/left on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+rotr(left, right)}\+: Create a rotate-\/right on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+eq(left, right)}\+: Create an equals on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+ne(left, right)}\+: Create a not-\/equals on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+lt\+\_\+s(left, right)}\+: Create a signed less-\/than on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+lt\+\_\+u(left, right)}\+: Create an unsigned less-\/than on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+le\+\_\+s(left, right)}\+: Create a signed less-\/or-\/equal on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+le\+\_\+u(left, right)}\+: Create an unsigned less-\/or-\/equal on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+gt\+\_\+s(left, right)}\+: Create a signed greater-\/than on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+gt\+\_\+u(left, right)}\+: Create an unsigned greater-\/than on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+ge\+\_\+s(left, right)}\+: Create a signed greater-\/or-\/equal on two {\ttfamily i32}s.
+\item {\ttfamily i32.\+ge\+\_\+u(left, right)}\+: Create an unsigned greater-\/or-\/equal on two {\ttfamily i32}s.
+\end{DoxyItemize}
+\item {\ttfamily i64}\+:
+\begin{DoxyItemize}
+\item {\ttfamily i64.\+load(offset, align, ptr)}\+: Create a 32-\/bit load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+load8\+\_\+s(offset, align, ptr)}\+: Create an 8-\/bit signed load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+load8\+\_\+u(offset, align, ptr)}\+: Create an 8-\/bit unsigned load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+load16\+\_\+s(offset, align, ptr)}\+: Create an 16-\/bit signed load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+load16\+\_\+u(offset, align, ptr)}\+: Create an 16-\/bit unsigned load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+load32\+\_\+s(offset, align, ptr)}\+: Create a 32-\/bit signed load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+load32\+\_\+u(offset, align, ptr)}\+: Create a 32-\/bit unsigned load, with an offset, alignment, and pointer.
+\item {\ttfamily i64.\+store(offset, align, ptr, value)}\+: Create a 32-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i64.\+store8(offset, align, ptr, value)}\+: Create an 8-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i64.\+store16(offset, align, ptr, value)}\+: Create a 16-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i64.\+store32(offset, align, ptr, value)}\+: Create a 32-\/bit store, with an offset, alignment, pointer, and value.
+\item {\ttfamily i64.\+const(low, high)}\+: Create an {\ttfamily i64} constant of a specified value, provided as low and high 32 bits.
+\item {\ttfamily i64.\+clz(value)}\+: Create a count-\/leading-\/zeros of a specified value.
+\item {\ttfamily i64.\+ctz(value)}\+: Create a count-\/trailing-\/zeros of a specified value.
+\item {\ttfamily i64.\+popcnt(value)}\+: Create a population-\/count (number of bits set) of a specified value.
+\item {\ttfamily i64.\+eqz(value)}\+: Create an equal-\/zero of a specified value.
+\item {\ttfamily i64.\+trunc\+\_\+s.\+f32(value)}\+: Create a signed truncate of an {\ttfamily f32} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+trunc\+\_\+s.\+f64(value)}\+: Create a signed truncate of an {\ttfamily f64} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+trunc\+\_\+u.\+f32(value)}\+: Create an unsigned truncate of an {\ttfamily f32} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+trunc\+\_\+u.\+f64(value)}\+: Create an unsigned truncate of an {\ttfamily f64} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+reinterpret(value)}\+: Create a reinterpret of an {\ttfamily f64} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+extend\+\_\+s(value)}\+: Create a signed extend of an {\ttfamily i32} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+extend\+\_\+u(value)}\+: Create an unsigned extend of an {\ttfamily i32} to an {\ttfamily i64}.
+\item {\ttfamily i64.\+add(left, right)}\+: Create an add of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+sub(left, right)}\+: Create a subtract of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+mul(left, right)}\+: Create a multiply of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+div\+\_\+s(left, right)}\+: Create a signed divide of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+div\+\_\+u(left, right)}\+: Create an unsigned divide of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+rem\+\_\+s(left, right)}\+: Create a signed remainder of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+rem\+\_\+u(left, right)}\+: Create an unsigned remainder of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+and(left, right)}\+: Create an and of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+or(left, right)}\+: Create an or of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+xor(left, right)}\+: Create a xor of two {\ttfamily i64}s.
+\item {\ttfamily i64.\+shl(left, right)}\+: Create a shift left on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+shr\+\_\+u(left, right)}\+: Create an unsigned (logical) shift right on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+shr\+\_\+s(left, right)}\+: Create a signed (arithmetic) shift right on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+rotl(left, right)}\+: Create a rotate-\/left on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+rotr(left, right)}\+: Create a rotate-\/right on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+eq(left, right)}\+: Create an equals on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+ne(left, right)}\+: Create a not-\/equals on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+lt\+\_\+s(left, right)}\+: Create a signed less-\/than on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+lt\+\_\+u(left, right)}\+: Create an unsigned less-\/than on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+le\+\_\+s(left, right)}\+: Create a signed less-\/or-\/equal on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+le\+\_\+u(left, right)}\+: Create an unsigned less-\/or-\/equal on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+gt\+\_\+s(left, right)}\+: Create a signed greater-\/than on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+gt\+\_\+u(left, right)}\+: Create an unsigned greater-\/than on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+ge\+\_\+s(left, right)}\+: Create a signed greater-\/or-\/equal on two {\ttfamily i64}s.
+\item {\ttfamily i64.\+ge\+\_\+u(left, right)}\+: Create an unsigned greater-\/or-\/equal on two {\ttfamily i64}s.
+\end{DoxyItemize}
+\item {\ttfamily f32}\+:
+\begin{DoxyItemize}
+\item {\ttfamily f32.\+load(offset, align, ptr)}\+: Create an {\ttfamily f32} load, with an offset, alignment, and pointer.
+\item {\ttfamily f32.\+store(offset, align, ptr, value)}\+: Create an {\ttfamily f32} store, with an offset, alignment, pointer, and value.
+\item {\ttfamily f32.\+const(value)}\+: Create an {\ttfamily f32} constant of a specified value.
+\item {\ttfamily f32.\+const\+\_\+bits(value)}\+: Create an {\ttfamily f32} constant of a specified value, reinterpreting the bits (this is useful for creating weird Na\+Ns).
+\item {\ttfamily f32.\+neg(value)}\+: Create a negation of an {\ttfamily f32}.
+\item {\ttfamily f32.\+abs(value)}\+: Create a absolute value of an {\ttfamily f32}.
+\item {\ttfamily f32.\+ceil(value)}\+: Create a ceil of an {\ttfamily f32}.
+\item {\ttfamily f32.\+floor(value)}\+: Create a floor of an {\ttfamily f32}.
+\item {\ttfamily f32.\+trunc(value)}\+: Create a truncate of an {\ttfamily f32}.
+\item {\ttfamily f32.\+nearest(value)}\+: Create a nearest-\/value of an {\ttfamily f32}.
+\item {\ttfamily f32.\+sqrt(value)}\+: Create a square-\/root of an {\ttfamily f32}.
+\item {\ttfamily f32.\+reinterpret(value)}\+: Create a reinterpret of an {\ttfamily i32} to an {\ttfamily f32}.
+\item {\ttfamily f32.\+convert\+\_\+s.\+i32(value)}\+: Create a signed conversion of an {\ttfamily i32} to an {\ttfamily f32}.
+\item {\ttfamily f32.\+convert\+\_\+s.\+i64(value)}\+: Create a signed conversion of an {\ttfamily i64} to an {\ttfamily f32}.
+\item {\ttfamily f32.\+convert\+\_\+u.\+i32(value)}\+: Create an unsigned conversion of an {\ttfamily i32} to an {\ttfamily f32}.
+\item {\ttfamily f32.\+convert\+\_\+u.\+i64(value)}\+: Create an unsigned conversion of an {\ttfamily i64} to an {\ttfamily f32}.
+\item {\ttfamily f32.\+demote(value)}\+: Create a demotion of an {\ttfamily f64} to an {\ttfamily f32}.
+\item {\ttfamily f32.\+add(left, right)}\+: Create an add of two {\ttfamily f32}s.
+\item {\ttfamily f32.\+sub(left, right)}\+: Create a subtract of two {\ttfamily f32}s.
+\item {\ttfamily f32.\+mul(left, right)}\+: Create a multiply of two {\ttfamily f32}s.
+\item {\ttfamily f32.\+div(left, right)}\+: Create a divide of two {\ttfamily f32}s.
+\item {\ttfamily f32.\+copysign(left, right)}\+: Create a copysign (take magnitude of left, sign of right) of two {\ttfamily f32}s.
+\item {\ttfamily f32.\+min(left, right)}\+: Create a minimum on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+max(left, right)}\+: Create a maximum on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+eq(left, right)}\+: Create an equals on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+ne(left, right)}\+: Create a not-\/equals on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+lt(left, right)}\+: Create a less-\/than on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+le(left, right)}\+: Create a less-\/or-\/equals on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+gt(left, right)}\+: Create a greater-\/than on two {\ttfamily f32}s.
+\item {\ttfamily f32.\+ge(left, right)}\+: Create a greater-\/or-\/equals on two {\ttfamily f32}s.
+\end{DoxyItemize}
+\item {\ttfamily f64}\+:
+\begin{DoxyItemize}
+\item {\ttfamily f64.\+load(offset, align, ptr)}\+: Create an {\ttfamily f64} load, with an offset, alignment, and pointer.
+\item {\ttfamily f64.\+store(offset, align, ptr, value)}\+: Create an {\ttfamily f64} store, with an offset, alignment, pointer, and value.
+\item {\ttfamily f64.\+const(value)}\+: Create an {\ttfamily f64} constant of a specified value.
+\item {\ttfamily f64.\+const\+\_\+bits(low, high)}\+: Create an {\ttfamily f64} constant of a specified value, reinterpreting the low and high 32 bits (this is useful for creating weird Na\+Ns).
+\item {\ttfamily f64.\+neg(value)}\+: Create a negation of an {\ttfamily f64}.
+\item {\ttfamily f64.\+abs(value)}\+: Create a absolute value of an {\ttfamily f64}.
+\item {\ttfamily f64.\+ceil(value)}\+: Create a ceil of an {\ttfamily f64}.
+\item {\ttfamily f64.\+floor(value)}\+: Create a floor of an {\ttfamily f64}.
+\item {\ttfamily f64.\+trunc(value)}\+: Create a truncate of an {\ttfamily f64}.
+\item {\ttfamily f64.\+nearest(value)}\+: Create a nearest-\/value of an {\ttfamily f64}.
+\item {\ttfamily f64.\+sqrt(value)}\+: Create a square-\/root of an {\ttfamily f64}.
+\item {\ttfamily f64.\+reinterpret(value)}\+: Create a reinterpret of an {\ttfamily i32} to an {\ttfamily f64}.
+\item {\ttfamily f64.\+convert\+\_\+s.\+i32(value)}\+: Create a signed conversion of an {\ttfamily i32} to an {\ttfamily f64}.
+\item {\ttfamily f64.\+convert\+\_\+s.\+i64(value)}\+: Create a signed conversion of an {\ttfamily i64} to an {\ttfamily f64}.
+\item {\ttfamily f64.\+convert\+\_\+u.\+i32(value)}\+: Create an unsigned conversion of an {\ttfamily i32} to an {\ttfamily f64}.
+\item {\ttfamily f64.\+convert\+\_\+u.\+i64(value)}\+: Create an unsigned conversion of an {\ttfamily i64} to an {\ttfamily f64}.
+\item {\ttfamily f64.\+promote(value)}\+: Create a promotion of an {\ttfamily f32} to an {\ttfamily f64}.
+\item {\ttfamily f64.\+add(left, right)}\+: Create an add of two {\ttfamily f64}s.
+\item {\ttfamily f64.\+sub(left, right)}\+: Create a subtract of two {\ttfamily f64}s.
+\item {\ttfamily f64.\+mul(left, right)}\+: Create a multiply of two {\ttfamily f64}s.
+\item {\ttfamily f64.\+div(left, right)}\+: Create a divide of two {\ttfamily f64}s.
+\item {\ttfamily f64.\+copysign(left, right)}\+: Create a copysign (take magnitude of left, sign of right) of two {\ttfamily f64}s.
+\item {\ttfamily f64.\+min(left, right)}\+: Create a minimum on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+max(left, right)}\+: Create a maximum on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+eq(left, right)}\+: Create an equals on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+ne(left, right)}\+: Create a not-\/equals on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+lt(left, right)}\+: Create a less-\/than on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+le(left, right)}\+: Create a less-\/or-\/equals on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+gt(left, right)}\+: Create a greater-\/than on two {\ttfamily f64}s.
+\item {\ttfamily f64.\+ge(left, right)}\+: Create a greater-\/or-\/equals on two {\ttfamily f64}s.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Unprefixed expressions\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily block(label, children)}\+: Create a block (a list of instructions), with an optional label, and list of children.
+\item {\ttfamily if(condition, if\+True, if\+False}\+: Create an if or if-\/else, with a condition, code to execute if true, and optional code to execute if false.
+\item {\ttfamily loop(label, body)}\+: Create a loop, with an optional label, and body.
+\item {\ttfamily break(label, condition, value)}\+: Create a break, to a label, and with an optional condition, and optional value.
+\item {\ttfamily switch(labels, default\+Label, condition, value)}\+: Create a switch (aka br\+\_\+table), with a list of labels, a default label, a condition, and an optional value.
+\item {\ttfamily call(name, operands, type)}\+: Create a call, to a function name, with operands, and having a specific return type (note that we must specify the return type here as we may not have created the function being called yet, and we may want to optimize this function before we do so, so the A\+PI requires that each function be independent of the others, which means that we can\textquotesingle{}t depend on the definition of another function).
+\item {\ttfamily call(name, operands, type)}\+: Similar to {\ttfamily call}, but calls an imported function.
+\item {\ttfamily call\+Indirect(target, operands, type)}\+: Similar to {\ttfamily call}, but calls indirectly, i.\+e., via a function pointer, so an expression replaces the name as the called value.
+\item {\ttfamily get\+Local(index, type)}\+: Create a get\+\_\+local, for the local at the specified index, and having a specific type (the type is required for the same reasons as in {\ttfamily call}).
+\item {\ttfamily set\+Local(index, value)}\+: Create a set\+\_\+local, for the local at the specified index, and setting the specified value.
+\item {\ttfamily tee\+Local(index, value)}\+: Create a tee\+\_\+local, for the local at the specified index, and setting the specified value.
+\item {\ttfamily select(condition, if\+True, if\+False)}\+: Create a select operation, executing the condition, if\+True, and if\+False, and returning one of them based on the condition.
+\item {\ttfamily drop(value)}\+: Create a drop of a value.
+\item {\ttfamily return(value)}\+: Create a return with an optional value.
+\item {\ttfamily nop()}\+: Create a nop (no-\/operation).
+\item {\ttfamily unreachable()}\+: Create an unreachable (trap).
+\end{DoxyItemize}
+
+(now done with {\ttfamily Module}s, returning to the {\ttfamily Binaryen} object)
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Binaryen.\+read\+Binary(data)}\+: Reads a binary wasm module and returns a Binaryen {\ttfamily Module} object created from it.
+\item {\ttfamily Binaryen.\+emit\+Text(expression)}\+: Returns a text representation of an individual expression, in s-\/expression format. Because Binaryen expression do not depend on their function or module, you can do this at any time.
+\item {\ttfamily set\+A\+P\+I\+Tracing(on)}\+: Sets whether A\+PI tracing is on. When on, this emits \mbox{\hyperlink{struct_c}{C}} A\+PI commands for everything you do. This can be very useful for filing bug reports.
+\item {\ttfamily Binaryen.\+Relooper()}\+: Constructor for a Binaryen Relooper instance. This lets you provide an arbitrary C\+FG, and the Relooper will structure it for Web\+Assembly.
+\end{DoxyItemize}
+
+Relooper instances have the following methods\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily add\+Block(code)}\+: Adds a new block to the C\+FG, containing the provided code (expression) as its body.
+\item {\ttfamily add\+Branch(from, to, condition, code)}\+: Adds a branch from a block to another block, with a condition (or nothing, if this is the default branch to take from the origin -\/ each block must have one such branch), and optional code to execute on the branch (useful for phis).
+\item {\ttfamily add\+Block\+With\+Switch(code, condition)}\+: Adds a new block, which ends with a switch/br\+\_\+table, with provided code and condition (that determines where we go in the switch).
+\item {\ttfamily add\+Branch\+For\+Switch(from, to, indexes, code)}\+: Adds a branch from a block ending in a switch, to another block, using an array of indexes that determine where to go, and optional code to execute on the branch.
+\item {\ttfamily render\+And\+Dispose(entry, label\+Helper, module)}\+: Renders and cleans up the Relooper instance. Call this after you have created all the blocks and branches, giving it the entry block (where control flow begins), a label helper variable (an index of a local we can use, necessary for irreducible control flow), and the module. This returns an expression -\/ normal Web\+Assembly code -\/ that you can use normally anywhere. 
+\end{DoxyItemize}

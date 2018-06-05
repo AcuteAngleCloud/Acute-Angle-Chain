@@ -1,0 +1,94 @@
+\hypertarget{classfc_1_1crypto_1_1r1_1_1private__key}{}\section{fc\+:\+:crypto\+:\+:r1\+:\+:private\+\_\+key Class Reference}
+\label{classfc_1_1crypto_1_1r1_1_1private__key}\index{fc\+::crypto\+::r1\+::private\+\_\+key@{fc\+::crypto\+::r1\+::private\+\_\+key}}
+
+
+an elliptic curve private key.  
+
+
+
+
+{\ttfamily \#include $<$elliptic\+\_\+r1.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a90307c0a2a52a47d49c15ade9808395c}\label{classfc_1_1crypto_1_1r1_1_1private__key_a90307c0a2a52a47d49c15ade9808395c}} 
+{\bfseries private\+\_\+key} (\mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&\&pk)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a6be8a927fa89c2283a7fe94fac70b305}\label{classfc_1_1crypto_1_1r1_1_1private__key_a6be8a927fa89c2283a7fe94fac70b305}} 
+{\bfseries private\+\_\+key} (const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&pk)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_af2566b475801368ab7243d362190e8df}\label{classfc_1_1crypto_1_1r1_1_1private__key_af2566b475801368ab7243d362190e8df}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&\&pk)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a5c2ae8fd3c2182c4b221f3fcc7074613}\label{classfc_1_1crypto_1_1r1_1_1private__key_a5c2ae8fd3c2182c4b221f3fcc7074613}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&pk)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a837d10115ce323da31a31d2ad1a18e18}\label{classfc_1_1crypto_1_1r1_1_1private__key_a837d10115ce323da31a31d2ad1a18e18}} 
+\mbox{\hyperlink{classfc_1_1sha256}{private\+\_\+key\+\_\+secret}} {\bfseries get\+\_\+secret} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a36d88a9cb6b3cc480dc4afac90e09c29}\label{classfc_1_1crypto_1_1r1_1_1private__key_a36d88a9cb6b3cc480dc4afac90e09c29}} 
+{\bfseries operator private\+\_\+key\+\_\+secret} () const
+\item 
+\mbox{\hyperlink{classfc_1_1sha512}{fc\+::sha512}} \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key_a9a312037162a8f847825f0387d9aa59e}{get\+\_\+shared\+\_\+secret}} (const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1public__key}{public\+\_\+key}} \&pub) const
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a20e8a3bf124bab042ebc8ac2a8d0005a}\label{classfc_1_1crypto_1_1r1_1_1private__key_a20e8a3bf124bab042ebc8ac2a8d0005a}} 
+\mbox{\hyperlink{classfc_1_1array}{signature}} {\bfseries sign} (const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&digest) const
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a9f54b768f15f9685167c846e2cdcd61e}\label{classfc_1_1crypto_1_1r1_1_1private__key_a9f54b768f15f9685167c846e2cdcd61e}} 
+\mbox{\hyperlink{classfc_1_1array}{compact\+\_\+signature}} {\bfseries sign\+\_\+compact} (const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&digest) const
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a19c3aa0fe2010a05a5b6c86450b27dcb}\label{classfc_1_1crypto_1_1r1_1_1private__key_a19c3aa0fe2010a05a5b6c86450b27dcb}} 
+bool {\bfseries verify} (const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&digest, const \mbox{\hyperlink{classfc_1_1array}{signature}} \&sig)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a99a8502bdd1abc670c779247d606b671}\label{classfc_1_1crypto_1_1r1_1_1private__key_a99a8502bdd1abc670c779247d606b671}} 
+\mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1public__key}{public\+\_\+key}} {\bfseries get\+\_\+public\+\_\+key} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_ad71aa7d73e57ef9fd7648fb7461177fb}\label{classfc_1_1crypto_1_1r1_1_1private__key_ad71aa7d73e57ef9fd7648fb7461177fb}} 
+static \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} {\bfseries generate} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_abed020ddf6cc239edccce96dbbdb4238}\label{classfc_1_1crypto_1_1r1_1_1private__key_abed020ddf6cc239edccce96dbbdb4238}} 
+static \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} {\bfseries regenerate} (const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&secret)
+\item 
+static \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key_a809607decbd4c04217994a2a5d225dc7}{generate\+\_\+from\+\_\+seed}} (const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&seed, const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&offset=\mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}}())
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_af279e37c180aa326645bdb542b9be656}\label{classfc_1_1crypto_1_1r1_1_1private__key_af279e37c180aa326645bdb542b9be656}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&a, const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&b)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a542c2210ae96b8326314deb182aef678}\label{classfc_1_1crypto_1_1r1_1_1private__key_a542c2210ae96b8326314deb182aef678}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&a, const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&b)
+\item 
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a07832f781f3f9ce28ecba02777a9c6df}\label{classfc_1_1crypto_1_1r1_1_1private__key_a07832f781f3f9ce28ecba02777a9c6df}} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&a, const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} \&b)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+an elliptic curve private key. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a809607decbd4c04217994a2a5d225dc7}\label{classfc_1_1crypto_1_1r1_1_1private__key_a809607decbd4c04217994a2a5d225dc7}} 
+\index{fc\+::crypto\+::r1\+::private\+\_\+key@{fc\+::crypto\+::r1\+::private\+\_\+key}!generate\+\_\+from\+\_\+seed@{generate\+\_\+from\+\_\+seed}}
+\index{generate\+\_\+from\+\_\+seed@{generate\+\_\+from\+\_\+seed}!fc\+::crypto\+::r1\+::private\+\_\+key@{fc\+::crypto\+::r1\+::private\+\_\+key}}
+\subsubsection{\texorpdfstring{generate\+\_\+from\+\_\+seed()}{generate\_from\_seed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1private__key}{private\+\_\+key}} fc\+::crypto\+::r1\+::private\+\_\+key\+::generate\+\_\+from\+\_\+seed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&}]{seed,  }\item[{const \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}} \&}]{offset = {\ttfamily \mbox{\hyperlink{classfc_1_1sha256}{fc\+::sha256}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method of generation enables creating a new private key in a deterministic manner relative to an initial seed. \mbox{\hyperlink{struct_a}{A}} \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1public__key}{public\+\_\+key}} created from the seed can be multiplied by the offset to calculate the new public key without having to know the private key. \mbox{\Hypertarget{classfc_1_1crypto_1_1r1_1_1private__key_a9a312037162a8f847825f0387d9aa59e}\label{classfc_1_1crypto_1_1r1_1_1private__key_a9a312037162a8f847825f0387d9aa59e}} 
+\index{fc\+::crypto\+::r1\+::private\+\_\+key@{fc\+::crypto\+::r1\+::private\+\_\+key}!get\+\_\+shared\+\_\+secret@{get\+\_\+shared\+\_\+secret}}
+\index{get\+\_\+shared\+\_\+secret@{get\+\_\+shared\+\_\+secret}!fc\+::crypto\+::r1\+::private\+\_\+key@{fc\+::crypto\+::r1\+::private\+\_\+key}}
+\subsubsection{\texorpdfstring{get\+\_\+shared\+\_\+secret()}{get\_shared\_secret()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1sha512}{fc\+::sha512}} fc\+::crypto\+::r1\+::private\+\_\+key\+::get\+\_\+shared\+\_\+secret (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfc_1_1crypto_1_1r1_1_1public__key}{public\+\_\+key}} \&}]{pub }\end{DoxyParamCaption}) const}
+
+Given a public key, calculatse a 512 bit shared secret between that key and this private key. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/crypto/elliptic\+\_\+r1.\+hpp\item 
+libraries/fc/src/crypto/elliptic\+\_\+openssl.\+cpp\item 
+libraries/fc/src/crypto/elliptic\+\_\+r1.\+cpp\end{DoxyCompactItemize}

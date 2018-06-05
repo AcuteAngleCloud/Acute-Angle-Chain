@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="websocketpp::concurrency\l::none_impl::fake_lock_guard",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1concurrency_1_1none__impl_1_1fake__lock__guard.html",tooltip="A fake lock guard implementation that does nothing. "];
+}

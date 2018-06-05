@@ -1,0 +1,17 @@
+digraph "libraries/wasm-jit" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_bc0718b08fb2015b8e59c47b2805f60c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="libraries" fontname="Helvetica", fontsize="10", URL="dir_bc0718b08fb2015b8e59c47b2805f60c.html"]
+  subgraph clusterdir_b71a61cc67f472608e7deabc52691f74 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_b71a61cc67f472608e7deabc52691f74.html"];
+    dir_b71a61cc67f472608e7deabc52691f74 [shape=plaintext label="wasm-jit"];
+    dir_f02547e720536c6517a82c7d0c2ade9d [shape=box label="Include" color="red" fillcolor="white" style="filled" URL="dir_f02547e720536c6517a82c7d0c2ade9d.html"];
+    dir_f3751462bfdf8cf305c98e30e6ed6331 [shape=box label="Source" color="red" fillcolor="white" style="filled" URL="dir_f3751462bfdf8cf305c98e30e6ed6331.html"];
+    dir_d78bc77d3cf1e7b7b06025f503e3bc20 [shape=box label="Test" color="red" fillcolor="white" style="filled" URL="dir_d78bc77d3cf1e7b7b06025f503e3bc20.html"];
+  }
+  }
+  dir_ae9b15dd87e066e1908bbd90e8f38627 [shape=box label="contracts" fillcolor="white" style="filled" color="red" URL="dir_ae9b15dd87e066e1908bbd90e8f38627.html"];
+  dir_f3751462bfdf8cf305c98e30e6ed6331->dir_ae9b15dd87e066e1908bbd90e8f38627 [headlabel="1", labeldistance=1.5 headhref="dir_000055_000000.html"];
+}

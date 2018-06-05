@@ -1,0 +1,21 @@
+digraph "wasm::Precompute"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node7 [label="wasm::Precompute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="wasm::WalkerPass\< PostWalker\l\< Precompute, UnifiedExpressionVisitor\l\< Precompute \> \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_walker_pass.html"];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="wasm::Pass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwasm_1_1_pass.html"];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ,fontname="Helvetica"];
+  Node10 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="wasm::PostWalker\< Precompute,\l UnifiedExpressionVisitor\l\< Precompute \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_post_walker.html"];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="wasm::Walker\< Precompute,\l UnifiedExpressionVisitor\l\< Precompute \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_walker.html"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="wasm::UnifiedExpressionVisitor\l\< Precompute \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_unified_expression_visitor.html"];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="wasm::Visitor\< Precompute \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwasm_1_1_visitor.html"];
+}

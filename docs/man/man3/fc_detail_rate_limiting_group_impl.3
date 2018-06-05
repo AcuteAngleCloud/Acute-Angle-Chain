@@ -1,0 +1,119 @@
+.TH "fc::detail::rate_limiting_group_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::detail::rate_limiting_group_impl
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits tcp_socket_io_hooks\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBstd::list\fP< \fBrate_limited_operation\fP * > \fBrate_limited_operation_list\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBrate_limiting_group_impl\fP (uint32_t upload_bytes_per_second, uint32_t download_bytes_per_second, uint32_t burstiness_in_seconds=1)"
+.br
+.ti -1c
+.RI "virtual size_t \fBreadsome\fP (boost::asio::ip::tcp::socket &socket, char *buffer, size_t length) override"
+.br
+.ti -1c
+.RI "virtual size_t \fBreadsome\fP (boost::asio::ip::tcp::socket &socket, const std::shared_ptr< char > &buffer, size_t length, size_t offset) override"
+.br
+.ti -1c
+.RI "template<typename BufferType > size_t \fBreadsome_impl\fP (boost::asio::ip::tcp::socket &socket, const BufferType &buffer, size_t length, size_t offset)"
+.br
+.ti -1c
+.RI "virtual size_t \fBwritesome\fP (boost::asio::ip::tcp::socket &socket, const char *buffer, size_t length) override"
+.br
+.ti -1c
+.RI "virtual size_t \fBwritesome\fP (boost::asio::ip::tcp::socket &socket, const std::shared_ptr< const char > &buffer, size_t length, size_t offset) override"
+.br
+.ti -1c
+.RI "template<typename BufferType > size_t \fBwritesome_impl\fP (boost::asio::ip::tcp::socket &socket, const BufferType &buffer, size_t length, size_t offset)"
+.br
+.ti -1c
+.RI "void \fBprocess_pending_reads\fP ()"
+.br
+.ti -1c
+.RI "void \fBprocess_pending_writes\fP ()"
+.br
+.ti -1c
+.RI "void \fBprocess_pending_operations\fP (\fBtime_point\fP &last_iteration_start_time, uint32_t &limit_bytes_per_second, \fBrate_limited_operation_list\fP &operations_in_progress, \fBrate_limited_operation_list\fP &operations_for_next_iteration, uint32_t &tokens, uint32_t &unused_tokens)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fB_upload_bytes_per_second\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_download_bytes_per_second\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_burstiness_in_seconds\fP"
+.br
+.ti -1c
+.RI "\fBmicroseconds\fP \fB_granularity\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_read_tokens\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_unused_read_tokens\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_write_tokens\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_unused_write_tokens\fP"
+.br
+.ti -1c
+.RI "\fBrate_limited_operation_list\fP \fB_read_operations_in_progress\fP"
+.br
+.ti -1c
+.RI "\fBrate_limited_operation_list\fP \fB_read_operations_for_next_iteration\fP"
+.br
+.ti -1c
+.RI "\fBrate_limited_operation_list\fP \fB_write_operations_in_progress\fP"
+.br
+.ti -1c
+.RI "\fBrate_limited_operation_list\fP \fB_write_operations_for_next_iteration\fP"
+.br
+.ti -1c
+.RI "\fBtime_point\fP \fB_last_read_iteration_time\fP"
+.br
+.ti -1c
+.RI "\fBtime_point\fP \fB_last_write_iteration_time\fP"
+.br
+.ti -1c
+.RI "future< void > \fB_process_pending_reads_loop_complete\fP"
+.br
+.ti -1c
+.RI "promise< void >::ptr \fB_new_read_operation_available_promise\fP"
+.br
+.ti -1c
+.RI "future< void > \fB_process_pending_writes_loop_complete\fP"
+.br
+.ti -1c
+.RI "promise< void >::ptr \fB_new_write_operation_available_promise\fP"
+.br
+.ti -1c
+.RI "\fBaverage_rate_meter\fP \fB_actual_upload_rate\fP"
+.br
+.ti -1c
+.RI "\fBaverage_rate_meter\fP \fB_actual_download_rate\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

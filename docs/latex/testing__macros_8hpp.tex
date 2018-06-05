@@ -1,0 +1,509 @@
+\hypertarget{testing__macros_8hpp}{}\section{tests/common/testing\+\_\+macros.hpp File Reference}
+\label{testing__macros_8hpp}\index{tests/common/testing\+\_\+macros.\+hpp@{tests/common/testing\+\_\+macros.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/wast\+\_\+to\+\_\+wasm.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}macro\+\_\+support.\+hpp\char`\"{}}\newline
+Include dependency graph for testing\+\_\+macros.\+hpp\+:
+% FIG 0
+\subsection*{Macros}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a3dad3d124d9377bd3101bb60dfeee01b}{Make\+\_\+\+Blockchain}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+C\+H\+A\+IN, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Create/\+Open a testing\+\_\+blockchain, optionally with an ID. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a17895ac104cb5182cde2da8a2d56b141}{Make\+\_\+\+Blockchains}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+S\+E\+Q\+\_\+\+F\+O\+R\+\_\+\+E\+A\+CH(M\+K\+C\+H\+A\+I\+N\+S\+\_\+\+M\+A\+C\+RO, \+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Similar to \mbox{\hyperlink{testing__macros_8hpp_a3dad3d124d9377bd3101bb60dfeee01b}{Make\+\_\+\+Blockchain}}, but works with several chains at once. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a0832ea4dce1f452e099794157a75e920}{Make\+\_\+\+Network}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+N\+ET, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Make\+\_\+\+Network is a shorthand way to create a testing\+\_\+network and connect some testing\+\_\+blockchains to it. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}{Make\+\_\+\+Key}}(name)
+\begin{DoxyCompactList}\small\item\em Make\+\_\+\+Key is a shorthand way to create a keypair. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a323f9ac108111123b480226f8f7a97ff}{Key\+\_\+\+Authority}}(pubkey)~(authority\{1, \{\{pubkey, 1\}\}, \{\}\})
+\begin{DoxyCompactList}\small\item\em Key\+\_\+\+Authority is a shorthand way to create an inline Authority based on a key. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a279bf6233ab7d4e11ac1518e6eafe03a}{Account\+\_\+\+Authority}}(\mbox{\hyperlink{structaccount}{account}})~(authority\{1, \{\}, \{\{\{\#\mbox{\hyperlink{structaccount}{account}}, \char`\"{}active\char`\"{}\}, 1\}\}\})
+\begin{DoxyCompactList}\small\item\em Account\+\_\+\+Authority is a shorthand way to create an inline Authority based on an account. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_aad0f173d5d2821d23178682ce825ce4d}{Complex\+\_\+\+Authority}}(T\+H\+R\+E\+S\+H\+O\+LD,  K\+E\+Y\+\_\+\+B\+U\+B\+B\+L\+ES,  A\+C\+C\+O\+U\+N\+T\+\_\+\+B\+U\+B\+B\+L\+ES)
+\begin{DoxyCompactList}\small\item\em Complex\+\_\+\+Authority is a shorthand way to create an arbitrary inline Authority. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_ab4d7e6e81e7b11b0c79d5f693c7798cf}{Make\+\_\+\+Account}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+A\+C\+CT, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Make\+\_\+\+Account is a shorthand way to create an account. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a87c2c883ada644a67ee18b6c30ea5663}{Set\+\_\+\+Code}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(S\+E\+T\+C\+O\+DE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to set the code for an account. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_aff9e84a580828529fd92cc550d2ca2d8}{Set\+\_\+\+Authority}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(S\+E\+T\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to create or update named authority on an account. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a479215b4153afae31b43bfcfe3ed9738}{Delete\+\_\+\+Authority}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(D\+E\+L\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to delete named authority from an account. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a800aa131e713968af33b57b788d432d8}{Link\+\_\+\+Authority}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(L\+I\+N\+K\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to link named authority with a contract/message type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a551f387b46233eab8329bc854615dea2}{Unlink\+\_\+\+Authority}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(U\+N\+L\+I\+N\+K\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to unlink named authority from a contract/message type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a4594291b51fd73960c7451f954245db3}{Transfer\+\_\+\+Asset}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(X\+F\+ER, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to transfer funds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_ab5e4b99f55f1e43f817abbad6a4475de}{Stake\+\_\+\+Asset}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(S\+T\+A\+KE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to convert liquid funds to staked funds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a1858c080261eb2bd32e55c191e046f66}{Begin\+\_\+\+Unstake\+\_\+\+Asset}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(B\+E\+G\+I\+N\+\_\+\+U\+N\+S\+T\+A\+KE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to begin conversion from staked funds to liquid funds. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_af7e2fd328848cebda13f0b2ac9b8feed}{Finish\+\_\+\+Unstake\+\_\+\+Asset}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(F\+I\+N\+I\+S\+H\+\_\+\+U\+N\+S\+T\+A\+KE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to claim unstaked A\+AC as liquid. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a740967e3534185f574224175067a0d6d}{Set\+\_\+\+Proxy}}(chain,  stakeholder,  proxy)
+\begin{DoxyCompactList}\small\item\em Shorthand way to set voting proxy. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_ae48335ba137563cad657ac185f9b5dde}{Make\+\_\+\+Producer}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+P\+D\+CR, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to create a block producer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_aa3deb2bdeb17c541eec48f2d5e82b3d1}{Approve\+\_\+\+Producer}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(A\+P\+P\+D\+CR, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to set approval of a block producer. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{testing__macros_8hpp_a9192f7d2c14ffd57ab280c1ead0c89c8}{Update\+\_\+\+Producer}}(...)~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(U\+P\+P\+D\+CR, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Shorthand way to update a block producer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{testing__macros_8hpp_a279bf6233ab7d4e11ac1518e6eafe03a}\label{testing__macros_8hpp_a279bf6233ab7d4e11ac1518e6eafe03a}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Account\+\_\+\+Authority@{Account\+\_\+\+Authority}}
+\index{Account\+\_\+\+Authority@{Account\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Account\+\_\+\+Authority}{Account\_Authority}}
+{\footnotesize\ttfamily \#define Account\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{structaccount}{account}} }\end{DoxyParamCaption})~(authority\{1, \{\}, \{\{\{\#\mbox{\hyperlink{structaccount}{account}}, \char`\"{}active\char`\"{}\}, 1\}\}\})}
+
+
+
+Account\+\_\+\+Authority is a shorthand way to create an inline Authority based on an account. 
+
+Invoke Account\+\_\+\+Authority passing the name of an account, and Account\+\_\+\+Authority will resolve inline to an authority which can be satisfied by the provided account\textquotesingle{}s active authority. \mbox{\Hypertarget{testing__macros_8hpp_aa3deb2bdeb17c541eec48f2d5e82b3d1}\label{testing__macros_8hpp_aa3deb2bdeb17c541eec48f2d5e82b3d1}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Approve\+\_\+\+Producer@{Approve\+\_\+\+Producer}}
+\index{Approve\+\_\+\+Producer@{Approve\+\_\+\+Producer}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Approve\+\_\+\+Producer}{Approve\_Producer}}
+{\footnotesize\ttfamily \#define Approve\+\_\+\+Producer(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(A\+P\+P\+D\+CR, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to set approval of a block producer. 
+
+Use Approve\+\_\+\+Producer to change an account\textquotesingle{}s approval of a block producer\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Set joe's approval for pete's block producer to Approve}
+\mbox{\hyperlink{testing__macros_8hpp_aa3deb2bdeb17c541eec48f2d5e82b3d1}{Approve\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, joe, pete, \textcolor{keyword}{true});
+\textcolor{comment}{// Set joe's approval for pete's block producer to Disapprove}
+\mbox{\hyperlink{testing__macros_8hpp_aa3deb2bdeb17c541eec48f2d5e82b3d1}{Approve\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, joe, pete, \textcolor{keyword}{false});
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a1858c080261eb2bd32e55c191e046f66}\label{testing__macros_8hpp_a1858c080261eb2bd32e55c191e046f66}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Begin\+\_\+\+Unstake\+\_\+\+Asset@{Begin\+\_\+\+Unstake\+\_\+\+Asset}}
+\index{Begin\+\_\+\+Unstake\+\_\+\+Asset@{Begin\+\_\+\+Unstake\+\_\+\+Asset}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Begin\+\_\+\+Unstake\+\_\+\+Asset}{Begin\_Unstake\_Asset}}
+{\footnotesize\ttfamily \#define Begin\+\_\+\+Unstake\+\_\+\+Asset(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(B\+E\+G\+I\+N\+\_\+\+U\+N\+S\+T\+A\+KE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to begin conversion from staked funds to liquid funds. 
+
+Use Unstake\+\_\+\+Asset to begin unstaking funds\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Begin unstaking 10 of bob's AAC}
+Unstake\_Asset(\mbox{\hyperlink{namespacechain}{chain}}, bob, \mbox{\hyperlink{structasset}{asset}}(10).amount);
+\end{DoxyCode}
+
+
+This can also be used to cancel an unstaking in progress, by passing \mbox{\hyperlink{structasset}{asset(0)}} as the amount. \mbox{\Hypertarget{testing__macros_8hpp_aad0f173d5d2821d23178682ce825ce4d}\label{testing__macros_8hpp_aad0f173d5d2821d23178682ce825ce4d}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Complex\+\_\+\+Authority@{Complex\+\_\+\+Authority}}
+\index{Complex\+\_\+\+Authority@{Complex\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Complex\+\_\+\+Authority}{Complex\_Authority}}
+{\footnotesize\ttfamily \#define Complex\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{T\+H\+R\+E\+S\+H\+O\+LD,  }\item[{}]{K\+E\+Y\+\_\+\+B\+U\+B\+B\+L\+ES,  }\item[{}]{A\+C\+C\+O\+U\+N\+T\+\_\+\+B\+U\+B\+B\+L\+ES }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+[&]\{ \(\backslash\)
+      authority x; \(\backslash\)
+      x.threshold = THRESHOLD; \(\backslash\)
+      BOOST\_PP\_SEQ\_FOR\_EACH(Complex\_Authority\_macro\_Key, x, KEY\_BUBBLES) \(\backslash\)
+      BOOST\_PP\_SEQ\_FOR\_EACH(Complex\_Authority\_macro\_Account, x, ACCOUNT\_BUBBLES) \(\backslash\)
+      return x; \(\backslash\)
+   \}()
+\end{DoxyCode}
+
+
+Complex\+\_\+\+Authority is a shorthand way to create an arbitrary inline Authority. 
+
+Invoke Complex\+\_\+\+Authority passing the weight threshold necessary to satisfy the authority, a bubble list of keys and weights, and a bubble list of accounts and weights.
+
+\mbox{\hyperlink{struct_key}{Key}} bubbles are structured as ((key\+\_\+name, key\+\_\+weight)) Account bubbles are structured as ((\char`\"{}account\+\_\+name\char`\"{}, \char`\"{}account\+\_\+authority\char`\"{}, weight))
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create an authority which can be satisfied with a master key, or with any three of:}
+\textcolor{comment}{// - key\_1}
+\textcolor{comment}{// - key\_2}
+\textcolor{comment}{// - key\_3}
+\textcolor{comment}{// - Account alice's "test\_multisig" authority}
+\textcolor{comment}{// - Account bob's "test\_multisig" authority}
+\mbox{\hyperlink{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}{Make\_Key}}(master\_key)
+\mbox{\hyperlink{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}{Make\_Key}}(key\_1)
+\mbox{\hyperlink{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}{Make\_Key}}(key\_2)
+\mbox{\hyperlink{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}{Make\_Key}}(key\_3)
+\textcolor{keyword}{auto} auth = \mbox{\hyperlink{testing__macros_8hpp_aad0f173d5d2821d23178682ce825ce4d}{Complex\_Authority}}(5, ((master\_key, 5))((key\_1, 2))((key\_2, 2))((key\_3, 2)),
+                              ((\textcolor{stringliteral}{"alice"}, \textcolor{stringliteral}{"test\_multisig"}, 2))((\textcolor{stringliteral}{"bob"}, \textcolor{stringliteral}{"test\_multisig"}, 2));
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a479215b4153afae31b43bfcfe3ed9738}\label{testing__macros_8hpp_a479215b4153afae31b43bfcfe3ed9738}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Delete\+\_\+\+Authority@{Delete\+\_\+\+Authority}}
+\index{Delete\+\_\+\+Authority@{Delete\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Delete\+\_\+\+Authority}{Delete\_Authority}}
+{\footnotesize\ttfamily \#define Delete\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(D\+E\+L\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to delete named authority from an account. 
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Delete authority named "money" from account "alice"}
+\mbox{\hyperlink{testing__macros_8hpp_a479215b4153afae31b43bfcfe3ed9738}{Delete\_Authority}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, \textcolor{stringliteral}{"money"});
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_af7e2fd328848cebda13f0b2ac9b8feed}\label{testing__macros_8hpp_af7e2fd328848cebda13f0b2ac9b8feed}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Finish\+\_\+\+Unstake\+\_\+\+Asset@{Finish\+\_\+\+Unstake\+\_\+\+Asset}}
+\index{Finish\+\_\+\+Unstake\+\_\+\+Asset@{Finish\+\_\+\+Unstake\+\_\+\+Asset}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Finish\+\_\+\+Unstake\+\_\+\+Asset}{Finish\_Unstake\_Asset}}
+{\footnotesize\ttfamily \#define Finish\+\_\+\+Unstake\+\_\+\+Asset(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(F\+I\+N\+I\+S\+H\+\_\+\+U\+N\+S\+T\+A\+KE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to claim unstaked A\+AC as liquid. 
+
+Use Finish\+\_\+\+Unstake\+\_\+\+Asset to liquidate unstaked funds\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Reclaim as liquid 10 of bob's unstaked AAC}
+Unstake\_Asset(\mbox{\hyperlink{namespacechain}{chain}}, bob, \mbox{\hyperlink{structasset}{asset}}(10).amount);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a323f9ac108111123b480226f8f7a97ff}\label{testing__macros_8hpp_a323f9ac108111123b480226f8f7a97ff}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Key\+\_\+\+Authority@{Key\+\_\+\+Authority}}
+\index{Key\+\_\+\+Authority@{Key\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Key\+\_\+\+Authority}{Key\_Authority}}
+{\footnotesize\ttfamily \#define Key\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{pubkey }\end{DoxyParamCaption})~(authority\{1, \{\{pubkey, 1\}\}, \{\}\})}
+
+
+
+Key\+\_\+\+Authority is a shorthand way to create an inline Authority based on a key. 
+
+Invoke Key\+\_\+\+Authority passing the name of a public key in the current scope, and Key\+\_\+\+Authority will resolve inline to an authority which can be satisfied by a signature generated by the corresponding private key. \mbox{\Hypertarget{testing__macros_8hpp_a800aa131e713968af33b57b788d432d8}\label{testing__macros_8hpp_a800aa131e713968af33b57b788d432d8}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Link\+\_\+\+Authority@{Link\+\_\+\+Authority}}
+\index{Link\+\_\+\+Authority@{Link\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Link\+\_\+\+Authority}{Link\_Authority}}
+{\footnotesize\ttfamily \#define Link\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(L\+I\+N\+K\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to link named authority with a contract/message type. 
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Link alice's "money" authority with aacio::transfer}
+\mbox{\hyperlink{testing__macros_8hpp_a800aa131e713968af33b57b788d432d8}{Link\_Authority}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, \textcolor{stringliteral}{"money"}, aac, \textcolor{stringliteral}{"transfer"});
+\textcolor{comment}{// Set alice's "native" authority as default for aac contract}
+\mbox{\hyperlink{testing__macros_8hpp_a800aa131e713968af33b57b788d432d8}{Link\_Authority}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, \textcolor{stringliteral}{"money"}, aac);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_ab4d7e6e81e7b11b0c79d5f693c7798cf}\label{testing__macros_8hpp_ab4d7e6e81e7b11b0c79d5f693c7798cf}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Make\+\_\+\+Account@{Make\+\_\+\+Account}}
+\index{Make\+\_\+\+Account@{Make\+\_\+\+Account}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Make\+\_\+\+Account}{Make\_Account}}
+{\footnotesize\ttfamily \#define Make\+\_\+\+Account(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+A\+C\+CT, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Make\+\_\+\+Account is a shorthand way to create an account. 
+
+Use Make\+\_\+\+Account to create an account, including keys. The changes will be applied via a transaction applied to the provided blockchain object. The changes will not be incorporated into a block; they will be left in the pending state.
+
+Unless overridden, new accounts are created with a balance of \mbox{\hyperlink{structasset}{asset(100)}}
+
+Example\+: 
+\begin{DoxyCode}
+\mbox{\hyperlink{testing__macros_8hpp_ab4d7e6e81e7b11b0c79d5f693c7798cf}{Make\_Account}}(\mbox{\hyperlink{namespacechain}{chain}}, joe)
+\textcolor{comment}{// ... creates these objects:}
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\_key\_type}} joe\_private\_key;
+\mbox{\hyperlink{structpublic__key}{public\_key}} joe\_public\_key;
+\textcolor{comment}{// ...and also registers the account joe with owner and active authorities satisfied by these keys, created
+       by}
+\textcolor{comment}{// init0, with init0's active authority as joe's recovery authority, and initially endowed with asset(100)}
+\end{DoxyCode}
+
+
+You may specify a third argument for the creating account\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Same as MKACCT(chain, joe) except that sam will create joe's account instead of init0}
+\mbox{\hyperlink{testing__macros_8hpp_ab4d7e6e81e7b11b0c79d5f693c7798cf}{Make\_Account}}(\mbox{\hyperlink{namespacechain}{chain}}, joe, sam)
+\end{DoxyCode}
+
+
+You may specify a fourth argument for the amount to transfer in account creation\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Same as MKACCT(chain, joe, sam) except that sam will send joe asset(100) during creation}
+\mbox{\hyperlink{testing__macros_8hpp_ab4d7e6e81e7b11b0c79d5f693c7798cf}{Make\_Account}}(\mbox{\hyperlink{namespacechain}{chain}}, joe, sam, \mbox{\hyperlink{structasset}{asset}}(100))
+\end{DoxyCode}
+
+
+You may specify a fifth argument, which will be used as the owner authority (must be an Authority, N\+OT a key!).
+
+You may specify a sixth argument, which will be used as the active authority. If six or more arguments are provided, the default keypair will N\+OT be created or put into scope.
+
+You may specify a seventh argument, which will be used as the recovery authority. \mbox{\Hypertarget{testing__macros_8hpp_a3dad3d124d9377bd3101bb60dfeee01b}\label{testing__macros_8hpp_a3dad3d124d9377bd3101bb60dfeee01b}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Make\+\_\+\+Blockchain@{Make\+\_\+\+Blockchain}}
+\index{Make\+\_\+\+Blockchain@{Make\+\_\+\+Blockchain}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Make\+\_\+\+Blockchain}{Make\_Blockchain}}
+{\footnotesize\ttfamily \#define Make\+\_\+\+Blockchain(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+C\+H\+A\+IN, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Create/\+Open a testing\+\_\+blockchain, optionally with an ID. 
+
+Some helpful macros to reduce boilerplate when making testcases Creates and opens a testing\+\_\+blockchain with the first argument as its name, and, if present, the second argument as its ID. The ID should be provided without quotes.
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create testing\_blockchain chain1}
+\mbox{\hyperlink{testing__macros_8hpp_a3dad3d124d9377bd3101bb60dfeee01b}{Make\_Blockchain}}(chain1)
+
+\textcolor{comment}{// The above creates the following objects:}
+\mbox{\hyperlink{classchainbase_1_1database}{chainbase::database}} chain1\_db;
+block\_log chain1\_log;
+fork\_database chain1\_fdb;
+native\_contract::native\_contract\_chain\_initializer chain1\_initializer;
+testing\_blockchain chain1;
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a17895ac104cb5182cde2da8a2d56b141}\label{testing__macros_8hpp_a17895ac104cb5182cde2da8a2d56b141}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Make\+\_\+\+Blockchains@{Make\+\_\+\+Blockchains}}
+\index{Make\+\_\+\+Blockchains@{Make\+\_\+\+Blockchains}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Make\+\_\+\+Blockchains}{Make\_Blockchains}}
+{\footnotesize\ttfamily \#define Make\+\_\+\+Blockchains(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+S\+E\+Q\+\_\+\+F\+O\+R\+\_\+\+E\+A\+CH(M\+K\+C\+H\+A\+I\+N\+S\+\_\+\+M\+A\+C\+RO, \+\_\+, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Similar to \mbox{\hyperlink{testing__macros_8hpp_a3dad3d124d9377bd3101bb60dfeee01b}{Make\+\_\+\+Blockchain}}, but works with several chains at once. 
+
+Creates and opens several testing\+\_\+blockchains
+
+Example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create testing\_blockchains chain1 and chain2, with chain2 having ID "id2"}
+\mbox{\hyperlink{testing__macros_8hpp_a17895ac104cb5182cde2da8a2d56b141}{Make\_Blockchains}}((chain1)(chain2, id2))
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}\label{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Make\+\_\+\+Key@{Make\+\_\+\+Key}}
+\index{Make\+\_\+\+Key@{Make\+\_\+\+Key}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Make\+\_\+\+Key}{Make\_Key}}
+{\footnotesize\ttfamily \#define Make\+\_\+\+Key(\begin{DoxyParamCaption}\item[{}]{name }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{auto} name ## \_private\_key = private\_key\_type::regenerate(fc::digest(#name \textcolor{stringliteral}{"\_private\_key"})); \(\backslash\)
+   public\_key name ## \_public\_key = name ## \_private\_key.get\_public\_key(); \(\backslash\)
+   BOOST\_TEST\_CHECKPOINT(\textcolor{stringliteral}{"Created key "} #name \textcolor{stringliteral}{"\_public\_key"});
+\end{DoxyCode}
+
+
+Make\+\_\+\+Key is a shorthand way to create a keypair. 
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// This line:}
+\mbox{\hyperlink{testing__macros_8hpp_a86661eef62d5acc7d4c9284bdd4440fc}{Make\_Key}}(a\_key)
+\textcolor{comment}{// ...defines these objects:}
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\_key\_type}} a\_key\_private\_key;
+\mbox{\hyperlink{structpublic__key}{public\_key}} a\_key\_public\_key;
+\textcolor{comment}{// The private key is generated off of the sha256 hash of "a\_key\_private\_key", so it should be unique from
+       all}
+\textcolor{comment}{// other keys created with Make\_Key in the same scope.}
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a0832ea4dce1f452e099794157a75e920}\label{testing__macros_8hpp_a0832ea4dce1f452e099794157a75e920}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Make\+\_\+\+Network@{Make\+\_\+\+Network}}
+\index{Make\+\_\+\+Network@{Make\+\_\+\+Network}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Make\+\_\+\+Network}{Make\_Network}}
+{\footnotesize\ttfamily \#define Make\+\_\+\+Network(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+N\+ET, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Make\+\_\+\+Network is a shorthand way to create a testing\+\_\+network and connect some testing\+\_\+blockchains to it. 
+
+Example usage\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create and open testing\_blockchains named alice, bob, and charlie}
+MKDBS((alice)(bob)(charlie))
+\textcolor{comment}{// Create a testing\_network named net and connect alice and bob to it}
+\mbox{\hyperlink{testing__macros_8hpp_a0832ea4dce1f452e099794157a75e920}{Make\_Network}}(net, (alice)(bob))
+
+\textcolor{comment}{// Connect charlie to net, then disconnect alice}
+net.connect\_blockchain(charlie);
+net.disconnect\_blockchain(alice);
+
+\textcolor{comment}{// Create a testing\_network named net2 with no blockchains connected}
+\mbox{\hyperlink{testing__macros_8hpp_a0832ea4dce1f452e099794157a75e920}{Make\_Network}}(net2)
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_ae48335ba137563cad657ac185f9b5dde}\label{testing__macros_8hpp_ae48335ba137563cad657ac185f9b5dde}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Make\+\_\+\+Producer@{Make\+\_\+\+Producer}}
+\index{Make\+\_\+\+Producer@{Make\+\_\+\+Producer}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Make\+\_\+\+Producer}{Make\_Producer}}
+{\footnotesize\ttfamily \#define Make\+\_\+\+Producer(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(M\+K\+P\+D\+CR, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to create a block producer. 
+
+Use Make\+\_\+\+Producer to create a block producer\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create a block producer belonging to joe using signing\_key as the block signing key and config as the
+       producer's}
+\textcolor{comment}{// vote for a @ref BlockchainConfiguration:}
+\mbox{\hyperlink{testing__macros_8hpp_ae48335ba137563cad657ac185f9b5dde}{Make\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, joe, signing\_key, \mbox{\hyperlink{classconfig}{config}});
+
+\textcolor{comment}{// Create a block producer belonging to joe using signing\_key as the block signing key:}
+\mbox{\hyperlink{testing__macros_8hpp_ae48335ba137563cad657ac185f9b5dde}{Make\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, joe, signing\_key);
+
+\textcolor{comment}{// Create a block producer belonging to joe, using a new key as the block signing key:}
+\mbox{\hyperlink{testing__macros_8hpp_ae48335ba137563cad657ac185f9b5dde}{Make\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, joe);
+\textcolor{comment}{// ... creates the objects:}
+\mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\_key\_type}} joe\_producer\_private\_key;
+\mbox{\hyperlink{structpublic__key}{public\_key}} joe\_producer\_public\_key;
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_aff9e84a580828529fd92cc550d2ca2d8}\label{testing__macros_8hpp_aff9e84a580828529fd92cc550d2ca2d8}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Set\+\_\+\+Authority@{Set\+\_\+\+Authority}}
+\index{Set\+\_\+\+Authority@{Set\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Authority}{Set\_Authority}}
+{\footnotesize\ttfamily \#define Set\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(S\+E\+T\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to create or update named authority on an account. 
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Add a new authority named "money" to account "alice" as a child of her active authority}
+authority newAuth = \textcolor{comment}{//...}
+\mbox{\hyperlink{testing__macros_8hpp_aff9e84a580828529fd92cc550d2ca2d8}{Set\_Authority}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, \textcolor{stringliteral}{"money"}, \textcolor{stringliteral}{"active"}, newAuth);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a87c2c883ada644a67ee18b6c30ea5663}\label{testing__macros_8hpp_a87c2c883ada644a67ee18b6c30ea5663}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Set\+\_\+\+Code@{Set\+\_\+\+Code}}
+\index{Set\+\_\+\+Code@{Set\+\_\+\+Code}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Code}{Set\_Code}}
+{\footnotesize\ttfamily \#define Set\+\_\+\+Code(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(S\+E\+T\+C\+O\+DE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to set the code for an account. 
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{char}* wast = \textcolor{comment}{//...}
+\mbox{\hyperlink{testing__macros_8hpp_a87c2c883ada644a67ee18b6c30ea5663}{Set\_Code}}(\mbox{\hyperlink{namespacechain}{chain}}, codeacct, wast);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a740967e3534185f574224175067a0d6d}\label{testing__macros_8hpp_a740967e3534185f574224175067a0d6d}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Set\+\_\+\+Proxy@{Set\+\_\+\+Proxy}}
+\index{Set\+\_\+\+Proxy@{Set\+\_\+\+Proxy}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Set\+\_\+\+Proxy}{Set\_Proxy}}
+{\footnotesize\ttfamily \#define Set\+\_\+\+Proxy(\begin{DoxyParamCaption}\item[{}]{chain,  }\item[{}]{stakeholder,  }\item[{}]{proxy }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+   aacio::chain::signed\_transaction trx; \(\backslash\)
+   if (std::string(#stakeholder) != std::string(#\mbox{\hyperlink{namespaceproxy}{proxy}})) \(\backslash\)
+      transaction\_emplace\_message(trx, config::aac\_contract\_name, \(\backslash\)
+                         vector<types::account\_permission>\{ \{#stakeholder,\textcolor{stringliteral}{"active"}\} \}, \textcolor{stringliteral}{"setproxy"}, 
+      types::setproxy\{#stakeholder, #\mbox{\hyperlink{namespaceproxy}{proxy}}\}); \(\backslash\)
+   else \(\backslash\)
+      transaction\_emplace\_message(trx, config::aac\_contract\_name, \(\backslash\)
+                         vector<types::account\_permission>\{ \{#stakeholder,\textcolor{stringliteral}{"active"}\} \}, \textcolor{stringliteral}{"setproxy"}, 
+      types::setproxy\{#stakeholder, #\mbox{\hyperlink{namespaceproxy}{proxy}}\}); \(\backslash\)
+   trx.expiration = \mbox{\hyperlink{namespacechain}{chain}}.head\_block\_time() + 100; \(\backslash\)
+   transaction\_set\_reference\_block(trx, \mbox{\hyperlink{namespacechain}{chain}}.head\_block\_id()); \(\backslash\)
+   chain.push\_transaction(trx); \(\backslash\)
+\}
+\end{DoxyCode}
+
+
+Shorthand way to set voting proxy. 
+
+Use Set\+\_\+\+Proxy to set what account a stakeholding account proxies its voting power to 
+\begin{DoxyCode}
+\textcolor{comment}{// Proxy sam's votes to bob}
+\mbox{\hyperlink{testing__macros_8hpp_a740967e3534185f574224175067a0d6d}{Set\_Proxy}}(\mbox{\hyperlink{namespacechain}{chain}}, sam, bob);
+
+\textcolor{comment}{// Unproxy sam's votes}
+\mbox{\hyperlink{testing__macros_8hpp_a740967e3534185f574224175067a0d6d}{Set\_Proxy}}(\mbox{\hyperlink{namespacechain}{chain}}, sam, sam);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_ab5e4b99f55f1e43f817abbad6a4475de}\label{testing__macros_8hpp_ab5e4b99f55f1e43f817abbad6a4475de}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Stake\+\_\+\+Asset@{Stake\+\_\+\+Asset}}
+\index{Stake\+\_\+\+Asset@{Stake\+\_\+\+Asset}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Stake\+\_\+\+Asset}{Stake\_Asset}}
+{\footnotesize\ttfamily \#define Stake\+\_\+\+Asset(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(S\+T\+A\+KE, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to convert liquid funds to staked funds. 
+
+Use Stake\+\_\+\+Asset to stake liquid funds\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Convert 10 of bob's AAC from liquid to staked}
+\mbox{\hyperlink{testing__macros_8hpp_ab5e4b99f55f1e43f817abbad6a4475de}{Stake\_Asset}}(\mbox{\hyperlink{namespacechain}{chain}}, bob, \mbox{\hyperlink{structasset}{asset}}(10).amount);
+
+\textcolor{comment}{// Stake and transfer 10 AAC from alice to bob (alice pays liquid AAC and bob receives stake)}
+\mbox{\hyperlink{testing__macros_8hpp_ab5e4b99f55f1e43f817abbad6a4475de}{Stake\_Asset}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, bob, \mbox{\hyperlink{structasset}{asset}}(10).amount);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a4594291b51fd73960c7451f954245db3}\label{testing__macros_8hpp_a4594291b51fd73960c7451f954245db3}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Transfer\+\_\+\+Asset@{Transfer\+\_\+\+Asset}}
+\index{Transfer\+\_\+\+Asset@{Transfer\+\_\+\+Asset}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Transfer\+\_\+\+Asset}{Transfer\_Asset}}
+{\footnotesize\ttfamily \#define Transfer\+\_\+\+Asset(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(X\+F\+ER, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to transfer funds. 
+
+Use Transfer\+\_\+\+Asset to send funds from one account to another\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Send 10 AAC from alice to bob}
+\mbox{\hyperlink{testing__macros_8hpp_a4594291b51fd73960c7451f954245db3}{Transfer\_Asset}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, bob, \mbox{\hyperlink{structasset}{asset}}(10));
+
+\textcolor{comment}{// Send 10 AAC from alice to bob with memo "Thanks for all the fish!"}
+\mbox{\hyperlink{testing__macros_8hpp_a4594291b51fd73960c7451f954245db3}{Transfer\_Asset}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, bob, \mbox{\hyperlink{structasset}{asset}}(10), \textcolor{stringliteral}{"Thanks for all the fish!"});
+\end{DoxyCode}
+
+
+The changes will be applied via a transaction applied to the provided blockchain object. The changes will not be incorporated into a block; they will be left in the pending state. \mbox{\Hypertarget{testing__macros_8hpp_a551f387b46233eab8329bc854615dea2}\label{testing__macros_8hpp_a551f387b46233eab8329bc854615dea2}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Unlink\+\_\+\+Authority@{Unlink\+\_\+\+Authority}}
+\index{Unlink\+\_\+\+Authority@{Unlink\+\_\+\+Authority}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Unlink\+\_\+\+Authority}{Unlink\_Authority}}
+{\footnotesize\ttfamily \#define Unlink\+\_\+\+Authority(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(U\+N\+L\+I\+N\+K\+A\+U\+TH, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to unlink named authority from a contract/message type. 
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// Unlink alice's authority for aacio::transfer}
+\mbox{\hyperlink{testing__macros_8hpp_a551f387b46233eab8329bc854615dea2}{Unlink\_Authority}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, aac, \textcolor{stringliteral}{"transfer"});
+\textcolor{comment}{// Unset alice's default authority for aac contract}
+\mbox{\hyperlink{testing__macros_8hpp_a551f387b46233eab8329bc854615dea2}{Unlink\_Authority}}(\mbox{\hyperlink{namespacechain}{chain}}, alice, aac);
+\end{DoxyCode}
+ \mbox{\Hypertarget{testing__macros_8hpp_a9192f7d2c14ffd57ab280c1ead0c89c8}\label{testing__macros_8hpp_a9192f7d2c14ffd57ab280c1ead0c89c8}} 
+\index{testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}!Update\+\_\+\+Producer@{Update\+\_\+\+Producer}}
+\index{Update\+\_\+\+Producer@{Update\+\_\+\+Producer}!testing\+\_\+macros.\+hpp@{testing\+\_\+macros.\+hpp}}
+\subsubsection{\texorpdfstring{Update\+\_\+\+Producer}{Update\_Producer}}
+{\footnotesize\ttfamily \#define Update\+\_\+\+Producer(\begin{DoxyParamCaption}\item[{}]{... }\end{DoxyParamCaption})~B\+O\+O\+S\+T\+\_\+\+P\+P\+\_\+\+O\+V\+E\+R\+L\+O\+AD(U\+P\+P\+D\+CR, \+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)(\+\_\+\+\_\+\+V\+A\+\_\+\+A\+R\+G\+S\+\_\+\+\_\+)}
+
+
+
+Shorthand way to update a block producer. 
+
+\begin{DoxyNote}{Note}
+Unlike with the Make\+\_\+$\ast$ macros, the Update\+\_\+$\ast$ macros take an expression as the owner/name field, so be sure to wrap names like this in quotes. You may also pass a normal C++ expression to be evaulated here instead. The reason for this discrepancy is that the Make\+\_\+$\ast$ macros add identifiers to the current scope based on the owner/name field; moreover, which can\textquotesingle{}t be done with C++ expressions; however, the Update\+\_\+$\ast$ macros do not add anything to the scope, and it\textquotesingle{}s more likely that these will be used in a loop or other context where it is inconvenient to know the owner/name at compile time.
+\end{DoxyNote}
+Use Update\+\_\+\+Producer to update a block producer\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Update a block producer belonging to joe using signing\_key as the new block signing key, and config as
+       the}
+\textcolor{comment}{// producer's new vote for a @ref BlockchainConfiguration:}
+\mbox{\hyperlink{testing__macros_8hpp_a9192f7d2c14ffd57ab280c1ead0c89c8}{Update\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, \textcolor{stringliteral}{"joe"}, signing\_key, \mbox{\hyperlink{classconfig}{config}})
+
+\textcolor{comment}{// Update a block producer belonging to joe using signing\_key as the new block signing key:}
+\mbox{\hyperlink{testing__macros_8hpp_a9192f7d2c14ffd57ab280c1ead0c89c8}{Update\_Producer}}(\mbox{\hyperlink{namespacechain}{chain}}, \textcolor{stringliteral}{"joe"}, signing\_key)
+\end{DoxyCode}
+ 

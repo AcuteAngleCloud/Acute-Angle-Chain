@@ -1,0 +1,42 @@
+.TH "ConstructibleFromTupleAndInt" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ConstructibleFromTupleAndInt
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBState\fP { \fBFromTuple\fP, \fBFromInt\fP, \fBCopied\fP, \fBMoved\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBConstructibleFromTupleAndInt\fP (\fBConstructibleFromTupleAndInt\fP const &)"
+.br
+.ti -1c
+.RI "\fBConstructibleFromTupleAndInt\fP (\fBConstructibleFromTupleAndInt\fP &&)"
+.br
+.ti -1c
+.RI "template<class Tuple , class  = typename std::enable_if<IsTuple<Tuple>::value>::type> \fBConstructibleFromTupleAndInt\fP (Tuple &&)"
+.br
+.ti -1c
+.RI "\fBConstructibleFromTupleAndInt\fP (int)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "State \fBstate\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

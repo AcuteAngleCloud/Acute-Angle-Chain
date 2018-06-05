@@ -1,0 +1,50 @@
+.TH "appbase::plugin< Impl >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+appbase::plugin< Impl >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBappbase::abstract_plugin\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBstate\fP \fBget_state\fP () const override"
+.br
+.ti -1c
+.RI "virtual const std::string & \fBname\fP () const override"
+.br
+.ti -1c
+.RI "virtual void \fBregister_dependencies\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBinitialize\fP (const variables_map &options) override"
+.br
+.ti -1c
+.RI "virtual void \fBstartup\fP () override"
+.br
+.ti -1c
+.RI "virtual void \fBshutdown\fP () override"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBplugin\fP (const string &name)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Impl> virtual void \fBappbase::plugin\fP< Impl >::initialize (const variables_map & options)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+if initial state was not registered, final state cannot be initiaized 
+.PP
+Implements \fBappbase::abstract_plugin\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

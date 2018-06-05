@@ -1,0 +1,11 @@
+digraph "plugins/txn_test_gen_plugin/include/aacio/txn_test_gen_plugin" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_666a30e2a074402f8e55b2695bb21c40 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="aacio" fontname="Helvetica", fontsize="10", URL="dir_666a30e2a074402f8e55b2695bb21c40.html"]
+  dir_ca73dec2dc0b40c59ef3d50d53566727 [shape=box, label="txn_test_gen_plugin", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_ca73dec2dc0b40c59ef3d50d53566727.html"];
+  }
+  dir_f833ff7a85c55360bd990f87a6f90636 [shape=box label="http_plugin" fillcolor="white" style="filled" color="red" URL="dir_f833ff7a85c55360bd990f87a6f90636.html"];
+  dir_ca73dec2dc0b40c59ef3d50d53566727->dir_f833ff7a85c55360bd990f87a6f90636 [headlabel="1", labeldistance=1.5 headhref="dir_001879_001856.html"];
+}

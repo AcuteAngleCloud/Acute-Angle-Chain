@@ -1,0 +1,54 @@
+.TH "aacio::singleton< Code, SingletonName, BillToAccount, T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::singleton< Code, SingletonName, BillToAccount, T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <singleton\&.hpp>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBexists\fP (\fBscope_name\fP scope=Code)"
+.br
+.ti -1c
+.RI "static \fBT\fP \fBget\fP (\fBscope_name\fP scope=Code)"
+.br
+.ti -1c
+.RI "static \fBT\fP \fBget_or_default\fP (\fBscope_name\fP scope=Code, const \fBT\fP &def=\fBT\fP())"
+.br
+.ti -1c
+.RI "static \fBT\fP \fBget_or_create\fP (\fBscope_name\fP scope=Code, const \fBT\fP &def=\fBT\fP())"
+.br
+.ti -1c
+.RI "static void \fBset\fP (const \fBT\fP &value=\fBT\fP(), \fBscope_name\fP scope=Code, \fBaccount_name\fP b=BillToAccount)"
+.br
+.ti -1c
+.RI "static void \fBremove\fP (\fBscope_name\fP scope=Code)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<account_name Code, uint64_t SingletonName, account_name BillToAccount, typename T>
+.br
+class aacio::singleton< Code, SingletonName, BillToAccount, T >"
+This wrapper uses a single table to store named objects various types\&.
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fICode\fP - the name of the code which has write permission 
+.br
+\fISingletonName\fP - the name of this singlton variable 
+.br
+\fI\fBT\fP\fP - the type of the singleton 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

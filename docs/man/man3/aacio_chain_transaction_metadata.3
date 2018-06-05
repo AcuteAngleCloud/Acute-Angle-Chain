@@ -1,0 +1,101 @@
+.TH "aacio::chain::transaction_metadata" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::transaction_metadata
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtransaction_metadata\fP (const \fBtransaction\fP &t, const \fBtime_point\fP &published, const \fBaccount_name\fP &sender, uint128_t sender_id, const char *raw_data, size_t raw_size, const \fBoptional\fP< \fBtime_point\fP > &processing_deadline)"
+.br
+.ti -1c
+.RI "\fBtransaction_metadata\fP (const \fBpacked_transaction\fP &t, \fBchain_id_type\fP chainid, const \fBtime_point\fP &published, const \fBoptional\fP< \fBtime_point\fP > &processing_deadline=\fBoptional\fP< \fBtime_point\fP >(), bool implicit=false)"
+.br
+.ti -1c
+.RI "\fBtransaction_metadata\fP (\fBtransaction_metadata\fP &&)=default"
+.br
+.ti -1c
+.RI "\fBtransaction_metadata\fP & \fBoperator=\fP (\fBtransaction_metadata\fP &&)=default"
+.br
+.ti -1c
+.RI "const \fBtransaction\fP & \fBtrx\fP () const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBoptional\fP< \fBbytes\fP > \fBraw_trx\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBtransaction\fP > \fBdecompressed_trx\fP"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBbytes\fP > \fBcontext_free_data\fP"
+.br
+.ti -1c
+.RI "\fBdigest_type\fP \fBpacked_digest\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< flat_set< \fBpublic_key_type\fP > > \fBsigning_keys\fP"
+.br
+.ti -1c
+.RI "\fBtransaction_id_type\fP \fBid\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBregion_id\fP = 0"
+.br
+.ti -1c
+.RI "uint32_t \fBcycle_index\fP = 0"
+.br
+.ti -1c
+.RI "uint32_t \fBshard_index\fP = 0"
+.br
+.ti -1c
+.RI "uint32_t \fBbillable_packed_size\fP = 0"
+.br
+.ti -1c
+.RI "uint32_t \fBsignature_count\fP = 0"
+.br
+.ti -1c
+.RI "\fBtime_point\fP \fBpublished\fP"
+.br
+.ti -1c
+.RI "\fBfc::microseconds\fP \fBdelay\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBaccount_name\fP > \fBsender\fP"
+.br
+.ti -1c
+.RI "uint128_t \fBsender_id\fP = 0"
+.br
+.ti -1c
+.RI "const char * \fBraw_data\fP = nullptr"
+.br
+.ti -1c
+.RI "size_t \fBraw_size\fP = 0"
+.br
+.ti -1c
+.RI "\fBvector\fP< char > \fBpacked_trx\fP"
+.br
+.ti -1c
+.RI "bool \fBis_implicit\fP = false"
+.br
+.ti -1c
+.RI "\fBoptional\fP< const \fBvector\fP< \fBshard_lock\fP > * > \fBallowed_read_locks\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< const \fBvector\fP< \fBshard_lock\fP > * > \fBallowed_write_locks\fP"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBtime_point\fP > \fBprocessing_deadline\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

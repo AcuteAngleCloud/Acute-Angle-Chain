@@ -1,0 +1,212 @@
+.TH "appbase::application" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+appbase::application
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBset_version\fP (uint64_t \fBversion\fP)"
+.br
+.RI "Set version\&. "
+.ti -1c
+.RI "uint64_t \fBversion\fP () const"
+.br
+.RI "Get version\&. "
+.ti -1c
+.RI "void \fBset_default_data_dir\fP (const bfs::path &\fBdata_dir\fP='data\-dir')"
+.br
+.RI "Set default data directory\&. "
+.ti -1c
+.RI "bfs::path \fBdata_dir\fP () const"
+.br
+.RI "Get data directory\&. "
+.ti -1c
+.RI "void \fBset_default_config_dir\fP (const bfs::path &\fBconfig_dir\fP='etc')"
+.br
+.RI "Set default config directory\&. "
+.ti -1c
+.RI "bfs::path \fBconfig_dir\fP () const"
+.br
+.RI "Get config directory\&. "
+.ti -1c
+.RI "bfs::path \fBget_logging_conf\fP () const"
+.br
+.RI "Get logging configuration path\&. "
+.ti -1c
+.RI "template<typename\&.\&.\&. Plugin> bool \fBinitialize\fP (int argc, char **argv)"
+.br
+.RI "Looks for the --plugin commandline / config option and calls initialize on those plugins\&. "
+.ti -1c
+.RI "void \fBstartup\fP ()"
+.br
+.ti -1c
+.RI "void \fBshutdown\fP ()"
+.br
+.ti -1c
+.RI "void \fBexec\fP ()"
+.br
+.ti -1c
+.RI "void \fBquit\fP ()"
+.br
+.ti -1c
+.RI "\fBabstract_plugin\fP * \fBfind_plugin\fP (const string &name) const"
+.br
+.ti -1c
+.RI "\fBabstract_plugin\fP & \fBget_plugin\fP (const string &name) const"
+.br
+.ti -1c
+.RI "template<typename Plugin > auto & \fBregister_plugin\fP ()"
+.br
+.ti -1c
+.RI "template<typename Plugin > Plugin * \fBfind_plugin\fP () const"
+.br
+.ti -1c
+.RI "template<typename Plugin > Plugin & \fBget_plugin\fP () const"
+.br
+.ti -1c
+.RI "boost::asio::io_service & \fBget_io_service\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBapplication\fP & \fBinstance\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBinitialize_impl\fP (int argc, char **argv, \fBvector\fP< \fBabstract_plugin\fP *> autostart_plugins)"
+.br
+.in -1c
+.PP
+.RI "\fB\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "void \fBplugin_initialized\fP (\fBabstract_plugin\fP &plug)"
+.br
+.ti -1c
+.RI "void \fBplugin_started\fP (\fBabstract_plugin\fP &plug)"
+.br
+.in -1c
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename Impl > class \fBplugin\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "bfs::path appbase::application::config_dir () const"
+
+.PP
+Get config directory\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Config directory, possibly from command line 
+.RE
+.PP
+
+.SS "bfs::path appbase::application::data_dir () const"
+
+.PP
+Get data directory\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Data directory, possibly from command line 
+.RE
+.PP
+
+.SS "void appbase::application::exec ()"
+Wait until quit(), SIGINT or SIGTERM and then shutdown perform synchronous shutdown 
+.SS "bfs::path appbase::application::get_logging_conf () const"
+
+.PP
+Get logging configuration path\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Logging configuration location from command line 
+.RE
+.PP
+
+.SS "template<typename\&.\&.\&. Plugin> bool appbase::application::initialize (int argc, char ** argv)\fC [inline]\fP"
+
+.PP
+Looks for the --plugin commandline / config option and calls initialize on those plugins\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIPlugin\fP List of plugins to initalize even if not mentioned by configuration\&. For plugins started by configuration settings or dependency resolution, this template has no effect\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the application and plugins were initialized, false or exception on error 
+.RE
+.PP
+
+.SS "void appbase::application::plugin_initialized (\fBabstract_plugin\fP & plug)\fC [inline]\fP, \fC [protected]\fP"
+these notifications get called from the plugin when their state changes so that the application can call shutdown in the reverse order\&. 
+.SS "void appbase::application::set_default_config_dir (const bfs::path & config_dir = \fC'etc'\fP)"
+
+.PP
+Set default config directory\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIconfig_dir\fP Default configuration directory to use if not specified on the command line\&. 
+.RE
+.PP
+
+.SS "void appbase::application::set_default_data_dir (const bfs::path & data_dir = \fC'data\-dir'\fP)"
+
+.PP
+Set default data directory\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdata_dir\fP Default data directory to use if not specified on the command line\&. 
+.RE
+.PP
+
+.SS "void appbase::application::set_version (uint64_t version)"
+
+.PP
+Set version\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIversion\fP Version output with -v/--version 
+.RE
+.PP
+
+.SS "uint64_t appbase::application::version () const"
+
+.PP
+Get version\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+Version output with -v/--version 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

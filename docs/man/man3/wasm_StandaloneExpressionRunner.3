@@ -1,0 +1,61 @@
+.TH "wasm::StandaloneExpressionRunner" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::StandaloneExpressionRunner
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::ExpressionRunner< StandaloneExpressionRunner >\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBNonstandaloneException\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFlow\fP \fBvisitLoop\fP (\fBLoop\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitCall\fP (\fBCall\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitCallIndirect\fP (\fBCallIndirect\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitGetLocal\fP (\fBGetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitSetLocal\fP (\fBSetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitGetGlobal\fP (\fBGetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitSetGlobal\fP (\fBSetGlobal\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitLoad\fP (\fBLoad\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitStore\fP (\fBStore\fP *curr)"
+.br
+.ti -1c
+.RI "\fBFlow\fP \fBvisitHost\fP (\fBHost\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBtrap\fP (const char *why) override"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

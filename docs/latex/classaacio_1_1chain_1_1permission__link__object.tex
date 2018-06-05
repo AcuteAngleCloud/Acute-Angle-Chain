@@ -1,0 +1,32 @@
+\hypertarget{classaacio_1_1chain_1_1permission__link__object}{}\section{aacio\+:\+:chain\+:\+:permission\+\_\+link\+\_\+object Class Reference}
+\label{classaacio_1_1chain_1_1permission__link__object}\index{aacio\+::chain\+::permission\+\_\+link\+\_\+object@{aacio\+::chain\+::permission\+\_\+link\+\_\+object}}
+
+
+The \mbox{\hyperlink{classaacio_1_1chain_1_1permission__link__object}{permission\+\_\+link\+\_\+object}} class assigns permission\+\_\+objects to message types.  
+
+
+
+
+{\ttfamily \#include $<$permission\+\_\+link\+\_\+object.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:permission\+\_\+link\+\_\+object\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:permission\+\_\+link\+\_\+object\+:
+% FIG 1
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{classaacio_1_1chain_1_1permission__link__object}{permission\+\_\+link\+\_\+object}} class assigns permission\+\_\+objects to message types. 
+
+This class records the links from contracts and message types within those contracts to permission\+\_\+objects defined by the user to record the authority required to execute those messages within those contracts. For example, suppose we have a contract called \char`\"{}currency\char`\"{} and that contract defines a message called \char`\"{}transfer\char`\"{}. Furthermore, suppose a user, \char`\"{}joe\char`\"{}, has a permission level called \char`\"{}money\char`\"{} and joe would like to require that permission level in order for his account to invoke \mbox{\hyperlink{structaacio_1_1currency_1_1transfer}{currency.\+transfer}}. To do this, joe would create a \mbox{\hyperlink{classaacio_1_1chain_1_1permission__link__object}{permission\+\_\+link\+\_\+object}} for his account with \char`\"{}currency\char`\"{} as the code account, \char`\"{}transfer\char`\"{} as the message\+\_\+type, and \char`\"{}money\char`\"{} as the required\+\_\+permission. After this, in order to validate, any message to \char`\"{}currency\char`\"{} of type \char`\"{}transfer\char`\"{} that requires joe\textquotesingle{}s approval would require signatures sufficient to satisfy joe\textquotesingle{}s \char`\"{}money\char`\"{} authority.
+
+Accounts may set links to individual message types, or may set default permission requirements for all messages to a given contract. To set the default for all messages to a given contract, set message\+\_\+type to the empty string. When looking up which permission to use, if a link is found for a particular \{account, code, message\+\_\+type\} triplet, then the required\+\_\+permission from that link is used. If no such link is found, but a link is found for \{account, code, \char`\"{}\char`\"{}\}, then the required\+\_\+permission from that link is used. If no such link is found, account\textquotesingle{}s active authority is used. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{permission__link__object_8hpp}{permission\+\_\+link\+\_\+object.\+hpp}}\end{DoxyCompactItemize}

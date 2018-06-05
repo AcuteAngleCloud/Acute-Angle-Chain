@@ -1,0 +1,18 @@
+digraph "contracts/musl/upstream/include/unistd.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="contracts/musl/upstream\l/include/unistd.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="stdint.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$musl_2upstream_2include_2stdint_8h_source.html"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="bits/alltypes.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$alltypes_8h_source.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="bits/wchar.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$musl_2upstream_2include_2bits_2wchar_8h_source.html"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="bits/stdint.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$musl_2upstream_2include_2bits_2stdint_8h_source.html"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="bits/stddef.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$musl_2upstream_2include_2bits_2stddef_8h_source.html"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

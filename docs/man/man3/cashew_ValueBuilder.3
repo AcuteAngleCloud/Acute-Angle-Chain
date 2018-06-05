@@ -1,0 +1,171 @@
+.TH "cashew::ValueBuilder" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cashew::ValueBuilder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBcashew::DotZeroValueBuilder\fP\&.
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBRef\fP \fBmakeRawArray\fP (int size_hint=0)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeToplevel\fP ()"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeString\fP (\fBIString\fP str)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeBlock\fP ()"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeName\fP (\fBIString\fP name)"
+.br
+.ti -1c
+.RI "static void \fBsetBlockContent\fP (\fBRef\fP target, \fBRef\fP block)"
+.br
+.ti -1c
+.RI "static void \fBappendToBlock\fP (\fBRef\fP block, \fBRef\fP element)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBRef\fP target)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBRef\fP target, \fBRef\fP \fBarg\fP)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBIString\fP target)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBIString\fP target, \fBRef\fP \fBarg\fP)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBIString\fP target, \fBRef\fP arg1, \fBRef\fP arg2)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBIString\fP target, \fBRef\fP arg1, \fBRef\fP arg2, \fBRef\fP arg3, \fBRef\fP arg4)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBIString\fP target, \fBRef\fP arg1, \fBRef\fP arg2, \fBRef\fP arg3, \fBRef\fP arg4, \fBRef\fP arg5, \fBRef\fP arg6, \fBRef\fP arg7, \fBRef\fP arg8)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeCall\fP (\fBIString\fP target, \fBRef\fP arg1, \fBRef\fP arg2, \fBRef\fP arg3, \fBRef\fP arg4, \fBRef\fP arg5, \fBRef\fP arg6, \fBRef\fP arg7, \fBRef\fP arg8, \fBRef\fP arg9, \fBRef\fP arg10, \fBRef\fP arg11, \fBRef\fP arg12, \fBRef\fP arg13, \fBRef\fP arg14, \fBRef\fP arg15, \fBRef\fP arg16)"
+.br
+.ti -1c
+.RI "static void \fBappendToCall\fP (\fBRef\fP call, \fBRef\fP element)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeStatement\fP (\fBRef\fP contents)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeDouble\fP (double \fBnum\fP)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeInt\fP (uint32_t \fBnum\fP)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeNum\fP (double \fBnum\fP)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeUnary\fP (\fBIString\fP op, \fBRef\fP value)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeBinary\fP (\fBRef\fP left, \fBIString\fP op, \fBRef\fP right)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakePrefix\fP (\fBIString\fP op, \fBRef\fP right)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeFunction\fP (\fBIString\fP name)"
+.br
+.ti -1c
+.RI "static void \fBappendArgumentToFunction\fP (\fBRef\fP \fBfunc\fP, \fBIString\fP \fBarg\fP)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeVar\fP (bool is_const=false)"
+.br
+.ti -1c
+.RI "static void \fBappendToVar\fP (\fBRef\fP var, \fBIString\fP name, \fBRef\fP value)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeReturn\fP (\fBRef\fP value)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeIndexing\fP (\fBRef\fP target, \fBRef\fP index)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeIf\fP (\fBRef\fP condition, \fBRef\fP ifTrue, \fBRef\fP ifFalse)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeConditional\fP (\fBRef\fP condition, \fBRef\fP ifTrue, \fBRef\fP ifFalse)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeSeq\fP (\fBRef\fP left, \fBRef\fP right)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeDo\fP (\fBRef\fP body, \fBRef\fP condition)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeWhile\fP (\fBRef\fP condition, \fBRef\fP body)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeFor\fP (\fBRef\fP init, \fBRef\fP condition, \fBRef\fP inc, \fBRef\fP body)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeBreak\fP (\fBIString\fP label)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeContinue\fP (\fBIString\fP label)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeLabel\fP (\fBIString\fP name, \fBRef\fP body)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeSwitch\fP (\fBRef\fP input)"
+.br
+.ti -1c
+.RI "static void \fBappendCaseToSwitch\fP (\fBRef\fP switch_, \fBRef\fP \fBarg\fP)"
+.br
+.ti -1c
+.RI "static void \fBappendDefaultToSwitch\fP (\fBRef\fP switch_)"
+.br
+.ti -1c
+.RI "static void \fBappendCodeToSwitch\fP (\fBRef\fP switch_, \fBRef\fP code, bool explicitBlock)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeDot\fP (\fBRef\fP obj, \fBIString\fP key)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeDot\fP (\fBRef\fP obj, \fBRef\fP key)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeNew\fP (\fBRef\fP call)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeArray\fP ()"
+.br
+.ti -1c
+.RI "static void \fBappendToArray\fP (\fBRef\fP array, \fBRef\fP element)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeObject\fP ()"
+.br
+.ti -1c
+.RI "static void \fBappendToObject\fP (\fBRef\fP array, \fBIString\fP key, \fBRef\fP value)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakeSub\fP (\fBRef\fP obj, \fBRef\fP index)"
+.br
+.ti -1c
+.RI "static \fBRef\fP \fBmakePtrShift\fP (\fBRef\fP ptr, int shifts)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

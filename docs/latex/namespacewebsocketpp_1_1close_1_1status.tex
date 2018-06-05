@@ -1,0 +1,117 @@
+\hypertarget{namespacewebsocketpp_1_1close_1_1status}{}\section{websocketpp\+:\+:close\+:\+:status Namespace Reference}
+\label{namespacewebsocketpp_1_1close_1_1status}\index{websocketpp\+::close\+::status@{websocketpp\+::close\+::status}}
+
+
+\mbox{\hyperlink{struct_a}{A}} package of types and methods for manipulating Web\+Socket close status\textquotesingle{}.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}\label{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}} 
+typedef uint16\+\_\+t \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}}
+\begin{DoxyCompactList}\small\item\em The type of a close code value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_af26a61f8a8c3247cf656349f96ea3008}{reserved}} (\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}} code)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_test}{Test}} whether a close code is in a reserved range. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_ad024f852889be28eadcec8209fdf9bc8}{invalid}} (\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}} code)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{struct_test}{Test}} whether a close code is invalid on the wire. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a3f9ce953f12693f74493e2eb7a80952b}{terminal}} (\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}} code)
+\begin{DoxyCompactList}\small\item\em Determine if the code represents an unrecoverable error. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a4bf4987c79165b134ed1207a567ce209}{get\+\_\+string}} (\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}} code)
+\begin{DoxyCompactList}\small\item\em Return a human readable interpretation of a Web\+Socket close code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{struct_a}{A}} package of types and methods for manipulating Web\+Socket close status\textquotesingle{}. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacewebsocketpp_1_1close_1_1status_a4bf4987c79165b134ed1207a567ce209}\label{namespacewebsocketpp_1_1close_1_1status_a4bf4987c79165b134ed1207a567ce209}} 
+\index{websocketpp\+::close\+::status@{websocketpp\+::close\+::status}!get\+\_\+string@{get\+\_\+string}}
+\index{get\+\_\+string@{get\+\_\+string}!websocketpp\+::close\+::status@{websocketpp\+::close\+::status}}
+\subsubsection{\texorpdfstring{get\+\_\+string()}{get\_string()}}
+{\footnotesize\ttfamily std\+::string websocketpp\+::close\+::status\+::get\+\_\+string (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a human readable interpretation of a Web\+Socket close code. 
+
+See \href{https://tools.ietf.org/html/rfc6455#section-7.4}{\tt https\+://tools.\+ietf.\+org/html/rfc6455\#section-\/7.\+4} for more details.
+
+\begin{DoxySince}{Since}
+0.\+3.\+0
+\end{DoxySince}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & The code to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_a}{A}} human readable interpretation of the code. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{namespacewebsocketpp_1_1close_1_1status_ad024f852889be28eadcec8209fdf9bc8}\label{namespacewebsocketpp_1_1close_1_1status_ad024f852889be28eadcec8209fdf9bc8}} 
+\index{websocketpp\+::close\+::status@{websocketpp\+::close\+::status}!invalid@{invalid}}
+\index{invalid@{invalid}!websocketpp\+::close\+::status@{websocketpp\+::close\+::status}}
+\subsubsection{\texorpdfstring{invalid()}{invalid()}}
+{\footnotesize\ttfamily bool websocketpp\+::close\+::status\+::invalid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{struct_test}{Test}} whether a close code is invalid on the wire. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & The code to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not code is invalid on the wire 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{namespacewebsocketpp_1_1close_1_1status_af26a61f8a8c3247cf656349f96ea3008}\label{namespacewebsocketpp_1_1close_1_1status_af26a61f8a8c3247cf656349f96ea3008}} 
+\index{websocketpp\+::close\+::status@{websocketpp\+::close\+::status}!reserved@{reserved}}
+\index{reserved@{reserved}!websocketpp\+::close\+::status@{websocketpp\+::close\+::status}}
+\subsubsection{\texorpdfstring{reserved()}{reserved()}}
+{\footnotesize\ttfamily bool websocketpp\+::close\+::status\+::reserved (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{struct_test}{Test}} whether a close code is in a reserved range. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & The code to test \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether or not code is reserved 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{namespacewebsocketpp_1_1close_1_1status_a3f9ce953f12693f74493e2eb7a80952b}\label{namespacewebsocketpp_1_1close_1_1status_a3f9ce953f12693f74493e2eb7a80952b}} 
+\index{websocketpp\+::close\+::status@{websocketpp\+::close\+::status}!terminal@{terminal}}
+\index{terminal@{terminal}!websocketpp\+::close\+::status@{websocketpp\+::close\+::status}}
+\subsubsection{\texorpdfstring{terminal()}{terminal()}}
+{\footnotesize\ttfamily bool websocketpp\+::close\+::status\+::terminal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacewebsocketpp_1_1close_1_1status_a8614a5c4733d708e2d2a32191c5bef84}{value}}}]{code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determine if the code represents an unrecoverable error. 
+
+There is a class of errors for which once they are discovered normal Web\+Socket functionality can no longer occur. This function determines if a given code is one of these values. This information is used to determine if the system has the capability of waiting for a close acknowledgement or if it should drop the T\+CP connection immediately after sending its close frame.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em code} & The value to test. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_true}{True}} if the code represents an unrecoverable error 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 3

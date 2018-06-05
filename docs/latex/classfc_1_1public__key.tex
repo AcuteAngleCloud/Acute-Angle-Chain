@@ -1,0 +1,56 @@
+\hypertarget{classfc_1_1public__key}{}\section{fc\+:\+:public\+\_\+key Class Reference}
+\label{classfc_1_1public__key}\index{fc\+::public\+\_\+key@{fc\+::public\+\_\+key}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a4c88ccadf891b6bec9028f3a1fb14c3c}\label{classfc_1_1public__key_a4c88ccadf891b6bec9028f3a1fb14c3c}} 
+{\bfseries public\+\_\+key} (const \mbox{\hyperlink{classstd_1_1vector}{bytes}} \&d)
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_ad624a05c27f37e50c9f349f1b8c94869}\label{classfc_1_1public__key_ad624a05c27f37e50c9f349f1b8c94869}} 
+{\bfseries public\+\_\+key} (const \mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \&k)
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a1f25146492883321afc46035f999c072}\label{classfc_1_1public__key_a1f25146492883321afc46035f999c072}} 
+{\bfseries public\+\_\+key} (\mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \&\&k)
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a77d99a8691b5df020d1f958fe0a29104}\label{classfc_1_1public__key_a77d99a8691b5df020d1f958fe0a29104}} 
+{\bfseries operator bool} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_afe5228f2e38f14701911eac577f4da85}\label{classfc_1_1public__key_afe5228f2e38f14701911eac577f4da85}} 
+\mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \& {\bfseries operator=} (const \mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \&p)
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_add48eb28c65a78c8555121793a74d08e}\label{classfc_1_1public__key_add48eb28c65a78c8555121793a74d08e}} 
+\mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \& {\bfseries operator=} (\mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \&\&p)
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a9fa1c5e971398454159143fcbc4c4e52}\label{classfc_1_1public__key_a9fa1c5e971398454159143fcbc4c4e52}} 
+bool {\bfseries verify} (const \mbox{\hyperlink{classfc_1_1sha1}{sha1}} \&digest, const \mbox{\hyperlink{classfc_1_1array}{array}}$<$ char, 2048/8 $>$ \&sig) const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_aadd02c26a13e12b5934680c997b93470}\label{classfc_1_1public__key_aadd02c26a13e12b5934680c997b93470}} 
+bool {\bfseries verify} (const \mbox{\hyperlink{classfc_1_1sha1}{sha1}} \&digest, const \mbox{\hyperlink{classstd_1_1vector}{signature}} \&sig) const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a1cfc06363431d788e60ea4cfe5290c87}\label{classfc_1_1public__key_a1cfc06363431d788e60ea4cfe5290c87}} 
+bool {\bfseries verify} (const \mbox{\hyperlink{classfc_1_1sha256}{sha256}} \&digest, const \mbox{\hyperlink{classstd_1_1vector}{signature}} \&sig) const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a1f6bcd79a16dbed75bfb2cc8e1c40509}\label{classfc_1_1public__key_a1f6bcd79a16dbed75bfb2cc8e1c40509}} 
+\mbox{\hyperlink{classstd_1_1vector}{bytes}} {\bfseries encrypt} (const char $\ast$data, size\+\_\+t len) const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a16cef8805a0a977135fbdbac890e11ad}\label{classfc_1_1public__key_a16cef8805a0a977135fbdbac890e11ad}} 
+\mbox{\hyperlink{classstd_1_1vector}{bytes}} {\bfseries encrypt} (const \mbox{\hyperlink{classstd_1_1vector}{bytes}} \&) const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a60336ba1fea99c80a2d324e2e5a65513}\label{classfc_1_1public__key_a60336ba1fea99c80a2d324e2e5a65513}} 
+\mbox{\hyperlink{classstd_1_1vector}{bytes}} {\bfseries decrypt} (const \mbox{\hyperlink{classstd_1_1vector}{bytes}} \&) const
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a3073f8c9de4d0fc904672efecff4d03a}\label{classfc_1_1public__key_a3073f8c9de4d0fc904672efecff4d03a}} 
+\mbox{\hyperlink{classstd_1_1vector}{bytes}} {\bfseries serialize} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1public__key_a4565b23872cef7fbf06ebd2749c89348}\label{classfc_1_1public__key_a4565b23872cef7fbf06ebd2749c89348}} 
+void {\bfseries generate\+\_\+key\+\_\+pair} (\mbox{\hyperlink{classfc_1_1public__key}{public\+\_\+key}} \&, \mbox{\hyperlink{classfc_1_1private__key}{private\+\_\+key}} \&)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/crypto/pke.\+hpp\item 
+libraries/fc/src/crypto/pke.\+cpp\end{DoxyCompactItemize}

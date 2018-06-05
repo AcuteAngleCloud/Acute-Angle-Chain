@@ -1,0 +1,11 @@
+digraph "plugins/producer_plugin/include/aacio/producer_plugin" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0ecf318518198ac09b936632e08b6eb4 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="aacio" fontname="Helvetica", fontsize="10", URL="dir_0ecf318518198ac09b936632e08b6eb4.html"]
+  dir_de7db2641bbba0bd58f9fe3f817ca6c4 [shape=box, label="producer_plugin", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_de7db2641bbba0bd58f9fe3f817ca6c4.html"];
+  }
+  dir_602e6d607ea05a3811091b067ebfa4ac [shape=box label="chain_plugin" fillcolor="white" style="filled" color="red" URL="dir_602e6d607ea05a3811091b067ebfa4ac.html"];
+  dir_de7db2641bbba0bd58f9fe3f817ca6c4->dir_602e6d607ea05a3811091b067ebfa4ac [headlabel="1", labeldistance=1.5 headhref="dir_001871_001848.html"];
+}

@@ -1,0 +1,60 @@
+.TH "fc::unique_ptr< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::unique_ptr< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBT\fP * \fBpointer\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBunique_ptr\fP (\fBpointer\fP t=nullptr)"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP (\fBunique_ptr\fP &&m)"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP & \fBoperator=\fP (nullptr_t)"
+.br
+.ti -1c
+.RI "\fBunique_ptr\fP & \fBoperator=\fP (\fBunique_ptr\fP &&o)"
+.br
+.ti -1c
+.RI "\fBpointer\fP \fBoperator\->\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP & \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "void \fBreset\fP (\fBpointer\fP v)"
+.br
+.ti -1c
+.RI "\fBpointer\fP \fBrelease\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBunique_ptr\fP &p, nullptr_t)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBunique_ptr\fP &p, nullptr_t)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

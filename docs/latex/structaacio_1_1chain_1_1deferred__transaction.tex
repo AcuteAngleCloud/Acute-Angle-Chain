@@ -1,0 +1,46 @@
+\hypertarget{structaacio_1_1chain_1_1deferred__transaction}{}\section{aacio\+:\+:chain\+:\+:deferred\+\_\+transaction Struct Reference}
+\label{structaacio_1_1chain_1_1deferred__transaction}\index{aacio\+::chain\+::deferred\+\_\+transaction@{aacio\+::chain\+::deferred\+\_\+transaction}}
+
+
+{\ttfamily \#include $<$transaction.\+hpp$>$}
+
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:deferred\+\_\+transaction\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:deferred\+\_\+transaction\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1deferred__transaction_a7d0c49eab66f03e77d18849a0d96262d}\label{structaacio_1_1chain_1_1deferred__transaction_a7d0c49eab66f03e77d18849a0d96262d}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1deferred__transaction_a7d0c49eab66f03e77d18849a0d96262d}{deferred\+\_\+transaction}} ()=default
+\begin{DoxyCompactList}\small\item\em delayed execution \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1deferred__transaction_a257fa1d5301fb8acad482281f24724da}\label{structaacio_1_1chain_1_1deferred__transaction_a257fa1d5301fb8acad482281f24724da}} 
+{\bfseries deferred\+\_\+transaction} (uint128\+\_\+t sender\+\_\+id, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1deferred__transaction_a9f90d4dc7bf261b8450dd565f15fc82c}{sender}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1deferred__transaction_a6c684aa768b05c5645bbef7e054cad8a}{payer}}, \mbox{\hyperlink{classfc_1_1time__point__sec}{time\+\_\+point\+\_\+sec}} execute\+\_\+after, const \mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} \&txn)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1deferred__transaction_a8b824ba1bbc29a31d1b17f5c4204e25f}\label{structaacio_1_1chain_1_1deferred__transaction_a8b824ba1bbc29a31d1b17f5c4204e25f}} 
+uint128\+\_\+t {\bfseries sender\+\_\+id}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1deferred__transaction_a9f90d4dc7bf261b8450dd565f15fc82c}\label{structaacio_1_1chain_1_1deferred__transaction_a9f90d4dc7bf261b8450dd565f15fc82c}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1deferred__transaction_a9f90d4dc7bf261b8450dd565f15fc82c}{sender}}
+\begin{DoxyCompactList}\small\item\em ID assigned by sender of generated, accessible via W\+A\+SM api when executing normal or error. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1deferred__transaction_a6c684aa768b05c5645bbef7e054cad8a}\label{structaacio_1_1chain_1_1deferred__transaction_a6c684aa768b05c5645bbef7e054cad8a}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaacio_1_1chain_1_1deferred__transaction_a6c684aa768b05c5645bbef7e054cad8a}{payer}}
+\begin{DoxyCompactList}\small\item\em receives error handler callback \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1deferred__transaction_ae1f61d9d54cc852f6cb5332eac486d23}\label{structaacio_1_1chain_1_1deferred__transaction_ae1f61d9d54cc852f6cb5332eac486d23}} 
+\mbox{\hyperlink{classfc_1_1time__point__sec}{time\+\_\+point\+\_\+sec}} {\bfseries execute\+\_\+after}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+When a transaction is generated it can be scheduled to occur in the future. It may also fail to execute for some reason in which case the sender needs to be notified. When the sender sends a transaction they will assign it an ID which will be passed back to the sender if the transaction fails for some reason. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{libraries_2chain_2include_2aacio_2chain_2transaction_8hpp}{transaction.\+hpp}}\end{DoxyCompactItemize}

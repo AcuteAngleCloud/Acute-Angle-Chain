@@ -1,0 +1,13 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node2754 [label="endpoint_base",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2754 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="websocketpp::endpoint\l\< connection\< websocketpp\l::config::asio_client \>,\l websocketpp::config::asio\l_client \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1endpoint.html"];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="websocketpp::client\l\< websocketpp::config\l::asio_client \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1client.html"];
+  Node789 [label="transport_type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node789 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

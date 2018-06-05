@@ -1,0 +1,38 @@
+.TH "wasm::PostEmscripten" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::PostEmscripten
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< PostWalker< PostEmscripten > >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "void \fBoptimizeMemoryAccess\fP (\fBExpression\fP *&ptr, \fBAddress\fP &offset)"
+.br
+.ti -1c
+.RI "void \fBvisitLoad\fP (\fBLoad\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitStore\fP (\fBStore\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitCallImport\fP (\fBCallImport\fP *curr)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

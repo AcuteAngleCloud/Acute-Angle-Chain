@@ -1,0 +1,74 @@
+.TH "websocketpp::processor::hybi07< config >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::processor::hybi07< config > \- Processor for Hybi Draft version 07\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <hybi07\&.hpp>\fP
+.PP
+Inherits \fBwebsocketpp::processor::hybi08< config >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBconfig::request_type\fP \fBrequest_type\fP"
+.br
+.ti -1c
+.RI "typedef config::con_msg_manager_type::ptr \fBmsg_manager_ptr\fP"
+.br
+.ti -1c
+.RI "typedef \fBconfig::rng_type\fP \fBrng_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBhybi07\fP (bool secure, bool p_is_server, msg_manager_ptr manager, \fBrng_type\fP &rng)"
+.br
+.ti -1c
+.RI "lib::error_code \fBclient_handshake_request\fP (\fBrequest_type\fP &, \fBuri_ptr\fP, \fBstd::vector\fP< std::string > const &) const"
+.br
+.RI "Fill in a set of request headers for a client connection request\&. "
+.ti -1c
+.RI "int \fBget_version\fP () const"
+.br
+.RI "Get the protocol version of this processor\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename config>
+.br
+class websocketpp::processor::hybi07< config >"
+Processor for Hybi Draft version 07\&. 
+
+The primary difference between 07 and 08 is a version number\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename config> lib::error_code \fBwebsocketpp::processor::hybi07\fP< \fBconfig\fP >::client_handshake_request (\fBrequest_type\fP &, \fBuri_ptr\fP, \fBstd::vector\fP< std::string > const &) const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Fill in a set of request headers for a client connection request\&. The Hybi 07 processor only implements incoming connections so this will always return an error\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIreq\fP Set of headers to fill in 
+.br
+\fIuri\fP The uri being connected to 
+.br
+\fIsubprotocols\fP The list of subprotocols to request 
+.RE
+.PP
+
+.PP
+Implements \fBwebsocketpp::processor::processor< config >\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

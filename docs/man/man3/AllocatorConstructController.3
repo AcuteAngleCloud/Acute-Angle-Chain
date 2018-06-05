@@ -1,0 +1,69 @@
+.TH "AllocatorConstructController" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AllocatorConstructController
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcheck\fP (\fBdetail::TypeID\fP const &tid)"
+.br
+.ti -1c
+.RI "bool \fBunchecked\fP ()"
+.br
+.ti -1c
+.RI "void \fBexpect\fP (\fBdetail::TypeID\fP const &tid)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> void \fBexpect\fP (int times=1)"
+.br
+.ti -1c
+.RI "template<class \&.\&.\&. Args> bool \fBcheck\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisInAllocatorConstruct\fP () const"
+.br
+.ti -1c
+.RI "void \fBinAllocatorConstruct\fP (bool value=true)"
+.br
+.ti -1c
+.RI "void \fBallowUnchecked\fP (bool value=true)"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBdetail::TypeID\fP * \fBm_expected_args\fP"
+.br
+.ti -1c
+.RI "bool \fBm_allow_constructions\fP"
+.br
+.ti -1c
+.RI "bool \fBm_allow_unchecked\fP"
+.br
+.ti -1c
+.RI "int \fBm_expected_count\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBAllocatorConstructController\fP * \fBgetConstructController\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

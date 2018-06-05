@@ -1,0 +1,27 @@
+digraph "Smart Contract API Reference"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node2 [label="Action API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__actionapi.html",tooltip="Define API for querying action properties. "];
+  Node1 [label="Account API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__accountapi.html",tooltip="Define API for querying account data. "];
+  Node8 [label="Token API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__tokens.html",tooltip="Defines the ABI for interfacing with standard-compatible token messages and database tables..."];
+  Node0 [label="Smart Contract API\l Reference",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node7 [label="System API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__systemapi.html",tooltip="Define API for interacting with system level intrinsics. "];
+  Node6 [label="Console API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__consoleapi.html",tooltip="Enables applications to log/print text messages. "];
+  Node4 [label="Database API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__database.html",tooltip="APIs that store and retreive data on the blockchainAAC.IO organizes data according to the following b..."];
+  Node10 [label="Builtin Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__types.html",tooltip="Specifies typedefs and aliases. "];
+  Node3 [label="Chain API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__chainapi.html",tooltip="Define API for querying internal chain state. "];
+  Node9 [label="transaction API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__transactionapi.html",tooltip="Define API for sending transactions and inline messages. "];
+  Node5 [label="Math API",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__mathapi.html",tooltip="Defines common math functions. "];
+  Node0->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node6 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node7 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node8 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node9 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node10 [shape=plaintext, dir="back", style="solid"];
+}

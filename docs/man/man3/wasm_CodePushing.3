@@ -1,0 +1,45 @@
+.TH "wasm::CodePushing" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::CodePushing
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< PostWalker< CodePushing > >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "void \fBdoWalkFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.ti -1c
+.RI "void \fBvisitGetLocal\fP (\fBGetLocal\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitBlock\fP (\fBBlock\fP *curr)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLocalAnalyzer\fP \fBanalyzer\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< Index > \fBnumGetsSoFar\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,324 @@
+.TH "aacio::chain::chain_controller" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::chain_controller
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits noncopyable\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcontroller_config\fP"
+.br
+.ti -1c
+.RI "struct \fBruntime_limits\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBchain_controller\fP (const \fBcontroller_config\fP &cfg)"
+.br
+.ti -1c
+.RI "\fB~chain_controller\fP ()"
+.br
+.RI "chain_controller::chain_controller "
+.ti -1c
+.RI "void \fBpush_block\fP (const \fBsigned_block\fP &b, uint32_t skip=skip_nothing)"
+.br
+.ti -1c
+.RI "\fBtransaction_trace\fP \fBpush_transaction\fP (const \fBpacked_transaction\fP &trx, uint32_t skip=skip_nothing)"
+.br
+.ti -1c
+.RI "\fBvector\fP< \fBtransaction_trace\fP > \fBpush_deferred_transactions\fP (bool flush=false, uint32_t skip=skip_nothing)"
+.br
+.ti -1c
+.RI "uint128_t \fBtransaction_id_to_sender_id\fP (const \fBtransaction_id_type\fP &tid) const"
+.br
+.ti -1c
+.RI "bool \fBis_start_of_round\fP (block_num_type n) const"
+.br
+.ti -1c
+.RI "uint32_t \fBblocks_per_round\fP () const"
+.br
+.ti -1c
+.RI "\fBchain_id_type\fP \fBget_chain_id\fP () const"
+.br
+.ti -1c
+.RI "bool \fBis_known_block\fP (const \fBblock_id_type\fP &id) const"
+.br
+.RI "TODO: make this hash of constitution\&. "
+.ti -1c
+.RI "bool \fBis_known_transaction\fP (const \fBtransaction_id_type\fP &id) const"
+.br
+.ti -1c
+.RI "\fBblock_id_type\fP \fBget_block_id_for_num\fP (uint32_t block_num) const"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBsigned_block\fP > \fBfetch_block_by_id\fP (const \fBblock_id_type\fP &id) const"
+.br
+.ti -1c
+.RI "\fBoptional\fP< \fBsigned_block\fP > \fBfetch_block_by_number\fP (uint32_t \fBnum\fP) const"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< \fBblock_id_type\fP > \fBget_block_ids_on_fork\fP (\fBblock_id_type\fP head_of_fork) const"
+.br
+.ti -1c
+.RI "uint32_t \fBproducer_participation_rate\fP () const"
+.br
+.ti -1c
+.RI "void \fBadd_checkpoints\fP (const flat_map< uint32_t, \fBblock_id_type\fP > &checkpts)"
+.br
+.ti -1c
+.RI "const flat_map< uint32_t, \fBblock_id_type\fP > \fBget_checkpoints\fP () const"
+.br
+.ti -1c
+.RI "bool \fBbefore_last_checkpoint\fP () const"
+.br
+.ti -1c
+.RI "flat_set< \fBpublic_key_type\fP > \fBget_required_keys\fP (const \fBtransaction\fP &trx, const flat_set< \fBpublic_key_type\fP > &candidate_keys) const"
+.br
+.ti -1c
+.RI "bool \fB_push_block\fP (const \fBsigned_block\fP &b)"
+.br
+.ti -1c
+.RI "\fBsigned_block\fP \fBgenerate_block\fP (\fBblock_timestamp_type\fP when, \fBaccount_name\fP producer, const \fBprivate_key_type\fP &block_signing_private_key, uint32_t skip=skip_nothing)"
+.br
+.ti -1c
+.RI "\fBsigned_block\fP \fB_generate_block\fP (\fBblock_timestamp_type\fP when, \fBaccount_name\fP producer, const \fBprivate_key_type\fP &block_signing_private_key)"
+.br
+.ti -1c
+.RI "template<typename Function > auto \fBwith_skip_flags\fP (uint64_t flags, Function &&f)"
+.br
+.ti -1c
+.RI "template<typename Function > auto \fBwithout_pending_transactions\fP (Function &&f)"
+.br
+.ti -1c
+.RI "void \fBpop_block\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear_pending\fP ()"
+.br
+.ti -1c
+.RI "\fBaccount_name\fP \fBget_scheduled_producer\fP (uint32_t slot_num) const"
+.br
+.RI "Get the producer scheduled for block production in a slot\&. "
+.ti -1c
+.RI "\fBblock_timestamp_type\fP \fBget_slot_time\fP (uint32_t slot_num) const"
+.br
+.ti -1c
+.RI "uint32_t \fBget_slot_at_time\fP (\fBblock_timestamp_type\fP when) const"
+.br
+.ti -1c
+.RI "const \fBglobal_property_object\fP & \fBget_global_properties\fP () const"
+.br
+.ti -1c
+.RI "const \fBdynamic_global_property_object\fP & \fBget_dynamic_global_properties\fP () const"
+.br
+.ti -1c
+.RI "const \fBproducer_object\fP & \fBget_producer\fP (const \fBaccount_name\fP &ownername) const"
+.br
+.ti -1c
+.RI "const \fBpermission_object\fP & \fBget_permission\fP (const \fBpermission_level\fP &level) const"
+.br
+.ti -1c
+.RI "\fBtime_point\fP \fBhead_block_time\fP () const"
+.br
+.ti -1c
+.RI "uint32_t \fBhead_block_num\fP () const"
+.br
+.ti -1c
+.RI "\fBblock_id_type\fP \fBhead_block_id\fP () const"
+.br
+.ti -1c
+.RI "\fBaccount_name\fP \fBhead_block_producer\fP () const"
+.br
+.ti -1c
+.RI "\fBblock_header\fP \fBhead_block_header\fP () const"
+.br
+.ti -1c
+.RI "uint32_t \fBlast_irreversible_block_num\fP () const"
+.br
+.ti -1c
+.RI "const \fBchainbase::database\fP & \fBget_database\fP () const"
+.br
+.ti -1c
+.RI "\fBchainbase::database\fP & \fBget_mutable_database\fP ()"
+.br
+.ti -1c
+.RI "const \fBresource_limits::resource_limits_manager\fP & \fBget_resource_limits_manager\fP () const"
+.br
+.ti -1c
+.RI "\fBresource_limits::resource_limits_manager\fP & \fBget_mutable_resource_limits_manager\fP ()"
+.br
+.ti -1c
+.RI "\fBwasm_interface\fP & \fBget_wasm_interface\fP ()"
+.br
+.ti -1c
+.RI "\fBfc::microseconds\fP \fBcheck_authorization\fP (const \fBvector\fP< \fBaction\fP > &actions, const flat_set< \fBpublic_key_type\fP > &provided_keys, bool allow_unused_signatures=false, flat_set< \fBaccount_name\fP > provided_accounts=flat_set< \fBaccount_name\fP >(), flat_set< \fBpermission_level\fP > provided_levels=flat_set< \fBpermission_level\fP >()) const"
+.br
+.ti -1c
+.RI "bool \fBcheck_authorization\fP (\fBaccount_name\fP \fBaccount\fP, \fBpermission_name\fP permission, flat_set< \fBpublic_key_type\fP > provided_keys, bool allow_unused_signatures) const"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "signal< void(const \fBblock_trace\fP &)> \fBapplied_block\fP"
+.br
+.ti -1c
+.RI "signal< void(const \fBsigned_block\fP &)> \fBapplied_irreversible_block\fP"
+.br
+.ti -1c
+.RI "signal< void(const \fBtransaction_metadata\fP &, const \fBpacked_transaction\fP &)> \fBon_pending_transaction\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBcontracts::chain_initializer\fP"
+.br
+.ti -1c
+.RI "class \fBapply_context\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "bool aacio::chain::chain_controller::_push_block (const \fBsigned_block\fP & b)"
+TODO: if the block is greater than the head block and before the next maintenance interval 
+.SS "\fBfc::microseconds\fP aacio::chain::chain_controller::check_authorization (const \fBvector\fP< \fBaction\fP > & actions, const flat_set< \fBpublic_key_type\fP > & provided_keys, bool allow_unused_signatures = \fCfalse\fP, flat_set< \fBaccount_name\fP > provided_accounts = \fCflat_set<\fBaccount_name\fP>()\fP, flat_set< \fBpermission_level\fP > provided_levels = \fCflat_set<\fBpermission_level\fP>()\fP) const"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIactions\fP - the actions to check authorization across 
+.br
+\fIprovided_keys\fP - the set of public keys which have authorized the transaction 
+.br
+\fIallow_unused_signatures\fP - true if method should not assert on unused signatures 
+.br
+\fIprovided_accounts\fP - the set of accounts which have authorized the transaction (presumed to be owner)
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBfc::microseconds\fP set to the max delay that this authorization requires to complete 
+.RE
+.PP
+
+.SS "bool aacio::chain::chain_controller::check_authorization (\fBaccount_name\fP account, \fBpermission_name\fP permission, flat_set< \fBpublic_key_type\fP > provided_keys, bool allow_unused_signatures) const"
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIaccount\fP - the account owner of the permission 
+.br
+\fIpermission\fP - the permission name to check for authorization 
+.br
+\fIprovided_keys\fP - a set of public keys
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if the provided keys are sufficient to authorize the account permission 
+.RE
+.PP
+
+.SS "flat_set< \fBpublic_key_type\fP > aacio::chain::chain_controller::get_required_keys (const \fBtransaction\fP & trx, const flat_set< \fBpublic_key_type\fP > & candidate_keys) const"
+Determine which public keys are needed to sign the given transaction\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItrx\fP transaction that requires signature 
+.br
+\fIcandidate_keys\fP Set of public keys to examine for applicability 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Subset of candidate_keys whose private keys should be used to sign transaction 
+.RE
+.PP
+\fBExceptions:\fP
+.RS 4
+\fI\fBfc::exception\fP\fP if candidate_keys does not contain all required keys 
+.RE
+.PP
+
+.SS "\fBaccount_name\fP aacio::chain::chain_controller::get_scheduled_producer (uint32_t slot_num) const"
+
+.PP
+Get the producer scheduled for block production in a slot\&. slot_num always corresponds to a time in the future\&.
+.PP
+If slot_num == 1, returns the next scheduled producer\&. If slot_num == 2, returns the next scheduled producer after 1 block gap\&.
+.PP
+Use the \fBget_slot_time()\fP and \fBget_slot_at_time()\fP functions to convert between slot_num and timestamp\&.
+.PP
+Passing slot_num == 0 returns AAC_NULL_PRODUCER 
+.SS "uint32_t aacio::chain::chain_controller::get_slot_at_time (\fBblock_timestamp_type\fP when) const"
+Get the last slot which occurs AT or BEFORE the given time\&.
+.PP
+The return value is the greatest value N such that get_slot_time( N ) <= when\&.
+.PP
+If no such N exists, return 0\&. 
+.SS "\fBblock_timestamp_type\fP aacio::chain::chain_controller::get_slot_time (uint32_t slot_num) const"
+Get the time at which the given slot occurs\&.
+.PP
+If slot_num == 0, return time_point_sec()\&.
+.PP
+If slot_num == N for N > 0, return the Nth next block-interval-aligned time greater than head_block_time()\&. 
+.SS "bool aacio::chain::chain_controller::is_known_block (const \fBblock_id_type\fP & id) const"
+
+.PP
+TODO: make this hash of constitution\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if the block is in our fork DB or saved to disk as part of the official chain, otherwise return false 
+.RE
+.PP
+
+.SS "bool aacio::chain::chain_controller::is_known_transaction (const \fBtransaction_id_type\fP & id) const"
+Only return true \fIif\fP the transaction has not expired or been invalidated\&. If this method is called with a VERY old transaction we will return false, they should query things by blocks if they are that old\&. 
+.SS "void aacio::chain::chain_controller::pop_block ()"
+Removes the most recent block from the database and undoes any changes it made\&. 
+.SS "uint32_t aacio::chain::chain_controller::producer_participation_rate () const"
+Usees the ABI for code::type to convert a JSON object (variant) into hex \fBvector<char>\fP action_to_binary( name code, name type, const fc::variant& obj )const; \fBfc::variant\fP action_from_binary( name code, name type, const vector<char>& bin )const; Calculate the percent of block production slots that were missed in the past 128 blocks, not including the current block\&. 
+.SS "void aacio::chain::chain_controller::push_block (const \fBsigned_block\fP & new_block, uint32_t skip = \fCskip_nothing\fP)"
+Push block 'may fail' in which case every partial change is unwound\&. After push block is successful the block is appended to the chain database on disk\&.
+.PP
+\fBReturns:\fP
+.RS 4
+true if we switched forks as a result of this push\&. 
+.RE
+.PP
+
+.SS "\fBtransaction_trace\fP aacio::chain::chain_controller::push_transaction (const \fBpacked_transaction\fP & trx, uint32_t skip = \fCskip_nothing\fP)"
+Attempts to push the transaction into the pending queue
+.PP
+When called to push a locally generated transaction, set the skip_block_size_check bit on the skip argument\&. This will allow the transaction to be pushed even if it causes the pending block size to exceed the maximum block size\&. Although the transaction will probably not propagate further now, as the peers are likely to have their pending queues full as well, it will be kept in the queue to be propagated later when a new block flushes out the pending queues\&. 
+.SS "template<typename Function > auto aacio::chain::chain_controller::without_pending_transactions (Function && f)\fC [inline]\fP"
+This method will backup all tranasctions in the current pending block, undo the pending block, call f(), and then push the pending transactions on top of the new state\&. after applying f() push previously input transactions on top 
+.SH "Member Data Documentation"
+.PP 
+.SS "signal<void(const \fBblock_trace\fP&)> aacio::chain::chain_controller::applied_block"
+This signal is emitted after all operations and virtual operation for a block have been applied but before the get_applied_operations() are cleared\&.
+.PP
+You may not yield from this callback because the blockchain is holding the write lock and may be in an 'inconstant state' until after it is released\&. 
+.SS "signal<void(const \fBsigned_block\fP&)> aacio::chain::chain_controller::applied_irreversible_block"
+This signal is emitted after irreversible block is written to disk\&.
+.PP
+You may not yield from this callback because the blockchain is holding the write lock and may be in an 'inconstant state' until after it is released\&. 
+.SS "signal<void(const \fBtransaction_metadata\fP&, const \fBpacked_transaction\fP&)> aacio::chain::chain_controller::on_pending_transaction"
+This signal is emitted any time a new transaction is added to the pending block state\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

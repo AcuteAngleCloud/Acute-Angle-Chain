@@ -1,0 +1,93 @@
+\hypertarget{classwebsocketpp_1_1processor_1_1hybi08}{}\section{websocketpp\+:\+:processor\+:\+:hybi08$<$ config $>$ Class Template Reference}
+\label{classwebsocketpp_1_1processor_1_1hybi08}\index{websocketpp\+::processor\+::hybi08$<$ config $>$@{websocketpp\+::processor\+::hybi08$<$ config $>$}}
+
+
+Processor for Hybi Draft version 08.  
+
+
+
+
+{\ttfamily \#include $<$hybi08.\+hpp$>$}
+
+
+
+Inheritance diagram for websocketpp\+:\+:processor\+:\+:hybi08$<$ config $>$\+:
+% FIG 0
+
+
+Collaboration diagram for websocketpp\+:\+:processor\+:\+:hybi08$<$ config $>$\+:
+% FIG 1
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_adb295a175e3c45fad340b974c9daa780}\label{classwebsocketpp_1_1processor_1_1hybi08_adb295a175e3c45fad340b974c9daa780}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1processor_1_1hybi08}{hybi08}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$ {\bfseries type}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_a5cb5a8054a9e10706e672de379284a2e}\label{classwebsocketpp_1_1processor_1_1hybi08_a5cb5a8054a9e10706e672de379284a2e}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1http_1_1parser_1_1request}{config\+::request\+\_\+type}} {\bfseries request\+\_\+type}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_a4ad1477463712031772e8e8a48cdc7b0}\label{classwebsocketpp_1_1processor_1_1hybi08_a4ad1477463712031772e8e8a48cdc7b0}} 
+typedef config\+::con\+\_\+msg\+\_\+manager\+\_\+type\+::ptr {\bfseries msg\+\_\+manager\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_af8b10cde566c24d29a94f50716fdcddd}\label{classwebsocketpp_1_1processor_1_1hybi08_af8b10cde566c24d29a94f50716fdcddd}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1random_1_1none_1_1int__generator}{config\+::rng\+\_\+type}} {\bfseries rng\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_aee51a54933474952a77d7dbe8ce1e06b}\label{classwebsocketpp_1_1processor_1_1hybi08_aee51a54933474952a77d7dbe8ce1e06b}} 
+{\bfseries hybi08} (bool secure, bool p\+\_\+is\+\_\+server, msg\+\_\+manager\+\_\+ptr manager, \mbox{\hyperlink{classwebsocketpp_1_1random_1_1none_1_1int__generator}{rng\+\_\+type}} \&rng)
+\item 
+lib\+::error\+\_\+code \mbox{\hyperlink{classwebsocketpp_1_1processor_1_1hybi08_a9509cba08ab3a15ea2ff34276b2582cb}{client\+\_\+handshake\+\_\+request}} (\mbox{\hyperlink{classwebsocketpp_1_1http_1_1parser_1_1request}{request\+\_\+type}} \&, \mbox{\hyperlink{namespacewebsocketpp_aae370ea5ac83a8ece7712cb39fc23f5b}{uri\+\_\+ptr}}, \mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ const \&) const
+\begin{DoxyCompactList}\small\item\em Fill in a set of request headers for a client connection request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_aec4ce6245dbbd2532513a0f9704e4d7a}\label{classwebsocketpp_1_1processor_1_1hybi08_aec4ce6245dbbd2532513a0f9704e4d7a}} 
+int \mbox{\hyperlink{classwebsocketpp_1_1processor_1_1hybi08_aec4ce6245dbbd2532513a0f9704e4d7a}{get\+\_\+version}} () const
+\begin{DoxyCompactList}\small\item\em Get the protocol version of this processor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_a9d1844d9fc422723461c14e3f4d63faa}\label{classwebsocketpp_1_1processor_1_1hybi08_a9d1844d9fc422723461c14e3f4d63faa}} 
+std\+::string const  \& \mbox{\hyperlink{classwebsocketpp_1_1processor_1_1hybi08_a9d1844d9fc422723461c14e3f4d63faa}{get\+\_\+origin}} (\mbox{\hyperlink{classwebsocketpp_1_1http_1_1parser_1_1request}{request\+\_\+type}} const \&r) const
+\begin{DoxyCompactList}\small\item\em Return the value of the header containing the C\+O\+RS origin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename config$>$\newline
+class websocketpp\+::processor\+::hybi08$<$ config $>$}
+
+Processor for Hybi Draft version 08. 
+
+The primary difference between 08 and 13 is a different origin header name 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classwebsocketpp_1_1processor_1_1hybi08_a9509cba08ab3a15ea2ff34276b2582cb}\label{classwebsocketpp_1_1processor_1_1hybi08_a9509cba08ab3a15ea2ff34276b2582cb}} 
+\index{websocketpp\+::processor\+::hybi08@{websocketpp\+::processor\+::hybi08}!client\+\_\+handshake\+\_\+request@{client\+\_\+handshake\+\_\+request}}
+\index{client\+\_\+handshake\+\_\+request@{client\+\_\+handshake\+\_\+request}!websocketpp\+::processor\+::hybi08@{websocketpp\+::processor\+::hybi08}}
+\subsubsection{\texorpdfstring{client\+\_\+handshake\+\_\+request()}{client\_handshake\_request()}}
+{\footnotesize\ttfamily template$<$typename config$>$ \\
+lib\+::error\+\_\+code \mbox{\hyperlink{classwebsocketpp_1_1processor_1_1hybi08}{websocketpp\+::processor\+::hybi08}}$<$ \mbox{\hyperlink{classconfig}{config}} $>$\+::client\+\_\+handshake\+\_\+request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classwebsocketpp_1_1http_1_1parser_1_1request}{request\+\_\+type}} \&}]{,  }\item[{\mbox{\hyperlink{namespacewebsocketpp_aae370ea5ac83a8ece7712cb39fc23f5b}{uri\+\_\+ptr}}}]{,  }\item[{\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ std\+::string $>$ const \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Fill in a set of request headers for a client connection request. 
+
+The Hybi 08 processor only implements incoming connections so this will always return an error.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em req} & Set of headers to fill in \\
+\hline
+\mbox{\tt in}  & {\em uri} & The uri being connected to \\
+\hline
+\mbox{\tt in}  & {\em subprotocols} & The list of subprotocols to request \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classwebsocketpp_1_1processor_1_1processor_ab5bc7b8f480ee28049f44232115bcaab}{websocketpp\+::processor\+::processor$<$ config $>$}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/websocketpp/processors/hybi08.\+hpp\end{DoxyCompactItemize}

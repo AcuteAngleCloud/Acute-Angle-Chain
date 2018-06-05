@@ -1,0 +1,31 @@
+digraph "aacio::market_state"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="aacio::market_state",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" market_table" ,fontname="Helvetica"];
+  Node2 [label="aacio::multi_index\l\< N(markets), exchange\l_state \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1multi__index.html"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" exstate" ,fontname="Helvetica"];
+  Node3 [label="aacio::exchange_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1exchange__state.html"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" base\nquote" ,fontname="Helvetica"];
+  Node4 [label="aacio::exchange_state\l::connector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1exchange__state_1_1connector.html"];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" balance" ,fontname="Helvetica"];
+  Node5 [label="aacio::extended_asset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1extended__asset.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="aacio::asset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1asset.html"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" symbol" ,fontname="Helvetica"];
+  Node7 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" contract" ,fontname="Helvetica"];
+  Node8 [label="aacio::name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1name.html",tooltip="wraps a uint64_t to ensure it is only passed to methods that expect a Name "];
+  Node8 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value" ,fontname="Helvetica"];
+  Node9 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" peer_margin" ,fontname="Helvetica"];
+  Node9 [label="aacio::margin_state",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1margin__state.html"];
+  Node5 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" total_lent\ntotal_lendable" ,fontname="Helvetica"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" supply" ,fontname="Helvetica"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" manager" ,fontname="Helvetica"];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" base_margins\nquote_margins" ,fontname="Helvetica"];
+  Node10 [label="aacio::multi_index\l\< N(margins), margin\l_position, indexed_by\l\< N(callprice), aacio\l::const_mem_fun\< margin\l_position, uint64_t, &margin\l_position::get_call \> \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1multi__index.html"];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" quote_loans\nbase_loans" ,fontname="Helvetica"];
+  Node11 [label="aacio::multi_index\l\< N(loans), loan_position \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1multi__index.html"];
+}

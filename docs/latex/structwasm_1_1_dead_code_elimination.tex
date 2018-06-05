@@ -1,0 +1,130 @@
+\hypertarget{structwasm_1_1_dead_code_elimination}{}\section{wasm\+:\+:Dead\+Code\+Elimination Struct Reference}
+\label{structwasm_1_1_dead_code_elimination}\index{wasm\+::\+Dead\+Code\+Elimination@{wasm\+::\+Dead\+Code\+Elimination}}
+
+
+Inheritance diagram for wasm\+:\+:Dead\+Code\+Elimination\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Dead\+Code\+Elimination\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_ab3c64aab4c41f88aba7b765f989b8c84}\label{structwasm_1_1_dead_code_elimination_ab3c64aab4c41f88aba7b765f989b8c84}} 
+bool {\bfseries is\+Function\+Parallel} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_ab0cac129d1e374446aac017496f08dfa}\label{structwasm_1_1_dead_code_elimination_ab0cac129d1e374446aac017496f08dfa}} 
+\mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$ {\bfseries create} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a42bbd803c8186b69643644fde1b26b3e}\label{structwasm_1_1_dead_code_elimination_a42bbd803c8186b69643644fde1b26b3e}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries replace\+Current} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$expression)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_ab615d245bf8f8c3a4e13a0808ef2d7ec}\label{structwasm_1_1_dead_code_elimination_ab615d245bf8f8c3a4e13a0808ef2d7ec}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a45ee02fc2de53026cb30de6947e9e5d6}\label{structwasm_1_1_dead_code_elimination_a45ee02fc2de53026cb30de6947e9e5d6}} 
+void {\bfseries add\+Break} (\mbox{\hyperlink{structwasm_1_1_name}{Name}} name)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a053b75e482a7e92e3a1e7f4d7dfb1f87}\label{structwasm_1_1_dead_code_elimination_a053b75e482a7e92e3a1e7f4d7dfb1f87}} 
+bool {\bfseries is\+Dead} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$child)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a14e2a847d31862a50c0858f83d730e31}\label{structwasm_1_1_dead_code_elimination_a14e2a847d31862a50c0858f83d730e31}} 
+bool {\bfseries is\+Unreachable} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$child)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a42dbdbebfcfa5afecb05f58a875b46a1}\label{structwasm_1_1_dead_code_elimination_a42dbdbebfcfa5afecb05f58a875b46a1}} 
+void {\bfseries visit\+Break} (\mbox{\hyperlink{classwasm_1_1_break}{Break}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a520607ccf005032bebf6daa96b407fe9}\label{structwasm_1_1_dead_code_elimination_a520607ccf005032bebf6daa96b407fe9}} 
+void {\bfseries visit\+Switch} (\mbox{\hyperlink{classwasm_1_1_switch}{Switch}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a635b84a07224e9609be96114c50e05b3}\label{structwasm_1_1_dead_code_elimination_a635b84a07224e9609be96114c50e05b3}} 
+void {\bfseries visit\+Return} (\mbox{\hyperlink{classwasm_1_1_return}{Return}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_ada69d26324e817952e25489739bc09a9}\label{structwasm_1_1_dead_code_elimination_ada69d26324e817952e25489739bc09a9}} 
+void {\bfseries visit\+Unreachable} (\mbox{\hyperlink{classwasm_1_1_unreachable}{Unreachable}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a63e7154107c864cd33197e4347d19c80}\label{structwasm_1_1_dead_code_elimination_a63e7154107c864cd33197e4347d19c80}} 
+void {\bfseries visit\+Block} (\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_afbd8497211b91e1fc9eece6385fee4ec}\label{structwasm_1_1_dead_code_elimination_afbd8497211b91e1fc9eece6385fee4ec}} 
+void {\bfseries visit\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a7d1ca7b00c1584ca94b22180ad2432b3}\label{structwasm_1_1_dead_code_elimination_a7d1ca7b00c1584ca94b22180ad2432b3}} 
+void {\bfseries visit\+If} (\mbox{\hyperlink{classwasm_1_1_if}{If}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_ab1eb54e23d7619cb13298c24574f34e9}\label{structwasm_1_1_dead_code_elimination_ab1eb54e23d7619cb13298c24574f34e9}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries drop} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$to\+Drop)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a2f2b80cc4f5b1f96483fad68bf989336}\label{structwasm_1_1_dead_code_elimination_a2f2b80cc4f5b1f96483fad68bf989336}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries handle\+Call} (\mbox{\hyperlink{struct_t}{T}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a6c1729911da558b5b72186380bdf5904}\label{structwasm_1_1_dead_code_elimination_a6c1729911da558b5b72186380bdf5904}} 
+void {\bfseries visit\+Call} (\mbox{\hyperlink{classwasm_1_1_call}{Call}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_af054a3fdaf2cccba6237af9b0e823670}\label{structwasm_1_1_dead_code_elimination_af054a3fdaf2cccba6237af9b0e823670}} 
+void {\bfseries visit\+Call\+Import} (\mbox{\hyperlink{classwasm_1_1_call_import}{Call\+Import}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_aa835bb285c1148416862fb596f769f74}\label{structwasm_1_1_dead_code_elimination_aa835bb285c1148416862fb596f769f74}} 
+void {\bfseries visit\+Call\+Indirect} (\mbox{\hyperlink{classwasm_1_1_call_indirect}{Call\+Indirect}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a9e9d4f64b252087829d0c62365a6d00f}\label{structwasm_1_1_dead_code_elimination_a9e9d4f64b252087829d0c62365a6d00f}} 
+void {\bfseries visit\+Set\+Local} (\mbox{\hyperlink{classwasm_1_1_set_local}{Set\+Local}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a5c25376d1124b0688659e21ab026d6a1}\label{structwasm_1_1_dead_code_elimination_a5c25376d1124b0688659e21ab026d6a1}} 
+void {\bfseries visit\+Load} (\mbox{\hyperlink{classwasm_1_1_load}{Load}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a8aad9f6f83bcb4f7274ae3edc9a8a3ec}\label{structwasm_1_1_dead_code_elimination_a8aad9f6f83bcb4f7274ae3edc9a8a3ec}} 
+void {\bfseries visit\+Store} (\mbox{\hyperlink{classwasm_1_1_store}{Store}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a2567b3cc661e0800a007781c0cfe7e41}\label{structwasm_1_1_dead_code_elimination_a2567b3cc661e0800a007781c0cfe7e41}} 
+void {\bfseries visit\+Unary} (\mbox{\hyperlink{classwasm_1_1_unary}{Unary}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a7cd21f2013d1eeba24a6b30df2e434e9}\label{structwasm_1_1_dead_code_elimination_a7cd21f2013d1eeba24a6b30df2e434e9}} 
+void {\bfseries visit\+Binary} (\mbox{\hyperlink{classwasm_1_1_binary}{Binary}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a6548c97640febb05fc788f8389074239}\label{structwasm_1_1_dead_code_elimination_a6548c97640febb05fc788f8389074239}} 
+void {\bfseries visit\+Select} (\mbox{\hyperlink{classwasm_1_1_select}{Select}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_acf41b62330555313967dcb36372e58aa}\label{structwasm_1_1_dead_code_elimination_acf41b62330555313967dcb36372e58aa}} 
+void {\bfseries visit\+Drop} (\mbox{\hyperlink{classwasm_1_1_drop}{Drop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_ad3dbace3d4b73d2644d53c5b461ba6c3}\label{structwasm_1_1_dead_code_elimination_ad3dbace3d4b73d2644d53c5b461ba6c3}} 
+void {\bfseries visit\+Host} (\mbox{\hyperlink{classwasm_1_1_host}{Host}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a63318ef7e0b91a59307ab4b5b7717131}\label{structwasm_1_1_dead_code_elimination_a63318ef7e0b91a59307ab4b5b7717131}} 
+void {\bfseries visit\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$curr)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_aa15fe3d5d156f9c3a6a705f2879d9dbc}\label{structwasm_1_1_dead_code_elimination_aa15fe3d5d156f9c3a6a705f2879d9dbc}} 
+static void {\bfseries do\+After\+If\+Condition} (\mbox{\hyperlink{structwasm_1_1_dead_code_elimination}{Dead\+Code\+Elimination}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a89be240475e2aee0dbb47efe7164b72a}\label{structwasm_1_1_dead_code_elimination_a89be240475e2aee0dbb47efe7164b72a}} 
+static void {\bfseries do\+After\+If\+Else\+True} (\mbox{\hyperlink{structwasm_1_1_dead_code_elimination}{Dead\+Code\+Elimination}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a99e938f6079b87fa1e0d5d45dbdde765}\label{structwasm_1_1_dead_code_elimination_a99e938f6079b87fa1e0d5d45dbdde765}} 
+static void {\bfseries scan} (\mbox{\hyperlink{structwasm_1_1_dead_code_elimination}{Dead\+Code\+Elimination}} $\ast$self, \mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$$\ast$currp)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a65ce3a8da0c948220be5a65b277179b5}\label{structwasm_1_1_dead_code_elimination_a65ce3a8da0c948220be5a65b277179b5}} 
+\mbox{\hyperlink{structwasm_1_1_type_updater}{Type\+Updater}} {\bfseries type\+Updater}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a58dc6042cb80fb3dc1b0a6369c1494f8}\label{structwasm_1_1_dead_code_elimination_a58dc6042cb80fb3dc1b0a6369c1494f8}} 
+bool {\bfseries reachable}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_adeba960fb5f771a373c1fe389aa7ccc1}\label{structwasm_1_1_dead_code_elimination_adeba960fb5f771a373c1fe389aa7ccc1}} 
+\mbox{\hyperlink{classstd_1_1set}{std\+::set}}$<$ \mbox{\hyperlink{structwasm_1_1_name}{Name}} $>$ {\bfseries reachable\+Breaks}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_dead_code_elimination_a6a0d77a20125ea3554f9aa0ba0f70512}\label{structwasm_1_1_dead_code_elimination_a6a0d77a20125ea3554f9aa0ba0f70512}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ bool $>$ {\bfseries if\+Stack}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/passes/Dead\+Code\+Elimination.\+cpp\end{DoxyCompactItemize}

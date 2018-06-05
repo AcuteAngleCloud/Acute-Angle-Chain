@@ -1,0 +1,99 @@
+\hypertarget{test__crypto_8cpp}{}\section{contracts/test\+\_\+api/test\+\_\+crypto.cpp File Reference}
+\label{test__crypto_8cpp}\index{contracts/test\+\_\+api/test\+\_\+crypto.\+cpp@{contracts/test\+\_\+api/test\+\_\+crypto.\+cpp}}
+{\ttfamily \#include $<$aaciolib/aacio.\+hpp$>$}\newline
+{\ttfamily \#include $<$aaciolib/crypto.\+h$>$}\newline
+{\ttfamily \#include $<$aaciolib/print.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+api.\+hpp\char`\"{}}\newline
+Include dependency graph for test\+\_\+crypto.\+cpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsig__hash__key}{sig\+\_\+hash\+\_\+key}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__crypto_8cpp_ae1bd429404fdcba8cecd5d63cf71d590}\label{test__crypto_8cpp_ae1bd429404fdcba8cecd5d63cf71d590}} 
+\#define {\bfseries W\+A\+S\+M\+\_\+\+T\+E\+S\+T\+\_\+\+F\+A\+IL}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__crypto_8cpp_ab21a7927a82571cd1ecffebcd7d255ac}\label{test__crypto_8cpp_ab21a7927a82571cd1ecffebcd7d255ac}} 
+uint32\+\_\+t {\bfseries my\+\_\+strlen} (const char $\ast$str)
+\item 
+\mbox{\Hypertarget{test__crypto_8cpp_ab7d8481ae8a9f7185f73c4454c3dae57}\label{test__crypto_8cpp_ab7d8481ae8a9f7185f73c4454c3dae57}} 
+bool {\bfseries my\+\_\+memcmp} (void $\ast$s1, void $\ast$s2, uint32\+\_\+t n)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{test__crypto_8cpp_a5c0b0a4d5ca0593870b708343c3eb6c9}\label{test__crypto_8cpp_a5c0b0a4d5ca0593870b708343c3eb6c9}} 
+const char {\bfseries test2} \mbox{[}$\,$\mbox{]} = \char`\"{}\char`\"{}
+\item 
+const unsigned char {\bfseries test2\+\_\+ok\+\_\+256} \mbox{[}$\,$\mbox{]}
+\item 
+const unsigned char {\bfseries test2\+\_\+ok\+\_\+512} \mbox{[}$\,$\mbox{]}
+\item 
+const unsigned char {\bfseries test2\+\_\+ok\+\_\+ripe} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{test__crypto_8cpp_a0ba598c3ceb4665d5490735be2f27617}\label{test__crypto_8cpp_a0ba598c3ceb4665d5490735be2f27617}} 
+\index{test\+\_\+crypto.\+cpp@{test\+\_\+crypto.\+cpp}!test2\+\_\+ok\+\_\+256@{test2\+\_\+ok\+\_\+256}}
+\index{test2\+\_\+ok\+\_\+256@{test2\+\_\+ok\+\_\+256}!test\+\_\+crypto.\+cpp@{test\+\_\+crypto.\+cpp}}
+\subsubsection{\texorpdfstring{test2\+\_\+ok\+\_\+256}{test2\_ok\_256}}
+{\footnotesize\ttfamily const unsigned char test2\+\_\+ok\+\_\+256\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{ 
+  0xe3, 0xb0, 0xc4, 0x42, 0x98, 0xfc, 0x1c, 0x14,
+  0x9a, 0xfb, 0xf4, 0xc8, 0x99, 0x6f, 0xb9, 0x24,
+  0x27, 0xae, 0x41, 0xe4, 0x64, 0x9b, 0x93, 0x4c,
+  0xa4, 0x95, 0x99, 0x1b, 0x78, 0x52, 0xb8, 0x55
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{test__crypto_8cpp_aa4597d522e039713f4a08a22d333a1a9}\label{test__crypto_8cpp_aa4597d522e039713f4a08a22d333a1a9}} 
+\index{test\+\_\+crypto.\+cpp@{test\+\_\+crypto.\+cpp}!test2\+\_\+ok\+\_\+512@{test2\+\_\+ok\+\_\+512}}
+\index{test2\+\_\+ok\+\_\+512@{test2\+\_\+ok\+\_\+512}!test\+\_\+crypto.\+cpp@{test\+\_\+crypto.\+cpp}}
+\subsubsection{\texorpdfstring{test2\+\_\+ok\+\_\+512}{test2\_ok\_512}}
+{\footnotesize\ttfamily const unsigned char test2\+\_\+ok\+\_\+512\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+   0xcf, 0x83, 0xe1, 0x35, 0x7e, 0xef, 0xb8, 0xbd, 
+   0xf1, 0x54, 0x28, 0x50, 0xd6, 0x6d, 0x80, 0x07, 
+   0xd6, 0x20, 0xe4, 0x05, 0x0b, 0x57, 0x15, 0xdc, 
+   0x83, 0xf4, 0xa9, 0x21, 0xd3, 0x6c, 0xe9, 0xce, 
+   0x47, 0xd0, 0xd1, 0x3c, 0x5d, 0x85, 0xf2, 0xb0, 
+   0xff, 0x83, 0x18, 0xd2, 0x87, 0x7e, 0xec, 0x2f, 
+   0x63, 0xb9, 0x31, 0xbd, 0x47, 0x41, 0x7a, 0x81, 
+   0xa5, 0x38, 0x32, 0x7a, 0xf9, 0x27, 0xda, 0x3e
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{test__crypto_8cpp_a8b0beddf900e2c3d67955ed76757ed26}\label{test__crypto_8cpp_a8b0beddf900e2c3d67955ed76757ed26}} 
+\index{test\+\_\+crypto.\+cpp@{test\+\_\+crypto.\+cpp}!test2\+\_\+ok\+\_\+ripe@{test2\+\_\+ok\+\_\+ripe}}
+\index{test2\+\_\+ok\+\_\+ripe@{test2\+\_\+ok\+\_\+ripe}!test\+\_\+crypto.\+cpp@{test\+\_\+crypto.\+cpp}}
+\subsubsection{\texorpdfstring{test2\+\_\+ok\+\_\+ripe}{test2\_ok\_ripe}}
+{\footnotesize\ttfamily const unsigned char test2\+\_\+ok\+\_\+ripe\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+   0x9c, 0x11, 0x85, 0xa5, 0xc5, 0xe9, 0xfc, 0x54, 
+   0x61, 0x28, 0x08, 0x97, 0x7e, 0xe8, 0xf5, 0x48, 
+   0xb2, 0x25, 0x8d, 0x31
+\}
+\end{DoxyCode}

@@ -1,0 +1,313 @@
+\hypertarget{group__mathcapi}{}\section{Math C A\+PI}
+\label{group__mathcapi}\index{Math C A\+PI@{Math C A\+PI}}
+
+
+Defines basic mathematical operations for higher abstractions to use.  
+
+
+Collaboration diagram for Math C A\+PI\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__mathcapi_ga61d571f58c24fb4663cc3729f3d5613e}{multeq\+\_\+i128}} (uint128\+\_\+t $\ast$self, const uint128\+\_\+t $\ast$\mbox{\hyperlink{structother}{other}})
+\begin{DoxyCompactList}\small\item\em Multiply two 128 unsigned bit integers. \mbox{\hyperlink{struct_throws}{Throws}} exception if pointers are invalid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mathcapi_gad70a23703654281749410aef05c85c74}{diveq\+\_\+i128}} (uint128\+\_\+t $\ast$self, const uint128\+\_\+t $\ast$\mbox{\hyperlink{structother}{other}})
+\begin{DoxyCompactList}\small\item\em Divide two 128 unsigned bit integers and throws an exception in case of invalid pointers. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{group__mathcapi_ga7372b74e4cb87455342d39bdf3724811}{double\+\_\+add}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Addition between two double. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{group__mathcapi_ga6390d36d23bd89bcd9bcf52385ba88f2}{double\+\_\+mult}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Multiplication between two double. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\+\_\+div}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Division between two double. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__mathcapi_ga68d359e670da751723bf3d78ff759614}{double\+\_\+lt}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Less than comparison between two double. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__mathcapi_ga8911bd5a24e0d8287d6b3d5a81500e6a}{double\+\_\+eq}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Equality check between two double. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__mathcapi_gab60e3f0c6651ad497f6665e032e39f6a}{double\+\_\+gt}} (uint64\+\_\+t a, uint64\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Greater than comparison between two double. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{group__mathcapi_ga1388e46084036133e57508c18590b1ed}{double\+\_\+to\+\_\+i64}} (uint64\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Convert double to 64 bit unsigned integer. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\+\_\+to\+\_\+double}} (uint64\+\_\+t a)
+\begin{DoxyCompactList}\small\item\em Convert 64 bit unsigned integer to double (interpreted as 64 bit unsigned integer) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines basic mathematical operations for higher abstractions to use. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__mathcapi_gad70a23703654281749410aef05c85c74}\label{group__mathcapi_gad70a23703654281749410aef05c85c74}} 
+\index{Math C A\+PI@{Math C A\+PI}!diveq\+\_\+i128@{diveq\+\_\+i128}}
+\index{diveq\+\_\+i128@{diveq\+\_\+i128}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{diveq\+\_\+i128()}{diveq\_i128()}}
+{\footnotesize\ttfamily void diveq\+\_\+i128 (\begin{DoxyParamCaption}\item[{uint128\+\_\+t $\ast$}]{self,  }\item[{const uint128\+\_\+t $\ast$}]{other }\end{DoxyParamCaption})}
+
+
+
+Divide two 128 unsigned bit integers and throws an exception in case of invalid pointers. 
+
+Divide two 128 bit unsigned integers and assign the value to the first parameter. It will throw an exception if the value of other is zero. 
+\begin{DoxyParams}{Parameters}
+{\em self} & \mbox{\hyperlink{struct_pointer}{Pointer}} to numerator. It will be replaced with the result \\
+\hline
+{\em other} & \mbox{\hyperlink{struct_pointer}{Pointer}} to denominator Example\+: 
+\begin{DoxyCode}
+uint128\_t \textcolor{keyword}{self}(100);
+uint128\_t \mbox{\hyperlink{structother}{other}}(100);
+\mbox{\hyperlink{group__mathcapi_gad70a23703654281749410aef05c85c74}{diveq\_i128}}(&\textcolor{keyword}{self}, &\mbox{\hyperlink{structother}{other}});
+\mbox{\hyperlink{group__consolecapi_ga0ac41ae1c31cf87a4adc14d9edb3e6a5}{printi128}}(\textcolor{keyword}{self}); \textcolor{comment}{// Output: 1}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__mathcapi_ga7372b74e4cb87455342d39bdf3724811}\label{group__mathcapi_ga7372b74e4cb87455342d39bdf3724811}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+add@{double\+\_\+add}}
+\index{double\+\_\+add@{double\+\_\+add}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+add()}{double\_add()}}
+{\footnotesize\ttfamily uint64\+\_\+t double\+\_\+add (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Addition between two double. 
+
+Get the result of addition between two double interpreted as 64 bit unsigned integer This function will first reinterpret\+\_\+cast both inputs to double (50 decimal digit precision), add them together, and reinterpret\+\_\+cast the result back to 64 bit unsigned integer. 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_result}{Result}} of addition reinterpret\+\_\+cast to 64 bit unsigned integers
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10) );
+uint64\_t b = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(2) );
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_ga7372b74e4cb87455342d39bdf3724811}{double\_add}}( a, b );
+printd(res); \textcolor{comment}{// Output: 3}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}\label{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+div@{double\+\_\+div}}
+\index{double\+\_\+div@{double\+\_\+div}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+div()}{double\_div()}}
+{\footnotesize\ttfamily uint64\+\_\+t double\+\_\+div (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Division between two double. 
+
+Get the result of division between two double interpreted as 64 bit unsigned integer This function will first reinterpret\+\_\+cast both inputs to double (50 decimal digit precision), divide numerator with denominator, and reinterpret\+\_\+cast the result back to 64 bit unsigned integer. \mbox{\hyperlink{struct_throws}{Throws}} an error if b is zero (after it is reinterpret\+\_\+cast to double) 
+\begin{DoxyParams}{Parameters}
+{\em a} & Numerator in double interpreted as 64 bit unsigned integer \\
+\hline
+{\em b} & Denominator in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_result}{Result}} of division reinterpret\+\_\+cast to 64 bit unsigned integers
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(100) );
+printd(a); \textcolor{comment}{// Output: 0.1}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{group__mathcapi_ga8911bd5a24e0d8287d6b3d5a81500e6a}\label{group__mathcapi_ga8911bd5a24e0d8287d6b3d5a81500e6a}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+eq@{double\+\_\+eq}}
+\index{double\+\_\+eq@{double\+\_\+eq}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+eq()}{double\_eq()}}
+{\footnotesize\ttfamily uint32\+\_\+t double\+\_\+eq (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Equality check between two double. 
+
+Get the result of equality check between two double This function will first reinterpret\+\_\+cast both inputs to double (50 decimal digit precision) before doing equality check. 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if first input is equal to second input, 0 otherwise
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10) );
+uint64\_t b = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(2) );
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_ga8911bd5a24e0d8287d6b3d5a81500e6a}{double\_eq}}( a, b );
+\mbox{\hyperlink{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}{printi}}(res); \textcolor{comment}{// Output: 0}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{group__mathcapi_gab60e3f0c6651ad497f6665e032e39f6a}\label{group__mathcapi_gab60e3f0c6651ad497f6665e032e39f6a}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+gt@{double\+\_\+gt}}
+\index{double\+\_\+gt@{double\+\_\+gt}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+gt()}{double\_gt()}}
+{\footnotesize\ttfamily uint32\+\_\+t double\+\_\+gt (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Greater than comparison between two double. 
+
+Get the result of greater than comparison between two double This function will first reinterpret\+\_\+cast both inputs to double (50 decimal digit precision) before doing the greater than comparison. 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if first input is greater than second input, 0 otherwise
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10) );
+uint64\_t b = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(2) );
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_gab60e3f0c6651ad497f6665e032e39f6a}{double\_gt}}( a, b );
+\mbox{\hyperlink{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}{printi}}(res); \textcolor{comment}{// Output: 0}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{group__mathcapi_ga68d359e670da751723bf3d78ff759614}\label{group__mathcapi_ga68d359e670da751723bf3d78ff759614}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+lt@{double\+\_\+lt}}
+\index{double\+\_\+lt@{double\+\_\+lt}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+lt()}{double\_lt()}}
+{\footnotesize\ttfamily uint32\+\_\+t double\+\_\+lt (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Less than comparison between two double. 
+
+Get the result of less than comparison between two double This function will first reinterpret\+\_\+cast both inputs to double (50 decimal digit precision) before doing the less than comparison. 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if first input is smaller than second input, 0 otherwise
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10) );
+uint64\_t b = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(2) );
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_ga68d359e670da751723bf3d78ff759614}{double\_lt}}( a, b );
+\mbox{\hyperlink{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}{printi}}(res); \textcolor{comment}{// Output: 1}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{group__mathcapi_ga6390d36d23bd89bcd9bcf52385ba88f2}\label{group__mathcapi_ga6390d36d23bd89bcd9bcf52385ba88f2}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+mult@{double\+\_\+mult}}
+\index{double\+\_\+mult@{double\+\_\+mult}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+mult()}{double\_mult()}}
+{\footnotesize\ttfamily uint64\+\_\+t double\+\_\+mult (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a,  }\item[{uint64\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+Multiplication between two double. 
+
+Get the result of multiplication between two double interpreted as 64 bit unsigned integer This function will first reinterpret\+\_\+cast both inputs to double (50 decimal digit precision), multiply them together, and reinterpret\+\_\+cast the result back to 64 bit unsigned integer. 
+\begin{DoxyParams}{Parameters}
+{\em a} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+{\em b} & \mbox{\hyperlink{struct_value}{Value}} in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_result}{Result}} of multiplication reinterpret\+\_\+cast to 64 bit unsigned integers
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(10) );
+uint64\_t b = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(2) );
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_ga6390d36d23bd89bcd9bcf52385ba88f2}{double\_mult}}( a, b );
+printd(res); \textcolor{comment}{// Output: 2.5}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{group__mathcapi_ga1388e46084036133e57508c18590b1ed}\label{group__mathcapi_ga1388e46084036133e57508c18590b1ed}} 
+\index{Math C A\+PI@{Math C A\+PI}!double\+\_\+to\+\_\+i64@{double\+\_\+to\+\_\+i64}}
+\index{double\+\_\+to\+\_\+i64@{double\+\_\+to\+\_\+i64}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{double\+\_\+to\+\_\+i64()}{double\_to\_i64()}}
+{\footnotesize\ttfamily uint64\+\_\+t double\+\_\+to\+\_\+i64 (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Convert double to 64 bit unsigned integer. 
+
+Convert double (interpreted as 64 bit unsigned integer) to 64 bit unsigned integer. This function will first reinterpret\+\_\+cast the input to double (50 decimal digit precision) then convert it to double, then reinterpret\+\_\+cast it to 64 bit unsigned integer. 
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ value in double interpreted as 64 bit unsigned integer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_result}{Result}} of conversion in 64 bit unsigned integer
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t a = \mbox{\hyperlink{group__mathcapi_gad67af06a6b0e9dbbf3be05d6bf99257c}{double\_div}}( \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(5), \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}(2) );
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_ga1388e46084036133e57508c18590b1ed}{double\_to\_i64}}( a );
+\mbox{\hyperlink{group__consolecapi_gaac924af668edbf421d478edf203fdbd1}{printi}}(res); \textcolor{comment}{// Output: 2}
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}\label{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}} 
+\index{Math C A\+PI@{Math C A\+PI}!i64\+\_\+to\+\_\+double@{i64\+\_\+to\+\_\+double}}
+\index{i64\+\_\+to\+\_\+double@{i64\+\_\+to\+\_\+double}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{i64\+\_\+to\+\_\+double()}{i64\_to\_double()}}
+{\footnotesize\ttfamily uint64\+\_\+t i64\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+Convert 64 bit unsigned integer to double (interpreted as 64 bit unsigned integer) 
+
+Convert 64 bit unsigned integer to double (interpreted as 64 bit unsigned integer). This function will convert the input to double (50 decimal digit precision) then reinterpret\+\_\+cast it to 64 bit unsigned integer. 
+\begin{DoxyParams}{Parameters}
+{\em a} & -\/ value to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_result}{Result}} of conversion in double (interpreted as 64 bit unsigned integer)
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+uint64\_t res = \mbox{\hyperlink{group__mathcapi_gaec506d4ee77526e67ab5f2a8ef54f2b5}{i64\_to\_double}}( 3 );
+printd(res); \textcolor{comment}{// Output: 3}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{group__mathcapi_ga61d571f58c24fb4663cc3729f3d5613e}\label{group__mathcapi_ga61d571f58c24fb4663cc3729f3d5613e}} 
+\index{Math C A\+PI@{Math C A\+PI}!multeq\+\_\+i128@{multeq\+\_\+i128}}
+\index{multeq\+\_\+i128@{multeq\+\_\+i128}!Math C A\+PI@{Math C A\+PI}}
+\subsubsection{\texorpdfstring{multeq\+\_\+i128()}{multeq\_i128()}}
+{\footnotesize\ttfamily void multeq\+\_\+i128 (\begin{DoxyParamCaption}\item[{uint128\+\_\+t $\ast$}]{self,  }\item[{const uint128\+\_\+t $\ast$}]{other }\end{DoxyParamCaption})}
+
+
+
+Multiply two 128 unsigned bit integers. \mbox{\hyperlink{struct_throws}{Throws}} exception if pointers are invalid. 
+
+Multiply two 128 bit unsigned integers and assign the value to the first parameter. 
+\begin{DoxyParams}{Parameters}
+{\em self} & \mbox{\hyperlink{struct_pointer}{Pointer}} to the value to be multiplied. It will be replaced with the result. \\
+\hline
+{\em other} & \mbox{\hyperlink{struct_pointer}{Pointer}} to the \mbox{\hyperlink{struct_value}{Value}} to be multiplied.\\
+\hline
+\end{DoxyParams}
+Example\+: 
+\begin{DoxyCode}
+uint128\_t \textcolor{keyword}{self}(100);
+uint128\_t \mbox{\hyperlink{structother}{other}}(100);
+\mbox{\hyperlink{group__mathcapi_ga61d571f58c24fb4663cc3729f3d5613e}{multeq\_i128}}(&\textcolor{keyword}{self}, &\mbox{\hyperlink{structother}{other}});
+\mbox{\hyperlink{group__consolecapi_ga0ac41ae1c31cf87a4adc14d9edb3e6a5}{printi128}}(\textcolor{keyword}{self}); \textcolor{comment}{// Output: 10000}
+\end{DoxyCode}
+ Here is the caller graph for this function\+:
+% FIG 9

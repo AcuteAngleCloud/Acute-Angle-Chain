@@ -1,0 +1,151 @@
+.TH "contracts/aaciolib/multi_index.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/multi_index.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <tuple>\fP
+.br
+\fC#include <boost/hana\&.hpp>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <type_traits>\fP
+.br
+\fC#include <iterator>\fP
+.br
+\fC#include <limits>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <boost/multi_index/mem_fun\&.hpp>\fP
+.br
+\fC#include <aaciolib/types\&.hpp>\fP
+.br
+\fC#include <aaciolib/serialize\&.hpp>\fP
+.br
+\fC#include <aaciolib/datastream\&.hpp>\fP
+.br
+\fC#include <aaciolib/db\&.h>\fP
+.br
+\fC#include <aaciolib/fixed_key\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::secondary_index_db_functions< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::secondary_index_db_functions< double >\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::multi_index< TableName, T, Indices >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::indexed_by< IndexName, Extractor >\fP"
+.br
+.ti -1c
+.RI "class \fBaacio::multi_index< TableName, T, Indices >\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::multi_index< TableName, T, Indices >::index< IndexName, Extractor, Number, IsConst >::const_iterator\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::multi_index< TableName, T, Indices >::const_iterator\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWRAP_SECONDARY_SIMPLE_TYPE\fP(IDX,  TYPE)"
+.br
+.ti -1c
+.RI "#define \fBWRAP_SECONDARY_ARRAY_TYPE\fP(IDX,  TYPE)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define WRAP_SECONDARY_ARRAY_TYPE(IDX, TYPE)"
+\fBValue:\fP
+.PP
+.nf
+template<>\
+struct secondary_index_db_functions<TYPE> {\
+   static int32_t db_idx_next( int32_t iterator, uint64_t* primary )          { return db_##IDX##_next( iterator, primary ); }\
+   static int32_t db_idx_previous( int32_t iterator, uint64_t* primary )      { return db_##IDX##_previous( iterator, primary ); }\
+   static void    db_idx_remove( int32_t iterator )                           { db_##IDX##_remove( iterator ); }\
+   static int32_t db_idx_end( uint64_t code, uint64_t scope, uint64_t table ) { return db_##IDX##_end( code, scope, table ); }\
+   static int32_t db_idx_store( uint64_t scope, uint64_t table, uint64_t payer, uint64_t id, const TYPE& secondary ) {\
+      return db_##IDX##_store( scope, table, payer, id, secondary\&.data(), TYPE::num_words() );\
+   }\
+   static void    db_idx_update( int32_t iterator, uint64_t payer, const TYPE& secondary ) {\
+      db_##IDX##_update( iterator, payer, secondary\&.data(), TYPE::num_words() );\
+   }\
+   static int32_t db_idx_find_primary( uint64_t code, uint64_t scope, uint64_t table, uint64_t primary, TYPE& secondary ) {\
+      return db_##IDX##_find_primary( code, scope, table, secondary\&.data(), TYPE::num_words(), primary );\
+   }\
+   static int32_t db_idx_find_secondary( uint64_t code, uint64_t scope, uint64_t table, const TYPE& secondary, uint64_t& primary ) {\
+      return db_##IDX##_find_secondary( code, scope, table, secondary\&.data(), TYPE::num_words(), &primary );\
+   }\
+   static int32_t db_idx_lowerbound( uint64_t code, uint64_t scope, uint64_t table, TYPE& secondary, uint64_t& primary ) {\
+      return db_##IDX##_lowerbound( code, scope, table, secondary\&.data(), TYPE::num_words(), &primary );\
+   }\
+   static int32_t db_idx_upperbound( uint64_t code, uint64_t scope, uint64_t table, TYPE& secondary, uint64_t& primary ) {\
+      return db_##IDX##_upperbound( code, scope, table, secondary\&.data(), TYPE::num_words(), &primary );\
+   }\
+};\
+.fi
+.SS "#define WRAP_SECONDARY_SIMPLE_TYPE(IDX, TYPE)"
+\fBValue:\fP
+.PP
+.nf
+template<>\
+struct secondary_index_db_functions<TYPE> {\
+   static int32_t db_idx_next( int32_t iterator, uint64_t* primary )          { return db_##IDX##_next( iterator, primary ); }\
+   static int32_t db_idx_previous( int32_t iterator, uint64_t* primary )      { return db_##IDX##_previous( iterator, primary ); }\
+   static void    db_idx_remove( int32_t iterator  )                          { db_##IDX##_remove( iterator ); }\
+   static int32_t db_idx_end( uint64_t code, uint64_t scope, uint64_t table ) { return db_##IDX##_end( code, scope, table ); }\
+   static int32_t db_idx_store( uint64_t scope, uint64_t table, uint64_t payer, uint64_t id, const TYPE& secondary ) {\
+      return db_##IDX##_store( scope, table, payer, id, &secondary );\
+   }\
+   static void    db_idx_update( int32_t iterator, uint64_t payer, const TYPE& secondary ) {\
+      db_##IDX##_update( iterator, payer, &secondary );\
+   }\
+   static int32_t db_idx_find_primary( uint64_t code, uint64_t scope, uint64_t table, uint64_t primary, TYPE& secondary ) {\
+      return db_##IDX##_find_primary( code, scope, table, &secondary, primary );\
+   }\
+   static int32_t db_idx_find_secondary( uint64_t code, uint64_t scope, uint64_t table, const TYPE& secondary, uint64_t& primary ) {\
+      return db_##IDX##_find_secondary( code, scope, table, &secondary, &primary );\
+   }\
+   static int32_t db_idx_lowerbound( uint64_t code, uint64_t scope, uint64_t table, TYPE& secondary, uint64_t& primary ) {\
+      return db_##IDX##_lowerbound( code, scope, table, &secondary, &primary );\
+   }\
+   static int32_t db_idx_upperbound( uint64_t code, uint64_t scope, uint64_t table, TYPE& secondary, uint64_t& primary ) {\
+      return db_##IDX##_upperbound( code, scope, table, &secondary, &primary );\
+   }\
+};
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

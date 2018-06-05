@@ -1,0 +1,11 @@
+digraph "gbench.report.find_longest_name"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node9 [label="gbench.report.find\l_longest_name",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="gbench.report.generate\l_difference_report",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacegbench_1_1report.html#a62f7cd3872dbabd4959bec16b1696ce4"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="compare_bench.main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacecompare__bench.html#ae82bb21b1019ff4a8dd6692ebb99d0de"];
+}

@@ -1,0 +1,33 @@
+\hypertarget{classbenchmark_1_1internal_1_1_thread_manager}{}\section{benchmark\+:\+:internal\+:\+:Thread\+Manager Class Reference}
+\label{classbenchmark_1_1internal_1_1_thread_manager}\index{benchmark\+::internal\+::\+Thread\+Manager@{benchmark\+::internal\+::\+Thread\+Manager}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structbenchmark_1_1internal_1_1_thread_manager_1_1_result}{Result}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbenchmark_1_1internal_1_1_thread_manager_a3699661a7fee9373aac160386cc2bc47}\label{classbenchmark_1_1internal_1_1_thread_manager_a3699661a7fee9373aac160386cc2bc47}} 
+{\bfseries Thread\+Manager} (int num\+\_\+threads)
+\item 
+\mbox{\Hypertarget{classbenchmark_1_1internal_1_1_thread_manager_af16d4642aff6ce06140e117ccad36445}\label{classbenchmark_1_1internal_1_1_thread_manager_af16d4642aff6ce06140e117ccad36445}} 
+Mutex \& {\bfseries Get\+Benchmark\+Mutex} () const R\+E\+T\+U\+R\+N\+\_\+\+C\+A\+P\+A\+B\+I\+L\+I\+TY(benchmark\+\_\+mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classbenchmark_1_1internal_1_1_thread_manager_ac39b0a812ebe163a1da00432772eec34}\label{classbenchmark_1_1internal_1_1_thread_manager_ac39b0a812ebe163a1da00432772eec34}} 
+bool {\bfseries Start\+Stop\+Barrier} () E\+X\+C\+L\+U\+D\+ES(end\+\_\+cond\+\_\+mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classbenchmark_1_1internal_1_1_thread_manager_ab13e9ef3258f0ef94f028aabf09553a9}\label{classbenchmark_1_1internal_1_1_thread_manager_ab13e9ef3258f0ef94f028aabf09553a9}} 
+void {\bfseries Notify\+Thread\+Complete} () E\+X\+C\+L\+U\+D\+ES(end\+\_\+cond\+\_\+mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classbenchmark_1_1internal_1_1_thread_manager_af11aa4af6c429a16c48e0d76e6147d0d}\label{classbenchmark_1_1internal_1_1_thread_manager_af11aa4af6c429a16c48e0d76e6147d0d}} 
+void {\bfseries Wait\+For\+All\+Threads} () E\+X\+C\+L\+U\+D\+ES(end\+\_\+cond\+\_\+mutex\+\_\+)
+\item 
+\mbox{\Hypertarget{classbenchmark_1_1internal_1_1_thread_manager_a4083b77f2e54a237548cdb7f65015818}\label{classbenchmark_1_1internal_1_1_thread_manager_a4083b77f2e54a237548cdb7f65015818}} 
+{\bfseries G\+U\+A\+R\+D\+E\+D\+\_\+\+BY} (Get\+Benchmark\+Mutex()) \mbox{\hyperlink{structbenchmark_1_1internal_1_1_thread_manager_1_1_result}{Result}} results
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/utils/google-\/benchmark/src/benchmark.\+cc\end{DoxyCompactItemize}

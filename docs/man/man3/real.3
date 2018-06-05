@@ -1,0 +1,150 @@
+.TH "real" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+real \- Real number data type with basic operators\&. Wrap double class of Math \fBC\fP API\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBaacio::real\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBaacio::operator==\fP (const \fBreal\fP &c1, const \fBreal\fP &c2)"
+.br
+.RI "Compares two double variables c1 and c2\&. "
+.ti -1c
+.RI "bool \fBaacio::operator>\fP (const \fBreal\fP &c1, const \fBreal\fP &c2)"
+.br
+.RI "Compares two double variables c1 and c2\&. "
+.ti -1c
+.RI "bool \fBaacio::operator<\fP (const \fBreal\fP &c1, const \fBreal\fP &c2)"
+.br
+.RI "Compares two double variables c1 and c2\&. "
+.ti -1c
+.RI "\fBreal\fP \fBaacio::real::operator+\fP (const \fBreal\fP &rhs) const"
+.br
+.RI "Add two real variables\&. "
+.ti -1c
+.RI "\fBreal\fP \fBaacio::real::operator*\fP (const \fBreal\fP &rhs) const"
+.br
+.RI "Multiply two real variables\&. "
+.ti -1c
+.RI "\fBreal\fP \fBaacio::real::operator/\fP (const \fBreal\fP &rhs) const"
+.br
+.RI "Division between two real variables\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Real number data type with basic operators\&. Wrap double class of Math \fBC\fP API\&. 
+
+Example: 
+.PP
+.nf
+real a(100);
+real b(10);
+real c = a+b
+real d = a / b
+real e = a*b
+if(a == b) {}
+if(a > b) {}
+if(a < b) {}
+auto val = d\&.value();
+
+.fi
+.PP
+ 
+.SH "Function Documentation"
+.PP 
+.SS "\fBreal\fP aacio::real::operator* (const \fBreal\fP & rhs) const"
+
+.PP
+Multiply two real variables\&. Multiply two real variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrhs\fP double variable to be multiplied with this 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the result after multiplication 
+.RE
+.PP
+
+.SS "\fBreal\fP aacio::real::operator+ (const \fBreal\fP & rhs) const"
+
+.PP
+Add two real variables\&. Add two real variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrhs\fP double variable to be added with this 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the sum of this and rhs 
+.RE
+.PP
+
+.SS "\fBreal\fP aacio::real::operator/ (const \fBreal\fP & rhs) const"
+
+.PP
+Division between two real variables\&. Division between two real variables 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIrhs\fP double variable to be multiplied with this 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the result after division 
+.RE
+.PP
+
+.SS "bool aacio::operator< (const \fBreal\fP & c1, const \fBreal\fP & c2)"
+
+.PP
+Compares two double variables c1 and c2\&. Compares two double variables c1 and c2 
+.PP
+\fBReturns:\fP
+.RS 4
+if c1 < c2, return true, otherwise false 
+.RE
+.PP
+
+.SS "bool aacio::operator== (const \fBreal\fP & c1, const \fBreal\fP & c2)"
+
+.PP
+Compares two double variables c1 and c2\&. Compares two double variables c1 and c2 
+.PP
+\fBReturns:\fP
+.RS 4
+if c1 == c2, return true, otherwise false 
+.RE
+.PP
+
+.SS "bool aacio::operator> (const \fBreal\fP & c1, const \fBreal\fP & c2)"
+
+.PP
+Compares two double variables c1 and c2\&. Compares two double variables c1 and c2 
+.PP
+\fBReturns:\fP
+.RS 4
+if c1 > c2, return true, otherwise false 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

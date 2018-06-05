@@ -1,0 +1,34 @@
+.TH "fc::impl::storage_ops< N, T, Ts... >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::impl::storage_ops< N, T, Ts... >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdel\fP (int n, void *data)"
+.br
+.ti -1c
+.RI "static void \fBcon\fP (int n, void *data)"
+.br
+.ti -1c
+.RI "template<typename visitor > static \fBvisitor::result_type\fP \fBapply\fP (int n, void *data, \fBvisitor\fP &v)"
+.br
+.ti -1c
+.RI "template<typename visitor > static \fBvisitor::result_type\fP \fBapply\fP (int n, void *data, const \fBvisitor\fP &v)"
+.br
+.ti -1c
+.RI "template<typename visitor > static \fBvisitor::result_type\fP \fBapply\fP (int n, const void *data, \fBvisitor\fP &v)"
+.br
+.ti -1c
+.RI "template<typename visitor > static \fBvisitor::result_type\fP \fBapply\fP (int n, const void *data, const \fBvisitor\fP &v)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

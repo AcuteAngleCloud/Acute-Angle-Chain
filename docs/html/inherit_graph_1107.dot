@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="fc::if_enum\< fc::true\l_type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfc_1_1if__enum_3_01fc_1_1true__type_01_4.html"];
+}

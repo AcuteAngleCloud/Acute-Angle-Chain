@@ -1,0 +1,86 @@
+.TH "TestResourceImp< ProviderT, int >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TestResourceImp< ProviderT, int >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits memory_resource\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBmemory_resource\fP = std::experimental::pmr::memory_resource"
+.br
+.ti -1c
+.RI "using \fBProvider\fP = ProviderT"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTestResourceImp\fP (int val=0)"
+.br
+.ti -1c
+.RI "void \fBreset\fP ()"
+.br
+.ti -1c
+.RI "\fBAllocController\fP & \fBgetController\fP ()"
+.br
+.ti -1c
+.RI "bool \fBcheckAlloc\fP (void *p, std::size_t s, std::size_t a) const"
+.br
+.ti -1c
+.RI "bool \fBcheckDealloc\fP (void *p, std::size_t s, std::size_t a) const"
+.br
+.ti -1c
+.RI "bool \fBcheckIsEqualCalledEq\fP (int n) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBresetStatics\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBvalue\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fBresource_alive\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBresource_constructed\fP = 0"
+.br
+.ti -1c
+.RI "static int \fBresource_destructed\fP = 0"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void * \fBdo_allocate\fP (std::size_t s, std::size_t a)"
+.br
+.ti -1c
+.RI "virtual void \fBdo_deallocate\fP (void *p, std::size_t s, std::size_t a)"
+.br
+.ti -1c
+.RI "virtual bool \fBdo_is_equal\fP (memory_resource const &\fBother\fP) const noexcept"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

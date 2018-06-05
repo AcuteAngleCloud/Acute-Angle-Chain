@@ -1,0 +1,40 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3200 [label="binary_function",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3200 -> Node3201 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3201 [label="binary_counting_predicate\l\< Predicate, Arg1, Arg2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbinary__counting__predicate.html"];
+  Node3200 -> Node3202 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3202 [label="functor2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfunctor2.html"];
+  Node3200 -> Node681 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node681 [label="functor3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfunctor3.html"];
+  Node3200 -> Node682 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node682 [label="functor4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfunctor4.html"];
+  Node3200 -> Node3203 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3203 [label="std::equal_to\< cashew\l::IString \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstd_1_1equal__to_3_01cashew_1_1_i_string_01_4.html"];
+  Node3200 -> Node3204 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3204 [label="std::less\< checksum256 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstd_1_1less_3_01checksum256_01_4.html",tooltip="provide less for checksum256 "];
+  Node3200 -> Node3205 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3205 [label="websocketpp::utility\l::ci_less",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1utility_1_1ci__less.html",tooltip="Helper less than functor for case insensitive find. "];
+  Node3200 -> Node3206 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3206 [label="websocketpp::utility\l::ci_less::nocase_compare",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structwebsocketpp_1_1utility_1_1ci__less_1_1nocase__compare.html"];
+  Node679 [label="unary_function",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node679 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="functor1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfunctor1.html"];
+  Node679 -> Node681 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node679 -> Node682 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node679 -> Node683 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node683 [label="identity\< _Tp \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structidentity.html"];
+  Node679 -> Node684 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node684 [label="std::hash\< cashew::\lIString \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstd_1_1hash_3_01cashew_1_1_i_string_01_4.html"];
+  Node679 -> Node685 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node685 [label="std::hash\< Counter\l\< T \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstd_1_1hash_3_01_counter_3_01_t_01_4_01_4.html"];
+  Node679 -> Node686 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node686 [label="std::hash\< NotConstructible \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstd_1_1hash_3_01_not_constructible_01_4.html"];
+  Node679 -> Node687 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node687 [label="unary_counting_predicate\l\< Predicate, Arg \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunary__counting__predicate.html"];
+  Node679 -> Node688 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node688 [label="unary_counting_predicate\l\< bool(*)(int), int \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunary__counting__predicate.html"];
+}

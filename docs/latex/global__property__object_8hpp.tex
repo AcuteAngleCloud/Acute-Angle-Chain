@@ -1,0 +1,43 @@
+\hypertarget{global__property__object_8hpp}{}\section{libraries/chain/include/aacio/chain/global\+\_\+property\+\_\+object.hpp File Reference}
+\label{global__property__object_8hpp}\index{libraries/chain/include/aacio/chain/global\+\_\+property\+\_\+object.\+hpp@{libraries/chain/include/aacio/chain/global\+\_\+property\+\_\+object.\+hpp}}
+{\ttfamily \#include $<$fc/uint128.\+hpp$>$}\newline
+{\ttfamily \#include $<$fc/array.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/types.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/block\+\_\+timestamp.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/chain\+\_\+config.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/producer\+\_\+schedule.\+hpp$>$}\newline
+{\ttfamily \#include $<$aacio/chain/incremental\+\_\+merkle.\+hpp$>$}\newline
+{\ttfamily \#include $<$chainbase/chainbase.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+index\+\_\+includes.\+hpp\char`\"{}}\newline
+Include dependency graph for global\+\_\+property\+\_\+object.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1blocknum__producer__schedule}{aacio\+::chain\+::blocknum\+\_\+producer\+\_\+schedule}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1global__property__object}{aacio\+::chain\+::global\+\_\+property\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em Maintains global state information (committee\+\_\+member list, current fees)
+
+This is an implementation detail. The values here are set by committee\+\_\+members to tune the blockchain parameters. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1dynamic__global__property__object}{aacio\+::chain\+::dynamic\+\_\+global\+\_\+property\+\_\+object}}
+\begin{DoxyCompactList}\small\item\em Maintains global state information (committee\+\_\+member list, current fees)
+
+This is an implementation detail. The values here are calculated during normal chain operations and reflect the current values of global blockchain properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{global__property__object_8hpp_a24527f3a1a7522ef4b71588e6dd0ff64}\label{global__property__object_8hpp_a24527f3a1a7522ef4b71588e6dd0ff64}} 
+using {\bfseries aacio\+::chain\+::global\+\_\+property\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ global\+\_\+property\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{global__property__object_8hpp_aab3141c6e01f5e4b0c04fec9aff06e0d}\label{global__property__object_8hpp_aab3141c6e01f5e4b0c04fec9aff06e0d}} 
+using {\bfseries aacio\+::chain\+::dynamic\+\_\+global\+\_\+property\+\_\+multi\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ dynamic\+\_\+global\+\_\+property\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, $>$ $>$ $>$
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

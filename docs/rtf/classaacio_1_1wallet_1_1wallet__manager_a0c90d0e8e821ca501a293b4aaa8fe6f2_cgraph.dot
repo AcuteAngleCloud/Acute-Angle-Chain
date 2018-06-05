@@ -1,0 +1,9 @@
+digraph "aacio::wallet::wallet_manager::set_timeout"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node23 [label="aacio::wallet::wallet\l_manager::set_timeout",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node23 -> Node24 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="now",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__systemcapi.html#ga5eef43c9589d6ef54a0ece1dda5e0ffe",tooltip="Get time of the last accepted block. "];
+}

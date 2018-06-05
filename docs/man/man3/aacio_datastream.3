@@ -1,0 +1,176 @@
+.TH "aacio::datastream< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::datastream< T > \- \fBA\fP data stream for reading and writing data in the form of bytes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <datastream\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdatastream\fP (\fBT\fP start, size_t s)"
+.br
+.ti -1c
+.RI "void \fBskip\fP (size_t s)"
+.br
+.RI "Skips a specific number of bytes from this stream\&. "
+.ti -1c
+.RI "bool \fBread\fP (char *d, size_t s)"
+.br
+.RI "Reads a specified number of bytes from this stream into a buffer\&. "
+.ti -1c
+.RI "bool \fBwrite\fP (const char *d, size_t s)"
+.br
+.RI "Writes a specified number of bytes into the stream from a buffer\&. "
+.ti -1c
+.RI "bool \fBput\fP (char c)"
+.br
+.RI "Writes a byte into the stream\&. "
+.ti -1c
+.RI "bool \fBget\fP (unsigned char &c)"
+.br
+.RI "Reads a byte from the stream\&. "
+.ti -1c
+.RI "bool \fBget\fP (char &c)"
+.br
+.ti -1c
+.RI "\fBT\fP \fBpos\fP () const"
+.br
+.RI "Retrieves the current position of the stream\&. "
+.ti -1c
+.RI "bool \fBvalid\fP () const"
+.br
+.ti -1c
+.RI "bool \fBseekp\fP (size_t p)"
+.br
+.RI "Sets the position within the current stream\&. "
+.ti -1c
+.RI "size_t \fBtellp\fP () const"
+.br
+.RI "Gets the position within the current stream\&. "
+.ti -1c
+.RI "size_t \fBremaining\fP () const"
+.br
+.RI "Returns the number of remaining bytes that can be read/skipped\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class aacio::datastream< T >"
+\fBA\fP data stream for reading and writing data in the form of bytes\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T> bool \fBaacio::datastream\fP< \fBT\fP >::get (unsigned char & c)\fC [inline]\fP"
+
+.PP
+Reads a byte from the stream\&. Reads a byte from the stream 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP reference to destination byte 
+.RE
+.PP
+
+.SS "template<typename T> \fBT\fP \fBaacio::datastream\fP< \fBT\fP >::pos () const\fC [inline]\fP"
+
+.PP
+Retrieves the current position of the stream\&. Retrieves the current position of the stream 
+.PP
+\fBReturns:\fP
+.RS 4
+the current position of the stream 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBaacio::datastream\fP< \fBT\fP >::put (char c)\fC [inline]\fP"
+
+.PP
+Writes a byte into the stream\&. Writes a byte into the stream 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIc\fP byte to write 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBaacio::datastream\fP< \fBT\fP >::read (char * d, size_t s)\fC [inline]\fP"
+
+.PP
+Reads a specified number of bytes from this stream into a buffer\&. Reads a specified number of bytes from the stream into a buffer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fId\fP pointer to the destination buffer 
+.br
+\fIs\fP the number of bytes to read 
+.RE
+.PP
+
+.SS "template<typename T> size_t \fBaacio::datastream\fP< \fBT\fP >::remaining () const\fC [inline]\fP"
+
+.PP
+Returns the number of remaining bytes that can be read/skipped\&. Returns the number of remaining bytes that can be read/skipped 
+.PP
+\fBReturns:\fP
+.RS 4
+number of remaining bytes 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBaacio::datastream\fP< \fBT\fP >::seekp (size_t p)\fC [inline]\fP"
+
+.PP
+Sets the position within the current stream\&. Sets the position within the current stream 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIp\fP offset relative to the origin 
+.RE
+.PP
+
+.SS "template<typename T> void \fBaacio::datastream\fP< \fBT\fP >::skip (size_t s)\fC [inline]\fP"
+
+.PP
+Skips a specific number of bytes from this stream\&. Skips a specified number of bytes from this stream 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP The number of bytes to skip 
+.RE
+.PP
+
+.SS "template<typename T> size_t \fBaacio::datastream\fP< \fBT\fP >::tellp () const\fC [inline]\fP"
+
+.PP
+Gets the position within the current stream\&. Gets the position within the current stream 
+.PP
+\fBReturns:\fP
+.RS 4
+p the position within the current stream 
+.RE
+.PP
+
+.SS "template<typename T> bool \fBaacio::datastream\fP< \fBT\fP >::write (const char * d, size_t s)\fC [inline]\fP"
+
+.PP
+Writes a specified number of bytes into the stream from a buffer\&. Writes a specified number of bytes into the stream from a buffer 
+.PP
+\fBParameters:\fP
+.RS 4
+\fId\fP pointer to the source buffer 
+.br
+\fIs\fP The number of bytes to write 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

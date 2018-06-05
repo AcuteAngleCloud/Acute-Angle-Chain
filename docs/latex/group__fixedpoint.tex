@@ -1,0 +1,257 @@
+\hypertarget{group__fixedpoint}{}\section{Fixed Point}
+\label{group__fixedpoint}\index{Fixed Point@{Fixed Point}}
+
+
+32,64,128,256 bits version of Fixed Point variables  
+
+
+Collaboration diagram for Fixed Point\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1fixed__point32}{aacio\+::fixed\+\_\+point32$<$ Q $>$}}
+\begin{DoxyCompactList}\small\item\em 32 bits representation of Fixed Point class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structaacio_1_1fixed__point64}{aacio\+::fixed\+\_\+point64$<$ Q $>$}}
+\begin{DoxyCompactList}\small\item\em 64 bits representation of Fixed Point class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structaacio_1_1fixed__point128}{aacio\+::fixed\+\_\+point128$<$ Q $>$}}
+\begin{DoxyCompactList}\small\item\em 128 bits representation of Fixed Point class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__fixedpoint_ga2768a9d2b1ace147dd9233cced32607c}\label{group__fixedpoint_ga2768a9d2b1ace147dd9233cced32607c}} 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{struct_t}{T}} {\bfseries aacio\+::assign\+Helper} (\mbox{\hyperlink{struct_t}{T}} rhs\+\_\+val, uint8\+\_\+t q, uint8\+\_\+t qr)
+\item 
+{\footnotesize template$<$uint8\+\_\+t Q$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ Q $>$ \mbox{\hyperlink{group__fixedpoint_ga605ac661acc42c361ed85c4398e880d0}{aacio\+::fixed\+\_\+divide}} (uint32\+\_\+t lhs, uint32\+\_\+t rhs)
+\begin{DoxyCompactList}\small\item\em Wrapper function for dividing two unit64 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t Q$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$ Q $>$ \mbox{\hyperlink{group__fixedpoint_gaa76cfb710309434652c4317c2d319c9e}{aacio\+::fixed\+\_\+divide}} (uint64\+\_\+t lhs, uint64\+\_\+t rhs)
+\begin{DoxyCompactList}\small\item\em Wrapper function for dividing two unit64 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}} Wrapper function for dividing two unit64 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__fixedpoint_gabf3358c9828033e0479da02d783ee7b4}\label{group__fixedpoint_gabf3358c9828033e0479da02d783ee7b4}} 
+{\footnotesize template$<$uint8\+\_\+t qr$>$ }\\{\bfseries aacio\+::fixed\+\_\+point128$<$ Q $>$\+::fixed\+\_\+point128} (const \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$ qr $>$ \&r)
+\item 
+\mbox{\Hypertarget{group__fixedpoint_ga7297f006c904254404909d541107160a}\label{group__fixedpoint_ga7297f006c904254404909d541107160a}} 
+{\footnotesize template$<$uint8\+\_\+t qr$>$ }\\{\bfseries aacio\+::fixed\+\_\+point128$<$ Q $>$\+::fixed\+\_\+point128} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ qr $>$ \&r)
+\item 
+\mbox{\Hypertarget{group__fixedpoint_ga33a72d30c22b4f41add6f5dca2945c44}\label{group__fixedpoint_ga33a72d30c22b4f41add6f5dca2945c44}} 
+{\footnotesize template$<$uint8\+\_\+t qr$>$ }\\{\bfseries aacio\+::fixed\+\_\+point128$<$ Q $>$\+::fixed\+\_\+point128} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ qr $>$ \&r)
+\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{group__fixedpoint_ga998ecf508857149cd2782eed7683d327}{aacio\+::fixed\+\_\+point64$<$ Q $>$\+::fixed\+\_\+point64}} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&r)
+\begin{DoxyCompactList}\small\item\em Can create \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} instance from int64\+\_\+t, \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}},32 instances. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__fixedpoint_ga13b078ee9ced819b74acc075d30c581f}\label{group__fixedpoint_ga13b078ee9ced819b74acc075d30c581f}} 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\{\bfseries aacio\+::fixed\+\_\+point64$<$ Q $>$\+::fixed\+\_\+point64} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&r)
+\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$(Q $>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{group__fixedpoint_ga83a7a788aa4fd2cec63111176dd9332f}{aacio\+::fixed\+\_\+point64$<$ Q $>$\+::operator+}} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Addition between two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$(Q $>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{group__fixedpoint_ga4adb183ccf49ea8a378585c373b9902a}{aacio\+::fixed\+\_\+point64$<$ Q $>$\+::operator-\/}} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Subtraction between two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$ Q+QR $>$ \mbox{\hyperlink{group__fixedpoint_ga21d919b0487e65e733c35adb41848a34}{aacio\+::fixed\+\_\+point64$<$ Q $>$\+::operator$\ast$}} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&r) const
+\begin{DoxyCompactList}\small\item\em Multiplication operator for \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. The result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$ Q+64-\/QR $>$ \mbox{\hyperlink{group__fixedpoint_gadee229420aa1db314948b0664323ba9c}{aacio\+::fixed\+\_\+point64$<$ Q $>$\+::operator/}} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&r) const
+\begin{DoxyCompactList}\small\item\em Division of two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} result will be stored in \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__fixedpoint_gaa50e4ebdc17e64f916a014f03843c333}\label{group__fixedpoint_gaa50e4ebdc17e64f916a014f03843c333}} 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\{\bfseries aacio\+::fixed\+\_\+point32$<$ Q $>$\+::fixed\+\_\+point32} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&r)
+\item 
+\mbox{\Hypertarget{group__fixedpoint_ga6aa0fe51fb5f7a46de7b7c0e004c2709}\label{group__fixedpoint_ga6aa0fe51fb5f7a46de7b7c0e004c2709}} 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\{\bfseries aacio\+::fixed\+\_\+point32$<$ Q $>$\+::fixed\+\_\+point32} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&r)
+\item 
+\mbox{\Hypertarget{group__fixedpoint_ga61e808e94550580c1f72bd18f53e9602}\label{group__fixedpoint_ga61e808e94550580c1f72bd18f53e9602}} 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ Q $>$ \& {\bfseries aacio\+::fixed\+\_\+point32$<$ Q $>$\+::operator=} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&r)
+\item 
+\mbox{\Hypertarget{group__fixedpoint_ga79c02134b038d1cd942a42250114946f}\label{group__fixedpoint_ga79c02134b038d1cd942a42250114946f}} 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ Q $>$ \& {\bfseries aacio\+::fixed\+\_\+point32$<$ Q $>$\+::operator=} (const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&r)
+\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$(Q $>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{group__fixedpoint_gae544257783a230bb6b33942a19925f6f}{aacio\+::fixed\+\_\+point32$<$ Q $>$\+::operator+}} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Addition between two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$(Q $>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{group__fixedpoint_ga3dba31f55ab94161ac1db5c7dda2e1ee}{aacio\+::fixed\+\_\+point32$<$ Q $>$\+::operator-\/}} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Subtraction between two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ Q+QR $>$ \mbox{\hyperlink{group__fixedpoint_gae967c9f563576da13c0ba7617aaea623}{aacio\+::fixed\+\_\+point32$<$ Q $>$\+::operator$\ast$}} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&r) const
+\begin{DoxyCompactList}\small\item\em Multiplication operator for \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. The result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$uint8\+\_\+t QR$>$ }\\\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ Q+32-\/QR $>$ \mbox{\hyperlink{group__fixedpoint_ga47eb3555482ded843d054f02bae32c3e}{aacio\+::fixed\+\_\+point32$<$ Q $>$\+::operator/}} (const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&r) const
+\begin{DoxyCompactList}\small\item\em Division of two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} result will be stored in \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+32,64,128,256 bits version of Fixed Point variables 
+
+Floating point operations are indeterministic, hence is prevented in smart contract. The smart contract developers should use the appropriate Fixed\+\_\+\+Point template class by passing the number to be represented in integer format and the number of decimals required. These template classes also support the arithmetic operations and basic comparison operators 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__fixedpoint_ga605ac661acc42c361ed85c4398e880d0}\label{group__fixedpoint_ga605ac661acc42c361ed85c4398e880d0}} 
+\index{Fixed Point@{Fixed Point}!fixed\+\_\+divide@{fixed\+\_\+divide}}
+\index{fixed\+\_\+divide@{fixed\+\_\+divide}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{fixed\+\_\+divide()}{fixed\_divide()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$Q$>$ aacio\+::fixed\+\_\+divide (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{lhs,  }\item[{uint32\+\_\+t}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Wrapper function for dividing two unit64 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. 
+
+Wrapper function for dividing two unit32 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}
+
+Example\+: 
+\begin{DoxyCode}
+fixed\_point64<33> result = \mbox{\hyperlink{group__fixedpoint_ga605ac661acc42c361ed85c4398e880d0}{fixed\_divide}}(131313, 2323)
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__fixedpoint_gaa76cfb710309434652c4317c2d319c9e}\label{group__fixedpoint_gaa76cfb710309434652c4317c2d319c9e}} 
+\index{Fixed Point@{Fixed Point}!fixed\+\_\+divide@{fixed\+\_\+divide}}
+\index{fixed\+\_\+divide@{fixed\+\_\+divide}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{fixed\+\_\+divide()}{fixed\_divide()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$Q$>$ aacio\+::fixed\+\_\+divide (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{lhs,  }\item[{uint64\+\_\+t}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Wrapper function for dividing two unit64 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}} Wrapper function for dividing two unit64 variable and stores result in \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}. 
+
+Example\+: 
+\begin{DoxyCode}
+fixed\_point128<33> result = \mbox{\hyperlink{group__fixedpoint_ga605ac661acc42c361ed85c4398e880d0}{fixed\_divide}}(131313, 2323)
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__fixedpoint_ga998ecf508857149cd2782eed7683d327}\label{group__fixedpoint_ga998ecf508857149cd2782eed7683d327}} 
+\index{Fixed Point@{Fixed Point}!fixed\+\_\+point64@{fixed\+\_\+point64}}
+\index{fixed\+\_\+point64@{fixed\+\_\+point64}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{fixed\+\_\+point64()}{fixed\_point64()}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point64}{aacio\+::fixed\+\_\+point64}}$<$ Q $>$\+::\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&}]{r }\end{DoxyParamCaption})}
+
+
+
+Can create \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} instance from int64\+\_\+t, \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}},32 instances. 
+
+Various constructors for \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} Example\+: 
+\begin{DoxyCode}
+fixed\_point32<18> a(1234.455667);
+fixed\_point64<3> b(a);
+fixed\_point64<6> b(13324.32323);
+fixed\_point64<5> c(a);
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__fixedpoint_ga21d919b0487e65e733c35adb41848a34}\label{group__fixedpoint_ga21d919b0487e65e733c35adb41848a34}} 
+\index{Fixed Point@{Fixed Point}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$ Q+QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point64}{aacio\+::fixed\+\_\+point64}}$<$ Q $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&}]{r }\end{DoxyParamCaption}) const}
+
+
+
+Multiplication operator for \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. The result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. 
+
+Multiplication operator for \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. The result goes to \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}} Number of decimal on result will be sum of number of decimals of lhs and rhs
+
+Example\+: 
+\begin{DoxyCode}
+fixed\_point128<33> result = fixed\_point64<0>(131313) / fixed\_point64<0>(2323)
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__fixedpoint_gae967c9f563576da13c0ba7617aaea623}\label{group__fixedpoint_gae967c9f563576da13c0ba7617aaea623}} 
+\index{Fixed Point@{Fixed Point}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ Q+QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point32}{aacio\+::fixed\+\_\+point32}}$<$ Q $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&}]{r }\end{DoxyParamCaption}) const}
+
+
+
+Multiplication operator for \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. The result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. 
+
+Multiplication operator for \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. The result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} Number of decimal on result will be sum of number of decimals of lhs and rhs
+
+Example\+: 
+\begin{DoxyCode}
+fixed\_point64<33> result = fixed\_point32<0>(131313) / fixed\_point32<0>(2323)
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__fixedpoint_ga83a7a788aa4fd2cec63111176dd9332f}\label{group__fixedpoint_ga83a7a788aa4fd2cec63111176dd9332f}} 
+\index{Fixed Point@{Fixed Point}!operator+@{operator+}}
+\index{operator+@{operator+}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ (Q$>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point64}{aacio\+::fixed\+\_\+point64}}$<$ Q $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Addition between two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. 
+
+Addition between two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} variables Number of decimal on result will be max of decimals of lhs and rhs \mbox{\Hypertarget{group__fixedpoint_gae544257783a230bb6b33942a19925f6f}\label{group__fixedpoint_gae544257783a230bb6b33942a19925f6f}} 
+\index{Fixed Point@{Fixed Point}!operator+@{operator+}}
+\index{operator+@{operator+}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ (Q$>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point32}{aacio\+::fixed\+\_\+point32}}$<$ Q $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Addition between two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. 
+
+Addition between two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} variables Number of decimal on result will be max of decimals of lhs and rhs \mbox{\Hypertarget{group__fixedpoint_ga4adb183ccf49ea8a378585c373b9902a}\label{group__fixedpoint_ga4adb183ccf49ea8a378585c373b9902a}} 
+\index{Fixed Point@{Fixed Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ (Q$>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point64}{aacio\+::fixed\+\_\+point64}}$<$ Q $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Subtraction between two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. 
+
+Subtraction between two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} variables Number of decimal on result will be max of decimals of lhs and rhs \mbox{\Hypertarget{group__fixedpoint_ga3dba31f55ab94161ac1db5c7dda2e1ee}\label{group__fixedpoint_ga3dba31f55ab94161ac1db5c7dda2e1ee}} 
+\index{Fixed Point@{Fixed Point}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ (Q$>$QR)?Q\+:\+QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point32}{aacio\+::fixed\+\_\+point32}}$<$ Q $>$\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Subtraction between two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} variables and the result goes to \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}. 
+
+Subtraction between two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} variables Number of decimal on result will be max of decimals of lhs and rhs \mbox{\Hypertarget{group__fixedpoint_gadee229420aa1db314948b0664323ba9c}\label{group__fixedpoint_gadee229420aa1db314948b0664323ba9c}} 
+\index{Fixed Point@{Fixed Point}!operator/@{operator/}}
+\index{operator/@{operator/}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}$<$ Q+64-\/QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point64}{aacio\+::fixed\+\_\+point64}}$<$ Q $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ QR $>$ \&}]{r }\end{DoxyParamCaption}) const}
+
+
+
+Division of two \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}} result will be stored in \mbox{\hyperlink{structaacio_1_1fixed__point128}{fixed\+\_\+point128}}. 
+
+Division operator for \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}
+
+Example\+: 
+\begin{DoxyCode}
+fixed\_point128<33> result = fixed\_point64<0>(131313) / fixed\_point64<0>(2323)
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{group__fixedpoint_ga47eb3555482ded843d054f02bae32c3e}\label{group__fixedpoint_ga47eb3555482ded843d054f02bae32c3e}} 
+\index{Fixed Point@{Fixed Point}!operator/@{operator/}}
+\index{operator/@{operator/}!Fixed Point@{Fixed Point}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$uint8\+\_\+t Q$>$ \\
+template$<$uint8\+\_\+t QR$>$ \\
+\mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}$<$ Q+32-\/QR $>$ \mbox{\hyperlink{structaacio_1_1fixed__point32}{aacio\+::fixed\+\_\+point32}}$<$ Q $>$\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}$<$ QR $>$ \&}]{r }\end{DoxyParamCaption}) const}
+
+
+
+Division of two \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}} result will be stored in \mbox{\hyperlink{structaacio_1_1fixed__point64}{fixed\+\_\+point64}}. 
+
+Division operator for \mbox{\hyperlink{structaacio_1_1fixed__point32}{fixed\+\_\+point32}}
+
+Example\+: 
+\begin{DoxyCode}
+fixed\_point64<33> result = fixed\_point32<0>(131313) / fixed\_point32<0>(2323)
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 4

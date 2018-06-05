@@ -1,0 +1,76 @@
+\hypertarget{classwasm_1_1_asm2_wasm_builder}{}\section{wasm\+:\+:Asm2\+Wasm\+Builder Class Reference}
+\label{classwasm_1_1_asm2_wasm_builder}\index{wasm\+::\+Asm2\+Wasm\+Builder@{wasm\+::\+Asm2\+Wasm\+Builder}}
+
+
+Collaboration diagram for wasm\+:\+:Asm2\+Wasm\+Builder\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structwasm_1_1_asm2_wasm_builder_1_1_mapped_global}{Mapped\+Global}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a15d4783ab2d996daf6c54f67aa71ea55}\label{classwasm_1_1_asm2_wasm_builder_a15d4783ab2d996daf6c54f67aa71ea55}} 
+enum {\bfseries Trap\+Mode} \{ {\bfseries Allow}, 
+{\bfseries Clamp}, 
+{\bfseries JS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a7cf11c4f62fe7c7e7f2710af2d94dac4}\label{classwasm_1_1_asm2_wasm_builder_a7cf11c4f62fe7c7e7f2710af2d94dac4}} 
+{\bfseries Asm2\+Wasm\+Builder} (\mbox{\hyperlink{classwasm_1_1_module}{Module}} \&wasm, \mbox{\hyperlink{structwasm_1_1_asm2_wasm_pre_processor}{Asm2\+Wasm\+Pre\+Processor}} \&preprocessor, bool debug, Trap\+Mode trap\+Mode, \mbox{\hyperlink{structwasm_1_1_pass_options}{Pass\+Options}} pass\+Options, bool legalize\+Java\+Script\+F\+FI, bool run\+Optimization\+Passes, bool wasm\+Only)
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a80befde399f69b4a1ebcad23abcca270}\label{classwasm_1_1_asm2_wasm_builder_a80befde399f69b4a1ebcad23abcca270}} 
+void {\bfseries process\+Asm} (\mbox{\hyperlink{structcashew_1_1_ref}{Ref}} ast)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a319a674b071bdbd6e139a3582a3790a6}\label{classwasm_1_1_asm2_wasm_builder_a319a674b071bdbd6e139a3582a3790a6}} 
+\mbox{\hyperlink{classwasm_1_1_module}{Module}} \& {\bfseries wasm}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a1b98fa62fb0cf9bd5ea987710e41d386}\label{classwasm_1_1_asm2_wasm_builder_a1b98fa62fb0cf9bd5ea987710e41d386}} 
+\mbox{\hyperlink{struct_mixed_arena}{Mixed\+Arena}} \& {\bfseries allocator}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_ab7a39d5d0a2d88c9ad00172e075237d7}\label{classwasm_1_1_asm2_wasm_builder_ab7a39d5d0a2d88c9ad00172e075237d7}} 
+\mbox{\hyperlink{classwasm_1_1_builder}{Builder}} {\bfseries builder}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_af6f06fd82095ed980bee999f4ac78011}\label{classwasm_1_1_asm2_wasm_builder_af6f06fd82095ed980bee999f4ac78011}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classwasm_1_1_optimizing_incremental_module_builder}{Optimizing\+Incremental\+Module\+Builder}} $>$ {\bfseries optimizing\+Builder}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_af7e00e7abdacdb8e7d80e6c13b6891ca}\label{classwasm_1_1_asm2_wasm_builder_af7e00e7abdacdb8e7d80e6c13b6891ca}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}}, int $>$ {\bfseries function\+Table\+Starts}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a95fed4d36c99beedb8870da2235c3cfb}\label{classwasm_1_1_asm2_wasm_builder_a95fed4d36c99beedb8870da2235c3cfb}} 
+\mbox{\hyperlink{structwasm_1_1_asm2_wasm_pre_processor}{Asm2\+Wasm\+Pre\+Processor}} \& {\bfseries preprocessor}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a6ada1b89fc0279a788add6c2d30aa252}\label{classwasm_1_1_asm2_wasm_builder_a6ada1b89fc0279a788add6c2d30aa252}} 
+bool {\bfseries debug}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a3f5d37145ca855a605dce2d6996f6d9e}\label{classwasm_1_1_asm2_wasm_builder_a3f5d37145ca855a605dce2d6996f6d9e}} 
+Trap\+Mode {\bfseries trap\+Mode}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a29763de05f5fcd70c9ca4ab1b30326cb}\label{classwasm_1_1_asm2_wasm_builder_a29763de05f5fcd70c9ca4ab1b30326cb}} 
+\mbox{\hyperlink{structwasm_1_1_pass_options}{Pass\+Options}} {\bfseries pass\+Options}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a370b12676f7dbdde53ba61bc63d3cb1e}\label{classwasm_1_1_asm2_wasm_builder_a370b12676f7dbdde53ba61bc63d3cb1e}} 
+bool {\bfseries legalize\+Java\+Script\+F\+FI}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a206b3d2036eb294d7ee935c029404fc9}\label{classwasm_1_1_asm2_wasm_builder_a206b3d2036eb294d7ee935c029404fc9}} 
+bool {\bfseries run\+Optimization\+Passes}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a0ead5140b6e8d8f048f80df8c0e35a48}\label{classwasm_1_1_asm2_wasm_builder_a0ead5140b6e8d8f048f80df8c0e35a48}} 
+bool {\bfseries wasm\+Only}
+\item 
+\mbox{\Hypertarget{classwasm_1_1_asm2_wasm_builder_a85051b72dce3b97e4f17053c62aac025}\label{classwasm_1_1_asm2_wasm_builder_a85051b72dce3b97e4f17053c62aac025}} 
+\mbox{\hyperlink{classstd_1_1map}{std\+::map}}$<$ \mbox{\hyperlink{structcashew_1_1_i_string}{I\+String}}, \mbox{\hyperlink{structwasm_1_1_asm2_wasm_builder_1_1_mapped_global}{Mapped\+Global}} $>$ {\bfseries mapped\+Globals}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/asm2wasm.\+h\end{DoxyCompactItemize}

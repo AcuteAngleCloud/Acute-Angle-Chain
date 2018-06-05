@@ -1,0 +1,97 @@
+.TH "fc::static_variant< Types >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::static_variant< Types >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtag\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename\&.\&.\&. Other> \fBstatic_variant\fP (const \fBstatic_variant\fP< Other\&.\&.\&. > &cpy)"
+.br
+.ti -1c
+.RI "\fBstatic_variant\fP (const \fBstatic_variant\fP &cpy)"
+.br
+.ti -1c
+.RI "\fBstatic_variant\fP (\fBstatic_variant\fP &&mv)"
+.br
+.ti -1c
+.RI "template<typename X > \fBstatic_variant\fP (const \fBX\fP &v)"
+.br
+.ti -1c
+.RI "template<typename X > \fBstatic_variant\fP & \fBoperator=\fP (const \fBX\fP &v)"
+.br
+.ti -1c
+.RI "\fBstatic_variant\fP & \fBoperator=\fP (const \fBstatic_variant\fP &v)"
+.br
+.ti -1c
+.RI "\fBstatic_variant\fP & \fBoperator=\fP (\fBstatic_variant\fP &&v)"
+.br
+.ti -1c
+.RI "template<typename X > \fBX\fP & \fBget\fP ()"
+.br
+.ti -1c
+.RI "template<typename X > const \fBX\fP & \fBget\fP () const"
+.br
+.ti -1c
+.RI "template<typename visitor > \fBvisitor::result_type\fP \fBvisit\fP (\fBvisitor\fP &v)"
+.br
+.ti -1c
+.RI "template<typename visitor > \fBvisitor::result_type\fP \fBvisit\fP (const \fBvisitor\fP &v)"
+.br
+.ti -1c
+.RI "template<typename visitor > \fBvisitor::result_type\fP \fBvisit\fP (\fBvisitor\fP &v) const"
+.br
+.ti -1c
+.RI "template<typename visitor > \fBvisitor::result_type\fP \fBvisit\fP (const \fBvisitor\fP &v) const"
+.br
+.ti -1c
+.RI "void \fBset_which\fP (int w)"
+.br
+.ti -1c
+.RI "int \fBwhich\fP () const"
+.br
+.ti -1c
+.RI "template<typename X > bool \fBcontains\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBcount\fP ()"
+.br
+.ti -1c
+.RI "template<typename X > static constexpr int \fBposition\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename StaticVariant > struct \fBimpl::copy_construct\fP"
+.br
+.ti -1c
+.RI "template<typename StaticVariant > struct \fBimpl::move_construct\fP"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBstatic_variant\fP &a, const \fBstatic_variant\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBstatic_variant\fP &a, const \fBstatic_variant\fP &b)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

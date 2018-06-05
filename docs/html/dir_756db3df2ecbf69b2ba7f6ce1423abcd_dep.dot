@@ -1,0 +1,15 @@
+digraph "libraries/abi_generator/include" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_29f7e04d6d896543ec28d0329662f1d0 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="abi_generator" fontname="Helvetica", fontsize="10", URL="dir_29f7e04d6d896543ec28d0329662f1d0.html"]
+  subgraph clusterdir_756db3df2ecbf69b2ba7f6ce1423abcd {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_756db3df2ecbf69b2ba7f6ce1423abcd.html"];
+    dir_756db3df2ecbf69b2ba7f6ce1423abcd [shape=plaintext label="include"];
+    dir_318b9042fac24a5545b50911d55af9bd [shape=box label="aacio" color="red" fillcolor="white" style="filled" URL="dir_318b9042fac24a5545b50911d55af9bd.html"];
+  }
+  }
+  dir_94df585d4e205d65756e56c0817a7014 [shape=box label="chain" fillcolor="white" style="filled" color="red" URL="dir_94df585d4e205d65756e56c0817a7014.html"];
+  dir_318b9042fac24a5545b50911d55af9bd->dir_94df585d4e205d65756e56c0817a7014 [headlabel="1", labeldistance=1.5 headhref="dir_001678_000005.html"];
+}

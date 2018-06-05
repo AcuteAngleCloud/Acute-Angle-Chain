@@ -1,0 +1,96 @@
+\hypertarget{classtest__allocator}{}\section{test\+\_\+allocator$<$ T $>$ Class Template Reference}
+\label{classtest__allocator}\index{test\+\_\+allocator$<$ T $>$@{test\+\_\+allocator$<$ T $>$}}
+
+
+Inheritance diagram for test\+\_\+allocator$<$ T $>$\+:
+% FIG 0
+
+
+Collaboration diagram for test\+\_\+allocator$<$ T $>$\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtest__allocator_1_1rebind}{rebind}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtest__allocator_adf041101a022154273be1d652835fa93}\label{classtest__allocator_adf041101a022154273be1d652835fa93}} 
+typedef unsigned {\bfseries size\+\_\+type}
+\item 
+\mbox{\Hypertarget{classtest__allocator_a97aa706a1fc84d21edd4557343e0ad37}\label{classtest__allocator_a97aa706a1fc84d21edd4557343e0ad37}} 
+typedef int {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classtest__allocator_aba6f0ac4c13aeb9dbf9c3cf106f03167}\label{classtest__allocator_aba6f0ac4c13aeb9dbf9c3cf106f03167}} 
+typedef \mbox{\hyperlink{struct_t}{T}} {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classtest__allocator_aeeab199047dc2b573aec34e3cdc94751}\label{classtest__allocator_aeeab199047dc2b573aec34e3cdc94751}} 
+typedef \mbox{\hyperlink{struct_t}{value\+\_\+type}} $\ast$ {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classtest__allocator_ac551ca128897e8bf564429f7a2eececa}\label{classtest__allocator_ac551ca128897e8bf564429f7a2eececa}} 
+typedef const \mbox{\hyperlink{struct_t}{value\+\_\+type}} $\ast$ {\bfseries const\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{classtest__allocator_afdf4067616f6cea359d3f04c0ae818fc}\label{classtest__allocator_afdf4067616f6cea359d3f04c0ae818fc}} 
+typedef std\+::add\+\_\+lvalue\+\_\+reference$<$ \mbox{\hyperlink{struct_t}{value\+\_\+type}} $>$\+::type {\bfseries reference}
+\item 
+\mbox{\Hypertarget{classtest__allocator_a572d0510260d9b28e9d75137c6de5ba3}\label{classtest__allocator_a572d0510260d9b28e9d75137c6de5ba3}} 
+typedef std\+::add\+\_\+lvalue\+\_\+reference$<$ const \mbox{\hyperlink{struct_t}{value\+\_\+type}} $>$\+::type {\bfseries const\+\_\+reference}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtest__allocator_a7a3abea5e94607ce5b12d8dbda3af6fd}\label{classtest__allocator_a7a3abea5e94607ce5b12d8dbda3af6fd}} 
+{\bfseries test\+\_\+allocator} (int i, int id=0) T\+E\+S\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classtest__allocator_a146456b9f347ba3593876f6d15790244}\label{classtest__allocator_a146456b9f347ba3593876f6d15790244}} 
+{\bfseries test\+\_\+allocator} (const \mbox{\hyperlink{classtest__allocator}{test\+\_\+allocator}} \&a) T\+E\+S\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classtest__allocator_a3756a077bd48c9565c3e10fddc8f6a92}\label{classtest__allocator_a3756a077bd48c9565c3e10fddc8f6a92}} 
+{\footnotesize template$<$class U $>$ }\\{\bfseries test\+\_\+allocator} (const \mbox{\hyperlink{classtest__allocator}{test\+\_\+allocator}}$<$ \mbox{\hyperlink{union_u}{U}} $>$ \&a) T\+E\+S\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classtest__allocator_a7316a50aa8c6fe09d7080ae6a38d2220}\label{classtest__allocator_a7316a50aa8c6fe09d7080ae6a38d2220}} 
+\mbox{\hyperlink{struct_t}{pointer}} {\bfseries address} (reference x) const
+\item 
+\mbox{\Hypertarget{classtest__allocator_a670d27ce5e1b281b94022490b3dc461f}\label{classtest__allocator_a670d27ce5e1b281b94022490b3dc461f}} 
+\mbox{\hyperlink{struct_t}{const\+\_\+pointer}} {\bfseries address} (const\+\_\+reference x) const
+\item 
+\mbox{\Hypertarget{classtest__allocator_a3ebdb97b7a31b48997427c6655f0ccae}\label{classtest__allocator_a3ebdb97b7a31b48997427c6655f0ccae}} 
+\mbox{\hyperlink{struct_t}{pointer}} {\bfseries allocate} (size\+\_\+type n, const void $\ast$=0)
+\item 
+\mbox{\Hypertarget{classtest__allocator_a7ebfb1522ca22551ad1806c0db8fde80}\label{classtest__allocator_a7ebfb1522ca22551ad1806c0db8fde80}} 
+void {\bfseries deallocate} (\mbox{\hyperlink{struct_t}{pointer}} p, size\+\_\+type)
+\item 
+\mbox{\Hypertarget{classtest__allocator_afb172ad7dd021db750a1fcf73dc23f57}\label{classtest__allocator_afb172ad7dd021db750a1fcf73dc23f57}} 
+size\+\_\+type {\bfseries max\+\_\+size} () const T\+E\+S\+T\+\_\+\+N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classtest__allocator_a1ac41b2dc0a408c947872a2e282138f8}\label{classtest__allocator_a1ac41b2dc0a408c947872a2e282138f8}} 
+void {\bfseries construct} (\mbox{\hyperlink{struct_t}{pointer}} p, const \mbox{\hyperlink{struct_t}{T}} \&val)
+\item 
+\mbox{\Hypertarget{classtest__allocator_ac66d6705d519853fa14135c4887ae4d0}\label{classtest__allocator_ac66d6705d519853fa14135c4887ae4d0}} 
+void {\bfseries destroy} (\mbox{\hyperlink{struct_t}{pointer}} p)
+\item 
+\mbox{\Hypertarget{classtest__allocator_aedfeccc76e72148620df444a8e47932c}\label{classtest__allocator_aedfeccc76e72148620df444a8e47932c}} 
+int {\bfseries get\+\_\+data} () const
+\item 
+\mbox{\Hypertarget{classtest__allocator_a592fbaeb0847401d7754aef306728a31}\label{classtest__allocator_a592fbaeb0847401d7754aef306728a31}} 
+int {\bfseries get\+\_\+id} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtest__allocator_a8a679cbfef131387d1d1c5f32f936ad0}\label{classtest__allocator_a8a679cbfef131387d1d1c5f32f936ad0}} 
+{\footnotesize template$<$class U $>$ }\\class {\bfseries test\+\_\+allocator}
+\item 
+\mbox{\Hypertarget{classtest__allocator_aac919e1c35caa86812a1e8ceee0a2267}\label{classtest__allocator_aac919e1c35caa86812a1e8ceee0a2267}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{classtest__allocator}{test\+\_\+allocator}} \&x, const \mbox{\hyperlink{classtest__allocator}{test\+\_\+allocator}} \&y)
+\item 
+\mbox{\Hypertarget{classtest__allocator_a1a834e72480aa7b535e9ec4db1d64743}\label{classtest__allocator_a1a834e72480aa7b535e9ec4db1d64743}} 
+bool {\bfseries operator!=} (const \mbox{\hyperlink{classtest__allocator}{test\+\_\+allocator}} \&x, const \mbox{\hyperlink{classtest__allocator}{test\+\_\+allocator}} \&y)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/support/test\+\_\+allocator.\+h\end{DoxyCompactItemize}

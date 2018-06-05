@@ -1,0 +1,89 @@
+.TH "fc::sha1" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::sha1
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBencoder\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsha1\fP (const string &hex_str)"
+.br
+.ti -1c
+.RI "string \fBstr\fP () const"
+.br
+.ti -1c
+.RI "\fBoperator string\fP () const"
+.br
+.ti -1c
+.RI "char * \fBdata\fP () const"
+.br
+.ti -1c
+.RI "size_t \fBdata_size\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBsha1\fP \fBhash\fP (const char *d, uint32_t dlen)"
+.br
+.ti -1c
+.RI "static \fBsha1\fP \fBhash\fP (const string &)"
+.br
+.ti -1c
+.RI "template<typename T > static \fBsha1\fP \fBhash\fP (const \fBT\fP &t)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fB_hash\fP [5]"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > \fBT\fP & \fBoperator<<\fP (\fBT\fP &ds, const \fBsha1\fP &ep)"
+.br
+.ti -1c
+.RI "template<typename T > \fBT\fP & \fBoperator>>\fP (\fBT\fP &ds, \fBsha1\fP &ep)"
+.br
+.ti -1c
+.RI "\fBsha1\fP \fBoperator<<\fP (const \fBsha1\fP &h1, uint32_t i)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "\fBsha1\fP \fBoperator^\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBsha1\fP &h1, const \fBsha1\fP &h2)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

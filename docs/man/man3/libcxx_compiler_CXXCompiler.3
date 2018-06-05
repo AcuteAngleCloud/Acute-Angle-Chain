@@ -1,0 +1,167 @@
+.TH "libcxx.compiler.CXXCompiler" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libcxx.compiler.CXXCompiler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP (self, path, flags=None, compile_flags=None, link_flags=None, warning_flags=None, verify_supported=None, verify_flags=None, use_verify=\fBFalse\fP, modules_flags=None, use_modules=\fBFalse\fP, use_ccache=\fBFalse\fP, use_warnings=\fBFalse\fP, compile_env=None, cxx_type=None, cxx_version=None)"
+.br
+.ti -1c
+.RI "def \fBisVerifySupported\fP (self)"
+.br
+.ti -1c
+.RI "def \fBuseVerify\fP (self, value=\fBTrue\fP)"
+.br
+.ti -1c
+.RI "def \fBuseModules\fP (self, value=\fBTrue\fP)"
+.br
+.ti -1c
+.RI "def \fBuseCCache\fP (self, value=\fBTrue\fP)"
+.br
+.ti -1c
+.RI "def \fBuseWarnings\fP (self, value=\fBTrue\fP)"
+.br
+.ti -1c
+.RI "def \fBpreprocessCmd\fP (self, source_files, out=None, flags=[])"
+.br
+.ti -1c
+.RI "def \fBcompileCmd\fP (self, source_files, out=None, flags=[])"
+.br
+.ti -1c
+.RI "def \fBlinkCmd\fP (self, source_files, out=None, flags=[])"
+.br
+.ti -1c
+.RI "def \fBcompileLinkCmd\fP (self, source_files, out=None, flags=[])"
+.br
+.ti -1c
+.RI "def \fBpreprocess\fP (self, source_files, out=None, flags=[], cwd=None)"
+.br
+.ti -1c
+.RI "def \fBcompile\fP (self, source_files, out=None, flags=[], cwd=None)"
+.br
+.ti -1c
+.RI "def \fBlink\fP (self, source_files, out=None, flags=[], cwd=None)"
+.br
+.ti -1c
+.RI "def \fBcompileLink\fP (self, source_files, out=None, flags=[], cwd=None)"
+.br
+.ti -1c
+.RI "def \fBcompileLinkTwoSteps\fP (self, source_file, out=None, object_file=None, flags=[], cwd=None)"
+.br
+.ti -1c
+.RI "def \fBdumpMacros\fP (self, source_files=None, flags=[], cwd=None)"
+.br
+.ti -1c
+.RI "def \fBgetTriple\fP (self)"
+.br
+.ti -1c
+.RI "def \fBhasCompileFlag\fP (self, flag)"
+.br
+.ti -1c
+.RI "def \fBaddFlagIfSupported\fP (self, flag)"
+.br
+.ti -1c
+.RI "def \fBaddCompileFlagIfSupported\fP (self, flag)"
+.br
+.ti -1c
+.RI "def \fBhasWarningFlag\fP (self, flag)"
+.br
+.ti -1c
+.RI "def \fBaddWarningFlagIfSupported\fP (self, flag)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBsource_lang\fP"
+.br
+.ti -1c
+.RI "\fBpath\fP"
+.br
+.ti -1c
+.RI "\fBflags\fP"
+.br
+.ti -1c
+.RI "\fBcompile_flags\fP"
+.br
+.ti -1c
+.RI "\fBlink_flags\fP"
+.br
+.ti -1c
+.RI "\fBwarning_flags\fP"
+.br
+.ti -1c
+.RI "\fBverify_supported\fP"
+.br
+.ti -1c
+.RI "\fBuse_verify\fP"
+.br
+.ti -1c
+.RI "\fBverify_flags\fP"
+.br
+.ti -1c
+.RI "\fBmodules_flags\fP"
+.br
+.ti -1c
+.RI "\fBuse_modules\fP"
+.br
+.ti -1c
+.RI "\fBuse_ccache\fP"
+.br
+.ti -1c
+.RI "\fBuse_warnings\fP"
+.br
+.ti -1c
+.RI "\fBcompile_env\fP"
+.br
+.ti -1c
+.RI "\fBtype\fP"
+.br
+.ti -1c
+.RI "\fBversion\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBCM_Default\fP = 0"
+.br
+.ti -1c
+.RI "int \fBCM_PreProcess\fP = 1"
+.br
+.ti -1c
+.RI "int \fBCM_Compile\fP = 2"
+.br
+.ti -1c
+.RI "int \fBCM_Link\fP = 3"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "def libcxx\&.compiler\&.CXXCompiler\&.hasWarningFlag ( self,  flag)"
+
+.PP
+.nf
+hasWarningFlag - Test if the compiler supports a given warning flag.
+Unlike addCompileFlagIfSupported, this function detects when
+"-Wno-<warning>" flags are unsupported. If flag is a
+"-Wno-<warning>" GCC will not emit an unknown option diagnostic unless
+another error is triggered during compilation.
+
+.fi
+.PP
+ 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,59 @@
+.TH "fc::variant_object::entry" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::variant_object::entry \- a key/value pair  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <variant_object\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBentry\fP (string k, \fBvariant\fP v)"
+.br
+.ti -1c
+.RI "\fBentry\fP (\fBentry\fP &&e)"
+.br
+.ti -1c
+.RI "\fBentry\fP (const \fBentry\fP &e)"
+.br
+.ti -1c
+.RI "\fBentry\fP & \fBoperator=\fP (const \fBentry\fP &)"
+.br
+.ti -1c
+.RI "\fBentry\fP & \fBoperator=\fP (\fBentry\fP &&)"
+.br
+.ti -1c
+.RI "const string & \fBkey\fP () const"
+.br
+.ti -1c
+.RI "const \fBvariant\fP & \fBvalue\fP () const"
+.br
+.ti -1c
+.RI "void \fBset\fP (\fBvariant\fP v)"
+.br
+.ti -1c
+.RI "\fBvariant\fP & \fBvalue\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBentry\fP &a, const \fBentry\fP &b)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBentry\fP &a, const \fBentry\fP &b)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+a key/value pair 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

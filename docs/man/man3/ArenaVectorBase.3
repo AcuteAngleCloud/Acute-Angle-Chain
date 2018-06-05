@@ -1,0 +1,85 @@
+.TH "ArenaVectorBase< SubType, T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ArenaVectorBase< SubType, T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBIterator\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBT\fP & \fBoperator[]\fP (size_t index) const"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP () const"
+.br
+.ti -1c
+.RI "void \fBresize\fP (size_t size)"
+.br
+.ti -1c
+.RI "\fBT\fP & \fBback\fP () const"
+.br
+.ti -1c
+.RI "\fBT\fP & \fBpop_back\fP ()"
+.br
+.ti -1c
+.RI "void \fBpush_back\fP (\fBT\fP item)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBreserve\fP (size_t size)"
+.br
+.ti -1c
+.RI "template<typename ListType > void \fBset\fP (const ListType &list)"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (SubType &\fBother\fP)"
+.br
+.ti -1c
+.RI "void \fBswap\fP (SubType &\fBother\fP)"
+.br
+.ti -1c
+.RI "\fBIterator\fP \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "\fBIterator\fP \fBend\fP () const"
+.br
+.ti -1c
+.RI "void \fBallocate\fP (size_t size)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreallocate\fP (size_t size)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBT\fP * \fBdata\fP = nullptr"
+.br
+.ti -1c
+.RI "size_t \fBusedElements\fP = 0"
+.br
+.ti -1c
+.RI "size_t \fBallocatedElements\fP = 0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

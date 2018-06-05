@@ -1,0 +1,46 @@
+.TH "fc::process::impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::process::impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::shared_ptr< bp::child > \fBchild\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< bp::pipe > \fB_inp\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< bp::pipe > \fB_outp\fP"
+.br
+.ti -1c
+.RI "std::shared_ptr< bp::pipe > \fB_errp\fP"
+.br
+.ti -1c
+.RI "buffered_istream_ptr \fB_out\fP"
+.br
+.ti -1c
+.RI "buffered_istream_ptr \fB_err\fP"
+.br
+.ti -1c
+.RI "buffered_ostream_ptr \fB_in\fP"
+.br
+.ti -1c
+.RI "bp::status \fBstat\fP"
+.br
+.ti -1c
+.RI "bp::context \fBpctx\fP"
+.br
+.ti -1c
+.RI "fc::future< int > \fB_exited\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

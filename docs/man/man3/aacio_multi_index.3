@@ -1,0 +1,108 @@
+.TH "aacio::multi_index< TableName, T, Indices >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::multi_index< TableName, T, Indices >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBconst_iterator\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::reverse_iterator< \fBconst_iterator\fP > \fBconst_reverse_iterator\fP"
+.br
+.RI "struct \fBmulti_index::const_iterator\fP "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmulti_index\fP (uint64_t code, uint64_t scope)"
+.br
+.RI "load_object_by_primary_iterator "
+.ti -1c
+.RI "uint64_t \fBget_code\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBget_scope\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBcbegin\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBbegin\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBcend\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBend\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBcrbegin\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBrbegin\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBcrend\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_reverse_iterator\fP \fBrend\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBlower_bound\fP (uint64_t primary) const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBupper_bound\fP (uint64_t primary) const"
+.br
+.ti -1c
+.RI "uint64_t \fBavailable_primary_key\fP () const"
+.br
+.ti -1c
+.RI "template<uint64_t IndexName> auto \fBget_index\fP ()"
+.br
+.ti -1c
+.RI "template<uint64_t IndexName> auto \fBget_index\fP () const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBiterator_to\fP (const \fBT\fP &obj) const"
+.br
+.ti -1c
+.RI "template<typename Lambda > \fBconst_iterator\fP \fBemplace\fP (uint64_t payer, Lambda &&constructor)"
+.br
+.ti -1c
+.RI "template<typename Lambda > void \fBmodify\fP (\fBconst_iterator\fP itr, uint64_t payer, Lambda &&updater)"
+.br
+.ti -1c
+.RI "template<typename Lambda > void \fBmodify\fP (const \fBT\fP &obj, uint64_t payer, Lambda &&updater)"
+.br
+.ti -1c
+.RI "const \fBT\fP & \fBget\fP (uint64_t primary) const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBfind\fP (uint64_t primary) const"
+.br
+.ti -1c
+.RI "\fBconst_iterator\fP \fBerase\fP (\fBconst_iterator\fP itr)"
+.br
+.ti -1c
+.RI "void \fBerase\fP (const \fBT\fP &obj)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "template<uint64_t TableName, typename T, typename\&.\&.\&. Indices> uint64_t \fBaacio::multi_index\fP< TableName, \fBT\fP, Indices >::available_primary_key () const\fC [inline]\fP"
+Ideally this method would only be used to determine the appropriate primary key to use within new objects added to a table in which the primary keys of the table are strictly intended from the beginning to be autoincrementing and thus will not ever be set to custom arbitrary values by the contract\&. Violating this agreement could result in the table appearing full when in reality there is plenty of space left\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

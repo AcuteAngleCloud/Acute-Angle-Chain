@@ -1,0 +1,35 @@
+digraph "CLI::ParseError"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="CLI::ParseError",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="CLI::Error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_error.html",tooltip="All errors derive from this one. "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="std::runtime_error",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CLI::CallForHelp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_call_for_help.html",tooltip="-h or –help on command line "];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CLI::ConversionError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_conversion_error.html",tooltip="Thrown when conversion call back fails, such as when an int fails to coerse to a string. "];
+  Node0 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CLI::ExcludesError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_excludes_error.html",tooltip="Thrown when a exludes option is present. "];
+  Node0 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="CLI::ExtrasError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_extras_error.html",tooltip="Thrown when too many positionals or options are found. "];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="CLI::ExtrasINIError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_extras_i_n_i_error.html",tooltip="Thrown when extra values are found in an INI file. "];
+  Node0 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="CLI::FileError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_file_error.html",tooltip="Thrown when parsing an INI file and it is missing. "];
+  Node0 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="CLI::HorribleError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_horrible_error.html",tooltip="This is just a safety check to verify selection and parsing match. "];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="CLI::InvalidError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_invalid_error.html",tooltip="Thrown when validation fails before parsing. "];
+  Node0 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="CLI::RequiredError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_required_error.html",tooltip="Thrown when a required option is missing. "];
+  Node0 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="CLI::RequiresError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_requires_error.html",tooltip="Thrown when a requires option is missing. "];
+  Node0 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="CLI::Success",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_success.html",tooltip="This is a successful completion on parsing, supposed to exit. "];
+  Node0 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="CLI::ValidationError",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_l_i_1_1_validation_error.html",tooltip="Thrown when validation of results fails. "];
+}

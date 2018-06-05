@@ -1,0 +1,383 @@
+\hypertarget{classaacio_1_1chain_1_1chain__controller}{}\section{aacio\+:\+:chain\+:\+:chain\+\_\+controller Class Reference}
+\label{classaacio_1_1chain_1_1chain__controller}\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+
+
+Inheritance diagram for aacio\+:\+:chain\+:\+:chain\+\_\+controller\+:
+% FIG 0
+
+
+Collaboration diagram for aacio\+:\+:chain\+:\+:chain\+\_\+controller\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1controller__config}{controller\+\_\+config}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1runtime__limits}{runtime\+\_\+limits}}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a32709d4149f3b16034490320d039e282}\label{classaacio_1_1chain_1_1chain__controller_a32709d4149f3b16034490320d039e282}} 
+{\bfseries chain\+\_\+controller} (const \mbox{\hyperlink{structaacio_1_1chain_1_1chain__controller_1_1controller__config}{controller\+\_\+config}} \&cfg)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_abbd9c9571ad1aa4616d48fc66d392b5d}\label{classaacio_1_1chain_1_1chain__controller_abbd9c9571ad1aa4616d48fc66d392b5d}} 
+\mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_abbd9c9571ad1aa4616d48fc66d392b5d}{$\sim$chain\+\_\+controller}} ()
+\begin{DoxyCompactList}\small\item\em chain\+\_\+controller\+::chain\+\_\+controller \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a23d273b6ef29d0c5c9f9f0bf61774024}{push\+\_\+block}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&b, uint32\+\_\+t skip=skip\+\_\+nothing)
+\item 
+\mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a9420fb823ef7fbd0a5745593fdc1aee7}{push\+\_\+transaction}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&trx, uint32\+\_\+t skip=skip\+\_\+nothing)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a3aafc80c3a7412b3d39c8bc845767527}\label{classaacio_1_1chain_1_1chain__controller_a3aafc80c3a7412b3d39c8bc845767527}} 
+\mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} $>$ {\bfseries push\+\_\+deferred\+\_\+transactions} (bool flush=false, uint32\+\_\+t skip=skip\+\_\+nothing)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a8af766631ed0a2d5d4eb24e93acba0d4}\label{classaacio_1_1chain_1_1chain__controller_a8af766631ed0a2d5d4eb24e93acba0d4}} 
+uint128\+\_\+t {\bfseries transaction\+\_\+id\+\_\+to\+\_\+sender\+\_\+id} (const \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} \&tid) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a8d6a9698967c9c71b67bfba3d5e61c35}\label{classaacio_1_1chain_1_1chain__controller_a8d6a9698967c9c71b67bfba3d5e61c35}} 
+bool {\bfseries is\+\_\+start\+\_\+of\+\_\+round} (block\+\_\+num\+\_\+type n) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a009bb9bce0ba141d9034cf9e0e670c26}\label{classaacio_1_1chain_1_1chain__controller_a009bb9bce0ba141d9034cf9e0e670c26}} 
+uint32\+\_\+t {\bfseries blocks\+\_\+per\+\_\+round} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_aaba7f1550dff1ed9e870fa6e05386d38}\label{classaacio_1_1chain_1_1chain__controller_aaba7f1550dff1ed9e870fa6e05386d38}} 
+\mbox{\hyperlink{classfc_1_1sha256}{chain\+\_\+id\+\_\+type}} {\bfseries get\+\_\+chain\+\_\+id} () const
+\item 
+bool \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a6bbdca183ddca90d147fc95e1d27cfed}{is\+\_\+known\+\_\+block}} (const \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} \&id) const
+\begin{DoxyCompactList}\small\item\em T\+O\+DO\+: make this hash of constitution. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a5fe603a309127c8b195a55b0706d2235}{is\+\_\+known\+\_\+transaction}} (const \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} \&id) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a2c9e4e974bc3c6100bdeced388c0d9cb}\label{classaacio_1_1chain_1_1chain__controller_a2c9e4e974bc3c6100bdeced388c0d9cb}} 
+\mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} {\bfseries get\+\_\+block\+\_\+id\+\_\+for\+\_\+num} (uint32\+\_\+t block\+\_\+num) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a92c45a50fd960bb747f3ef9af8d9e65a}\label{classaacio_1_1chain_1_1chain__controller_a92c45a50fd960bb747f3ef9af8d9e65a}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} $>$ {\bfseries fetch\+\_\+block\+\_\+by\+\_\+id} (const \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} \&id) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_ab7e2a521a47dc473b12ee5bd435dc493}\label{classaacio_1_1chain_1_1chain__controller_ab7e2a521a47dc473b12ee5bd435dc493}} 
+\mbox{\hyperlink{classfc_1_1optional}{optional}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} $>$ {\bfseries fetch\+\_\+block\+\_\+by\+\_\+number} (uint32\+\_\+t \mbox{\hyperlink{structnum}{num}}) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a08b207d7aaa8476296f2b339b4e407c9}\label{classaacio_1_1chain_1_1chain__controller_a08b207d7aaa8476296f2b339b4e407c9}} 
+\mbox{\hyperlink{classstd_1_1vector}{std\+::vector}}$<$ \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} $>$ {\bfseries get\+\_\+block\+\_\+ids\+\_\+on\+\_\+fork} (\mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} head\+\_\+of\+\_\+fork) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a524ad0811937cfc85d2492875c76f1fa}{producer\+\_\+participation\+\_\+rate}} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_aad6cc0d9e90ff634239350faabb90a3a}\label{classaacio_1_1chain_1_1chain__controller_aad6cc0d9e90ff634239350faabb90a3a}} 
+void {\bfseries add\+\_\+checkpoints} (const flat\+\_\+map$<$ uint32\+\_\+t, \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} $>$ \&checkpts)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_aa2745059b10c8cf293ae8a6562d7020b}\label{classaacio_1_1chain_1_1chain__controller_aa2745059b10c8cf293ae8a6562d7020b}} 
+const flat\+\_\+map$<$ uint32\+\_\+t, \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} $>$ {\bfseries get\+\_\+checkpoints} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a06b1ee649a875c37f34e2fb181857754}\label{classaacio_1_1chain_1_1chain__controller_a06b1ee649a875c37f34e2fb181857754}} 
+bool {\bfseries before\+\_\+last\+\_\+checkpoint} () const
+\item 
+flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_af2f9f9c166af2e8d8dc8811d242e872a}{get\+\_\+required\+\_\+keys}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} \&trx, const flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \&candidate\+\_\+keys) const
+\item 
+bool \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a03b5b87487b63dba3295f4b802053380}{\+\_\+push\+\_\+block}} (const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&b)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_abc6e65db8cc1dc2169dcd2f690d3f00c}\label{classaacio_1_1chain_1_1chain__controller_abc6e65db8cc1dc2169dcd2f690d3f00c}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} {\bfseries generate\+\_\+block} (\mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}} when, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} producer, const \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} \&block\+\_\+signing\+\_\+private\+\_\+key, uint32\+\_\+t skip=skip\+\_\+nothing)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_afd78a7ef39a8dfeedaad2bb13aa767d1}\label{classaacio_1_1chain_1_1chain__controller_afd78a7ef39a8dfeedaad2bb13aa767d1}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} {\bfseries \+\_\+generate\+\_\+block} (\mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}} when, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} producer, const \mbox{\hyperlink{classfc_1_1crypto_1_1private__key}{private\+\_\+key\+\_\+type}} \&block\+\_\+signing\+\_\+private\+\_\+key)
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_aa24ab0e5b12e94aec7cb94ea30090431}\label{classaacio_1_1chain_1_1chain__controller_aa24ab0e5b12e94aec7cb94ea30090431}} 
+{\footnotesize template$<$typename Function $>$ }\\auto {\bfseries with\+\_\+skip\+\_\+flags} (uint64\+\_\+t flags, Function \&\&f)
+\item 
+{\footnotesize template$<$typename Function $>$ }\\auto \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a442beb698ea61031638b7cbae7fca7c6}{without\+\_\+pending\+\_\+transactions}} (Function \&\&f)
+\item 
+void \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a58bf5d32ed81ff6aa8024ec8fa1ee105}{pop\+\_\+block}} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a756da74d195f373ebf133d94cd58ac21}\label{classaacio_1_1chain_1_1chain__controller_a756da74d195f373ebf133d94cd58ac21}} 
+void {\bfseries clear\+\_\+pending} ()
+\item 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a70ddb9268b9ce5cac20104ab400fb462}{get\+\_\+scheduled\+\_\+producer}} (uint32\+\_\+t slot\+\_\+num) const
+\begin{DoxyCompactList}\small\item\em Get the producer scheduled for block production in a slot. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}} \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a16c358c4d8477b5c7f4cedbde3faa235}{get\+\_\+slot\+\_\+time}} (uint32\+\_\+t slot\+\_\+num) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a9e231a27f0c30eedeff295bbf53b318a}{get\+\_\+slot\+\_\+at\+\_\+time}} (\mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}} when) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a1a19f17f4bf936331db62943f494f15d}\label{classaacio_1_1chain_1_1chain__controller_a1a19f17f4bf936331db62943f494f15d}} 
+const \mbox{\hyperlink{classaacio_1_1chain_1_1global__property__object}{global\+\_\+property\+\_\+object}} \& {\bfseries get\+\_\+global\+\_\+properties} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a7d01e359ac48651ab706a579ffaf064f}\label{classaacio_1_1chain_1_1chain__controller_a7d01e359ac48651ab706a579ffaf064f}} 
+const \mbox{\hyperlink{classaacio_1_1chain_1_1dynamic__global__property__object}{dynamic\+\_\+global\+\_\+property\+\_\+object}} \& {\bfseries get\+\_\+dynamic\+\_\+global\+\_\+properties} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a8e6d08f6cd4b231a72e5f6c9833379db}\label{classaacio_1_1chain_1_1chain__controller_a8e6d08f6cd4b231a72e5f6c9833379db}} 
+const \mbox{\hyperlink{classaacio_1_1chain_1_1producer__object}{producer\+\_\+object}} \& {\bfseries get\+\_\+producer} (const \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \&ownername) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_aee5ce034c2b34dde11979fe27e19e187}\label{classaacio_1_1chain_1_1chain__controller_aee5ce034c2b34dde11979fe27e19e187}} 
+const \mbox{\hyperlink{classaacio_1_1chain_1_1permission__object}{permission\+\_\+object}} \& {\bfseries get\+\_\+permission} (const \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} \&level) const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a9495638e0f5954a0978d76c388107eb2}\label{classaacio_1_1chain_1_1chain__controller_a9495638e0f5954a0978d76c388107eb2}} 
+\mbox{\hyperlink{classfc_1_1time__point}{time\+\_\+point}} {\bfseries head\+\_\+block\+\_\+time} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_afc52b1a79e60b9e7e4caee136a3698e0}\label{classaacio_1_1chain_1_1chain__controller_afc52b1a79e60b9e7e4caee136a3698e0}} 
+uint32\+\_\+t {\bfseries head\+\_\+block\+\_\+num} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a2905e573b12530954e83f5ace955bc62}\label{classaacio_1_1chain_1_1chain__controller_a2905e573b12530954e83f5ace955bc62}} 
+\mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} {\bfseries head\+\_\+block\+\_\+id} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a65743c3f2579cc59a9c8c3f6530d461b}\label{classaacio_1_1chain_1_1chain__controller_a65743c3f2579cc59a9c8c3f6530d461b}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} {\bfseries head\+\_\+block\+\_\+producer} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a70191cd2c7cc679541e442b1cc61a839}\label{classaacio_1_1chain_1_1chain__controller_a70191cd2c7cc679541e442b1cc61a839}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1block__header}{block\+\_\+header}} {\bfseries head\+\_\+block\+\_\+header} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a8d022bda03a5515365b1f976c90f962a}\label{classaacio_1_1chain_1_1chain__controller_a8d022bda03a5515365b1f976c90f962a}} 
+uint32\+\_\+t {\bfseries last\+\_\+irreversible\+\_\+block\+\_\+num} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_af72cd9f3b12c129383f3addae25f28f1}\label{classaacio_1_1chain_1_1chain__controller_af72cd9f3b12c129383f3addae25f28f1}} 
+const \mbox{\hyperlink{classchainbase_1_1database}{chainbase\+::database}} \& {\bfseries get\+\_\+database} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_add3a6f50ecc7a3e2389d7eae513b52c0}\label{classaacio_1_1chain_1_1chain__controller_add3a6f50ecc7a3e2389d7eae513b52c0}} 
+\mbox{\hyperlink{classchainbase_1_1database}{chainbase\+::database}} \& {\bfseries get\+\_\+mutable\+\_\+database} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a9aadae7becf5682d50dfe78215913f72}\label{classaacio_1_1chain_1_1chain__controller_a9aadae7becf5682d50dfe78215913f72}} 
+const \mbox{\hyperlink{classaacio_1_1chain_1_1resource__limits_1_1resource__limits__manager}{resource\+\_\+limits\+::resource\+\_\+limits\+\_\+manager}} \& {\bfseries get\+\_\+resource\+\_\+limits\+\_\+manager} () const
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a2d29bd51ed791753b52ff0067034619e}\label{classaacio_1_1chain_1_1chain__controller_a2d29bd51ed791753b52ff0067034619e}} 
+\mbox{\hyperlink{classaacio_1_1chain_1_1resource__limits_1_1resource__limits__manager}{resource\+\_\+limits\+::resource\+\_\+limits\+\_\+manager}} \& {\bfseries get\+\_\+mutable\+\_\+resource\+\_\+limits\+\_\+manager} ()
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a2b4a8671310f4ca323800e5b90b4dc23}\label{classaacio_1_1chain_1_1chain__controller_a2b4a8671310f4ca323800e5b90b4dc23}} 
+\mbox{\hyperlink{classaacio_1_1chain_1_1wasm__interface}{wasm\+\_\+interface}} \& {\bfseries get\+\_\+wasm\+\_\+interface} ()
+\item 
+\mbox{\hyperlink{classfc_1_1microseconds}{fc\+::microseconds}} \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a207cee9826f5abac00f1de3c5735df3d}{check\+\_\+authorization}} (const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1action}{action}} $>$ \&actions, const flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \&provided\+\_\+keys, bool allow\+\_\+unused\+\_\+signatures=false, flat\+\_\+set$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$ provided\+\_\+accounts=flat\+\_\+set$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$(), flat\+\_\+set$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$ provided\+\_\+levels=flat\+\_\+set$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$()) const
+\item 
+bool \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a43d6bdf9938687a495c7e31762a37467}{check\+\_\+authorization}} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} \mbox{\hyperlink{structaccount}{account}}, \mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}} permission, flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ provided\+\_\+keys, bool allow\+\_\+unused\+\_\+signatures) const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+signal$<$ void(const \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}} \&)$>$ \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_adc108094f81f4cc535d3927e97be1d4a}{applied\+\_\+block}}
+\item 
+signal$<$ void(const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&)$>$ \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a7f1e1bd702485d5028ca8378d91cc828}{applied\+\_\+irreversible\+\_\+block}}
+\item 
+signal$<$ void(const \mbox{\hyperlink{classaacio_1_1chain_1_1transaction__metadata}{transaction\+\_\+metadata}} \&, const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&)$>$ \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_ab1f8e21220b27a47ce3ed85bf8415497}{on\+\_\+pending\+\_\+transaction}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_adf0f148c7eee0aefe6423d9e818780bd}\label{classaacio_1_1chain_1_1chain__controller_adf0f148c7eee0aefe6423d9e818780bd}} 
+class {\bfseries contracts\+::chain\+\_\+initializer}
+\item 
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a7b669aea7e7e49e2cd5f5eff2e8ca927}\label{classaacio_1_1chain_1_1chain__controller_a7b669aea7e7e49e2cd5f5eff2e8ca927}} 
+class {\bfseries apply\+\_\+context}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a03b5b87487b63dba3295f4b802053380}\label{classaacio_1_1chain_1_1chain__controller_a03b5b87487b63dba3295f4b802053380}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!\+\_\+push\+\_\+block@{\+\_\+push\+\_\+block}}
+\index{\+\_\+push\+\_\+block@{\+\_\+push\+\_\+block}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{\+\_\+push\+\_\+block()}{\_push\_block()}}
+{\footnotesize\ttfamily bool aacio\+::chain\+::chain\+\_\+controller\+::\+\_\+push\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&}]{b }\end{DoxyParamCaption})}
+
+T\+O\+DO\+: if the block is greater than the head block and before the next maintenance interval Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a207cee9826f5abac00f1de3c5735df3d}\label{classaacio_1_1chain_1_1chain__controller_a207cee9826f5abac00f1de3c5735df3d}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!check\+\_\+authorization@{check\+\_\+authorization}}
+\index{check\+\_\+authorization@{check\+\_\+authorization}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{check\+\_\+authorization()}{check\_authorization()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfc_1_1microseconds}{fc\+::microseconds}} aacio\+::chain\+::chain\+\_\+controller\+::check\+\_\+authorization (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1action}{action}} $>$ \&}]{actions,  }\item[{const flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \&}]{provided\+\_\+keys,  }\item[{bool}]{allow\+\_\+unused\+\_\+signatures = {\ttfamily false},  }\item[{flat\+\_\+set$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} $>$}]{provided\+\_\+accounts = {\ttfamily flat\+\_\+set$<$\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}}$>$()},  }\item[{flat\+\_\+set$<$ \mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}} $>$}]{provided\+\_\+levels = {\ttfamily flat\+\_\+set$<$\mbox{\hyperlink{structaacio_1_1chain_1_1permission__level}{permission\+\_\+level}}$>$()} }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em actions} & -\/ the actions to check authorization across \\
+\hline
+{\em provided\+\_\+keys} & -\/ the set of public keys which have authorized the transaction \\
+\hline
+{\em allow\+\_\+unused\+\_\+signatures} & -\/ true if method should not assert on unused signatures \\
+\hline
+{\em provided\+\_\+accounts} & -\/ the set of accounts which have authorized the transaction (presumed to be owner)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classfc_1_1microseconds}{fc\+::microseconds}} set to the max delay that this authorization requires to complete 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a43d6bdf9938687a495c7e31762a37467}\label{classaacio_1_1chain_1_1chain__controller_a43d6bdf9938687a495c7e31762a37467}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!check\+\_\+authorization@{check\+\_\+authorization}}
+\index{check\+\_\+authorization@{check\+\_\+authorization}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{check\+\_\+authorization()}{check\_authorization()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool aacio\+::chain\+::chain\+\_\+controller\+::check\+\_\+authorization (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}}}]{account,  }\item[{\mbox{\hyperlink{structaacio_1_1chain_1_1name}{permission\+\_\+name}}}]{permission,  }\item[{flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$}]{provided\+\_\+keys,  }\item[{bool}]{allow\+\_\+unused\+\_\+signatures }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}{Parameters}
+{\em account} & -\/ the account owner of the permission \\
+\hline
+{\em permission} & -\/ the permission name to check for authorization \\
+\hline
+{\em provided\+\_\+keys} & -\/ a set of public keys\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the provided keys are sufficient to authorize the account permission 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_af2f9f9c166af2e8d8dc8811d242e872a}\label{classaacio_1_1chain_1_1chain__controller_af2f9f9c166af2e8d8dc8811d242e872a}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!get\+\_\+required\+\_\+keys@{get\+\_\+required\+\_\+keys}}
+\index{get\+\_\+required\+\_\+keys@{get\+\_\+required\+\_\+keys}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{get\+\_\+required\+\_\+keys()}{get\_required\_keys()}}
+{\footnotesize\ttfamily flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ aacio\+::chain\+::chain\+\_\+controller\+::get\+\_\+required\+\_\+keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1transaction}{transaction}} \&}]{trx,  }\item[{const flat\+\_\+set$<$ \mbox{\hyperlink{classfc_1_1crypto_1_1public__key}{public\+\_\+key\+\_\+type}} $>$ \&}]{candidate\+\_\+keys }\end{DoxyParamCaption}) const}
+
+Determine which public keys are needed to sign the given transaction. 
+\begin{DoxyParams}{Parameters}
+{\em trx} & transaction that requires signature \\
+\hline
+{\em candidate\+\_\+keys} & Set of public keys to examine for applicability \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Subset of candidate\+\_\+keys whose private keys should be used to sign transaction 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classfc_1_1exception}{fc\+::exception}}} & if candidate\+\_\+keys does not contain all required keys \\
+\hline
+\end{DoxyExceptions}
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a70ddb9268b9ce5cac20104ab400fb462}\label{classaacio_1_1chain_1_1chain__controller_a70ddb9268b9ce5cac20104ab400fb462}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!get\+\_\+scheduled\+\_\+producer@{get\+\_\+scheduled\+\_\+producer}}
+\index{get\+\_\+scheduled\+\_\+producer@{get\+\_\+scheduled\+\_\+producer}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{get\+\_\+scheduled\+\_\+producer()}{get\_scheduled\_producer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} aacio\+::chain\+::chain\+\_\+controller\+::get\+\_\+scheduled\+\_\+producer (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{slot\+\_\+num }\end{DoxyParamCaption}) const}
+
+
+
+Get the producer scheduled for block production in a slot. 
+
+slot\+\_\+num always corresponds to a time in the future.
+
+If slot\+\_\+num == 1, returns the next scheduled producer. If slot\+\_\+num == 2, returns the next scheduled producer after 1 block gap.
+
+Use the \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a16c358c4d8477b5c7f4cedbde3faa235}{get\+\_\+slot\+\_\+time()}} and \mbox{\hyperlink{classaacio_1_1chain_1_1chain__controller_a9e231a27f0c30eedeff295bbf53b318a}{get\+\_\+slot\+\_\+at\+\_\+time()}} functions to convert between slot\+\_\+num and timestamp.
+
+Passing slot\+\_\+num == 0 returns A\+A\+C\+\_\+\+N\+U\+L\+L\+\_\+\+P\+R\+O\+D\+U\+C\+ER \mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a9e231a27f0c30eedeff295bbf53b318a}\label{classaacio_1_1chain_1_1chain__controller_a9e231a27f0c30eedeff295bbf53b318a}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!get\+\_\+slot\+\_\+at\+\_\+time@{get\+\_\+slot\+\_\+at\+\_\+time}}
+\index{get\+\_\+slot\+\_\+at\+\_\+time@{get\+\_\+slot\+\_\+at\+\_\+time}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{get\+\_\+slot\+\_\+at\+\_\+time()}{get\_slot\_at\_time()}}
+{\footnotesize\ttfamily uint32\+\_\+t aacio\+::chain\+::chain\+\_\+controller\+::get\+\_\+slot\+\_\+at\+\_\+time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}}}]{when }\end{DoxyParamCaption}) const}
+
+Get the last slot which occurs AT or B\+E\+F\+O\+RE the given time.
+
+The return value is the greatest value N such that get\+\_\+slot\+\_\+time( N ) $<$= when.
+
+If no such N exists, return 0. Here is the call graph for this function\+:
+% FIG 8
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a16c358c4d8477b5c7f4cedbde3faa235}\label{classaacio_1_1chain_1_1chain__controller_a16c358c4d8477b5c7f4cedbde3faa235}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!get\+\_\+slot\+\_\+time@{get\+\_\+slot\+\_\+time}}
+\index{get\+\_\+slot\+\_\+time@{get\+\_\+slot\+\_\+time}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{get\+\_\+slot\+\_\+time()}{get\_slot\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaacio_1_1chain_1_1block__timestamp}{block\+\_\+timestamp\+\_\+type}} aacio\+::chain\+::chain\+\_\+controller\+::get\+\_\+slot\+\_\+time (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{slot\+\_\+num }\end{DoxyParamCaption}) const}
+
+Get the time at which the given slot occurs.
+
+If slot\+\_\+num == 0, return time\+\_\+point\+\_\+sec().
+
+If slot\+\_\+num == N for N $>$ 0, return the Nth next block-\/interval-\/aligned time greater than head\+\_\+block\+\_\+time(). Here is the caller graph for this function\+:
+% FIG 9
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a6bbdca183ddca90d147fc95e1d27cfed}\label{classaacio_1_1chain_1_1chain__controller_a6bbdca183ddca90d147fc95e1d27cfed}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!is\+\_\+known\+\_\+block@{is\+\_\+known\+\_\+block}}
+\index{is\+\_\+known\+\_\+block@{is\+\_\+known\+\_\+block}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{is\+\_\+known\+\_\+block()}{is\_known\_block()}}
+{\footnotesize\ttfamily bool aacio\+::chain\+::chain\+\_\+controller\+::is\+\_\+known\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfc_1_1sha256}{block\+\_\+id\+\_\+type}} \&}]{id }\end{DoxyParamCaption}) const}
+
+
+
+T\+O\+DO\+: make this hash of constitution. 
+
+\begin{DoxyReturn}{Returns}
+true if the block is in our fork DB or saved to disk as part of the official chain, otherwise return false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a5fe603a309127c8b195a55b0706d2235}\label{classaacio_1_1chain_1_1chain__controller_a5fe603a309127c8b195a55b0706d2235}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!is\+\_\+known\+\_\+transaction@{is\+\_\+known\+\_\+transaction}}
+\index{is\+\_\+known\+\_\+transaction@{is\+\_\+known\+\_\+transaction}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{is\+\_\+known\+\_\+transaction()}{is\_known\_transaction()}}
+{\footnotesize\ttfamily bool aacio\+::chain\+::chain\+\_\+controller\+::is\+\_\+known\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfc_1_1sha256}{transaction\+\_\+id\+\_\+type}} \&}]{id }\end{DoxyParamCaption}) const}
+
+Only return true {\itshape if} the transaction has not expired or been invalidated. If this method is called with a V\+E\+RY old transaction we will return false, they should query things by blocks if they are that old. Here is the caller graph for this function\+:
+% FIG 10
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a58bf5d32ed81ff6aa8024ec8fa1ee105}\label{classaacio_1_1chain_1_1chain__controller_a58bf5d32ed81ff6aa8024ec8fa1ee105}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!pop\+\_\+block@{pop\+\_\+block}}
+\index{pop\+\_\+block@{pop\+\_\+block}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{pop\+\_\+block()}{pop\_block()}}
+{\footnotesize\ttfamily void aacio\+::chain\+::chain\+\_\+controller\+::pop\+\_\+block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the most recent block from the database and undoes any changes it made. Here is the caller graph for this function\+:
+% FIG 11
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a524ad0811937cfc85d2492875c76f1fa}\label{classaacio_1_1chain_1_1chain__controller_a524ad0811937cfc85d2492875c76f1fa}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!producer\+\_\+participation\+\_\+rate@{producer\+\_\+participation\+\_\+rate}}
+\index{producer\+\_\+participation\+\_\+rate@{producer\+\_\+participation\+\_\+rate}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{producer\+\_\+participation\+\_\+rate()}{producer\_participation\_rate()}}
+{\footnotesize\ttfamily uint32\+\_\+t aacio\+::chain\+::chain\+\_\+controller\+::producer\+\_\+participation\+\_\+rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Usees the A\+BI for code\+::type to convert a J\+S\+ON object (variant) into hex \mbox{\hyperlink{classstd_1_1vector}{vector$<$char$>$}} action\+\_\+to\+\_\+binary( name code, name type, const fc\+::variant\& obj )const; \mbox{\hyperlink{classfc_1_1variant}{fc\+::variant}} action\+\_\+from\+\_\+binary( name code, name type, const vector$<$char$>$\& bin )const; Calculate the percent of block production slots that were missed in the past 128 blocks, not including the current block. \mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a23d273b6ef29d0c5c9f9f0bf61774024}\label{classaacio_1_1chain_1_1chain__controller_a23d273b6ef29d0c5c9f9f0bf61774024}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!push\+\_\+block@{push\+\_\+block}}
+\index{push\+\_\+block@{push\+\_\+block}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{push\+\_\+block()}{push\_block()}}
+{\footnotesize\ttfamily void aacio\+::chain\+::chain\+\_\+controller\+::push\+\_\+block (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}} \&}]{new\+\_\+block,  }\item[{uint32\+\_\+t}]{skip = {\ttfamily skip\+\_\+nothing} }\end{DoxyParamCaption})}
+
+Push block \char`\"{}may fail\char`\"{} in which case every partial change is unwound. After push block is successful the block is appended to the chain database on disk.
+
+\begin{DoxyReturn}{Returns}
+true if we switched forks as a result of this push. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 12
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a9420fb823ef7fbd0a5745593fdc1aee7}\label{classaacio_1_1chain_1_1chain__controller_a9420fb823ef7fbd0a5745593fdc1aee7}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!push\+\_\+transaction@{push\+\_\+transaction}}
+\index{push\+\_\+transaction@{push\+\_\+transaction}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{push\+\_\+transaction()}{push\_transaction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structaacio_1_1chain_1_1transaction__trace}{transaction\+\_\+trace}} aacio\+::chain\+::chain\+\_\+controller\+::push\+\_\+transaction (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}} \&}]{trx,  }\item[{uint32\+\_\+t}]{skip = {\ttfamily skip\+\_\+nothing} }\end{DoxyParamCaption})}
+
+Attempts to push the transaction into the pending queue
+
+When called to push a locally generated transaction, set the skip\+\_\+block\+\_\+size\+\_\+check bit on the skip argument. This will allow the transaction to be pushed even if it causes the pending block size to exceed the maximum block size. Although the transaction will probably not propagate further now, as the peers are likely to have their pending queues full as well, it will be kept in the queue to be propagated later when a new block flushes out the pending queues. \mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a442beb698ea61031638b7cbae7fca7c6}\label{classaacio_1_1chain_1_1chain__controller_a442beb698ea61031638b7cbae7fca7c6}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!without\+\_\+pending\+\_\+transactions@{without\+\_\+pending\+\_\+transactions}}
+\index{without\+\_\+pending\+\_\+transactions@{without\+\_\+pending\+\_\+transactions}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{without\+\_\+pending\+\_\+transactions()}{without\_pending\_transactions()}}
+{\footnotesize\ttfamily template$<$typename Function $>$ \\
+auto aacio\+::chain\+::chain\+\_\+controller\+::without\+\_\+pending\+\_\+transactions (\begin{DoxyParamCaption}\item[{Function \&\&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method will backup all tranasctions in the current pending block, undo the pending block, call f(), and then push the pending transactions on top of the new state. after applying f() push previously input transactions on top Here is the call graph for this function\+:
+% FIG 13
+Here is the caller graph for this function\+:
+% FIG 14
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_adc108094f81f4cc535d3927e97be1d4a}\label{classaacio_1_1chain_1_1chain__controller_adc108094f81f4cc535d3927e97be1d4a}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!applied\+\_\+block@{applied\+\_\+block}}
+\index{applied\+\_\+block@{applied\+\_\+block}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{applied\+\_\+block}{applied\_block}}
+{\footnotesize\ttfamily signal$<$void(const \mbox{\hyperlink{structaacio_1_1chain_1_1block__trace}{block\+\_\+trace}}\&)$>$ aacio\+::chain\+::chain\+\_\+controller\+::applied\+\_\+block}
+
+This signal is emitted after all operations and virtual operation for a block have been applied but before the get\+\_\+applied\+\_\+operations() are cleared.
+
+You may not yield from this callback because the blockchain is holding the write lock and may be in an \char`\"{}inconstant state\char`\"{} until after it is released. \mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_a7f1e1bd702485d5028ca8378d91cc828}\label{classaacio_1_1chain_1_1chain__controller_a7f1e1bd702485d5028ca8378d91cc828}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!applied\+\_\+irreversible\+\_\+block@{applied\+\_\+irreversible\+\_\+block}}
+\index{applied\+\_\+irreversible\+\_\+block@{applied\+\_\+irreversible\+\_\+block}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{applied\+\_\+irreversible\+\_\+block}{applied\_irreversible\_block}}
+{\footnotesize\ttfamily signal$<$void(const \mbox{\hyperlink{structaacio_1_1chain_1_1signed__block}{signed\+\_\+block}}\&)$>$ aacio\+::chain\+::chain\+\_\+controller\+::applied\+\_\+irreversible\+\_\+block}
+
+This signal is emitted after irreversible block is written to disk.
+
+You may not yield from this callback because the blockchain is holding the write lock and may be in an \char`\"{}inconstant state\char`\"{} until after it is released. \mbox{\Hypertarget{classaacio_1_1chain_1_1chain__controller_ab1f8e21220b27a47ce3ed85bf8415497}\label{classaacio_1_1chain_1_1chain__controller_ab1f8e21220b27a47ce3ed85bf8415497}} 
+\index{aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}!on\+\_\+pending\+\_\+transaction@{on\+\_\+pending\+\_\+transaction}}
+\index{on\+\_\+pending\+\_\+transaction@{on\+\_\+pending\+\_\+transaction}!aacio\+::chain\+::chain\+\_\+controller@{aacio\+::chain\+::chain\+\_\+controller}}
+\subsubsection{\texorpdfstring{on\+\_\+pending\+\_\+transaction}{on\_pending\_transaction}}
+{\footnotesize\ttfamily signal$<$void(const \mbox{\hyperlink{classaacio_1_1chain_1_1transaction__metadata}{transaction\+\_\+metadata}}\&, const \mbox{\hyperlink{structaacio_1_1chain_1_1packed__transaction}{packed\+\_\+transaction}}\&)$>$ aacio\+::chain\+::chain\+\_\+controller\+::on\+\_\+pending\+\_\+transaction}
+
+This signal is emitted any time a new transaction is added to the pending block state. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/\mbox{\hyperlink{chain__controller_8hpp}{chain\+\_\+controller.\+hpp}}\item 
+libraries/chain/\mbox{\hyperlink{chain__controller_8cpp}{chain\+\_\+controller.\+cpp}}\end{DoxyCompactItemize}

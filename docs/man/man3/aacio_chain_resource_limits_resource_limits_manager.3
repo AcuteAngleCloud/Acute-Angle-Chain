@@ -1,0 +1,72 @@
+.TH "aacio::chain::resource_limits::resource_limits_manager" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::resource_limits::resource_limits_manager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBresource_limits_fixture\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBresource_limits_manager\fP (\fBchainbase::database\fP &db)"
+.br
+.ti -1c
+.RI "void \fBinitialize_database\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialize_chain\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitialize_account\fP (const \fBaccount_name\fP &\fBaccount\fP)"
+.br
+.ti -1c
+.RI "void \fBset_block_parameters\fP (const \fBelastic_limit_parameters\fP &cpu_limit_parameters, const \fBelastic_limit_parameters\fP &net_limit_parameters)"
+.br
+.ti -1c
+.RI "void \fBadd_transaction_usage\fP (const \fBvector\fP< \fBaccount_name\fP > &accounts, uint64_t cpu_usage, uint64_t net_usage, uint32_t ordinal)"
+.br
+.ti -1c
+.RI "void \fBadd_pending_account_ram_usage\fP (const \fBaccount_name\fP \fBaccount\fP, int64_t ram_delta)"
+.br
+.ti -1c
+.RI "void \fBsynchronize_account_ram_usage\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_account_limits\fP (const \fBaccount_name\fP &\fBaccount\fP, int64_t ram_bytes, int64_t net_weight, int64_t cpu_weight)"
+.br
+.ti -1c
+.RI "void \fBget_account_limits\fP (const \fBaccount_name\fP &\fBaccount\fP, int64_t &ram_bytes, int64_t &net_weight, int64_t &cpu_weight) const"
+.br
+.ti -1c
+.RI "void \fBprocess_account_limit_updates\fP ()"
+.br
+.ti -1c
+.RI "void \fBprocess_block_usage\fP (uint32_t block_num)"
+.br
+.ti -1c
+.RI "uint64_t \fBget_virtual_block_cpu_limit\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBget_virtual_block_net_limit\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBget_block_cpu_limit\fP () const"
+.br
+.ti -1c
+.RI "uint64_t \fBget_block_net_limit\fP () const"
+.br
+.ti -1c
+.RI "int64_t \fBget_account_cpu_limit\fP (const \fBaccount_name\fP &\fBname\fP) const"
+.br
+.ti -1c
+.RI "int64_t \fBget_account_net_limit\fP (const \fBaccount_name\fP &\fBname\fP) const"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

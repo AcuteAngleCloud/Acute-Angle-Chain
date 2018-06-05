@@ -1,0 +1,86 @@
+.TH "benchmark::State" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+benchmark::State
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBKeepRunning\fP ()"
+.br
+.ti -1c
+.RI "void \fBPauseTiming\fP ()"
+.br
+.ti -1c
+.RI "void \fBResumeTiming\fP ()"
+.br
+.ti -1c
+.RI "void \fBSkipWithError\fP (const char *msg)"
+.br
+.ti -1c
+.RI "void \fBSetIterationTime\fP (double seconds)"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE void \fBSetBytesProcessed\fP (size_t bytes)"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE size_t \fBbytes_processed\fP () const"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE void \fBSetComplexityN\fP (int complexity_n)"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE int \fBcomplexity_length_n\fP ()"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE void \fBSetItemsProcessed\fP (size_t items)"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE size_t \fBitems_processed\fP () const"
+.br
+.ti -1c
+.RI "void \fBSetLabel\fP (const char *label)"
+.br
+.ti -1c
+.RI "void BENCHMARK_ALWAYS_INLINE \fBSetLabel\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE int \fBrange\fP (std::size_t pos=0) const"
+.br
+.ti -1c
+.RI "int \fBrange_x\fP () const"
+.br
+.ti -1c
+.RI "int \fBrange_y\fP () const"
+.br
+.ti -1c
+.RI "BENCHMARK_ALWAYS_INLINE size_t \fBiterations\fP () const"
+.br
+.ti -1c
+.RI "\fBState\fP (size_t max_iters, const \fBstd::vector\fP< int > &ranges, int thread_i, int n_threads, \fBinternal::ThreadTimer\fP *timer, \fBinternal::ThreadManager\fP *manager)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUserCounters\fP \fBcounters\fP"
+.br
+.ti -1c
+.RI "const int \fBthread_index\fP"
+.br
+.ti -1c
+.RI "const int \fBthreads\fP"
+.br
+.ti -1c
+.RI "const size_t \fBmax_iterations\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

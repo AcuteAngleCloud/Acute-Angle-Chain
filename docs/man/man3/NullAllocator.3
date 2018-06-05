@@ -1,0 +1,57 @@
+.TH "NullAllocator< T >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+NullAllocator< T >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBT\fP \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBT\fP * \fBpointer\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBNullAllocator\fP (\fBAllocController\fP &PP)"
+.br
+.ti -1c
+.RI "\fBNullAllocator\fP (\fBNullAllocator\fP const &\fBother\fP)"
+.br
+.ti -1c
+.RI "\fBNullAllocator\fP (\fBNullAllocator\fP &&\fBother\fP)"
+.br
+.ti -1c
+.RI "template<class U > \fBNullAllocator\fP (\fBNullAllocator\fP< \fBU\fP > const &\fBother\fP) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "template<class U > \fBNullAllocator\fP (\fBNullAllocator\fP< \fBU\fP > &&\fBother\fP) TEST_NOEXCEPT"
+.br
+.ti -1c
+.RI "\fBT\fP * \fBallocate\fP (std::size_t n)"
+.br
+.ti -1c
+.RI "void \fBdeallocate\fP (\fBT\fP *p, std::size_t n)"
+.br
+.ti -1c
+.RI "\fBAllocController\fP & \fBgetController\fP () const"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<class Tp > class \fBNullAllocator\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

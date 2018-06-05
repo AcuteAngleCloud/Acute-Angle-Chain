@@ -1,0 +1,85 @@
+.TH "websocketpp::extensions::permessage_deflate" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::extensions::permessage_deflate \- Implementation of the draft permessage-deflate WebSocket extension\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBerror\fP"
+.br
+.RI "Permessage deflate error values\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBdisabled\fP"
+.br
+.RI "Stub class for use when disabling \fBpermessage_deflate\fP extension\&. "
+.ti -1c
+.RI "class \fBenabled\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Implementation of the draft permessage-deflate WebSocket extension\&. 
+
+
+.SS "permessage-deflate interface"
+.PP
+\fBinit\fP
+.br
+\fClib::error_code init(bool is_server)\fP
+.br
+Performs initialization
+.PP
+\fBis_implimented\fP
+.br
+\fCbool is_implimented()\fP
+.br
+Returns whether or not the object impliments the extension or not
+.PP
+\fBis_enabled\fP
+.br
+\fCbool is_enabled()\fP
+.br
+Returns whether or not the extension was negotiated for the current connection
+.PP
+\fBgenerate_offer\fP
+.br
+\fCstd::string generate_offer() const\fP
+.br
+Create an extension offer string based on local policy
+.PP
+\fBvalidate_response\fP
+.br
+\fClib::error_code validate_response(http::attribute_list const & response)\fP
+.br
+Negotiate the parameters of extension use
+.PP
+\fBnegotiate\fP
+.br
+\fCerr_str_pair negotiate(http::attribute_list const & attributes)\fP
+.br
+Negotiate the parameters of extension use
+.PP
+\fBcompress\fP
+.br
+\fClib::error_code compress(std::string const & in, std::string & out)\fP
+.br
+Compress the bytes in \fCin\fP and append them to \fCout\fP
+.PP
+\fBdecompress\fP
+.br
+\fClib::error_code decompress(uint8_t const * buf, size_t len, std::string & out)\fP
+.br
+Decompress \fClen\fP bytes from \fCbuf\fP and append them to string \fCout\fP 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

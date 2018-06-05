@@ -1,0 +1,70 @@
+.TH "aacio::market_state" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::market_state
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <market_state\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBmarket_state\fP (\fBaccount_name\fP this_contract, \fBsymbol_type\fP market_symbol, \fBexchange_accounts\fP &acnts)"
+.br
+.ti -1c
+.RI "const \fBexchange_state\fP & \fBinitial_state\fP () const"
+.br
+.ti -1c
+.RI "void \fBmargin_call\fP (\fBextended_symbol\fP debt_type)"
+.br
+.ti -1c
+.RI "void \fBlend\fP (\fBaccount_name\fP lender, const \fBextended_asset\fP &debt)"
+.br
+.ti -1c
+.RI "void \fBunlend\fP (\fBaccount_name\fP lender, double ishares, const \fBextended_symbol\fP &sym)"
+.br
+.ti -1c
+.RI "void \fBupdate_margin\fP (\fBaccount_name\fP borrower, const \fBextended_asset\fP &delta_debt, const \fBextended_asset\fP &delta_collateral)"
+.br
+.ti -1c
+.RI "void \fBcover_margin\fP (\fBaccount_name\fP borrower, const \fBextended_asset\fP &cover_amount)"
+.br
+.ti -1c
+.RI "void \fBsave\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "symbol_name \fBmarketid\fP"
+.br
+.ti -1c
+.RI "\fBexchange_state\fP \fBexstate\fP"
+.br
+.ti -1c
+.RI "\fBmarkets\fP \fBmarket_table\fP"
+.br
+.ti -1c
+.RI "\fBmargins\fP \fBbase_margins\fP"
+.br
+.ti -1c
+.RI "\fBmargins\fP \fBquote_margins\fP"
+.br
+.ti -1c
+.RI "\fBloans\fP \fBbase_loans\fP"
+.br
+.ti -1c
+.RI "\fBloans\fP \fBquote_loans\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Maintains a state along with the cache of margin positions and/or limit orders\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

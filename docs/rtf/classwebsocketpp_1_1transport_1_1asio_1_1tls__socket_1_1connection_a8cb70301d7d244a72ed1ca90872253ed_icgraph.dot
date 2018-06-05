@@ -1,0 +1,9 @@
+digraph "websocketpp::transport::asio::tls_socket::connection::set_uri"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node47 [label="websocketpp::transport\l::asio::tls_socket::connection\l::set_uri",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node48 [label="websocketpp::transport\l::asio::connection::set_uri",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1connection.html#abe1def82c2be645adfc9f769aafb1a0d",tooltip="Set uri hook. "];
+}

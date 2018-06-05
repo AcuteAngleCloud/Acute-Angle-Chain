@@ -1,0 +1,47 @@
+\hypertarget{unistd_8h}{}\section{contracts/musl/upstream/include/unistd.h File Reference}
+\label{unistd_8h}\index{contracts/musl/upstream/include/unistd.\+h@{contracts/musl/upstream/include/unistd.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for unistd.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{unistd_8h_a87ed00a8f774a9d36d650b80a36ad932}{sbrk}} (uint32\+\_\+t num\+\_\+bytes)
+\begin{DoxyCompactList}\small\item\em Allocate page memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{unistd_8h_a87ed00a8f774a9d36d650b80a36ad932}\label{unistd_8h_a87ed00a8f774a9d36d650b80a36ad932}} 
+\index{unistd.\+h@{unistd.\+h}!sbrk@{sbrk}}
+\index{sbrk@{sbrk}!unistd.\+h@{unistd.\+h}}
+\subsubsection{\texorpdfstring{sbrk()}{sbrk()}}
+{\footnotesize\ttfamily void$\ast$ sbrk (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{num\+\_\+bytes }\end{DoxyParamCaption})}
+
+
+
+Allocate page memory. 
+
+Allocate page(s) of memory to accommodate the requested number of bytes. 
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+bytes} & Number of bytes to add.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void pointer to the previous end of allocated bytes
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// allocate a whole new page, the returned offset is the pointer to the}
+\textcolor{comment}{// newly allocated page}
+\textcolor{keywordtype}{char}* new\_page = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\mbox{\hyperlink{unistd_8h_a87ed00a8f774a9d36d650b80a36ad932}{sbrk}}(65536));
+memset(new\_page, 0, 65536);
+\end{DoxyCode}
+ 

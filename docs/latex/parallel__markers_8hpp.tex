@@ -1,0 +1,47 @@
+\hypertarget{parallel__markers_8hpp}{}\section{libraries/utilities/include/aacio/utilities/parallel\+\_\+markers.hpp File Reference}
+\label{parallel__markers_8hpp}\index{libraries/utilities/include/aacio/utilities/parallel\+\_\+markers.\+hpp@{libraries/utilities/include/aacio/utilities/parallel\+\_\+markers.\+hpp}}
+{\ttfamily \#include $<$boost/range/combine.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/adaptor/filtered.\+hpp$>$}\newline
+{\ttfamily \#include $<$boost/range/adaptor/transformed.\+hpp$>$}\newline
+Include dependency graph for parallel\+\_\+markers.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Data\+Range , typename Marker\+Range , typename Marker $>$ }\\Data\+Range \mbox{\hyperlink{parallel__markers_8hpp_ac3dc2d42671d5564f43cb8764764b60f}{aacio\+::utilities\+::filter\+\_\+data\+\_\+by\+\_\+marker}} (Data\+Range data, Marker\+Range markers, const Marker \&marker\+Value)
+\begin{DoxyCompactList}\small\item\em Return values in Data\+Range corresponding to matching Markers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{parallel__markers_8hpp_file_ac3dc2d42671d5564f43cb8764764b60f}\label{parallel__markers_8hpp_file_ac3dc2d42671d5564f43cb8764764b60f}} 
+\index{parallel\+\_\+markers.\+hpp@{parallel\+\_\+markers.\+hpp}!filter\+\_\+data\+\_\+by\+\_\+marker@{filter\+\_\+data\+\_\+by\+\_\+marker}}
+\index{filter\+\_\+data\+\_\+by\+\_\+marker@{filter\+\_\+data\+\_\+by\+\_\+marker}!parallel\+\_\+markers.\+hpp@{parallel\+\_\+markers.\+hpp}}
+\subsubsection{\texorpdfstring{filter\+\_\+data\+\_\+by\+\_\+marker()}{filter\_data\_by\_marker()}}
+{\footnotesize\ttfamily template$<$typename Data\+Range , typename Marker\+Range , typename Marker $>$ \\
+Data\+Range aacio\+::utilities\+::filter\+\_\+data\+\_\+by\+\_\+marker (\begin{DoxyParamCaption}\item[{Data\+Range}]{data,  }\item[{Marker\+Range}]{markers,  }\item[{const Marker \&}]{marker\+Value }\end{DoxyParamCaption})}
+
+
+
+Return values in Data\+Range corresponding to matching Markers. 
+
+Takes two parallel ranges, a Data range containing data values, and a Marker range containing markers on the corresponding data values. Returns a new Data range containing only the values corresponding to markers which match marker\+Value
+
+For example\+: 
+\begin{DoxyCode}
+vector<char> data = \{\textcolor{charliteral}{'A'}, \textcolor{charliteral}{'B'}, \textcolor{charliteral}{'C'}\};
+vector<bool> markers = \{\textcolor{keyword}{true}, \textcolor{keyword}{false}, \textcolor{keyword}{true}\};
+\textcolor{keyword}{auto} markedData = FilterDataByMarker(data, markers, \textcolor{keyword}{true});
+\textcolor{comment}{// markedData contains \{'A', 'C'\}}
+\end{DoxyCode}
+ Here is the call graph for this function\+:
+% FIG 2
+Here is the caller graph for this function\+:
+% FIG 3

@@ -1,0 +1,16 @@
+digraph "contracts/aacio.system/voting.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node95 [label="contracts/aacio.system\l/voting.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node95 -> Node96 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node96 [label="contracts/aacio.system\l/delegate_bandwidth.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$delegate__bandwidth_8hpp.html"];
+  Node96 -> Node97 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node97 [label="contracts/aacio.system\l/aacio.system.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$aacio_8system_8hpp.html"];
+  Node97 -> Node98 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node98 [label="contracts/aacio.system\l/aacio.system.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$aacio_8system_8cpp.html"];
+  Node97 -> Node99 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node99 [label="contracts/dice/dice.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dice_8cpp.html"];
+  Node97 -> Node100 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node100 [label="contracts/proxy/proxy.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$proxy_8cpp.html"];
+}

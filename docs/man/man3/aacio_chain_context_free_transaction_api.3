@@ -1,0 +1,44 @@
+.TH "aacio::chain::context_free_transaction_api" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::context_free_transaction_api
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::context_aware_api\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcontext_free_transaction_api\fP (\fBapply_context\fP &ctx)"
+.br
+.ti -1c
+.RI "int \fBread_transaction\fP (\fBarray_ptr\fP< char > data, size_t data_len)"
+.br
+.ti -1c
+.RI "int \fBtransaction_size\fP ()"
+.br
+.ti -1c
+.RI "int \fBexpiration\fP ()"
+.br
+.ti -1c
+.RI "int \fBtapos_block_num\fP ()"
+.br
+.ti -1c
+.RI "int \fBtapos_block_prefix\fP ()"
+.br
+.ti -1c
+.RI "int \fBget_action\fP (uint32_t type, uint32_t index, \fBarray_ptr\fP< char > buffer, size_t buffer_size) const"
+.br
+.ti -1c
+.RI "void \fBcheck_auth\fP (\fBarray_ptr\fP< char > trx_data, size_t trx_size, \fBarray_ptr\fP< char > perm_data, size_t perm_size)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

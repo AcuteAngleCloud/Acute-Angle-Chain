@@ -1,0 +1,90 @@
+.TH "websocketpp::frame::opcode" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::frame::opcode \- Constants and utility functions related to WebSocket opcodes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBvalue\fP { \fBcontinuation\fP = 0x0, \fBtext\fP = 0x1, \fBbinary\fP = 0x2, \fBrsv3\fP = 0x3, \fBrsv4\fP = 0x4, \fBrsv5\fP = 0x5, \fBrsv6\fP = 0x6, \fBrsv7\fP = 0x7, \fBclose\fP = 0x8, \fBping\fP = 0x9, \fBpong\fP = 0xA, \fBcontrol_rsvb\fP = 0xB, \fBcontrol_rsvc\fP = 0xC, \fBcontrol_rsvd\fP = 0xD, \fBcontrol_rsve\fP = 0xE, \fBcontrol_rsvf\fP = 0xF, \fBCONTINUATION\fP = 0x0, \fBTEXT\fP = 0x1, \fBBINARY\fP = 0x2, \fBRSV3\fP = 0x3, \fBRSV4\fP = 0x4, \fBRSV5\fP = 0x5, \fBRSV6\fP = 0x6, \fBRSV7\fP = 0x7, \fBCLOSE\fP = 0x8, \fBPING\fP = 0x9, \fBPONG\fP = 0xA, \fBCONTROL_RSVB\fP = 0xB, \fBCONTROL_RSVC\fP = 0xC, \fBCONTROL_RSVD\fP = 0xD, \fBCONTROL_RSVE\fP = 0xE, \fBCONTROL_RSVF\fP = 0xF }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBreserved\fP (value v)"
+.br
+.RI "Check if an opcode is reserved\&. "
+.ti -1c
+.RI "bool \fBinvalid\fP (value v)"
+.br
+.RI "Check if an opcode is invalid\&. "
+.ti -1c
+.RI "bool \fBis_control\fP (value v)"
+.br
+.RI "Check if an opcode is for a control frame\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Constants and utility functions related to WebSocket opcodes\&. 
+
+WebSocket Opcodes are 4 bits\&. See RFC6455 section 5\&.2\&. 
+.SH "Function Documentation"
+.PP 
+.SS "bool websocketpp::frame::opcode::invalid (value v)\fC [inline]\fP"
+
+.PP
+Check if an opcode is invalid\&. Invalid opcodes are negative or require greater than 4 bits to store\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP The opcode to test\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the opcode is invalid\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::opcode::is_control (value v)\fC [inline]\fP"
+
+.PP
+Check if an opcode is for a control frame\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP The opcode to test\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the opcode is a control opcode\&. 
+.RE
+.PP
+
+.SS "bool websocketpp::frame::opcode::reserved (value v)\fC [inline]\fP"
+
+.PP
+Check if an opcode is reserved\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP The opcode to test\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Whether or not the opcode is reserved\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

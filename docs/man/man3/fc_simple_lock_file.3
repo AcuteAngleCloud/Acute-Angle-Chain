@@ -1,0 +1,30 @@
+.TH "fc::simple_lock_file" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fc::simple_lock_file
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <filesystem\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsimple_lock_file\fP (const \fBpath\fP &lock_file_path)"
+.br
+.ti -1c
+.RI "bool \fBtry_lock\fP ()"
+.br
+.ti -1c
+.RI "void \fBunlock\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+simple class which only allows one process to open any given file\&. approximate usage: int main() { fc::simple_file_lock instance_lock('~/\&.my_app/\&.lock'); if (!instance_lock\&.try_lock()) { elog('my_app is already running'); return 1; } // do stuff here, file will be unlocked when instance_lock goes out of scope } 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

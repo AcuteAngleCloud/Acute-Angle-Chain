@@ -1,0 +1,68 @@
+.TH "libraries/chain/transaction.cpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+libraries/chain/transaction.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aacio/chain/exceptions\&.hpp>\fP
+.br
+\fC#include <fc/io/raw\&.hpp>\fP
+.br
+\fC#include <fc/bitutil\&.hpp>\fP
+.br
+\fC#include <fc/smart_ref_impl\&.hpp>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+\fC#include <boost/range/adaptor/transformed\&.hpp>\fP
+.br
+\fC#include <boost/multi_index_container\&.hpp>\fP
+.br
+\fC#include <boost/multi_index/sequenced_index\&.hpp>\fP
+.br
+\fC#include <boost/multi_index/hashed_index\&.hpp>\fP
+.br
+\fC#include <boost/multi_index/member\&.hpp>\fP
+.br
+\fC#include <boost/iostreams/filtering_stream\&.hpp>\fP
+.br
+\fC#include <boost/iostreams/device/back_inserter\&.hpp>\fP
+.br
+\fC#include <boost/iostreams/filter/zlib\&.hpp>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBaacio::chain::cached_pub_key\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::by_sig\fP"
+.br
+.ti -1c
+.RI "struct \fBaacio::chain::read_limiter< Limit >\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef multi_index_container< cached_pub_key, indexed_by< sequenced<>, hashed_unique< tag< by_sig >, member< cached_pub_key, signature_type, &cached_pub_key::sig > > >> \fBaacio::chain::recovery_cache_type\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

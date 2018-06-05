@@ -1,0 +1,38 @@
+.TH "wasm::LEB< T, MiniT >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::LEB< T, MiniT >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLEB\fP (\fBT\fP value)"
+.br
+.ti -1c
+.RI "bool \fBhasMore\fP (\fBT\fP temp, MiniT byte)"
+.br
+.ti -1c
+.RI "void \fBwrite\fP (\fBstd::vector\fP< uint8_t > *out)"
+.br
+.ti -1c
+.RI "void \fBwriteAt\fP (\fBstd::vector\fP< uint8_t > *out, size_t at, size_t minimum=0)"
+.br
+.ti -1c
+.RI "void \fBread\fP (std::function< MiniT()> get)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBT\fP \fBvalue\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

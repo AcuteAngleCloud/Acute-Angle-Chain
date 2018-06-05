@@ -1,0 +1,11 @@
+digraph "contracts/bancor" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ae9b15dd87e066e1908bbd90e8f38627 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="contracts" fontname="Helvetica", fontsize="10", URL="dir_ae9b15dd87e066e1908bbd90e8f38627.html"]
+  dir_17f794113f3d2f5e8c50affd393f94f8 [shape=box, label="bancor", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_17f794113f3d2f5e8c50affd393f94f8.html"];
+  }
+  dir_eebd46385ac17dfe81e47e86b6b64bf0 [shape=box label="aaciolib" URL="dir_eebd46385ac17dfe81e47e86b6b64bf0.html"];
+  dir_17f794113f3d2f5e8c50affd393f94f8->dir_eebd46385ac17dfe81e47e86b6b64bf0 [headlabel="1", labeldistance=1.5 headhref="dir_000033_000015.html"];
+}

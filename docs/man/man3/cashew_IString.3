@@ -1,0 +1,81 @@
+.TH "cashew::IString" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cashew::IString
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBwasm::Name\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCStringEqual\fP"
+.br
+.ti -1c
+.RI "class \fBCStringHash\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIString\fP (const char *s, bool reuse=true)"
+.br
+.ti -1c
+.RI "void \fBset\fP (const char *s, bool reuse=true)"
+.br
+.ti -1c
+.RI "void \fBset\fP (const \fBIString\fP &s)"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBIString\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBIString\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBIString\fP &\fBother\fP) const"
+.br
+.ti -1c
+.RI "char \fBoperator[]\fP (int x) const"
+.br
+.ti -1c
+.RI "bool \fBoperator!\fP () const"
+.br
+.ti -1c
+.RI "const char * \fBc_str\fP () const"
+.br
+.ti -1c
+.RI "bool \fBequals\fP (const char *\fBother\fP) const"
+.br
+.ti -1c
+.RI "bool \fBis\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisNull\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t \fBhash_c\fP (const char *str)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBstr\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

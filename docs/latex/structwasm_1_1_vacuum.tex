@@ -1,0 +1,55 @@
+\hypertarget{structwasm_1_1_vacuum}{}\section{wasm\+:\+:Vacuum Struct Reference}
+\label{structwasm_1_1_vacuum}\index{wasm\+::\+Vacuum@{wasm\+::\+Vacuum}}
+
+
+Inheritance diagram for wasm\+:\+:Vacuum\+:
+% FIG 0
+
+
+Collaboration diagram for wasm\+:\+:Vacuum\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_a231f477d2f1c44e243f5835e468be56c}\label{structwasm_1_1_vacuum_a231f477d2f1c44e243f5835e468be56c}} 
+bool {\bfseries is\+Function\+Parallel} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_ad4155fe9e50dfec9b463ff5227251fbe}\label{structwasm_1_1_vacuum_ad4155fe9e50dfec9b463ff5227251fbe}} 
+\mbox{\hyperlink{classwasm_1_1_pass}{Pass}} $\ast$ {\bfseries create} () override
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_a849c533f8e4f0ea60fc09ee3c121977b}\label{structwasm_1_1_vacuum_a849c533f8e4f0ea60fc09ee3c121977b}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries replace\+Current} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$expression)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_a6f6d8a7faa3a9257baa67c8c7dd38a9f}\label{structwasm_1_1_vacuum_a6f6d8a7faa3a9257baa67c8c7dd38a9f}} 
+void {\bfseries do\+Walk\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$\mbox{\hyperlink{structfunc}{func}})
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_ac49f4000e3e6a5e812918bfbee839d2e}\label{structwasm_1_1_vacuum_ac49f4000e3e6a5e812918bfbee839d2e}} 
+\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$ {\bfseries optimize} (\mbox{\hyperlink{classwasm_1_1_expression}{Expression}} $\ast$curr, bool result\+Used)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_adbd5c8013697c1aff745cfe2da56b015}\label{structwasm_1_1_vacuum_adbd5c8013697c1aff745cfe2da56b015}} 
+void {\bfseries visit\+Block} (\mbox{\hyperlink{classwasm_1_1_block}{Block}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_af82539091ed23bb6d59c17b98e98f96b}\label{structwasm_1_1_vacuum_af82539091ed23bb6d59c17b98e98f96b}} 
+void {\bfseries visit\+If} (\mbox{\hyperlink{classwasm_1_1_if}{If}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_a8a44b9e13ad1f8cb30735f04b3ae2e5e}\label{structwasm_1_1_vacuum_a8a44b9e13ad1f8cb30735f04b3ae2e5e}} 
+void {\bfseries visit\+Loop} (\mbox{\hyperlink{classwasm_1_1_loop}{Loop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_a3096c3d4ebd0df777cab154560f0a114}\label{structwasm_1_1_vacuum_a3096c3d4ebd0df777cab154560f0a114}} 
+void {\bfseries visit\+Drop} (\mbox{\hyperlink{classwasm_1_1_drop}{Drop}} $\ast$curr)
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_ab2678f690ec88aba1f2d58404d0d88f0}\label{structwasm_1_1_vacuum_ab2678f690ec88aba1f2d58404d0d88f0}} 
+void {\bfseries visit\+Function} (\mbox{\hyperlink{classwasm_1_1_function}{Function}} $\ast$curr)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structwasm_1_1_vacuum_a18707e9e6716098cb82f47f6c162c0f7}\label{structwasm_1_1_vacuum_a18707e9e6716098cb82f47f6c162c0f7}} 
+\mbox{\hyperlink{structwasm_1_1_type_updater}{Type\+Updater}} {\bfseries type\+Updater}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+externals/binaryen/src/passes/Vacuum.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,528 @@
+.TH "aacio::chain::wasm_injections::pre_op_injectors" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::wasm_injections::pre_op_injectors
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::chain::wasm_ops::op_types< pass_injector >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBblock_t\fP = wasm_ops::block< \fBinstruction_counter\fP, \fBchecktime_injector\fP >"
+.br
+.ti -1c
+.RI "using \fBloop_t\fP = wasm_ops::loop< \fBinstruction_counter\fP, \fBchecktime_injector\fP >"
+.br
+.ti -1c
+.RI "using \fBif__t\fP = wasm_ops::if_< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBelse__t\fP = wasm_ops::else_< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBend_t\fP = wasm_ops::end< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBunreachable_t\fP = wasm_ops::unreachable< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBbr_t\fP = wasm_ops::br< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBbr_if_t\fP = wasm_ops::br_if< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBbr_table_t\fP = wasm_ops::br_table< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBreturn__t\fP = wasm_ops::return_< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBcall_t\fP = wasm_ops::call< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBcall_indirect_t\fP = wasm_ops::call_indirect< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBdrop_t\fP = wasm_ops::drop< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBselect_t\fP = wasm_ops::select< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBget_local_t\fP = wasm_ops::get_local< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBset_local_t\fP = wasm_ops::set_local< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBtee_local_t\fP = wasm_ops::tee_local< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBget_global_t\fP = wasm_ops::get_global< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBset_global_t\fP = wasm_ops::set_global< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBnop_t\fP = wasm_ops::nop< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load_t\fP = wasm_ops::i32_load< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load_t\fP = wasm_ops::i64_load< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_load_t\fP = wasm_ops::f32_load< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_load_t\fP = wasm_ops::f64_load< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load8_s_t\fP = wasm_ops::i32_load8_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load8_u_t\fP = wasm_ops::i32_load8_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load16_s_t\fP = wasm_ops::i32_load16_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_load16_u_t\fP = wasm_ops::i32_load16_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load8_s_t\fP = wasm_ops::i64_load8_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load8_u_t\fP = wasm_ops::i64_load8_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load16_s_t\fP = wasm_ops::i64_load16_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load16_u_t\fP = wasm_ops::i64_load16_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load32_s_t\fP = wasm_ops::i64_load32_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_load32_u_t\fP = wasm_ops::i64_load32_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_store_t\fP = wasm_ops::i32_store< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store_t\fP = wasm_ops::i64_store< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_store_t\fP = wasm_ops::f32_store< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_store_t\fP = wasm_ops::f64_store< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_store8_t\fP = wasm_ops::i32_store8< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_store16_t\fP = wasm_ops::i32_store16< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store8_t\fP = wasm_ops::i64_store8< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store16_t\fP = wasm_ops::i64_store16< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_store32_t\fP = wasm_ops::i64_store32< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_const_t\fP = wasm_ops::i32_const< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_const_t\fP = wasm_ops::i64_const< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_const_t\fP = wasm_ops::f32_const< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_const_t\fP = wasm_ops::f64_const< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_eqz_t\fP = wasm_ops::i32_eqz< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_eq_t\fP = wasm_ops::i32_eq< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ne_t\fP = wasm_ops::i32_ne< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_lt_s_t\fP = wasm_ops::i32_lt_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_lt_u_t\fP = wasm_ops::i32_lt_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_gt_s_t\fP = wasm_ops::i32_gt_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_gt_u_t\fP = wasm_ops::i32_gt_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_le_s_t\fP = wasm_ops::i32_le_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_le_u_t\fP = wasm_ops::i32_le_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ge_s_t\fP = wasm_ops::i32_ge_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ge_u_t\fP = wasm_ops::i32_ge_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_clz_t\fP = wasm_ops::i32_clz< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_ctz_t\fP = wasm_ops::i32_ctz< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_popcnt_t\fP = wasm_ops::i32_popcnt< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_add_t\fP = wasm_ops::i32_add< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_sub_t\fP = wasm_ops::i32_sub< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_mul_t\fP = wasm_ops::i32_mul< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_div_s_t\fP = wasm_ops::i32_div_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_div_u_t\fP = wasm_ops::i32_div_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rem_s_t\fP = wasm_ops::i32_rem_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rem_u_t\fP = wasm_ops::i32_rem_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_and_t\fP = wasm_ops::i32_and< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_or_t\fP = wasm_ops::i32_or< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_xor_t\fP = wasm_ops::i32_xor< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_shl_t\fP = wasm_ops::i32_shl< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_shr_s_t\fP = wasm_ops::i32_shr_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_shr_u_t\fP = wasm_ops::i32_shr_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rotl_t\fP = wasm_ops::i32_rotl< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_rotr_t\fP = wasm_ops::i32_rotr< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_eqz_t\fP = wasm_ops::i64_eqz< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_eq_t\fP = wasm_ops::i64_eq< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ne_t\fP = wasm_ops::i64_ne< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_lt_s_t\fP = wasm_ops::i64_lt_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_lt_u_t\fP = wasm_ops::i64_lt_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_gt_s_t\fP = wasm_ops::i64_gt_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_gt_u_t\fP = wasm_ops::i64_gt_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_le_s_t\fP = wasm_ops::i64_le_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_le_u_t\fP = wasm_ops::i64_le_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ge_s_t\fP = wasm_ops::i64_ge_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ge_u_t\fP = wasm_ops::i64_ge_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_clz_t\fP = wasm_ops::i64_clz< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_ctz_t\fP = wasm_ops::i64_ctz< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_popcnt_t\fP = wasm_ops::i64_popcnt< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_add_t\fP = wasm_ops::i64_add< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_sub_t\fP = wasm_ops::i64_sub< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_mul_t\fP = wasm_ops::i64_mul< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_div_s_t\fP = wasm_ops::i64_div_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_div_u_t\fP = wasm_ops::i64_div_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rem_s_t\fP = wasm_ops::i64_rem_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rem_u_t\fP = wasm_ops::i64_rem_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_and_t\fP = wasm_ops::i64_and< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_or_t\fP = wasm_ops::i64_or< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_xor_t\fP = wasm_ops::i64_xor< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_shl_t\fP = wasm_ops::i64_shl< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_shr_s_t\fP = wasm_ops::i64_shr_s< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_shr_u_t\fP = wasm_ops::i64_shr_u< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rotl_t\fP = wasm_ops::i64_rotl< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_rotr_t\fP = wasm_ops::i64_rotr< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_add_t\fP = wasm_ops::f32_add< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_add_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_sub_t\fP = wasm_ops::f32_sub< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_sub_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_div_t\fP = wasm_ops::f32_div< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_div_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_mul_t\fP = wasm_ops::f32_mul< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_mul_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_min_t\fP = wasm_ops::f32_min< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_min_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_max_t\fP = wasm_ops::f32_max< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_max_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_copysign_t\fP = wasm_ops::f32_copysign< \fBinstruction_counter\fP, \fBf32_binop_injector\fP< wasm_ops::f32_copysign_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_abs_t\fP = wasm_ops::f32_abs< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_abs_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_neg_t\fP = wasm_ops::f32_neg< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_neg_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_sqrt_t\fP = wasm_ops::f32_sqrt< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_sqrt_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_floor_t\fP = wasm_ops::f32_floor< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_floor_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_ceil_t\fP = wasm_ops::f32_ceil< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_ceil_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_trunc_t\fP = wasm_ops::f32_trunc< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_trunc_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_nearest_t\fP = wasm_ops::f32_nearest< \fBinstruction_counter\fP, \fBf32_unop_injector\fP< wasm_ops::f32_nearest_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_eq_t\fP = wasm_ops::f32_eq< \fBinstruction_counter\fP, \fBf32_relop_injector\fP< wasm_ops::f32_eq_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_ne_t\fP = wasm_ops::f32_ne< \fBinstruction_counter\fP, \fBf32_relop_injector\fP< wasm_ops::f32_ne_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_lt_t\fP = wasm_ops::f32_lt< \fBinstruction_counter\fP, \fBf32_relop_injector\fP< wasm_ops::f32_lt_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_le_t\fP = wasm_ops::f32_le< \fBinstruction_counter\fP, \fBf32_relop_injector\fP< wasm_ops::f32_le_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_gt_t\fP = wasm_ops::f32_gt< \fBinstruction_counter\fP, \fBf32_relop_injector\fP< wasm_ops::f32_gt_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_ge_t\fP = wasm_ops::f32_ge< \fBinstruction_counter\fP, \fBf32_relop_injector\fP< wasm_ops::f32_ge_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_add_t\fP = wasm_ops::f64_add< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_add_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_sub_t\fP = wasm_ops::f64_sub< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_sub_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_div_t\fP = wasm_ops::f64_div< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_div_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_mul_t\fP = wasm_ops::f64_mul< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_mul_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_min_t\fP = wasm_ops::f64_min< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_min_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_max_t\fP = wasm_ops::f64_max< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_max_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_copysign_t\fP = wasm_ops::f64_copysign< \fBinstruction_counter\fP, \fBf64_binop_injector\fP< wasm_ops::f64_copysign_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_abs_t\fP = wasm_ops::f64_abs< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_abs_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_neg_t\fP = wasm_ops::f64_neg< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_neg_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_sqrt_t\fP = wasm_ops::f64_sqrt< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_sqrt_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_floor_t\fP = wasm_ops::f64_floor< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_floor_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_ceil_t\fP = wasm_ops::f64_ceil< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_ceil_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_trunc_t\fP = wasm_ops::f64_trunc< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_trunc_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_nearest_t\fP = wasm_ops::f64_nearest< \fBinstruction_counter\fP, \fBf64_unop_injector\fP< wasm_ops::f64_nearest_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_eq_t\fP = wasm_ops::f64_eq< \fBinstruction_counter\fP, \fBf64_relop_injector\fP< wasm_ops::f64_eq_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_ne_t\fP = wasm_ops::f64_ne< \fBinstruction_counter\fP, \fBf64_relop_injector\fP< wasm_ops::f64_ne_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_lt_t\fP = wasm_ops::f64_lt< \fBinstruction_counter\fP, \fBf64_relop_injector\fP< wasm_ops::f64_lt_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_le_t\fP = wasm_ops::f64_le< \fBinstruction_counter\fP, \fBf64_relop_injector\fP< wasm_ops::f64_le_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_gt_t\fP = wasm_ops::f64_gt< \fBinstruction_counter\fP, \fBf64_relop_injector\fP< wasm_ops::f64_gt_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_ge_t\fP = wasm_ops::f64_ge< \fBinstruction_counter\fP, \fBf64_relop_injector\fP< wasm_ops::f64_ge_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_promote_f32_t\fP = wasm_ops::f64_promote_f32< \fBinstruction_counter\fP, \fBf32_promote_injector\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_demote_f64_t\fP = wasm_ops::f32_demote_f64< \fBinstruction_counter\fP, \fBf64_demote_injector\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_s_f32_t\fP = wasm_ops::i32_trunc_s_f32< \fBinstruction_counter\fP, \fBf32_trunc_i32_injector\fP< wasm_ops::i32_trunc_s_f32_code > >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_u_f32_t\fP = wasm_ops::i32_trunc_u_f32< \fBinstruction_counter\fP, \fBf32_trunc_i32_injector\fP< wasm_ops::i32_trunc_u_f32_code > >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_s_f64_t\fP = wasm_ops::i32_trunc_s_f64< \fBinstruction_counter\fP, \fBf64_trunc_i32_injector\fP< wasm_ops::i32_trunc_s_f64_code > >"
+.br
+.ti -1c
+.RI "using \fBi32_trunc_u_f64_t\fP = wasm_ops::i32_trunc_u_f64< \fBinstruction_counter\fP, \fBf64_trunc_i32_injector\fP< wasm_ops::i32_trunc_u_f64_code > >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_s_f32_t\fP = wasm_ops::i64_trunc_s_f32< \fBinstruction_counter\fP, \fBf32_trunc_i64_injector\fP< wasm_ops::i64_trunc_s_f32_code > >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_u_f32_t\fP = wasm_ops::i64_trunc_u_f32< \fBinstruction_counter\fP, \fBf32_trunc_i64_injector\fP< wasm_ops::i64_trunc_u_f32_code > >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_s_f64_t\fP = wasm_ops::i64_trunc_s_f64< \fBinstruction_counter\fP, \fBf64_trunc_i64_injector\fP< wasm_ops::i64_trunc_s_f64_code > >"
+.br
+.ti -1c
+.RI "using \fBi64_trunc_u_f64_t\fP = wasm_ops::i64_trunc_u_f64< \fBinstruction_counter\fP, \fBf64_trunc_i64_injector\fP< wasm_ops::i64_trunc_u_f64_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_s_i32\fP = wasm_ops::f32_convert_s_i32< \fBinstruction_counter\fP, \fBi32_convert_f32_injector\fP< wasm_ops::f32_convert_s_i32_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_s_i64\fP = wasm_ops::f32_convert_s_i64< \fBinstruction_counter\fP, \fBi64_convert_f32_injector\fP< wasm_ops::f32_convert_s_i64_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_u_i32\fP = wasm_ops::f32_convert_u_i32< \fBinstruction_counter\fP, \fBi32_convert_f32_injector\fP< wasm_ops::f32_convert_u_i32_code > >"
+.br
+.ti -1c
+.RI "using \fBf32_convert_u_i64\fP = wasm_ops::f32_convert_u_i64< \fBinstruction_counter\fP, \fBi64_convert_f32_injector\fP< wasm_ops::f32_convert_u_i64_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_s_i32\fP = wasm_ops::f64_convert_s_i32< \fBinstruction_counter\fP, \fBi32_convert_f64_injector\fP< wasm_ops::f64_convert_s_i32_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_s_i64\fP = wasm_ops::f64_convert_s_i64< \fBinstruction_counter\fP, \fBi64_convert_f64_injector\fP< wasm_ops::f64_convert_s_i64_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_u_i32\fP = wasm_ops::f64_convert_u_i32< \fBinstruction_counter\fP, \fBi32_convert_f64_injector\fP< wasm_ops::f64_convert_u_i32_code > >"
+.br
+.ti -1c
+.RI "using \fBf64_convert_u_i64\fP = wasm_ops::f64_convert_u_i64< \fBinstruction_counter\fP, \fBi64_convert_f64_injector\fP< wasm_ops::f64_convert_u_i64_code > >"
+.br
+.ti -1c
+.RI "using \fBi32_wrap_i64_t\fP = wasm_ops::i32_wrap_i64< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_extend_s_i32_t\fP = wasm_ops::i64_extend_s_i32< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_extend_u_i32_t\fP = wasm_ops::i64_extend_u_i32< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi32_reinterpret_f32_t\fP = wasm_ops::i32_reinterpret_f32< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf32_reinterpret_i32_t\fP = wasm_ops::f32_reinterpret_i32< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBi64_reinterpret_f64_t\fP = wasm_ops::i64_reinterpret_f64< \fBinstruction_counter\fP >"
+.br
+.ti -1c
+.RI "using \fBf64_reinterpret_i64_t\fP = wasm_ops::f64_reinterpret_i64< \fBinstruction_counter\fP >"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

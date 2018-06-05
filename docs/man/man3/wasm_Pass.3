@@ -1,0 +1,50 @@
+.TH "wasm::Pass" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Pass
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBwasm::WalkerPass< CFGWalker< CoalesceLocals, Visitor< CoalesceLocals >, Liveness > >\fP, \fBwasm::WalkerPass< ExpressionStackWalker< AutoDrop > >\fP, \fBwasm::WalkerPass< ExpressionStackWalker< PickLoadSigns > >\fP, \fBwasm::WalkerPass< ExpressionStackWalker< RelooperJumpThreading > >\fP, \fBwasm::WalkerPass< LinearExecutionWalker< LocalCSE > >\fP, \fBwasm::WalkerPass< LinearExecutionWalker< SimplifyLocals > >\fP, \fBwasm::WalkerPass< PostWalker< AdjustDebugInfo, Visitor< AdjustDebugInfo > > >\fP, \fBwasm::WalkerPass< PostWalker< CodePushing > >\fP, \fBwasm::WalkerPass< PostWalker< DeadCodeElimination > >\fP, \fBwasm::WalkerPass< PostWalker< FlattenControlFlow > >\fP, \fBwasm::WalkerPass< PostWalker< FunctionHasher > >\fP, \fBwasm::WalkerPass< PostWalker< FunctionReplacer > >\fP, \fBwasm::WalkerPass< PostWalker< FunctionUseCounter > >\fP, \fBwasm::WalkerPass< PostWalker< InstrumentLocals > >\fP, \fBwasm::WalkerPass< PostWalker< InstrumentMemory > >\fP, \fBwasm::WalkerPass< PostWalker< LogExecution > >\fP, \fBwasm::WalkerPass< PostWalker< MergeBlocks > >\fP, \fBwasm::WalkerPass< PostWalker< Metrics, UnifiedExpressionVisitor< Metrics > > >\fP, \fBwasm::WalkerPass< PostWalker< NameManager > >\fP, \fBwasm::WalkerPass< PostWalker< OptimizeInstructions, UnifiedExpressionVisitor< OptimizeInstructions > > >\fP, \fBwasm::WalkerPass< PostWalker< Planner > >\fP, \fBwasm::WalkerPass< PostWalker< PostEmscripten > >\fP, \fBwasm::WalkerPass< PostWalker< Precompute, UnifiedExpressionVisitor< Precompute > > >\fP, \fBwasm::WalkerPass< PostWalker< ReFinalize > >\fP, \fBwasm::WalkerPass< PostWalker< RemoveImports > >\fP, \fBwasm::WalkerPass< PostWalker< RemoveUnusedBrs > >\fP, \fBwasm::WalkerPass< PostWalker< RemoveUnusedNames > >\fP, \fBwasm::WalkerPass< PostWalker< ReorderFunctions > >\fP, \fBwasm::WalkerPass< PostWalker< ReorderLocals > >\fP, \fBwasm::WalkerPass< PostWalker< SSAify > >\fP, \fBwasm::WalkerPass< PostWalker< Untee > >\fP, \fBwasm::WalkerPass< PostWalker< Vacuum > >\fP, \fBwasm::DuplicateFunctionElimination\fP, \fBwasm::ExtractFunction\fP, \fBwasm::Inlining\fP, \fBwasm::LegalizeJSInterface\fP, \fBwasm::MemoryPacking\fP, \fBwasm::NameList\fP, \fBwasm::PrintCallGraph\fP, \fBwasm::Printer\fP, \fBwasm::RemoveMemory\fP, \fBwasm::RemoveUnusedModuleElements\fP, \fBwasm::ReReloop\fP, and \fBwasm::WalkerPass< WalkerType >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBprepareToRun\fP (\fBPassRunner\fP *runner, \fBModule\fP *module)"
+.br
+.ti -1c
+.RI "virtual void \fBrun\fP (\fBPassRunner\fP *runner, \fBModule\fP *module)"
+.br
+.ti -1c
+.RI "virtual void \fBrunFunction\fP (\fBPassRunner\fP *runner, \fBModule\fP *module, \fBFunction\fP *function)"
+.br
+.ti -1c
+.RI "virtual bool \fBisFunctionParallel\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBPass\fP * \fBcreate\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBname\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPass\fP (\fBPass\fP &)"
+.br
+.ti -1c
+.RI "\fBPass\fP & \fBoperator=\fP (const \fBPass\fP &)=delete"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,142 @@
+.TH "websocketpp::error" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::error \- Library level error codes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBcategory\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBvalue\fP { \fBgeneral\fP = 1, \fBsend_queue_full\fP, \fBpayload_violation\fP, \fBendpoint_not_secure\fP, \fBendpoint_unavailable\fP, \fBinvalid_uri\fP, \fBno_outgoing_buffers\fP, \fBno_incoming_buffers\fP, \fBinvalid_state\fP, \fBbad_close_code\fP, \fBreserved_close_code\fP, \fBinvalid_close_code\fP, \fBinvalid_utf8\fP, \fBinvalid_subprotocol\fP, \fBbad_connection\fP, \fBtest\fP, \fBcon_creation_failed\fP, \fBunrequested_subprotocol\fP, \fBclient_only\fP, \fBserver_only\fP, \fBhttp_connection_ended\fP, \fBopen_handshake_timeout\fP, \fBclose_handshake_timeout\fP, \fBinvalid_port\fP, \fBasync_accept_not_listening\fP, \fBoperation_canceled\fP, \fBrejected\fP, \fBupgrade_required\fP, \fBinvalid_version\fP, \fBunsupported_version\fP, \fBhttp_parse_error\fP, \fBextension_neg_failed\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const lib::error_category & \fBget_category\fP ()"
+.br
+.ti -1c
+.RI "lib::error_code \fBmake_error_code\fP (\fBerror::value\fP e)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Library level error codes\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBwebsocketpp::error::value\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIgeneral \fP\fP
+Catch-all library error\&. 
+.TP
+\fB\fIsend_queue_full \fP\fP
+send attempted when endpoint write queue was full 
+.TP
+\fB\fIpayload_violation \fP\fP
+Attempted an operation using a payload that was improperly formatted ex: invalid UTF8 encoding on a text message\&. 
+.TP
+\fB\fIendpoint_not_secure \fP\fP
+Attempted to open a secure connection with an insecure endpoint\&. 
+.TP
+\fB\fIendpoint_unavailable \fP\fP
+Attempted an operation that required an endpoint that is no longer available\&. This is usually because the endpoint went out of scope before a connection that it created\&. 
+.TP
+\fB\fIinvalid_uri \fP\fP
+An invalid uri was supplied\&. 
+.TP
+\fB\fIno_outgoing_buffers \fP\fP
+The endpoint is out of outgoing message buffers\&. 
+.TP
+\fB\fIno_incoming_buffers \fP\fP
+The endpoint is out of incoming message buffers\&. 
+.TP
+\fB\fIinvalid_state \fP\fP
+The connection was in the wrong state for this operation\&. 
+.TP
+\fB\fIbad_close_code \fP\fP
+Unable to parse close code\&. 
+.TP
+\fB\fIreserved_close_code \fP\fP
+Close code is in a reserved range\&. 
+.TP
+\fB\fIinvalid_close_code \fP\fP
+Close code is invalid\&. 
+.TP
+\fB\fIinvalid_utf8 \fP\fP
+Invalid UTF-8\&. 
+.TP
+\fB\fIinvalid_subprotocol \fP\fP
+Invalid subprotocol\&. 
+.TP
+\fB\fIbad_connection \fP\fP
+An operation was attempted on a connection that did not exist or was already deleted\&. 
+.TP
+\fB\fItest \fP\fP
+Unit testing utility error code\&. 
+.TP
+\fB\fIcon_creation_failed \fP\fP
+Connection creation attempted failed\&. 
+.TP
+\fB\fIunrequested_subprotocol \fP\fP
+Selected subprotocol was not requested by the client\&. 
+.TP
+\fB\fIclient_only \fP\fP
+Attempted to use a client specific feature on a server endpoint\&. 
+.TP
+\fB\fIserver_only \fP\fP
+Attempted to use a server specific feature on a client endpoint\&. 
+.TP
+\fB\fIhttp_connection_ended \fP\fP
+HTTP connection ended\&. 
+.TP
+\fB\fIopen_handshake_timeout \fP\fP
+WebSocket opening handshake timed out\&. 
+.TP
+\fB\fIclose_handshake_timeout \fP\fP
+WebSocket close handshake timed out\&. 
+.TP
+\fB\fIinvalid_port \fP\fP
+Invalid port in URI\&. 
+.TP
+\fB\fIasync_accept_not_listening \fP\fP
+An async accept operation failed because the underlying transport has been requested to not listen for new connections anymore\&. 
+.TP
+\fB\fIoperation_canceled \fP\fP
+The requested operation was canceled\&. 
+.TP
+\fB\fIrejected \fP\fP
+Connection rejected\&. 
+.TP
+\fB\fIupgrade_required \fP\fP
+Upgrade Required\&. This happens if an HTTP request is made to a WebSocket++ server that doesn't implement an http handler 
+.TP
+\fB\fIinvalid_version \fP\fP
+Invalid WebSocket protocol version\&. 
+.TP
+\fB\fIunsupported_version \fP\fP
+Unsupported WebSocket protocol version\&. 
+.TP
+\fB\fIhttp_parse_error \fP\fP
+HTTP parse error\&. 
+.TP
+\fB\fIextension_neg_failed \fP\fP
+Extension negotiation failed\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

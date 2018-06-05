@@ -1,0 +1,54 @@
+.TH "connector" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+connector
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBborrow\fP (\fBexchange_state\fP &ex, const \fBasset\fP &amount_to_borrow)"
+.br
+.ti -1c
+.RI "\fBasset\fP \fBconvert_to_exchange\fP (\fBexchange_state\fP &ex, const \fBasset\fP &input)"
+.br
+.ti -1c
+.RI "\fBasset\fP \fBconvert_from_exchange\fP (\fBexchange_state\fP &ex, const \fBasset\fP &input)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBasset\fP \fBbalance\fP"
+.br
+.ti -1c
+.RI "real_type \fBweight\fP = 0\&.5"
+.br
+.ti -1c
+.RI "token_type \fBtotal_lent\fP"
+.br
+.ti -1c
+.RI "token_type \fBtotal_borrowed\fP"
+.br
+.RI "lent from maker to users "
+.ti -1c
+.RI "token_type \fBtotal_available_to_lend\fP"
+.br
+.RI "borrowed from users to maker "
+.ti -1c
+.RI "token_type \fBinterest_pool\fP"
+.br
+.RI "amount available to borrow "
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void connector::borrow (\fBexchange_state\fP & ex, const \fBasset\fP & amount_to_borrow)"
+total interest earned but not claimed, each user can claim user_lent 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

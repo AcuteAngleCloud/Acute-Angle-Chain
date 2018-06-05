@@ -1,0 +1,42 @@
+\hypertarget{struct_serialization_1_1_output_stream}{}\section{Serialization\+:\+:Output\+Stream Struct Reference}
+\label{struct_serialization_1_1_output_stream}\index{Serialization\+::\+Output\+Stream@{Serialization\+::\+Output\+Stream}}
+
+
+Inheritance diagram for Serialization\+:\+:Output\+Stream\+:
+% FIG 0
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_output_stream_a17002da4782075f69a99e93811d73e61}\label{struct_serialization_1_1_output_stream_a17002da4782075f69a99e93811d73e61}} 
+enum \{ {\bfseries is\+Input} = false
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_output_stream_acbf665b52ca229f30af8ef45fa9c3b8a}\label{struct_serialization_1_1_output_stream_acbf665b52ca229f30af8ef45fa9c3b8a}} 
+Uptr {\bfseries capacity} () const
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_output_stream_a7db4d42c1adba71221eeb5bbd366e489}\label{struct_serialization_1_1_output_stream_a7db4d42c1adba71221eeb5bbd366e489}} 
+U8 $\ast$ {\bfseries advance} (Uptr num\+Bytes)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_output_stream_ab50708fb37e9f1f3cb0688e733e50cdd}\label{struct_serialization_1_1_output_stream_ab50708fb37e9f1f3cb0688e733e50cdd}} 
+virtual void {\bfseries extend\+Buffer} (Uptr num\+Bytes)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_output_stream_a6b5f479d5d7ca4a5c0a43607cfebe8e3}\label{struct_serialization_1_1_output_stream_a6b5f479d5d7ca4a5c0a43607cfebe8e3}} 
+U8 $\ast$ {\bfseries next}
+\item 
+\mbox{\Hypertarget{struct_serialization_1_1_output_stream_a10ed33bdcaa84aa831c7ff09808d9a68}\label{struct_serialization_1_1_output_stream_a10ed33bdcaa84aa831c7ff09808d9a68}} 
+U8 $\ast$ {\bfseries end}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/wasm-\/jit/\+Include/\+Inline/Serialization.\+h\end{DoxyCompactItemize}

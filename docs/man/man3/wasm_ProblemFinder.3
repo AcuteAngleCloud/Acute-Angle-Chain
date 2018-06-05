@@ -1,0 +1,48 @@
+.TH "wasm::ProblemFinder" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ProblemFinder
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::ControlFlowWalker< ProblemFinder >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBvisitBreak\fP (\fBBreak\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitDrop\fP (\fBDrop\fP *curr)"
+.br
+.ti -1c
+.RI "void \fBvisitSwitch\fP (\fBSwitch\fP *curr)"
+.br
+.ti -1c
+.RI "bool \fBfound\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBName\fP \fBorigin\fP"
+.br
+.ti -1c
+.RI "bool \fBfoundSwitch\fP = false"
+.br
+.ti -1c
+.RI "Index \fBbrIfs\fP = 0"
+.br
+.ti -1c
+.RI "Index \fBdroppedBrIfs\fP = 0"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

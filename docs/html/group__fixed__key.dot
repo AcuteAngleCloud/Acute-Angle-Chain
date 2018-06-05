@@ -1,0 +1,9 @@
+digraph "fixed size key sorted lexicographically"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node0 [label="fixed size key sorted\l lexicographically",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 [label="Builtin Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__types.html",tooltip="Specifies typedefs and aliases. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+}

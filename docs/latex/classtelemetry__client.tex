@@ -1,0 +1,37 @@
+\hypertarget{classtelemetry__client}{}\section{telemetry\+\_\+client Class Reference}
+\label{classtelemetry__client}\index{telemetry\+\_\+client@{telemetry\+\_\+client}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtelemetry__client_a57c0d5f224b12937b76bc6ed9df04d00}\label{classtelemetry__client_a57c0d5f224b12937b76bc6ed9df04d00}} 
+typedef \mbox{\hyperlink{classwebsocketpp_1_1client}{websocketpp\+::client}}$<$ \mbox{\hyperlink{structwebsocketpp_1_1config_1_1asio__client}{websocketpp\+::config\+::asio\+\_\+client}} $>$ {\bfseries client}
+\item 
+\mbox{\Hypertarget{classtelemetry__client_a4ca4c66f8af26fef4940e42c4c7afafe}\label{classtelemetry__client_a4ca4c66f8af26fef4940e42c4c7afafe}} 
+typedef websocketpp\+::lib\+::lock\+\_\+guard$<$ websocketpp\+::lib\+::mutex $>$ {\bfseries scoped\+\_\+lock}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtelemetry__client_aa5765b95b628b04bbe403cf022d0f014}\label{classtelemetry__client_aa5765b95b628b04bbe403cf022d0f014}} 
+void {\bfseries run} (const std\+::string \&uri)
+\item 
+\mbox{\Hypertarget{classtelemetry__client_a0174e58d0e5417888581372e452a62c2}\label{classtelemetry__client_a0174e58d0e5417888581372e452a62c2}} 
+void {\bfseries on\+\_\+open} (\mbox{\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{websocketpp\+::connection\+\_\+hdl}})
+\item 
+\mbox{\Hypertarget{classtelemetry__client_a0181996f0d5d519c09aee2878ab2b0c3}\label{classtelemetry__client_a0181996f0d5d519c09aee2878ab2b0c3}} 
+void {\bfseries on\+\_\+close} (\mbox{\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{websocketpp\+::connection\+\_\+hdl}})
+\item 
+\mbox{\Hypertarget{classtelemetry__client_ae63630bbc931ce9d5e7047e65eac19db}\label{classtelemetry__client_ae63630bbc931ce9d5e7047e65eac19db}} 
+void {\bfseries on\+\_\+fail} (\mbox{\hyperlink{namespacewebsocketpp_a6b3d26a10ee7229b84b776786332631d}{websocketpp\+::connection\+\_\+hdl}})
+\item 
+\mbox{\Hypertarget{classtelemetry__client_acc925f9ef40b46fdfb040b9325c67ae2}\label{classtelemetry__client_acc925f9ef40b46fdfb040b9325c67ae2}} 
+void {\bfseries telemetry\+\_\+loop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The telemetry client connects to a Web\+Socket server and sends a message every second containing an integer count. This example can be used as the basis for programs where a client connects and pushes data for logging, stress/load testing, etc. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/vendor/websocketpp/examples/telemetry\+\_\+client/telemetry\+\_\+client.\+cpp\end{DoxyCompactItemize}

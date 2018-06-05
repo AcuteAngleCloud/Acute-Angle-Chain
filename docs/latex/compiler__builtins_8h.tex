@@ -1,0 +1,76 @@
+\hypertarget{compiler__builtins_8h}{}\section{contracts/aaciolib/compiler\+\_\+builtins.h File Reference}
+\label{compiler__builtins_8h}\index{contracts/aaciolib/compiler\+\_\+builtins.\+h@{contracts/aaciolib/compiler\+\_\+builtins.\+h}}
+{\ttfamily \#include $<$aaciolib/system.\+h$>$}\newline
+Include dependency graph for compiler\+\_\+builtins.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__compiler_gaa03897335f1fcc54f469e17c32ae9920}{\+\_\+\+\_\+multi3}} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\begin{DoxyCompactList}\small\item\em Multiply two 128 unsigned bit integers (which are represented as two 64 bit unsigned integers. \end{DoxyCompactList}\item 
+void {\bfseries \+\_\+\+\_\+divti3} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+udivti3} (unsigned \+\_\+\+\_\+int128 \&res, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+modti3} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+umodti3} (unsigned \+\_\+\+\_\+int128 \&res, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+lshlti3} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t lo, uint64\+\_\+t hi, uint32\+\_\+t shift)
+\item 
+void {\bfseries \+\_\+\+\_\+lshrti3} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t lo, uint64\+\_\+t hi, uint32\+\_\+t shift)
+\item 
+void {\bfseries \+\_\+\+\_\+ashlti3} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t lo, uint64\+\_\+t hi, uint32\+\_\+t shift)
+\item 
+void {\bfseries \+\_\+\+\_\+ashrti3} (\+\_\+\+\_\+int128 \&res, uint64\+\_\+t lo, uint64\+\_\+t hi, uint32\+\_\+t shift)
+\item 
+void {\bfseries \+\_\+\+\_\+addtf3} (long double \&ret, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+subtf3} (long double \&ret, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+multf3} (long double \&ret, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+divtf3} (long double \&ret, uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+eqtf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+netf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+getf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+gttf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+letf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+lttf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+cmptf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+int {\bfseries \+\_\+\+\_\+unordtf2} (uint64\+\_\+t la, uint64\+\_\+t ha, uint64\+\_\+t lb, uint64\+\_\+t hb)
+\item 
+void {\bfseries \+\_\+\+\_\+extendsftf2} (long double \&ret, float f)
+\item 
+void {\bfseries \+\_\+\+\_\+extenddftf2} (long double \&ret, double f)
+\item 
+int64\+\_\+t {\bfseries \+\_\+\+\_\+fixtfdi} (uint64\+\_\+t l, uint64\+\_\+t h)
+\item 
+int32\+\_\+t {\bfseries \+\_\+\+\_\+fixtfsi} (uint64\+\_\+t l, uint64\+\_\+t h)
+\item 
+uint64\+\_\+t {\bfseries \+\_\+\+\_\+fixunstfdi} (uint64\+\_\+t l, uint64\+\_\+t h)
+\item 
+uint32\+\_\+t {\bfseries \+\_\+\+\_\+fixunstfsi} (uint64\+\_\+t l, uint64\+\_\+t h)
+\item 
+double {\bfseries \+\_\+\+\_\+trunctfdf2} (uint64\+\_\+t l, uint64\+\_\+t h)
+\item 
+float {\bfseries \+\_\+\+\_\+trunctfsf2} (uint64\+\_\+t l, uint64\+\_\+t h)
+\item 
+void {\bfseries \+\_\+\+\_\+break\+\_\+point} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

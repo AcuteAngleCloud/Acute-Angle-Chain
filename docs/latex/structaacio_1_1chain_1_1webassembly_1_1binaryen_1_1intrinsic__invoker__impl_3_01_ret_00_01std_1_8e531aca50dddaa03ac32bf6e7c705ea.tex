@@ -1,0 +1,44 @@
+\hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea}{}\section{aacio\+:\+:chain\+:\+:webassembly\+:\+:binaryen\+:\+:intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+:\+:tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$ $>$ Struct Template Reference}
+\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea}\index{aacio\+::chain\+::webassembly\+::binaryen\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$ $>$@{aacio\+::chain\+::webassembly\+::binaryen\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$ $>$}}
+
+
+{\ttfamily \#include $<$binaryen.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_a7903be16b7a7233b7d4ea6afcc096ba5}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_a7903be16b7a7233b7d4ea6afcc096ba5}} 
+using {\bfseries next\+\_\+step} = \mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl}{intrinsic\+\_\+invoker\+\_\+impl}}$<$ Ret, std\+::tuple$<$ Inputs... $>$ $>$
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_a31143d4582bc22d055588e1314f59d13}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_a31143d4582bc22d055588e1314f59d13}} 
+using {\bfseries then\+\_\+type} = Ret($\ast$)(\mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1interpreter__interface}{interpreter\+\_\+interface}} $\ast$, \mbox{\hyperlink{structaacio_1_1chain_1_1null__terminated__ptr}{null\+\_\+terminated\+\_\+ptr}}, Inputs..., \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&, int)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_abf55e9323ec78ce56894ffc20d11edc4}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_abf55e9323ec78ce56894ffc20d11edc4}} 
+{\footnotesize template$<$then\+\_\+type Then$>$ }\\static Ret {\bfseries translate\+\_\+one} (\mbox{\hyperlink{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1interpreter__interface}{interpreter\+\_\+interface}} $\ast$interface, Inputs... rest, \mbox{\hyperlink{classstd_1_1vector}{Literal\+List}} \&args, int offset)
+\item 
+\mbox{\Hypertarget{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_a1e7ac0610d36e3d4df62e14b94af5726}\label{structaacio_1_1chain_1_1webassembly_1_1binaryen_1_1intrinsic__invoker__impl_3_01_ret_00_01std_1_8e531aca50dddaa03ac32bf6e7c705ea_a1e7ac0610d36e3d4df62e14b94af5726}} 
+{\footnotesize template$<$then\+\_\+type Then$>$ }\\static const auto {\bfseries fn} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Ret, typename... Inputs$>$\newline
+struct aacio\+::chain\+::webassembly\+::binaryen\+::intrinsic\+\_\+invoker\+\_\+impl$<$ Ret, std\+::tuple$<$ null\+\_\+terminated\+\_\+ptr, Inputs... $>$ $>$}
+
+Specialization for transcribing a \mbox{\hyperlink{structaacio_1_1chain_1_1null__terminated__ptr}{null\+\_\+terminated\+\_\+ptr}} type in the native method signature This type transcribes 1 wasm parameters\+: a char pointer which is validated to contain a null value before the end of the allocated memory.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Ret} & -\/ the return type of the native method \\
+\hline
+{\em Inputs} & -\/ the remaining native parameters to transcribe \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/chain/include/aacio/chain/webassembly/binaryen.\+hpp\end{DoxyCompactItemize}

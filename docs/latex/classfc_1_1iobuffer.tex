@@ -1,0 +1,56 @@
+\hypertarget{classfc_1_1iobuffer}{}\section{fc\+:\+:iobuffer Class Reference}
+\label{classfc_1_1iobuffer}\index{fc\+::iobuffer@{fc\+::iobuffer}}
+
+
+Inheritance diagram for fc\+:\+:iobuffer\+:
+% FIG 0
+
+
+Collaboration diagram for fc\+:\+:iobuffer\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_aa3f2dcd33ae96f405bc5a6db337efa15}\label{classfc_1_1iobuffer_aa3f2dcd33ae96f405bc5a6db337efa15}} 
+{\bfseries iobuffer} (size\+\_\+t s)
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_a29c646846e914c20ff0bde867a2f0f78}\label{classfc_1_1iobuffer_a29c646846e914c20ff0bde867a2f0f78}} 
+size\+\_\+t {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_afa4d1ec3b4d64b001df17892552401b5}\label{classfc_1_1iobuffer_afa4d1ec3b4d64b001df17892552401b5}} 
+size\+\_\+t {\bfseries pos} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_a67df9fe367da2100489c5b6fb1edc590}\label{classfc_1_1iobuffer_a67df9fe367da2100489c5b6fb1edc590}} 
+size\+\_\+t {\bfseries seek} (size\+\_\+t pos)
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_a3fed1791ec6e6d8d129426549569fd33}\label{classfc_1_1iobuffer_a3fed1791ec6e6d8d129426549569fd33}} 
+virtual size\+\_\+t {\bfseries readsome} (char $\ast$buf, size\+\_\+t len)
+\item 
+char \mbox{\hyperlink{classfc_1_1iobuffer_a0fba1dc12428ca55e7ed8810534b1fc3}{peek}} () const
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_a0960b07106d328865bff43abd3982961}\label{classfc_1_1iobuffer_a0960b07106d328865bff43abd3982961}} 
+virtual size\+\_\+t {\bfseries writesome} (const char $\ast$buf, size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_a5de99170332e871983e6ead0ba69a2ba}\label{classfc_1_1iobuffer_a5de99170332e871983e6ead0ba69a2ba}} 
+char $\ast$ {\bfseries data} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_aa1c346803447c6f86bf1e6eb01e63f51}\label{classfc_1_1iobuffer_aa1c346803447c6f86bf1e6eb01e63f51}} 
+virtual void {\bfseries close} ()
+\item 
+\mbox{\Hypertarget{classfc_1_1iobuffer_a75c44be3a5ce018f6e7d714da34917fd}\label{classfc_1_1iobuffer_a75c44be3a5ce018f6e7d714da34917fd}} 
+virtual void {\bfseries flush} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfc_1_1iobuffer_a0fba1dc12428ca55e7ed8810534b1fc3}\label{classfc_1_1iobuffer_a0fba1dc12428ca55e7ed8810534b1fc3}} 
+\index{fc\+::iobuffer@{fc\+::iobuffer}!peek@{peek}}
+\index{peek@{peek}!fc\+::iobuffer@{fc\+::iobuffer}}
+\subsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily char fc\+::iobuffer\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method may block until at least 1 character is available. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+libraries/fc/include/fc/io/iobuffer.\+hpp\end{DoxyCompactItemize}

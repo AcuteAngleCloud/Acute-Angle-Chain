@@ -1,0 +1,68 @@
+.TH "contracts/aaciolib/math.h" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+contracts/aaciolib/math.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <aaciolib/system\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmulteq_i128\fP (uint128_t *self, const uint128_t *\fBother\fP)"
+.br
+.RI "Multiply two 128 unsigned bit integers\&. \fBThrows\fP exception if pointers are invalid\&. "
+.ti -1c
+.RI "void \fBdiveq_i128\fP (uint128_t *self, const uint128_t *\fBother\fP)"
+.br
+.RI "Divide two 128 unsigned bit integers and throws an exception in case of invalid pointers\&. "
+.ti -1c
+.RI "uint64_t \fBdouble_add\fP (uint64_t a, uint64_t b)"
+.br
+.RI "Addition between two double\&. "
+.ti -1c
+.RI "uint64_t \fBdouble_mult\fP (uint64_t a, uint64_t b)"
+.br
+.RI "Multiplication between two double\&. "
+.ti -1c
+.RI "uint64_t \fBdouble_div\fP (uint64_t a, uint64_t b)"
+.br
+.RI "Division between two double\&. "
+.ti -1c
+.RI "uint32_t \fBdouble_lt\fP (uint64_t a, uint64_t b)"
+.br
+.RI "Less than comparison between two double\&. "
+.ti -1c
+.RI "uint32_t \fBdouble_eq\fP (uint64_t a, uint64_t b)"
+.br
+.RI "Equality check between two double\&. "
+.ti -1c
+.RI "uint32_t \fBdouble_gt\fP (uint64_t a, uint64_t b)"
+.br
+.RI "Greater than comparison between two double\&. "
+.ti -1c
+.RI "uint64_t \fBdouble_to_i64\fP (uint64_t a)"
+.br
+.RI "Convert double to 64 bit unsigned integer\&. "
+.ti -1c
+.RI "uint64_t \fBi64_to_double\fP (uint64_t a)"
+.br
+.RI "Convert 64 bit unsigned integer to double (interpreted as 64 bit unsigned integer) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBCopyright:\fP
+.RS 4
+defined in AcuteAngleChain/LICENSE\&.txt 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

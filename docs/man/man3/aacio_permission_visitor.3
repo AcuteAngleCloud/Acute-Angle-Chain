@@ -1,0 +1,44 @@
+.TH "aacio::permission_visitor" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::permission_visitor
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpermission_visitor\fP (bool log=false)"
+.br
+.ti -1c
+.RI "void \fBoperator()\fP (const \fBpermission_level\fP &permission)"
+.br
+.ti -1c
+.RI "void \fBpush_undo\fP ()"
+.br
+.ti -1c
+.RI "void \fBpop_undo\fP ()"
+.br
+.ti -1c
+.RI "void \fBsquash_undo\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::vector\fP< \fBpermission_level\fP > \fBpermissions\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< size_t > \fBsize_stack\fP"
+.br
+.ti -1c
+.RI "bool \fB_log\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

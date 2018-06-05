@@ -1,0 +1,58 @@
+.TH "aacio::chain::contracts::impl::abi_to_variant_visitor< T, Resolver >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::contracts::impl::abi_to_variant_visitor< T, Resolver >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <abi_serializer\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBabi_to_variant_visitor\fP (\fBmutable_variant_object\fP &_mvo, const \fBT\fP &_val, Resolver _resolver)"
+.br
+.ti -1c
+.RI "template<typename Member , class Class , Member Class::* member> void \fBoperator()\fP (const char *\fBname\fP) const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T, typename Resolver>
+.br
+class aacio::chain::contracts::impl::abi_to_variant_visitor< T, Resolver >"
+Reflection visitor that uses a resolver to resolve ABIs for nested types this will degrade to the common fc::to_variant as soon as the type no longer contains ABI related info
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIReslover\fP - callable with the signature (const name& code_account) -> optional<abi_def> 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T , typename Resolver > template<typename Member , class Class , Member Class::* member> void \fBaacio::chain::contracts::impl::abi_to_variant_visitor\fP< \fBT\fP, Resolver >::operator() (const char * name) const\fC [inline]\fP"
+Visit a single member and add it to the variant object 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIMember\fP - the member to visit 
+.br
+\fI\fBClass\fP\fP - the class we are traversing 
+.br
+\fImember\fP - pointer to the member 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP - the name of the member 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

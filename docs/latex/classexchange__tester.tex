@@ -1,0 +1,66 @@
+\hypertarget{classexchange__tester}{}\section{exchange\+\_\+tester Class Reference}
+\label{classexchange__tester}\index{exchange\+\_\+tester@{exchange\+\_\+tester}}
+
+
+Inheritance diagram for exchange\+\_\+tester\+:
+% FIG 0
+
+
+Collaboration diagram for exchange\+\_\+tester\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classexchange__tester_a50120b10f31cc747a71dca83d45ef3c7}\label{classexchange__tester_a50120b10f31cc747a71dca83d45ef3c7}} 
+auto {\bfseries push\+\_\+action} (account\+\_\+name \mbox{\hyperlink{structaacio_1_1contract}{contract}}, const account\+\_\+name \&signer, const action\+\_\+name \&\mbox{\hyperlink{structaacio_1_1name}{name}}, const \mbox{\hyperlink{classfc_1_1variant__object}{variant\+\_\+object}} \&data)
+\item 
+\mbox{\Hypertarget{classexchange__tester_a502a4b581e5bc2ffa76abb1226e2b3f8}\label{classexchange__tester_a502a4b581e5bc2ffa76abb1226e2b3f8}} 
+\mbox{\hyperlink{structaacio_1_1asset}{asset}} {\bfseries get\+\_\+balance} (const account\+\_\+name \&\mbox{\hyperlink{structaccount}{account}}) const
+\item 
+\mbox{\Hypertarget{classexchange__tester_a4f45fdd6a6c6d13126b678b6ae712682}\label{classexchange__tester_a4f45fdd6a6c6d13126b678b6ae712682}} 
+\mbox{\hyperlink{structaacio_1_1exchange__state}{exchange\+\_\+state}} {\bfseries get\+\_\+market\+\_\+state} (account\+\_\+name \mbox{\hyperlink{classaacio_1_1exchange}{exchange}}, \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} sym)
+\item 
+\mbox{\Hypertarget{classexchange__tester_afd1ac9665068351b2a03eb1766815caa}\label{classexchange__tester_afd1ac9665068351b2a03eb1766815caa}} 
+\mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} {\bfseries get\+\_\+exchange\+\_\+balance} (account\+\_\+name \mbox{\hyperlink{classaacio_1_1exchange}{exchange}}, account\+\_\+name \mbox{\hyperlink{classaacio_1_1currency}{currency}}, \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} sym, account\+\_\+name owner)
+\item 
+\mbox{\Hypertarget{classexchange__tester_aa583cf62252cc0e19d80e8287cd9a778}\label{classexchange__tester_aa583cf62252cc0e19d80e8287cd9a778}} 
+double {\bfseries get\+\_\+lent\+\_\+shares} (account\+\_\+name \mbox{\hyperlink{classaacio_1_1exchange}{exchange}}, \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} market, account\+\_\+name owner, bool \mbox{\hyperlink{structbase}{base}})
+\item 
+\mbox{\Hypertarget{classexchange__tester_a01149395f13873c6f4264006b2756106}\label{classexchange__tester_a01149395f13873c6f4264006b2756106}} 
+void {\bfseries deploy\+\_\+currency} (account\+\_\+name ac)
+\item 
+\mbox{\Hypertarget{classexchange__tester_ade5139d1cbaf91c2c8cbe19b256f460c}\label{classexchange__tester_ade5139d1cbaf91c2c8cbe19b256f460c}} 
+void {\bfseries deploy\+\_\+exchange} (account\+\_\+name ac)
+\item 
+\mbox{\Hypertarget{classexchange__tester_aa07ea33a6d74c6dbaf5fabd5353eaa78}\label{classexchange__tester_aa07ea33a6d74c6dbaf5fabd5353eaa78}} 
+void {\bfseries create\+\_\+currency} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, \mbox{\hyperlink{structaacio_1_1asset}{asset}} maxsupply)
+\item 
+\mbox{\Hypertarget{classexchange__tester_a7f21ec8422d1bd3393534f856f1eddb8}\label{classexchange__tester_a7f21ec8422d1bd3393534f856f1eddb8}} 
+void {\bfseries issue} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, \mbox{\hyperlink{structaacio_1_1name}{name}} to, \mbox{\hyperlink{structaacio_1_1asset}{asset}} amount)
+\item 
+\mbox{\Hypertarget{classexchange__tester_ad0e2032e39b73cd0e6e00017b6245a45}\label{classexchange__tester_ad0e2032e39b73cd0e6e00017b6245a45}} 
+auto {\bfseries trade} (\mbox{\hyperlink{structaacio_1_1name}{name}} ex\+\_\+contract, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} market, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} sell, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} min\+\_\+receive)
+\item 
+\mbox{\Hypertarget{classexchange__tester_a5a4029d0bc8d2ee1ee3d340fbe74c987}\label{classexchange__tester_a5a4029d0bc8d2ee1ee3d340fbe74c987}} 
+auto {\bfseries deposit} (\mbox{\hyperlink{structaacio_1_1name}{name}} exchangecontract, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} amount)
+\item 
+\mbox{\Hypertarget{classexchange__tester_ab7478daacc99eec074c56476e4bf1ba6}\label{classexchange__tester_ab7478daacc99eec074c56476e4bf1ba6}} 
+auto {\bfseries lend} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} quantity, \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} market)
+\item 
+\mbox{\Hypertarget{classexchange__tester_ad70ccccd68e7791f6af3c049ed2dd95b}\label{classexchange__tester_ad70ccccd68e7791f6af3c049ed2dd95b}} 
+auto {\bfseries unlend} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, double interest\+\_\+shares, \mbox{\hyperlink{structaacio_1_1extended__symbol}{extended\+\_\+symbol}} interest\+\_\+symbol, \mbox{\hyperlink{classaacio_1_1chain_1_1symbol}{symbol}} market)
+\item 
+\mbox{\Hypertarget{classexchange__tester_ad4bb96f88cfc3c241841e90a499fa96c}\label{classexchange__tester_ad4bb96f88cfc3c241841e90a499fa96c}} 
+auto {\bfseries create\+\_\+exchange} (\mbox{\hyperlink{structaacio_1_1name}{name}} \mbox{\hyperlink{structaacio_1_1contract}{contract}}, \mbox{\hyperlink{structaacio_1_1name}{name}} signer, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} base\+\_\+deposit, \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} quote\+\_\+deposit, \mbox{\hyperlink{structaacio_1_1asset}{asset}} exchange\+\_\+supply)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classexchange__tester_aab43e4de1d4b330966d94c31787957a8}\label{classexchange__tester_aab43e4de1d4b330966d94c31787957a8}} 
+\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__serializer}{abi\+\_\+serializer}} {\bfseries abi\+\_\+ser}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tests/wasm\+\_\+tests/exchange\+\_\+tests.\+cpp\end{DoxyCompactItemize}

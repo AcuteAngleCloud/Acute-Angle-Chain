@@ -1,0 +1,137 @@
+.TH "md_programs_debug_node__r_e_a_d_m_e" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md_programs_debug_node__r_e_a_d_m_e \- Introduction 
+The \fCdebug_node\fP is a tool to allow developers to run many interesting sorts of 'what-if' tests using state from a production blockchain\&. Like 'what happens if I produce enough blocks for the next hardfork time to arrive?' or 'what would happen if this account (which I don't have a private key for) did this transaction?'
+.PP
+.SS "Setup "
+.PP
+Be sure you've built the right build targets: 
+.PP
+.nf
+$ make get_dev_key debug_node cli_wallet witness_node
+
+.fi
+.PP
+.PP
+Use the \fCget_dev_key\fP utility to generate a keypair: 
+.PP
+.nf
+$ programs/genesis_util/get_dev_key "" nathan
+[{"private_key":"5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ","public_key":"BTS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV","address":"BTSFAbAx7yuxt725qSZvfwWqkdCwp9ZnUama"}]
+
+.fi
+.PP
+.PP
+Obtain a copy of the blockchain in \fCblock_db\fP directory: $ programs/witness_node/witness_node --data-dir data/mydatadir 
+.SH "\&.\&.\&. wait for chain to sync"
+.PP
+.PP
+^C $ cp -Rp data/mydatadir/blockchain/database/block_num_to_block \&./block_db
+.PP
+Set up a new datadir with the following \fCconfig\&.ini\fP settings: 
+.PP
+.nf
+# setup API endpoint
+rpc-endpoint = 127.0.0.1:8090
+# setting this to empty effectively disables the p2p network
+seed-nodes = []
+# set apiaccess.json so we can set up
+api-access = "data/debug_datadir/api-access.json"
+
+.fi
+.PP
+.PP
+Then set up \fCdata/debug_datadir/api-access\&.json\fP to allow access to the debug API like this: 
+.PP
+.nf
+{
+   "permission_map" :
+   [
+      [
+         "bytemaster",
+         {
+            "password_hash_b64" : "9e9GF7ooXVb9k4BoSfNIPTelXeGOZ5DrgOYMj94elaY=",
+            "password_salt_b64" : "INDdM6iCi/8=",
+            "allowed_apis" : ["database_api", "network_broadcast_api", "history_api", "network_node_api", "debug_api"]
+         }
+      ],
+      [
+         "*",
+         {
+            "password_hash_b64" : "*",
+            "password_salt_b64" : "*",
+            "allowed_apis" : ["database_api", "network_broadcast_api", "history_api"]
+         }
+      ]
+   ]
+}
+
+.fi
+.PP
+.PP
+See \fChere\fP for more detail on the \fCapi-access\&.json\fP format\&.
+.PP
+Once that is set up, run \fCdebug_node\fP against your newly prepared datadir: 
+.PP
+.nf
+programs/debug_node/debug_node --data-dir data/debug_datadir
+
+.fi
+.PP
+.PP
+Run \fCcli_wallet\fP to connect to the \fCdebug_node\fP port, using the username and password to access the new \fCdebug_api\fP (and also a different wallet file): 
+.PP
+.nf
+programs/cli_wallet/cli_wallet -s 127.0.0.1:8090 -w debug.wallet -u bytemaster -p supersecret
+
+.fi
+.PP
+.PP
+.SS "Example usage "
+.PP
+Load some blocks from the datadir: 
+.PP
+.nf
+dbg_push_blocks block_db 20000
+
+.fi
+.PP
+.PP
+Note, when pushing a very large number of blocks sometimes \fCcli_wallet\fP hangs and you must Ctrl+C and restart it (leaving the \fCdebug_node\fP running)\&.
+.PP
+Generate (fake) blocks with our own private key: 
+.PP
+.nf
+dbg_generate_blocks 5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ 1000
+
+.fi
+.PP
+.PP
+Update \fCangel\fP account to be controlled by our own private key and generate a (fake) transfer: 
+.PP
+.nf
+dbg_update_object {"_action":"update", "id":"1.2.1090", "active":{"weight_threshold":1,"key_auths":[["BTS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",1]]}}
+import_key angel 5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ
+transfer angel init0 999999 BTS "" true
+
+.fi
+.PP
+.PP
+.SS "How it works "
+.PP
+The commands work by creating diff(s) from the main chain that are applied to the local chain at specified block height(s)\&. It lets you easily check out 'what-if' scenarios in a fantasy debug toy world forked from the real chain, e\&.g\&. 'if we take all of the blocks until today, then generate a bunch more until a hardfork time
+in the future arrives, does the chain stay up?  Can I do transactions X, Y, and Z in the wallet after the hardfork?' Anyone connecting to this node sees the same fantasy world, so you can e\&.g\&. make changes with the \fCcli_wallet\fP and see them exist in other \fCcli_wallet\fP instances (or GUI wallets or API scripts)\&.
+.PP
+.SS "Limitations "
+.PP
+The main limitations are:
+.PP
+.IP "\(bu" 2
+No export format for the diffs, so you can't really [1] connect multiple \fCdebug_node\fP to each other\&.
+.IP "\(bu" 2
+Once faked block(s) or tx(s) have been produced on your chain, you can't really [1] stream blocks or tx's from the main network to your chain\&.
+.PP
+.PP
+[1] It should theoretically be possible, but it's non-trivial and totally untested\&. 

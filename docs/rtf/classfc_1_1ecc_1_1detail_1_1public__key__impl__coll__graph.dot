@@ -1,0 +1,8 @@
+digraph "fc::ecc::detail::public_key_impl"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="fc::ecc::detail::public\l_key_impl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" _key" ,fontname="Helvetica"];
+  Node2 [label="fc::array\< char, 33 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1array.html"];
+}

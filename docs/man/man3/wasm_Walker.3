@@ -1,0 +1,167 @@
+.TH "wasm::Walker< SubType, VisitorType >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::Walker< SubType, VisitorType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits VisitorType\&.
+.PP
+Inherited by \fBwasm::PostWalker< SubType, VisitorType >\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBTask\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(* \fBTaskFunc\fP) (SubType *, \fBExpression\fP **)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBExpression\fP * \fBreplaceCurrent\fP (\fBExpression\fP *expression)"
+.br
+.ti -1c
+.RI "\fBExpression\fP * \fBgetCurrent\fP ()"
+.br
+.ti -1c
+.RI "\fBExpression\fP ** \fBgetCurrentPointer\fP ()"
+.br
+.ti -1c
+.RI "\fBModule\fP * \fBgetModule\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFunction\fP ()"
+.br
+.ti -1c
+.RI "void \fBwalkGlobal\fP (\fBGlobal\fP *global)"
+.br
+.ti -1c
+.RI "void \fBwalkFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.ti -1c
+.RI "void \fBwalkFunctionInModule\fP (\fBFunction\fP *\fBfunc\fP, \fBModule\fP *module)"
+.br
+.ti -1c
+.RI "void \fBdoWalkFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.ti -1c
+.RI "void \fBwalkTable\fP (\fBTable\fP *table)"
+.br
+.ti -1c
+.RI "void \fBwalkMemory\fP (\fBMemory\fP *memory)"
+.br
+.ti -1c
+.RI "void \fBwalkModule\fP (\fBModule\fP *module)"
+.br
+.ti -1c
+.RI "void \fBdoWalkModule\fP (\fBModule\fP *module)"
+.br
+.ti -1c
+.RI "void \fBpushTask\fP (TaskFunc \fBfunc\fP, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "void \fBmaybePushTask\fP (TaskFunc \fBfunc\fP, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "\fBTask\fP \fBpopTask\fP ()"
+.br
+.ti -1c
+.RI "void \fBwalk\fP (\fBExpression\fP *&root)"
+.br
+.ti -1c
+.RI "void \fBsetModule\fP (\fBModule\fP *module)"
+.br
+.ti -1c
+.RI "void \fBsetFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBscan\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitBlock\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitIf\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitLoop\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitBreak\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitSwitch\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitCall\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitCallImport\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitCallIndirect\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitGetLocal\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitSetLocal\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitGetGlobal\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitSetGlobal\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitLoad\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitStore\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitConst\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitUnary\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitBinary\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitSelect\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitDrop\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitReturn\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitHost\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitNop\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitUnreachable\fP (SubType *self, \fBExpression\fP **currp)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

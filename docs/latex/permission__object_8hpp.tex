@@ -1,0 +1,32 @@
+\hypertarget{permission__object_8hpp}{}\section{libraries/chain/include/aacio/chain/permission\+\_\+object.hpp File Reference}
+\label{permission__object_8hpp}\index{libraries/chain/include/aacio/chain/permission\+\_\+object.\+hpp@{libraries/chain/include/aacio/chain/permission\+\_\+object.\+hpp}}
+{\ttfamily \#include $<$aacio/chain/authority.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}multi\+\_\+index\+\_\+includes.\+hpp\char`\"{}}\newline
+Include dependency graph for permission\+\_\+object.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1permission__object}{aacio\+::chain\+::permission\+\_\+object}}
+\item 
+class \mbox{\hyperlink{classaacio_1_1chain_1_1permission__usage__object}{aacio\+::chain\+::permission\+\_\+usage\+\_\+object}}
+\item 
+struct \mbox{\hyperlink{structaacio_1_1chain_1_1config_1_1billable__size_3_01permission__object_01_4}{aacio\+::chain\+::config\+::billable\+\_\+size$<$ permission\+\_\+object $>$}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{permission__object_8hpp_aaed1b4aeb8b92d4d31d670223b5a6537}\label{permission__object_8hpp_aaed1b4aeb8b92d4d31d670223b5a6537}} 
+using {\bfseries aacio\+::chain\+::permission\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ permission\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ permission\+\_\+object, permission\+\_\+object\+::id\+\_\+type, \&permission\+\_\+object\+::id $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+parent $>$, composite\+\_\+key$<$ permission\+\_\+object, member$<$ permission\+\_\+object, permission\+\_\+object\+::id\+\_\+type, \&permission\+\_\+object\+::parent $>$, member$<$ permission\+\_\+object, permission\+\_\+object\+::id\+\_\+type, \&permission\+\_\+object\+::id $>$ $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+owner $>$, composite\+\_\+key$<$ permission\+\_\+object, member$<$ permission\+\_\+object, account\+\_\+name, \&permission\+\_\+object\+::owner $>$, member$<$ permission\+\_\+object, permission\+\_\+name, \&permission\+\_\+object\+::name $>$ $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+name $>$, composite\+\_\+key$<$ permission\+\_\+object, member$<$ permission\+\_\+object, permission\+\_\+name, \&permission\+\_\+object\+::name $>$, member$<$ permission\+\_\+object, permission\+\_\+object\+::id\+\_\+type, \&permission\+\_\+object\+::id $>$ $>$ $>$ $>$ $>$
+\item 
+\mbox{\Hypertarget{permission__object_8hpp_aaaa8f5e30d3d2020cebfaf87e24a6867}\label{permission__object_8hpp_aaaa8f5e30d3d2020cebfaf87e24a6867}} 
+using {\bfseries aacio\+::chain\+::permission\+\_\+usage\+\_\+index} = chainbase\+::shared\+\_\+multi\+\_\+index\+\_\+container$<$ permission\+\_\+usage\+\_\+object, indexed\+\_\+by$<$ ordered\+\_\+unique$<$ tag$<$ by\+\_\+id $>$, member$<$ permission\+\_\+usage\+\_\+object, permission\+\_\+usage\+\_\+object\+::id\+\_\+type, \&permission\+\_\+usage\+\_\+object\+::id $>$ $>$, ordered\+\_\+unique$<$ tag$<$ by\+\_\+account\+\_\+permission $>$, composite\+\_\+key$<$ permission\+\_\+usage\+\_\+object, member$<$ permission\+\_\+usage\+\_\+object, account\+\_\+name, \&permission\+\_\+usage\+\_\+object\+::account $>$, member$<$ permission\+\_\+usage\+\_\+object, permission\+\_\+name, \&permission\+\_\+usage\+\_\+object\+::permission $>$, member$<$ permission\+\_\+usage\+\_\+object, permission\+\_\+usage\+\_\+object\+::id\+\_\+type, \&permission\+\_\+usage\+\_\+object\+::id $>$ $>$ $>$ $>$ $>$
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyCopyright}{Copyright}
+defined in Acute\+Angle\+Chain/\+L\+I\+C\+E\+N\+S\+E.\+txt 
+\end{DoxyCopyright}

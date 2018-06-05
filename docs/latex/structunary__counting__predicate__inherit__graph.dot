@@ -1,0 +1,8 @@
+digraph "unary_counting_predicate&lt; Predicate, Arg &gt;"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="unary_counting_predicate\l\< Predicate, Arg \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="std::unary_function\l\< Arg, bool \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

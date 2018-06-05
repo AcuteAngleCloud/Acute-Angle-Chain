@@ -1,0 +1,41 @@
+.TH "LLVMJIT::UnreachableOpVisitor" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+LLVMJIT::UnreachableOpVisitor
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void \fBResult\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUnreachableOpVisitor\fP (\fBEmitFunctionContext\fP &inContext)"
+.br
+.ti -1c
+.RI "void \fBblock\fP (\fBControlStructureImm\fP)"
+.br
+.ti -1c
+.RI "void \fBloop\fP (\fBControlStructureImm\fP)"
+.br
+.ti -1c
+.RI "void \fBif_\fP (\fBControlStructureImm\fP)"
+.br
+.ti -1c
+.RI "void \fBelse_\fP (\fBNoImm\fP imm)"
+.br
+.ti -1c
+.RI "void \fBend\fP (\fBNoImm\fP imm)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

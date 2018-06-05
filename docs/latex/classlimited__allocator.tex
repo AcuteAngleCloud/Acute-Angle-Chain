@@ -1,0 +1,63 @@
+\hypertarget{classlimited__allocator}{}\section{limited\+\_\+allocator$<$ T, N $>$ Class Template Reference}
+\label{classlimited__allocator}\index{limited\+\_\+allocator$<$ T, N $>$@{limited\+\_\+allocator$<$ T, N $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlimited__allocator_1_1rebind}{rebind}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a2a6aa6fc0ee23a35ef6d9ecf4c3afa71}\label{classlimited__allocator_a2a6aa6fc0ee23a35ef6d9ecf4c3afa71}} 
+typedef \mbox{\hyperlink{struct_t}{T}} {\bfseries value\+\_\+type}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a3a429ab6214f5c4bd09ad72556756884}\label{classlimited__allocator_a3a429ab6214f5c4bd09ad72556756884}} 
+typedef \mbox{\hyperlink{struct_t}{value\+\_\+type}} $\ast$ {\bfseries pointer}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a2ec9551189b44452ce6b6f96e82541d7}\label{classlimited__allocator_a2ec9551189b44452ce6b6f96e82541d7}} 
+typedef const \mbox{\hyperlink{struct_t}{value\+\_\+type}} $\ast$ {\bfseries const\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_abbb360ecea7978197fdca89d4207ae95}\label{classlimited__allocator_abbb360ecea7978197fdca89d4207ae95}} 
+typedef \mbox{\hyperlink{struct_t}{value\+\_\+type}} \& {\bfseries reference}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_adcca43fca3236d98529bb9e5dcf20ad9}\label{classlimited__allocator_adcca43fca3236d98529bb9e5dcf20ad9}} 
+typedef const \mbox{\hyperlink{struct_t}{value\+\_\+type}} \& {\bfseries const\+\_\+reference}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_add892e2762d10f0d5b41216fb1669b02}\label{classlimited__allocator_add892e2762d10f0d5b41216fb1669b02}} 
+typedef std\+::size\+\_\+t {\bfseries size\+\_\+type}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a9a7a6e5c4f923b8051478c269b102f14}\label{classlimited__allocator_a9a7a6e5c4f923b8051478c269b102f14}} 
+typedef std\+::ptrdiff\+\_\+t {\bfseries difference\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_add9a062dc626f539526c75cab27e648a}\label{classlimited__allocator_add9a062dc626f539526c75cab27e648a}} 
+{\bfseries limited\+\_\+allocator} (\mbox{\hyperlink{classlimited__allocator}{limited\+\_\+allocator}} const \&\mbox{\hyperlink{structother}{other}})
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a1789b3b3b6215168d02350f7f6867476}\label{classlimited__allocator_a1789b3b3b6215168d02350f7f6867476}} 
+{\footnotesize template$<$class U $>$ }\\{\bfseries limited\+\_\+allocator} (\mbox{\hyperlink{classlimited__allocator}{limited\+\_\+allocator}}$<$ \mbox{\hyperlink{union_u}{U}}, \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}} $>$ const \&\mbox{\hyperlink{structother}{other}})
+\item 
+\mbox{\Hypertarget{classlimited__allocator_ab0f6a59c2a579643d5da77719b5d6ca2}\label{classlimited__allocator_ab0f6a59c2a579643d5da77719b5d6ca2}} 
+\mbox{\hyperlink{struct_t}{pointer}} {\bfseries allocate} (size\+\_\+type n)
+\item 
+\mbox{\Hypertarget{classlimited__allocator_aef20037b03622391c529c6ea4ea3b6c7}\label{classlimited__allocator_aef20037b03622391c529c6ea4ea3b6c7}} 
+void {\bfseries deallocate} (\mbox{\hyperlink{struct_t}{pointer}} p, size\+\_\+type n)
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a52cfa47386a063a8e40985c10f8fa8c5}\label{classlimited__allocator_a52cfa47386a063a8e40985c10f8fa8c5}} 
+size\+\_\+type {\bfseries max\+\_\+size} () const
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a34128b6dafc8c283556fef1d8806b724}\label{classlimited__allocator_a34128b6dafc8c283556fef1d8806b724}} 
+\mbox{\hyperlink{structlimited__alloc__handle}{BuffT}} $\ast$ {\bfseries get\+Handle} () const
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlimited__allocator_a29e4a6db72326016c4e81cef45d4e0f1}\label{classlimited__allocator_a29e4a6db72326016c4e81cef45d4e0f1}} 
+{\footnotesize template$<$class U , std\+::size\+\_\+t UN$>$ }\\class {\bfseries limited\+\_\+allocator}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/libc++/upstream/test/support/test\+\_\+allocator.\+h\end{DoxyCompactItemize}

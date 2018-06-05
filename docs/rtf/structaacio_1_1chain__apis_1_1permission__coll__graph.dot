@@ -1,0 +1,16 @@
+digraph "aacio::chain_apis::permission"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="aacio::chain_apis::\lpermission",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" required_auth" ,fontname="Helvetica"];
+  Node2 [label="aacio::chain::authority",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1authority.html"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" accounts" ,fontname="Helvetica"];
+  Node3 [label="std::vector\< aacio\l::chain::permission\l_level_weight \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" keys" ,fontname="Helvetica"];
+  Node4 [label="std::vector\< aacio\l::chain::key_weight \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classstd_1_1vector.html"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" perm_name\nparent" ,fontname="Helvetica"];
+  Node5 [label="aacio::name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1name.html",tooltip="wraps a uint64_t to ensure it is only passed to methods that expect a Name "];
+  Node5 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value" ,fontname="Helvetica"];
+}

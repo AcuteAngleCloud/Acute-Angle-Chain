@@ -1,0 +1,44 @@
+.TH "externals/magic_get/include/boost/pfr/precise/global_ops.hpp" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+externals/magic_get/include/boost/pfr/precise/global_ops.hpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <boost/pfr/detail/config\&.hpp>\fP
+.br
+\fC#include <boost/pfr/precise/functors\&.hpp>\fP
+.br
+\fC#include <boost/pfr/precise/core\&.hpp>\fP
+.br
+\fC#include <boost/pfr/precise/io\&.hpp>\fP
+.br
+
+.SH "Detailed Description"
+.PP 
+Contains comparison operators and stream operators for any types that do not have their own operators\&. If type is comparable or streamable using it's own operator (but not it's conversion operator), then the original operator is used\&.
+.PP
+\fBExample:\fP 
+.PP
+.nf
+#include <boost/pfr/precise/global_ops\&.hpp>
+struct comparable_struct {      // No operators defined for that structure
+    int i; short s; char data[7]; bool bl; int a,b,c,d,e,f;
+};
+// \&.\&.\&.
+
+comparable_struct s1 {0, 1, "Hello", false, 6,7,8,9,10,11};
+comparable_struct s2 {0, 1, "Hello", false, 6,7,8,9,10,11111};
+assert(s1 < s2);
+std::cout << s1 << std::endl; // Outputs: {0, 1, H, e, l, l, o, , , 0, 6, 7, 8, 9, 10, 11}
+
+.fi
+.PP
+.PP
+for other ways to define operators and more details\&.
+.PP
+\fBThis\fP \fBheader\fP \fBdefines:\fP 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

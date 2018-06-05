@@ -1,0 +1,63 @@
+.TH "output_iterator< It >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+output_iterator< It >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::output_iterator_tag \fBiterator_category\fP"
+.br
+.ti -1c
+.RI "typedef void \fBvalue_type\fP"
+.br
+.ti -1c
+.RI "typedef std::iterator_traits< It >::difference_type \fBdifference_type\fP"
+.br
+.ti -1c
+.RI "typedef It \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef std::iterator_traits< It >::reference \fBreference\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "It \fBbase\fP () const"
+.br
+.ti -1c
+.RI "\fBoutput_iterator\fP (It it)"
+.br
+.ti -1c
+.RI "template<class U > \fBoutput_iterator\fP (const \fBoutput_iterator\fP< \fBU\fP > &u)"
+.br
+.ti -1c
+.RI "reference \fBoperator*\fP () const"
+.br
+.ti -1c
+.RI "\fBoutput_iterator\fP & \fBoperator++\fP ()"
+.br
+.ti -1c
+.RI "\fBoutput_iterator\fP \fBoperator++\fP (int)"
+.br
+.ti -1c
+.RI "template<class T > void \fBoperator,\fP (\fBT\fP const &) DELETE_FUNCTION"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<class U > class \fBoutput_iterator\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,47 @@
+.TH "aacio::chain::wasm_injections::injector_utils" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::wasm_injections::injector_utils
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinit\fP (\fBModule\fP &mod)"
+.br
+.ti -1c
+.RI "static void \fBbuild_type_slots\fP (\fBModule\fP &mod)"
+.br
+.ti -1c
+.RI "template<ResultType Result, ValueType\&.\&.\&. Params> static void \fBadd_type_slot\fP (\fBModule\fP &mod)"
+.br
+.ti -1c
+.RI "static void \fBget_next_indices\fP (\fBModule\fP &module, int &next_function_index, int &next_actual_index)"
+.br
+.ti -1c
+.RI "template<ResultType Result, ValueType\&.\&.\&. Params> static void \fBadd_import\fP (\fBModule\fP &module, const char *func_name, int32_t &index)"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBstd::map\fP< \fBstd::vector\fP< uint16_t >, uint32_t > \fBtype_slots\fP"
+.br
+.ti -1c
+.RI "static \fBstd::map\fP< std::string, uint32_t > \fBregistered_injected\fP"
+.br
+.ti -1c
+.RI "static \fBstd::map\fP< uint32_t, uint32_t > \fBinjected_index_mapping\fP"
+.br
+.ti -1c
+.RI "static uint32_t \fBnext_injected_index\fP"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

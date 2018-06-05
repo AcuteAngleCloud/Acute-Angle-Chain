@@ -1,0 +1,154 @@
+\hypertarget{group__real}{}\section{Real number}
+\label{group__real}\index{Real number@{Real number}}
+
+
+Real number data type with basic operators. Wrap double class of Math \mbox{\hyperlink{struct_c}{C}} A\+PI.  
+
+
+Collaboration diagram for Real number\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classaacio_1_1real}{aacio\+::real}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__real_ga37515f3f3a7c985eeb90435974576fbf}{aacio\+::operator==}} (const \mbox{\hyperlink{classaacio_1_1real}{real}} \&c1, const \mbox{\hyperlink{classaacio_1_1real}{real}} \&c2)
+\begin{DoxyCompactList}\small\item\em Compares two double variables c1 and c2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__real_gaead95e1ee7599f6710bf89c6490ab1a5}{aacio\+::operator$>$}} (const \mbox{\hyperlink{classaacio_1_1real}{real}} \&c1, const \mbox{\hyperlink{classaacio_1_1real}{real}} \&c2)
+\begin{DoxyCompactList}\small\item\em Compares two double variables c1 and c2. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__real_gaef11411f358f9f1a3b8c8e52fdf3c5f3}{aacio\+::operator$<$}} (const \mbox{\hyperlink{classaacio_1_1real}{real}} \&c1, const \mbox{\hyperlink{classaacio_1_1real}{real}} \&c2)
+\begin{DoxyCompactList}\small\item\em Compares two double variables c1 and c2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaacio_1_1real}{real}} \mbox{\hyperlink{group__real_gad6bd588e0aa69227458b61d2ca48bacc}{aacio\+::real\+::operator+}} (const \mbox{\hyperlink{classaacio_1_1real}{real}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Add two real variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaacio_1_1real}{real}} \mbox{\hyperlink{group__real_gaf2078aa77b91b501d0f4c068c0a9c8fe}{aacio\+::real\+::operator$\ast$}} (const \mbox{\hyperlink{classaacio_1_1real}{real}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Multiply two real variables. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classaacio_1_1real}{real}} \mbox{\hyperlink{group__real_gaaedf18a9e2e314ff892f7f942b09cbcf}{aacio\+::real\+::operator/}} (const \mbox{\hyperlink{classaacio_1_1real}{real}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Division between two real variables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Real number data type with basic operators. Wrap double class of Math \mbox{\hyperlink{struct_c}{C}} A\+PI. 
+
+Example\+: 
+\begin{DoxyCode}
+real a(100);
+real b(10);
+real c = a+b
+real d = a / b
+real e = a*b
+\textcolor{keywordflow}{if}(a == b) \{\}
+\textcolor{keywordflow}{if}(a > b) \{\}
+\textcolor{keywordflow}{if}(a < b) \{\}
+\textcolor{keyword}{auto} val = d.value();
+\end{DoxyCode}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__real_gaf2078aa77b91b501d0f4c068c0a9c8fe}\label{group__real_gaf2078aa77b91b501d0f4c068c0a9c8fe}} 
+\index{Real number@{Real number}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Real number@{Real number}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaacio_1_1real}{real}} aacio\+::real\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Multiply two real variables. 
+
+Multiply two real variables 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & double variable to be multiplied with this \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result after multiplication 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{group__real_gad6bd588e0aa69227458b61d2ca48bacc}\label{group__real_gad6bd588e0aa69227458b61d2ca48bacc}} 
+\index{Real number@{Real number}!operator+@{operator+}}
+\index{operator+@{operator+}!Real number@{Real number}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaacio_1_1real}{real}} aacio\+::real\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Add two real variables. 
+
+Add two real variables 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & double variable to be added with this \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the sum of this and rhs 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{group__real_gaaedf18a9e2e314ff892f7f942b09cbcf}\label{group__real_gaaedf18a9e2e314ff892f7f942b09cbcf}} 
+\index{Real number@{Real number}!operator/@{operator/}}
+\index{operator/@{operator/}!Real number@{Real number}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classaacio_1_1real}{real}} aacio\+::real\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Division between two real variables. 
+
+Division between two real variables 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & double variable to be multiplied with this \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result after division 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{group__real_gaef11411f358f9f1a3b8c8e52fdf3c5f3}\label{group__real_gaef11411f358f9f1a3b8c8e52fdf3c5f3}} 
+\index{Real number@{Real number}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Real number@{Real number}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool aacio\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{c1,  }\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{c2 }\end{DoxyParamCaption})}
+
+
+
+Compares two double variables c1 and c2. 
+
+Compares two double variables c1 and c2 \begin{DoxyReturn}{Returns}
+if c1 $<$ c2, return true, otherwise false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{group__real_ga37515f3f3a7c985eeb90435974576fbf}\label{group__real_ga37515f3f3a7c985eeb90435974576fbf}} 
+\index{Real number@{Real number}!operator==@{operator==}}
+\index{operator==@{operator==}!Real number@{Real number}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool aacio\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{c1,  }\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{c2 }\end{DoxyParamCaption})}
+
+
+
+Compares two double variables c1 and c2. 
+
+Compares two double variables c1 and c2 \begin{DoxyReturn}{Returns}
+if c1 == c2, return true, otherwise false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{group__real_gaead95e1ee7599f6710bf89c6490ab1a5}\label{group__real_gaead95e1ee7599f6710bf89c6490ab1a5}} 
+\index{Real number@{Real number}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Real number@{Real number}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool aacio\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{c1,  }\item[{const \mbox{\hyperlink{classaacio_1_1real}{real}} \&}]{c2 }\end{DoxyParamCaption})}
+
+
+
+Compares two double variables c1 and c2. 
+
+Compares two double variables c1 and c2 \begin{DoxyReturn}{Returns}
+if c1 $>$ c2, return true, otherwise false 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+% FIG 6

@@ -1,0 +1,46 @@
+.TH "aacio::secondary_index_db_functions< double >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::secondary_index_db_functions< double >
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int32_t \fBdb_idx_next\fP (int32_t iterator, uint64_t *primary)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_previous\fP (int32_t iterator, uint64_t *primary)"
+.br
+.ti -1c
+.RI "static void \fBdb_idx_remove\fP (int32_t iterator)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_end\fP (uint64_t code, uint64_t scope, uint64_t table)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_store\fP (uint64_t scope, uint64_t table, uint64_t payer, uint64_t id, double secondary)"
+.br
+.ti -1c
+.RI "static void \fBdb_idx_update\fP (int32_t iterator, uint64_t payer, double secondary)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_find_primary\fP (uint64_t code, uint64_t scope, uint64_t table, uint64_t primary, double &secondary)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_find_secondary\fP (uint64_t code, uint64_t scope, uint64_t table, double secondary, uint64_t &primary)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_lowerbound\fP (uint64_t code, uint64_t scope, uint64_t table, double &secondary, uint64_t &primary)"
+.br
+.ti -1c
+.RI "static int32_t \fBdb_idx_upperbound\fP (uint64_t code, uint64_t scope, uint64_t table, double &secondary, uint64_t &primary)"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,70 @@
+\hypertarget{structaacio_1_1market__state}{}\section{aacio\+:\+:market\+\_\+state Struct Reference}
+\label{structaacio_1_1market__state}\index{aacio\+::market\+\_\+state@{aacio\+::market\+\_\+state}}
+
+
+{\ttfamily \#include $<$market\+\_\+state.\+hpp$>$}
+
+
+
+Collaboration diagram for aacio\+:\+:market\+\_\+state\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_afb73d439d933425d01aefb8f04a66015}\label{structaacio_1_1market__state_afb73d439d933425d01aefb8f04a66015}} 
+{\bfseries market\+\_\+state} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} this\+\_\+contract, \mbox{\hyperlink{structaacio_1_1symbol__type}{symbol\+\_\+type}} market\+\_\+symbol, \mbox{\hyperlink{structaacio_1_1exchange__accounts}{exchange\+\_\+accounts}} \&acnts)
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_ac338e6ce7f330b81bce3467203ef89c9}\label{structaacio_1_1market__state_ac338e6ce7f330b81bce3467203ef89c9}} 
+const \mbox{\hyperlink{structaacio_1_1exchange__state}{exchange\+\_\+state}} \& {\bfseries initial\+\_\+state} () const
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_aca1efaeb4eb59f48ed45afea6ac0a097}\label{structaacio_1_1market__state_aca1efaeb4eb59f48ed45afea6ac0a097}} 
+void {\bfseries margin\+\_\+call} (\mbox{\hyperlink{structaacio_1_1extended__symbol}{extended\+\_\+symbol}} debt\+\_\+type)
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_aca1b7a1024ef2ba99645b63f52067ad7}\label{structaacio_1_1market__state_aca1b7a1024ef2ba99645b63f52067ad7}} 
+void {\bfseries lend} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} lender, const \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} \&debt)
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_ae3761c3060bc8e53954a402a862e45aa}\label{structaacio_1_1market__state_ae3761c3060bc8e53954a402a862e45aa}} 
+void {\bfseries unlend} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} lender, double ishares, const \mbox{\hyperlink{structaacio_1_1extended__symbol}{extended\+\_\+symbol}} \&sym)
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_a5752ff0510cfa0fc3845d8eba3bff3fb}\label{structaacio_1_1market__state_a5752ff0510cfa0fc3845d8eba3bff3fb}} 
+void {\bfseries update\+\_\+margin} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} borrower, const \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} \&delta\+\_\+debt, const \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} \&delta\+\_\+collateral)
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_af940702a7eecf14d54894586e60cd427}\label{structaacio_1_1market__state_af940702a7eecf14d54894586e60cd427}} 
+void {\bfseries cover\+\_\+margin} (\mbox{\hyperlink{structaacio_1_1chain_1_1name}{account\+\_\+name}} borrower, const \mbox{\hyperlink{structaacio_1_1extended__asset}{extended\+\_\+asset}} \&cover\+\_\+amount)
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_a282b844b33ef19fb9b81232b6bcb0201}\label{structaacio_1_1market__state_a282b844b33ef19fb9b81232b6bcb0201}} 
+void {\bfseries save} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_a714c0eaa5701bc771c27bb4b6adbf5be}\label{structaacio_1_1market__state_a714c0eaa5701bc771c27bb4b6adbf5be}} 
+symbol\+\_\+name {\bfseries marketid}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_a32b7f8275abb3c8bc7785f166749a8d7}\label{structaacio_1_1market__state_a32b7f8275abb3c8bc7785f166749a8d7}} 
+\mbox{\hyperlink{structaacio_1_1exchange__state}{exchange\+\_\+state}} {\bfseries exstate}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_ab418f4d867f6a7e67d31909aa2358f0c}\label{structaacio_1_1market__state_ab418f4d867f6a7e67d31909aa2358f0c}} 
+\mbox{\hyperlink{classaacio_1_1multi__index}{markets}} {\bfseries market\+\_\+table}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_a034f47da6b8738a5ae51ba3f18eaf35c}\label{structaacio_1_1market__state_a034f47da6b8738a5ae51ba3f18eaf35c}} 
+\mbox{\hyperlink{classaacio_1_1multi__index}{margins}} {\bfseries base\+\_\+margins}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_af53dc4c3f989140545a0d7cd2b3fbbed}\label{structaacio_1_1market__state_af53dc4c3f989140545a0d7cd2b3fbbed}} 
+\mbox{\hyperlink{classaacio_1_1multi__index}{margins}} {\bfseries quote\+\_\+margins}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_a5b886a9bf7e95aa6a1ee4b94f69af0fd}\label{structaacio_1_1market__state_a5b886a9bf7e95aa6a1ee4b94f69af0fd}} 
+\mbox{\hyperlink{classaacio_1_1multi__index}{loans}} {\bfseries base\+\_\+loans}
+\item 
+\mbox{\Hypertarget{structaacio_1_1market__state_acd2d5d06be8144e40237f687c77cbecb}\label{structaacio_1_1market__state_acd2d5d06be8144e40237f687c77cbecb}} 
+\mbox{\hyperlink{classaacio_1_1multi__index}{loans}} {\bfseries quote\+\_\+loans}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Maintains a state along with the cache of margin positions and/or limit orders. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+contracts/exchange/market\+\_\+state.\+hpp\item 
+contracts/exchange/market\+\_\+state.\+cpp\end{DoxyCompactItemize}

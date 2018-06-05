@@ -1,0 +1,62 @@
+.TH "appbase::abstract_plugin" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+appbase::abstract_plugin
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBappbase::plugin< Impl >\fP, \fBappbase::plugin< account_history_api_plugin >\fP, \fBappbase::plugin< account_history_plugin >\fP, \fBappbase::plugin< chain_api_plugin >\fP, \fBappbase::plugin< chain_plugin >\fP, \fBappbase::plugin< faucet_testnet_plugin >\fP, \fBappbase::plugin< http_plugin >\fP, \fBappbase::plugin< mongo_db_plugin >\fP, \fBappbase::plugin< net_api_plugin >\fP, \fBappbase::plugin< net_plugin >\fP, \fBappbase::plugin< producer_plugin >\fP, \fBappbase::plugin< template_plugin >\fP, \fBappbase::plugin< txn_test_gen_plugin >\fP, \fBappbase::plugin< wallet_api_plugin >\fP, and \fBappbase::plugin< wallet_plugin >\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBstate\fP { \fBregistered\fP, \fBinitialized\fP, \fBstarted\fP, \fBstopped\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fBstate\fP \fBget_state\fP () const =0"
+.br
+.ti -1c
+.RI "virtual const std::string & \fBname\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBset_program_options\fP (options_description &cli, options_description &cfg)=0"
+.br
+.ti -1c
+.RI "virtual void \fBinitialize\fP (const variables_map &options)=0"
+.br
+.ti -1c
+.RI "virtual void \fBstartup\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBshutdown\fP ()=0"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBappbase::abstract_plugin::state\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIregistered \fP\fP
+the plugin is constructed but doesn't do anything 
+.TP
+\fB\fIinitialized \fP\fP
+the plugin has initialized any state required but is idle 
+.TP
+\fB\fIstarted \fP\fP
+the plugin is actively running 
+.TP
+\fB\fIstopped \fP\fP
+the plugin is no longer running 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

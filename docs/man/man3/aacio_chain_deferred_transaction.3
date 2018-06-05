@@ -1,0 +1,48 @@
+.TH "aacio::chain::deferred_transaction" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::deferred_transaction
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transaction\&.hpp>\fP
+.PP
+Inherits \fBaacio::chain::transaction\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdeferred_transaction\fP ()=default"
+.br
+.RI "delayed execution "
+.ti -1c
+.RI "\fBdeferred_transaction\fP (uint128_t sender_id, \fBaccount_name\fP \fBsender\fP, \fBaccount_name\fP \fBpayer\fP, \fBtime_point_sec\fP execute_after, const \fBtransaction\fP &txn)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint128_t \fBsender_id\fP"
+.br
+.ti -1c
+.RI "\fBaccount_name\fP \fBsender\fP"
+.br
+.RI "ID assigned by sender of generated, accessible via WASM api when executing normal or error\&. "
+.ti -1c
+.RI "\fBaccount_name\fP \fBpayer\fP"
+.br
+.RI "receives error handler callback "
+.ti -1c
+.RI "\fBtime_point_sec\fP \fBexecute_after\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+When a transaction is generated it can be scheduled to occur in the future\&. It may also fail to execute for some reason in which case the sender needs to be notified\&. When the sender sends a transaction they will assign it an ID which will be passed back to the sender if the transaction fails for some reason\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

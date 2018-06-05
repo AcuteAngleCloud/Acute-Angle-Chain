@@ -1,0 +1,71 @@
+\hypertarget{openssl_8hpp}{}\section{libraries/fc/include/fc/crypto/openssl.hpp File Reference}
+\label{openssl_8hpp}\index{libraries/fc/include/fc/crypto/openssl.\+hpp@{libraries/fc/include/fc/crypto/openssl.\+hpp}}
+{\ttfamily \#include $<$openssl/ec.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/crypto.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/evp.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/conf.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/err.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/ecdsa.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/ecdh.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/sha.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/obj\+\_\+mac.\+h$>$}\newline
+Include dependency graph for openssl.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfc_1_1ssl__wrapper}{fc\+::ssl\+\_\+wrapper$<$ ssl\+\_\+type $>$}}
+\item 
+struct \mbox{\hyperlink{structfc_1_1ssl__bignum}{fc\+::ssl\+\_\+bignum}}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacefc}{fc}}
+\begin{DoxyCompactList}\small\item\em aacio\+::chain \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries S\+S\+L\+\_\+\+T\+Y\+PE}(name,  ssl\+\_\+type,  free\+\_\+func)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{openssl_8hpp_aa0ad424eeb5c9c34c12d77cd3dc9dbf1}\label{openssl_8hpp_aa0ad424eeb5c9c34c12d77cd3dc9dbf1}} 
+void {\bfseries E\+C\+D\+S\+A\+\_\+\+S\+I\+G\+\_\+get0} (const E\+C\+D\+S\+A\+\_\+\+S\+IG $\ast$sig, const B\+I\+G\+N\+UM $\ast$$\ast$pr, const B\+I\+G\+N\+UM $\ast$$\ast$ps)
+\item 
+\mbox{\Hypertarget{openssl_8hpp_ae2f28de42b8345422b7ac3b28f330b9b}\label{openssl_8hpp_ae2f28de42b8345422b7ac3b28f330b9b}} 
+int {\bfseries E\+C\+D\+S\+A\+\_\+\+S\+I\+G\+\_\+set0} (E\+C\+D\+S\+A\+\_\+\+S\+IG $\ast$sig, B\+I\+G\+N\+UM $\ast$r, B\+I\+G\+N\+UM $\ast$s)
+\item 
+void \mbox{\hyperlink{namespacefc_ab3fe255763535cb35384ce63a6514739}{fc\+::store\+\_\+configuration\+\_\+path}} (const path \&file\+Path)
+\item 
+\mbox{\Hypertarget{namespacefc_a5bf0ca50d51c3ac0f7a0e182bab7d234}\label{namespacefc_a5bf0ca50d51c3ac0f7a0e182bab7d234}} 
+int {\bfseries fc\+::init\+\_\+openssl} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides common utility calls for wrapping openssl c api. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{openssl_8hpp_a7ff07a79931053a908fa84977a272350}\label{openssl_8hpp_a7ff07a79931053a908fa84977a272350}} 
+\index{openssl.\+hpp@{openssl.\+hpp}!S\+S\+L\+\_\+\+T\+Y\+PE@{S\+S\+L\+\_\+\+T\+Y\+PE}}
+\index{S\+S\+L\+\_\+\+T\+Y\+PE@{S\+S\+L\+\_\+\+T\+Y\+PE}!openssl.\+hpp@{openssl.\+hpp}}
+\subsubsection{\texorpdfstring{S\+S\+L\+\_\+\+T\+Y\+PE}{SSL\_TYPE}}
+{\footnotesize\ttfamily \#define S\+S\+L\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{name,  }\item[{}]{ssl\+\_\+type,  }\item[{}]{free\+\_\+func }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }name  : \textcolor{keyword}{public} ssl\_wrapper<ssl\_type> \(\backslash\)
+        \{ \(\backslash\)
+            name(ssl\_type* obj=\textcolor{keyword}{nullptr}) \(\backslash\)
+              : ssl\_wrapper(obj) \{\} \(\backslash\)
+            ~name() \(\backslash\)
+            \{ \(\backslash\)
+                if( obj != \textcolor{keyword}{nullptr} ) \(\backslash\)
+                free\_func(obj); \(\backslash\)
+            \} \(\backslash\)
+        \};
+\end{DoxyCode}

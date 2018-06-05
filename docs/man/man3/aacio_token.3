@@ -1,0 +1,466 @@
+.TH "aacio::token< Code, Symbol, NumberType >" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::token< Code, Symbol, NumberType >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBaacio::contract\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBtoken\fP (\fBaccount_name\fP self)"
+.br
+.ti -1c
+.RI "void \fBcreate\fP (\fBaccount_name\fP issuer, \fBasset\fP maximum_supply, uint8_t issuer_can_freeze, uint8_t issuer_can_recall, uint8_t issuer_can_whitelist)"
+.br
+.ti -1c
+.RI "void \fBissue\fP (\fBaccount_name\fP to, \fBasset\fP \fBquantity\fP, string memo)"
+.br
+.ti -1c
+.RI "void \fBtransfer\fP (\fBaccount_name\fP from, \fBaccount_name\fP to, \fBasset\fP \fBquantity\fP, string memo)"
+.br
+.ti -1c
+.RI "\fBtoken\fP ()"
+.br
+.RI "Default constructor\&. "
+.ti -1c
+.RI "\fBoperator asset\fP () const"
+.br
+.ti -1c
+.RI "\fBtoken\fP (const \fBasset\fP &a)"
+.br
+.ti -1c
+.RI "\fBtoken\fP (NumberType v)"
+.br
+.RI "Constructor for token given quantity of tokens available\&. "
+.ti -1c
+.RI "\fBtoken\fP & \fBoperator\-=\fP (const \fBtoken\fP &a)"
+.br
+.RI "Subtracts quantity of token from this object\&. "
+.ti -1c
+.RI "\fBtoken\fP & \fBoperator+=\fP (const \fBtoken\fP &a)"
+.br
+.RI "Adds quantity of token to this object\&. "
+.ti -1c
+.RI "\fBtoken\fP & \fBoperator*=\fP (uint64_t a)"
+.br
+.RI "Multiplies quantity of token by an integer\&. "
+.ti -1c
+.RI "\fBtoken\fP & \fBoperator/=\fP (uint64_t a)"
+.br
+.RI "Divides quantity of token by an integer\&. "
+.ti -1c
+.RI "\fBoperator bool\fP () const"
+.br
+.RI "Boolean conversion operator\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "NumberType \fBquantity\fP = 0"
+.br
+.RI "Quantity of tokens available\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint64_t \fBcode\fP = Code"
+.br
+.RI "\fBType\fP of the currency\&. "
+.ti -1c
+.RI "static const uint64_t \fBsymbol\fP = Symbol"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<typename Base , typename Quote > \fBprice\fP< \fBBase\fP, Quote > \fBoperator/\fP (const \fBBase\fP &b, const Quote &q)"
+.br
+.ti -1c
+.RI "\fBtoken\fP \fBoperator+\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Adds quantity of two tokens and return a new token\&. "
+.ti -1c
+.RI "\fBtoken\fP \fBoperator\-\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Subtracts quantity of two tokens and return a new token\&. "
+.ti -1c
+.RI "\fBtoken\fP \fBoperator*\fP (const \fBtoken\fP &a, uint64_t b)"
+.br
+.RI "Multiplies quantity of two tokens and return a new token\&. "
+.ti -1c
+.RI "\fBtoken\fP \fBoperator*\fP (uint64_t b, const \fBtoken\fP &a)"
+.br
+.RI "Multiplies quantity of two tokens and return a new token\&. "
+.ti -1c
+.RI "\fBtoken\fP \fBoperator/\fP (const \fBtoken\fP &a, uint64_t b)"
+.br
+.RI "Divides quantity of two tokens and return a new token\&. "
+.ti -1c
+.RI "NumberType \fBoperator/\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Divides quantity of two tokens and return a new token\&. "
+.ti -1c
+.RI "bool \fBoperator<=\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Less than or equal to comparison operator\&. "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Less than comparison operator\&. "
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Greater than or equal to comparison operator\&. "
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Greater than comparison operator\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Equality comparison operator\&. "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBtoken\fP &a, const \fBtoken\fP &b)"
+.br
+.RI "Inequality comparison operator\&. "
+.ti -1c
+.RI "template<typename DataStream > DataStream & \fBoperator<<\fP (DataStream &ds, const \fBtoken\fP &t)"
+.br
+.ti -1c
+.RI "template<typename DataStream > DataStream & \fBoperator>>\fP (DataStream &ds, \fBtoken\fP &t)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBaacio::token\fP< Code, Symbol, NumberType >::\fBtoken\fP ()\fC [inline]\fP"
+
+.PP
+Default constructor\&. Default constructor 
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBaacio::token\fP< Code, Symbol, NumberType >::\fBtoken\fP (NumberType v)\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Constructor for token given quantity of tokens available\&. Constructor for token given quantity of tokens available 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIv\fP - quantity of tokens available 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBaacio::token\fP< Code, Symbol, NumberType >::operator bool () const\fC [inline]\fP, \fC [explicit]\fP"
+
+.PP
+Boolean conversion operator\&. Boolean conversion operator 
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity is not zero 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP& \fBaacio::token\fP< Code, Symbol, NumberType >::operator*= (uint64_t a)\fC [inline]\fP"
+
+.PP
+Multiplies quantity of token by an integer\&. Multiplies quantity of token by an integer \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP multipier 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+this token after addition 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP& \fBaacio::token\fP< Code, Symbol, NumberType >::operator+= (const \fBtoken\fP< Code, Symbol, NumberType > & a)\fC [inline]\fP"
+
+.PP
+Adds quantity of token to this object\&. Adds quantity of token to this object \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+this token after addition 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP& \fBaacio::token\fP< Code, Symbol, NumberType >::operator\-= (const \fBtoken\fP< Code, Symbol, NumberType > & a)\fC [inline]\fP"
+
+.PP
+Subtracts quantity of token from this object\&. Subtracts quantity of token from this object \fBThrows\fP an exception if underflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be subtracted 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+this token after subtraction 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP& \fBaacio::token\fP< Code, Symbol, NumberType >::operator/= (uint64_t a)\fC [inline]\fP"
+
+.PP
+Divides quantity of token by an integer\&. Divides quantity of token by an integer \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP multipier 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+this token after addition 
+.RE
+.PP
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> bool operator!= (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Inequality comparison operator\&. Inequality comparison operator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be compared 
+.br
+\fIb\fP token to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity of a is not equal to quantity of b 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP operator* (const \fBtoken\fP< Code, Symbol, NumberType > & a, uint64_t b)\fC [friend]\fP"
+
+.PP
+Multiplies quantity of two tokens and return a new token\&. Multiplies token and integer \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be multiplied 
+.br
+\fIb\fP multipier 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of addition as a new token 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP operator* (uint64_t b, const \fBtoken\fP< Code, Symbol, NumberType > & a)\fC [friend]\fP"
+
+.PP
+Multiplies quantity of two tokens and return a new token\&. Multiplies token and integer \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be multiplied 
+.br
+\fIb\fP multipier 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of addition as a new token 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP operator+ (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Adds quantity of two tokens and return a new token\&. Adds quantity of two tokens and return a new token \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be added 
+.br
+\fIb\fP token to be added 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of addition as a new token 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP operator\- (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Subtracts quantity of two tokens and return a new token\&. Subtracts quantity of two tokens and return a new token \fBThrows\fP an exception if underflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be subtracted 
+.br
+\fIb\fP token to be subtracted 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of subtraction as a new token 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> \fBtoken\fP operator/ (const \fBtoken\fP< Code, Symbol, NumberType > & a, uint64_t b)\fC [friend]\fP"
+
+.PP
+Divides quantity of two tokens and return a new token\&. Divides token and integer \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be multiplied 
+.br
+\fIb\fP multipier 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of addition as a new token 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> NumberType operator/ (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Divides quantity of two tokens and return a new token\&. Divides two tokens \fBThrows\fP an exception if overflow 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token 
+.br
+\fIb\fP token 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+result of addition as a new token 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> bool operator< (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Less than comparison operator\&. Less than comparison operator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be compared 
+.br
+\fIb\fP token to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity of a is less than quantity of b 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> bool operator<= (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Less than or equal to comparison operator\&. Less than or equal to comparison operator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be compared 
+.br
+\fIb\fP token to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity of a is less than or equal to quantity of b 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> bool operator== (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Equality comparison operator\&. Equality comparison operator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be compared 
+.br
+\fIb\fP token to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity of a is equal to quantity of b 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> bool operator> (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Greater than comparison operator\&. Greater than comparison operator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be compared 
+.br
+\fIb\fP token to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity of a is greater than quantity of b 
+.RE
+.PP
+
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> bool operator>= (const \fBtoken\fP< Code, Symbol, NumberType > & a, const \fBtoken\fP< Code, Symbol, NumberType > & b)\fC [friend]\fP"
+
+.PP
+Greater than or equal to comparison operator\&. Greater than or equal to comparison operator 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP token to be compared 
+.br
+\fIb\fP token to be compared 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if quantity of a is greater than or equal to quantity of b 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> const uint64_t \fBaacio::token\fP< Code, Symbol, NumberType >::code = Code\fC [static]\fP"
+
+.PP
+\fBType\fP of the currency\&. \fBType\fP of the currency (e\&.g\&. aac) represented as an unsigned 64 bit integer 
+.SS "template<uint64_t Code, uint64_t Symbol, typename NumberType  = uint64_t> NumberType \fBaacio::token\fP< Code, Symbol, NumberType >::quantity = 0"
+
+.PP
+Quantity of tokens available\&. Quantity of tokens available 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

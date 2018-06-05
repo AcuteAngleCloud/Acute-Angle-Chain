@@ -1,0 +1,13 @@
+digraph "websocketpp::http::parser::parser::process_header"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node47 [label="websocketpp::http::\lparser::parser::process\l_header",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node47 -> Node48 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node48 [label="websocketpp::http::\lparser::request::consume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1http_1_1parser_1_1request.html#abd9cae6f44634d62253d806d982ab1d6",tooltip="Process bytes in the input buffer. "];
+  Node47 -> Node49 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node49 [label="websocketpp::http::\lparser::response::consume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1http_1_1parser_1_1response.html#ae99b8f1287898b74d1963b95347ab838",tooltip="Process bytes in the input buffer. "];
+  Node49 -> Node50 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node50 [label="websocketpp::http::\lparser::response::consume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1http_1_1parser_1_1response.html#a5b274a9e5766e679f0939a7e1ecbad56",tooltip="Process bytes in the input buffer (istream version) "];
+}

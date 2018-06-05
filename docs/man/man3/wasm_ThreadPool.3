@@ -1,0 +1,38 @@
+.TH "wasm::ThreadPool" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::ThreadPool
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBwork\fP (\fBstd::vector\fP< std::function< ThreadWorkState()>> &doWorkers)"
+.br
+.ti -1c
+.RI "size_t \fBsize\fP ()"
+.br
+.ti -1c
+.RI "void \fBnotifyThreadIsReady\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static size_t \fBgetNumCores\fP ()"
+.br
+.ti -1c
+.RI "static \fBThreadPool\fP * \fBget\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBisRunning\fP ()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

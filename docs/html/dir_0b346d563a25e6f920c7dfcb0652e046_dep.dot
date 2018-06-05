@@ -1,0 +1,15 @@
+digraph "plugins/wallet_plugin/include" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0b3dfba0f864d9a26bf81616cf3bac85 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="wallet_plugin" fontname="Helvetica", fontsize="10", URL="dir_0b3dfba0f864d9a26bf81616cf3bac85.html"]
+  subgraph clusterdir_0b346d563a25e6f920c7dfcb0652e046 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0b346d563a25e6f920c7dfcb0652e046.html"];
+    dir_0b346d563a25e6f920c7dfcb0652e046 [shape=plaintext label="include"];
+    dir_e359df59fb5b0079a875c9d693a5b94d [shape=box label="aacio" color="red" fillcolor="white" style="filled" URL="dir_e359df59fb5b0079a875c9d693a5b94d.html"];
+  }
+  }
+  dir_bc0718b08fb2015b8e59c47b2805f60c [shape=box label="libraries" fillcolor="white" style="filled" color="red" URL="dir_bc0718b08fb2015b8e59c47b2805f60c.html"];
+  dir_e359df59fb5b0079a875c9d693a5b94d->dir_bc0718b08fb2015b8e59c47b2805f60c [headlabel="3", labeldistance=1.5 headhref="dir_001886_000004.html"];
+}

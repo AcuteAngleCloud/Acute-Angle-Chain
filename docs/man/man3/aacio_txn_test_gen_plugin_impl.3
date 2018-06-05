@@ -1,0 +1,56 @@
+.TH "aacio::txn_test_gen_plugin_impl" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::txn_test_gen_plugin_impl
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcreate_test_accounts\fP (const std::string &init_name, const std::string &init_priv_key)"
+.br
+.ti -1c
+.RI "void \fBstart_generation\fP (const std::string &salt, const uint64_t &period, const uint64_t &batch_size)"
+.br
+.ti -1c
+.RI "void \fBarm_timer\fP (boost::asio::high_resolution_timer::time_point s)"
+.br
+.ti -1c
+.RI "void \fBsend_transaction\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop_generation\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "boost::asio::high_resolution_timer \fBtimer\fP {app()\&.get_io_service()}"
+.br
+.ti -1c
+.RI "bool \fBrunning\fP {false}"
+.br
+.ti -1c
+.RI "unsigned \fBtimer_timeout\fP"
+.br
+.ti -1c
+.RI "unsigned \fBbatch\fP"
+.br
+.ti -1c
+.RI "\fBaction\fP \fBact_a_to_b\fP"
+.br
+.ti -1c
+.RI "\fBaction\fP \fBact_b_to_a\fP"
+.br
+.ti -1c
+.RI "\fBabi_serializer\fP \fBcurrency_serializer\fP = fc::json::from_string(currency_abi)\&.as<\fBcontracts::abi_def\fP>()"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

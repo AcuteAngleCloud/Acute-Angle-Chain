@@ -1,0 +1,49 @@
+.TH "wasm::OptimizationOptions" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::OptimizationOptions
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::Options\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOptimizationOptions\fP (const std::string &command, const std::string &description)"
+.br
+.ti -1c
+.RI "bool \fBrunningDefaultOptimizationPasses\fP ()"
+.br
+.ti -1c
+.RI "bool \fBrunningPasses\fP ()"
+.br
+.ti -1c
+.RI "\fBPassRunner\fP \fBgetPassRunner\fP (\fBModule\fP &wasm)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBstd::vector\fP< std::string > \fBpasses\fP"
+.br
+.ti -1c
+.RI "\fBPassOptions\fP \fBpassOptions\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr const char * \fBDEFAULT_OPT_PASSES\fP = 'O'"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

@@ -1,0 +1,87 @@
+.TH "websocketpp::log::elevel" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+websocketpp::log::elevel \- Package of log levels for logging errors\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <levels\&.hpp>\fP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static char const  * \fBchannel_name\fP (level \fBchannel\fP)"
+.br
+.RI "Get the textual name of a channel given a channel id\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static level const \fBnone\fP = 0x0"
+.br
+.RI "Special aggregate value representing 'no levels'\&. "
+.ti -1c
+.RI "static level const \fBdevel\fP = 0x1"
+.br
+.RI "Low level debugging information (warning: very chatty) "
+.ti -1c
+.RI "static level const \fBlibrary\fP = 0x2"
+.br
+.ti -1c
+.RI "static level const \fBinfo\fP = 0x4"
+.br
+.ti -1c
+.RI "static level const \fBwarn\fP = 0x8"
+.br
+.ti -1c
+.RI "static level const \fBrerror\fP = 0x10"
+.br
+.ti -1c
+.RI "static level const \fBfatal\fP = 0x20"
+.br
+.ti -1c
+.RI "static level const \fBall\fP = 0xffffffff"
+.br
+.RI "Special aggregate value representing 'all levels'\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Package of log levels for logging errors\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "static char const* websocketpp::log::elevel::channel_name (level channel)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Get the textual name of a channel given a channel id\&. The id must be that of a single channel\&. Passing an aggregate channel package results in undefined behavior\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIchannel\fP The channel id to look up\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The name of the specified channel\&. 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "level const websocketpp::log::elevel::fatal = 0x20\fC [static]\fP"
+Unrecoverable error\&. This error will trigger immediate unclean termination of the connection or endpoint\&. 
+.SS "level const websocketpp::log::elevel::info = 0x4\fC [static]\fP"
+Information about minor configuration problems or additional information about other warnings\&. 
+.SS "level const websocketpp::log::elevel::library = 0x2\fC [static]\fP"
+Information about unusual system states or other minor internal library problems, less chatty than devel\&. 
+.SS "level const websocketpp::log::elevel::rerror = 0x10\fC [static]\fP"
+Recoverable error\&. Recovery may mean cleanly closing the connection with an appropriate error code to the remote endpoint\&. 
+.SS "level const websocketpp::log::elevel::warn = 0x8\fC [static]\fP"
+Information about important problems not severe enough to terminate connections\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

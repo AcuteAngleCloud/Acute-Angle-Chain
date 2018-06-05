@@ -1,0 +1,137 @@
+.TH "aacio::chain::contracts::abi_serializer" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+aacio::chain::contracts::abi_serializer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <abi_serializer\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::function< \fBfc::variant\fP(\fBfc::datastream\fP< const char * > &, bool, bool)> \fBunpack_function\fP"
+.br
+.ti -1c
+.RI "typedef std::function< void(const \fBfc::variant\fP &, \fBfc::datastream\fP< char * > &, bool, bool)> \fBpack_function\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBabi_serializer\fP (const \fBabi_def\fP &abi)"
+.br
+.ti -1c
+.RI "void \fBset_abi\fP (const \fBabi_def\fP &abi)"
+.br
+.ti -1c
+.RI "void \fBconfigure_built_in_types\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas_cycle\fP (const \fBvector\fP< \fBpair\fP< string, string >> &sedges) const"
+.br
+.ti -1c
+.RI "void \fBvalidate\fP () const"
+.br
+.ti -1c
+.RI "type_name \fBresolve_type\fP (const type_name &t) const"
+.br
+.ti -1c
+.RI "bool \fBis_array\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "bool \fBis_optional\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "bool \fBis_type\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "bool \fBis_builtin_type\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "bool \fBis_integer\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "int \fBget_integer_size\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "bool \fBis_struct\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "type_name \fBfundamental_type\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "const \fBstruct_def\fP & \fBget_struct\fP (const type_name &type) const"
+.br
+.ti -1c
+.RI "type_name \fBget_action_type\fP (\fBname\fP \fBaction\fP) const"
+.br
+.ti -1c
+.RI "type_name \fBget_table_type\fP (\fBname\fP \fBaction\fP) const"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBbinary_to_variant\fP (const type_name &type, const \fBbytes\fP &binary) const"
+.br
+.ti -1c
+.RI "\fBbytes\fP \fBvariant_to_binary\fP (const type_name &type, const \fBfc::variant\fP &var) const"
+.br
+.ti -1c
+.RI "\fBfc::variant\fP \fBbinary_to_variant\fP (const type_name &type, \fBfc::datastream\fP< const char *> &binary) const"
+.br
+.ti -1c
+.RI "void \fBvariant_to_binary\fP (const type_name &type, const \fBfc::variant\fP &var, \fBfc::datastream\fP< char *> &ds) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , typename Resolver > static void \fBto_variant\fP (const \fBT\fP &o, \fBfc::variant\fP &vo, Resolver resolver)"
+.br
+.ti -1c
+.RI "template<typename T , typename Resolver > static void \fBfrom_variant\fP (const \fBfc::variant\fP &v, \fBT\fP &o, Resolver resolver)"
+.br
+.ti -1c
+.RI "template<typename Vec > static bool \fBis_empty_abi\fP (const Vec &abi_vec)"
+.br
+.ti -1c
+.RI "template<typename Vec > static bool \fBto_abi\fP (const Vec &abi_vec, \fBabi_def\fP &abi)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBmap\fP< type_name, type_name > \fBtypedefs\fP"
+.br
+.ti -1c
+.RI "\fBmap\fP< type_name, \fBstruct_def\fP > \fBstructs\fP"
+.br
+.ti -1c
+.RI "\fBmap\fP< \fBname\fP, type_name > \fBactions\fP"
+.br
+.ti -1c
+.RI "\fBmap\fP< \fBname\fP, type_name > \fBtables\fP"
+.br
+.ti -1c
+.RI "\fBmap\fP< type_name, \fBpair\fP< unpack_function, pack_function > > \fBbuilt_in_types\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Describes the binary representation message and table contents so that it can be converted to and from JSON\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void aacio::chain::contracts::abi_serializer::set_abi (const \fBabi_def\fP & abi)"
+The ABI vector may contain duplicates which would make it an invalid ABI
+.SS "template<typename Vec > static bool aacio::chain::contracts::abi_serializer::to_abi (const Vec & abi_vec, \fBabi_def\fP & abi)\fC [inline]\fP, \fC [static]\fP"
+4 == packsize of empty Abi 
+.SS "void aacio::chain::contracts::abi_serializer::variant_to_binary (const type_name & type, const \fBfc::variant\fP & var, \fBfc::datastream\fP< char *> & ds) const"
+TODO: default construct field and write it out 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

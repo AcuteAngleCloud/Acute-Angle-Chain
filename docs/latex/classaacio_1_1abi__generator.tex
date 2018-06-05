@@ -1,0 +1,155 @@
+\hypertarget{classaacio_1_1abi__generator}{}\section{aacio\+:\+:abi\+\_\+generator Class Reference}
+\label{classaacio_1_1abi__generator}\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+
+
+Generates aacio\+::abi\+\_\+def struct handling events from A\+S\+T\+Consumer.  
+
+
+
+
+{\ttfamily \#include $<$abi\+\_\+generator.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaacio_1_1abi__generator_af42071fc1f4deb0a064985cb7b087b36}\label{classaacio_1_1abi__generator_af42071fc1f4deb0a064985cb7b087b36}} 
+enum {\bfseries optimization} \{ {\bfseries O\+P\+T\+\_\+\+S\+I\+N\+G\+L\+E\+\_\+\+F\+I\+E\+L\+D\+\_\+\+S\+T\+R\+U\+CT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classaacio_1_1abi__generator_a97a49b2ddf02669e5dbb6554ac352ac5}{enable\+\_\+optimizaton}} (optimization o)
+\begin{DoxyCompactList}\small\item\em Enable optimization when generating A\+BI. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classaacio_1_1abi__generator_a4ce111fa604e4dd79587c3736cc93c1f}{is\+\_\+opt\+\_\+enabled}} (optimization o)
+\begin{DoxyCompactList}\small\item\em Check if an optimization is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1abi__generator_a09053d5b188493c36b9b39ae0a30f737}{set\+\_\+output}} (\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&output)
+\begin{DoxyCompactList}\small\item\em Set the destination A\+BI struct to write. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1abi__generator_a8e0112db8062948a939b3db83d0e0884}{set\+\_\+verbose}} (bool verbose)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable verbose status messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1abi__generator_a9a1345c18ec1a52dc188383e929e3a80}{set\+\_\+abi\+\_\+context}} (const string \&abi\+\_\+context)
+\begin{DoxyCompactList}\small\item\em Set the root folder that limits where types will be imported. Types declared in header files located in child sub-\/folders will also be exported. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1abi__generator_a0c33878a4bc413470c67aaa68a970bee}{set\+\_\+compiler\+\_\+instance}} (Compiler\+Instance \&compiler\+\_\+instance)
+\begin{DoxyCompactList}\small\item\em Set the single instance of the Clang compiler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classaacio_1_1abi__generator_a8bebfb455bc896b0aa03815965ee0afd}{handle\+\_\+tagdecl\+\_\+definition}} (Tag\+Decl $\ast$tag\+\_\+decl)
+\begin{DoxyCompactList}\small\item\em Handle declaration of struct/union/enum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a622f2b60a99b16b27c5a714e667b4ae3}\label{classaacio_1_1abi__generator_a622f2b60a99b16b27c5a714e667b4ae3}} 
+void {\bfseries set\+\_\+target\+\_\+contract} (const string \&\mbox{\hyperlink{structaacio_1_1contract}{contract}}, const \mbox{\hyperlink{classstd_1_1vector}{vector}}$<$ string $>$ \&actions)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generates aacio\+::abi\+\_\+def struct handling events from A\+S\+T\+Consumer. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a97a49b2ddf02669e5dbb6554ac352ac5}\label{classaacio_1_1abi__generator_a97a49b2ddf02669e5dbb6554ac352ac5}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!enable\+\_\+optimizaton@{enable\+\_\+optimizaton}}
+\index{enable\+\_\+optimizaton@{enable\+\_\+optimizaton}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{enable\+\_\+optimizaton()}{enable\_optimizaton()}}
+{\footnotesize\ttfamily void aacio\+::abi\+\_\+generator\+::enable\+\_\+optimizaton (\begin{DoxyParamCaption}\item[{abi\+\_\+generator\+::optimization}]{o }\end{DoxyParamCaption})}
+
+
+
+Enable optimization when generating A\+BI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & optimization to enable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a8bebfb455bc896b0aa03815965ee0afd}\label{classaacio_1_1abi__generator_a8bebfb455bc896b0aa03815965ee0afd}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!handle\+\_\+tagdecl\+\_\+definition@{handle\+\_\+tagdecl\+\_\+definition}}
+\index{handle\+\_\+tagdecl\+\_\+definition@{handle\+\_\+tagdecl\+\_\+definition}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{handle\+\_\+tagdecl\+\_\+definition()}{handle\_tagdecl\_definition()}}
+{\footnotesize\ttfamily void aacio\+::abi\+\_\+generator\+::handle\+\_\+tagdecl\+\_\+definition (\begin{DoxyParamCaption}\item[{Tag\+Decl $\ast$}]{tag\+\_\+decl }\end{DoxyParamCaption})}
+
+
+
+Handle declaration of struct/union/enum. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\+\_\+decl} & declaration to handle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a4ce111fa604e4dd79587c3736cc93c1f}\label{classaacio_1_1abi__generator_a4ce111fa604e4dd79587c3736cc93c1f}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!is\+\_\+opt\+\_\+enabled@{is\+\_\+opt\+\_\+enabled}}
+\index{is\+\_\+opt\+\_\+enabled@{is\+\_\+opt\+\_\+enabled}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{is\+\_\+opt\+\_\+enabled()}{is\_opt\_enabled()}}
+{\footnotesize\ttfamily bool aacio\+::abi\+\_\+generator\+::is\+\_\+opt\+\_\+enabled (\begin{DoxyParamCaption}\item[{abi\+\_\+generator\+::optimization}]{o }\end{DoxyParamCaption})}
+
+
+
+Check if an optimization is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & optimization to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a9a1345c18ec1a52dc188383e929e3a80}\label{classaacio_1_1abi__generator_a9a1345c18ec1a52dc188383e929e3a80}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!set\+\_\+abi\+\_\+context@{set\+\_\+abi\+\_\+context}}
+\index{set\+\_\+abi\+\_\+context@{set\+\_\+abi\+\_\+context}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{set\+\_\+abi\+\_\+context()}{set\_abi\_context()}}
+{\footnotesize\ttfamily void aacio\+::abi\+\_\+generator\+::set\+\_\+abi\+\_\+context (\begin{DoxyParamCaption}\item[{const string \&}]{abi\+\_\+context }\end{DoxyParamCaption})}
+
+
+
+Set the root folder that limits where types will be imported. Types declared in header files located in child sub-\/folders will also be exported. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em abi\+\_\+context} & folder \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a0c33878a4bc413470c67aaa68a970bee}\label{classaacio_1_1abi__generator_a0c33878a4bc413470c67aaa68a970bee}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!set\+\_\+compiler\+\_\+instance@{set\+\_\+compiler\+\_\+instance}}
+\index{set\+\_\+compiler\+\_\+instance@{set\+\_\+compiler\+\_\+instance}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{set\+\_\+compiler\+\_\+instance()}{set\_compiler\_instance()}}
+{\footnotesize\ttfamily void aacio\+::abi\+\_\+generator\+::set\+\_\+compiler\+\_\+instance (\begin{DoxyParamCaption}\item[{Compiler\+Instance \&}]{compiler\+\_\+instance }\end{DoxyParamCaption})}
+
+
+
+Set the single instance of the Clang compiler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em compiler\+\_\+instance} & compiler instance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a09053d5b188493c36b9b39ae0a30f737}\label{classaacio_1_1abi__generator_a09053d5b188493c36b9b39ae0a30f737}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!set\+\_\+output@{set\+\_\+output}}
+\index{set\+\_\+output@{set\+\_\+output}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{set\+\_\+output()}{set\_output()}}
+{\footnotesize\ttfamily void aacio\+::abi\+\_\+generator\+::set\+\_\+output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structaacio_1_1chain_1_1contracts_1_1abi__def}{abi\+\_\+def}} \&}]{output }\end{DoxyParamCaption})}
+
+
+
+Set the destination A\+BI struct to write. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & A\+BI destination \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classaacio_1_1abi__generator_a8e0112db8062948a939b3db83d0e0884}\label{classaacio_1_1abi__generator_a8e0112db8062948a939b3db83d0e0884}} 
+\index{aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}!set\+\_\+verbose@{set\+\_\+verbose}}
+\index{set\+\_\+verbose@{set\+\_\+verbose}!aacio\+::abi\+\_\+generator@{aacio\+::abi\+\_\+generator}}
+\subsubsection{\texorpdfstring{set\+\_\+verbose()}{set\_verbose()}}
+{\footnotesize\ttfamily void aacio\+::abi\+\_\+generator\+::set\+\_\+verbose (\begin{DoxyParamCaption}\item[{bool}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable verbose status messages. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em verbose} & enable/disable flag \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+libraries/abi\+\_\+generator/include/aacio/abi\+\_\+generator/abi\+\_\+generator.\+hpp\item 
+libraries/abi\+\_\+generator/abi\+\_\+generator.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{classaaciosystem_1_1common}{}\section{aaciosystem\+:\+:common$<$ System\+Account $>$ Class Template Reference}
+\label{classaaciosystem_1_1common}\index{aaciosystem\+::common$<$ System\+Account $>$@{aaciosystem\+::common$<$ System\+Account $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1common_1_1aacio__global__state}{aacio\+\_\+global\+\_\+state}}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1common_1_1aacio__parameters}{aacio\+\_\+parameters}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_acae0c9a215400241991521ddf577bb47}\label{classaaciosystem_1_1common_acae0c9a215400241991521ddf577bb47}} 
+typedef \mbox{\hyperlink{classaacio_1_1generic__currency}{aacio\+::generic\+\_\+currency}}$<$ \mbox{\hyperlink{classaacio_1_1token}{aacio\+::token}}$<$ system\+\_\+account, \mbox{\hyperlink{struct_s}{S}}(4, A\+AC)$>$ $>$ {\bfseries currency}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_a6e4ae143fbe389a35da5e7f93b4b092c}\label{classaaciosystem_1_1common_a6e4ae143fbe389a35da5e7f93b4b092c}} 
+typedef currency\+::token\+\_\+type {\bfseries system\+\_\+token\+\_\+type}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_afa891a90a60b0f634969f333eaeb35af}\label{classaaciosystem_1_1common_afa891a90a60b0f634969f333eaeb35af}} 
+typedef \mbox{\hyperlink{classaacio_1_1singleton}{aacio\+::singleton}}$<$ System\+Account, \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(inflation), System\+Account, \mbox{\hyperlink{structaaciosystem_1_1common_1_1aacio__global__state}{aacio\+\_\+global\+\_\+state}} $>$ {\bfseries global\+\_\+state\+\_\+singleton}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_a995012673963700d7cf11f92eed22792}\label{classaaciosystem_1_1common_a995012673963700d7cf11f92eed22792}} 
+static \mbox{\hyperlink{structaaciosystem_1_1common_1_1aacio__global__state}{aacio\+\_\+global\+\_\+state}} \& {\bfseries get\+\_\+default\+\_\+parameters} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_a4da9f0ea6eee7bef803bf8c592712bfe}\label{classaaciosystem_1_1common_a4da9f0ea6eee7bef803bf8c592712bfe}} 
+static constexpr account\+\_\+name {\bfseries system\+\_\+account} = System\+Account
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_a7182a8e7f69c1038a9fba3b5933e5854}\label{classaaciosystem_1_1common_a7182a8e7f69c1038a9fba3b5933e5854}} 
+static constexpr uint64\+\_\+t {\bfseries currency\+\_\+symbol} = currency\+::symbol
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_a7574e8897f73ac5efbaf01f9b7ac9483}\label{classaaciosystem_1_1common_a7574e8897f73ac5efbaf01f9b7ac9483}} 
+static constexpr uint32\+\_\+t {\bfseries max\+\_\+inflation\+\_\+rate} = 5
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_af9b28615f1e85a1b31f541aae55826fd}\label{classaaciosystem_1_1common_af9b28615f1e85a1b31f541aae55826fd}} 
+static constexpr uint32\+\_\+t {\bfseries blocks\+\_\+per\+\_\+producer} = 6
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_a1e9861d921eb78deb2c035a49dd9becf}\label{classaaciosystem_1_1common_a1e9861d921eb78deb2c035a49dd9becf}} 
+static constexpr uint32\+\_\+t {\bfseries seconds\+\_\+per\+\_\+day} = 24 $\ast$ 3600
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1common_ab351a39ba7202bc53d9135dfe3162d3d}\label{classaaciosystem_1_1common_ab351a39ba7202bc53d9135dfe3162d3d}} 
+static constexpr uint32\+\_\+t {\bfseries days\+\_\+per\+\_\+4years} = 1461
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aacio.\+system/common.\+hpp\end{DoxyCompactItemize}

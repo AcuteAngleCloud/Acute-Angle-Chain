@@ -1,0 +1,108 @@
+.TH "wasm::CoalesceLocals" 3 "Sun Jun 3 2018" "AcuteAngleChain" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+wasm::CoalesceLocals
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBwasm::WalkerPass< CFGWalker< CoalesceLocals, Visitor< CoalesceLocals >, Liveness > >\fP\&.
+.PP
+Inherited by \fBwasm::CoalesceLocalsWithLearning\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisFunctionParallel\fP () override"
+.br
+.ti -1c
+.RI "\fBPass\fP * \fBcreate\fP () override"
+.br
+.ti -1c
+.RI "\fBGetLocal\fP * \fBgetCopy\fP (\fBSetLocal\fP *\fBset\fP)"
+.br
+.ti -1c
+.RI "void \fBdoWalkFunction\fP (\fBFunction\fP *\fBfunc\fP)"
+.br
+.ti -1c
+.RI "void \fBincreaseBackEdgePriorities\fP ()"
+.br
+.ti -1c
+.RI "void \fBflowLiveness\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalculateInterferences\fP ()"
+.br
+.ti -1c
+.RI "void \fBcalculateInterferences\fP (const \fBLocalSet\fP &locals)"
+.br
+.ti -1c
+.RI "bool \fBmergeStartsAndCheckChange\fP (\fBstd::vector\fP< BasicBlock *> &blocks, \fBLocalSet\fP &old, \fBLocalSet\fP &ret)"
+.br
+.ti -1c
+.RI "void \fBscanLivenessThroughActions\fP (\fBstd::vector\fP< \fBAction\fP > &actions, \fBLocalSet\fP &live)"
+.br
+.ti -1c
+.RI "void \fBpickIndicesFromOrder\fP (\fBstd::vector\fP< Index > &order, \fBstd::vector\fP< Index > &indices)"
+.br
+.ti -1c
+.RI "void \fBpickIndicesFromOrder\fP (\fBstd::vector\fP< Index > &order, \fBstd::vector\fP< Index > &indices, Index &removedCopies)"
+.br
+.ti -1c
+.RI "virtual void \fBpickIndices\fP (\fBstd::vector\fP< Index > &indices)"
+.br
+.ti -1c
+.RI "void \fBapplyIndices\fP (\fBstd::vector\fP< Index > &indices, \fBExpression\fP *root)"
+.br
+.ti -1c
+.RI "void \fBinterfere\fP (Index i, Index j)"
+.br
+.ti -1c
+.RI "void \fBinterfereLowHigh\fP (Index low, Index high)"
+.br
+.ti -1c
+.RI "bool \fBinterferes\fP (Index i, Index j)"
+.br
+.ti -1c
+.RI "void \fBaddCopy\fP (Index i, Index j)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetCopies\fP (Index i, Index j)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdoVisitGetLocal\fP (\fBCoalesceLocals\fP *self, \fBExpression\fP **currp)"
+.br
+.ti -1c
+.RI "static void \fBdoVisitSetLocal\fP (\fBCoalesceLocals\fP *self, \fBExpression\fP **currp)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Index \fBnumLocals\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< bool > \fBinterferences\fP"
+.br
+.ti -1c
+.RI "\fBstd::unordered_set\fP< BasicBlock * > \fBliveBlocks\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< uint8_t > \fBcopies\fP"
+.br
+.ti -1c
+.RI "\fBstd::vector\fP< Index > \fBtotalCopies\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for AcuteAngleChain from the source code\&.

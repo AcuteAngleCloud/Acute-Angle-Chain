@@ -1,0 +1,84 @@
+\hypertarget{classaaciosystem_1_1delegate__bandwidth}{}\section{aaciosystem\+:\+:delegate\+\_\+bandwidth$<$ System\+Account $>$ Class Template Reference}
+\label{classaaciosystem_1_1delegate__bandwidth}\index{aaciosystem\+::delegate\+\_\+bandwidth$<$ System\+Account $>$@{aaciosystem\+::delegate\+\_\+bandwidth$<$ System\+Account $>$}}
+
+
+Inheritance diagram for aaciosystem\+:\+:delegate\+\_\+bandwidth$<$ System\+Account $>$\+:
+% FIG 0
+
+
+Collaboration diagram for aaciosystem\+:\+:delegate\+\_\+bandwidth$<$ System\+Account $>$\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1delegate__bandwidth_1_1delegated__bandwidth}{delegated\+\_\+bandwidth}}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1delegate__bandwidth_1_1refund__request}{refund\+\_\+request}}
+\item 
+struct \mbox{\hyperlink{structaaciosystem_1_1delegate__bandwidth_1_1total__resources}{total\+\_\+resources}}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a91bad5009a172a288f17d7f20fb55a13}\label{classaaciosystem_1_1delegate__bandwidth_a91bad5009a172a288f17d7f20fb55a13}} 
+using {\bfseries currency} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::currency
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a67ab7ef56f3a44adc269435a7da1c6ce}\label{classaaciosystem_1_1delegate__bandwidth_a67ab7ef56f3a44adc269435a7da1c6ce}} 
+using {\bfseries system\+\_\+token\+\_\+type} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::system\+\_\+token\+\_\+type
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_aeb7c5f42e1bfb92e29dafb2003fca352}\label{classaaciosystem_1_1delegate__bandwidth_aeb7c5f42e1bfb92e29dafb2003fca352}} 
+using {\bfseries aacio\+\_\+parameters} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::aacio\+\_\+parameters
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_aed8836a7843e95b22bfd5a7dabe944cc}\label{classaaciosystem_1_1delegate__bandwidth_aed8836a7843e95b22bfd5a7dabe944cc}} 
+using {\bfseries global\+\_\+state\+\_\+singleton} = typename \mbox{\hyperlink{classaaciosystem_1_1common}{common}}$<$ System\+Account $>$\+::global\+\_\+state\+\_\+singleton
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_abf6c44878d66f9138e41edd07fd6af09}\label{classaaciosystem_1_1delegate__bandwidth_abf6c44878d66f9138e41edd07fd6af09}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(totalband), \mbox{\hyperlink{structaaciosystem_1_1delegate__bandwidth_1_1total__resources}{total\+\_\+resources}} $>$ {\bfseries total\+\_\+resources\+\_\+table}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a1aca0462353e62caa1feddcb7d84b69f}\label{classaaciosystem_1_1delegate__bandwidth_a1aca0462353e62caa1feddcb7d84b69f}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(delband), \mbox{\hyperlink{structaaciosystem_1_1delegate__bandwidth_1_1delegated__bandwidth}{delegated\+\_\+bandwidth}} $>$ {\bfseries del\+\_\+bandwidth\+\_\+table}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a53d1da670d2dd8376576a1af88718608}\label{classaaciosystem_1_1delegate__bandwidth_a53d1da670d2dd8376576a1af88718608}} 
+typedef \mbox{\hyperlink{classaacio_1_1multi__index}{aacio\+::multi\+\_\+index}}$<$ \mbox{\hyperlink{group__types_gaf9c1edb0e0da55ec6ba09f32f6839529}{N}}(refunds), \mbox{\hyperlink{structaaciosystem_1_1delegate__bandwidth_1_1refund__request}{refund\+\_\+request}} $>$ {\bfseries refunds\+\_\+table}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a0d7a41936e299a25d91e4fac1b0b313b}\label{classaaciosystem_1_1delegate__bandwidth_a0d7a41936e299a25d91e4fac1b0b313b}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, delegatebw)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_adf7b438784e18f4b8b740ad467ce41da}\label{classaaciosystem_1_1delegate__bandwidth_adf7b438784e18f4b8b740ad467ce41da}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, undelegatebw)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a959fd809a123eb90435b48732cc511a5}\label{classaaciosystem_1_1delegate__bandwidth_a959fd809a123eb90435b48732cc511a5}} 
+{\bfseries A\+C\+T\+I\+ON} (System\+Account, refund)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a2100ccec4d11f1e59a80b87d3fd796d2}\label{classaaciosystem_1_1delegate__bandwidth_a2100ccec4d11f1e59a80b87d3fd796d2}} 
+static void {\bfseries on} (const delegatebw \&del)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_abc5aa903d93222a19fbf15d8c4fe996b}\label{classaaciosystem_1_1delegate__bandwidth_abc5aa903d93222a19fbf15d8c4fe996b}} 
+static void {\bfseries on} (account\+\_\+name receiver, const undelegatebw \&del)
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a30daf50b833aac70dfb0616256daf7cd}\label{classaaciosystem_1_1delegate__bandwidth_a30daf50b833aac70dfb0616256daf7cd}} 
+static void {\bfseries on} (const refund \&r)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a975f93d13826fe8775231e5a33e5b62c}\label{classaaciosystem_1_1delegate__bandwidth_a975f93d13826fe8775231e5a33e5b62c}} 
+static constexpr account\+\_\+name {\bfseries system\+\_\+account} = System\+Account
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_a76fe68e5c49f2d69fa09e5c019b09e21}\label{classaaciosystem_1_1delegate__bandwidth_a76fe68e5c49f2d69fa09e5c019b09e21}} 
+static constexpr time {\bfseries refund\+\_\+delay} = 3$\ast$24$\ast$3600
+\item 
+\mbox{\Hypertarget{classaaciosystem_1_1delegate__bandwidth_ae605a2e132ff37c29bff16a17956726f}\label{classaaciosystem_1_1delegate__bandwidth_ae605a2e132ff37c29bff16a17956726f}} 
+static constexpr time {\bfseries refund\+\_\+expiration\+\_\+time} = 3600
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+contracts/aacio.\+system/\mbox{\hyperlink{delegate__bandwidth_8hpp}{delegate\+\_\+bandwidth.\+hpp}}\end{DoxyCompactItemize}
