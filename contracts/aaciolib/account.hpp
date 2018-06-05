@@ -1,6 +1,6 @@
 /**
 * @file account.hpp
-* @copyright defined in AcuteAngleChain/LICENSE.txt
+* @copyright defined in Acute-Angle-Chain/LICENSE.txt
 * @brief Defines types and ABI for account API interactions
 *
 */

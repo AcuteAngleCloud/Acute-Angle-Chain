@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/chain/wast_to_wasm.hpp>
 #include <Inline/BasicTypes.h>

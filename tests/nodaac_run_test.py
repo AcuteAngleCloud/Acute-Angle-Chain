@@ -605,7 +605,7 @@ try:
 
     # TODO: Approving producers currently not supported
     # approve producer
-    # INFO="$(programs/clAcuteAngleChain/claac --host $SERVER --port $PORT --wallet-port 8899 set producer inita testera approve)"
+    # INFO="$(programs/clAcute-Angle-Chain/claac --host $SERVER --port $PORT --wallet-port 8899 set producer inita testera approve)"
     # verifyErrorCode "claac approve producer"
 
     Print("Get account inita")
@@ -616,7 +616,7 @@ try:
 
     # TODO: Unapproving producers currently not supported
     # unapprove producer
-    # INFO="$(programs/clAcuteAngleChain/claac --host $SERVER --port $PORT --wallet-port 8899 set producer inita testera unapprove)"
+    # INFO="$(programs/clAcute-Angle-Chain/claac --host $SERVER --port $PORT --wallet-port 8899 set producer inita testera unapprove)"
     # verifyErrorCode "claac unapprove producer"
 
     #

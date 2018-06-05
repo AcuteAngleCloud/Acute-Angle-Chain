@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/wallet_api_plugin/wallet_api_plugin.hpp>
 #include <aacio/wallet_plugin/wallet_manager.hpp>

@@ -3,7 +3,7 @@
 import os
 import time
 
-PATH = '~/AcuteAngleChain/build/programs/claac/'
+PATH = '~/Acute-Angle-Chain/build/programs/claac/'
 PUSH_ACTION = PATH + 'claac push action '
 
 

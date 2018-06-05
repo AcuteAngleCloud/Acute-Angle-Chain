@@ -80,7 +80,7 @@ You will need your wallet unlocked for the rest of this tutorial.
 
 All new blockchains start out with a master key for the sole initial account, `aacio`. To interact with the blockchain you will need to import this initial account's private key into your wallet.
 
-Import the master key for the `aacio` account into your wallet.  The master key can be found in the `config.ini` file in the config folder for `nodaac`.  In this example, the default config folder is used.  On Linux systems, this will be in `~/.local/share/aacio/nodAcuteAngleChain/config` and on MacOS, this will be in `~/Library/Application Support/aacio/nodAcuteAngleChain/config`.
+Import the master key for the `aacio` account into your wallet.  The master key can be found in the `config.ini` file in the config folder for `nodaac`.  In this example, the default config folder is used.  On Linux systems, this will be in `~/.local/share/aacio/nodAcute-Angle-Chain/config` and on MacOS, this will be in `~/Library/Application Support/aacio/nodAcute-Angle-Chain/config`.
 
 ```
 $ claac wallet import 5Jgm1N6jp3iNbFM45kPtj66xmbqT9fSuVJgPWfnCSPgQanvW6mJ

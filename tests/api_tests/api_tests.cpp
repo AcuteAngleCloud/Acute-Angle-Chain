@@ -1,6 +1,6 @@
 /**
  *  @file api_tests.cpp
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <algorithm>
 #include <random>

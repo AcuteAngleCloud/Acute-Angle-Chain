@@ -79,7 +79,7 @@ cleanup()
 # result stored in HEAD_BLOCK_NUM
 getHeadBlockNum()
 {
-  INFO="$(programs/clAcuteAngleChain/claac get info)"
+  INFO="$(programs/clAcute-Angle-Chain/claac get info)"
   verifyErrorCode "claac get info"
   HEAD_BLOCK_NUM="$(echo "$INFO" | awk '/head_block_num/ {print $2}')"
   # remove trailing coma
@@ -126,21 +126,21 @@ echo endPort: $endPort
 port2=$startPort
 while [ $port2  -ne $endport ]; do
     echo Request block 1 from node on port $port2
-    TRANS_INFO="$(programs/clAcuteAngleChain/claac --port $port2 get block 1)"
+    TRANS_INFO="$(programs/clAcute-Angle-Chain/claac --port $port2 get block 1)"
     verifyErrorCode "claac get block"
     port2=`expr $port2 + 1`
 done
 
 # create 3 keys
-KEYS="$(programs/clAcuteAngleChain/claac create key)"
+KEYS="$(programs/clAcute-Angle-Chain/claac create key)"
 verifyErrorCode "claac create key"
 PRV_KEY1="$(echo "$KEYS" | awk '/Private/ {print $3}')"
 PUB_KEY1="$(echo "$KEYS" | awk '/Public/ {print $3}')"
-KEYS="$(programs/clAcuteAngleChain/claac create key)"
+KEYS="$(programs/clAcute-Angle-Chain/claac create key)"
 verifyErrorCode "claac create key"
 PRV_KEY2="$(echo "$KEYS" | awk '/Private/ {print $3}')"
 PUB_KEY2="$(echo "$KEYS" | awk '/Public/ {print $3}')"
-KEYS="$(programs/clAcuteAngleChain/claac create key)"
+KEYS="$(programs/clAcute-Angle-Chain/claac create key)"
 verifyErrorCode "claac create key"
 PRV_KEY3="$(echo "$KEYS" | awk '/Private/ {print $3}')"
 PUB_KEY3="$(echo "$KEYS" | awk '/Public/ {print $3}')"
@@ -150,20 +150,20 @@ fi
 
 
 # create wallet for inita
-PASSWORD_INITA="$(programs/clAcuteAngleChain/claac wallet create --name inita)"
+PASSWORD_INITA="$(programs/clAcute-Angle-Chain/claac wallet create --name inita)"
 verifyErrorCode "claac wallet create"
 # strip out password from output
 PASSWORD_INITA="$(echo "$PASSWORD_INITA" | awk '/PW/ {print $1}')"
 # remove leading/trailing quotes
 PASSWORD_INITA=${PASSWORD_INITA#\"}
 PASSWORD_INITA=${PASSWORD_INITA%\"}
-programs/clAcuteAngleChain/claac wallet import --name inita $INITA_PRV_KEY
+programs/clAcute-Angle-Chain/claac wallet import --name inita $INITA_PRV_KEY
 verifyErrorCode "claac wallet import"
-programs/clAcuteAngleChain/claac wallet import --name inita $PRV_KEY1
+programs/clAcute-Angle-Chain/claac wallet import --name inita $PRV_KEY1
 verifyErrorCode "claac wallet import"
-programs/clAcuteAngleChain/claac wallet import --name inita $PRV_KEY2
+programs/clAcute-Angle-Chain/claac wallet import --name inita $PRV_KEY2
 verifyErrorCode "claac wallet import"
-programs/clAcuteAngleChain/claac wallet import --name inita $PRV_KEY3
+programs/clAcute-Angle-Chain/claac wallet import --name inita $PRV_KEY3
 verifyErrorCode "claac wallet import"
 
 #
@@ -172,11 +172,11 @@ verifyErrorCode "claac wallet import"
 
 # create new account
 echo Creating account testera
-ACCOUNT_INFO="$(programs/clAcuteAngleChain/claac create account inita testera $PUB_KEY1 $PUB_KEY3)"
+ACCOUNT_INFO="$(programs/clAcute-Angle-Chain/claac create account inita testera $PUB_KEY1 $PUB_KEY3)"
 verifyErrorCode "claac create account"
 waitForNextBlock
 # verify account created
-ACCOUNT_INFO="$(programs/clAcuteAngleChain/claac get account testera)"
+ACCOUNT_INFO="$(programs/clAcute-Angle-Chain/claac get account testera)"
 verifyErrorCode "claac get account"
 count=`echo $ACCOUNT_INFO | grep -c "staked_balance"`
 if [ $count == 0 ]; then
@@ -189,7 +189,7 @@ echo Producing node port: $pPort
 while [ $port  -ne $endport ]; do
 
     echo Sending transfer request to node on port $port.
-    TRANSFER_INFO="$(programs/clAcuteAngleChain/claac transfer inita testera 975321 "test transfer")"
+    TRANSFER_INFO="$(programs/clAcute-Angle-Chain/claac transfer inita testera 975321 "test transfer")"
     verifyErrorCode "claac transfer"
     getTransactionId "$TRANSFER_INFO"
     echo Transaction id: $TRANS_ID
@@ -200,7 +200,7 @@ while [ $port  -ne $endport ]; do
     port2=$startPort
     while [ $port2  -ne $endport ]; do
 	echo Verifying transaction exists on node on port $port2
-   TRANS_INFO="$(programs/clAcuteAngleChain/claac --port $port2 get transaction $TRANS_ID)"
+   TRANS_INFO="$(programs/clAcute-Angle-Chain/claac --port $port2 get transaction $TRANS_ID)"
    verifyErrorCode "claac get transaction trans_id of <$TRANS_INFO> from node on port $port2"
 	port2=`expr $port2 + 1`
     done

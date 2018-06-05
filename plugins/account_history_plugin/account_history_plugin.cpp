@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/account_history_plugin/account_history_plugin.hpp>
 #include <aacio/account_history_plugin/account_control_history_object.hpp>

@@ -1,6 +1,6 @@
 /**
  *  @file datastream.hpp
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #pragma once
 #include <aaciolib/system.h>

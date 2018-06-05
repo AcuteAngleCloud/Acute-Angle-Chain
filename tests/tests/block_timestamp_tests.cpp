@@ -1,10 +1,10 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 
 #include <boost/test/unit_test.hpp>
-#include <AcuteAngleChain/chain/block_timestamp.hpp>
+#include <Acute-Angle-Chain/chain/block_timestamp.hpp>
 #include <fc/time.hpp>
 #include <fc/exception/exception.hpp>
 

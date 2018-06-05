@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include <AcuteAngleChain/utilities/git_revision.hpp>
+#include <Acute-Angle-Chain/utilities/git_revision.hpp>
 
 #define AAC_GIT_REVISION_SHA "@AAC_GIT_REVISION_SHA@"
 #define AAC_GIT_REVISION_UNIX_TIMESTAMP @AAC_GIT_REVISION_UNIX_TIMESTAMP@

@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/chain_api_plugin/chain_api_plugin.hpp>
 #include <aacio/chain/exceptions.hpp>

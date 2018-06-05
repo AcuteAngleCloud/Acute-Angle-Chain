@@ -4,7 +4,7 @@ import time
 from timeit import timeit
 #import timeit
 
-PATH = '~/AcuteAngleChain/build/programs/claac/'
+PATH = '~/Acute-Angle-Chain/build/programs/claac/'
 
 accListfrom = []
 for line in open('acc_from'):

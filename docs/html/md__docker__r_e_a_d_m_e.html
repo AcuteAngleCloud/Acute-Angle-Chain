@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AcuteAngleChain: Run in docker</title>
+<title>Acute-Angle-Chain: Run in docker</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="aac-logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">AcuteAngleChain
+   <div id="projectname">Acute-Angle-Chain
    </div>
   </td>
  </tr>
@@ -77,7 +77,7 @@ $(function() {
 <li>At least 8GB RAM (Docker -&gt; Preferences -&gt; Advanced -&gt; Memory -&gt; 8GB or above)</li>
 </ul>
 <h2>Build aac image</h2>
-<div class="fragment"><div class="line">git clone https://github.com/AACIO/aac.git --recursive</div><div class="line">cd AcuteAngleChain/Docker</div><div class="line">docker build . -t aacio/aac</div></div><!-- fragment --><h2>Start nodaac docker container only</h2>
+<div class="fragment"><div class="line">git clone https://github.com/AACIO/aac.git --recursive</div><div class="line">cd Acute-Angle-Chain/Docker</div><div class="line">docker build . -t aacio/aac</div></div><!-- fragment --><h2>Start nodaac docker container only</h2>
 <div class="fragment"><div class="line">docker run --name nodaac -p 8888:8888 -p 9876:9876 -t aacio/aac nodaacd.sh arg1 arg2</div></div><!-- fragment --><p>By default, all data is persisted in a docker volume. It can be deleted if the data is outdated or corrupted: </p><div class="fragment"><div class="line">$ docker inspect --format &#39;{{ range .Mounts }}{{ .Name }} {{ end }}&#39; nodaac</div><div class="line">fdc265730a4f697346fa8b078c176e315b959e79365fc9cbd11f090ea0cb5cbc</div><div class="line">$ docker volume rm fdc265730a4f697346fa8b078c176e315b959e79365fc9cbd11f090ea0cb5cbc</div></div><!-- fragment --><p>Alternately, you can directly mount host directory into the container </p><div class="fragment"><div class="line">docker run --name nodaac -v /path-to-data-dir:/opt/aacio/bin/data-dir -p 8888:8888 -p 9876:9876 -t aacio/aac nodaacd.sh arg1 arg2</div></div><!-- fragment --><h2>Get chain info</h2>
 <div class="fragment"><div class="line">curl http://127.0.0.1:8888/v1/chain/get_info</div></div><!-- fragment --><h2>Start both nodaac and kaacd containers</h2>
 <div class="fragment"><div class="line">docker volume create --name=nodaac-data-volume</div><div class="line">docker volume create --name=kaacd-data-volume</div><div class="line">docker-compose up -d</div></div><!-- fragment --><p>After <code>docker-compose up -d</code>, two services named <code>nodaacd</code> and <code>kaacd</code> will be started. nodaac service would expose ports 8888 and 9876 to the host. kaacd service does not expose any port to the host, it is only accessible to claac when runing claac is running inside the kaacd container as described in "Execute claac commands" section.</p>

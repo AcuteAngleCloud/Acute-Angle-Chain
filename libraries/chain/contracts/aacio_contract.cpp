@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/chain/contracts/aac_contract.hpp>
 #include <aacio/chain/contracts/contract_table_objects.hpp>

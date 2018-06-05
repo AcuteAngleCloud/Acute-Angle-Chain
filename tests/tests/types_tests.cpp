@@ -1,8 +1,8 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
-#include <AcuteAngleChain/types/type_parser.hpp>
+#include <Acute-Angle-Chain/types/type_parser.hpp>
 
 #include <boost/test/unit_test.hpp>
 

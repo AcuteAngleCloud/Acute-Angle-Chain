@@ -1,21 +1,21 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <boost/test/unit_test.hpp>
 #include <boost/program_options.hpp>
 #include <boost/signals2/shared_connection_block.hpp>
 
-#include <AcuteAngleChain/chain/account_object.hpp>
-#include <AcuteAngleChain/chain/producer_object.hpp>
-#include <AcuteAngleChain/chain/authority_checker.hpp>
-#include <AcuteAngleChain/producer_plugin/producer_plugin.hpp>
+#include <Acute-Angle-Chain/chain/account_object.hpp>
+#include <Acute-Angle-Chain/chain/producer_object.hpp>
+#include <Acute-Angle-Chain/chain/authority_checker.hpp>
+#include <Acute-Angle-Chain/producer_plugin/producer_plugin.hpp>
 
-#include <AcuteAngleChain/utilities/tempdir.hpp>
+#include <Acute-Angle-Chain/utilities/tempdir.hpp>
 
-#include <AcuteAngleChain/native_contract/native_contract_chain_initializer.hpp>
-#include <AcuteAngleChain/native_contract/native_contract_chain_administrator.hpp>
-#include <AcuteAngleChain/native_contract/objects.hpp>
+#include <Acute-Angle-Chain/native_contract/native_contract_chain_initializer.hpp>
+#include <Acute-Angle-Chain/native_contract/native_contract_chain_administrator.hpp>
+#include <Acute-Angle-Chain/native_contract/objects.hpp>
 
 #include <fc/crypto/digest.hpp>
 #include <fc/smart_ref_impl.hpp>

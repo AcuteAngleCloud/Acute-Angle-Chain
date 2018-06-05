@@ -74,7 +74,7 @@ ui_refresh = setInterval( () => {
         <li>You have started parity or geth with <br/><code>--rpccorsdomain '${current_url}'</code></li>
         <li>You have an ethereum node running at <code>${NODE}</code></li>
       </ul>
-      See <a href="https://github.com/AACIO/AcuteAngleChain/blob/master/programs/snapshot/readme.md">Readme</a> for more information
+      See <a href="https://github.com/AACIO/Acute-Angle-Chain/blob/master/programs/snapshot/readme.md">Readme</a> for more information
       </p>
       <p>Script will continue after it has accessed a running node.</p>
     `

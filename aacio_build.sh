@@ -201,7 +201,7 @@
 	if [ "$OS_NAME" == "CentOS Linux" ]; then
 		printf "\tsource /opt/rh/python33/enable\n"
 	fi
-	printf "\tcd ${HOME}/AcuteAngleChain/build; make test\n\n"
+	printf "\tcd ${HOME}/Acute-Angle-Chain/build; make test\n\n"
 	printf "\tFor more information:\n"
 	printf "\tAAC.IO website: https://aac.io\n"
 	printf "\tAAC.IO Telegram channel @ https://t.me/AACProject\n"

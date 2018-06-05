@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  *  @defgroup aacclienttool AACIO Command Line Client Reference
  *  @brief Tool for sending transactions and querying state from @ref nodaac
  *  @ingroup aacclienttool
@@ -18,7 +18,7 @@
 ```
 $ ./claac
 Command Line Interface to AACIO Client
-Usage: programs/clAcuteAngleChain/claac [OPTIONS] SUBCOMMAND
+Usage: programs/clAcute-Angle-Chain/claac [OPTIONS] SUBCOMMAND
 
 Options:
   -h,--help                   Print this help message and exit

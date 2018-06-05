@@ -3,13 +3,13 @@ import sys
 import os
 import time
 
-PATH = '~/AcuteAngleChain/build/programs/claac/'
+PATH = '~/Acute-Angle-Chain/build/programs/claac/'
 
-os.system(PATH + 'claac set contract aacio ~/AcuteAngleChain/build/contracts/aacio.bios -p aacio')
+os.system(PATH + 'claac set contract aacio ~/Acute-Angle-Chain/build/contracts/aacio.bios -p aacio')
 
 time.sleep(0.1)
 
-os.system(PATH + 'claac set contract aacio ~/AcuteAngleChain/build/contracts/aacio.system')
+os.system(PATH + 'claac set contract aacio ~/Acute-Angle-Chain/build/contracts/aacio.system')
 
 time.sleep(0.1)
 
@@ -27,7 +27,7 @@ os.system(PATH + 'claac create account aacio currency AAC8gRM5BUu1DmggPXvF4EA6dP
 time.sleep(0.1)
 
 print("set contract currency")
-os.system(PATH + 'claac set contract currency ~/AcuteAngleChain/build/contracts/currency')
+os.system(PATH + 'claac set contract currency ~/Acute-Angle-Chain/build/contracts/currency')
 
 time.sleep(0.1)
 

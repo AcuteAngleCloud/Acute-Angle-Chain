@@ -3,7 +3,7 @@
 import os
 import time
 
-PATH = '~/AcuteAngleChain/build/programs/claac/'
+PATH = '~/Acute-Angle-Chain/build/programs/claac/'
 
 accList = []
 for line in open('acc_keys'):

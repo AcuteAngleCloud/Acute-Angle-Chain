@@ -1,10 +1,10 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
-#include <AcuteAngleChain/app/application.hpp>
+#include <Acute-Angle-Chain/app/application.hpp>
 
-#include <AcuteAngleChain/debug_producer/debug_producer.hpp>
+#include <Acute-Angle-Chain/debug_producer/debug_producer.hpp>
 
 #include <fc/exception/exception.hpp>
 #include <fc/thread/thread.hpp>

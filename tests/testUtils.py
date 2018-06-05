@@ -24,13 +24,13 @@ class Utils:
     Debug=False
     FNull = open(os.devnull, 'w')
 
-    AacClientPath="programs/clAcuteAngleChain/claac"
+    AacClientPath="programs/clAcute-Angle-Chain/claac"
 
     AacWalletName="kaacd"
     AacWalletPath="programs/kaacd/"+ AacWalletName
 
     AacServerName="nodaac"
-    AacServerPath="programs/nodAcuteAngleChain/"+ AacServerName
+    AacServerPath="programs/nodAcute-Angle-Chain/"+ AacServerName
 
     AacLauncherPath="programs/aacio-launcher/aacio-launcher"
     MongoPath="mongo"

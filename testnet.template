@@ -46,7 +46,7 @@ ecmd () {
     echo ===== Start: $step ============ >> $logfile
     echo executing: claac --wallet-port $wdport -p $biosport  -H $bioshost $* | tee -a $logfile
     echo ----------------------- >> $logfile
-    programs/clAcuteAngleChain/claac --wallet-port $wdport --wallet-host $wdhost -p $biosport  -H $bioshost $* >> $logfile 2>&1
+    programs/clAcute-Angle-Chain/claac --wallet-port $wdport --wallet-host $wdhost -p $biosport  -H $bioshost $* >> $logfile 2>&1
     echo ==== End: $step ============== >> $logfile
     step=$(($step + 1))
 }
@@ -91,7 +91,7 @@ ecmd set contract aacio contracts/aacio.bios contracts/aacio.bios/aacio.bios.was
 echo ===== Start: $step ============ >> $logfile
 echo executing: claac --wallet-port $wdport -p $biosport -H $bioshost push action aacio setprods setprods.json -p aacio@active | tee -a $logfile
 echo ----------------------- >> $logfile
-programs/clAcuteAngleChain/claac --wallet-port $wdport --wallet-host $wdhost -p $biosport -H $bioshost push action aacio setprods setprods.json -p aacio@active >> $logfile 2>&1
+programs/clAcute-Angle-Chain/claac --wallet-port $wdport --wallet-host $wdhost -p $biosport -H $bioshost push action aacio setprods setprods.json -p aacio@active >> $logfile 2>&1
 echo ==== End: $step ============== >> $logfile
 step=$(($step + 1))
 
@@ -100,7 +100,7 @@ ecmd set contract aacio contracts/aacio.system contracts/aacio.system/aacio.syst
 echo ===== Start: $step ============ >> $logfile
 echo executing: claac --wallet-port $wdport -p $biosport -H $bioshost push action aacio issue '{"to":"aacio","quantity":"1000000000.0000 AAC","memo":"init"}' -p aacio@active | tee -a $logfile
 echo ----------------------- >> $logfile
-programs/clAcuteAngleChain/claac --wallet-port $wdport --wallet-host $wdhost -p $biosport -H $bioshost push action aacio issue '{"to":"aacio","quantity":"1000000000.0000 AAC","memo":"init"}' -p aacio@active >> $logfile 2>&1
+programs/clAcute-Angle-Chain/claac --wallet-port $wdport --wallet-host $wdhost -p $biosport -H $bioshost push action aacio issue '{"to":"aacio","quantity":"1000000000.0000 AAC","memo":"init"}' -p aacio@active >> $logfile 2>&1
 echo ==== End: $step ============== >> $logfile
 step=$(($step + 1))
 

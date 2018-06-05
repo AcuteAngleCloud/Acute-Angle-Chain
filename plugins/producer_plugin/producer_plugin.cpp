@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/producer_plugin/producer_plugin.hpp>
 #include <aacio/net_plugin/net_plugin.hpp>

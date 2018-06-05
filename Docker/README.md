@@ -13,7 +13,7 @@ Simple and fast setup of AAC.IO on Docker is also available.
 
 ```bash
 git clone https://github.com/AACIO/aac.git --recursive
-cd AcuteAngleChain/Docker
+cd Acute-Angle-Chain/Docker
 docker build . -t aacio/aac
 ```
 

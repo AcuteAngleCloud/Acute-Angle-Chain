@@ -2,7 +2,7 @@
 import sys
 import os
 
-PATH = '~/AcuteAngleChain/build/programs/claac/'
+PATH = '~/Acute-Angle-Chain/build/programs/claac/'
 
 for line in open('walt_pin'):
     l = line.strip().split(',')

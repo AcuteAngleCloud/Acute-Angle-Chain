@@ -1,6 +1,6 @@
 /**
  *  @file db.h
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  *  @brief Defines C API for interfacing with blockchain database
  */
 #pragma once

@@ -54,7 +54,7 @@ fi
 
 total_nodes="${total_nodes:-`echo $pnodes`}"
 launcherPath="programs/aacio-launcher/aacio-launcher"
-clientPath="programs/clAcuteAngleChain/claac"
+clientPath="programs/clAcute-Angle-Chain/claac"
 
 rm -rf etc/aacio/node_* var/lib/* stage
 ls -l etc/aacio var/lib

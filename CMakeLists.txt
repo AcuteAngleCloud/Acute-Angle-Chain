@@ -1,7 +1,7 @@
 cmake_minimum_required( VERSION 3.5 )
 
-# Defines AcuteAngleChain library target.
-project( AcuteAngleChain )
+# Defines Acute-Angle-Chain library target.
+project( Acute-Angle-Chain )
 
 enable_testing()
 
@@ -13,7 +13,7 @@ include( VersionMacros )
 include( SetupTargetMacros )
 include( InstallDirectoryPermissions )
 
-set( BLOCKCHAIN_NAME "AcuteAngleChain" )
+set( BLOCKCHAIN_NAME "Acute-Angle-Chain" )
 set( CMAKE_CXX_STANDARD 14 )
 set( CMAKE_CXX_EXTENSIONS ON )
 set( CXX_STANDARD_REQUIRED ON)
@@ -101,7 +101,7 @@ FIND_PACKAGE(Boost 1.66 REQUIRED COMPONENTS
 
 if( WIN32 )
 
-    message( STATUS "Configuring AcuteAngleChain on WIN32")
+    message( STATUS "Configuring Acute-Angle-Chain on WIN32")
     set( DB_VERSION 60 )
     set( BDB_STATIC_LIBS 1 )
 
@@ -136,11 +136,11 @@ else( WIN32 ) # Apple AND Linux
 
     if( APPLE )
         # Apple Specific Options Here
-        message( STATUS "Configuring AcuteAngleChain on OS X" )
+        message( STATUS "Configuring Acute-Angle-Chain on OS X" )
         set( CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -Wall -Wno-deprecated-declarations" )
     else( APPLE )
         # Linux Specific Options Here
-        message( STATUS "Configuring AcuteAngleChain on Linux" )
+        message( STATUS "Configuring Acute-Angle-Chain on Linux" )
         set( CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -Wall" )
         if ( FULL_STATIC_BUILD )
           set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static-libstdc++ -static-libgcc")
@@ -169,7 +169,7 @@ else( WIN32 ) # Apple AND Linux
 
 endif( WIN32 )
 
-set(ENABLE_COVERAGE_TESTING FALSE CACHE BOOL "Build AcuteAngleChain for code coverage analysis")
+set(ENABLE_COVERAGE_TESTING FALSE CACHE BOOL "Build Acute-Angle-Chain for code coverage analysis")
 
 if(ENABLE_COVERAGE_TESTING)
   SET(CMAKE_CXX_FLAGS "--coverage ${CMAKE_CXX_FLAGS}")

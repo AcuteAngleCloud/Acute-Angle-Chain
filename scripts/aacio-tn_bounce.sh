@@ -13,7 +13,7 @@
 
 pushd $AACIO_HOME
 
-if [ ! -f programs/nodAcuteAngleChain/nodaac ]; then
+if [ ! -f programs/nodAcute-Angle-Chain/nodaac ]; then
     echo unable to locate binary for nodaac
     exit 1
 fi

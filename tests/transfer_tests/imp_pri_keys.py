@@ -2,7 +2,7 @@
 
 import os
 
-PATH = '~/AcuteAngleChain/build/programs/claac/'
+PATH = '~/Acute-Angle-Chain/build/programs/claac/'
 
 for line in open('acc_from'):
     l = line.split(',')

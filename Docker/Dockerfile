@@ -13,7 +13,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssl 
 COPY --from=builder /usr/local/lib/* /usr/local/lib/
 COPY --from=builder /tmp/build/bin /opt/aacio/bin
 COPY --from=builder /tmp/build/contracts /contracts
-COPY --from=builder /AcuteAngleChain/Docker/config.ini /AcuteAngleChain/genesis.json /
+COPY --from=builder /Acute-Angle-Chain/Docker/config.ini /Acute-Angle-Chain/genesis.json /
 COPY nodaacd.sh /opt/aacio/bin/nodaacd.sh
 ENV AACIO_ROOT=/opt/aacio
 RUN chmod +x /opt/aacio/bin/nodaacd.sh

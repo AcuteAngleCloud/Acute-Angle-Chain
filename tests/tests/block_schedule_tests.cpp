@@ -1,11 +1,11 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 
 #include <boost/test/unit_test.hpp>
 
-#include <AcuteAngleChain/chain/block_schedule.hpp>
+#include <Acute-Angle-Chain/chain/block_schedule.hpp>
 #include "../common/expect.hpp"
 
 using namespace aacio;

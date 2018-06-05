@@ -1,6 +1,6 @@
 /**
  *    @file test_compiler_builtins.cpp
- *    @copyright defined in AcuteAngleChain/LICENSE.txt
+ *    @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 
 #include <aaciolib/aacio.hpp>

@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  *  @brief launch testnet nodes
  **/
 #include <string>
@@ -1395,7 +1395,7 @@ launcher_def::launch (aacd_def &instance, string &gts) {
   node_rt_info info;
   info.remote = !host->is_local();
 
-  string aacdcmd = "programs/nodAcuteAngleChain/nodaac ";
+  string aacdcmd = "programs/nodAcute-Angle-Chain/nodaac ";
   if (skip_transaction_signatures) {
     aacdcmd += "--skip-transaction-signatures ";
   }

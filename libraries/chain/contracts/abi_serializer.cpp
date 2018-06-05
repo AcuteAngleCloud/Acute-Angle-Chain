@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/chain/contracts/abi_serializer.hpp>
 #include <aacio/chain/contracts/chain_initializer.hpp>

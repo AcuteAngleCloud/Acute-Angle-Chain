@@ -1,6 +1,6 @@
 /**
  *  @file
- *  @copyright defined in AcuteAngleChain/LICENSE.txt
+ *  @copyright defined in Acute-Angle-Chain/LICENSE.txt
  */
 #include <aacio/txn_test_gen_plugin/txn_test_gen_plugin.hpp>
 #include <aacio/chain_plugin/chain_plugin.hpp>
