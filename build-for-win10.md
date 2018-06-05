@@ -1,6 +1,6 @@
 环境准备：
 安装cygWin，选择LLVM版本为4.0，boost版本选择1.66
-
+```
 1、运行cygWin，使用git clone https://github.com/AcuteAngleCloud/Acute-Angle-Chain
 2、cd Acute-Angle-Chain，mkdir build
 3、cd build
@@ -17,3 +17,4 @@
 10、编译kaacd (在build文件夹下运行make kaacd)
 11、编译claac (在build文件夹下运行make claac)
 12、其它模块不用编译，智能合约可以和Ubuntu下编译的共用，直接将在Ubuntu下编译好的智能合约拷贝到build文件夹下的contracts中即可（原有文件删掉）
+```
