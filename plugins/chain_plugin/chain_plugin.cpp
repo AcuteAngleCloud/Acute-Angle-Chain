@@ -402,6 +402,37 @@ fc::variant read_only::get_block(const read_only::get_block_params& params) cons
            ("ref_block_prefix", ref_block_prefix);
 }
 
+vector<fc::variant> read_only::get_blocks(const read_only::get_blocks_params& params) const {
+   vector<fc::variant> results;
+   uint64_t lower_block_num = fc::to_uint64(params.lower_block_num);
+   uint64_t upper_block_num = fc::to_uint64(params.upper_block_num);
+   if (upper_block_num < lower_block_num) {
+	   upper_block_num = lower_block_num;
+   }
+   if (upper_block_num > (lower_block_num + 39)) {
+	   upper_block_num = lower_block_num + 39;
+   }
+   for (uint64_t i = lower_block_num; i <= upper_block_num; i++) {
+       optional<signed_block> block;
+       try {
+           block = db.fetch_block_by_number(i);
+       } AAC_RETHROW_EXCEPTIONS(chain::block_id_type_exception, "Invalid block ID: ${i}", ("i", i))
+
+       if (!block)
+          FC_THROW_EXCEPTION(unknown_block_exception,
+                      "Could not find block: ${block}", ("block", i));
+
+       fc::variant pretty_output;
+       abi_serializer::to_variant(*block, pretty_output, make_resolver(this));
+       uint32_t ref_block_prefix = block->id()._hash[1];
+       results.push_back(fc::mutable_variant_object(pretty_output.get_object())
+               ("id", block->id())
+               ("block_num",block->block_num())
+               ("ref_block_prefix", ref_block_prefix));
+   }
+   return results;
+}
+
 read_write::push_block_results read_write::push_block(const read_write::push_block_params& params) {
    db.push_block(params, skip_nothing);
    return read_write::push_block_results();
