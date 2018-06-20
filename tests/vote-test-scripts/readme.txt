@@ -14,7 +14,7 @@
 3、cre_acc.py
 创建52个账户（26个producer,26个用来给producer投票的账户），账户和密钥信息在acc_keys文件中读取
 
-4、issue_eos.py
+4、issue_aac.py
 发行EOS，给新创建的52个账户发放EOS，每个账户1000000.0000 AAC
 
 5、reg_producers.py
