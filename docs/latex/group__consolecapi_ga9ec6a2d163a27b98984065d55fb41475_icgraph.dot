@@ -1,9 +1,0 @@
-digraph "printn"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node9 [label="printn",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node10 [label="aacio::print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$print_8hpp.html#a6ab43adada8fec6e1d7741ea10486c70",tooltip="Prints a 64 bit names as base32 encoded string. "];
-}

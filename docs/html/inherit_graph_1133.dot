@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="fc::json_relaxed::CharValue\lTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structfc_1_1json__relaxed_1_1_char_value_table.html"];
-}

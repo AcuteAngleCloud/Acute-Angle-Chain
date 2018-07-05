@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="aacio::multi_index\l\< N(margins), margin\l_position, indexed_by\l\< N(callprice), aacio\l::const_mem_fun\< margin\l_position, uint64_t, &margin\l_position::get_call \> \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1multi__index.html"];
-}

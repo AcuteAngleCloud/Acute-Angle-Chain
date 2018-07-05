@@ -1,9 +1,0 @@
-digraph "websocketpp::transport::stub::connection::async_read_at_least"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="websocketpp::transport\l::stub::connection::async\l_read_at_least",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
-  Node1 [label="websocketpp::log::stub\l::write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1log_1_1stub.html#ae14dd42a83305f2dd9c03fc5018c88ee",tooltip="Write a string message to the given channel. "];
-}

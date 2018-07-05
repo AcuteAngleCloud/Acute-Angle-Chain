@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="deflate_config::permessage\l_deflate_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structdeflate__config_1_1permessage__deflate__config.html",tooltip="permessage_compress extension "];
-}

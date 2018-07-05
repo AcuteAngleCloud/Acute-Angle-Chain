@@ -1,9 +1,0 @@
-digraph "aacio::chain_apis::read_only::get_code_params"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="aacio::chain_apis::\lread_only::get_code\l_params",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" account_name" ,fontname="Helvetica"];
-  Node2 [label="aacio::name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1name.html",tooltip="wraps a uint64_t to ensure it is only passed to methods that expect a Name "];
-  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" value" ,fontname="Helvetica"];
-}

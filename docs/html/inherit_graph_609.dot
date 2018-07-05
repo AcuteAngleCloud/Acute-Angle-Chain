@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="boost::asio::handler\l_type\< fibers::asio::\lyield_t, ReturnType(Arg1) \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structboost_1_1asio_1_1handler__type_3_01fibers_1_1asio_1_1yield__t_00_01_return_type_07_arg1_08_01_4.html"];
-}

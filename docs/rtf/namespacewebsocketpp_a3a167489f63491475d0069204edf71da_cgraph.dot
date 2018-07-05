@@ -1,9 +1,0 @@
-digraph "websocketpp::base64_encode"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node9 [label="websocketpp::base64\l_encode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="websocketpp::base64\l_encode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp.html#aff36d40583424a2c879df02219133af8",tooltip="Encode a char buffer into a base64 string. "];
-}

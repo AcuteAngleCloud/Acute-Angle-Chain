@@ -1,9 +1,0 @@
-digraph "libraries/chain/include/aacio/chain/contracts" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_5e5a8abd8323164ddd44ecd837dd6725 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="chain" fontname="Helvetica", fontsize="10", URL="dir_5e5a8abd8323164ddd44ecd837dd6725.html"]
-  dir_5df8e46ab74b0bc110c3b2bcb60af871 [shape=box, label="contracts", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5df8e46ab74b0bc110c3b2bcb60af871.html"];
-  }
-}

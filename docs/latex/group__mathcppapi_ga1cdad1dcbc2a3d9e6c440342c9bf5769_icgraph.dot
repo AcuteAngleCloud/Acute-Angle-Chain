@@ -1,9 +1,0 @@
-digraph "aacio::max"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node4 [label="aacio::max",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node5 [label="aacio::chain::fork\l_database::set_max_size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1fork__database.html#af7877508fbed8bde99d84a582993494c"];
-}

@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="websocketpp::utf8_validator\l::validator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1utf8__validator_1_1validator.html",tooltip="Provides streaming UTF8 validation functionality. "];
-}

@@ -1,9 +1,0 @@
-digraph "double_lt"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node16 [label="double_lt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node17 [label="aacio::operator\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__real.html#gaef11411f358f9f1a3b8c8e52fdf3c5f3",tooltip="Compares two double variables c1 and c2. "];
-}

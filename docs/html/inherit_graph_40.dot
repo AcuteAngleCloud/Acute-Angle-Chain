@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="aacio::account_history\l_apis::read_only::get\l_key_accounts_results",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1account__history__apis_1_1read__only_1_1get__key__accounts__results.html"];
-}

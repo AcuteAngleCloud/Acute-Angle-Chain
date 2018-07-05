@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="aacio::chain::webassembly\l::wavm::intrinsic_function\l_invoker\< WasmSig, void, MethodSig,\l Cls, Params... \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1chain_1_1webassembly_1_1wavm_1_1intrinsic__function__invoker_3_01_wasm_sig_00_01vd3c3b831951ee6790b5589afecfb1c9b.html"];
-}

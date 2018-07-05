@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="TestHelper\< CharT, 2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_test_helper_3_01_char_t_00_012_01_4.html"];
-}

@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="boost::test_tools::\ltt_detail::print_log\l_value\< fc::variant_object \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structboost_1_1test__tools_1_1tt__detail_1_1print__log__value_3_01fc_1_1variant__object_01_4.html"];
-}

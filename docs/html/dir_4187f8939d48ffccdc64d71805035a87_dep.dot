@@ -1,9 +1,0 @@
-digraph "libraries/chain/include/aacio/chain/webassembly" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_5e5a8abd8323164ddd44ecd837dd6725 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="chain" fontname="Helvetica", fontsize="10", URL="dir_5e5a8abd8323164ddd44ecd837dd6725.html"]
-  dir_4187f8939d48ffccdc64d71805035a87 [shape=box, label="webassembly", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4187f8939d48ffccdc64d71805035a87.html"];
-  }
-}

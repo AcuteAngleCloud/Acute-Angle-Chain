@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="fc::rpc::json_connection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1rpc_1_1json__connection.html",tooltip="Implements JSON-RPC 2.0 over a set of io streams. "];
-}

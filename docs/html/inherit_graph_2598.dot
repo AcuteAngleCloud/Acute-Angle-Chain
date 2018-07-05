@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="websocketpp::random\l::none::int_generator\l\< int_type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1random_1_1none_1_1int__generator.html",tooltip="Thread safe stub \"random\" integer generator. "];
-}

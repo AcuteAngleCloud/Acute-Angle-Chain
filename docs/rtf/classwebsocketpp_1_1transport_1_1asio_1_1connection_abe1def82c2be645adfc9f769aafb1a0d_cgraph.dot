@@ -1,9 +1,0 @@
-digraph "websocketpp::transport::asio::connection::set_uri"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node79 [label="websocketpp::transport\l::asio::connection::set_uri",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node79 -> Node80 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node80 [label="websocketpp::transport\l::asio::tls_socket::connection\l::set_uri",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1transport_1_1asio_1_1tls__socket_1_1connection.html#a8cb70301d7d244a72ed1ca90872253ed",tooltip="Set hostname hook. "];
-}

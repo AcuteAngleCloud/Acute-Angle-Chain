@@ -1,9 +1,0 @@
-digraph "libraries/fc/vendor/websocketpp/websocketpp/processors" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_95af1d7cea13b3863b4bc602f8c027db {
-    graph [ bgcolor="#ddddee", pencolor="black", label="websocketpp" fontname="Helvetica", fontsize="10", URL="dir_95af1d7cea13b3863b4bc602f8c027db.html"]
-  dir_6decf324f1905ad12b9930d642547be7 [shape=box, label="processors", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_6decf324f1905ad12b9930d642547be7.html"];
-  }
-}

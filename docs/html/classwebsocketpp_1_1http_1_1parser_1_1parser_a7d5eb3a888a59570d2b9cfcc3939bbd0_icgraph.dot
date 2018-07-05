@@ -1,9 +1,0 @@
-digraph "websocketpp::http::parser::parser::body_ready"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node9 [label="websocketpp::http::\lparser::parser::body_ready",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="websocketpp::http::\lparser::request::consume",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classwebsocketpp_1_1http_1_1parser_1_1request.html#abd9cae6f44634d62253d806d982ab1d6",tooltip="Process bytes in the input buffer. "];
-}

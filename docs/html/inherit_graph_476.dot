@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="aacio::uint128",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structaacio_1_1uint128.html",tooltip="A struct that wraps uint128 integer and defines common operator overloads. "];
-}

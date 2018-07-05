@@ -1,6 +1,0 @@
-add_subdirectory( nodaac )
-add_subdirectory( claac )
-add_subdirectory( kaacd )
-add_subdirectory( aacio-launcher )
-add_subdirectory( aacio-applesedemo )
-add_subdirectory( aacio-abigen )

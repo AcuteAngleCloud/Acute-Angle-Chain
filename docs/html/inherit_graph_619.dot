@@ -1,7 +1,0 @@
-digraph "Graphical Class Hierarchy"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node0 [label="boost::pfr::detail\l::do_not_define_std\l_tuple_size_for_me",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structboost_1_1pfr_1_1detail_1_1do__not__define__std__tuple__size__for__me.html"];
-}

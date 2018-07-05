@@ -1,9 +1,0 @@
-digraph "websocketpp::http::parser::response::set_status"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node16 [label="websocketpp::http::\lparser::response::set\l_status",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node16 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
-  Node17 [label="websocketpp::close\l::status::get_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacewebsocketpp_1_1close_1_1status.html#a4bf4987c79165b134ed1207a567ce209",tooltip="Return a human readable interpretation of a WebSocket close code. "];
-}

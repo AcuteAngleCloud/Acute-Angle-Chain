@@ -1,9 +1,0 @@
-digraph "aacio::chain::contracts::impl::abi_from_variant::extract"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node4 [label="aacio::chain::contracts\l::impl::abi_from_variant\l::extract",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
-  Node5 [label="fc::variant::get_array",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classfc_1_1variant.html#aea83c87e4e1b1e185f57717b4bd683a5"];
-}

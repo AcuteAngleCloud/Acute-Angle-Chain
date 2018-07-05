@@ -1,9 +1,0 @@
-digraph "aacio::chain::chain_controller::_push_block"
-{
-  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node6 [label="aacio::chain::chain\l_controller::_push_block",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="aacio::chain::chain\l_controller::push_block",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classaacio_1_1chain_1_1chain__controller.html#a23d273b6ef29d0c5c9f9f0bf61774024"];
-}
