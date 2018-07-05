@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  builder:
+    build:
+      context: builder
+    image: aacio/builder
+
+  nodaacd:
+    build:
+      context: .
+    image: aacio/aac
+    command: /opt/aacio/bin/nodaacd.sh --data-dir /opt/aacio/bin/data-dir -e
+    hostname: nodaacd
+    ports:
+      - 8888:8888
+      - 9876:9876
+    expose:
+      - "8888"
+    volumes:
+      - nodaac-data-volume:/opt/aacio/bin/data-dir
+
+  kaacd:
+    image: aacio/aac
+    command: /opt/aacio/bin/kaacd --wallet-dir /opt/aacio/bin/data-dir --http-server-address=127.0.0.1:8900
+    hostname: kaacd
+    links:
+      - nodaacd
+    volumes:
+      - kaacd-data-volume:/opt/aacio/bin/data-dir
+
+volumes:
+  nodaac-data-volume:
+    external: true
+  kaacd-data-volume:
+    external: true
