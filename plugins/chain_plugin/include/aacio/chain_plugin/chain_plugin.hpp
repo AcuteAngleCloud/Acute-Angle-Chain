@@ -197,6 +197,13 @@ public:
 
    fc::variant get_block(const get_block_params& params) const;
 
+   struct get_blocks_params {
+      string lower_block_num;
+      string upper_block_num;
+   };
+
+   vector<fc::variant> get_blocks(const get_blocks_params& params) const;
+
    struct get_block_header_state_params {
       string block_num_or_id;
    };
@@ -408,6 +415,7 @@ FC_REFLECT(aacio::chain_apis::empty, )
 FC_REFLECT(aacio::chain_apis::read_only::get_info_results,
 (server_version)(chain_id)(head_block_num)(last_irreversible_block_num)(last_irreversible_block_id)(head_block_id)(head_block_time)(head_block_producer)(virtual_block_cpu_limit)(virtual_block_net_limit)(block_cpu_limit)(block_net_limit) )
 FC_REFLECT(aacio::chain_apis::read_only::get_block_params, (block_num_or_id))
+FC_REFLECT(aacio::chain_apis::read_only::get_blocks_params, (lower_block_num)(upper_block_num))
 FC_REFLECT(aacio::chain_apis::read_only::get_block_header_state_params, (block_num_or_id))
 
 FC_REFLECT( aacio::chain_apis::read_write::push_transaction_results, (transaction_id)(processed) )
