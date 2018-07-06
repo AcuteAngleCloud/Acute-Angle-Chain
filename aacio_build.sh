@@ -271,11 +271,8 @@
 	print_instructions
 
 	printf "\\tFor more information:\\n"
-	printf "\\tAACIO website: https://aac.io\\n"
-	printf "\\tAACIO Telegram channel @ https://t.me/AACProject\\n"
-	printf "\\tAACIO resources: https://aac.io/resources/\\n"
-	printf "\\tAACIO Stack Exchange: https://aacio.stackexchange.com\\n"
-	printf "\\tAACIO wiki: https://github.com/AACIO/aac/wiki\\n\\n\\n"
+	printf "\\tAACIO website: http://www.acuteangle.com\\n"
+	printf "\\tAACIO resources: https://github.com/AcuteAngleCloud/Acute-Angle-Chain\\n"
 				
 	if [ "x${aacio_BUILD_PACKAGE}" != "x" ]; then
 	  # Build aac.io package
