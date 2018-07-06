@@ -1,12 +1,12 @@
 if(APPLE)
-add_executable( aacio-applesedemomain.cpp r1_signature_compactor.cpp )
+add_executable( aacio-applesedemo main.cpp r1_signature_compactor.cpp )
 
 
 target_link_libraries( aacio-applesedemo
         PRIVATE fc ${PLATFORM_SPECIFIC_LIBS} 
         )
 
-set_target_properties(aacio-applesedemoPROPERTIES LINK_FLAGS "-framework security -framework corefoundation")
+set_target_properties(aacio-applesedemo PROPERTIES LINK_FLAGS "-framework security -framework corefoundation")
 
 #Demostration of signing automatically during build; you will need to change parameters for your signing credentials
 #[[
