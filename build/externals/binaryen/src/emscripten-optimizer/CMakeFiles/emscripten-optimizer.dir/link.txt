@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc ../../lib/libemscripten-optimizer.a  CMakeFiles/emscripten-optimizer.dir/optimizer-shared.cpp.o CMakeFiles/emscripten-optimizer.dir/parser.cpp.o CMakeFiles/emscripten-optimizer.dir/simple_ast.cpp.o
+/usr/bin/ranlib.exe ../../lib/libemscripten-optimizer.a

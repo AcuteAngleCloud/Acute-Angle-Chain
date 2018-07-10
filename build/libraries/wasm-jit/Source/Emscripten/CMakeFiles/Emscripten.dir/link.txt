@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libEmscripten.a  CMakeFiles/Emscripten.dir/Emscripten.cpp.o
+/usr/bin/ranlib.exe libEmscripten.a

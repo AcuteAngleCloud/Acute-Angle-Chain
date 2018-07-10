@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc ../../lib/libsupport.a  CMakeFiles/support.dir/archive.cpp.o CMakeFiles/support.dir/bits.cpp.o CMakeFiles/support.dir/colors.cpp.o CMakeFiles/support.dir/command-line.cpp.o CMakeFiles/support.dir/file.cpp.o CMakeFiles/support.dir/safe_integer.cpp.o CMakeFiles/support.dir/threads.cpp.o
+/usr/bin/ranlib.exe ../../lib/libsupport.a

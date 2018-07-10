@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc ../../lib/libasmjs.a  CMakeFiles/asmjs.dir/asm_v_wasm.cpp.o CMakeFiles/asmjs.dir/shared-constants.cpp.o
+/usr/bin/ranlib.exe ../../lib/libasmjs.a

@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libtxn_test_gen_plugin.a  CMakeFiles/txn_test_gen_plugin.dir/txn_test_gen_plugin.cpp.o
+/usr/bin/ranlib.exe libtxn_test_gen_plugin.a

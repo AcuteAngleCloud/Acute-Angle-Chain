@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -fno-builtin-memcmp -O3 -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/infinite.tmp.dir/infinite.cpp.o  -o infinite.tmp.exe -Wl,--out-implib,libinfinite.tmp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

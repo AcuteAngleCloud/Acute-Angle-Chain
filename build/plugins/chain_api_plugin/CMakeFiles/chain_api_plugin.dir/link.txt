@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libchain_api_plugin.a  CMakeFiles/chain_api_plugin.dir/chain_api_plugin.cpp.o
+/usr/bin/ranlib.exe libchain_api_plugin.a

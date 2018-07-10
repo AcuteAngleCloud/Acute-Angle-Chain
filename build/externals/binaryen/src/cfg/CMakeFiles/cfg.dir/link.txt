@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc ../../lib/libcfg.a  CMakeFiles/cfg.dir/Relooper.cpp.o
+/usr/bin/ranlib.exe ../../lib/libcfg.a

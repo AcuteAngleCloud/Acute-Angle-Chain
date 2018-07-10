@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -fno-builtin-memcmp -O3 -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/Disassemble.dir/Disassemble.cpp.o  -o Disassemble.exe -Wl,--out-implib,libDisassemble.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ../Logging/libLogging.a ../IR/libIR.a ../WAST/libWAST.a ../WASM/libWASM.a ../IR/libIR.a ../Logging/libLogging.a ../Platform/libPlatform.a 

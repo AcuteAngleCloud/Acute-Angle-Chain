@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -fno-builtin-memcmp -O3 -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/dice.tmp.dir/dice.cpp.o  -o dice.tmp.exe -Wl,--out-implib,libdice.tmp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

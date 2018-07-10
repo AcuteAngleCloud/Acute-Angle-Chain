@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libPlatform.a  CMakeFiles/Platform.dir/POSIX.cpp.o CMakeFiles/Platform.dir/Windows.cpp.o
+/usr/bin/ranlib.exe libPlatform.a

@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc lib/libbinaryen.a  CMakeFiles/binaryen.dir/src/binaryen-c.cpp.o
+/usr/bin/ranlib.exe lib/libbinaryen.a

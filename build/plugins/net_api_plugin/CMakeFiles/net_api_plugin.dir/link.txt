@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libnet_api_plugin.a  CMakeFiles/net_api_plugin.dir/net_api_plugin.cpp.o
+/usr/bin/ranlib.exe libnet_api_plugin.a

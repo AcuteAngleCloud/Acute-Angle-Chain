@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libproducer_plugin.a  CMakeFiles/producer_plugin.dir/producer_plugin.cpp.o
+/usr/bin/ranlib.exe libproducer_plugin.a

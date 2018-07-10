@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libaac_utilities.a  CMakeFiles/aac_utilities.dir/key_conversion.cpp.o CMakeFiles/aac_utilities.dir/string_escape.cpp.o CMakeFiles/aac_utilities.dir/tempdir.cpp.o CMakeFiles/aac_utilities.dir/words.cpp.o
+/usr/bin/ranlib.exe libaac_utilities.a

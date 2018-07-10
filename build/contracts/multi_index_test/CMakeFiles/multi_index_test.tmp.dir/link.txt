@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -fno-builtin-memcmp -O3 -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/multi_index_test.tmp.dir/multi_index_test.cpp.o  -o multi_index_test.tmp.exe -Wl,--out-implib,libmulti_index_test.tmp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

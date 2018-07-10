@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libabi_generator.a  CMakeFiles/abi_generator.dir/abi_generator.cpp.o
+/usr/bin/ranlib.exe libabi_generator.a

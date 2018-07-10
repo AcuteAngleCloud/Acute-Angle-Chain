@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libbnet_plugin.a  CMakeFiles/bnet_plugin.dir/bnet_plugin.cpp.o
+/usr/bin/ranlib.exe libbnet_plugin.a

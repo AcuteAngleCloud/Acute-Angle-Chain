@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc ../../lib/libast.a  CMakeFiles/ast.dir/ExpressionAnalyzer.cpp.o CMakeFiles/ast.dir/ExpressionManipulator.cpp.o
+/usr/bin/ranlib.exe ../../lib/libast.a

@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libIR.a  CMakeFiles/IR.dir/DisassemblyNames.cpp.o CMakeFiles/IR.dir/Operators.cpp.o CMakeFiles/IR.dir/Types.cpp.o CMakeFiles/IR.dir/Validate.cpp.o
+/usr/bin/ranlib.exe libIR.a

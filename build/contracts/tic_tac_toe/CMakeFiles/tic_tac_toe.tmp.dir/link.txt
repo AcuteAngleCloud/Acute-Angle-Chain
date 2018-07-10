@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -fno-builtin-memcmp -O3 -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/tic_tac_toe.tmp.dir/tic_tac_toe.cpp.o  -o tic_tac_toe.tmp.exe -Wl,--out-implib,libtic_tac_toe.tmp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

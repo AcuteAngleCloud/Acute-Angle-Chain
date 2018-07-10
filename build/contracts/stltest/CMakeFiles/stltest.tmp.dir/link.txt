@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -Wall -fno-builtin-memcmp -O3 -DNDEBUG  -Wl,--enable-auto-import CMakeFiles/stltest.tmp.dir/stltest.cpp.o  -o stltest.tmp.exe -Wl,--out-implib,libstltest.tmp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

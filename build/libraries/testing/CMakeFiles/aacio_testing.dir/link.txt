@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libaacio_testing.a  CMakeFiles/aacio_testing.dir/tester.cpp.o CMakeFiles/aacio_testing.dir/tester_network.cpp.o
+/usr/bin/ranlib.exe libaacio_testing.a

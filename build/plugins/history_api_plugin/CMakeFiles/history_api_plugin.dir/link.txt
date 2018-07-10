@@ -1,0 +1,2 @@
+/usr/bin/ar.exe qc libhistory_api_plugin.a  CMakeFiles/history_api_plugin.dir/history_api_plugin.cpp.o
+/usr/bin/ranlib.exe libhistory_api_plugin.a
