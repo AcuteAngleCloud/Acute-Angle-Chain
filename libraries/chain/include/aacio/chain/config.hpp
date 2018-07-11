@@ -96,7 +96,7 @@ const static aacio::chain::wasm_interface::vm_type default_wasm_runtime = aacio:
 /**
  *  The number of sequential blocks produced by a single producer
  */
-const static int producer_repetitions = 12;
+const static int producer_repetitions = 6;
 const static int max_producers = 125;
 
 const static size_t maximum_tracked_dpos_confirmations = 1024;     ///<
