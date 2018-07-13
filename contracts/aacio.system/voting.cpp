@@ -76,10 +76,11 @@ namespace aaciosystem {
       auto idx = _producers.get_index<N(prototalvote)>();
 
       std::vector< std::pair<aacio::producer_key,uint16_t> > top_producers;
-      top_producers.reserve(21);
+      top_producers.reserve(31);  //top-bp 21->31 modified by ck 2018-7-12
 
-      for ( auto it = idx.cbegin(); it != idx.cend() && top_producers.size() < 21 && 0 < it->total_votes && it->active(); ++it ) {
-         top_producers.emplace_back( std::pair<aacio::producer_key,uint16_t>({{it->owner, it->producer_key}, it->location}) );
+      for (auto it = idx.cbegin(); it != idx.cend() && top_producers.size() < 31 && 0 < it->total_votes && it->active(); ++it) //top-bp 21->31 modified by ck 2018-7-12
+      { 
+            top_producers.emplace_back(std::pair<aacio::producer_key, uint16_t>({{it->owner, it->producer_key}, it->location}));
       }
 
       if ( top_producers.size() < _gstate.last_producer_schedule_size ) {
