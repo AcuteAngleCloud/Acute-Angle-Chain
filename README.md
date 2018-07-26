@@ -107,9 +107,9 @@ Refer to claac --help for detailed command-line instructions
 Mac OS: ~/Library/Application Support/aacio/nodaac/config
 Linux: ~/.local/share/aacio/nodaac/config
 ```
-The build seeds this folder with a default genesis.json file. A configuration folder can be specified using the --config-dir command line argument to nodeos. If you use this option, you will need to manually copy a genesis.json file to your config folder.
+The build seeds this folder with a default genesis.json file. A configuration folder can be specified using the --config-dir command line argument to nodaac. If you use this option, you will need to manually copy a genesis.json file to your config folder.
 
-nodaac will need a properly configured config.ini file in order to do meaningful work. On startup, nodeos looks in the config folder for config.ini. If one is not found, a default config.ini file is created. If you do not already have a config.ini file ready to use, run nodeos and then close it immediately with Ctrl-C. A default configuration (config.ini) will have been created in the config folder. Edit the config.ini file, adding/updating the following settings to the defaults already in place:
+nodaac will need a properly configured config.ini file in order to do meaningful work. On startup, nodaac looks in the config folder for config.ini. If one is not found, a default config.ini file is created. If you do not already have a config.ini file ready to use, run nodaac and then close it immediately with Ctrl-C. A default configuration (config.ini) will have been created in the config folder. Edit the config.ini file, adding/updating the following settings to the defaults already in place:
 ```
    # Load the testnet genesis state, which creates some initial block producers with the default key
    genesis-json = genesis.json
