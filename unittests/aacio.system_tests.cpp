@@ -682,7 +682,7 @@ BOOST_FIXTURE_TEST_CASE( producer_register_unregister, aacio_system_tester ) try
    issue( "alice1111111", core_from_string("1000.0000"),  config::system_account_name );
 
    //fc::variant params = producer_parameters_example(1);
-   auto key =  fc::crypto::public_key( std::string("AAC8VzFaGUEZBUXhEa6gkYhUgTifNfgx2XU9mFQbWz41MtTaZMyQD") );
+   auto key =  fc::crypto::public_key( std::string("AAC6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV") );
    BOOST_REQUIRE_EQUAL( success(), push_action(N(alice1111111), N(regproducer), mvo()
                                                ("producer",  "alice1111111")
                                                ("producer_key", key )
@@ -1694,7 +1694,7 @@ BOOST_FIXTURE_TEST_CASE(producers_upgrade_system_contract, aacio_system_tester) 
          action act;
          act.account = N(aacio.msig);
          act.name = name;
-         act.data = msig_abi_ser.variant_to_binary( action_type_name, data );
+         act.data = msig_abi_ser.variant_to_binary( action_type_name, data, abi_serializer_max_time );
 
          return base_tester::push_action( std::move(act), auth ? uint64_t(signer) : signer == N(bob111111111) ? N(alice1111111) : N(bob111111111) );
    };
@@ -1733,7 +1733,7 @@ BOOST_FIXTURE_TEST_CASE(producers_upgrade_system_contract, aacio_system_tester) 
                   )
                   })
          );
-      abi_serializer::from_variant(pretty_trx, trx, get_resolver());
+      abi_serializer::from_variant(pretty_trx, trx, get_resolver(), abi_serializer_max_time);
    }
 
    BOOST_REQUIRE_EQUAL(success(), push_action_msig( N(alice1111111), N(propose), mvo()
@@ -2455,7 +2455,7 @@ BOOST_FIXTURE_TEST_CASE( setparams, aacio_system_tester ) try {
          action act;
          act.account = N(aacio.msig);
          act.name = name;
-         act.data = msig_abi_ser.variant_to_binary( action_type_name, data );
+         act.data = msig_abi_ser.variant_to_binary( action_type_name, data, abi_serializer_max_time );
 
          return base_tester::push_action( std::move(act), auth ? uint64_t(signer) : signer == N(bob111111111) ? N(alice1111111) : N(bob111111111) );
    };
@@ -2491,7 +2491,7 @@ BOOST_FIXTURE_TEST_CASE( setparams, aacio_system_tester ) try {
                   )
                   })
          );
-      abi_serializer::from_variant(pretty_trx, trx, get_resolver());
+      abi_serializer::from_variant(pretty_trx, trx, get_resolver(), abi_serializer_max_time);
    }
 
    BOOST_REQUIRE_EQUAL(success(), push_action_msig( N(alice1111111), N(propose), mvo()

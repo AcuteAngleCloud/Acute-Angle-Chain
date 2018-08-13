@@ -112,7 +112,7 @@ sub write_config {
     if (defined $producer) {
         print $cfg "enable-stale-production = true\n";
         print $cfg "required-participation = true\n";
-        print $cfg "private-key = [\"AAC8VzFaGUEZBUXhEa6gkYhUgTifNfgx2XU9mFQbWz41MtTaZMyQD\",\"5KWg9t3fkjSsVavTMuMcS4H5jexieMpVjMPxKtD9i1X7pLpegnY\"]\n";
+        print $cfg "private-key = [\"AAC6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV\",\"5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3\"]\n";
 
         print $cfg "plugin = aacio::producer_plugin\n";
         print $cfg "plugin = aacio::chain_api_plugin\n";
@@ -202,7 +202,8 @@ sub launch_nodes {
         my @cmdline = ($aacd,
                        $gtsarg,
                        "--data-dir=$data_dir[$i]",
-                       "--verbose-http-errors");
+                       "--verbose-http-errors",
+                       "--http-validate-host=false");
         $pid[$i] = fork;
         if ($pid[$i] > 0) {
             my $pause = $i == 0 ? $first_pause : $launch_pause;

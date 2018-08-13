@@ -6,23 +6,25 @@
 namespace fc
 {
    class mutable_variant_object;
-   
+   //可变变异对象
+
    /**
-    *  @ingroup Serializable
+    *  @ingroup Serializable   //序列化
     *
-    *  @brief An order-perserving dictionary of variant's.  
+    *  @brief An order-perserving dictionary of variant's.  //一个保留订单的变体词典
     *
-    *  Keys are kept in the order they are inserted.
-    *  This dictionary implements copy-on-write
+    *  Keys are kept in the order they are inserted.    //key按插入顺序保存。
+    *  This dictionary implements copy-on-write   //这本字典实现了copy-on-write
     *
     *  @note This class is not optimized for random-access on large
     *        sets of key-value pairs.
+    * 此类未针对大型键值对的随机访问进行优化。
     */
-   class variant_object
+   class variant_object    //变量对象类
    {
    public:
-      /** @brief a key/value pair */
-      class entry 
+      /** @brief a key/value pair */    //一个键值对
+      class entry //输入，条目类
       {
       public:
          entry();
@@ -53,10 +55,11 @@ namespace fc
       typedef std::vector< entry >::const_iterator iterator;
 
       /**
-         * @name Immutable Interface
+         * @name Immutable Interface   //不可变接口
          *
          * Calling these methods will not result in copies of the
          * underlying type.
+         * 调用这些方法不会产生基础类型的副本。
          */
       ///@{
       iterator begin()const;

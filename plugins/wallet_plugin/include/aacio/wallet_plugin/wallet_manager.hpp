@@ -19,7 +19,7 @@ namespace wallet {
 /// No const methods because timeout may cause lock_all() to be called.
 class wallet_manager {
 public:
-   wallet_manager() = default;
+   wallet_manager();
    wallet_manager(const wallet_manager&) = delete;
    wallet_manager(wallet_manager&&) = delete;
    wallet_manager& operator=(const wallet_manager&) = delete;
@@ -101,7 +101,7 @@ public:
    /// Imports a WIF Private Key into specified wallet.
    /// Wallet must be opened and unlocked.
    /// @param name the name of the wallet to import into.
-   /// @param wif_key the WIF Private Key to import, e.g. 5KWg9t3fkjSsVavTMuMcS4H5jexieMpVjMPxKtD9i1X7pLpegnY
+   /// @param wif_key the WIF Private Key to import, e.g. 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
    /// @throws fc::exception if wallet not found or locked.
    void import_key(const std::string& name, const std::string& wif_key);
 
@@ -109,7 +109,7 @@ public:
    /// Wallet must be opened and unlocked.
    /// @param name the name of the wallet to remove the key from.
    /// @param password the plaintext password returned from ::create.
-   /// @param key the Public Key to remove, e.g. AAC8VzFaGUEZBUXhEa6gkYhUgTifNfgx2XU9mFQbWz41MtTaZMyQD
+   /// @param key the Public Key to remove, e.g. AAC6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
    /// @throws fc::exception if wallet not found or locked or key is not removed.
    void remove_key(const std::string& name, const std::string& password, const std::string& key);
 
@@ -120,6 +120,9 @@ public:
    /// @throws fc::exception if wallet not found or locked, or if the wallet cannot create said type of key
    /// @return The public key of the created key
    string create_key(const std::string& name, const std::string& key_type);
+
+   /// Takes ownership of a wallet to use
+   void own_and_use_wallet(const string& name, std::unique_ptr<wallet_api>&& wallet);
 
 private:
    /// Verify timeout has not occurred and reset timeout if not.

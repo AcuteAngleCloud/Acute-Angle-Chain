@@ -4,6 +4,13 @@ project( AACIO )
 
 enable_testing()
 
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+   message(WARNING "CMAKE_INSTALL_PREFIX is set to default path of ${CMAKE_INSTALL_PREFIX}, resetting to ${CMAKE_INSTALL_PREFIX}/aacio")
+   set(CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/aacio")
+elseif ("${CMAKE_INSTALL_PREFIX}" STREQUAL "/usr/local")
+   message(WARNING "CMAKE_INSTALL_PREFIX is explicitly set to /usr/local. This is not recommended.")
+endif()
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/fc/CMakeModules")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules")
 
@@ -19,8 +26,8 @@ set( CMAKE_CXX_EXTENSIONS ON )
 set( CXX_STANDARD_REQUIRED ON)
 
 set(VERSION_MAJOR 1)
-set(VERSION_MINOR 0)
-set(VERSION_PATCH 7)
+set(VERSION_MINOR 1)
+set(VERSION_PATCH 3)
 
 set( CLI_CLIENT_EXECUTABLE_NAME claac )
 set( GUI_CLIENT_EXECUTABLE_NAME aacio )
@@ -64,6 +71,8 @@ if ("${OPENSSL_ROOT_DIR}" STREQUAL "")
       message(FATAL_ERROR "openssl not found and don't know where to look, please specify OPENSSL_ROOT_DIR")
    endif()
 endif()
+
+find_package(Secp256k1 REQUIRED)
 
 if(UNIX)
   if(APPLE)
@@ -192,7 +201,7 @@ endif()
 message( STATUS "Using '${CORE_SYMBOL_NAME}' as CORE symbol name" )
 
 if ("${AACIO_ROOT_KEY}" STREQUAL "")
-   set(AACIO_ROOT_KEY "AAC8VzFaGUEZBUXhEa6gkYhUgTifNfgx2XU9mFQbWz41MtTaZMyQD")
+   set(AACIO_ROOT_KEY "AAC6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV")
 endif()
 
 message( STATUS "Using '${AACIO_ROOT_KEY}' as public key for 'aacio' account" )
@@ -215,6 +224,13 @@ install(FILES testnet.template DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/aaci
 install_directory_permissions(DIRECTORY ${CMAKE_INSTALL_FULL_SYSCONFDIR}/aacio)
 install_directory_permissions(DIRECTORY ${CMAKE_INSTALL_FULL_SYSCONFDIR}/aacio/launcher)
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/testnet.template ${CMAKE_CURRENT_BINARY_DIR}/etc/aacio/launcher/testnet.template COPYONLY)
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/aacio.version.in ${CMAKE_CURRENT_BINARY_DIR}/aacio.version.hpp)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/aacio.version.hpp DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/AacioTester.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/AacioTester.cmake @ONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules/AacioTesterBuild.cmake.in ${CMAKE_BINARY_DIR}/lib/cmake/AacioTester.cmake @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/AacioTester.cmake DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/)
 
 include(installer)
 

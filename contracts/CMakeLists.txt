@@ -2,7 +2,7 @@
 # these directories go as -isystem <dir> to avoid warnings from code of third-party libraries
 set(DEFAULT_SYSTEM_INCLUDE_FOLDERS ${CMAKE_SOURCE_DIR}/contracts/libc++/upstream/include ${CMAKE_SOURCE_DIR}/contracts/musl/upstream/include ${Boost_INCLUDE_DIR})
 
-set(STANDARD_INCLUDE_FOLDERS ${CMAKE_SOURCE_DIR}/contracts ${CMAKE_SOURCE_DIR}/externals/magic_get/include)
+set(STANDARD_INCLUDE_FOLDERS ${CMAKE_SOURCE_DIR}/contracts ${CMAKE_BINARY_DIR}/contracts ${CMAKE_SOURCE_DIR}/externals/magic_get/include)
 
 add_subdirectory(aaciolib)
 add_subdirectory(musl)
@@ -10,6 +10,7 @@ add_subdirectory(libc++)
 add_subdirectory(simple.token)
 add_subdirectory(aacio.token)
 add_subdirectory(aacio.msig)
+add_subdirectory(aacio.sudo)
 add_subdirectory(multi_index_test)
 add_subdirectory(aacio.system)
 add_subdirectory(identity)
@@ -46,10 +47,3 @@ add_custom_command(OUTPUT share/aacio/skeleton/skeleton.cpp
                    COMMENT Copying skeleton contract...
                    VERBATIM)
 add_custom_target(copy_skeleton_contract ALL DEPENDS share/aacio/skeleton/skeleton.cpp)
-
-install(DIRECTORY aaciolib DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
-install(DIRECTORY aacio.system DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
-install(DIRECTORY musl DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
-install(DIRECTORY libc++ DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR})
-install(DIRECTORY skeleton DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/aacio)
-install_directory_permissions(DIRECTORY ${CMAKE_INSTALL_FULL_DATAROOTDIR}/aacio)

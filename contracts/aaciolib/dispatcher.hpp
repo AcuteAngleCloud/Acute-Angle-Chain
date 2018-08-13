@@ -8,6 +8,7 @@
 #include <boost/mp11/tuple.hpp>
 #define N(X) ::aacio::string_to_name(#X)
 namespace aacio {
+
    template<typename Contract, typename FirstAction>
    bool dispatch( uint64_t code, uint64_t act ) {
       if( code == FirstAction::get_account() && FirstAction::get_name() == act ) {
@@ -25,7 +26,7 @@ namespace aacio {
     * static Contract::on( ActionType )
     * ```
     *
-    * For this to work the Actions must be dervied from the 
+    * For this to work the Actions must be derived from aacio::contract
     *
     */
    template<typename Contract, typename FirstAction, typename SecondAction, typename... Actions>
@@ -37,6 +38,30 @@ namespace aacio {
       return aacio::dispatch<Contract,SecondAction,Actions...>( code, act );
    }
 
+   /**
+    * @defgroup dispatcher Dispatcher API
+    * @brief Defines functions to dispatch action to proper action handler inside a contract
+    * @ingroup contractdev
+    */
+   
+   /**
+    * @defgroup dispatchercpp Dispatcher C++ API
+    * @brief Defines C++ functions to dispatch action to proper action handler inside a contract
+    * @ingroup dispatcher
+    * @{
+    */
+
+   /**
+    * Unpack the received action and execute the correponding action handler
+    * 
+    * @brief Unpack the received action and execute the correponding action handler
+    * @tparam T - The contract class that has the correponding action handler, this contract should be derived from aacio::contract
+    * @tparam Q - The namespace of the action handler function 
+    * @tparam Args - The arguments that the action handler accepts, i.e. members of the action
+    * @param obj - The contract object that has the correponding action handler
+    * @param func - The action handler
+    * @return true  
+    */
    template<typename T, typename Q, typename... Args>
    bool execute_action( T* obj, void (Q::*func)(Args...)  ) {
       size_t size = action_data_size();
@@ -62,15 +87,36 @@ namespace aacio {
       boost::mp11::tuple_apply( f2, args );
       return true;
    }
+ /// @}  dispatcher
 
+// Helper macro for AACIO_API
 #define AACIO_API_CALL( r, OP, elem ) \
    case ::aacio::string_to_name( BOOST_PP_STRINGIZE(elem) ): \
       aacio::execute_action( &thiscontract, &OP::elem ); \
       break;
 
+// Helper macro for AACIO_ABI
 #define AACIO_API( TYPE,  MEMBERS ) \
    BOOST_PP_SEQ_FOR_EACH( AACIO_API_CALL, TYPE, MEMBERS )
 
+/**
+ * @addtogroup dispatcher
+ * @{
+ */
+
+/** 
+ * Convenient macro to create contract apply handler
+ * To be able to use this macro, the contract needs to be derived from aacio::contract
+ * 
+ * @brief Convenient macro to create contract apply handler 
+ * @param TYPE - The class name of the contract
+ * @param MEMBERS - The sequence of available actions supported by this contract
+ * 
+ * Example:
+ * @code
+ * AACIO_ABI( aacio::bios, (setpriv)(setalimits)(setglimits)(setprods)(reqauth) )
+ * @endcode
+ */
 #define AACIO_ABI( TYPE, MEMBERS ) \
 extern "C" { \
    void apply( uint64_t receiver, uint64_t code, uint64_t action ) { \
@@ -88,6 +134,7 @@ extern "C" { \
       } \
    } \
 } \
+ /// @}  dispatcher
 
 
    /*

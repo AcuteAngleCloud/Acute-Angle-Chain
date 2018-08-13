@@ -76,11 +76,10 @@ namespace aaciosystem {
       auto idx = _producers.get_index<N(prototalvote)>();
 
       std::vector< std::pair<aacio::producer_key,uint16_t> > top_producers;
-      top_producers.reserve(31);  //top-bp 21->31 modified by ck 2018-7-12
+      top_producers.reserve(31);
 
-      for (auto it = idx.cbegin(); it != idx.cend() && top_producers.size() < 31 && 0 < it->total_votes && it->active(); ++it) //top-bp 21->31 modified by ck 2018-7-12
-      { 
-            top_producers.emplace_back(std::pair<aacio::producer_key, uint16_t>({{it->owner, it->producer_key}, it->location}));
+      for ( auto it = idx.cbegin(); it != idx.cend() && top_producers.size() < 31 && 0 < it->total_votes && it->active(); ++it ) {
+         top_producers.emplace_back( std::pair<aacio::producer_key,uint16_t>({{it->owner, it->producer_key}, it->location}) );
       }
 
       if ( top_producers.size() < _gstate.last_producer_schedule_size ) {
@@ -132,6 +131,7 @@ namespace aaciosystem {
    void system_contract::update_votes( const account_name voter_name, const account_name proxy, const std::vector<account_name>& producers, bool voting ) {
       //validate input
       if ( proxy ) {
+         aacio_assert( 0==1, "voting by proxy is not supported" );// abc
          aacio_assert( producers.size() == 0, "cannot vote for producers and proxy at same time" );
          aacio_assert( voter_name != proxy, "cannot proxy to self" );
          require_recipient( proxy );
@@ -235,6 +235,9 @@ namespace aaciosystem {
     *  @pre new state must be different than current state
     */
    void system_contract::regproxy( const account_name proxy, bool isproxy ) {
+      /** Registered proxy does not support */
+      aacio_assert( 0==1, "Registered proxy does not support" );
+
       require_auth( proxy );
 
       auto pitr = _voters.find(proxy);

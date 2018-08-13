@@ -24,12 +24,12 @@ namespace aacio { namespace chain {
    {
       trace->id = id;
       executed.reserve( trx.total_actions() );
-      FC_ASSERT( trx.transaction_extensions.size() == 0, "we don't support any extensions yet" );
+      AAC_ASSERT( trx.transaction_extensions.size() == 0, unsupported_feature, "we don't support any extensions yet" );
    }
 
-   void transaction_context::init(uint64_t initial_net_usage )
+   void transaction_context::init(uint64_t initial_net_usage)
    {
-      FC_ASSERT( !is_initialized, "cannot initialize twice" );
+      AAC_ASSERT( !is_initialized, transaction_exception, "cannot initialize twice" );
       const static int64_t large_number_no_overflow = std::numeric_limits<int64_t>::max()/2;
 
       const auto& cfg = control.get_global_properties().configuration;
@@ -70,7 +70,9 @@ namespace aacio { namespace chain {
          }
       }
 
-      if( billed_cpu_time_us > 0 )
+      initial_objective_duration_limit = objective_duration_limit;
+
+      if( billed_cpu_time_us > 0 ) // could also call on explicit_billed_cpu_time but it would be redundant
          validate_cpu_usage_to_bill( billed_cpu_time_us, false ); // Fail early if the amount to be billed is too high
 
       // Record accounts to be billed for network and CPU usage
@@ -85,16 +87,11 @@ namespace aacio { namespace chain {
       rl.update_account_usage( bill_to_accounts, block_timestamp_type(control.pending_block_time()).slot );
 
       // Calculate the highest network usage and CPU time that all of the billed accounts can afford to be billed
-      int64_t account_net_limit = large_number_no_overflow;
-      int64_t account_cpu_limit = large_number_no_overflow;
-      for( const auto& a : bill_to_accounts ) {
-         auto net_limit = rl.get_account_net_limit(a);
-         if( net_limit >= 0 )
-            account_net_limit = std::min( account_net_limit, net_limit );
-         auto cpu_limit = rl.get_account_cpu_limit(a);
-         if( cpu_limit >= 0 )
-            account_cpu_limit = std::min( account_cpu_limit, cpu_limit );
-      }
+      int64_t account_net_limit = 0;
+      int64_t account_cpu_limit = 0;
+      bool greylisted = false;
+      std::tie( account_net_limit, account_cpu_limit, greylisted ) = max_bandwidth_billed_accounts_can_pay();
+      net_limit_due_to_greylist |= greylisted;
 
       eager_net_limit = net_limit;
 
@@ -114,7 +111,7 @@ namespace aacio { namespace chain {
       billing_timer_duration_limit = _deadline - start;
 
       // Check if deadline is limited by caller-set deadline (only change deadline if billed_cpu_time_us is not set)
-      if( billed_cpu_time_us > 0 || deadline < _deadline ) {
+      if( explicit_billed_cpu_time || deadline < _deadline ) {
          _deadline = deadline;
          deadline_exception_code = deadline_exception::code_value;
       } else {
@@ -134,12 +131,12 @@ namespace aacio { namespace chain {
    void transaction_context::init_for_implicit_trx( uint64_t initial_net_usage  )
    {
       published = control.pending_block_time();
-      init( initial_net_usage );
+      init( initial_net_usage);
    }
 
    void transaction_context::init_for_input_trx( uint64_t packed_trx_unprunable_size,
                                                  uint64_t packed_trx_prunable_size,
-                                                 uint32_t num_signatures              )
+                                                 uint32_t num_signatures)
    {
       const auto& cfg = control.get_global_properties().configuration;
 
@@ -168,7 +165,7 @@ namespace aacio { namespace chain {
       control.validate_expiration( trx );
       control.validate_tapos( trx );
       control.validate_referenced_accounts( trx );
-      init( initial_net_usage );
+      init( initial_net_usage);
       record_transaction( id, trx.expiration ); /// checks for dupes
    }
 
@@ -181,7 +178,7 @@ namespace aacio { namespace chain {
    }
 
    void transaction_context::exec() {
-      FC_ASSERT( is_initialized, "must first initialize" );
+      AAC_ASSERT( is_initialized, transaction_exception, "must first initialize" );
 
       if( apply_context_free ) {
          for( const auto& act : trx.context_free_actions ) {
@@ -201,8 +198,7 @@ namespace aacio { namespace chain {
    }
 
    void transaction_context::finalize() {
-      FC_ASSERT( is_initialized, "must first initialize" );
-      const static int64_t large_number_no_overflow = std::numeric_limits<int64_t>::max()/2;
+      AAC_ASSERT( is_initialized, transaction_exception, "must first initialize" );
 
       if( is_input ) {
          auto& am = control.get_mutable_authorization_manager();
@@ -219,16 +215,11 @@ namespace aacio { namespace chain {
       }
 
       // Calculate the new highest network usage and CPU time that all of the billed accounts can afford to be billed
-      int64_t account_net_limit = large_number_no_overflow;
-      int64_t account_cpu_limit = large_number_no_overflow;
-      for( const auto& a : bill_to_accounts ) {
-         auto net_limit = rl.get_account_net_limit(a);
-         if( net_limit >= 0 )
-            account_net_limit = std::min( account_net_limit, net_limit );
-         auto cpu_limit = rl.get_account_cpu_limit(a);
-         if( cpu_limit >= 0 )
-            account_cpu_limit = std::min( account_cpu_limit, cpu_limit );
-      }
+      int64_t account_net_limit = 0;
+      int64_t account_cpu_limit = 0;
+      bool greylisted = false;
+      std::tie( account_net_limit, account_cpu_limit, greylisted ) = max_bandwidth_billed_accounts_can_pay();
+      net_limit_due_to_greylist |= greylisted;
 
       // Possibly lower net_limit to what the billed accounts can pay
       if( static_cast<uint64_t>(account_net_limit) <= net_limit ) {
@@ -250,10 +241,7 @@ namespace aacio { namespace chain {
       auto now = fc::time_point::now();
       trace->elapsed = now - start;
 
-      if( billed_cpu_time_us == 0 ) {
-         const auto& cfg = control.get_global_properties().configuration;
-         billed_cpu_time_us = std::max( (now - pseudo_start).count(), static_cast<int64_t>(cfg.min_transaction_cpu_usage) );
-      }
+      update_billed_cpu_time( now );
 
       validate_cpu_usage_to_bill( billed_cpu_time_us );
 
@@ -265,12 +253,19 @@ namespace aacio { namespace chain {
       undo_session.squash();
    }
 
+   void transaction_context::undo() {
+      undo_session.undo();
+   }
 
    void transaction_context::check_net_usage()const {
       if( BOOST_UNLIKELY(net_usage > eager_net_limit) ) {
-         if( net_limit_due_to_block ) {
+         if ( net_limit_due_to_block ) {
             AAC_THROW( block_net_usage_exceeded,
                        "not enough space left in block: ${net_usage} > ${net_limit}",
+                       ("net_usage", net_usage)("net_limit", eager_net_limit) );
+         }  else if (net_limit_due_to_greylist) {
+            AAC_THROW( greylist_net_usage_exceeded,
+                       "net usage of transaction is too high: ${net_usage} > ${net_limit}",
                        ("net_usage", net_usage)("net_limit", eager_net_limit) );
          } else {
             AAC_THROW( tx_net_usage_exceeded,
@@ -284,7 +279,7 @@ namespace aacio { namespace chain {
       auto now = fc::time_point::now();
       if( BOOST_UNLIKELY( now > _deadline ) ) {
          // edump((now-start)(now-pseudo_start));
-         if( billed_cpu_time_us > 0 || deadline_exception_code == deadline_exception::code_value ) {
+         if( explicit_billed_cpu_time || deadline_exception_code == deadline_exception::code_value ) {
             AAC_THROW( deadline_exception, "deadline exceeded", ("now", now)("deadline", _deadline)("start", start) );
          } else if( deadline_exception_code == block_cpu_usage_exceeded::code_value ) {
             AAC_THROW( block_cpu_usage_exceeded,
@@ -300,12 +295,12 @@ namespace aacio { namespace chain {
                        "but it is possible it could have succeeded if it were allowed to run to completion",
                        ("now", now)("deadline", _deadline)("start", start)("billing_timer", now - pseudo_start) );
          }
-         FC_ASSERT( false, "unexpected deadline exception code" );
+         AAC_ASSERT( false,  transaction_exception, "unexpected deadline exception code" );
       }
    }
 
    void transaction_context::pause_billing_timer() {
-      if( billed_cpu_time_us > 0 || pseudo_start == fc::time_point() ) return; // either irrelevant or already paused
+      if( explicit_billed_cpu_time || pseudo_start == fc::time_point() ) return; // either irrelevant or already paused
 
       auto now = fc::time_point::now();
       billed_time = now - pseudo_start;
@@ -314,7 +309,7 @@ namespace aacio { namespace chain {
    }
 
    void transaction_context::resume_billing_timer() {
-      if( billed_cpu_time_us > 0 || pseudo_start != fc::time_point() ) return; // either irrelevant or already running
+      if( explicit_billed_cpu_time || pseudo_start != fc::time_point() ) return; // either irrelevant or already running
 
       auto now = fc::time_point::now();
       pseudo_start = now - billed_time;
@@ -357,6 +352,39 @@ namespace aacio { namespace chain {
       if( ram_delta > 0 ) {
          validate_ram_usage.insert( account );
       }
+   }
+
+   uint32_t transaction_context::update_billed_cpu_time( fc::time_point now ) {
+      if( explicit_billed_cpu_time ) return static_cast<uint32_t>(billed_cpu_time_us);
+
+      const auto& cfg = control.get_global_properties().configuration;
+      billed_cpu_time_us = std::max( (now - pseudo_start).count(), static_cast<int64_t>(cfg.min_transaction_cpu_usage) );
+
+      return static_cast<uint32_t>(billed_cpu_time_us);
+   }
+
+   std::tuple<int64_t, int64_t, bool> transaction_context::max_bandwidth_billed_accounts_can_pay( bool force_elastic_limits )const {
+      // Assumes rl.update_account_usage( bill_to_accounts, block_timestamp_type(control.pending_block_time()).slot ) was already called prior
+
+      // Calculate the new highest network usage and CPU time that all of the billed accounts can afford to be billed
+      auto& rl = control.get_mutable_resource_limits_manager();
+      const static int64_t large_number_no_overflow = std::numeric_limits<int64_t>::max()/2;
+      int64_t account_net_limit = large_number_no_overflow;
+      int64_t account_cpu_limit = large_number_no_overflow;
+      bool greylisted = false;
+      for( const auto& a : bill_to_accounts ) {
+         bool elastic = force_elastic_limits || !(control.is_producing_block() && control.is_resource_greylisted(a));
+         auto net_limit = rl.get_account_net_limit(a, elastic);
+         if( net_limit >= 0 ) {
+            account_net_limit = std::min( account_net_limit, net_limit );
+            if (!elastic) greylisted = true;
+         }
+         auto cpu_limit = rl.get_account_cpu_limit(a, elastic);
+         if( cpu_limit >= 0 )
+            account_cpu_limit = std::min( account_cpu_limit, cpu_limit );
+      }
+
+      return std::make_tuple(account_net_limit, account_cpu_limit, greylisted);
    }
 
    void transaction_context::dispatch_action( action_trace& trace, const action& a, account_name receiver, bool context_free, uint32_t recurse_depth ) {

@@ -19,12 +19,15 @@ namespace aaciosystem {
    using aacio::indexed_by;
    using aacio::const_mem_fun;
    using aacio::block_timestamp;
-
+   /**
+    * 拍卖账户名的结构体
+    */
    struct name_bid {
-     account_name            newname;
-     account_name            high_bidder;
+     
+     account_name            newname;      /*新的账户名称*/
+     account_name            high_bidder;  /*出价较高的竞拍者账户*/
      int64_t                 high_bid = 0; ///< negative high_bid == closed auction waiting to be claimed
-     uint64_t                last_bid_time = 0;
+     uint64_t                last_bid_time = 0; /*最后一次竞拍时间*/
 
      auto     primary_key()const { return newname;                          }
      uint64_t by_high_bid()const { return static_cast<uint64_t>(-high_bid); }
@@ -38,27 +41,31 @@ namespace aaciosystem {
    struct aacio_global_state : aacio::blockchain_parameters {
       uint64_t free_ram()const { return max_ram_size - total_ram_bytes_reserved; }
 
-      uint64_t             max_ram_size = 64ll*1024 * 1024 * 1024;
-      uint64_t             total_ram_bytes_reserved = 0;
-      int64_t              total_ram_stake = 0;
+      uint64_t             max_ram_size = 64ll*1024 * 1024 * 1024;   //ram总量 64G
+      uint64_t             total_ram_bytes_reserved = 0;  //保留
+      int64_t              total_ram_stake = 0;   //抵押的量
 
       block_timestamp      last_producer_schedule_update;
       uint64_t             last_pervote_bucket_fill = 0;
       int64_t              pervote_bucket = 0;
       int64_t              perblock_bucket = 0;
+      int64_t              peruser_vote_bucket = 0;
       uint32_t             total_unpaid_blocks = 0; /// all blocks which have been produced but not paid
       int64_t              total_activated_stake = 0;
       uint64_t             thresh_activated_stake_time = 0;
       uint16_t             last_producer_schedule_size = 0;
       double               total_producer_vote_weight = 0; /// the sum of all producer votes
       block_timestamp      last_name_close;
+      uint32_t             bid_chain_quota = 3;
+      uint32_t             current_chain_quota = 3;
 
       // explicit serialization macro is not necessary, used here only to improve compilation time
       AACLIB_SERIALIZE_DERIVED( aacio_global_state, aacio::blockchain_parameters,
                                 (max_ram_size)(total_ram_bytes_reserved)(total_ram_stake)
                                 (last_producer_schedule_update)(last_pervote_bucket_fill)
-                                (pervote_bucket)(perblock_bucket)(total_unpaid_blocks)(total_activated_stake)(thresh_activated_stake_time)
-                                (last_producer_schedule_size)(total_producer_vote_weight)(last_name_close) )
+                                (pervote_bucket)(perblock_bucket)(peruser_vote_bucket)(total_unpaid_blocks)(total_activated_stake)(thresh_activated_stake_time)
+                                (last_producer_schedule_size)(total_producer_vote_weight)(last_name_close)
+                                (bid_chain_quota)(current_chain_quota) )
    };
 
    struct producer_info {
@@ -70,6 +77,8 @@ namespace aaciosystem {
       uint32_t              unpaid_blocks = 0;
       uint64_t              last_claim_time = 0;
       uint16_t              location = 0;
+      int64_t               rewards_block_balance = 0;
+      int64_t               rewards_vote_balance = 0;
 
       uint64_t primary_key()const { return owner;                                   }
       double   by_votes()const    { return is_active ? -total_votes : total_votes;  }
@@ -78,7 +87,7 @@ namespace aaciosystem {
 
       // explicit serialization macro is not necessary, used here only to improve compilation time
       AACLIB_SERIALIZE( producer_info, (owner)(total_votes)(producer_key)(is_active)(url)
-                        (unpaid_blocks)(last_claim_time)(location) )
+                        (unpaid_blocks)(last_claim_time)(location)(rewards_block_balance)(rewards_vote_balance) )
    };
 
    struct voter_info {
@@ -100,16 +109,17 @@ namespace aaciosystem {
        */
       double                      proxied_vote_weight= 0; /// the total vote weight delegated to this voter as a proxy
       bool                        is_proxy = 0; /// whether the voter is a proxy for others
-
-
+	  
+      uint64_t                    last_claim_time = 0;
+      int64_t                     rewards_vote_balance = 0;
+	  
       uint32_t                    reserved1 = 0;
       time                        reserved2 = 0;
-      aacio::asset                reserved3;
-
+      aacio::asset                reserved3;      
       uint64_t primary_key()const { return owner; }
 
       // explicit serialization macro is not necessary, used here only to improve compilation time
-      AACLIB_SERIALIZE( voter_info, (owner)(proxy)(producers)(staked)(last_vote_weight)(proxied_vote_weight)(is_proxy)(reserved1)(reserved2)(reserved3) )
+      AACLIB_SERIALIZE( voter_info, (owner)(proxy)(producers)(staked)(last_vote_weight)(proxied_vote_weight)(is_proxy)(last_claim_time)(rewards_vote_balance)(reserved1)(reserved2)(reserved3) )
    };
 
    typedef aacio::multi_index< N(voters), voter_info>  voters_table;
@@ -215,9 +225,16 @@ namespace aaciosystem {
          void rmvproducer( account_name producer );
 
          void bidname( account_name bidder, account_name newname, asset bid );
+
+         // functions defined in gen_chain.cpp
+         void bidchain( uint64_t id, account_name bidder, asset price );
+         void genchain( account_name issuer, uint64_t id, std::string serial_number, std::string token_symbl );
+         void setquota( uint32_t quota );
       private:
          void update_elected_producers( block_timestamp timestamp );
-
+         
+         void fill_bucket_schedule( );
+		 
          // Implementation details:
 
          //defind in delegate_bandwidth.cpp
@@ -231,6 +248,18 @@ namespace aaciosystem {
 
          // defined in voting.cpp
          void propagate_weight_change( const voter_info& voter );
+
+         // defined in gen_chain.cpp
+         bool is_valid_symbol( const std::string& sym ) {
+            if (sym.size() > 7) return false;
+
+            for( size_t i = 0; i < sym.size(); ++i ) {
+               if( !('A' <= sym[i] && sym[i] <= 'Z')  ) return false;
+            }
+            return true;
+         }
+         int check_bid_result( uint64_t id, account_name bidder );
+         void maybe_start_bid_chain();
    };
 
 } /// aaciosystem

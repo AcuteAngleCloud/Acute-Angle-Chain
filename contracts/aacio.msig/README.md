@@ -45,7 +45,7 @@ Execute a proposal
 Claac usage example.
 
 Prerequisites:
-   - aacio.token contract installed to aacio.token accountm, aacio.msig contract installed on aacio.msig account which is a priviliged account.
+   - aacio.token contract installed to aacio.token account, aacio.msig contract installed on aacio.msig account which is a privileged account.
    - account 'treasury' is the issuer of AAC token.
    - account 'tester' exists.
    - keys to accounts 'treasury' and 'tester' imported into local wallet, the wallet is unlocked.

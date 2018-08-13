@@ -20,9 +20,9 @@ Deleting the `transactions.txt` file will prevent replay from working.
 
 `claac create key`
 
-`claac wallet import <private key from step 1>`
+`claac wallet import  --private-key <private key from step 1>`
 
-`claac wallet import <private key from step 2>`
+`claac wallet import  --private-key <private key from step 2>`
 
 `claac create account aacio <account_name> <public key from step 1> <public key from step 2>`
 

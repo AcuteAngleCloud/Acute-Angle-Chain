@@ -1,0 +1,20 @@
+{
+    "files.associations": {
+        "*.ipp": "cpp",
+        "*.inc": "cpp",
+        "type_traits": "cpp",
+        "variant": "cpp",
+        "__locale": "cpp",
+        "__hash_table": "cpp",
+        "__string": "cpp",
+        "__tree": "cpp",
+        "string_view": "cpp",
+        "*.tcc": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp"
+    },
+    "python.pythonPath": "/usr/local/opt/python/bin/python3.6",
+    "python.linting.enabled": false
+}

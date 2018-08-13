@@ -10,4 +10,4 @@ $ cd tutorials/bios-boot-tutorial
 $ ./bios-boot-tutorial.py
 ```
 
-See [AACIO Documentation Wiki: Tutorial - Bios Boot](https://github.com/AACIO/aac/wiki/Tutorial-Bios-Boot-Sequence) for additional information.
+See [AACIO Documentation Wiki: Tutorial - Bios Boot](https://github.com/AcuteAngleCloud/Acute-Angle-Chain/wiki/Tutorial-Bios-Boot-Sequence) for additional information.

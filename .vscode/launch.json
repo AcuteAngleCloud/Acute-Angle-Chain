@@ -1,0 +1,45 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "claac get accounts error",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/programs/claac/claac",
+            "args": [
+                "-u",
+                "http://101.124.3.61:8888",
+                //"http: //mainnet.generaac.io",
+                "get",
+                "accounts",
+                "AAC8jBSXoX4B4eEkdTE2R1srnAxXWsVp3Qr4ADHXwhZP8hJcg4HeT"
+                //"AAC6sgKjHUFtY1XxxQaMDwfxBac6nDBibVzZHb8LFMVmvSjcCdDhE"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "MIDebuggerPath":"/usr/bin/lldb-4.0"
+        },
+        {
+            "name": "nodaac",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/programs/nodaac/nodaac",
+            "args": [
+                "--genesis-json",
+                "genesis.json" 
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "MIDebuggerPath":"/usr/bin/lldb-4.0"
+        }
+    ]
+}

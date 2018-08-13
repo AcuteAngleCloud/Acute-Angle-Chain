@@ -4,7 +4,7 @@
  */
 
 #pragma once
-#include <aacio/history_plugin.hpp>
+#include <aacio/history_plugin/history_plugin.hpp>
 #include <aacio/chain_plugin/chain_plugin.hpp>
 #include <aacio/http_plugin/http_plugin.hpp>
 

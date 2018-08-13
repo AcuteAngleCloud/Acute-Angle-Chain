@@ -48,7 +48,7 @@ Example game session using claac
 #### Prerequisites
 * Wallet must be unlock and have at least the following private keys
 
-	**5KWg9t3fkjSsVavTMuMcS4H5jexieMpVjMPxKtD9i1X7pLpegnY**
+	**5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3**
 	**5Jmsawgsp1tQ3GD6JyGCwy1dcvqKZgX6ugMVMdjirx85iv5VyPR**
 
 ##### Upload bios contract

@@ -110,6 +110,11 @@ namespace aacio { namespace chain {
     * packed_object::type field from enum_type to uint16 to avoid
     * warnings when converting packed_objects to/from json.
     */
+
+   /**
+     *列出所有命名空间中的所有对象类型，以便在调试输出中轻松反映和显示它们。 如果第三方想要扩展核心代码，
+     *那么他们必须将packed_object :: type字段从enum_type更改为uint16，以避免在将packed_objects转换为json时发出警告。
+    */
    enum object_type
    {
       null_object_type,
@@ -175,6 +180,10 @@ namespace aacio { namespace chain {
     *  Extentions are prefixed with type and are a buffer that can be
     *  interpreted by code that is aware and ignored by unaware code.
     */
+   /**
+     * Extentions以type为前缀，是一个缓冲区，可由不知道代码识别和忽略的代码解释。
+    */
+
    typedef vector<std::pair<uint16_t,vector<char>>> extensions_type;
 
 

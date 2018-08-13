@@ -253,12 +253,9 @@ namespace aacio {
            >
         > transaction_status_index;
 
-        auto get_status( block_id_type id ) {
-           return _block_status.find( id );
-        }
-
         block_status_index        _block_status;
         transaction_status_index  _transaction_status;
+        const uint32_t            _max_block_status_range = 2048; // limit tracked block_status known_by_peer
 
         public_key_type    _local_peer_id;
         uint32_t           _local_lib             = 0;
@@ -521,25 +518,21 @@ namespace aacio {
         void on_accepted_block_header( const block_state_ptr& s ) {
            verify_strand_in_this_thread(_strand, __func__, __LINE__);
           // ilog( "accepted block header ${n}", ("n",s->block_num) );
+           const auto& id = s->id;
+
            if( fc::time_point::now() - s->block->timestamp  < fc::seconds(6) ) {
            //   ilog( "queue notice to peer that we have this block so hopefully they don't send it to us" );
-              auto itr = _block_status.find(s->id);
+              auto itr = _block_status.find( id );
               if( !_remote_request_irreversible_only && ( itr == _block_status.end() || !itr->received_from_peer ) ) {
-                 _block_header_notices.insert(s->id);
+                 _block_header_notices.insert( id );
+              }
+              if( itr == _block_status.end() ) {
+                 _block_status.insert( block_status(id, false, false) );
               }
            }
-        }
 
-        void on_accepted_block( const block_state_ptr& s ) {
-           verify_strand_in_this_thread(_strand, __func__, __LINE__);
            //idump((_block_status.size())(_transaction_status.size()));
-           auto id = s->id;
            //ilog( "accepted block ${n}", ("n",s->block_num) );
-
-           auto itr = _block_status.find( id );
-           if( itr == _block_status.end() ) {
-              itr = _block_status.insert( block_status(id, false, false) ).first;
-           }
 
            _local_head_block_id = id;
            _local_head_block_num = block_header::num_from_id(id);
@@ -556,8 +549,8 @@ namespace aacio {
             */
            for( const auto& receipt : s->block->transactions ) {
               if( receipt.trx.which() == 1 ) {
-                 auto id = receipt.trx.get<packed_transaction>().id();
-                 auto itr = _transaction_status.find( id );
+                 const auto tid = receipt.trx.get<packed_transaction>().id();
+                 auto itr = _transaction_status.find( tid );
                  if( itr != _transaction_status.end() )
                     _transaction_status.erase(itr);
               }
@@ -573,7 +566,7 @@ namespace aacio {
            _app_ios.post( [self = shared_from_this(),callback]{
               auto& control = app().get_plugin<chain_plugin>().chain();
               auto lib = control.last_irreversible_block_num();
-              auto head = control.head_block_id();
+              auto head = control.fork_db_head_block_id();
               auto head_num = block_header::num_from_id(head);
 
 
@@ -650,28 +643,23 @@ namespace aacio {
                                           std::placeholders::_2 ) ) );
         } FC_LOG_AND_RETHROW() }
 
-        void mark_block_known_by_peer( block_id_type id) {
-            auto itr = _block_status.find(id);
-            if( itr == _block_status.end() ) {
-               _block_status.insert( block_status(id, true, false) );
-            } else {
-               _block_status.modify( itr, [&]( auto& item ) {
-                 item.known_by_peer = true;
-               });
-            }
+        void mark_block_status( const block_id_type& id, bool known_by_peer, bool recv_from_peer ) {
+           auto itr = _block_status.find(id);
+           if( itr == _block_status.end() ) {
+              // optimization to avoid sending blocks to nodes that already know about them
+              // to avoid unbounded memory growth limit number tracked
+              const auto min_block_num = std::min( _local_lib, _last_sent_block_num );
+              const auto max_block_num = min_block_num + _max_block_status_range;
+              const auto block_num = block_header::num_from_id( id );
+              if( block_num > min_block_num && block_num < max_block_num && _block_status.size() < _max_block_status_range )
+                 _block_status.insert( block_status( id, known_by_peer, recv_from_peer ) );
+           } else {
+              _block_status.modify( itr, [&]( auto& item ) {
+                 item.known_by_peer = known_by_peer;
+                 if (recv_from_peer) item.received_from_peer = true;
+              });
+           }
         }
-        void mark_block_recv_from_peer( block_id_type id ) {
-            auto itr = _block_status.find(id);
-            if( itr == _block_status.end() ) {
-               _block_status.insert( block_status(id, true, true) );
-            } else {
-               _block_status.modify( itr, [&]( auto& item ) {
-                 item.known_by_peer = true;
-                 item.received_from_peer = true;
-               });
-            }
-        }
-
 
         /**
          *  This method will determine whether there is a message in the
@@ -818,7 +806,7 @@ namespace aacio {
                return;
             }
 
-            mark_block_known_by_peer( next_id );
+            mark_block_status( next_id, true, false );
 
             _last_sent_block_id  = next_id;
             _last_sent_block_num = nextblock->block_num();
@@ -929,7 +917,7 @@ namespace aacio {
             );
         }
 
-     void on_message( const bnet_message& msg, fc::datastream<const char*>& ds ) {
+        void on_message( const bnet_message& msg, fc::datastream<const char*>& ds ) {
            try {
               switch( msg.which() ) {
                  case bnet_message::tag<hello>::value:
@@ -966,11 +954,11 @@ namespace aacio {
            peer_ilog(this, "received block_notice");
            for( const auto& id : notice.block_ids ) {
               status( "received notice " + std::to_string( block_header::num_from_id(id) ) );
-              mark_block_known_by_peer( id );
+              mark_block_status( id, true, false );
            }
         }
 
-     void on( const hello& hi, fc::datastream<const char*>& ds );
+        void on( const hello& hi, fc::datastream<const char*>& ds );
 
         void on( const ping& p ) {
            peer_ilog(this, "received ping");
@@ -1003,12 +991,12 @@ namespace aacio {
            peer_ilog(this, "received signed_block_ptr");
            if (!b) {
               peer_elog(this, "bad signed_block_ptr : null pointer");
-              FC_THROW("bad block" );
+              AAC_THROW(block_validate_exception, "bad block" );
            }
            status( "received block " + std::to_string(b->block_num()) );
            //ilog( "recv block ${n}", ("n", b->block_num()) );
            auto id = b->id();
-           mark_block_recv_from_peer( id );
+           mark_block_status( id, true, true );
 
            app().get_channel<incoming::channels::block>().publish(b);
 
@@ -1048,7 +1036,7 @@ namespace aacio {
            peer_ilog(this, "received packed_transaction_ptr");
            if (!p) {
               peer_elog(this, "bad packed_transaction_ptr : null pointer");
-              FC_THROW("bad transaction");
+              AAC_THROW(transaction_exception, "bad transaction");
            }
 
            auto id = p->id();
@@ -1130,7 +1118,7 @@ namespace aacio {
         }
 
         void run() {
-           FC_ASSERT( _acceptor.is_open(), "unable top open listen socket" );
+           AAC_ASSERT( _acceptor.is_open(), plugin_exception, "unable top open listen socket" );
            do_accept();
         }
 
@@ -1214,18 +1202,6 @@ namespace aacio {
             for_each_session( [s]( auto ses ){ ses->on_new_lib( s ); } );
          }
 
-         /**
-          * Notify all active connections of the new accepted block so
-          * they can relay it. This method also pre-packages the block
-          * as a packed bnet_message so the connections can simply relay
-          * it on.
-          */
-         void on_accepted_block( block_state_ptr s ) {
-            _ioc->post( [s,this] { /// post this to the thread pool because packing can be intensive
-               for_each_session( [s]( auto ses ){ ses->on_accepted_block( s ); } );
-            });
-         }
-
          void on_accepted_block_header( block_state_ptr s ) {
             _ioc->post( [s,this] { /// post this to the thread pool because packing can be intensive
                for_each_session( [s]( auto ses ){ ses->on_accepted_block_header( s ); } );
@@ -1283,12 +1259,24 @@ namespace aacio {
 
    void listener::on_accept( boost::system::error_code ec ) {
      if( ec ) {
+        if( ec == boost::system::errc::too_many_files_open )
+           do_accept();
         return;
      }
-     auto newsession = std::make_shared<session>( move( _socket ), _net_plugin );
-     _net_plugin->async_add_session( newsession );
-     newsession->_local_peer_id = _net_plugin->_peer_id;
-     newsession->run();
+     std::shared_ptr<session> newsession;
+     try {
+        newsession = std::make_shared<session>( move( _socket ), _net_plugin );
+     }
+     catch( std::exception& e ) {
+        //making a session creates an instance of std::random_device which may open /dev/urandom
+        // for example. Unfortuately the only defined error is a std::exception derivative
+        _socket.close();
+     }
+     if( newsession ) {
+        _net_plugin->async_add_session( newsession );
+        newsession->_local_peer_id = _net_plugin->_peer_id;
+        newsession->run();
+     }
      do_accept();
    }
 
@@ -1322,32 +1310,35 @@ namespace aacio {
    void bnet_plugin::plugin_initialize(const variables_map& options) {
       ilog( "Initialize bnet plugin" );
 
-      peer_log_format = options.at("bnet-peer-log-format").as<string>();
+      try {
+         peer_log_format = options.at( "bnet-peer-log-format" ).as<string>();
 
-      if( options.count( "bnet-endpoint" ) ) {
-         auto ip_port = options.at("bnet-endpoint").as< string >();
+         if( options.count( "bnet-endpoint" )) {
+            auto ip_port = options.at( "bnet-endpoint" ).as<string>();
 
-        //auto host = boost::asio::ip::host_name(ip_port);
-        auto port = ip_port.substr( ip_port.find(':')+1, ip_port.size() );
-        auto host = ip_port.substr( 0, ip_port.find(':') );
-        my->_bnet_endpoint_address = host;
-        my->_bnet_endpoint_port = std::stoi( port );
-        idump((ip_port)(host)(port)(my->_follow_irreversible));
-      }
-      if ( options.count( "bnet-follow-irreversible" )) {
-         my->_follow_irreversible = options.at("bnet-follow-irreversible").as< bool >();
-      }
+            //auto host = boost::asio::ip::host_name(ip_port);
+            auto port = ip_port.substr( ip_port.find( ':' ) + 1, ip_port.size());
+            auto host = ip_port.substr( 0, ip_port.find( ':' ));
+            my->_bnet_endpoint_address = host;
+            my->_bnet_endpoint_port = std::stoi( port );
+            idump((ip_port)( host )( port )( my->_follow_irreversible ));
+         }
+         if( options.count( "bnet-follow-irreversible" )) {
+            my->_follow_irreversible = options.at( "bnet-follow-irreversible" ).as<bool>();
+         }
 
 
-      if( options.count( "bnet-connect" ) ) {
-         my->_connect_to_peers = options.at( "bnet-connect" ).as<vector<string>>();
-      }
-      if( options.count( "bnet-threads" ) ) {
-         my->_num_threads = options.at("bnet-threads").as<uint32_t>();
-         if( my->_num_threads > 8 )
-            my->_num_threads = 8;
-      }
-      my->_request_trx = !options.at( "bnet-no-trx" ).as<bool>();
+         if( options.count( "bnet-connect" )) {
+            my->_connect_to_peers = options.at( "bnet-connect" ).as<vector<string>>();
+         }
+         if( options.count( "bnet-threads" )) {
+            my->_num_threads = options.at( "bnet-threads" ).as<uint32_t>();
+            if( my->_num_threads > 8 )
+               my->_num_threads = 8;
+         }
+         my->_request_trx = !options.at( "bnet-no-trx" ).as<bool>();
+
+      } FC_LOG_AND_RETHROW()
    }
 
    void bnet_plugin::plugin_startup() {
@@ -1365,11 +1356,6 @@ namespace aacio {
                                 .subscribe( [this]( block_state_ptr s ){
                                        my->on_irreversible_block(s);
                                 });
-
-      my->_on_accepted_block_handle = app().get_channel<channels::accepted_block>()
-                                         .subscribe( [this]( block_state_ptr s ){
-                                                my->on_accepted_block(s);
-                                         });
 
       my->_on_accepted_block_header_handle = app().get_channel<channels::accepted_block_header>()
                                          .subscribe( [this]( block_state_ptr s ){
@@ -1433,7 +1419,7 @@ namespace aacio {
       wlog( "done joining threads" );
 
       my->for_each_session([](auto ses){
-         FC_ASSERT( false, "session ${ses} still active", ("ses", ses->_session_num) );
+         AAC_ASSERT( false, plugin_exception, "session ${ses} still active", ("ses", ses->_session_num) );
       });
 
       // lifetime of _ioc is guarded by shared_ptr of bnet_plugin_impl
@@ -1527,7 +1513,7 @@ namespace aacio {
       _remote_lib            = hi.last_irr_block_num;
 
       for( const auto& id : hi.pending_block_ids )
-         mark_block_known_by_peer( id );
+         mark_block_status( id, true, false );
 
       check_for_redundant_connection();
 

@@ -77,7 +77,7 @@ def startWallet():
     run(args.claac + 'wallet create')
 
 def importKeys():
-    run(args.claac + 'wallet import ' + args.private_key)
+    run(args.claac + 'wallet import --private-key ' + args.private_key)
     keys = {}
     for a in accounts:
         key = a['pvt']
@@ -85,13 +85,13 @@ def importKeys():
             if len(keys) >= args.max_user_keys:
                 break
             keys[key] = True
-            run(args.claac + 'wallet import ' + key)
+            run(args.claac + 'wallet import --private-key ' + key)
     for i in range(firstProducer, firstProducer + numProducers):
         a = accounts[i]
         key = a['pvt']
         if not key in keys:
             keys[key] = True
-            run(args.claac + 'wallet import ' + key)
+            run(args.claac + 'wallet import --private-key ' + key)
 
 def startNode(nodeIndex, account):
     dir = args.nodes_dir + ('%02d-' % nodeIndex) + account['name'] + '/'
@@ -104,7 +104,7 @@ def startNode(nodeIndex, account):
     )
     cmd = (
         args.nodaac +
-        '    --max-irreversible-block-age 9999999'
+        '    --max-irreversible-block-age -1'
         '    --contracts-console'
         '    --genesis-json ' + os.path.abspath(args.genesis) +
         '    --blocks-dir ' + os.path.abspath(dir) + '/blocks'
@@ -198,13 +198,6 @@ def claimRewards():
         if row['unpaid_blocks'] and not row['last_claim_time']:
             times.append(getJsonOutput(args.claac + 'system claimrewards -j ' + row['owner'])['processed']['elapsed'])
     print('Elapsed time for claimrewards:', times)
-
-def vote(b, e):
-    for i in range(b, e):
-        voter = accounts[i]['name']
-        prods = random.sample(range(firstProducer, firstProducer + numProducers), args.num_producers_vote)
-        prods = ' '.join(map(lambda x: accounts[x]['name'], prods))
-        retry(args.claac + 'system voteproducer prods ' + voter + ' ' + prods)
 
 def proxyVotes(b, e):
     vote(firstProducer, firstProducer + 1)
@@ -362,7 +355,7 @@ parser.add_argument('--nodes-dir', metavar='', help="Path to nodes directory", d
 parser.add_argument('--genesis', metavar='', help="Path to genesis.json", default="./genesis.json")
 parser.add_argument('--wallet-dir', metavar='', help="Path to wallet directory", default='./wallet/')
 parser.add_argument('--log-path', metavar='', help="Path to log file", default='./output.log')
-parser.add_argument('--symbol', metavar='', help="The aacio.systemsymbol", default='SYS')
+parser.add_argument('--symbol', metavar='', help="The aacio.system symbol", default='SYS')
 parser.add_argument('--user-limit', metavar='', help="Max number of users. (0 = no limit)", type=int, default=3000)
 parser.add_argument('--max-user-keys', metavar='', help="Maximum user keys to import into wallet", type=int, default=10)
 parser.add_argument('--ram-funds', metavar='', help="How much funds for each user to spend on ram", type=float, default=0.1)

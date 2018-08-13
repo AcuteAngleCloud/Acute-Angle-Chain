@@ -88,19 +88,21 @@ namespace aaciosystem {
    void system_contract::buyrambytes( account_name payer, account_name receiver, uint32_t bytes ) {
       auto itr = _rammarket.find(S(4,RAMCORE));
       auto tmp = *itr;
-      auto aacout = tmp.convert( asset(bytes,S(0,RAM)), CORE_SYMBOL );
+      auto aacout = tmp.convert(asset(bytes, S(0, RAM)), RAM_TRADE_SYMBOL);
 
       buyram( payer, receiver, aacout );
    }
-
 
    /**
     *  When buying ram the payer irreversiblly transfers quant to system contract and only
     *  the receiver may reclaim the tokens via the sellram action. The receiver pays for the
     *  storage of all database records associated with this action.
+    * 当购买ram时，付款人不可逆转地将数量转移到系统合同而且只是接收者可以通过sellram动作回收令牌。 
+    * 接收方支付与此操作相关的所有数据库记录的存储费用。
     *
     *  RAM is a scarce resource whose supply is defined by global properties max_ram_size. RAM is
     *  priced using the bancor algorithm such that price-per-byte with a constant reserve ratio of 100:1.
+    * RAM是稀缺资源，其供应由全局属性max_ram_size定义。 RAM使用bancor算法定价，使得每字节价格具有100：1的恒定储备比率。
     */
    void system_contract::buyram( account_name payer, account_name receiver, asset quant )
    {
@@ -172,7 +174,7 @@ namespace aaciosystem {
       auto itr = _rammarket.find(S(4,RAMCORE));
       _rammarket.modify( itr, 0, [&]( auto& es ) {
           /// the cast to int64_t of bytes is safe because we certify bytes is <= quota which is limited by prior purchases
-          tokens_out = es.convert( asset(bytes,S(0,RAM)), CORE_SYMBOL);
+          tokens_out = es.convert(asset(bytes, S(0, RAM)), RAM_TRADE_SYMBOL);
       });
 
       aacio_assert( tokens_out.amount > 1, "token amount received from selling ram is too low" );

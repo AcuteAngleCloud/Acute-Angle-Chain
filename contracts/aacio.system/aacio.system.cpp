@@ -5,6 +5,7 @@
 #include "delegate_bandwidth.cpp"
 #include "voting.cpp"
 #include "exchange_state.cpp"
+#include "gen_chain.cpp"
 
 
 namespace aaciosystem {
@@ -30,7 +31,8 @@ namespace aaciosystem {
                m.base.balance.amount = int64_t(_gstate.free_ram());
                m.base.balance.symbol = S(0,RAM);
                m.quote.balance.amount = system_token_supply / 1000;
-               m.quote.balance.symbol = CORE_SYMBOL;
+               //m.quote.balance.symbol = CORE_SYMBOL; RAM_TRADE_SYMBOL
+               m.quote.balance.symbol = RAM_TRADE_SYMBOL;
             });
          }
       } else {
@@ -145,7 +147,7 @@ namespace aaciosystem {
     */
    void native::newaccount( account_name     creator,
                             account_name     newact
-                            /*  no need to parse authorites
+                            /*  no need to parse authorities
                             const authority& owner,
                             const authority& active*/ ) {
 
@@ -195,4 +197,6 @@ AACIO_ABI( aaciosystem::system_contract,
      (regproducer)(unregprod)(voteproducer)(regproxy)
      // producer_pay.cpp
      (onblock)(claimrewards)
+     // gen_chain.cpp
+     (bidchain)(genchain)(setquota)
 )

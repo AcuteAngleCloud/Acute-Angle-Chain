@@ -2,7 +2,7 @@ FROM aacio/builder
 ARG branch=master
 ARG symbol=SYS
 
-RUN git clone -b $branch https://github.com/AACIO/aac.git --recursive \
+RUN git clone -b $branch https://github.com/AcuteAngleCloud/Acute-Angle-Chain.git --recursive \
     && cd aac && echo "$branch:$(git rev-parse HEAD)" > /etc/aacio-version \
     && cmake -H. -B"/opt/aacio" -GNinja -DCMAKE_BUILD_TYPE=Release -DWASM_ROOT=/opt/wasm -DCMAKE_CXX_COMPILER=clang++ \
        -DCMAKE_C_COMPILER=clang -DCMAKE_INSTALL_PREFIX=/opt/aacio  -DSecp256k1_ROOT_DIR=/usr/local -DBUILD_MONGO_DB_PLUGIN=true -DCORE_SYMBOL_NAME=$symbol \

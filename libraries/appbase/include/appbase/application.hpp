@@ -30,7 +30,6 @@ namespace appbase {
           *
           * @param data_dir Default data directory to use if not specified
           *                 on the command line.
-          * 如果命令行没有指定数据目录，则使用默认的数据目录
           */
          void set_default_data_dir(const bfs::path& data_dir = "data-dir");
          /** @brief Get data directory

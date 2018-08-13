@@ -4,7 +4,7 @@ Welcome to the AAC.IO Documentation
 @note This documentation is in progress and subject to change due to rapid development. Please report inaccuracies identified to the [AAC.IO Developer Telegram Group](https://t.me/joinchat/EaEnSUPktgfoI-XPfMYtcQ)
 
 ## AAC.IO
- - [Additional resources - Github Readme](https://github.com/AACIO/aac#readme)
+ - [Additional resources - Github Readme](https://github.com/AcuteAngleCloud/Acute-Angle-Chain#readme)
 
 ## Smart Contract Developers
 - @ref aaciorpc

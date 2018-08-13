@@ -106,7 +106,7 @@ getTransactionId()
   TRANS_ID=${TRANS_ID%\",}
 }
 
-INITA_PRV_KEY="5KWg9t3fkjSsVavTMuMcS4H5jexieMpVjMPxKtD9i1X7pLpegnY"
+INITA_PRV_KEY="5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 
 # cleanup from last run
 cleanup
@@ -157,13 +157,13 @@ PASSWORD_INITA="$(echo "$PASSWORD_INITA" | awk '/PW/ {print $1}')"
 # remove leading/trailing quotes
 PASSWORD_INITA=${PASSWORD_INITA#\"}
 PASSWORD_INITA=${PASSWORD_INITA%\"}
-programs/claac/claac wallet import --name inita $INITA_PRV_KEY
+programs/claac/claac wallet import --name inita --private-key $INITA_PRV_KEY
 verifyErrorCode "claac wallet import"
-programs/claac/claac wallet import --name inita $PRV_KEY1
+programs/claac/claac wallet import --name inita --private-key $PRV_KEY1
 verifyErrorCode "claac wallet import"
-programs/claac/claac wallet import --name inita $PRV_KEY2
+programs/claac/claac wallet import --name inita --private-key $PRV_KEY2
 verifyErrorCode "claac wallet import"
-programs/claac/claac wallet import --name inita $PRV_KEY3
+programs/claac/claac wallet import --name inita --private-key $PRV_KEY3
 verifyErrorCode "claac wallet import"
 
 #

@@ -818,7 +818,7 @@ launcher_def::bind_nodes () {
          node.name = inst.name;
          node.instance = &inst;
          auto kp = is_bios ?
-            private_key_type(string("5KWg9t3fkjSsVavTMuMcS4H5jexieMpVjMPxKtD9i1X7pLpegnY")) :
+            private_key_type(string("5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3")) :
             private_key_type::generate();
          auto pubkey = kp.get_public_key();
          node.keys.emplace_back (move(kp));
@@ -1026,6 +1026,7 @@ launcher_def::write_config_file (tn_node_def &node) {
    cfg << "readonly = 0\n";
    cfg << "send-whole-blocks = true\n";
    cfg << "http-server-address = " << host->host_name << ":" << instance.http_port << "\n";
+   cfg << "http-validate-host = false\n";
    if (p2p == p2p_plugin::NET) {
       cfg << "p2p-listen-endpoint = " << host->listen_addr << ":" << instance.p2p_port << "\n";
       cfg << "p2p-server-address = " << host->public_name << ":" << instance.p2p_port << "\n";
@@ -1222,7 +1223,7 @@ launcher_def::write_bios_boot () {
          }
          else if (key == "prodkeys" ) {
             for (auto &node : network.nodes) {
-               brb << "wcmd import -n ignition " << string(node.second.keys[0]) << "\n";
+               brb << "wcmd import -n ignition --private-key " << string(node.second.keys[0]) << "\n";
             }
          }
          else if (key == "cacmd") {
@@ -1504,7 +1505,7 @@ launcher_def::launch (aacd_def &instance, string &gts) {
   }
 
   aacdcmd += " --config-dir " + instance.config_dir_name + " --data-dir " + instance.data_dir_name;
-  aacdcmd += " --genesis-json " + genesis.string();
+  aacdcmd += " --genesis-json " + instance.config_dir_name + "/genesis.json";
   if (gts.length()) {
     aacdcmd += " --genesis-timestamp " + gts;
   }

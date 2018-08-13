@@ -36,7 +36,7 @@ namespace aacio { namespace chain {
 
       aacio::chain::abi_def get_abi()const {
          aacio::chain::abi_def a;
-         FC_ASSERT( abi.size() != 0, "No ABI set on account ${n}", ("n",name) );
+         AAC_ASSERT( abi.size() != 0, abi_not_found_exception, "No ABI set on account ${n}", ("n",name) );
 
          fc::datastream<const char*> ds( abi.data(), abi.size() );
          fc::raw::unpack( ds, a );

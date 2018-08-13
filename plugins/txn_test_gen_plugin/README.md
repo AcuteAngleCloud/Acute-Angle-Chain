@@ -2,7 +2,7 @@
 
 This plugin provides a way to generate a given amount of transactions per second against the currency contract. It runs internally to aacd to reduce overhead.
 
-This general procedure was used when doing Dawn 3.0 performance testing as mentioned in https://github.com/AACIO/aac/issues/2078.
+This general procedure was used when doing Dawn 3.0 performance testing as mentioned in https://github.com/AcuteAngleCloud/Acute-Angle-Chain/issues/2078.
 
 ## Performance testing
 
@@ -67,7 +67,7 @@ $ ./claac set contract aacio ~/aac/build.release/contracts/aacio.bios/
 
 ### Initialize the accounts txn_test_gen_plugin uses
 ```bash
-$ curl --data-binary '["aacio", "5KWg9t3fkjSsVavTMuMcS4H5jexieMpVjMPxKtD9i1X7pLpegnY"]' http://localhost:8888/v1/txn_test_gen/create_test_accounts
+$ curl --data-binary '["aacio", "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"]' http://localhost:8888/v1/txn_test_gen/create_test_accounts
 ```
 
 ### Start transaction generation, this will submit 20 transactions evey 20ms (total of 1000TPS)
