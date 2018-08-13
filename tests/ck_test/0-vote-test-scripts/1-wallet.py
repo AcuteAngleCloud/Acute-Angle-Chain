@@ -2,6 +2,7 @@
 import sys
 import os
 
+#command
 CMD = ''
 line = ''
 waltname = ''
