@@ -1,3 +1,35 @@
+*.a
+*.sw*
+*.dylib
+*.ll
+*.bc
+*.wast
+*.wast.hpp
+*.wasm
+*.s
+*.dot
+*.abi.hpp
+*.cmake
+*.ninja
+\#*
+\.#*
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+cmake-build-debug/
+cmake-build-release/
+Makefile
+compile_commands.json
+moc_*
+*.moc
+etc/aacio/node_*
+var/lib/node_*
+.vscode
+.idea/
+*.iws
+.DS_Store
+
+
 # Prerequisites
 *.d
 
@@ -30,3 +62,9 @@
 *.exe
 *.out
 *.app
+
+# .vscode
+.vscode/*
+
+build/*
+build-debug/*

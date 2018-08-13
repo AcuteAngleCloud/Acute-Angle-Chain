@@ -76,40 +76,33 @@ namespace aaciosystem {
    void system_contract::fill_bucket_schedule( ) {
          print("[fill_bucket_schedule2] begin\n");
          
-             /* aacio断言，不满足条件时，抛错*/
+             
              aacio_assert(_gstate.total_activated_stake >= min_activated_stake,
                           "cannot claim rewards until the chain is activated (at least 15% of all tokens participate in voting)");
-         /* ct 获取当前时间*/
+        
          auto ct = current_time();
-         /* 上次填充时间距离现在的时间长度 = 当前时间 - 上次填充时间*/
+        
          const auto usecs_since_last_fill = ct - _gstate.last_pervote_bucket_fill;
          print("usecs_since_last_fill is:", usecs_since_last_fill);
          print("\n");
 
-         /*满足条件：距离上次填充时间大于填充间隔时间，并且上一次投票桶填充时间大于0 */
+         
          if (usecs_since_last_fill >= fill_bucket_frequency && _gstate.last_pervote_bucket_fill > 0) {
-               /*资产总量和符号*/
+              
                const asset token_supply = token(N(aacio.token)).get_supply(symbol_type(system_token_symbol).name());
                
-               /*计算本次时间段增发得新token总数*/
                auto new_tokens = static_cast<int64_t>((continuous_rate * double(token_supply.amount) * double(usecs_since_last_fill)) / double(useconds_per_year));
                
-               /*计算本时间段奖励总数*/
                auto to_rewards = static_cast<int64_t>(new_tokens * reward_rate);
                
-               /*计算本时间段需要往saving账户里转的token总数*/
                auto to_savings = static_cast<int64_t>(new_tokens - to_rewards);
                
-               /*计算本时间段出块者奖励总数*/
                auto to_per_block_pay = static_cast<int64_t>(to_rewards * reward_perblock_rate);
                
-               /*计算本时间段按照被投票权重分发的奖励总和*/
                auto to_per_vote_pay = static_cast<int64_t>(to_rewards * reward_standby_rate);
                
-               /*计算本时间段投票者应该获取的奖励总和*/
                auto to_user_vote_pay = static_cast<int64_t>(to_rewards * reward_user_vote_rate);
                
-               /*开始系统账户转账*/
                INLINE_ACTION_SENDER(aacio::token, issue)( N(aacio.token), {{N(aacio), N(active)}},
                 {N(aacio), asset(new_tokens), std::string("issue tokens for producer pay and savings")});
 
@@ -124,7 +117,6 @@ namespace aaciosystem {
                INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio), N(active)},
                 {N(aacio), N(aacio.uvpay), asset(to_user_vote_pay), "fund user-vote bucket"});
 
-               /*增加计数，以供get table 查询*/
                _gstate.pervote_bucket += to_per_vote_pay;
                
                _gstate.perblock_bucket += to_per_block_pay;
@@ -133,7 +125,6 @@ namespace aaciosystem {
                
                _gstate.last_pervote_bucket_fill = ct;
                
-               /*已分配的计数*/
                int64_t pervote_bucket_used = 0;
                int64_t perblock_bucket_used = 0;
                int64_t total_unpaid_blocks_used = 0;
@@ -142,7 +133,6 @@ namespace aaciosystem {
                /** Record award division for producers */
 
                for (auto & prod : _producers) {
-                     print("-----------------producer is : ", name{prod.owner}, "\n" );
 
                      if (false == prod.active()) {
                            continue;
@@ -151,50 +141,42 @@ namespace aaciosystem {
                      int64_t producer_per_block_pay = 0;
                      if (_gstate.total_unpaid_blocks > 0) {
                            producer_per_block_pay = (_gstate.perblock_bucket * prod.unpaid_blocks) / _gstate.total_unpaid_blocks;
-                           print("producer_per_block_pay = ", producer_per_block_pay, "\n" );
-                           print("prod.unpaid_blocks = ", prod.unpaid_blocks, "\n" );
                      }
                      int64_t producer_per_vote_pay = 0;
                      if (_gstate.total_producer_vote_weight > 0) {
                            producer_per_vote_pay = int64_t((_gstate.pervote_bucket * prod.total_votes) / _gstate.total_producer_vote_weight);
-                           print("producer_per_vote_pay = ", producer_per_vote_pay, "\n" );
-                            print("prod.total_votes = ", prod.total_votes, "\n" );
                      }
                      pervote_bucket_used += producer_per_vote_pay;
-                     print("pervote_bucket_used = ", pervote_bucket_used, "\n" );
+                   
                      perblock_bucket_used += producer_per_block_pay;
-                     print("perblock_bucket_used = ", perblock_bucket_used, "\n" );
+                    
                      total_unpaid_blocks_used += prod.unpaid_blocks;
-                     print("total_unpaid_blocks_used = ", total_unpaid_blocks_used, "\n" );
+                    
 
                      total_votes_used += prod.total_votes;
-                     print("total_votes_used = ", total_votes_used, "\n" );
+                     
                      #if 1
                      _producers.modify(prod, 0, [&](auto &p) {
                            p.unpaid_blocks = 0;
                            p.rewards_block_balance += producer_per_block_pay;
-                           print("p.rewards_block_balance = ", p.rewards_block_balance, "\n" );
+                          
                            p.rewards_vote_balance += producer_per_vote_pay;
-                           print("p.rewards_vote_balance = ", p.rewards_vote_balance, "\n" );
+                          
                      });
                      #endif
                      
                }
 
-               _gstate.pervote_bucket -= pervote_bucket_used;
-               print("_gstate.pervote_bucket = ", _gstate.pervote_bucket, "\n" );
+               _gstate.pervote_bucket -= pervote_bucket_used; 
                _gstate.perblock_bucket -= perblock_bucket_used;
-               print("_gstate.perblock_bucket = ", _gstate.perblock_bucket, "\n" );
                _gstate.total_unpaid_blocks -= total_unpaid_blocks_used;
-               print("_gstate.total_unpaid_blocks = ", _gstate.total_unpaid_blocks, "\n" );
-               print("_gstate.total_producer_vote_weight = ", _gstate.total_producer_vote_weight, "\n" );
-               print("total_votes_used = ", total_votes_used, "\n" );
+              
 
                /** Record award division for votes */
                if (_gstate.total_activated_stake > 0) {
                      int64_t peruser_vote_bucket_used = 0;
                      for (auto & vote : _voters) {
-                           print("-----------------user is : ", name{vote.owner}, "\n" );
+                          
                            int64_t voter_per_vote_pay = 0;
                            if(vote.last_vote_weight <= 0.0){
                               print("user is not voter for anyone\n" );
@@ -202,20 +184,16 @@ namespace aaciosystem {
                            }
 
                            voter_per_vote_pay = int64_t((_gstate.peruser_vote_bucket * vote.staked) / _gstate.total_activated_stake);
-                           print("voter_per_vote_pay = ", voter_per_vote_pay, "\n" );
 
                            peruser_vote_bucket_used += voter_per_vote_pay;
-                           print("peruser_vote_bucket_used = ", peruser_vote_bucket_used, "\n" );
-
+                           
                            _voters.modify(vote, 0, [&](auto &v) {
                                  v.rewards_vote_balance += voter_per_vote_pay;
-                                 print("v.claim_vote_balance = ", v.rewards_vote_balance, "\n" );
+                                 
                            });
                      }
-                     print("pre _gstate.peruser_vote_bucket = ", _gstate.peruser_vote_bucket, "\n" );
-                     print("peruser_vote_bucket_used = ", peruser_vote_bucket_used, "\n" );
+                     
                      _gstate.peruser_vote_bucket -= peruser_vote_bucket_used;
-                     print("post _gstate.peruser_vote_bucket = ", _gstate.peruser_vote_bucket, "\n" );
                     
                }
          }
