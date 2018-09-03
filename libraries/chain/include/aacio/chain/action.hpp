@@ -57,16 +57,6 @@ namespace aacio { namespace chain {
     *  application code. An application code will check to see if the required authorization
     *  were properly declared when it executes.
     */
-   /**
-    * 动作由演员（又称帐户）执行。 它可以由签名显式创建并授权，也可以通过执行应用程序代码隐式生成。
-    * 这遵循React Flux的设计模式，其中操作被命名，然后被分派到一个或多个动作处理程序（也称为商店）。 
-    * 在aacio的上下文中，每个操作都被分派到由帐户“scope”和函数“name”定义的处理程序，但是默认处理
-    * 程序也可以将操作转发给任意数量的其他处理程序。 任何应用程序都可以为“scope :: name”编写一个
-    * 处理程序，当且仅当此操作被转发到该应用程序时才会执行该处理程序。
-    * 每个动作都可能需要特定演员的许可。 参与者可以定义任意数量的权限级别。 在操作上声明actor及其各
-    * 自的权限级别，并独立于正在执行的应用程序代码进行验证。 应用程序代码将检查执行时是否正确声明了所
-    * 需的授权。
-    */
    struct action {
       account_name               account;
       action_name                name;

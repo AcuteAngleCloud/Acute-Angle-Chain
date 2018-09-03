@@ -66,7 +66,7 @@ fi
 
 if [ "$AACIO_LEVEL" == replay ]; then
     echo starting with replay
-    relaunch $* --replay
+    relaunch $* --hard-replay-blockchain
     if [  "$connected" -eq 0 ]; then
         AACIO_LEVEL=resync
     else
@@ -74,6 +74,6 @@ if [ "$AACIO_LEVEL" == replay ]; then
     fi
 fi
 if [ "$AACIO_LEVEL" == resync ]; then
-    echo starting wih resync
-    relaunch $* --resync
+    echo starting with delete-all-blocks
+    relaunch $* --delete-all-blocks
 fi

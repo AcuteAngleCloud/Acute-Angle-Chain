@@ -10,6 +10,28 @@
 
 namespace fc { class variant; }
 
+struct create_account_params {
+   std::string url = "http://127.0.0.1:8888/";
+   std::string creator;
+   std::string newaccount;
+   std::string owner;
+   std::string active;
+   std::string network;
+   std::string cpu;
+   std::string memory;
+};
+
+struct push_action_params {
+   std::string url = "http://127.0.0.1:8888/";
+   std::string contract;
+   std::string action;
+   std::string args;
+   std::string permission;
+};
+
+FC_REFLECT(create_account_params, (url)(creator)(newaccount)(owner)(active)(network)(cpu)(memory));
+FC_REFLECT(push_action_params, (url)(contract)(action)(args)(permission));
+
 namespace aacio {
 namespace wallet {
 
@@ -64,7 +86,7 @@ public:
    /// @return Plaintext password that is needed to unlock wallet. Caller is responsible for saving password otherwise
    ///         they will not be able to unlock their wallet. Note user supplied passwords are not supported.
    /// @throws fc::exception if wallet with name already exists (or filename already exists)
-   std::string create(const std::string& name);
+   void create(const std::string& name,const std::string& walt_pin);
 
    /// Open an existing wallet file dir/{name}.wallet.
    /// Note this does not unlock the wallet, see wallet_manager::unlock.
@@ -124,10 +146,25 @@ public:
    /// Takes ownership of a wallet to use
    void own_and_use_wallet(const string& name, std::unique_ptr<wallet_api>&& wallet);
 
+   /// Change password for the specified wallet.
+   /// Wallet must be opened and unlocked.
+   /// @param name the name of the wallet to change password.
+   /// @param password the new plaintext password of the wallet.
+   /// @throws fc::exception if wallet not found or invalid password or already unlocked.
+   void change_password(const std::string& name, const std::string& password);
+
+   fc::variant create_account(const ::create_account_params& p);
+   fc::variant easy_create_account(const std::string& account, const std::string& key);
+   fc::variant push_action(const ::push_action_params& p);
+
 private:
    /// Verify timeout has not occurred and reset timeout if not.
    /// Calls lock_all() if timeout has passed.
    void check_timeout();
+
+   fc::variant determine_required_keys(const signed_transaction& trx);
+   fc::variant push_transaction( signed_transaction& trx, int32_t extra_kcpu, packed_transaction::compression_type compression );
+   fc::variant push_actions(std::vector<chain::action>&& actions, int32_t extra_kcpu, packed_transaction::compression_type compression );
 
 private:
    using timepoint_t = std::chrono::time_point<std::chrono::system_clock>;

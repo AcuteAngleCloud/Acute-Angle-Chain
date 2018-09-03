@@ -7,8 +7,7 @@ RUN git clone -b $branch https://github.com/AcuteAngleCloud/Acute-Angle-Chain.gi
     && cmake -H. -B"/opt/aacio" -GNinja -DCMAKE_BUILD_TYPE=Release -DWASM_ROOT=/opt/wasm -DCMAKE_CXX_COMPILER=clang++ \
        -DCMAKE_C_COMPILER=clang -DCMAKE_INSTALL_PREFIX=/opt/aacio  -DSecp256k1_ROOT_DIR=/usr/local -DBUILD_MONGO_DB_PLUGIN=true -DCORE_SYMBOL_NAME=$symbol \
     && cmake --build /opt/aacio --target install \
-    && mv /aac/Docker/config.ini / && mv /opt/aacio/contracts /contracts && mv /aac/Docker/nodaacd.sh /opt/aacio/bin/nodaacd.sh && mv tutorials /tutorials \
-    && rm -rf /aac
+    && cp /aac/Docker/config.ini / && ln -s /opt/aacio/contracts /contracts && cp /aac/Docker/nodaacd.sh /opt/aacio/bin/nodaacd.sh && ln -s /aac/tutorials /tutorials
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssl ca-certificates vim psmisc python3-pip && rm -rf /var/lib/apt/lists/*
 RUN pip3 install numpy

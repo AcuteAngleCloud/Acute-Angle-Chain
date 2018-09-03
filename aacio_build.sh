@@ -44,17 +44,16 @@
    else
       BUILD_DIR="${PWD}"
    fi
-	CMAKE_BUILD_TYPE=Release
-	DISK_MIN=20
-	DOXYGEN=false
-	ENABLE_COVERAGE_TESTING=false
-	CORE_SYMBOL_NAME="AAC"
-	START_MAKE=true
-	#sn buy ram
-	RAM_TRADE_SYMBOL_NAME="SN" 
-	TEMP_DIR="/tmp"
-	TIME_BEGIN=$( date -u +%s )
-	VERSION=1.2
+   CMAKE_BUILD_TYPE=Release
+   DISK_MIN=20
+   DOXYGEN=false
+   ENABLE_COVERAGE_TESTING=false
+   CORE_SYMBOL_NAME="AAC"
+   START_MAKE=true
+   RAM_TRADE_SYMBOL_NAME="SN" 
+   TEMP_DIR="/tmp"
+   TIME_BEGIN=$( date -u +%s )
+   VERSION=1.2
 
    txtbld=$(tput bold)
    bldred=${txtbld}$(tput setaf 1)
@@ -238,33 +237,34 @@
    printf ">>>>>>>> ENABLE_COVERAGE_TESTING=%s\\n" "${ENABLE_COVERAGE_TESTING}"
    printf ">>>>>>>> DOXYGEN=%s\\n\\n" "${DOXYGEN}"
 
-	if [ ! -d "${BUILD_DIR}" ]; then
-		if ! mkdir -p "${BUILD_DIR}"
-		then
-			printf "Unable to create build directory %s.\\n Exiting now.\\n" "${BUILD_DIR}"
-			exit 1;
-		fi
-	fi
-	
-	if ! cd "${BUILD_DIR}"
-	then
-		printf "Unable to enter build directory %s.\\n Exiting now.\\n" "${BUILD_DIR}"
-		exit 1;
-	fi
-	
-	if [ -z "$CMAKE" ]; then
-		CMAKE=$( command -v cmake )
-	fi
-	#sn buy ram
-	if ! "${CMAKE}" -DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE}" -DCMAKE_CXX_COMPILER="${CXX_COMPILER}" \
-		-DCMAKE_C_COMPILER="${C_COMPILER}" -DWASM_ROOT="${WASM_ROOT}" -DCORE_SYMBOL_NAME="${CORE_SYMBOL_NAME}" -DRAM_TRADE_SYMBOL_NAME="${RAM_TRADE_SYMBOL_NAME}" \
-		-DOPENSSL_ROOT_DIR="${OPENSSL_ROOT_DIR}" -DBUILD_MONGO_DB_PLUGIN=true \
-		-DENABLE_COVERAGE_TESTING="${ENABLE_COVERAGE_TESTING}" -DBUILD_DOXYGEN="${DOXYGEN}" \
-        -DCMAKE_INSTALL_PREFIX="/usr/local/aacio" "${SOURCE_DIR}"
-	then
-		printf "\\n\\t>>>>>>>>>>>>>>>>>>>> CMAKE building AACIO has exited with the above error.\\n\\n"
-		exit -1
-	fi
+   if [ ! -d "${BUILD_DIR}" ]; then
+      if ! mkdir -p "${BUILD_DIR}"
+      then
+         printf "Unable to create build directory %s.\\n Exiting now.\\n" "${BUILD_DIR}"
+         exit 1;
+      fi
+   fi
+
+   if ! cd "${BUILD_DIR}"
+   then
+      printf "Unable to enter build directory %s.\\n Exiting now.\\n" "${BUILD_DIR}"
+      exit 1;
+   fi
+
+   if [ -z "$CMAKE" ]; then
+      CMAKE=$( command -v cmake )
+   fi
+
+   if ! "${CMAKE}" -DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE}" -DCMAKE_CXX_COMPILER="${CXX_COMPILER}" \
+      -DCMAKE_C_COMPILER="${C_COMPILER}" -DWASM_ROOT="${WASM_ROOT}" -DCORE_SYMBOL_NAME="${CORE_SYMBOL_NAME}" \
+      -DRAM_TRADE_SYMBOL_NAME="${RAM_TRADE_SYMBOL_NAME}" \
+      -DOPENSSL_ROOT_DIR="${OPENSSL_ROOT_DIR}" -DBUILD_MONGO_DB_PLUGIN=true \
+      -DENABLE_COVERAGE_TESTING="${ENABLE_COVERAGE_TESTING}" -DBUILD_DOXYGEN="${DOXYGEN}" \
+      -DCMAKE_INSTALL_PREFIX="/usr/local/aacio" "${SOURCE_DIR}"
+   then
+      printf "\\n\\t>>>>>>>>>>>>>>>>>>>> CMAKE building AACIO has exited with the above error.\\n\\n"
+      exit -1
+   fi
 
    if [ "${START_MAKE}" == "false" ]; then
       printf "\\n\\t>>>>>>>>>>>>>>>>>>>> AACIO has been successfully configured but not yet built.\\n\\n"
@@ -278,7 +278,8 @@
    fi
 
    TIME_END=$(( $(date -u +%s) - ${TIME_BEGIN} ))
-printf "\n\n${bldred}\t _______  _______  _______  _________  _______  _______ \n"
+
+  printf "\n\n${bldred}\t _______  _______  _______  _________  _______  _______ \n"
         printf "\n"
         printf '\t             aa               aa        ,cc8888cc,                   \n'
 	printf '\t            aaaa             aaaa      cc"     `acc                  \n'
@@ -290,7 +291,6 @@ printf "\n\n${bldred}\t _______  _______  _______  _________  _______  _______ \
 	printf '\t      aa           `aa aa           `aa `"c8888c"                    \n'
 	printf '\t_______  _______  _______  _________  _______  _______               \n'
 	printf "\t\n${txtrst}"    
-
    printf "\\n\\tAACIO has been successfully built. %02d:%02d:%02d\\n\\n" $(($TIME_END/3600)) $(($TIME_END%3600/60)) $(($TIME_END%60))
    printf "\\tTo verify your installation run the following commands:\\n"
 

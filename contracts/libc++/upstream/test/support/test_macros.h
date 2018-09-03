@@ -191,23 +191,10 @@
 
 namespace test_macros_detail {
 template <class T, class U>
-struct is_same 
-{ 
-    enum 
-    {
-         value = 0
-    };
-} ;
+struct is_same { enum { value = 0};} ;
 template <class T>
-struct is_same<T, T> 
-{ 
-    enum 
-    {
-        value = 1}; 
-    };
-} 
-
-// namespace test_macros_detail
+struct is_same<T, T> { enum {value = 1}; };
+} // namespace test_macros_detail
 
 #define ASSERT_SAME_TYPE(...) \
     static_assert((test_macros_detail::is_same<__VA_ARGS__>::value), \

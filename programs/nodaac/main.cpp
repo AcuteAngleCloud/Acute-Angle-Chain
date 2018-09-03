@@ -102,7 +102,7 @@ int main(int argc, char** argv)
       if(!app().initialize<chain_plugin, http_plugin, net_plugin, producer_plugin>(argc, argv))
          return INITIALIZE_FAIL;
       initialize_logging();
-      ilog("nodaac version ${ver}", ("ver", aacio::utilities::common::itoh(static_cast<uint32_t>(app().version()))));
+      ilog("nodaac version ${ver}", ("ver", app().version_string()));
       ilog("aacio root is ${root}", ("root", root.string()));
       app().startup();
       app().exec();

@@ -82,7 +82,7 @@ void wallet_api_plugin::plugin_startup() {
        CALL(wallet, wallet_mgr, sign_digest,
             INVOKE_R_R_R(wallet_mgr, sign_digest, chain::digest_type, public_key_type), 201),
        CALL(wallet, wallet_mgr, create,
-            INVOKE_R_R(wallet_mgr, create, std::string), 201),
+            INVOKE_V_R_R(wallet_mgr, create, std::string, std::string), 201),
        CALL(wallet, wallet_mgr, open,
             INVOKE_V_R(wallet_mgr, open, std::string), 200),
        CALL(wallet, wallet_mgr, lock_all,
@@ -102,7 +102,15 @@ void wallet_api_plugin::plugin_startup() {
        CALL(wallet, wallet_mgr, list_keys,
             INVOKE_R_R_R(wallet_mgr, list_keys, std::string, std::string), 200),
        CALL(wallet, wallet_mgr, get_public_keys,
-            INVOKE_R_V(wallet_mgr, get_public_keys), 200)
+            INVOKE_R_V(wallet_mgr, get_public_keys), 200),
+       CALL(wallet, wallet_mgr, change_password,
+            INVOKE_V_R_R(wallet_mgr, change_password, std::string, std::string), 200),
+       CALL(wallet, wallet_mgr, create_account,
+            INVOKE_R_R(wallet_mgr, create_account, ::create_account_params), 202),
+       CALL(wallet, wallet_mgr, easy_create_account,
+            INVOKE_R_R_R(wallet_mgr, easy_create_account, std::string, std::string), 202),
+       CALL(wallet, wallet_mgr, push_action,
+            INVOKE_R_R(wallet_mgr, push_action, ::push_action_params), 202)
    });
 }
 

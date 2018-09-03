@@ -74,7 +74,7 @@ def startWallet():
     run('mkdir -p ' + os.path.abspath(args.wallet_dir))
     background(args.kaacd + ' --unlock-timeout %d --http-server-address 127.0.0.1:6666 --wallet-dir %s' % (unlockTimeout, os.path.abspath(args.wallet_dir)))
     sleep(.4)
-    run(args.claac + 'wallet create')
+    run(args.claac + 'wallet create --to-console')
 
 def importKeys():
     run(args.claac + 'wallet import --private-key ' + args.private_key)
@@ -266,7 +266,7 @@ def msigReplaceSystem():
 def produceNewAccounts():
     with open('newusers', 'w') as f:
         for i in range(120_000, 200_000):
-            x = getOutput(args.claac + 'create key')
+            x = getOutput(args.claac + 'create key --to-console')
             r = re.match('Private key: *([^ \n]*)\nPublic key: *([^ \n]*)', x, re.DOTALL | re.MULTILINE)
             name = 'user'
             for j in range(7, -1, -1):
@@ -347,7 +347,7 @@ commands = [
 
 parser.add_argument('--public-key', metavar='', help="AACIO Public Key", default='AAC8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr', dest="public_key")
 parser.add_argument('--private-Key', metavar='', help="AACIO Private Key", default='5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p', dest="private_key")
-parser.add_argument('--claac', metavar='', help="Claac command", default='../../build/programs/claac/claac --wallet-url http://localhost:6666 ')
+parser.add_argument('--claac', metavar='', help="Claac command", default='../../build/programs/claac/claac --wallet-url http://127.0.0.1:6666 ')
 parser.add_argument('--nodaac', metavar='', help="Path to nodaac binary", default='../../build/programs/nodaac/nodaac')
 parser.add_argument('--kaacd', metavar='', help="Path to kaacd binary", default='../../build/programs/kaacd/kaacd')
 parser.add_argument('--contracts-dir', metavar='', help="Path to contracts directory", default='../../build/contracts/')
@@ -381,7 +381,7 @@ for (flag, command, function, inAll, help) in commands:
         
 args = parser.parse_args()
 
-args.claac += '--url http://localhost:%d ' % args.http_port
+args.claac += '--url http://127.0.0.1:%d ' % args.http_port
 
 logFile = open(args.log_path, 'a')
 

@@ -173,10 +173,10 @@ namespace aacio {
        * @post The amount of this asset is multiplied by a
        */
       asset& operator*=( int64_t a ) {
-         aacio_assert( a == 0 || (amount * a) / a == amount, "multiplication overflow or underflow" );
-         amount *= a;
-         aacio_assert( -max_amount <= amount, "multiplication underflow" );
-         aacio_assert( amount <= max_amount,  "multiplication overflow" );
+         int128_t tmp = (int128_t)amount * (int128_t)a;
+         aacio_assert( tmp <= max_amount, "multiplication overflow" );
+         aacio_assert( tmp >= -max_amount, "multiplication underflow" );
+         amount = (int64_t)tmp;
          return *this;
       }
 
@@ -218,6 +218,8 @@ namespace aacio {
        * @post The amount of this asset is divided by a
        */
       asset& operator/=( int64_t a ) {
+         aacio_assert( a != 0, "divide by zero" );
+         aacio_assert( !(amount == std::numeric_limits<int64_t>::min() && a == -1), "signed division overflow" );
          amount /= a;
          return *this;
       }

@@ -2,12 +2,10 @@ aacio.system
 ----------
 
 This contract enables users to stake tokens, and then configure and vote on producers and worker proposals. 
-该合同使用户能够使用代币，然后对生产者和工人提案进行配置和投票。
-Users can also proxy their voting influence to other users.
-用户还可以将其投票影响力代理给其他用户。
-The state of this contract is read to determine the 21 active block producers. 
-读取此合同的状态以确定21个活动块生成器。
 
+Users can also proxy their voting influence to other users.
+
+The state of this contract is read to determine the 21 active block producers. 
 
 Actions:
 The naming convention is codeaccount::actionname followed by a list of paramters.

@@ -73,14 +73,14 @@ public:
                                    .active   = authority( get_public_key( a, "active" ) )
                                 });
 
-      trx.actions.emplace_back( get_action( N(aacio), N(buyram), vector<permission_level>{{creator,config::active_name}},
+      trx.actions.emplace_back( get_action( config::system_account_name, N(buyram), vector<permission_level>{{creator,config::active_name}},
                                             mvo()
                                             ("payer", creator)
                                             ("receiver", a)
                                             ("quant", ramfunds) )
                               );
 
-      trx.actions.emplace_back( get_action( N(aacio), N(delegatebw), vector<permission_level>{{creator,config::active_name}},
+      trx.actions.emplace_back( get_action( config::system_account_name, N(delegatebw), vector<permission_level>{{creator,config::active_name}},
                                             mvo()
                                             ("from", creator)
                                             ("receiver", a)
@@ -394,10 +394,10 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_all_approve, aacio_msig_tester )
    //             /         |        \             <--- implicitly updated in onblock action
    // alice active     bob active   carol active
 
-   set_authority(N(aacio), "active", authority(1,
+   set_authority(config::system_account_name, "active", authority(1,
       vector<key_weight>{{get_private_key("aacio", "active").get_public_key(), 1}},
       vector<permission_level_weight>{{{N(aacio.prods), config::active_name}, 1}}), "owner",
-      { { N(aacio), "active" } }, { get_private_key( N(aacio), "active" ) });
+      { { config::system_account_name, "active" } }, { get_private_key( config::system_account_name, "active" ) });
 
    set_producers( {N(alice),N(bob),N(carol)} );
    produce_blocks(50);
@@ -416,9 +416,9 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_all_approve, aacio_msig_tester )
 
    produce_blocks();
 
-   create_account_with_resources( N(alice1111111), N(aacio), core_from_string("1.0000"), false );
-   create_account_with_resources( N(bob111111111), N(aacio), core_from_string("0.4500"), false );
-   create_account_with_resources( N(carol1111111), N(aacio), core_from_string("1.0000"), false );
+   create_account_with_resources( N(alice1111111), config::system_account_name, core_from_string("1.0000"), false );
+   create_account_with_resources( N(bob111111111), config::system_account_name, core_from_string("0.4500"), false );
+   create_account_with_resources( N(carol1111111), config::system_account_name, core_from_string("1.0000"), false );
 
    BOOST_REQUIRE_EQUAL( core_from_string("1000000000.0000"),
                         get_balance("aacio") + get_balance("aacio.ramfee") + get_balance("aacio.stake") + get_balance("aacio.ram") );
@@ -426,7 +426,7 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_all_approve, aacio_msig_tester )
    vector<permission_level> perm = { { N(alice), config::active_name }, { N(bob), config::active_name },
       {N(carol), config::active_name} };
 
-   vector<permission_level> action_perm = {{N(aacio), config::active_name}};
+   vector<permission_level> action_perm = {{config::system_account_name, config::active_name}};
 
    auto wasm = wast_to_wasm( test_api_wast );
 
@@ -496,7 +496,7 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_all_approve, aacio_msig_tester )
 
    // can't create account because system contract was replace by the test_api contract
 
-   BOOST_REQUIRE_EXCEPTION( create_account_with_resources( N(alice1111112), N(aacio), core_from_string("1.0000"), false ),
+   BOOST_REQUIRE_EXCEPTION( create_account_with_resources( N(alice1111112), config::system_account_name, core_from_string("1.0000"), false ),
                             aacio_assert_message_exception, aacio_assert_message_is("Unknown Test")
 
    );
@@ -505,10 +505,10 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_all_approve, aacio_msig_tester )
 BOOST_FIXTURE_TEST_CASE( update_system_contract_major_approve, aacio_msig_tester ) try {
 
    // set up the link between (aacio active) and (aacio.prods active)
-   set_authority(N(aacio), "active", authority(1,
+   set_authority(config::system_account_name, "active", authority(1,
       vector<key_weight>{{get_private_key("aacio", "active").get_public_key(), 1}},
       vector<permission_level_weight>{{{N(aacio.prods), config::active_name}, 1}}), "owner",
-      { { N(aacio), "active" } }, { get_private_key( N(aacio), "active" ) });
+      { { config::system_account_name, "active" } }, { get_private_key( config::system_account_name, "active" ) });
 
    create_accounts( { N(apple) } );
    set_producers( {N(alice),N(bob),N(carol), N(apple)} );
@@ -527,9 +527,9 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_major_approve, aacio_msig_tester
 
    produce_blocks();
 
-   create_account_with_resources( N(alice1111111), N(aacio), core_from_string("1.0000"), false );
-   create_account_with_resources( N(bob111111111), N(aacio), core_from_string("0.4500"), false );
-   create_account_with_resources( N(carol1111111), N(aacio), core_from_string("1.0000"), false );
+   create_account_with_resources( N(alice1111111), config::system_account_name, core_from_string("1.0000"), false );
+   create_account_with_resources( N(bob111111111), config::system_account_name, core_from_string("0.4500"), false );
+   create_account_with_resources( N(carol1111111), config::system_account_name, core_from_string("1.0000"), false );
 
    BOOST_REQUIRE_EQUAL( core_from_string("1000000000.0000"),
                         get_balance("aacio") + get_balance("aacio.ramfee") + get_balance("aacio.stake") + get_balance("aacio.ram") );
@@ -537,7 +537,7 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_major_approve, aacio_msig_tester
    vector<permission_level> perm = { { N(alice), config::active_name }, { N(bob), config::active_name },
       {N(carol), config::active_name}, {N(apple), config::active_name}};
 
-   vector<permission_level> action_perm = {{N(aacio), config::active_name}};
+   vector<permission_level> action_perm = {{config::system_account_name, config::active_name}};
 
    auto wasm = wast_to_wasm( test_api_wast );
 
@@ -619,7 +619,7 @@ BOOST_FIXTURE_TEST_CASE( update_system_contract_major_approve, aacio_msig_tester
 
    // can't create account because system contract was replace by the test_api contract
 
-   BOOST_REQUIRE_EXCEPTION( create_account_with_resources( N(alice1111112), N(aacio), core_from_string("1.0000"), false ),
+   BOOST_REQUIRE_EXCEPTION( create_account_with_resources( N(alice1111112), config::system_account_name, core_from_string("1.0000"), false ),
                             aacio_assert_message_exception, aacio_assert_message_is("Unknown Test")
 
    );

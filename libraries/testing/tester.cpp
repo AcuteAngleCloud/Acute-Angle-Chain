@@ -826,7 +826,7 @@ namespace aacio { namespace testing {
    transaction_trace_ptr base_tester::set_producers(const vector<account_name>& producer_names) {
       auto schedule = get_producer_keys( producer_names );
 
-      return push_action( N(aacio), N(setprods), N(aacio),
+      return push_action( config::system_account_name, N(setprods), config::system_account_name,
                           fc::mutable_variant_object()("schedule", schedule));
    }
 

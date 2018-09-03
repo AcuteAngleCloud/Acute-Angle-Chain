@@ -131,7 +131,8 @@ namespace aaciosystem {
    void system_contract::update_votes( const account_name voter_name, const account_name proxy, const std::vector<account_name>& producers, bool voting ) {
       //validate input
       if ( proxy ) {
-         aacio_assert( 0==1, "voting by proxy is not supported" );// abc
+         aacio_assert( 0==1, "voting by proxy is not supported" );
+
          aacio_assert( producers.size() == 0, "cannot vote for producers and proxy at same time" );
          aacio_assert( voter_name != proxy, "cannot proxy to self" );
          require_recipient( proxy );

@@ -19,13 +19,12 @@ namespace aaciosystem {
    using aacio::indexed_by;
    using aacio::const_mem_fun;
    using aacio::block_timestamp;
-   
+
    struct name_bid {
-     
-     account_name            newname;      
-     account_name            high_bidder;  
+     account_name            newname;
+     account_name            high_bidder;
      int64_t                 high_bid = 0; ///< negative high_bid == closed auction waiting to be claimed
-     uint64_t                last_bid_time = 0; 
+     uint64_t                last_bid_time = 0;
 
      auto     primary_key()const { return newname;                          }
      uint64_t by_high_bid()const { return static_cast<uint64_t>(-high_bid); }
@@ -39,9 +38,9 @@ namespace aaciosystem {
    struct aacio_global_state : aacio::blockchain_parameters {
       uint64_t free_ram()const { return max_ram_size - total_ram_bytes_reserved; }
 
-      uint64_t             max_ram_size = 64ll*1024 * 1024 * 1024;   
-      uint64_t             total_ram_bytes_reserved = 0;  
-      int64_t              total_ram_stake = 0;   
+      uint64_t             max_ram_size = 64ll*1024 * 1024 * 1024;
+      uint64_t             total_ram_bytes_reserved = 0;
+      int64_t              total_ram_stake = 0;
 
       block_timestamp      last_producer_schedule_update;
       uint64_t             last_pervote_bucket_fill = 0;

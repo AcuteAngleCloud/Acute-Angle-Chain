@@ -46,13 +46,6 @@ namespace aacio { namespace chain {
       std::exception_ptr                         except_ptr;
    };
 
-   struct block_trace {
-      fc::microseconds                elapsed;
-      uint64_t                        billed_cpu_usage_us;
-      vector<transaction_trace_ptr>   trx_traces;
-   };
-   using block_trace_ptr = std::shared_ptr<block_trace>;
-
 } }  /// namespace aacio::chain
 
 FC_REFLECT( aacio::chain::base_action_trace,
@@ -63,4 +56,3 @@ FC_REFLECT_DERIVED( aacio::chain::action_trace,
 
 FC_REFLECT( aacio::chain::transaction_trace, (id)(receipt)(elapsed)(net_usage)(scheduled)
                                              (action_traces)(failed_dtrx_trace)(except) )
-FC_REFLECT( aacio::chain::block_trace, (elapsed)(billed_cpu_usage_us)(trx_traces) )

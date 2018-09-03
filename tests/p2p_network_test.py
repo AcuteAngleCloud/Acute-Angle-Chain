@@ -23,7 +23,7 @@ DEFAULT_PORT=ports[0]
 
 parser = argparse.ArgumentParser(add_help=False)
 Print=testUtils.Utils.Print
-errorExit=testUtils.Utils.errorExit
+errorExit=Utils.errorExit
 
 # Override default help argument so that only --help (and not -h) can call help
 parser.add_argument('-?', action='help', default=argparse.SUPPRESS,
@@ -111,9 +111,6 @@ if walletMgr.launch() is False:
 testWalletName="test"
 Print("Creating wallet \"%s\"." % (testWalletName))
 testWallet=walletMgr.create(testWalletName)
-if testWallet is None:
-    cmdError("aac wallet create")
-    errorExit("Failed to create wallet %s." % (testWalletName))
 
 for account in accounts:
     Print("Importing keys for account %s into wallet %s." % (account.name, testWallet.name))
@@ -124,9 +121,6 @@ for account in accounts:
 defproduceraWalletName="defproducera"
 Print("Creating wallet \"%s\"." % (defproduceraWalletName))
 defproduceraWallet=walletMgr.create(defproduceraWalletName)
-if defproduceraWallet is None:
-    cmdError("aac wallet create")
-    errorExit("Failed to create wallet %s." % (defproduceraWalletName))
 
 defproduceraAccount=testUtils.Cluster.defproduceraAccount
 # defproducerbAccount=testUtils.Cluster.defproducerbAccount
@@ -137,8 +131,6 @@ if not walletMgr.importKey(defproduceraAccount, defproduceraWallet):
      errorExit("Failed to import key for account %s" % (defproduceraAccount.name))
 
 node0=cluster.getNode(0)
-if node0 is None:
-    errorExit("cluster in bad state, received None node")
 
 # aacio should have the same key as defproducera
 aacio = copy.copy(defproduceraAccount)
@@ -146,16 +138,16 @@ aacio.name = "aacio"
 
 Print("Info of each node:")
 for i in range(len(hosts)):
-    node = cluster.getNode(0)
+    node = node0
     cmd="%s %s get info" % (testUtils.Utils.AacClientPath, node.endpointArgs)
     trans = node.runCmdReturnJson(cmd)
     Print("host %s: %s" % (hosts[i], trans))
 
 
-wastFile="contracts/aacio.system/aacio.system.wast"
-abiFile="contracts/aacio.system/aacio.system.abi"
-Print("\nPush system contract %s %s" % (wastFile, abiFile))
-trans=node0.publishContract(aacio.name, wastFile, abiFile, waitForTransBlock=True)
+wasmFile="aacio.system.wasm"
+abiFile="aacio.system.abi"
+Print("\nPush system contract %s %s" % (wasmFile, abiFile))
+trans=node0.publishContract(aacio.name, wasmFile, abiFile, waitForTransBlock=True)
 if trans is None:
     Utils.errorExit("Failed to publish aacio.system.")
 else:

@@ -191,20 +191,10 @@ namespace fc
     *
     * Memory usage on 64 bit systems is 16 bytes and 12 bytes on 32 bit systems.
     */
-
-   /**
-     * @brief store null，int64，uint64，double，bool，string，std :: vector <variant>，
-     *和variant_object's。
-    *
-     * variant分配除了字符串，数组和对象之外的所有内容
-     *堆栈并且对于在堆上全部涂覆的值“移动感知”。
-    *
-     * 64位系统上的内存使用率为16字节，32位系统上为12字节。
-    */
-   class variant   //变量
+   class variant
    {
       public:
-        enum type_id        //枚举类型id
+        enum type_id
         {
            null_type   = 0,
            int64_type  = 1,
@@ -225,7 +215,7 @@ namespace fc
         /// @param str - UTF8 string
         variant( const char* str );
         variant( char* str );
-        variant( wchar_t* str );  //wchar = unsigned short
+        variant( wchar_t* str );
         variant( const wchar_t* str );
         variant( float val );
         variant( uint8_t val );
@@ -248,9 +238,9 @@ namespace fc
        ~variant();
 
         /**
-         *  Read-only access to the content of the variant.  //只读方式访问变量的内容
+         *  Read-only access to the content of the variant.
          */
-        class visitor  //访问者
+        class visitor
         {
            public:
               virtual ~visitor(){}
@@ -366,7 +356,7 @@ namespace fc
         }
 
         template<typename T>
-        explicit variant( const T& val );   //明确的，显式
+        explicit variant( const T& val );
 
 
         void    clear();

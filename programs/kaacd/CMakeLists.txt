@@ -1,24 +1,24 @@
-add_executable( kaacd main.cpp )
+add_executable( ${KEY_STORE_EXECUTABLE_NAME} main.cpp )
 if( UNIX AND NOT APPLE )
   set(rt_library rt )
 endif()
 
 find_package( Gperftools QUIET )
 if( GPERFTOOLS_FOUND )
-    message( STATUS "Found gperftools; compiling kaacd with TCMalloc")
+    message( STATUS "Found gperftools; compiling ${KEY_STORE_EXECUTABLE_NAME} with TCMalloc")
     list( APPEND PLATFORM_SPECIFIC_LIBS tcmalloc )
 endif()
 
-target_link_libraries( kaacd
+target_link_libraries( ${KEY_STORE_EXECUTABLE_NAME}
         PRIVATE appbase
         PRIVATE wallet_api_plugin wallet_plugin
         PRIVATE http_plugin
         PRIVATE aacio_chain fc ${CMAKE_DL_LIBS} ${PLATFORM_SPECIFIC_LIBS} )
 
-mas_sign(kaacd)
+mas_sign(${KEY_STORE_EXECUTABLE_NAME})
 
 install( TARGETS
-   kaacd
+   ${KEY_STORE_EXECUTABLE_NAME}
 
    RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
    LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}

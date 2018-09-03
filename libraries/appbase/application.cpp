@@ -1,4 +1,5 @@
 #include <appbase/application.hpp>
+#include <appbase/version.hpp>
 
 #include <boost/algorithm/string.hpp>
 #include <boost/filesystem.hpp>
@@ -43,6 +44,10 @@ void application::set_version(uint64_t version) {
 
 uint64_t application::version() const {
   return my->_version;
+}
+
+string application::version_string() const {
+   return appbase_version_string;
 }
 
 void application::set_default_data_dir(const bfs::path& data_dir) {
@@ -119,7 +124,7 @@ bool application::initialize_impl(int argc, char** argv, vector<abstract_plugin*
    }
 
    if( options.count( "version" ) ) {
-      cout << my->_version << std::endl;
+      cout << version_string() << std::endl;
       return false;
    }
 

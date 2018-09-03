@@ -93,16 +93,14 @@ namespace aaciosystem {
       buyram( payer, receiver, aacout );
    }
 
+
    /**
     *  When buying ram the payer irreversiblly transfers quant to system contract and only
     *  the receiver may reclaim the tokens via the sellram action. The receiver pays for the
     *  storage of all database records associated with this action.
-    * 当购买ram时，付款人不可逆转地将数量转移到系统合同而且只是接收者可以通过sellram动作回收令牌。 
-    * 接收方支付与此操作相关的所有数据库记录的存储费用。
     *
     *  RAM is a scarce resource whose supply is defined by global properties max_ram_size. RAM is
     *  priced using the bancor algorithm such that price-per-byte with a constant reserve ratio of 100:1.
-    * RAM是稀缺资源，其供应由全局属性max_ram_size定义。 RAM使用bancor算法定价，使得每字节价格具有100：1的恒定储备比率。
     */
    void system_contract::buyram( account_name payer, account_name receiver, asset quant )
    {

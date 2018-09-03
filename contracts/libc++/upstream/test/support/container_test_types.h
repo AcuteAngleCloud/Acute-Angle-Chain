@@ -97,7 +97,6 @@
 namespace detail {
 // TypeID - Represent a unique identifier for a type. TypeID allows equality
 // comparisons between different types.
-//Type ID表示类型的唯一标识符。Type允许不同类型之间的相等比较
 struct TypeID {
   friend bool operator==(TypeID const& LHS, TypeID const& RHS)
   {return LHS.m_id == RHS.m_id; }
@@ -111,7 +110,6 @@ private:
 
 // TypeInfo - Represent information for the specified type 'T', including a
 // unique TypeID.
-//Type信息-表示指定类型“T”的信息，包括唯一的TypeID,方便对工程项目中得类进行管理。
 template <class T>
 class TypeInfo {
 public:
@@ -153,7 +151,7 @@ inline constexpr TypeID const& makeArgumentID() {
 //===----------------------------------------------------------------------===//
 //                        AllocatorConstructController
 //===----------------------------------------------------------------------===//
-//分配器结构控制器
+
 struct AllocatorConstructController {
   const detail::TypeID* m_expected_args;
   bool m_allow_constructions;
@@ -166,11 +164,8 @@ struct AllocatorConstructController {
   }
 
   // Check for and consume an expected construction added by 'expect'.
-  //检查和消耗预期的结构，由“预期”添加。
   // Return true if the construction was expected and false otherwise.
-  ///如果构造是预期的，则返回true，否则为false
   // This should only be called by 'Allocator.construct'.
-  //这只应该由“分配器。构造”调用。
   bool check(detail::TypeID const& tid) {
     if (!m_expected_args)
       assert(m_allow_unchecked);

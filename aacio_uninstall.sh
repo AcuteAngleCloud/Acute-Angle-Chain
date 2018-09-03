@@ -1,13 +1,14 @@
 #! /bin/bash
 
 binaries=(claac
-          nodaac
-          aacio-kaacd
           aacio-abigen
-          aacio-applesdemo
           aacio-launcher
           aacio-s2wasm
-          aacio-wast2wasm)
+          aacio-wast2wasm
+          aaciocpp
+          kaacd
+          nodaac
+          aacio-applesdemo)
 
 if [ -d "/usr/local/aacio" ]; then
    printf "\tDo you wish to remove this install? (requires sudo)\n"

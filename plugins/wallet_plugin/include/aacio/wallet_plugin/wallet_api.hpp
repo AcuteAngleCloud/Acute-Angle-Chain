@@ -62,6 +62,8 @@ class wallet_api
        */
       virtual void    set_password(string password) = 0;
 
+      virtual void    save_wallet_file(string password = "") { };
+
       /** Dumps all private keys owned by the wallet.
        *
        * The keys are printed in WIF format.  You can import these keys into another wallet

@@ -26,6 +26,11 @@ namespace appbase {
           * @return Version output with -v/--version
           */
          uint64_t version() const;
+         /** @brief Get version string; generated from git describe if available
+          *
+          * @return A string worthy of output with -v/--version, or "Unknown" if git not available
+          */
+         string version_string() const;
          /** @brief Set default data directory
           *
           * @param data_dir Default data directory to use if not specified

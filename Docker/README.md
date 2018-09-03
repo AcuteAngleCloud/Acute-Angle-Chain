@@ -20,10 +20,10 @@ cd aac/Docker
 docker build . -t aacio/aac
 ```
 
-The above will build off the most recent commit to the master branch by default. If you would like to target a specific branch/tag, you may use a build argument. For example, if you wished to generate a docker image based off of the v1.1.3 tag, you could do the following:
+The above will build off the most recent commit to the master branch by default. If you would like to target a specific branch/tag, you may use a build argument. For example, if you wished to generate a docker image based off of the v1.2.3 tag, you could do the following:
 
 ```bash
-docker build -t aacio/aac:v1.1.3 --build-arg branch=v1.1.3 .
+docker build -t aacio/aac:v1.2.3 --build-arg branch=v1.2.3 .
 ```
 
 By default, the symbol in aacio.system is set to SYS. You can override this using the symbol argument while building the docker image.

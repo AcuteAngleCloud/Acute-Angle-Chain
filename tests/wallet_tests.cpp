@@ -91,9 +91,8 @@ BOOST_AUTO_TEST_CASE(wallet_manager_test)
    BOOST_CHECK_THROW(wm.unlock("test", "pw"), fc::exception);
    BOOST_CHECK_THROW(wm.import_key("test", "pw"), fc::exception);
 
-   auto pw = wm.create("test");
-   BOOST_CHECK(!pw.empty());
-   BOOST_CHECK_EQUAL(0, pw.find("PW")); // starts with PW
+   auto pw = "passwd123456";
+   wm.create("test",pw);
    BOOST_CHECK_EQUAL(1, wm.list_wallets().size());
    // wallet has no keys when it is created
    BOOST_CHECK_EQUAL(0, wm.get_public_keys().size());
@@ -145,7 +144,8 @@ BOOST_AUTO_TEST_CASE(wallet_manager_test)
    BOOST_CHECK_THROW(wm.get_public_keys(), wallet_locked_exception);
    BOOST_CHECK(wm.list_wallets().at(0).find("*") == std::string::npos);
 
-   auto pw2 = wm.create("test2");
+   auto pw2 = "abc123456";
+   wm.create("test2",pw2);
    BOOST_CHECK_EQUAL(2, wm.list_wallets().size());
    // wallet has no keys when it is created
    BOOST_CHECK_EQUAL(0, wm.get_public_keys().size());
@@ -188,14 +188,15 @@ BOOST_AUTO_TEST_CASE(wallet_manager_test)
 
    wm.set_timeout(chrono::seconds(15));
 
-   wm.create("testgen");
+   wm.create("testgen","abc123456");
    BOOST_CHECK_THROW(wm.create_key("testgen", "xxx"), chain::wallet_exception);
    wm.lock("testgen");
    fc::remove("testgen.wallet");
 
    const string test_key_create_types[] = {"K1", "R1", "k1", ""};
    for(const string& key_type_to_create : test_key_create_types) {
-      string pw = wm.create("testgen");
+      string pw = "abc123456";
+      wm.create("testgen",pw);
 
       //check that the public key returned looks legit through a string conversion
       // (would throw otherwise)
@@ -226,42 +227,42 @@ BOOST_AUTO_TEST_CASE(wallet_manager_create_test) {
       if (fc::exists("test.wallet")) fc::remove("test.wallet");
 
       wallet_manager wm;
-      wm.create("test");
+      wm.create("test","abc123456");
       constexpr auto key1 = "5JktVNHnRX48BUdtewU7N1CyL4Z886c42x7wYW7XhNWkDQRhdcS";
       wm.import_key("test", key1);
-      BOOST_CHECK_THROW(wm.create("test"), wallet_exist_exception);
+      BOOST_CHECK_THROW(wm.create("test","abc123456"), wallet_exist_exception);
 
-      BOOST_CHECK_THROW(wm.create("./test"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create("../../test"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create("/tmp/test"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create("/tmp/"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create("/"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create(",/"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create(","), wallet_exception);
-      BOOST_CHECK_THROW(wm.create("<<"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create("<"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create(",<"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create(",<<"), wallet_exception);
-      BOOST_CHECK_THROW(wm.create(""), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("./test","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("../../test","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("/tmp/test","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("/tmp/","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("/","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create(",/","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create(",","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("<<", "abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("<","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create(",<","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create(",<<","abc123456"), wallet_exception);
+      BOOST_CHECK_THROW(wm.create("","abc123456"), wallet_exception);
 
       fc::remove("test.wallet");
 
-      wm.create(".test");
+      wm.create(".test","abc123456");
       BOOST_CHECK(fc::exists(".test.wallet"));
       fc::remove(".test.wallet");
-      wm.create("..test");
+      wm.create("..test","abc123456");
       BOOST_CHECK(fc::exists("..test.wallet"));
       fc::remove("..test.wallet");
-      wm.create("...test");
+      wm.create("...test","abc123456");
       BOOST_CHECK(fc::exists("...test.wallet"));
       fc::remove("...test.wallet");
-      wm.create(".");
+      wm.create(".","abc123456");
       BOOST_CHECK(fc::exists("..wallet"));
       fc::remove("..wallet");
-      wm.create("__test_test");
+      wm.create("__test_test","abc123456");
       BOOST_CHECK(fc::exists("__test_test.wallet"));
       fc::remove("__test_test.wallet");
-      wm.create("t-t");
+      wm.create("t-t","abc123456");
       BOOST_CHECK(fc::exists("t-t.wallet"));
       fc::remove("t-t.wallet");
 

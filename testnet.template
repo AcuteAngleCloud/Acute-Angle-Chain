@@ -64,7 +64,7 @@ cacmd () {
 sleep 2
 ecmd get info
 
-wcmd create -n ignition
+wcmd create --to-console -n ignition
 
 # Manual deployers, add a line below this block that looks like:
 #    wcmd import -n ignition --private-key $PRODKEY[0]
@@ -75,10 +75,10 @@ wcmd create -n ignition
 # ------ DO NOT ALTER THE NEXT LINE -------
 ###INSERT prodkeys
 
-ecmd set contract aacio contracts/aacio.bios contracts/aacio.bios/aacio.bios.wast contracts/aacio.bios/aacio.bios.abi
+ecmd set contract aacio contracts/aacio.bios aacio.bios.wasm aacio.bios.abi
 
 # Create required system accounts
-ecmd create key
+ecmd create key --to-console
 pubsyskey=`grep "^Public key:" $logfile | tail -1 | sed "s/^Public key://"`
 prisyskey=`grep "^Private key:" $logfile | tail -1 | sed "s/^Private key://"`
 echo aacio.* keys: $prisyskey $pubsyskey >> $logfile
@@ -94,9 +94,9 @@ ecmd create account aacio aacio.token $pubsyskey $pubsyskey
 ecmd create account aacio aacio.vpay $pubsyskey $pubsyskey
 ecmd create account aacio aacio.sudo $pubsyskey $pubsyskey
 
-ecmd set contract aacio.token contracts/aacio.token contracts/aacio.token/aacio.token.wast contracts/aacio.token/aacio.token.abi
-ecmd set contract aacio.msig contracts/aacio.msig contracts/aacio.msig/aacio.msig.wast contracts/aacio.msig/aacio.msig.abi
-ecmd set contract aacio.sudo contracts/aacio.sudo contracts/aacio.sudo/aacio.sudo.wast contracts/aacio.sudo/aacio.sudo.abi
+ecmd set contract aacio.token contracts/aacio.token aacio.token.wasm aacio.token.abi
+ecmd set contract aacio.msig contracts/aacio.msig aacio.msig.wasm aacio.msig.abi
+ecmd set contract aacio.sudo contracts/aacio.sudo aacio.sudo.wasm aacio.sudo.abi
 
 echo ===== Start: $step ============ >> $logfile
 echo executing: claac --wallet-url $wdurl --url http://$bioshost:$biosport push action aacio.token create '[ "aacio", "10000000000.0000 SYS" ]' -p aacio.token | tee -a $logfile
@@ -107,7 +107,7 @@ programs/claac/claac --wallet-url $wdurl --url http://$bioshost:$biosport push a
 echo ==== End: $step ============== >> $logfile
 step=$(($step + 1))
 
-ecmd set contract aacio contracts/aacio.system contracts/aacio.system/aacio.system.wast contracts/aacio.system/aacio.system.abi
+ecmd set contract aacio contracts/aacio.system aacio.system.wasm aacio.system.abi
 
 # Manual deployers, add a series of lines below this block that looks like:
 #    cacmd $PRODNAME[0] $OWNERKEY[0] $ACTIVEKEY[0]
