@@ -280,8 +280,8 @@
    TIME_END=$(( $(date -u +%s) - ${TIME_BEGIN} ))
 
   printf "\n\n${bldred}\t _______  _______  _______  _________  _______  _______ \n"
-        printf "\n"
-        printf '\t             aa               aa        ,cc8888cc,                   \n'
+      printf "\n"
+      printf '\t             aa               aa        ,cc8888cc,                   \n'
 	printf '\t            aaaa             aaaa      cc"     `acc                  \n'
 	printf '\t           aa `aa           aa `aa    cc                             \n'
 	printf '\t          aa   `aa         aa   `aa   cc                             \n'
@@ -297,8 +297,6 @@
    print_instructions
 
    printf "\\tFor more information:\\n"
-   printf "\\tAACIO website: https://aac.io\\n"
-   printf "\\tAACIO Telegram channel @ https://t.me/AACProject\\n"
-   printf "\\tAACIO resources: https://aac.io/resources/\\n"
-   printf "\\tAACIO Stack Exchange: https://aacio.stackexchange.com\\n"
-   printf "\\tAACIO wiki: https://github.com/AcuteAngleCloud/Acute-Angle-Chain/wiki\\n\\n\\n"
+   printf "\\tAACIO website: http://www.acuteangle.com/\\n" 
+   printf "\\sources code: https://github.com/AcuteAngleCloud/Acute-Angle-Chain\\n"
+   
