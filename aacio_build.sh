@@ -299,4 +299,7 @@
    printf "\\tFor more information:\\n"
    printf "\\tAACIO website: http://www.acuteangle.com/\\n" 
    printf "\\sources code: https://github.com/AcuteAngleCloud/Acute-Angle-Chain\\n"
+<<<<<<< HEAD
    
+=======
+>>>>>>> d6c91a22781df25d6f612f9bff75ce4a3e146bd8
