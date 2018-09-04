@@ -297,8 +297,5 @@
    print_instructions
 
    printf "\\tFor more information:\\n"
-   printf "\\tAACIO website: https://aac.io\\n"
-   printf "\\tAACIO Telegram channel @ https://t.me/AACProject\\n"
-   printf "\\tAACIO resources: https://aac.io/resources/\\n"
-   printf "\\tAACIO Stack Exchange: https://aacio.stackexchange.com\\n"
-   printf "\\tAACIO wiki: https://github.com/AcuteAngleCloud/Acute-Angle-Chain/wiki\\n\\n\\n"
+   printf "\\tAACIO website: http://www.acuteangle.com/\\n" 
+   printf "\\sources code: https://github.com/AcuteAngleCloud/Acute-Angle-Chain\\n"
