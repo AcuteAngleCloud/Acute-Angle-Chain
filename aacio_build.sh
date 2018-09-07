@@ -279,23 +279,23 @@
 
    TIME_END=$(( $(date -u +%s) - ${TIME_BEGIN} ))
 
-   printf "\n\n${bldred}\t _______  _______  _______ _________ _______\n"
-   printf '\t(  ____ \(  ___  )(  ____ \\\\__   __/(  ___  )\n'
-   printf "\t| (    \/| (   ) || (    \/   ) (   | (   ) |\n"
-   printf "\t| (__    | |   | || (_____    | |   | |   | |\n"
-   printf "\t|  __)   | |   | |(_____  )   | |   | |   | |\n"
-   printf "\t| (      | |   | |      ) |   | |   | |   | |\n"
-   printf "\t| (____/\| (___) |/\____) |___) (___| (___) |\n"
-   printf "\t(_______/(_______)\_______)\_______/(_______)\n${txtrst}"
-
+   printf "\n\n${bldred}\t _______  _______  _______  _________  _______  _______ \n"
+        printf "\n"
+        printf '\t             aa               aa        ,cc8888cc,                   \n'
+	printf '\t            aaaa             aaaa      cc"     `acc                  \n'
+	printf '\t           aa `aa           aa `aa    cc                             \n'
+	printf '\t          aa   `aa         aa   `aa   cc                             \n'
+	printf '\t         aaaaaaaaaa       aaaaaaaaaa  cc                             \n'
+	printf '\t        aa""""""""aa     aa""""""""aa cc,                            \n' 
+	printf '\t       aa         `aa   aa         `aa cc.     .acc                  \n'
+	printf '\t      aa           `aa aa           `aa `"c8888c"                    \n'
+	printf '\t_______  _______  _______  _________  _______  _______               \n'
+	printf "\t\n${txtrst}"    
    printf "\\n\\tAACIO has been successfully built. %02d:%02d:%02d\\n\\n" $(($TIME_END/3600)) $(($TIME_END%3600/60)) $(($TIME_END%60))
    printf "\\tTo verify your installation run the following commands:\\n"
 
    print_instructions
 
    printf "\\tFor more information:\\n"
-   printf "\\tAACIO website: https://aac.io\\n"
-   printf "\\tAACIO Telegram channel @ https://t.me/AACProject\\n"
-   printf "\\tAACIO resources: https://aac.io/resources/\\n"
-   printf "\\tAACIO Stack Exchange: https://aacio.stackexchange.com\\n"
-   printf "\\tAACIO wiki: https://github.com/AcuteAngleCloud/Acute-Angle-Chain/wiki\\n\\n\\n"
+   printf "\\tAACIO website: http://www.acuteangle.com/\\n" 
+   printf "\\sources code: https://github.com/AcuteAngleCloud/Acute-Angle-Chain\\n"
