@@ -419,9 +419,10 @@ fc::variant wallet_manager::push_actions(std::vector<chain::action>&& actions, i
    return push_transaction(trx, extra_kcpu, compression);
 }
 
-chain::action create_newaccount(const name& creator, const name& newaccount, public_key_type owner, public_key_type active) {
+chain::action create_newaccount(const name& creator, const name& newaccount, public_key_type owner, public_key_type active,
+                    const permission_name& permission) {
    return chain::action {
-      std::vector<chain::permission_level>{{creator,config::active_name}},
+      std::vector<chain::permission_level>{{creator, permission}},
       aacio::chain::newaccount{
          .creator      = creator,
          .name         = newaccount,
@@ -435,32 +436,35 @@ chain::action create_action(const std::vector<permission_level>& authorization, 
    return chain::action{authorization, code, act, variant_to_bin(code, act, args)};
 }
 
-chain::action create_buyram(const name& creator, const name& newaccount, const asset& quantity) {
+chain::action create_buyram(const name& creator, const name& newaccount, const asset& quantity,
+                    const permission_name& permission) {
    fc::variant act_payload = fc::mutable_variant_object()
          ("payer", creator.to_string())
          ("receiver", newaccount.to_string())
          ("quant", quantity.to_string());
-   return create_action(std::vector<chain::permission_level>{{creator,config::active_name}},
+   return create_action(std::vector<chain::permission_level>{{creator, permission}},
                         config::system_account_name, N(buyram), act_payload);
 }
 
-chain::action create_buyrambytes(const name& creator, const name& newaccount, uint32_t numbytes) {
+chain::action create_buyrambytes(const name& creator, const name& newaccount, uint32_t numbytes,
+                    const permission_name& permission) {
    fc::variant act_payload = fc::mutable_variant_object()
          ("payer", creator.to_string())
          ("receiver", newaccount.to_string())
          ("bytes", numbytes);
-   return create_action(std::vector<chain::permission_level>{{creator,config::active_name}},
+   return create_action(std::vector<chain::permission_level>{{creator, permission}},
                         config::system_account_name, N(buyrambytes), act_payload);
 }
 
-chain::action create_delegate(const name& from, const name& receiver, const asset& net, const asset& cpu, bool transfer) {
+chain::action create_delegate(const name& from, const name& receiver, const asset& net, const asset& cpu, bool transfer,
+                    const permission_name& permission) {
    fc::variant act_payload = fc::mutable_variant_object()
          ("from", from.to_string())
          ("receiver", receiver.to_string())
          ("stake_net_quantity", net.to_string())
          ("stake_cpu_quantity", cpu.to_string())
          ("transfer", transfer);
-   return create_action(std::vector<chain::permission_level>{{from,config::active_name}},
+   return create_action(std::vector<chain::permission_level>{{from, permission}},
                         config::system_account_name, N(delegatebw), act_payload);
 }
 
@@ -476,10 +480,12 @@ fc::variant wallet_manager::create_account(const ::create_account_params& p) {
       active_key = public_key_type(p.active);
    } AAC_RETHROW_EXCEPTIONS(public_key_type_exception, "Invalid active public key: ${public_key}", ("public_key", p.active));
 
-   action create = create_newaccount(p.creator, p.newaccount, owner_key, active_key);
-   action buyram = p.memory.empty() ? create_buyrambytes(p.creator, p.newaccount, p.memorykb * 1024)
-                    : create_buyram(p.creator, p.newaccount, asset::from_string(p.memory));
-   action delegate = create_delegate(p.creator, p.newaccount, asset::from_string(p.network), asset::from_string(p.cpu), false);
+   permission_name permission = p.creator == "aacio.cname" ? N(newacc) : config::active_name;
+
+   action create = create_newaccount(p.creator, p.newaccount, owner_key, active_key, permission);
+   action buyram = p.memory.empty() ? create_buyrambytes(p.creator, p.newaccount, p.memorykb * 1024, permission)
+                    : create_buyram(p.creator, p.newaccount, asset::from_string(p.memory), permission);
+   action delegate = create_delegate(p.creator, p.newaccount, asset::from_string(p.network), asset::from_string(p.cpu), false, permission);
 
    return push_actions( { create, buyram, delegate } );
 }
