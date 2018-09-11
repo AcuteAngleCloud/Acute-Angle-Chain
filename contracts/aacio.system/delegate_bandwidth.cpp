@@ -116,6 +116,9 @@ namespace aaciosystem {
          if( res_itr !=  userres.end()) {
             aacio_assert( (res_itr->is_sys_create) && (!res_itr->is_sys_ram), "system account refuse to buy RAM for receiver" );
          }
+         const auto& m = _rammarket.get(S(4,RAMCORE), "ram market does not exist");
+         auto m2(m);  // keep m constant
+         aacio_assert( m2.convert( quant, S(0,RAM) ).amount < 8192, "system account can not buy too many RAM" );
       }
 
       auto fee = quant;
