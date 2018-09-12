@@ -50,7 +50,7 @@ bool valid_filename(const string& name) {
 
 bool valid_waltpin(const string &walt_pin)
 {
-   return (walt_pin.length() > 5 && walt_pin.length() < 17);
+   return (walt_pin.length() > 5 && walt_pin.length() < 19);
 }
 
 wallet_manager::wallet_manager() {
@@ -84,7 +84,7 @@ void wallet_manager::create(const std::string& name, const std::string& walt_pin
 
    AAC_ASSERT(valid_filename(name), wallet_exception, "Invalid filename, path not allowed in wallet name ${n}", ("n", name));
 
-   AAC_ASSERT(valid_waltpin(walt_pin), wallet_exception, "Invalid wallet password, the password length must be between 6 and 16 characters long");
+   AAC_ASSERT(valid_waltpin(walt_pin), wallet_exception, "Invalid wallet password, the password length must be between 6 and 18 characters long");
 
    auto wallet_filename = dir / (name + file_ext);
 
@@ -307,7 +307,7 @@ void wallet_manager::change_password(const std::string& name, const std::string&
    if (w->is_locked()) {
       AAC_THROW(chain::wallet_locked_exception, "Wallet is locked: ${w}", ("w", name));
    }
-   AAC_ASSERT(valid_waltpin(password), wallet_exception, "Invalid wallet password, the password length must be between 6 and 16 characters long");
+   AAC_ASSERT(valid_waltpin(password), wallet_exception, "Invalid wallet password, the password length must be between 6 and 18 characters long");
 
    w->set_password(password);
    w->unlock(password);
