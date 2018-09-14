@@ -431,6 +431,18 @@
         {
           "name": "ram_bytes",
           "type": "uint64"
+        },
+        {
+          "name": "is_sys_create",
+          "type": "bool"
+        },
+        {
+          "name": "is_sys_ram",
+          "type": "bool"
+        },
+        {
+          "name": "is_sys_net",
+          "type": "bool"
         }
       ]
     },
