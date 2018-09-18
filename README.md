@@ -39,5 +39,5 @@ AACIO currently supports the following operating systems:
 1. [Website](https://www.acuteangle.com/)
 1. [Blog](http://www.acuteangle.com/news.html)
 1. [Community Telegram Group](https://t.me/acuteanglecloud)
-1. [White Paper：Acute Angle Cloud](aacdn.3jiaoxing.com/doc/cloudE.pdf)
-1. [White Paper：Acute Angle Chain](aacdn.3jiaoxing.com/doc/chainE.pdf)
+1. [White Paper：Acute Angle Cloud](https://aacdn.3jiaoxing.com/doc/cloudE.pdf
+1. [White Paper：Acute Angle Chain](https://aacdn.3jiaoxing.com/doc/chainE.pdf)
