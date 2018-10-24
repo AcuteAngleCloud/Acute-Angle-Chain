@@ -36,15 +36,8 @@ AACIO currently supports the following operating systems:
 7. MacOS Darwin 10.12 and higher (MacOS 10.13.x recommended)
 
 ## Resources
-1. [Website](https://aac.io)
-1. [Blog](https://medium.com/aacio)
-1. [Developer Portal](https://developers.aac.io)
-1. [StackExchange for Q&A](https://aacio.stackexchange.com/)
-1. [Community Telegram Group](https://t.me/AACProject)
-1. [Developer Telegram Group](https://t.me/joinchat/EaEnSUPktgfoI-XPfMYtcQ)
-1. [White Paper](https://github.com/AACIO/Documentation/blob/master/TechnicalWhitePaper.md)
-1. [Roadmap](https://github.com/AACIO/Documentation/blob/master/Roadmap.md)
-
-<a name="gettingstarted"></a>
-## Getting Started
-Instructions detailing the process of getting the software, building it, running a simple test network that produces blocks, account creation and uploading a sample contract to the blockchain can be found in [Getting Started](https://developers.aac.io/aacio-nodaac/docs/overview-1) on the [AACIO Developer Portal](https://developers.aac.io).
+1. [Website](https://www.acuteangle.com/)
+1. [Blog](http://www.acuteangle.com/news.html)
+1. [Community Telegram Group](https://t.me/acuteanglecloud)
+1. [White Paper：Acute Angle Cloud](https://aacdn.3jiaoxing.com/doc/cloudE.pdf)
+1. [White Paper：Acute Angle Chain](https://aacdn.3jiaoxing.com/doc/chainE.pdf)
