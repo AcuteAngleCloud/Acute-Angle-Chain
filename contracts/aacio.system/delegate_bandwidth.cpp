@@ -213,7 +213,7 @@ namespace aaciosystem {
       
       if( fee > 0 ) {
          INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {account,N(active)},
-            { account, N(aacio.ramfee), asset(fee), std::string("sell ram fee") } );
+            { account, N(aacio.ramfee), asset(fee, RAM_TRADE_SYMBOL), std::string("sell ram fee") } );
       }
    }
 
@@ -224,6 +224,7 @@ namespace aaciosystem {
 
       aacio_assert( max_claimable - claimable <= stake, "b1 can only claim their tokens over 10 years" );
    }
+   
 
    void system_contract::changebw( account_name from, account_name receiver,
                                    const asset stake_net_delta, const asset stake_cpu_delta, bool transfer )
