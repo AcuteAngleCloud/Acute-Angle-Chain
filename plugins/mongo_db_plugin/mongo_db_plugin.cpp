@@ -8,6 +8,7 @@
 #include <aacio/chain/exceptions.hpp>
 #include <aacio/chain/transaction.hpp>
 #include <aacio/chain/types.hpp>
+#include <aacio/chain_plugin/chain_plugin.hpp>
 
 #include <fc/io/json.hpp>
 #include <fc/utf8.hpp>
@@ -21,6 +22,7 @@
 #include <boost/thread/condition_variable.hpp>
 
 #include <queue>
+#include <regex>
 
 #include <bsoncxx/builder/basic/kvp.hpp>
 #include <bsoncxx/builder/basic/document.hpp>
@@ -84,6 +86,10 @@ public:
    void _process_accepted_block( const chain::block_state_ptr& );
    void process_irreversible_block(const chain::block_state_ptr&);
    void _process_irreversible_block(const chain::block_state_ptr&);
+   void extract_transfer_account(const chain::transaction_trace_ptr&, std::set<std::string>&);
+   void extract_transfer_account(const chain::action_trace&, std::set<std::string>&);
+   void get_account_balances(const std::set<std::string>&, std::map<std::string, std::array<std::string, 2>>&);
+   void update_account_balances(const chain::transaction_trace_ptr&);
 
    optional<abi_serializer> get_abi_serializer( account_name n );
    template<typename T> fc::variant to_variant_with_abi( const T& obj );
@@ -148,6 +154,7 @@ public:
    std::atomic_bool startup{true};
    fc::optional<chain::chain_id_type> chain_id;
    fc::microseconds abi_serializer_max_time;
+   chain_apis::read_only ro_api;
 
    struct by_account;
    struct by_last_access;
@@ -753,6 +760,8 @@ void mongo_db_plugin_impl::_process_applied_transaction( const chain::transactio
    using namespace bsoncxx::types;
    using bsoncxx::builder::basic::kvp;
 
+   update_account_balances(t);
+
    auto trans_traces = mongo_conn[db_name][trans_traces_col];
    auto action_traces = mongo_conn[db_name][action_traces_col];
    auto trans_traces_doc = bsoncxx::builder::basic::document{};
@@ -981,6 +990,83 @@ void mongo_db_plugin_impl::_process_irreversible_block(const chain::block_state_
    }
 }
 
+void mongo_db_plugin_impl::extract_transfer_account(const chain::transaction_trace_ptr& t, std::set<std::string>& accts)
+{
+   for( const chain::action_trace& a : t->action_traces ) {
+      extract_transfer_account(a, accts);
+   }
+}
+
+void mongo_db_plugin_impl::extract_transfer_account(const chain::action_trace& a, std::set<std::string>& accts)
+{
+   if ( (a.act.account == N(aacio.token)) && (a.act.name == N(transfer)) ) {
+      string json = fc::json::to_string( to_variant_with_abi( a.act ) );
+      std::regex expr{"\"from\":\"([a-z1-5\\.]+)\".+\"to\":\"([a-z1-5\\.]+)\""};
+      std::smatch result;
+      if (std::regex_search(json, result, expr)) {
+         accts.insert(result[1]);
+         accts.insert(result[2]);
+      }
+   }
+   else {
+      for ( const auto& ia : a.inline_traces ) {
+         extract_transfer_account(ia, accts);
+      }
+   }
+}
+
+void mongo_db_plugin_impl::get_account_balances(const std::set<std::string>& accts, std::map<std::string, std::array<std::string, 2>>& balances)
+{
+   chain_apis::read_only::get_currency_balance_params p;
+   p.code = "aacio.token";
+   for ( const std::string& a : accts ) {
+      p.account = a;
+      std::vector<chain::asset> balance1 = ro_api.get_currency_balance(p);
+      std::array<std::string, 2> balance2 = { {"0.0000", "0.0000"} };
+      for ( const chain::asset& b : balance1 ) {
+         std::string amount = std::to_string(b.to_real());
+         if ( b.symbol_name() == "AAC" ) {
+            balance2[0] = amount.substr(0, amount.size()-2);
+         }
+         else if ( b.symbol_name() == "SN" ) {
+            balance2[1] = amount.substr(0, amount.size()-2);
+         }
+      }
+      balances[a] = balance2;
+   }
+}
+
+void mongo_db_plugin_impl::update_account_balances(const chain::transaction_trace_ptr& t)
+{
+   using namespace bsoncxx::types;
+   using bsoncxx::builder::basic::kvp;
+   using bsoncxx::builder::basic::make_document;
+
+   std::set<std::string> accts;
+   std::map<std::string, std::array<std::string, 2>> balances;
+
+   extract_transfer_account(t, accts);
+   get_account_balances(accts, balances);
+
+   auto now = std::chrono::duration_cast<std::chrono::milliseconds>(
+         std::chrono::microseconds{fc::time_point::now().time_since_epoch().count()});
+   try {
+      for( const auto& b : balances ) {
+         auto update = make_document(
+            kvp( "$set", make_document( kvp( "name", b.first ),
+                                     kvp( "AAC", b.second[0] ),
+                                     kvp( "SN", b.second[1] ),
+                                     kvp( "updatedAt", b_date{now} ))));
+         if( !accounts.update_one( make_document( kvp( "name", b.first )), update.view() ) ) {
+            AAC_ASSERT( false, chain::mongo_db_update_fail, "Failed to update the balances of account ${n}", ("n", b.first));
+         }
+      }
+   }
+   catch (...) {
+      handle_mongo_exception( "update_account_balances", __LINE__ );
+   }
+}
+
 void mongo_db_plugin_impl::add_pub_keys( const vector<chain::key_weight>& keys, const account_name& name,
                                          const permission_name& permission, const std::chrono::milliseconds& now )
 {
@@ -1113,7 +1199,9 @@ void create_account( mongocxx::collection& accounts, const name& name, std::chro
 
    const string name_str = name.to_string();
    auto update = make_document(
-         kvp( "$set", make_document( kvp( "name", name_str),
+         kvp( "$set", make_document( kvp( "name", name_str ),
+                                     kvp( "AAC", "0.0000" ),
+                                     kvp( "SN", "0.0000" ),
                                      kvp( "createdAt", b_date{now} ))));
    try {
       if( !accounts.update_one( make_document( kvp( "name", name_str )), update.view(), update_opts )) {
@@ -1205,6 +1293,7 @@ void mongo_db_plugin_impl::update_account(const chain::action& act)
 mongo_db_plugin_impl::mongo_db_plugin_impl()
 : mongo_inst{}
 , mongo_conn{}
+, ro_api(app().get_plugin<chain_plugin>().get_read_only_api())
 {
 }
 
