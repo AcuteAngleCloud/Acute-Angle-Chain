@@ -80,6 +80,40 @@
       ]
     },
     {
+      "name": "exchange",
+      "base": "",
+      "fields": [
+        {
+          "name": "payer",
+          "type": "account_name"
+        },
+        {
+          "name": "quantity",
+          "type": "asset"
+        }
+      ]
+    },
+    {
+      "name": "setrate",
+      "base": "",
+      "fields": [
+        {
+          "name": "rate",
+          "type": "float64"
+        }
+      ]
+    },
+    {
+      "name": "setfee",
+      "base": "",
+      "fields": [
+        {
+          "name": "fee",
+          "type": "uint32"
+        }
+      ]
+    },
+    {
       "name": "account",
       "base": "",
       "fields": [
@@ -106,6 +140,20 @@
           "type": "account_name"
         }
       ]
+    },
+    {
+      "name": "token_config",
+      "base": "",
+      "fields": [
+        {
+          "name": "rate",
+          "type": "float64"
+        },
+        {
+          "name": "fee",
+          "type": "uint32"
+        }
+      ]
     }
   ],
   "actions": [
@@ -127,6 +175,21 @@
     {
       "name": "consume",
       "type": "consume",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "exchange",
+      "type": "exchange",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setrate",
+      "type": "setrate",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setfee",
+      "type": "setfee",
       "ricardian_contract": ""
     }
   ],
@@ -152,6 +215,13 @@
       "key_types": [
         "uint64"
       ]
+    },
+    {
+      "name": "config",
+      "type": "token_config",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
     }
   ],
   "ricardian_clauses": [],

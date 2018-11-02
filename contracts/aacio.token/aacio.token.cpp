@@ -104,6 +104,59 @@ void token::consume( account_name from, asset quantity, string memo )
     });
 }
 
+void token::exchange( account_name payer, asset quantity )
+{
+   require_auth( payer );
+
+   config configtable( _self, _self );
+   token_config cfg;
+   if ( configtable.exists() )
+      cfg = configtable.get();
+
+   asset fee = quantity;
+   fee.amount = quantity.amount * cfg.fee / 10000;
+   asset quant_after_fee = quantity;
+   quant_after_fee.amount -= fee.amount;
+   asset sn(0, RAM_TRADE_SYMBOL);
+   sn.amount = static_cast<int64_t>(quant_after_fee.amount / cfg.rate);
+
+   aacio_assert( (quant_after_fee.amount > 0) && (sn.amount > 0) , "insufficient token to exchange" );
+
+   if (fee.amount > 0) {
+      SEND_INLINE_ACTION( *this, transfer, {payer,N(active)}, {payer, N(aacio.snfee), fee, "exchange SN fee"} );
+   }
+
+   SEND_INLINE_ACTION( *this, transfer, {payer,N(active)}, {payer, N(aacio.sn), quant_after_fee, "exchange SN"} );
+   SEND_INLINE_ACTION( *this, transfer, {N(aacio.sn),N(active)}, {N(aacio.sn), payer, sn, "exchange SN"} );
+}
+
+void token::setrate( double rate )
+{
+   require_auth( _self );
+
+   config configtable( _self, _self );
+   token_config cfg;
+   if ( configtable.exists() )
+      cfg = configtable.get();
+
+   cfg.rate = rate;
+   configtable.set( cfg, _self );
+}
+
+void token::setfee( uint32_t fee )
+{
+   require_auth( _self );
+
+   aacio_assert( fee <= 10000, "must between 0...10000" );
+   config configtable(_self, _self);
+   token_config cfg;
+   if ( configtable.exists() )
+      cfg = configtable.get();
+
+   cfg.fee = fee;
+   configtable.set( cfg, _self );
+}
+
 void token::sub_balance( account_name owner, asset value ) {
    accounts from_acnts( _self, owner );
 
@@ -137,4 +190,4 @@ void token::add_balance( account_name owner, asset value, account_name ram_payer
 
 } /// namespace aacio
 
-AACIO_ABI( aacio::token, (create)(issue)(transfer)(consume) )
+AACIO_ABI( aacio::token, (create)(issue)(transfer)(consume)(exchange)(setrate)(setfee) )

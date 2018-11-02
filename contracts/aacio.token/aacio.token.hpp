@@ -6,6 +6,7 @@
 
 #include <aaciolib/asset.hpp>
 #include <aaciolib/aacio.hpp>
+#include <aaciolib/singleton.hpp>
 
 #include <string>
 
@@ -32,6 +33,12 @@ namespace aacio {
                         string       memo );
 
          void consume( account_name from, asset quantity, string memo );
+
+         void exchange( account_name payer, asset quantity );
+
+         void setrate( double rate );
+
+         void setfee( uint32_t fee );
       
          inline asset get_supply( symbol_name sym )const;
          
@@ -52,8 +59,16 @@ namespace aacio {
             uint64_t primary_key()const { return supply.symbol.name(); }
          };
 
+         struct token_config {
+            double      rate = 1.0; /// exchange rate, 'rate' AAC per SN
+            uint32_t    fee = 50; /// exchange fee, unit: 1/10000
+
+            AACLIB_SERIALIZE( token_config, (rate)(fee) )
+         };
+
          typedef aacio::multi_index<N(accounts), account> accounts;
          typedef aacio::multi_index<N(stat), currency_stats> stats;
+         typedef aacio::singleton<N(config), token_config> config;
 
          void sub_balance( account_name owner, asset value );
          void add_balance( account_name owner, asset value, account_name ram_payer );
