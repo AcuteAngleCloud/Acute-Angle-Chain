@@ -132,7 +132,7 @@ void token::exchange( account_name payer, asset quantity )
 
 void token::setrate( double rate )
 {
-   require_auth( _self );
+   require_auth( N(aacio.config) );
 
    config configtable( _self, _self );
    token_config cfg;
@@ -145,7 +145,7 @@ void token::setrate( double rate )
 
 void token::setfee( uint32_t fee )
 {
-   require_auth( _self );
+   require_auth( N(aacio.config) );
 
    aacio_assert( fee <= 10000, "must between 0...10000" );
    config configtable(_self, _self);
