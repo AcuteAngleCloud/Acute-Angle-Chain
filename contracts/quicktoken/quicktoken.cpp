@@ -23,6 +23,7 @@ using aacio::name;
 using aacio::symbol_type;
 using aacio::symbol_name;
 using aacio::string_to_symbol;
+using aacio::is_valid_symbol;
 
 namespace quicktoken {
 
@@ -74,7 +75,7 @@ namespace quicktoken {
                 auto sym_name = sym.name();
                 stats statstable( _self, sym_name );
                 auto existing = statstable.find( sym_name );
-                aacio_assert( existing != statstable.end(), "award point with symbol does not exist, create award point before issue" );
+                aacio_assert( existing != statstable.end(), "quick token with symbol does not exist, create token before issue" );
                 const auto& st = *existing;
 
                 require_auth( st.issuer );
@@ -125,8 +126,10 @@ namespace quicktoken {
             void setissuecfg( string symbol_name)
             {
                 require_auth( N(aacio.config) );
-
-                auto isscfg = _issue_config.find( string_to_symbol(0, symbol_name.c_str())>>8 );
+                
+                aacio_assert( true == is_valid_symbol(string_to_symbol(0, symbol_name.c_str())) && symbol_name.length() <= 7, "symbol name is not valid" );
+                
+				auto isscfg = _issue_config.find( string_to_symbol(0, symbol_name.c_str())>>8 );
                 aacio_assert( isscfg == _issue_config.end(), "quick token with symbol already exists" );
 
                 _issue_config.emplace( _self, [&]( auto& i ){
