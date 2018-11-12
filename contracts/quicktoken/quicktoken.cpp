@@ -183,7 +183,7 @@ namespace quicktoken {
                 if( from.balance.amount == value.amount ) {
                     from_acnts.erase( from );
                 } else {
-                    from_acnts.modify( from, owner, [&]( auto& a ) {
+                    from_acnts.modify( from, 0, [&]( auto& a ) {
                         a.balance -= value;
                     });
                 }
