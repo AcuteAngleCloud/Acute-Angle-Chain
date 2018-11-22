@@ -760,7 +760,7 @@ void mongo_db_plugin_impl::_process_applied_transaction( const chain::transactio
    using namespace bsoncxx::types;
    using bsoncxx::builder::basic::kvp;
 
-   update_account_balances(t);
+   //update_account_balances(t);
 
    auto trans_traces = mongo_conn[db_name][trans_traces_col];
    auto action_traces = mongo_conn[db_name][action_traces_col];
