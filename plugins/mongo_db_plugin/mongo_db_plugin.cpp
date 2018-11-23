@@ -1200,8 +1200,8 @@ void create_account( mongocxx::collection& accounts, const name& name, std::chro
    const string name_str = name.to_string();
    auto update = make_document(
          kvp( "$set", make_document( kvp( "name", name_str ),
-                                     kvp( "AAC", "0.0000" ),
-                                     kvp( "SN", "0.0000" ),
+                                     //kvp( "AAC", "0.0000" ),
+                                     //kvp( "SN", "0.0000" ),
                                      kvp( "createdAt", b_date{now} ))));
    try {
       if( !accounts.update_one( make_document( kvp( "name", name_str )), update.view(), update_opts )) {
