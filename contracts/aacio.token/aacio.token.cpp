@@ -118,7 +118,7 @@ void token::exchange( account_name payer, asset quantity )
    asset quant_after_fee = quantity;
    quant_after_fee.amount -= fee.amount;
    asset sn(0, RAM_TRADE_SYMBOL);
-   sn.amount = static_cast<int64_t>(quant_after_fee.amount / cfg.rate);
+   sn.amount = static_cast<int64_t>(quant_after_fee.amount * cfg.rate);
 
    aacio_assert( (quant_after_fee.amount > 0) && (sn.amount > 0) , "insufficient token to exchange" );
 
