@@ -1336,13 +1336,15 @@ struct buyram_subcommand {
                   ("payer", from_str)
                   ("receiver", receiver_str)
                   ("bytes", fc::to_uint64(amount) * 1024ull);
-            send_actions({create_action({permission_level{from_str,config::active_name}}, config::system_account_name, N(buyrambytes), act_payload)});            
+            //send_actions({create_action({permission_level{from_str,config::active_name}}, config::system_account_name, N(buyrambytes), act_payload)});
+            send_actions({create_action(tx_permission.empty() ? vector<chain::permission_level>{{from_str,config::active_name}} : get_account_permissions(tx_permission), config::system_account_name, N(buyrambytes), act_payload)});
          } else {
             fc::variant act_payload = fc::mutable_variant_object()
                ("payer", from_str)
                ("receiver", receiver_str)
                ("quant", to_asset(amount));
-            send_actions({create_action({permission_level{from_str,config::active_name}}, config::system_account_name, N(buyram), act_payload)});
+            //send_actions({create_action({permission_level{from_str,config::active_name}}, config::system_account_name, N(buyram), act_payload)});
+            send_actions({create_action(tx_permission.empty() ? vector<chain::permission_level>{{from_str,config::active_name}} : get_account_permissions(tx_permission), config::system_account_name, N(buyram), act_payload)});
          }
       });
    }
@@ -1363,7 +1365,8 @@ struct sellram_subcommand {
             fc::variant act_payload = fc::mutable_variant_object()
                ("account", receiver_str)
                ("bytes", amount);
-            send_actions({create_action({permission_level{receiver_str,config::active_name}}, config::system_account_name, N(sellram), act_payload)});
+            //send_actions({create_action({permission_level{receiver_str,config::active_name}}, config::system_account_name, N(sellram), act_payload)});
+			send_actions({create_action(tx_permission.empty() ? vector<chain::permission_level>{{from_str,config::active_name}} : get_account_permissions(tx_permission), config::system_account_name, N(sellram), act_payload)});
          });
    }
 };
