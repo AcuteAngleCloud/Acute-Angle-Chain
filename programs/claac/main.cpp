@@ -1366,7 +1366,7 @@ struct sellram_subcommand {
                ("account", receiver_str)
                ("bytes", amount);
             //send_actions({create_action({permission_level{receiver_str,config::active_name}}, config::system_account_name, N(sellram), act_payload)});
-			send_actions({create_action(tx_permission.empty() ? vector<chain::permission_level>{{from_str,config::active_name}} : get_account_permissions(tx_permission), config::system_account_name, N(sellram), act_payload)});
+            send_actions({create_action(tx_permission.empty() ? vector<chain::permission_level>{{receiver_str,config::active_name}} : get_account_permissions(tx_permission), config::system_account_name, N(sellram), act_payload)});
          });
    }
 };
