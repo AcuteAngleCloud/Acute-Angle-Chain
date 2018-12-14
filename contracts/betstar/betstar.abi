@@ -1,0 +1,209 @@
+{
+  "version": "aacio::abi/1.0",
+  "types": [
+    {
+      "new_type_name": "account_name",
+      "type": "name"
+    }
+  ],
+  "structs": [
+    {
+      "name": "void",
+      "base": "",
+      "fields": [
+      ]
+    },
+    {
+      "name": "bet",
+      "base": "",
+      "fields": [
+        {
+          "name": "participant",
+          "type": "account_name"
+        },
+        {
+          "name": "star",
+          "type": "uint32"
+        },
+        {
+          "name": "quantity",
+          "type": "asset"
+        }
+      ]
+    },
+    {
+      "name": "setfee",
+      "base": "",
+      "fields": [
+        {
+          "name": "fee",
+          "type": "uint32"
+        }
+      ]
+    },
+    {
+      "name": "setjrate",
+      "base": "",
+      "fields": [
+        {
+          "name": "rate",
+          "type": "uint32"
+        }
+      ]
+    },
+    {
+      "name": "part_info",
+      "base": "",
+      "fields": [
+        {
+          "name": "participant",
+          "type": "account_name"
+        },
+        {
+          "name": "star",
+          "type": "uint32"
+        },
+        {
+          "name": "quantity",
+          "type": "asset"
+        }
+      ]
+    },
+    {
+      "name": "issue",
+      "base": "",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uint64"
+        },
+        {
+          "name": "participant_num",
+          "type": "uint32"
+        },
+        {
+          "name":"sum",
+          "type":"asset"
+        },
+        {
+          "name":"result",
+          "type":"uint32"
+        },
+        {
+          "name": "is_ongoing",
+          "type": "bool"
+        },
+        {
+          "name": "participants",
+          "type": "part_info[]"
+        }
+      ]
+    },
+    {
+      "name": "vector",
+      "base": "",
+      "fields": [
+        {
+          "name": "v",
+          "type": "account_name[]"
+        }
+      ]
+    },
+    {
+      "name": "term",
+      "base": "",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uint64"
+        },
+        {
+          "name": "winners",
+          "type": "vector[]"
+        }
+      ]
+    },
+    {
+      "name": "bet_config",
+      "base": "",
+      "fields": [  
+        {
+          "name": "fee",
+          "type": "uint32"
+        },
+        {
+          "name": "jackpot_rate",
+          "type": "uint32"
+        },
+        {
+          "name": "current_id",
+          "type": "uint64"
+        },
+        {
+          "name": "results",
+          "type": "uint64[]"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "create",
+      "type": "void",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "bet",
+      "type": "bet",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "lot",
+      "type": "void",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setfee",
+      "type": "setfee",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setjrate",
+      "type": "setjrate",
+      "ricardian_contract": ""
+    }
+  ],
+  "tables": [
+    {
+      "name": "issue",
+      "type": "issue",
+      "index_type": "i64",
+      "key_names": [
+        "id"
+      ],
+      "key_types": [
+        "uint64"
+      ]
+    },
+    {
+      "name": "term",
+      "type": "term",
+      "index_type": "i64",
+      "key_names": [
+        "id"
+      ],
+      "key_types": [
+        "uint64"
+      ]
+    },
+    {
+      "name": "config",
+      "type": "bet_config",
+      "index_type": "i64",
+      "key_names": [],
+      "key_types": []
+    }
+  ],
+  "ricardian_clauses": [],
+  "abi_extensions": []
+}

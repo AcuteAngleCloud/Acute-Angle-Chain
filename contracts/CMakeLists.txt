@@ -16,6 +16,7 @@ add_subdirectory(aacio.system)
 add_subdirectory(identity)
 add_subdirectory(stltest)
 add_subdirectory(exchange)
+add_subdirectory(betstar)
 add_subdirectory(test.inline)
 
 #add_subdirectory(bancor)
