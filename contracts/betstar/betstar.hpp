@@ -29,11 +29,15 @@ namespace aacio {
 
          void setjrate( uint32_t rate );
 
+         void setbrate( uint32_t rate );
+
+         void clear( uint64_t id );
+
       private:
-         static constexpr double p0 = 0.1500;
-         static constexpr double p1 = 0.2920;
-         static constexpr double p2 = 0.2482;
-         static constexpr double p3 = 0.1763;
+         static constexpr double p0 = 0.3180;
+         static constexpr double p1 = 0.2520;
+         static constexpr double p2 = 0.1730;
+         static constexpr double p3 = 0.1490;
          static constexpr double p4 = 1 - p0 - p1 - p2 - p3;
          static constexpr uint32_t base0 = 0;
          static constexpr uint32_t base1 = 0xffffffff / 2;
@@ -88,6 +92,7 @@ namespace aacio {
          struct bet_config {
             uint32_t  fee = 500;  /// unit: 1/10000
             uint32_t  jackpot_rate = 8000;  /// unit: 1/10000
+            uint32_t  bonus_rate = 0;  /// unit: 1/10
             uint64_t  current_id = 0;
             std::vector<uint64_t> results = std::vector<uint64_t>(5);
          };

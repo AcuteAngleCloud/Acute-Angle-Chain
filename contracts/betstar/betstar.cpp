@@ -26,8 +26,8 @@ void betstar::create()
    auto issue = issuestable.find( cfg.current_id );
    aacio_assert( issue == issuestable.end(), "the issue already exists" );
 
-   terms termstable( _self, cfg.current_id );
    if ( (cfg.current_id % 10) == 1 ) {
+      terms termstable( _self, cfg.current_id );
       auto term = termstable.find( cfg.current_id );
       aacio_assert( term == termstable.end(), "the term already exists" );
    }
@@ -41,6 +41,7 @@ void betstar::create()
    });
 
    if ( (cfg.current_id % 10) == 1 ) {
+      terms termstable( _self, cfg.current_id );
       termstable.emplace( _self, [&]( auto& t ) {
           t.id          = cfg.current_id;
       });
@@ -53,7 +54,7 @@ void betstar::bet( account_name participant, uint32_t star, asset quantity )
    require_auth( participant );
    aacio_assert( star < 5, "invalid star");
    aacio_assert( quantity.symbol == asset().symbol, "asset must be system token" );
-   aacio_assert( quantity.amount >= 10000, "must greater than base price" );
+   aacio_assert( (quantity.amount >= 1000000) && (quantity.amount <= 100000000), "must between 100...10000 tokens" );
 
    issues issuestable( _self, cfg.current_id );
    auto issue = issuestable.find( cfg.current_id );
@@ -91,14 +92,14 @@ void betstar::lot()
    for (auto p : issue->participants) {
       if (p.star == star) {
          winners.push_back(p.participant);
-         if (star > 0) {
-            asset award = p.quantity;
-            award.amount *= (star + 1);
-            asset fee = p.quantity;
-            fee.amount = p.quantity.amount * star * cfg.fee / 10000;
-            award -= fee;
-            INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), p.participant, award, std::string("betstar award") } );
-         }
+         asset award = p.quantity;
+         award.amount *= (star + 2);
+         award.amount += (p.quantity.amount * cfg.bonus_rate / 10);
+         asset fee = p.quantity;
+         fee.amount = award.amount * cfg.fee / 10000;
+         award -= fee;
+         INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), p.participant, award, std::string("betstar award") } );
+         INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), N(betstar.fee), fee, std::string("betstar fee") } );
       }
    }
    if (!winners.empty()) {
@@ -125,6 +126,30 @@ void betstar::setjrate( uint32_t rate )
    aacio_assert( rate <= 10000, "must between 0...10000" );
    cfg.jackpot_rate = rate;
    configtable.set( cfg, _self );
+}
+
+void betstar::setbrate( uint32_t rate )
+{
+   require_auth( N(aacio.config) );
+
+   aacio_assert( rate <= 20, "must between 0...20" );
+   cfg.bonus_rate = rate;
+   configtable.set( cfg, _self );
+}
+
+void betstar::clear( uint64_t id )
+{
+   issues issuestable( _self, id );
+   auto issue = issuestable.find( id );
+   aacio_assert( issue != issuestable.end(), "the issue is not available" );
+   issuestable.erase( issue );
+
+   if ( (id % 10) == 1 ) {
+      terms termstable( _self, id );
+      auto term = termstable.find( id );
+      aacio_assert( term != termstable.end(), "the term is not available" );
+      termstable.erase( term );
+   }
 }
 
 uint32_t betstar::get_random()
@@ -192,11 +217,13 @@ void betstar::award_multi_winners(uint64_t term_id, uint64_t issue_id)
       size = term->winners[count].size();
       if (size > 0) {
          asset award = get_jackpot_balance();
-         award.amount = award.amount * cfg.jackpot_rate / 10000;
-         award.amount = award.amount * (10000 - cfg.fee) / 10000;
-         award.amount /= size;
+         award.amount = award.amount * cfg.jackpot_rate / 10000 / size;
+         asset fee = award;
+         fee.amount = award.amount * cfg.fee / 10000;
+         award -= fee;
          for (auto w : term->winners[count]) {
             INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), w, award, std::string("top award") } );
+            INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), N(betstar.fee), fee, std::string("betstar fee") } );
          }
       }
       --count;
@@ -206,11 +233,13 @@ void betstar::award_multi_winners(uint64_t term_id, uint64_t issue_id)
       size = term->winners[i].size();
       if (size > 0) {
          asset award = issue->sum;
-         award.amount = award.amount * (i + 1) / 100;
-         award.amount = award.amount * (10000 - cfg.fee) / 10000;
-         award.amount /= size;
+         award.amount = award.amount * (i + 3) / 100 / size;
+         asset fee = award;
+         fee.amount = award.amount * cfg.fee / 10000;
+         award -= fee;
          for (auto w : term->winners[i]) {
             INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), w, award, std::to_string(i + 1) + " wins award" } );
+            INLINE_ACTION_SENDER(aacio::token, transfer)( N(aacio.token), {N(aacio.bspool),N(active)}, { N(aacio.bspool), N(betstar.fee), fee, std::string("betstar fee") } );
          }
       }
    }
@@ -228,4 +257,4 @@ asset betstar::get_jackpot_balance()
 
 } /// namespace aacio
 
-AACIO_ABI( aacio::betstar, (create)(bet)(lot)(setfee)(setjrate) )
+AACIO_ABI( aacio::betstar, (create)(bet)(lot)(setfee)(setjrate)(setbrate)(clear) )

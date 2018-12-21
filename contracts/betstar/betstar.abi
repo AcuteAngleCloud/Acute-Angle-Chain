@@ -52,6 +52,26 @@
       ]
     },
     {
+      "name": "setbrate",
+      "base": "",
+      "fields": [
+        {
+          "name": "rate",
+          "type": "uint32"
+        }
+      ]
+    },
+    {
+      "name": "clear",
+      "base": "",
+      "fields": [
+        {
+          "name": "id",
+          "type": "uint64"
+        }
+      ]
+    },
+    {
       "name": "part_info",
       "base": "",
       "fields": [
@@ -136,6 +156,10 @@
           "type": "uint32"
         },
         {
+          "name": "bonus_rate",
+          "type": "uint32"
+        },
+        {
           "name": "current_id",
           "type": "uint64"
         },
@@ -170,6 +194,16 @@
     {
       "name": "setjrate",
       "type": "setjrate",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "setbrate",
+      "type": "setbrate",
+      "ricardian_contract": ""
+    },
+    {
+      "name": "clear",
+      "type": "clear",
       "ricardian_contract": ""
     }
   ],
